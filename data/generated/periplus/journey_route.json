@@ -1,0 +1,745 @@
+{
+  "route_title": "Periplus of the Erythraean Sea: generated sections 1-10",
+  "source_range": {
+    "start_section": 1,
+    "end_section": 10
+  },
+  "main_route_place_keys": [
+    "myos_hormos",
+    "berenike",
+    "ptolemais_theron",
+    "adulis",
+    "avalites",
+    "malao",
+    "mundu",
+    "mosyllon"
+  ],
+  "steps": [
+    {
+      "step_id": "step_0001_myos_hormos",
+      "type": "stop",
+      "title": "Myos Hormos",
+      "route_label": "Section 1 of 10 · mapped stop",
+      "focus_place_key": "myos_hormos",
+      "section_refs": [
+        "section_0001"
+      ],
+      "translation": "The first marked harbor of the Red Sea and its trading places is Myos Hormos in Egypt. After it, sailing inward 1,800 stades, Berenike lies on the right. Both harbors are at the far end of Egypt's gulf of the Red Sea.",
+      "greek_text": "ΑΝΩΝΥΜΟΥ ΑΡΡΙΑΝΟΥ, ΩΣ ΦΕΡΕΤΑΙ ΠΕΡΙΠΛΟΥΣ ΤΗΕ ΕΡΥΘΡΑΣ ΘΑΛΑΣΣΗΣ. Τῶν ἀποδεδειγμένων ὅρμων τῆς Ἐρυθρᾶς θαλάσσης καὶ τῶν περὶ αὐτὴν ἐμπορίων πρῶτός ἐστι λιμὴν τῆς Αἰγύπτου Μυὸς ὅρμος. Μετὰ δὲ αὐτὸν εἰςπλεόντων ἀπὸ χιλίων ὀκτακοσίων σταδίων ἐν δεξιᾷ ἡ Βερνίκη. Ἀμφοτέρων δὲ οἱ λιμένες ἐν τῷ ἐσχάτῳ τῆς Αἰγύπτου κόλποι τῆς Ἐρυθρᾶς θαλάσσης κεῖνται.",
+      "place_mentions": [
+        {
+          "surface": "Myos Hormos",
+          "place_key": "myos_hormos",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Μυὸς ὅρμος",
+          "place_key": "myos_hormos",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Berenike",
+          "place_key": "berenike",
+          "kind": "main_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0002_berenike",
+      "type": "stop",
+      "title": "Berenike",
+      "route_label": "Section 2 of 10 · mapped stop",
+      "focus_place_key": "berenike",
+      "section_refs": [
+        "section_0002"
+      ],
+      "translation": "From the right-hand side from Berenike the Barbarian country adjoins the route. The coast is inhabited here and there by Fish-Eaters in narrow built enclosures, while inland live Barbarians and, after them, Wild-Eaters and Calf-Eaters under local rulers; behind them inland, toward the west, lies the metropolis called Meroe.",
+      "greek_text": "2. Τούτων ἐκ μὲν τῶν δεξιῶν ἀπὸ Βερνίκης συναφής ἐστιν ἡ Βαρβαρικὴ χώρα. Καὶ ἔστι τὰ μὲν παρὰ θάλασσαν Ἰχθυοφάγων ἐν μάνδραις ᾠκοδομημέναις ἐν στενώμασι σποράδην διοικούντων, τὰ δὲ μεσόγεια Βαρβάρων καὶ τῶν μετʼ αὐτοὺς Ἀγριοφάγων καὶ Μοσχοφάγων κατὰ τυραννίδα νεμομένων, οἷς ἐπίκειται κατὰ νώτου μεσόγειος ἀπὸ τῶν πρὸς δύσιν μερῶν μητρόπολις λεγομένη Μερόη .",
+      "place_mentions": [
+        {
+          "surface": "Berenike",
+          "place_key": "berenike",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Barbarian country",
+          "place_key": "barbarian_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Fish-Eaters",
+          "place_key": "fish_eaters_red_sea",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Calf-Eaters",
+          "place_key": "moschophagoi_territory",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Meroe",
+          "place_key": "meroe",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μερόη",
+          "place_key": "meroe",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0003_ptolemais_of_the_hunts",
+      "type": "stop",
+      "title": "Ptolemais of the Hunts",
+      "route_label": "Section 3 of 10 · mapped stop",
+      "focus_place_key": "ptolemais_theron",
+      "section_refs": [
+        "section_0003"
+      ],
+      "translation": "After the Calf-Eaters, on the coast, is the small trading station called Ptolemais of the Hunts, about four thousand stades from the end of the voyage up the gulf. From there the royal hunters under the Ptolemies went inland. The station has true tortoise shell, a little land tortoise shell, and a smaller white shell; occasionally a little ivory like that of Adulis is found there. The place has no harbor and offers only a landing by small boats.",
+      "greek_text": "3. Μετὰ δὲ τοὺς Μοσχοφάγους ἐπὶ θαλάσσης μικρὸν ἐμπόριόν ἐστιν, ἀπέχον τὸ πέρας τῆς ἀνακομιδῆς σταδίους περὶ τετράκιςχιλίους, Πτολεμαῒς ἡ τῶν θηρῶν λεγομένη, ἀφʼ ἧς οἱ ἐπὶ Πτολεμαίων τῶν βασιλέων θηρευταὶ ἐντὸς ἀνέβησαν. Ἔχει δὲ τὸ ἐμπόριον χελώνην ἀληθινήν καὶ χερσαίαν ὀλίγην καὶ λευκὴν μικροτέραν τοῖς ὀστράκοις· εὑρίσκεται δὲ ἐν αὐτῇ ποτὲ μὲν ἐλέφας ὀλίγος, ὅμοιος τῷ Ἀδουλιτικῷ. Ὁ δὲ τόπος ἀλίμενος καὶ σκάφαις μόνον τὴν ἀποδρομὴν ἔχων.",
+      "place_mentions": [
+        {
+          "surface": "Ptolemais of the Hunts",
+          "place_key": "ptolemais_theron",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Πτολεμαῒς ἡ τῶν θηρῶν",
+          "place_key": "ptolemais_theron",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Moschophagoi territory",
+          "place_key": "moschophagoi_territory",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μοσχοφάγους",
+          "place_key": "moschophagoi_territory",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Adulis",
+          "place_key": "adulis",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Ἀδουλιτικῷ",
+          "place_key": "adulis",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Calf-Eaters",
+          "place_key": "moschophagoi_territory",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "true tortoise shell",
+        "land tortoise shell",
+        "small white tortoise shell",
+        "ivory"
+      ]
+    },
+    {
+      "step_id": "step_0004_adulis",
+      "type": "stop",
+      "title": "Adulis",
+      "route_label": "Section 4 of 10 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0004"
+      ],
+      "translation": "About three thousand stades after Ptolemais of the Hunts lies the lawful trading station Adulis, set in a deep south-facing bay. The island called Oreine lies before it, where ships now anchor because of attacks from the mainland; formerly they anchored deeper in the bay at Diodoros island. On the mainland opposite Oreine, twenty stades from the sea, is the village of Adulis. From it a three-day road leads to inland Koloe, the first ivory market; five more days lead to the metropolis of the Aksumites, where all ivory from beyond the Nile is brought through Kyeneion and then onward to Adulis. Elephants and rhinoceroses mostly range in the upper country, though rarely near coastal Adulis. Offshore islands called Alalaiou have tortoise shell carried to the emporion by the Fish-Eaters.",
+      "greek_text": "4. Μετὰ δὲ τὴν Πτολεμαΐδα τὴν τῶν θηρῶν ἀπὸ σταδίων ὡς τριςχιλίων ἐμπόριόν ἐστι νόμιμον ἡ Ἀδουλὶ, κείμενον ἐν κόλπῳ βαθεῖ κατ᾿ αὐτὸν τὸν νότον, οὖ πρόκειται νῆσος Ὀρεινὴ λεγομένη, τοῦ μὲν ἐσωτάτου κόλπου σταδίους ὡς εἰς πέλαγος ἀπέχουσα διακοσίους, ἐξ ἀμφοτέρων δὲ τῶν μερῶν παρακειμένην ἔχουσα τὴν ἤπειρον, ἐν ᾗ νῦν ὁρμεῖ τὰ καταγόμενα πλοῖα διὰ τὰς ἐκ τῆς γῆς καταδρομάς. Πρῶτον μὲν γὰρ ὥρμει κατʼ αὐτὸν τὸν ἐσώτατον κόλπον ἐν τῆ Διοδώρου λεγο μένη νήσῳ παῤ αὐτήν τὴν ἤπειρον, ἐχούσῃ πεζῇ τὴν διάβασιν, διʼ ἧς οἱ κατοικοῦντες βάρβαροι κατέτρεχον τὴν νῆσον. Καὶ κατʼ αὐτὴν τὴν ἐν τῇ Ὀρεινῇ ἤπειρον ἀπὸ σταδίων εἴκοσι τῆς θαλάσσης ἐστὶν ἡ Ἀδουλὶ μari κώμη σύμμετρος, ἀφʼ ἧς εἰς μὲν Κολόην μεσόγειον πόλιν καὶ πρῶτον ἐμπόριον τοῦ ἐλέφαντος, ὁδός ἐστιν ἡμερῶν τριῶν. Ἀπὸ δὲ ταύτης εἰς αὐτὴν τὴν μετρόπολιν τῶν Aὐξωμιτῶν λεγομένων ἄλλων ἡμερῶν πέντε, εἰς ἣν ὁ πᾶς ἐλέφας ἀπὸ τοῦ πέραν τοῦ Νείλου φέρεται διὰ τοῦ λεγομένου Κυηνείου, ἐκεῖθεν δὲ εἰς Ἀδουλί, Τὸ μὲν οὖν ὅλον πλῆθος τῶν φονευομένων ἐλεφάντων ἢ ῥινοκερώτων περὶ τοὺς ἄνω νέμεται τόπους, σπανίως δέ ποτε καὶ ἐν τῷ παρὰ θάλασσαν περὶ αὐτὴν τὴν Ἀδουλὶ θεωροῦνται. Πρόκεινται δὲ τοῦ ἐμπορίου καὶ κατὰ πέλαγος ἄλλαι νῆσοι μικραὶ ἐκ δεξιῶν ἀμμιναὶ πλείονες, Ἀλαλαίου λεγόμεναι, χελώνην ἔχουσαι τὴν εἰς τὸ ἐμπόριον φερομένην ὑπὸ τῶν Ἰχθυοφάγων.",
+      "place_mentions": [
+        {
+          "surface": "Adulis",
+          "place_key": "adulis",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Ἀδουλὶ",
+          "place_key": "adulis",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Ptolemais of the Hunts",
+          "place_key": "ptolemais_theron",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Πτολεμαΐδα τὴν τῶν θηρῶν",
+          "place_key": "ptolemais_theron",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Oreine island",
+          "place_key": "oreine_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὀρεινὴ",
+          "place_key": "oreine_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Diodoros island",
+          "place_key": "diodoros_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Koloe",
+          "place_key": "koloe",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κολόην",
+          "place_key": "koloe",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aksumite metropolis",
+          "place_key": "aksum_metropolis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aὐξωμιτῶν",
+          "place_key": "aksum_metropolis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Kyeneion",
+          "place_key": "kyeneion",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κυηνείου",
+          "place_key": "kyeneion",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Beyond the Nile",
+          "place_key": "beyond_the_nile",
+          "kind": "off_route"
+        },
+        {
+          "surface": "πέραν τοῦ Νείλου",
+          "place_key": "beyond_the_nile",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Alalaiou islands",
+          "place_key": "alalaiou_islands",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀλαλαίου",
+          "place_key": "alalaiou_islands",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Fish-Eaters",
+          "place_key": "fish_eaters_red_sea",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Oreine",
+          "place_key": "oreine_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Diodoros",
+          "place_key": "diodoros_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κολόη",
+          "place_key": "koloe",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aksum",
+          "place_key": "aksum_metropolis",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "ivory",
+        "rhinoceros horn or rhinoceros product",
+        "tortoise shell"
+      ]
+    },
+    {
+      "step_id": "step_0005_section_5_trade_goods",
+      "type": "stop",
+      "title": "Section 5: trade goods",
+      "route_label": "Section 5 of 10 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0005"
+      ],
+      "translation": "About eight hundred stades farther is another very deep gulf. At the entrance on the right a large sandbank lies spread out, and under it, buried in depth, is found obsidian stone, produced locally only there. Zoskales rules these places from the Calf-Eaters as far as the rest of Barbaria; he is frugal and grasping in most matters, but noble in other respects and familiar with Greek letters.",
+      "greek_text": "5. Καὶ ἀπὸ σταδίων ὡςεὶ ὀκτακοσίων κόλπος ἕτερος βαθύτατος, οδ κατὰ τὴν εἰςβολὴν ἐν δεξιοῖς ἄμμος ἐστὶ πολλὴ κεχυμένη, καθʼ ἧς ἐν βάθει κεχωσμένος εὑρίσκεται ὁ ὀψιανὸς λίθος, ἐν ἐκείνῃ μόνῃ τοπικῶς γεν· νώμενος. Βαστλεύει δὲ τῶν τόπων τούτων ἀπὸ τῶν Μοσχοφάγων μέχρι τῆς ἄλλης Bαρβαρίας Ζωσκάλης, ἀκριβὴς μὲν τοῦ βίου καὶ τοῦ πλείονος ἐξεχόμενος, γενναῖος δὲ περὶ τὰ λειπὰ καὶ γραμμάτων Ἑλληνικῶν ἔμπειρος.",
+      "place_mentions": [
+        {
+          "surface": "Moschophagoi territory",
+          "place_key": "moschophagoi_territory",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μοσχοφάγων",
+          "place_key": "moschophagoi_territory",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barbaria",
+          "place_key": "barbaria",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Bαρβαρίας",
+          "place_key": "barbaria",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Calf-Eaters",
+          "place_key": "moschophagoi_territory",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "obsidian stone"
+      ]
+    },
+    {
+      "step_id": "step_0006_adulis",
+      "type": "stop",
+      "title": "Adulis",
+      "route_label": "Section 6 of 10 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0006"
+      ],
+      "translation": "Into these places go unfulled Barbarian cloths made in Egypt, Arsinoite robes, imitation colored cloaks, linens, double-fringed cloths, many kinds of glass-stone and other murrhine from Diospolis, brass used for ornament and cut as money, copper vessels for cooking and for making women's bracelets and anklets, iron for spears against elephants and other beasts and for wars, axes, adzes, knives, large round copper drinking cups, a little denarius coinage for resident foreigners, a little Laodicean and Italian wine, and a little oil. For the king go locally styled silver and gold plate, cloaks, and simple kaunakai. From the inland parts of Arabia also come Indian iron and steel, broad Indian cotton cloth called monache, girdle-cloths, waist-bands, kaunakai, mallow-colored garments, a few fine cloths, and colored lac. From these places are exported ivory, tortoise shell, and rhinoceros product. Most goods from Egypt are brought to this emporion from January to September, and the timely departure from Egypt is around September.",
+      "greek_text": "6. Προχωρεῖ δὲ εἰς τοὺς τόπους τούτους ἱμάτια βαρβαρικὰ ἄγναφα τὰ ἐν Aἰγύπτῳ γινόμενα, Ἀρσινοητιικαὶ στολαὶ καὶ ἀβόλλαι νόθοι χρωμάτιναι καὶ λέντια καὶ δικρόσσια καὶ λιθίας ὑαλῆς πλείονα γένη καὶ ἄλλης μορρίνης, τῆς γινομένης ἐν Διοςπόλει, καὶ ὀρείχαλκος, ᾧ χρῶνται πρὸς κόσμον καὶ εἰς συγκοπὴν ἀντὶ νομίσματος, καὶ μελίεφθα χαλκᾶ εἴς τε ἕψησιν καὶ εἰς συγκοπτὴν ψελίων καὶ περισκελίδων τισὶ τῶν γυναικῶν, καὶ σίδηρος ὁ δαπανώμενος εἴς τε λόγχας πρὸς τοὺς ἐλέφαντας καὶ τὰ ἄλλα θηρία καὶ τοὺς πολέμους. Ὁμοίως δὲ καὶ πελύκια προχωρεῖ καὶ σκέπαρνα καὶ μάχαιραι καὶ ποτήρια χαλκᾶ στρογγύλα μεγάλα καὶ δηνάριον ὀλίγον πρὸς τοὺς ἐπιδημοῦντας καὶ οἶνος Λαδικηνὸς καὶ Ἰταλικὸς οὐ πολὺς καὶ ἔλαιον οὐ πολύ· τῷ δὲ βασιλεῖ ἀργυρώματα καὶ χρυσώματα τοπικῷ ῥυθμῷ κατεσκευασμένα καὶ ἱματίων ἀβόλλαι καὶ καυνάκαι ἁπλοῖ, οὐ πολλοῦ δὲ ταῦτα. Ὁμοίως δὲ καὶ ἀπὸ τῶν ἔσω τόπων τῆς Ἀραβικῆς σίδηρος Ἰνδικὸς καὶ στόμωμα καὶ ὀθόνιον Ἰνδικὸν τὸ πλατύτερον, ἡ λεγομένη μοναχὴ, καὶ σαγματογῆναι καὶ περιζώματα καὶ καυνάκαι καὶ μολόχινα καὶ σινδόνες ὀλίγαι καὶ λάκκος χρωμάτινος. Φέρεται δὲ ἀπὸ τῶν τόπων ἐλέφας καὶ χελώνη καὶ ῥινόκερως. Τὰ δὲ πλεῖστα ἐκ τῆς Αἰγύπτου φέρεται εἰς τὸ ἐμπόριον τοῦτο ἀπὸ μηνὸς Ἰανουαρίου μέχρι τοῦ Σεπτεμβρίου, ὅ ἐστιν ἀπὸ Τυβὶ ἕως Θώθ· εὐκαίρως δὲ ἀπὸ Αἰγύπτου ἀνάτονται περὶ τὸν Σεπτέμβριον μὴνα.",
+      "place_mentions": [
+        {
+          "surface": "Adulis",
+          "place_key": "adulis",
+          "kind": "main_route"
+        },
+        {
+          "surface": "τοὺς τόπους τούτους",
+          "place_key": "adulis",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aἰγύπτῳ",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Diospolis",
+          "place_key": "diospolis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Διοςπόλει",
+          "place_key": "diospolis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "inland Arabia",
+          "place_key": "inland_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβικῆς",
+          "place_key": "inland_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barbaria",
+          "place_key": "barbaria",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "unfulled Barbarian cloths made in Egypt",
+        "Arsinoite robes",
+        "imitation colored cloaks",
+        "linen cloths",
+        "double-fringed cloths",
+        "glass-stone varieties",
+        "murrhine ware from Diospolis",
+        "brass",
+        "copper vessels",
+        "iron",
+        "axes",
+        "adzes",
+        "knives",
+        "large round copper drinking cups",
+        "denarius coinage",
+        "Laodicean wine",
+        "Italian wine",
+        "olive oil",
+        "silver plate for the king",
+        "gold plate for the king",
+        "cloaks for the king",
+        "simple kaunakai for the king",
+        "Indian iron",
+        "steel",
+        "broad Indian cotton cloth called monache",
+        "girdle-cloths",
+        "waist-bands",
+        "kaunakai",
+        "mallow-colored garments",
+        "fine cloths",
+        "colored lac",
+        "ivory",
+        "tortoise shell",
+        "rhinoceros product"
+      ]
+    },
+    {
+      "step_id": "step_0007_avalites",
+      "type": "stop",
+      "title": "Avalites",
+      "route_label": "Section 7 of 10 · mapped stop",
+      "focus_place_key": "avalites",
+      "section_refs": [
+        "section_0007"
+      ],
+      "translation": "Farther east the Arabian gulf stretches on and narrows especially at Avalites. After about four thousand stades, sailing east along the same mainland, there are other Barbarian emporia called the far-side markets, with anchorages and roadsteads suitable by season. The first is Avalites, where the crossing from Arabia to the far side is narrowest. At this small trading station rafts and boats come together. Into it go mixed glass-stone, juice of Diospolitan sour grapes, mixed Barbarian cloths, grain, wine, and a little tin. From it are exported aromatics, a little ivory, tortoise shell, and a very small amount of myrrh superior to the rest; sometimes the local barbarians carry these by rafts across to Okelis and Mouza.",
+      "greek_text": "7. Ἤδη δὲ ἐπ᾿ ἀνατολὴν ὁ Ἀραβικὸς κόλπος διατείνει καὶ κατὰ τὸν Aὐαλίτην μάλιστα στενοῦται. Μετὰ δὲ σταδίους ὡςεὶ τετρακιςχιλίους, κατὰ τὴν αὐτήν ἤπειρον εἰς ἀνατολὴν πλεόντων, ἔστιν ἄλλα ἐμπόρια Βαρβαρικὰ, τὰ πέραν λεγόμενα, κείμενα μὲν κατὰ τὸ ἑξῆς ἀγκυροβολίοις δὲ καὶ σάλοις ἔχοντα τοὺς ὅρμους κατὰ καιροὸς ἐπιτηδείους. Πρῶτος μὲν ὁ λεγόμενος Aὐαλίτης, καθʼ ὃν καὶ στενώτατός ἐστιν ἀπὸ τῆς Ἀραβικῆς εἰς τὸ πέραν διάπλους. Κατὰ τοῦτον τὸν τόπον μικρὸν ἐμπόριόν ἐστιν ὁ Aὐαλίτης, σχεδίαις καὶ σκάφαις εἰς τὸ αὐτὸ προςερχομένων. Προχωρεῖ δὲ εἰς αὐτήν ὑαλὴ λιθία σύμμικτος καὶ χυλὸς Διοςπολιτικῆς ὄμφακος καὶ ἱμάτια βαρβαρικὰ σύμμικτα γεγναμμέ καὶ σῖτος καὶ οἶνος καὶ κασσίτερος ὀλίγος. Φέρεται δʼ ἐξ αὐτῆς, ποτὲ καὶ τῶν βαρβάρων ἐπὶ σχεδίαις διαφερόντων εἰς τὴν ἀντικρὺς Ὄκηλιν καὶ Μούζα, ἀρώματα καὶ ἐλέφας ὀλίγος καὶ χελώνη καὶ σμύρνα ἐλαχίστη, διαφέρουσα δὲ τῆς ἄλλης. Ἀτακτότεροι δὲ κατοικοῦντες τὸν τόπον βάρβαροι.",
+      "place_mentions": [
+        {
+          "surface": "Avalites",
+          "place_key": "avalites",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Aὐαλίτης",
+          "place_key": "avalites",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Arabia",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβικῆς",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Okelis",
+          "place_key": "okelis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὄκηλιν",
+          "place_key": "okelis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Mouza",
+          "place_key": "mouza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "mouza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barbarian coast",
+          "place_key": "barbarian_coast",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρβαρικὰ",
+          "place_key": "barbarian_coast",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barbaria",
+          "place_key": "barbaria",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβικῆς",
+          "place_key": "inland_arabia",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "mixed glass-stone",
+        "juice of Diospolitan sour grapes",
+        "mixed Barbarian cloths",
+        "grain",
+        "wine",
+        "tin",
+        "aromatics",
+        "ivory",
+        "tortoise shell",
+        "myrrh"
+      ]
+    },
+    {
+      "step_id": "step_0008_malao",
+      "type": "stop",
+      "title": "Malao",
+      "route_label": "Section 8 of 10 · mapped stop",
+      "focus_place_key": "malao",
+      "section_refs": [
+        "section_0008"
+      ],
+      "translation": "After Avalites is another trading station, better than it, called Malao, about eight hundred stades by sea. Its harbor is an open roadstead sheltered by a cape rising to the east, and its inhabitants are more peaceful. Into this place go the goods already mentioned, plus more tunics, fulled and dyed Arsinoite cloaks, drinking cups, a few copper vessels, iron, and not much gold and silver denarius coinage. From these places are exported myrrh, a little far-side frankincense, harder cassia, douaka, kangkamon, makeir sent on to Arabia, and rarely slaves.",
+      "greek_text": "8. Μετὰ δὲ τὴν Aὐαλίτην ἕτερον ἐμπόριόν ἐστι τούτου διαφέρον ἡ λεγομένη Μαλαὼ, πλοῦν ἀπέχουσα σταδίων ὡς ὀκτακοσίων· ὁ δὲ ὅρμος ἐπίσαλος, σκεπόμενος ἀκρωτηρίῳ τῷ ἐξ ἀνατολῆς ἀνατείνοντι· οἱ δὲ κατοικοῦντες εἰρηνικώτεροι. Προχωρεῖ δὲ εἰς τοῦτον τὸν τόπον τὰ προειρημένα καὶ πλείονες χιτῶνες, σάγοι Ἀρσινοητικοὶ γεγναμμένοι καὶ βεβαμμένοι καὶ ποτήρια· καὶ μελίεφθα ὀλίγα καὶ σίδηρος καὶ δηνάριον οὐ πολὺ, χρυσοῦν τε καὶ ἀργυροῦν. Ἐκφέρεται δὲ ἀπὸ τῶν, τόπων τούτων καὶ σμύρνα καὶ λίβανος ὁ περατικὸς ὀλίγος καὶ κασσία σκληροτέρα καὶ δούακα καὶ κάγκαμον καὶ μάκειρ, τὰ εἰς Ἀραβίαν προχωροῦντα, καὶ σώματα σπανίως.",
+      "place_mentions": [
+        {
+          "surface": "Avalites",
+          "place_key": "avalites",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Aὐαλίτην",
+          "place_key": "avalites",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Malao",
+          "place_key": "malao",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Μαλαὼ",
+          "place_key": "malao",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Arabia",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβίαν",
+          "place_key": "arabia",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "previously mentioned imports",
+        "tunics",
+        "fulled and dyed Arsinoite cloaks",
+        "drinking cups",
+        "copper vessels",
+        "iron",
+        "gold coinage",
+        "silver coinage",
+        "myrrh",
+        "far-side frankincense",
+        "harder cassia",
+        "douaka",
+        "kangkamon",
+        "makeir",
+        "slaves"
+      ]
+    },
+    {
+      "step_id": "step_0009_mundu",
+      "type": "stop",
+      "title": "Mundu",
+      "route_label": "Section 9 of 10 · mapped stop",
+      "focus_place_key": "mundu",
+      "section_refs": [
+        "section_0009"
+      ],
+      "translation": "Two runs from Malao is the trading station Mundu, where ships anchor more safely at the island lying very close before the land. Into it go the goods already mentioned, and from there likewise are exported the already mentioned cargoes and the incense called mokrotou. The resident merchants are harsher.",
+      "greek_text": "9.\"Ἀπὸ δὲ Μαλαὼ δύο δρόμοις ἐστὶν ἐμπόριον ἡ Μούνδου, ἐν ᾧ καὶ ἀσφαλέστερον ὁρμεῖ τὰ πλοῖα εἰς τὴν προκειμένην ἔγγιστα τῆς γῆς νῆσον. Προχωρεῖ δὲ εἰς αὐτὴν τὰ προειρημένα καὶ ἐκεῖθεν ὁμοίως ἐκφέρεται τὰ προειρημένα φορτία καὶ s θυμίαμα τὸ λεγόμενον μοκρότου. Οἱ δὲ κατοικοῦντες ἔμποροι σκληρότεροι.",
+      "place_mentions": [
+        {
+          "surface": "Malao",
+          "place_key": "malao",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Μαλαὼ",
+          "place_key": "malao",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Mundu",
+          "place_key": "mundu",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Μούνδου",
+          "place_key": "mundu",
+          "kind": "main_route"
+        },
+        {
+          "surface": "island off Mundu",
+          "place_key": "island_off_mundu",
+          "kind": "off_route"
+        },
+        {
+          "surface": "νῆσον",
+          "place_key": "island_off_mundu",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "previously mentioned imports",
+        "previously mentioned cargoes",
+        "mokrotou incense"
+      ]
+    },
+    {
+      "step_id": "step_0010_mosyllon",
+      "type": "stop",
+      "title": "Mosyllon",
+      "route_label": "Section 10 of 10 · mapped stop",
+      "focus_place_key": "mosyllon",
+      "section_refs": [
+        "section_0010"
+      ],
+      "translation": "From Mundu, sailing east, after two or three runs, Mosyllon lies nearby on a shore with a difficult anchorage. Into it go the previously mentioned kinds, silver ware, fewer iron goods, and glass-stone goods. From these places is exported a very great quantity of cassia, so the emporion needs larger ships, along with other fragrance and aromatics, a few small tortoise shells, mokrotou inferior to that of Mundu, far-side frankincense, and rarely ivory and myrrh.",
+      "greek_text": "10. Ἀπὸ δὲ τῆς Μούνδου, πλεόντων εἰς τήν ἀνατολὴν, ὁμοίως μετὰ δύο δρόμους ἢ τρεῖς, πλησίον κεῖται τὸ Μόσυλον ἐν αἰγιαλῷ δυςόρμῳ. Προχωρεῖ δὲ εἰς αὐτὴν τὰ προειρημένα γένη καὶ σκεύη ἀργυρᾶ, σιδηρᾶ δὲ ἐλάσσονα, καὶ λιθία, Ἐξάγεται δὲ ἀπὸ τῶν τόπων κασσίας χρῆμα πλεῖστον διὸ καὶ μειζόνων πλοίων χρῄζει τὸ ἐμπόριον καὶ ἄλλη εὐωδία καὶ ἀρώματα καὶ χελωνάρια ὀλίγα καὶ μοκρότου, ἧττον τοῦ Μουνδιτικοῦ, καὶ λίβανος ὁ περατικὸς, ἐλέφας δὲ καὶ σμύρνα σπανίως.",
+      "place_mentions": [
+        {
+          "surface": "Mundu",
+          "place_key": "mundu",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Μούνδου",
+          "place_key": "mundu",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Mosyllon",
+          "place_key": "mosyllon",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Μόσυλον",
+          "place_key": "mosyllon",
+          "kind": "main_route"
+        }
+      ],
+      "goods": [
+        "previously mentioned kinds",
+        "silver ware",
+        "iron goods",
+        "glass-stone goods",
+        "cassia",
+        "other fragrance",
+        "aromatics",
+        "small tortoise shells",
+        "mokrotou incense",
+        "far-side frankincense",
+        "ivory",
+        "myrrh"
+      ]
+    }
+  ],
+  "legs": [
+    {
+      "from_place_key": "myos_hormos",
+      "to_place_key": "berenike",
+      "section_refs": [
+        "section_0001"
+      ],
+      "distance_text": "1,800 stades",
+      "distance_value": 1800.0,
+      "distance_unit": "stades",
+      "estimated_km_at_185m_stade": 333.0,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "berenike",
+      "to_place_key": "ptolemais_theron",
+      "section_refs": [
+        "section_0003"
+      ],
+      "distance_text": "about four thousand stades",
+      "distance_value": 4000.0,
+      "distance_unit": "stades",
+      "estimated_km_at_185m_stade": 740.0,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "ptolemais_theron",
+      "to_place_key": "adulis",
+      "section_refs": [
+        "section_0004"
+      ],
+      "distance_text": "about three thousand stades",
+      "distance_value": 3000.0,
+      "distance_unit": "stades",
+      "estimated_km_at_185m_stade": 555.0,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "adulis",
+      "to_place_key": "avalites",
+      "section_refs": [
+        "section_0007"
+      ],
+      "distance_text": "about four thousand stades",
+      "distance_value": 4000.0,
+      "distance_unit": "stades",
+      "estimated_km_at_185m_stade": 740.0,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "avalites",
+      "to_place_key": "malao",
+      "section_refs": [
+        "section_0008"
+      ],
+      "distance_text": "about eight hundred stades",
+      "distance_value": 800.0,
+      "distance_unit": "stades",
+      "estimated_km_at_185m_stade": 148.0,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "malao",
+      "to_place_key": "mundu",
+      "section_refs": [
+        "section_0009"
+      ],
+      "distance_text": "two runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "mundu",
+      "to_place_key": "mosyllon",
+      "section_refs": [
+        "section_0010"
+      ],
+      "distance_text": "two or three runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    }
+  ]
+}

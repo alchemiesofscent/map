@@ -1,0 +1,1219 @@
+[
+  {
+    "chunk_id": "section_0001",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/head",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/head",
+    "section_order": 1,
+    "greek_text": "ΑΝΩΝΥΜΟΥ ΑΡΡΙΑΝΟΥ, ΩΣ ΦΕΡΕΤΑΙ ΠΕΡΙΠΛΟΥΣ ΤΗΕ ΕΡΥΘΡΑΣ ΘΑΛΑΣΣΗΣ. Τῶν ἀποδεδειγμένων ὅρμων τῆς Ἐρυθρᾶς θαλάσσης καὶ τῶν περὶ αὐτὴν ἐμπορίων πρῶτός ἐστι λιμὴν τῆς Αἰγύπτου Μυὸς ὅρμος. Μετὰ δὲ αὐτὸν εἰςπλεόντων ἀπὸ χιλίων ὀκτακοσίων σταδίων ἐν δεξιᾷ ἡ Βερνίκη. Ἀμφοτέρων δὲ οἱ λιμένες ἐν τῷ ἐσχάτῳ τῆς Αἰγύπτου κόλποι τῆς Ἐρυθρᾶς θαλάσσης κεῖνται.",
+    "draft_translation": "The first marked harbor of the Red Sea and its trading places is Myos Hormos in Egypt. After it, sailing inward 1,800 stades, Berenike lies on the right. Both harbors are at the far end of Egypt's gulf of the Red Sea.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0002",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[2]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[2]/p",
+    "section_order": 2,
+    "greek_text": "2. Τούτων ἐκ μὲν τῶν δεξιῶν ἀπὸ Βερνίκης συναφής ἐστιν ἡ Βαρβαρικὴ χώρα. Καὶ ἔστι τὰ μὲν παρὰ θάλασσαν Ἰχθυοφάγων ἐν μάνδραις ᾠκοδομημέναις ἐν στενώμασι σποράδην διοικούντων, τὰ δὲ μεσόγεια Βαρβάρων καὶ τῶν μετʼ αὐτοὺς Ἀγριοφάγων καὶ Μοσχοφάγων κατὰ τυραννίδα νεμομένων, οἷς ἐπίκειται κατὰ νώτου μεσόγειος ἀπὸ τῶν πρὸς δύσιν μερῶν μητρόπολις λεγομένη Μερόη .",
+    "draft_translation": "From the right-hand side from Berenike the Barbarian country adjoins the route. The coast is inhabited here and there by Fish-Eaters in narrow built enclosures, while inland live Barbarians and, after them, Wild-Eaters and Calf-Eaters under local rulers; behind them inland, toward the west, lies the metropolis called Meroe.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0003",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[3]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[3]/p",
+    "section_order": 3,
+    "greek_text": "3. Μετὰ δὲ τοὺς Μοσχοφάγους ἐπὶ θαλάσσης μικρὸν ἐμπόριόν ἐστιν, ἀπέχον τὸ πέρας τῆς ἀνακομιδῆς σταδίους περὶ τετράκιςχιλίους, Πτολεμαῒς ἡ τῶν θηρῶν λεγομένη, ἀφʼ ἧς οἱ ἐπὶ Πτολεμαίων τῶν βασιλέων θηρευταὶ ἐντὸς ἀνέβησαν. Ἔχει δὲ τὸ ἐμπόριον χελώνην ἀληθινήν καὶ χερσαίαν ὀλίγην καὶ λευκὴν μικροτέραν τοῖς ὀστράκοις· εὑρίσκεται δὲ ἐν αὐτῇ ποτὲ μὲν ἐλέφας ὀλίγος, ὅμοιος τῷ Ἀδουλιτικῷ. Ὁ δὲ τόπος ἀλίμενος καὶ σκάφαις μόνον τὴν ἀποδρομὴν ἔχων.",
+    "draft_translation": "After the Calf-Eaters, on the coast, is the small trading station called Ptolemais of the Hunts, about four thousand stades from the end of the voyage up the gulf. From there the royal hunters under the Ptolemies went inland. The station has true tortoise shell, a little land tortoise shell, and a smaller white shell; occasionally a little ivory like that of Adulis is found there. The place has no harbor and offers only a landing by small boats.",
+    "places": [
+      {
+        "greek_surface": "Πτολεμαῒς ἡ τῶν θηρῶν",
+        "english_label": "Ptolemais of the Hunts",
+        "role": "destination_port",
+        "notes": "Small coastal emporion after the Moschophagoi."
+      },
+      {
+        "greek_surface": "Μοσχοφάγους",
+        "english_label": "Moschophagoi territory",
+        "role": "route_or_intermediate_place",
+        "notes": "Preceding coastal people/place marker on the route."
+      },
+      {
+        "greek_surface": "Ἀδουλιτικῷ",
+        "english_label": "Adulis",
+        "role": "comparison_place",
+        "notes": "Used as the comparison for the quality of the ivory, not the destination in this section."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "true tortoise shell",
+        "greek_surface": "χελώνην ἀληθινήν",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Exportable shell available at Ptolemais."
+      },
+      {
+        "english_label": "land tortoise shell",
+        "greek_surface": "χελώνην ... χερσαίαν",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Listed separately from true tortoise shell."
+      },
+      {
+        "english_label": "small white tortoise shell",
+        "greek_surface": "λευκὴν μικροτέραν",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "A smaller white shell variety, probably a tortoise-shell type."
+      },
+      {
+        "english_label": "ivory",
+        "greek_surface": "ἐλέφας",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Only a little is found, compared with Adulitic ivory."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_availability",
+        "source_place": "Ptolemais of the Hunts",
+        "destination_place": "Ptolemais of the Hunts",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "true tortoise shell",
+          "land tortoise shell",
+          "small white tortoise shell",
+          "ivory"
+        ],
+        "notes": "Goods are described as present or occasionally found at the emporion rather than as a directional cargo movement."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0004",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[4]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[4]/p",
+    "section_order": 4,
+    "greek_text": "4. Μετὰ δὲ τὴν Πτολεμαΐδα τὴν τῶν θηρῶν ἀπὸ σταδίων ὡς τριςχιλίων ἐμπόριόν ἐστι νόμιμον ἡ Ἀδουλὶ, κείμενον ἐν κόλπῳ βαθεῖ κατ᾿ αὐτὸν τὸν νότον, οὖ πρόκειται νῆσος Ὀρεινὴ λεγομένη, τοῦ μὲν ἐσωτάτου κόλπου σταδίους ὡς εἰς πέλαγος ἀπέχουσα διακοσίους, ἐξ ἀμφοτέρων δὲ τῶν μερῶν παρακειμένην ἔχουσα τὴν ἤπειρον, ἐν ᾗ νῦν ὁρμεῖ τὰ καταγόμενα πλοῖα διὰ τὰς ἐκ τῆς γῆς καταδρομάς. Πρῶτον μὲν γὰρ ὥρμει κατʼ αὐτὸν τὸν ἐσώτατον κόλπον ἐν τῆ Διοδώρου λεγο μένη νήσῳ παῤ αὐτήν τὴν ἤπειρον, ἐχούσῃ πεζῇ τὴν διάβασιν, διʼ ἧς οἱ κατοικοῦντες βάρβαροι κατέτρεχον τὴν νῆσον. Καὶ κατʼ αὐτὴν τὴν ἐν τῇ Ὀρεινῇ ἤπειρον ἀπὸ σταδίων εἴκοσι τῆς θαλάσσης ἐστὶν ἡ Ἀδουλὶ μari κώμη σύμμετρος, ἀφʼ ἧς εἰς μὲν Κολόην μεσόγειον πόλιν καὶ πρῶτον ἐμπόριον τοῦ ἐλέφαντος, ὁδός ἐστιν ἡμερῶν τριῶν. Ἀπὸ δὲ ταύτης εἰς αὐτὴν τὴν μετρόπολιν τῶν Aὐξωμιτῶν λεγομένων ἄλλων ἡμερῶν πέντε, εἰς ἣν ὁ πᾶς ἐλέφας ἀπὸ τοῦ πέραν τοῦ Νείλου φέρεται διὰ τοῦ λεγομένου Κυηνείου, ἐκεῖθεν δὲ εἰς Ἀδουλί, Τὸ μὲν οὖν ὅλον πλῆθος τῶν φονευομένων ἐλεφάντων ἢ ῥινοκερώτων περὶ τοὺς ἄνω νέμεται τόπους, σπανίως δέ ποτε καὶ ἐν τῷ παρὰ θάλασσαν περὶ αὐτὴν τὴν Ἀδουλὶ θεωροῦνται. Πρόκεινται δὲ τοῦ ἐμπορίου καὶ κατὰ πέλαγος ἄλλαι νῆσοι μικραὶ ἐκ δεξιῶν ἀμμιναὶ πλείονες, Ἀλαλαίου λεγόμεναι, χελώνην ἔχουσαι τὴν εἰς τὸ ἐμπόριον φερομένην ὑπὸ τῶν Ἰχθυοφάγων.",
+    "draft_translation": "About three thousand stades after Ptolemais of the Hunts lies the lawful trading station Adulis, set in a deep south-facing bay. The island called Oreine lies before it, where ships now anchor because of attacks from the mainland; formerly they anchored deeper in the bay at Diodoros island. On the mainland opposite Oreine, twenty stades from the sea, is the village of Adulis. From it a three-day road leads to inland Koloe, the first ivory market; five more days lead to the metropolis of the Aksumites, where all ivory from beyond the Nile is brought through Kyeneion and then onward to Adulis. Elephants and rhinoceroses mostly range in the upper country, though rarely near coastal Adulis. Offshore islands called Alalaiou have tortoise shell carried to the emporion by the Fish-Eaters.",
+    "places": [
+      {
+        "greek_surface": "Ἀδουλὶ",
+        "english_label": "Adulis",
+        "role": "destination_port",
+        "notes": "Lawful emporion and endpoint for ivory carried from inland routes."
+      },
+      {
+        "greek_surface": "Πτολεμαΐδα τὴν τῶν θηρῶν",
+        "english_label": "Ptolemais of the Hunts",
+        "role": "route_or_intermediate_place",
+        "notes": "Previous route marker."
+      },
+      {
+        "greek_surface": "Ὀρεινὴ",
+        "english_label": "Oreine island",
+        "role": "route_or_intermediate_place",
+        "notes": "Island anchorage before the bay; ships anchor there."
+      },
+      {
+        "greek_surface": "Διοδώρου ... νήσῳ",
+        "english_label": "Diodoros island",
+        "role": "route_or_intermediate_place",
+        "notes": "Former anchorage deeper in the bay."
+      },
+      {
+        "greek_surface": "Κολόην",
+        "english_label": "Koloe",
+        "role": "source_place",
+        "notes": "Inland city and first emporion of ivory."
+      },
+      {
+        "greek_surface": "Aὐξωμιτῶν",
+        "english_label": "Aksumite metropolis",
+        "role": "source_place",
+        "notes": "Inland metropolis receiving ivory from beyond the Nile."
+      },
+      {
+        "greek_surface": "Κυηνείου",
+        "english_label": "Kyeneion",
+        "role": "route_or_intermediate_place",
+        "notes": "Named route point for ivory from beyond the Nile."
+      },
+      {
+        "greek_surface": "πέραν τοῦ Νείλου",
+        "english_label": "Beyond the Nile",
+        "role": "source_place",
+        "notes": "Ultimate source region for the ivory."
+      },
+      {
+        "greek_surface": "Ἀλαλαίου",
+        "english_label": "Alalaiou islands",
+        "role": "source_place",
+        "notes": "Offshore islands with tortoise shell."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "ivory",
+        "greek_surface": "ἐλέφας",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Main inland commodity routed through Koloe, the Aksumite metropolis, Kyeneion, and Adulis."
+      },
+      {
+        "english_label": "rhinoceros horn or rhinoceros product",
+        "greek_surface": "ῥινοκερώτων",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Rhinoceroses are mentioned with hunted elephants; commodity form is not explicit."
+      },
+      {
+        "english_label": "tortoise shell",
+        "greek_surface": "χελώνην",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "From the Alalaiou islands, carried into the emporion by Fish-Eaters."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "inland_export_to_port",
+        "source_place": "Beyond the Nile",
+        "destination_place": "Adulis",
+        "route_or_intermediate_place": "Kyeneion; Aksumite metropolis; Koloe",
+        "goods": [
+          "ivory"
+        ],
+        "notes": "All ivory is said to be brought inland through these points and then to Adulis."
+      },
+      {
+        "movement_type": "local_supply_to_port",
+        "source_place": "Alalaiou islands",
+        "destination_place": "Adulis",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "tortoise shell"
+        ],
+        "notes": "Fish-Eaters carry tortoise shell from the islands into the emporion."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0005",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[5]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[5]/p",
+    "section_order": 5,
+    "greek_text": "5. Καὶ ἀπὸ σταδίων ὡςεὶ ὀκτακοσίων κόλπος ἕτερος βαθύτατος, οδ κατὰ τὴν εἰςβολὴν ἐν δεξιοῖς ἄμμος ἐστὶ πολλὴ κεχυμένη, καθʼ ἧς ἐν βάθει κεχωσμένος εὑρίσκεται ὁ ὀψιανὸς λίθος, ἐν ἐκείνῃ μόνῃ τοπικῶς γεν· νώμενος. Βαστλεύει δὲ τῶν τόπων τούτων ἀπὸ τῶν Μοσχοφάγων μέχρι τῆς ἄλλης Bαρβαρίας Ζωσκάλης, ἀκριβὴς μὲν τοῦ βίου καὶ τοῦ πλείονος ἐξεχόμενος, γενναῖος δὲ περὶ τὰ λειπὰ καὶ γραμμάτων Ἑλληνικῶν ἔμπειρος.",
+    "draft_translation": "About eight hundred stades farther is another very deep gulf. At the entrance on the right a large sandbank lies spread out, and under it, buried in depth, is found obsidian stone, produced locally only there. Zoskales rules these places from the Calf-Eaters as far as the rest of Barbaria; he is frugal and grasping in most matters, but noble in other respects and familiar with Greek letters.",
+    "places": [
+      {
+        "greek_surface": "Μοσχοφάγων",
+        "english_label": "Moschophagoi territory",
+        "role": "route_or_intermediate_place",
+        "notes": "Western limit of Zoskales' rule in this description."
+      },
+      {
+        "greek_surface": "Bαρβαρίας",
+        "english_label": "Barbaria",
+        "role": "region",
+        "notes": "Region ruled by Zoskales."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "obsidian stone",
+        "greek_surface": "ὀψιανὸς λίθος",
+        "category": "stone_or_mineral",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Said to be found buried in the sand and locally produced only in this place."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_product",
+        "source_place": "deep gulf after Adulis",
+        "destination_place": null,
+        "route_or_intermediate_place": null,
+        "goods": [
+          "obsidian stone"
+        ],
+        "notes": "The passage describes local occurrence, not shipment."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0006",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[6]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[6]/p",
+    "section_order": 6,
+    "greek_text": "6. Προχωρεῖ δὲ εἰς τοὺς τόπους τούτους ἱμάτια βαρβαρικὰ ἄγναφα τὰ ἐν Aἰγύπτῳ γινόμενα, Ἀρσινοητιικαὶ στολαὶ καὶ ἀβόλλαι νόθοι χρωμάτιναι καὶ λέντια καὶ δικρόσσια καὶ λιθίας ὑαλῆς πλείονα γένη καὶ ἄλλης μορρίνης, τῆς γινομένης ἐν Διοςπόλει, καὶ ὀρείχαλκος, ᾧ χρῶνται πρὸς κόσμον καὶ εἰς συγκοπὴν ἀντὶ νομίσματος, καὶ μελίεφθα χαλκᾶ εἴς τε ἕψησιν καὶ εἰς συγκοπτὴν ψελίων καὶ περισκελίδων τισὶ τῶν γυναικῶν, καὶ σίδηρος ὁ δαπανώμενος εἴς τε λόγχας πρὸς τοὺς ἐλέφαντας καὶ τὰ ἄλλα θηρία καὶ τοὺς πολέμους. Ὁμοίως δὲ καὶ πελύκια προχωρεῖ καὶ σκέπαρνα καὶ μάχαιραι καὶ ποτήρια χαλκᾶ στρογγύλα μεγάλα καὶ δηνάριον ὀλίγον πρὸς τοὺς ἐπιδημοῦντας καὶ οἶνος Λαδικηνὸς καὶ Ἰταλικὸς οὐ πολὺς καὶ ἔλαιον οὐ πολύ· τῷ δὲ βασιλεῖ ἀργυρώματα καὶ χρυσώματα τοπικῷ ῥυθμῷ κατεσκευασμένα καὶ ἱματίων ἀβόλλαι καὶ καυνάκαι ἁπλοῖ, οὐ πολλοῦ δὲ ταῦτα. Ὁμοίως δὲ καὶ ἀπὸ τῶν ἔσω τόπων τῆς Ἀραβικῆς σίδηρος Ἰνδικὸς καὶ στόμωμα καὶ ὀθόνιον Ἰνδικὸν τὸ πλατύτερον, ἡ λεγομένη μοναχὴ, καὶ σαγματογῆναι καὶ περιζώματα καὶ καυνάκαι καὶ μολόχινα καὶ σινδόνες ὀλίγαι καὶ λάκκος χρωμάτινος. Φέρεται δὲ ἀπὸ τῶν τόπων ἐλέφας καὶ χελώνη καὶ ῥινόκερως. Τὰ δὲ πλεῖστα ἐκ τῆς Αἰγύπτου φέρεται εἰς τὸ ἐμπόριον τοῦτο ἀπὸ μηνὸς Ἰανουαρίου μέχρι τοῦ Σεπτεμβρίου, ὅ ἐστιν ἀπὸ Τυβὶ ἕως Θώθ· εὐκαίρως δὲ ἀπὸ Αἰγύπτου ἀνάτονται περὶ τὸν Σεπτέμβριον μὴνα.",
+    "draft_translation": "Into these places go unfulled Barbarian cloths made in Egypt, Arsinoite robes, imitation colored cloaks, linens, double-fringed cloths, many kinds of glass-stone and other murrhine from Diospolis, brass used for ornament and cut as money, copper vessels for cooking and for making women's bracelets and anklets, iron for spears against elephants and other beasts and for wars, axes, adzes, knives, large round copper drinking cups, a little denarius coinage for resident foreigners, a little Laodicean and Italian wine, and a little oil. For the king go locally styled silver and gold plate, cloaks, and simple kaunakai. From the inland parts of Arabia also come Indian iron and steel, broad Indian cotton cloth called monache, girdle-cloths, waist-bands, kaunakai, mallow-colored garments, a few fine cloths, and colored lac. From these places are exported ivory, tortoise shell, and rhinoceros product. Most goods from Egypt are brought to this emporion from January to September, and the timely departure from Egypt is around September.",
+    "places": [
+      {
+        "greek_surface": "τοὺς τόπους τούτους",
+        "english_label": "Adulis and neighboring Barbaria",
+        "role": "destination_port",
+        "notes": "The import and export list continues the Adulis district from the preceding section."
+      },
+      {
+        "greek_surface": "Aἰγύπτῳ",
+        "english_label": "Egypt",
+        "role": "source_place",
+        "notes": "Source of many imports into Adulis."
+      },
+      {
+        "greek_surface": "Διοςπόλει",
+        "english_label": "Diospolis",
+        "role": "source_place",
+        "notes": "Source named for murrhine or glass-like ware."
+      },
+      {
+        "greek_surface": "Ἀραβικῆς",
+        "english_label": "inland Arabia",
+        "role": "source_place",
+        "notes": "Source region for Indian and other goods entering these places."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "unfulled Barbarian cloths made in Egypt",
+        "greek_surface": "ἱμάτια βαρβαρικὰ ἄγναφα",
+        "category": "textile",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Compound import item; Egyptian manufacture is part of the description."
+      },
+      {
+        "english_label": "Arsinoite robes",
+        "greek_surface": "Ἀρσινοητιικαὶ στολαὶ",
+        "category": "textile",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Imported garment type."
+      },
+      {
+        "english_label": "imitation colored cloaks",
+        "greek_surface": "ἀβόλλαι νόθοι χρωμάτιναι",
+        "category": "textile",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Preserved as one compound textile entity."
+      },
+      {
+        "english_label": "linen cloths",
+        "greek_surface": "λέντια",
+        "category": "textile",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Imported textile."
+      },
+      {
+        "english_label": "double-fringed cloths",
+        "greek_surface": "δικρόσσια",
+        "category": "textile",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Textile or cloth item in the import list."
+      },
+      {
+        "english_label": "glass-stone varieties",
+        "greek_surface": "λιθίας ὑαλῆς πλείονα γένη",
+        "category": "glass_or_stone",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Multiple varieties treated as one compound category."
+      },
+      {
+        "english_label": "murrhine ware from Diospolis",
+        "greek_surface": "ἄλλης μορρίνης",
+        "category": "glass_or_stone",
+        "structure_type": "compound_entity",
+        "confidence": "medium",
+        "notes": "Imported material or ware associated with Diospolis."
+      },
+      {
+        "english_label": "brass",
+        "greek_surface": "ὀρείχαλκος",
+        "category": "metal",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Used for ornament and as cut exchange metal."
+      },
+      {
+        "english_label": "copper vessels",
+        "greek_surface": "μελίεφθα χαλκᾶ",
+        "category": "metalware",
+        "structure_type": "compound_entity",
+        "confidence": "medium",
+        "notes": "Copper cooking and metalworking vessels."
+      },
+      {
+        "english_label": "iron",
+        "greek_surface": "σίδηρος",
+        "category": "metal",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Consumed for spears and warfare."
+      },
+      {
+        "english_label": "axes",
+        "greek_surface": "πελύκια",
+        "category": "tool",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Imported tool."
+      },
+      {
+        "english_label": "adzes",
+        "greek_surface": "σκέπαρνα",
+        "category": "tool",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Imported tool."
+      },
+      {
+        "english_label": "knives",
+        "greek_surface": "μάχαιραι",
+        "category": "tool_or_weapon",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Imported blade goods."
+      },
+      {
+        "english_label": "large round copper drinking cups",
+        "greek_surface": "ποτήρια χαλκᾶ στρογγύλα μεγάλα",
+        "category": "metalware",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Preserved as a compound vessel entity."
+      },
+      {
+        "english_label": "denarius coinage",
+        "greek_surface": "δηνάριον",
+        "category": "money",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "A small amount imported for resident traders."
+      },
+      {
+        "english_label": "Laodicean wine",
+        "greek_surface": "οἶνος Λαδικηνὸς",
+        "category": "food_drink",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Listed separately from Italian wine."
+      },
+      {
+        "english_label": "Italian wine",
+        "greek_surface": "οἶνος ... Ἰταλικὸς",
+        "category": "food_drink",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Listed separately from Laodicean wine."
+      },
+      {
+        "english_label": "olive oil",
+        "greek_surface": "ἔλαιον",
+        "category": "food_drink",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Small quantity import."
+      },
+      {
+        "english_label": "silver plate for the king",
+        "greek_surface": "ἀργυρώματα",
+        "category": "prestige_metalware",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Royal gift or elite import."
+      },
+      {
+        "english_label": "gold plate for the king",
+        "greek_surface": "χρυσώματα",
+        "category": "prestige_metalware",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Royal gift or elite import."
+      },
+      {
+        "english_label": "cloaks for the king",
+        "greek_surface": "ἱματίων ἀβόλλαι",
+        "category": "textile",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Royal import."
+      },
+      {
+        "english_label": "simple kaunakai for the king",
+        "greek_surface": "καυνάκαι ἁπλοῖ",
+        "category": "textile",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Royal import."
+      },
+      {
+        "english_label": "Indian iron",
+        "greek_surface": "σίδηρος Ἰνδικὸς",
+        "category": "metal",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Import from inland Arabia, identified as Indian."
+      },
+      {
+        "english_label": "steel",
+        "greek_surface": "στόμωμα",
+        "category": "metal",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Listed with Indian iron."
+      },
+      {
+        "english_label": "broad Indian cotton cloth called monache",
+        "greek_surface": "ὀθόνιον Ἰνδικὸν τὸ πλατύτερον, ἡ λεγομένη μοναχὴ",
+        "category": "textile",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Compound entity with appositional name preserved."
+      },
+      {
+        "english_label": "girdle-cloths",
+        "greek_surface": "σαγματογῆναι",
+        "category": "textile",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Textile import from inland Arabia."
+      },
+      {
+        "english_label": "waist-bands",
+        "greek_surface": "περιζώματα",
+        "category": "textile",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Imported textile or garment."
+      },
+      {
+        "english_label": "kaunakai",
+        "greek_surface": "καυνάκαι",
+        "category": "textile",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Imported textile."
+      },
+      {
+        "english_label": "mallow-colored garments",
+        "greek_surface": "μολόχινα",
+        "category": "textile",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Color/type textile term."
+      },
+      {
+        "english_label": "fine cloths",
+        "greek_surface": "σινδόνες",
+        "category": "textile",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "A few are imported."
+      },
+      {
+        "english_label": "colored lac",
+        "greek_surface": "λάκκος χρωμάτινος",
+        "category": "dye_or_resin",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Imported colorant."
+      },
+      {
+        "english_label": "ivory",
+        "greek_surface": "ἐλέφας",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Export from these places."
+      },
+      {
+        "english_label": "tortoise shell",
+        "greek_surface": "χελώνη",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Export from these places."
+      },
+      {
+        "english_label": "rhinoceros product",
+        "greek_surface": "ῥινόκερως",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Exported product; commodity form is not specified."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "import_to_port",
+        "source_place": "Egypt",
+        "destination_place": "Adulis and neighboring Barbaria",
+        "route_or_intermediate_place": "Diospolis for murrhine ware",
+        "goods": [
+          "unfulled Barbarian cloths made in Egypt",
+          "Arsinoite robes",
+          "imitation colored cloaks",
+          "linen cloths",
+          "double-fringed cloths",
+          "glass-stone varieties",
+          "murrhine ware from Diospolis",
+          "brass",
+          "copper vessels",
+          "iron",
+          "axes",
+          "adzes",
+          "knives",
+          "large round copper drinking cups",
+          "denarius coinage",
+          "Laodicean wine",
+          "Italian wine",
+          "olive oil",
+          "silver plate for the king",
+          "gold plate for the king",
+          "cloaks for the king",
+          "simple kaunakai for the king"
+        ],
+        "notes": "Main Egyptian import list for the Adulis district."
+      },
+      {
+        "movement_type": "import_to_port",
+        "source_place": "inland Arabia",
+        "destination_place": "Adulis and neighboring Barbaria",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "Indian iron",
+          "steel",
+          "broad Indian cotton cloth called monache",
+          "girdle-cloths",
+          "waist-bands",
+          "kaunakai",
+          "mallow-colored garments",
+          "fine cloths",
+          "colored lac"
+        ],
+        "notes": "Additional imports said to come from the inland parts of Arabia."
+      },
+      {
+        "movement_type": "export_from_port",
+        "source_place": "Adulis and neighboring Barbaria",
+        "destination_place": null,
+        "route_or_intermediate_place": null,
+        "goods": [
+          "ivory",
+          "tortoise shell",
+          "rhinoceros product"
+        ],
+        "notes": "Export list from these places; destination not specified."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0007",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[7]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[7]/p",
+    "section_order": 7,
+    "greek_text": "7. Ἤδη δὲ ἐπ᾿ ἀνατολὴν ὁ Ἀραβικὸς κόλπος διατείνει καὶ κατὰ τὸν Aὐαλίτην μάλιστα στενοῦται. Μετὰ δὲ σταδίους ὡςεὶ τετρακιςχιλίους, κατὰ τὴν αὐτήν ἤπειρον εἰς ἀνατολὴν πλεόντων, ἔστιν ἄλλα ἐμπόρια Βαρβαρικὰ, τὰ πέραν λεγόμενα, κείμενα μὲν κατὰ τὸ ἑξῆς ἀγκυροβολίοις δὲ καὶ σάλοις ἔχοντα τοὺς ὅρμους κατὰ καιροὸς ἐπιτηδείους. Πρῶτος μὲν ὁ λεγόμενος Aὐαλίτης, καθʼ ὃν καὶ στενώτατός ἐστιν ἀπὸ τῆς Ἀραβικῆς εἰς τὸ πέραν διάπλους. Κατὰ τοῦτον τὸν τόπον μικρὸν ἐμπόριόν ἐστιν ὁ Aὐαλίτης, σχεδίαις καὶ σκάφαις εἰς τὸ αὐτὸ προςερχομένων. Προχωρεῖ δὲ εἰς αὐτήν ὑαλὴ λιθία σύμμικτος καὶ χυλὸς Διοςπολιτικῆς ὄμφακος καὶ ἱμάτια βαρβαρικὰ σύμμικτα γεγναμμέ καὶ σῖτος καὶ οἶνος καὶ κασσίτερος ὀλίγος. Φέρεται δʼ ἐξ αὐτῆς, ποτὲ καὶ τῶν βαρβάρων ἐπὶ σχεδίαις διαφερόντων εἰς τὴν ἀντικρὺς Ὄκηλιν καὶ Μούζα, ἀρώματα καὶ ἐλέφας ὀλίγος καὶ χελώνη καὶ σμύρνα ἐλαχίστη, διαφέρουσα δὲ τῆς ἄλλης. Ἀτακτότεροι δὲ κατοικοῦντες τὸν τόπον βάρβαροι.",
+    "draft_translation": "Farther east the Arabian gulf stretches on and narrows especially at Avalites. After about four thousand stades, sailing east along the same mainland, there are other Barbarian emporia called the far-side markets, with anchorages and roadsteads suitable by season. The first is Avalites, where the crossing from Arabia to the far side is narrowest. At this small trading station rafts and boats come together. Into it go mixed glass-stone, juice of Diospolitan sour grapes, mixed Barbarian cloths, grain, wine, and a little tin. From it are exported aromatics, a little ivory, tortoise shell, and a very small amount of myrrh superior to the rest; sometimes the local barbarians carry these by rafts across to Okelis and Mouza.",
+    "places": [
+      {
+        "greek_surface": "Aὐαλίτης",
+        "english_label": "Avalites",
+        "role": "destination_port",
+        "notes": "First of the far-side Barbarian emporia and destination of imports."
+      },
+      {
+        "greek_surface": "Ἀραβικῆς",
+        "english_label": "Arabia",
+        "role": "comparison_or_opposite_place",
+        "notes": "Opposite side of the narrow crossing."
+      },
+      {
+        "greek_surface": "Ὄκηλιν",
+        "english_label": "Okelis",
+        "role": "destination_place",
+        "notes": "Opposite Arabian destination for raft-borne exports."
+      },
+      {
+        "greek_surface": "Μούζα",
+        "english_label": "Mouza",
+        "role": "destination_place",
+        "notes": "Opposite Arabian destination for raft-borne exports."
+      },
+      {
+        "greek_surface": "Βαρβαρικὰ",
+        "english_label": "Barbarian coast",
+        "role": "region",
+        "notes": "Regional setting for the far-side markets."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "mixed glass-stone",
+        "greek_surface": "ὑαλὴ λιθία σύμμικτος",
+        "category": "glass_or_stone",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Import into Avalites."
+      },
+      {
+        "english_label": "juice of Diospolitan sour grapes",
+        "greek_surface": "χυλὸς Διοςπολιτικῆς ὄμφακος",
+        "category": "food_drink",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Import into Avalites."
+      },
+      {
+        "english_label": "mixed Barbarian cloths",
+        "greek_surface": "ἱμάτια βαρβαρικὰ σύμμικτα",
+        "category": "textile",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Import into Avalites."
+      },
+      {
+        "english_label": "grain",
+        "greek_surface": "σῖτος",
+        "category": "food_grain",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Import into Avalites."
+      },
+      {
+        "english_label": "wine",
+        "greek_surface": "οἶνος",
+        "category": "food_drink",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Import into Avalites."
+      },
+      {
+        "english_label": "tin",
+        "greek_surface": "κασσίτερος",
+        "category": "metal",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "A small amount imported into Avalites."
+      },
+      {
+        "english_label": "aromatics",
+        "greek_surface": "ἀρώματα",
+        "category": "aromatic",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Export from Avalites."
+      },
+      {
+        "english_label": "ivory",
+        "greek_surface": "ἐλέφας",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "A little exported from Avalites."
+      },
+      {
+        "english_label": "tortoise shell",
+        "greek_surface": "χελώνη",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Export from Avalites."
+      },
+      {
+        "english_label": "myrrh",
+        "greek_surface": "σμύρνα",
+        "category": "aromatic_resin",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Very small quantity, said to be superior to other myrrh."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "import_to_port",
+        "source_place": null,
+        "destination_place": "Avalites",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "mixed glass-stone",
+          "juice of Diospolitan sour grapes",
+          "mixed Barbarian cloths",
+          "grain",
+          "wine",
+          "tin"
+        ],
+        "notes": "Imports into Avalites; source is not specified in this section."
+      },
+      {
+        "movement_type": "export_from_port",
+        "source_place": "Avalites",
+        "destination_place": null,
+        "route_or_intermediate_place": null,
+        "goods": [
+          "aromatics",
+          "ivory",
+          "tortoise shell",
+          "myrrh"
+        ],
+        "notes": "Exports from Avalites."
+      },
+      {
+        "movement_type": "cross_gulf_transfer",
+        "source_place": "Avalites",
+        "destination_place": "Okelis; Mouza",
+        "route_or_intermediate_place": "rafts across the narrow crossing",
+        "goods": [
+          "aromatics",
+          "ivory",
+          "tortoise shell",
+          "myrrh"
+        ],
+        "notes": "The barbarians sometimes carry the exports by raft to the opposite Arabian ports."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0008",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[8]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[8]/p",
+    "section_order": 8,
+    "greek_text": "8. Μετὰ δὲ τὴν Aὐαλίτην ἕτερον ἐμπόριόν ἐστι τούτου διαφέρον ἡ λεγομένη Μαλαὼ, πλοῦν ἀπέχουσα σταδίων ὡς ὀκτακοσίων· ὁ δὲ ὅρμος ἐπίσαλος, σκεπόμενος ἀκρωτηρίῳ τῷ ἐξ ἀνατολῆς ἀνατείνοντι· οἱ δὲ κατοικοῦντες εἰρηνικώτεροι. Προχωρεῖ δὲ εἰς τοῦτον τὸν τόπον τὰ προειρημένα καὶ πλείονες χιτῶνες, σάγοι Ἀρσινοητικοὶ γεγναμμένοι καὶ βεβαμμένοι καὶ ποτήρια· καὶ μελίεφθα ὀλίγα καὶ σίδηρος καὶ δηνάριον οὐ πολὺ, χρυσοῦν τε καὶ ἀργυροῦν. Ἐκφέρεται δὲ ἀπὸ τῶν, τόπων τούτων καὶ σμύρνα καὶ λίβανος ὁ περατικὸς ὀλίγος καὶ κασσία σκληροτέρα καὶ δούακα καὶ κάγκαμον καὶ μάκειρ, τὰ εἰς Ἀραβίαν προχωροῦντα, καὶ σώματα σπανίως.",
+    "draft_translation": "After Avalites is another trading station, better than it, called Malao, about eight hundred stades by sea. Its harbor is an open roadstead sheltered by a cape rising to the east, and its inhabitants are more peaceful. Into this place go the goods already mentioned, plus more tunics, fulled and dyed Arsinoite cloaks, drinking cups, a few copper vessels, iron, and not much gold and silver denarius coinage. From these places are exported myrrh, a little far-side frankincense, harder cassia, douaka, kangkamon, makeir sent on to Arabia, and rarely slaves.",
+    "places": [
+      {
+        "greek_surface": "Aὐαλίτην",
+        "english_label": "Avalites",
+        "role": "route_or_intermediate_place",
+        "notes": "Previous emporion on the route."
+      },
+      {
+        "greek_surface": "Μαλαὼ",
+        "english_label": "Malao",
+        "role": "destination_port",
+        "notes": "Better emporion after Avalites."
+      },
+      {
+        "greek_surface": "Ἀραβίαν",
+        "english_label": "Arabia",
+        "role": "destination_place",
+        "notes": "Destination for several aromatics moving onward."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "previously mentioned imports",
+        "greek_surface": "τὰ προειρημένα",
+        "category": "mixed_goods",
+        "structure_type": "compound_entity",
+        "confidence": "medium",
+        "notes": "Refers back to Avalites import list."
+      },
+      {
+        "english_label": "tunics",
+        "greek_surface": "χιτῶνες",
+        "category": "textile",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Additional import into Malao."
+      },
+      {
+        "english_label": "fulled and dyed Arsinoite cloaks",
+        "greek_surface": "σάγοι Ἀρσινοητικοὶ γεγναμμένοι καὶ βεβαμμένοι",
+        "category": "textile",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Compound textile entity."
+      },
+      {
+        "english_label": "drinking cups",
+        "greek_surface": "ποτήρια",
+        "category": "vessel",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Import into Malao."
+      },
+      {
+        "english_label": "copper vessels",
+        "greek_surface": "μελίεφθα",
+        "category": "metalware",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "A few imported."
+      },
+      {
+        "english_label": "iron",
+        "greek_surface": "σίδηρος",
+        "category": "metal",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Import into Malao."
+      },
+      {
+        "english_label": "gold coinage",
+        "greek_surface": "δηνάριον ... χρυσοῦν",
+        "category": "money",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Not much imported."
+      },
+      {
+        "english_label": "silver coinage",
+        "greek_surface": "δηνάριον ... ἀργυροῦν",
+        "category": "money",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Not much imported."
+      },
+      {
+        "english_label": "myrrh",
+        "greek_surface": "σμύρνα",
+        "category": "aromatic_resin",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Export from the Malao district."
+      },
+      {
+        "english_label": "far-side frankincense",
+        "greek_surface": "λίβανος ὁ περατικὸς",
+        "category": "aromatic_resin",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "A little exported."
+      },
+      {
+        "english_label": "harder cassia",
+        "greek_surface": "κασσία σκληροτέρα",
+        "category": "aromatic_spice",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Exported aromatic/spice."
+      },
+      {
+        "english_label": "douaka",
+        "greek_surface": "δούακα",
+        "category": "aromatic_or_spice",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Exported onward to Arabia."
+      },
+      {
+        "english_label": "kangkamon",
+        "greek_surface": "κάγκαμον",
+        "category": "aromatic_or_gum",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Exported onward to Arabia."
+      },
+      {
+        "english_label": "makeir",
+        "greek_surface": "μάκειρ",
+        "category": "aromatic_or_spice",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Exported onward to Arabia."
+      },
+      {
+        "english_label": "slaves",
+        "greek_surface": "σώματα",
+        "category": "enslaved_persons",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Rarely exported; included because the passage treats them as trade cargo."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "import_to_port",
+        "source_place": null,
+        "destination_place": "Malao",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "previously mentioned imports",
+          "tunics",
+          "fulled and dyed Arsinoite cloaks",
+          "drinking cups",
+          "copper vessels",
+          "iron",
+          "gold coinage",
+          "silver coinage"
+        ],
+        "notes": "Imports into Malao; source not specified in this section."
+      },
+      {
+        "movement_type": "export_from_port",
+        "source_place": "Malao",
+        "destination_place": null,
+        "route_or_intermediate_place": null,
+        "goods": [
+          "myrrh",
+          "far-side frankincense",
+          "harder cassia",
+          "douaka",
+          "kangkamon",
+          "makeir",
+          "slaves"
+        ],
+        "notes": "Export list from these places."
+      },
+      {
+        "movement_type": "onward_export",
+        "source_place": "Malao",
+        "destination_place": "Arabia",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "douaka",
+          "kangkamon",
+          "makeir"
+        ],
+        "notes": "These named products are explicitly said to proceed into Arabia."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0009",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[9]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[9]/p",
+    "section_order": 9,
+    "greek_text": "9.\"Ἀπὸ δὲ Μαλαὼ δύο δρόμοις ἐστὶν ἐμπόριον ἡ Μούνδου, ἐν ᾧ καὶ ἀσφαλέστερον ὁρμεῖ τὰ πλοῖα εἰς τὴν προκειμένην ἔγγιστα τῆς γῆς νῆσον. Προχωρεῖ δὲ εἰς αὐτὴν τὰ προειρημένα καὶ ἐκεῖθεν ὁμοίως ἐκφέρεται τὰ προειρημένα φορτία καὶ s θυμίαμα τὸ λεγόμενον μοκρότου. Οἱ δὲ κατοικοῦντες ἔμποροι σκληρότεροι.",
+    "draft_translation": "Two runs from Malao is the trading station Mundu, where ships anchor more safely at the island lying very close before the land. Into it go the goods already mentioned, and from there likewise are exported the already mentioned cargoes and the incense called mokrotou. The resident merchants are harsher.",
+    "places": [
+      {
+        "greek_surface": "Μαλαὼ",
+        "english_label": "Malao",
+        "role": "route_or_intermediate_place",
+        "notes": "Previous emporion and route marker."
+      },
+      {
+        "greek_surface": "Μούνδου",
+        "english_label": "Mundu",
+        "role": "destination_port",
+        "notes": "Trading station two runs from Malao."
+      },
+      {
+        "greek_surface": "νῆσον",
+        "english_label": "island off Mundu",
+        "role": "route_or_intermediate_place",
+        "notes": "Nearby island used as safer anchorage."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "previously mentioned imports",
+        "greek_surface": "τὰ προειρημένα",
+        "category": "mixed_goods",
+        "structure_type": "compound_entity",
+        "confidence": "medium",
+        "notes": "Imports refer back to the Malao/Avalites lists."
+      },
+      {
+        "english_label": "previously mentioned cargoes",
+        "greek_surface": "τὰ προειρημένα φορτία",
+        "category": "mixed_goods",
+        "structure_type": "compound_entity",
+        "confidence": "medium",
+        "notes": "Exports refer back to the preceding cargo list."
+      },
+      {
+        "english_label": "mokrotou incense",
+        "greek_surface": "θυμίαμα τὸ λεγόμενον μοκρότου",
+        "category": "aromatic_resin",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Appositional compound preserved as one entity."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "import_to_port",
+        "source_place": null,
+        "destination_place": "Mundu",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "previously mentioned imports"
+        ],
+        "notes": "Imports into Mundu; details refer back to earlier lists."
+      },
+      {
+        "movement_type": "export_from_port",
+        "source_place": "Mundu",
+        "destination_place": null,
+        "route_or_intermediate_place": null,
+        "goods": [
+          "previously mentioned cargoes",
+          "mokrotou incense"
+        ],
+        "notes": "Exports from Mundu."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0010",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[10]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[10]/p",
+    "section_order": 10,
+    "greek_text": "10. Ἀπὸ δὲ τῆς Μούνδου, πλεόντων εἰς τήν ἀνατολὴν, ὁμοίως μετὰ δύο δρόμους ἢ τρεῖς, πλησίον κεῖται τὸ Μόσυλον ἐν αἰγιαλῷ δυςόρμῳ. Προχωρεῖ δὲ εἰς αὐτὴν τὰ προειρημένα γένη καὶ σκεύη ἀργυρᾶ, σιδηρᾶ δὲ ἐλάσσονα, καὶ λιθία, Ἐξάγεται δὲ ἀπὸ τῶν τόπων κασσίας χρῆμα πλεῖστον διὸ καὶ μειζόνων πλοίων χρῄζει τὸ ἐμπόριον καὶ ἄλλη εὐωδία καὶ ἀρώματα καὶ χελωνάρια ὀλίγα καὶ μοκρότου, ἧττον τοῦ Μουνδιτικοῦ, καὶ λίβανος ὁ περατικὸς, ἐλέφας δὲ καὶ σμύρνα σπανίως.",
+    "draft_translation": "From Mundu, sailing east, after two or three runs, Mosyllon lies nearby on a shore with a difficult anchorage. Into it go the previously mentioned kinds, silver ware, fewer iron goods, and glass-stone goods. From these places is exported a very great quantity of cassia, so the emporion needs larger ships, along with other fragrance and aromatics, a few small tortoise shells, mokrotou inferior to that of Mundu, far-side frankincense, and rarely ivory and myrrh.",
+    "places": [
+      {
+        "greek_surface": "Μούνδου",
+        "english_label": "Mundu",
+        "role": "route_or_intermediate_place",
+        "notes": "Previous emporion."
+      },
+      {
+        "greek_surface": "Μόσυλον",
+        "english_label": "Mosyllon",
+        "role": "destination_port",
+        "notes": "Emporion after Mundu, with a difficult shore anchorage."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "previously mentioned kinds",
+        "greek_surface": "τὰ προειρημένα γένη",
+        "category": "mixed_goods",
+        "structure_type": "compound_entity",
+        "confidence": "medium",
+        "notes": "Imports refer back to earlier categories."
+      },
+      {
+        "english_label": "silver ware",
+        "greek_surface": "σκεύη ἀργυρᾶ",
+        "category": "metalware",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Import into Mosyllon."
+      },
+      {
+        "english_label": "iron goods",
+        "greek_surface": "σιδηρᾶ",
+        "category": "metalware_or_tools",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Fewer imported than silver ware."
+      },
+      {
+        "english_label": "glass-stone goods",
+        "greek_surface": "λιθία",
+        "category": "glass_or_stone",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Import into Mosyllon."
+      },
+      {
+        "english_label": "cassia",
+        "greek_surface": "κασσίας",
+        "category": "aromatic_spice",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Exported in very great quantity."
+      },
+      {
+        "english_label": "other fragrance",
+        "greek_surface": "ἄλλη εὐωδία",
+        "category": "aromatic",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Generic aromatic fragrance, included because it is listed as export cargo."
+      },
+      {
+        "english_label": "aromatics",
+        "greek_surface": "ἀρώματα",
+        "category": "aromatic",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Export category."
+      },
+      {
+        "english_label": "small tortoise shells",
+        "greek_surface": "χελωνάρια",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "A few exported."
+      },
+      {
+        "english_label": "mokrotou incense",
+        "greek_surface": "μοκρότου",
+        "category": "aromatic_resin",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Inferior to the Mundu variety."
+      },
+      {
+        "english_label": "far-side frankincense",
+        "greek_surface": "λίβανος ὁ περατικὸς",
+        "category": "aromatic_resin",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Export from Mosyllon district."
+      },
+      {
+        "english_label": "ivory",
+        "greek_surface": "ἐλέφας",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Rare export."
+      },
+      {
+        "english_label": "myrrh",
+        "greek_surface": "σμύρνα",
+        "category": "aromatic_resin",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Rare export."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "import_to_port",
+        "source_place": null,
+        "destination_place": "Mosyllon",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "previously mentioned kinds",
+          "silver ware",
+          "iron goods",
+          "glass-stone goods"
+        ],
+        "notes": "Imports into Mosyllon."
+      },
+      {
+        "movement_type": "export_from_port",
+        "source_place": "Mosyllon",
+        "destination_place": null,
+        "route_or_intermediate_place": null,
+        "goods": [
+          "cassia",
+          "other fragrance",
+          "aromatics",
+          "small tortoise shells",
+          "mokrotou incense",
+          "far-side frankincense",
+          "ivory",
+          "myrrh"
+        ],
+        "notes": "Exports from Mosyllon; cassia is especially abundant and requires larger ships."
+      }
+    ]
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/tour-stop.schema.json",
+  "title": "Tour stop file",
+  "type": "array",
+  "$defs": {
+    "certainty": {
+      "type": "string"
+    },
+    "placeKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "nullableNumber": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "items": {
+    "type": "object",
+    "required": [
+      "tour_stop_id",
+      "section_order",
+      "chunk_id",
+      "place_key",
+      "title",
+      "kind",
+      "sequence_index",
+      "summary",
+      "goods",
+      "certainty"
+    ],
+    "properties": {
+      "tour_stop_id": {
+        "type": "string"
+      },
+      "section_order": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "chunk_id": {
+        "type": "string"
+      },
+      "place_key": {
+        "$ref": "#/$defs/placeKey"
+      },
+      "title": {
+        "type": "string"
+      },
+      "kind": {
+        "type": "string"
+      },
+      "sequence_index": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "summary": {
+        "type": "string"
+      },
+      "goods": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "certainty": {
+        "$ref": "#/$defs/certainty"
+      }
+    },
+    "additionalProperties": false
+  }
+}

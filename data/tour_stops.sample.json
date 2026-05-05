@@ -1,0 +1,59 @@
+[
+  {
+    "tour_stop_id": "stop_001_myos_hormos",
+    "section_order": 1,
+    "chunk_id": "section_0001",
+    "place_key": "myos_hormos",
+    "title": "Myos Hormos",
+    "kind": "primary_stop",
+    "sequence_index": 1,
+    "summary": "The first marked harbor of the Red Sea in this itinerary.",
+    "goods": [],
+    "certainty": "medium"
+  },
+  {
+    "tour_stop_id": "stop_002_berenike",
+    "section_order": 1,
+    "chunk_id": "section_0001",
+    "place_key": "berenike",
+    "title": "Berenike",
+    "kind": "primary_stop",
+    "sequence_index": 2,
+    "summary": "A harbor on the right after an inward sail of 1,800 stades from Myos Hormos.",
+    "goods": [],
+    "certainty": "high"
+  },
+  {
+    "tour_stop_id": "stop_003_ptolemais_theron",
+    "section_order": 3,
+    "chunk_id": "section_0003",
+    "place_key": "ptolemais_theron",
+    "title": "Ptolemais of the Hunts",
+    "kind": "primary_stop",
+    "sequence_index": 3,
+    "summary": "A small coastal emporion with shell goods and occasional ivory, but no harbor.",
+    "goods": [
+      "true tortoise shell",
+      "land tortoise shell",
+      "small white tortoise shell",
+      "ivory"
+    ],
+    "certainty": "low"
+  },
+  {
+    "tour_stop_id": "stop_004_adulis",
+    "section_order": 4,
+    "chunk_id": "section_0004",
+    "place_key": "adulis",
+    "title": "Adulis",
+    "kind": "primary_stop",
+    "sequence_index": 4,
+    "summary": "A lawful emporion and port for inland ivory and island tortoise shell.",
+    "goods": [
+      "ivory",
+      "tortoise shell",
+      "rhinoceros horn or rhinoceros product"
+    ],
+    "certainty": "high"
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/movement.schema.json",
+  "title": "Movement file",
+  "type": "array",
+  "$defs": {
+    "certainty": {
+      "type": "string"
+    },
+    "placeKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "nullableNumber": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "items": {
+    "type": "object",
+    "required": [
+      "movement_id",
+      "section_order",
+      "chunk_id",
+      "movement_type",
+      "source_place_key",
+      "destination_place_key",
+      "via_place_keys",
+      "polyline_place_keys",
+      "goods",
+      "certainty",
+      "notes"
+    ],
+    "properties": {
+      "movement_id": {
+        "type": "string"
+      },
+      "section_order": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "chunk_id": {
+        "type": "string"
+      },
+      "movement_type": {
+        "type": "string"
+      },
+      "source_place_key": {
+        "$ref": "#/$defs/placeKey"
+      },
+      "destination_place_key": {
+        "$ref": "#/$defs/placeKey"
+      },
+      "via_place_keys": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/placeKey"
+        }
+      },
+      "polyline_place_keys": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/placeKey"
+        }
+      },
+      "goods": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "certainty": {
+        "$ref": "#/$defs/certainty"
+      },
+      "notes": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false
+  }
+}

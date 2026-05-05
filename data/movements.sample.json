@@ -1,0 +1,63 @@
+[
+  {
+    "movement_id": "mv_003_ptolemais_goods_local",
+    "section_order": 3,
+    "chunk_id": "section_0003",
+    "movement_type": "local_availability",
+    "source_place_key": "ptolemais_theron",
+    "destination_place_key": "ptolemais_theron",
+    "via_place_keys": [],
+    "polyline_place_keys": [
+      "ptolemais_theron"
+    ],
+    "goods": [
+      "true tortoise shell",
+      "land tortoise shell",
+      "small white tortoise shell",
+      "ivory"
+    ],
+    "certainty": "text_explicit",
+    "notes": "Goods are present at the emporion; this is not a directional trade route."
+  },
+  {
+    "movement_id": "mv_004_ivory_inland_to_adulis",
+    "section_order": 4,
+    "chunk_id": "section_0004",
+    "movement_type": "inland_export_to_port",
+    "source_place_key": "beyond_the_nile",
+    "destination_place_key": "adulis",
+    "via_place_keys": [
+      "kyeneion",
+      "aksum_metropolis",
+      "koloe"
+    ],
+    "polyline_place_keys": [
+      "aksum_metropolis",
+      "koloe",
+      "adulis"
+    ],
+    "goods": [
+      "ivory"
+    ],
+    "certainty": "medium",
+    "notes": "The full textual chain begins beyond the Nile and passes through Kyeneion. Only mapped candidate points are drawn in the starter UI."
+  },
+  {
+    "movement_id": "mv_004_alalaiou_tortoise_shell",
+    "section_order": 4,
+    "chunk_id": "section_0004",
+    "movement_type": "local_supply_to_port",
+    "source_place_key": "alalaiou_islands",
+    "destination_place_key": "adulis",
+    "via_place_keys": [],
+    "polyline_place_keys": [
+      "alalaiou_islands",
+      "adulis"
+    ],
+    "goods": [
+      "tortoise shell"
+    ],
+    "certainty": "text_explicit",
+    "notes": "Fish-Eaters carry tortoise shell from the islands into the emporion."
+  }
+]

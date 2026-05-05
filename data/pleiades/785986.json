@@ -1,0 +1,1098 @@
+{
+  "@context": {
+    "created": "dcterms:created",
+    "dcterms": "http://purl.org/dc/terms/",
+    "description": "dcterms:description",
+    "rights": "dcterms:rights",
+    "snippet": "dcterms:abstract",
+    "subject": "dcterms:subject",
+    "title": "dcterms:title",
+    "uri": "@id"
+  },
+  "@type": "Place",
+  "bbox": [
+    35.4737,
+    23.9103,
+    35.4759377,
+    23.9109505
+  ],
+  "connections": [
+    {
+      "@type": "Connection",
+      "associationCertainty": "certain",
+      "attestations": [],
+      "connectionType": "near",
+      "connectionTypeURI": "https://pleiades.stoa.org/vocabularies/relationship-types/near",
+      "connectsTo": "https://pleiades.stoa.org/places/785968",
+      "contributors": [
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "created": "2016-07-13T13:48:04Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Sean Gillies",
+          "uri": "https://pleiades.stoa.org/author/sgillies",
+          "username": "sgillies"
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": null,
+      "history": [
+        {
+          "comment": "\"located near\" and BAtlas ref",
+          "modified": "2025-07-09T12:47:59Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2016-07-13T13:48:05Z",
+          "modifiedBy": "admin"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2016-07-13T13:48:05Z",
+          "modifiedBy": "admin"
+        },
+        {
+          "action": "Create",
+          "modified": "2016-07-13T13:48:04Z",
+          "modifiedBy": "admin"
+        }
+      ],
+      "id": "785968",
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "http://www.worldcat.org/oclc/43970336",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/MIAGQ5C6",
+          "citationDetail": "80 inset",
+          "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+          "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard J. A., ed. <i>Barrington Atlas of the Greek and Roman World</i>. Princeton, N.J.: Princeton University Press, 2000. http://www.worldcat.org/oclc/43970336.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "BAtlas",
+          "type": "seeFurther"
+        }
+      ],
+      "review_state": "published",
+      "start": null,
+      "title": "Akathartos Kolpos",
+      "uri": "https://pleiades.stoa.org/places/785986/785968"
+    }
+  ],
+  "connectsWith": [
+    "https://pleiades.stoa.org/places/785968",
+    "https://pleiades.stoa.org/places/632192759"
+  ],
+  "contributors": [
+    {
+      "name": "R. Talbert",
+      "username": null
+    },
+    {
+      "homepage": null,
+      "name": "Brady Kiesling",
+      "uri": "https://pleiades.stoa.org/author/bkiesling",
+      "username": "bkiesling"
+    },
+    {
+      "homepage": null,
+      "name": "Sean Gillies",
+      "uri": "https://pleiades.stoa.org/author/sgillies",
+      "username": "sgillies"
+    },
+    {
+      "name": "David Meadows",
+      "username": null
+    },
+    {
+      "homepage": null,
+      "name": "Jeffrey Becker",
+      "uri": "https://pleiades.stoa.org/author/jbecker",
+      "username": "jbecker"
+    },
+    {
+      "homepage": null,
+      "name": "Tom Elliott",
+      "uri": "https://pleiades.stoa.org/author/thomase",
+      "username": "thomase"
+    }
+  ],
+  "created": "2024-06-26T19:52:45Z",
+  "creators": [
+    {
+      "name": "T. Wilfong",
+      "username": null
+    },
+    {
+      "name": "S.E. Sidebotham",
+      "username": null
+    },
+    {
+      "name": "J. Keenan",
+      "username": null
+    }
+  ],
+  "description": "An ancient port city on the west coast of the Red Sea in modern Egypt, Berenice/Berenike was founded in 275 BCE by Ptolemy II Philadelphus, who named it after his mother, Berenice I of Egypt.",
+  "details": "<p>The Barrington Atlas reports: Bender el-Kebir / Medinet el-Haras.</p>",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          35.4737,
+          23.9103
+        ],
+        "type": "Point"
+      },
+      "id": "centerpoint-of-visible-ancient-remains-of-berenice",
+      "properties": {
+        "description": "",
+        "link": "https://pleiades.stoa.org/places/785986/centerpoint-of-visible-ancient-remains-of-berenice",
+        "location_precision": "precise",
+        "snippet": "Unknown; 330 BC - AD 640",
+        "title": "Centerpoint of visible ancient remains of Berenice"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          35.4759377,
+          23.9109505
+        ],
+        "type": "Point"
+      },
+      "id": "osm-location-of-medinet-el-haras",
+      "properties": {
+        "description": "Representative location based on OpenStreetMap",
+        "link": "https://pleiades.stoa.org/places/785986/osm-location-of-medinet-el-haras",
+        "location_precision": "precise",
+        "snippet": "Archaeological-site; 330 BC - AD 640",
+        "title": "OSM location of Medinet-el Haras"
+      },
+      "type": "Feature"
+    }
+  ],
+  "history": [
+    {
+      "comment": "update references",
+      "modified": "2025-12-29T15:39:23Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "EDH G000141: Berenice – Bender el-Kebir",
+      "modified": "2025-02-23T01:40:13Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "update references",
+      "modified": "2025-02-23T01:39:09Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "added contributor credit for David Meadows, who alerted us to the Marchant 2024 article",
+      "modified": "2024-06-26T20:25:08Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "cleaned up references; added Marchant 2024; removed incorrect Topostext reference; removed incorrect Wikipedia reference; Reverted to revision 1; added Wikidata reference provided by bkiesling; added Trismegistos reference; added vici.org reference",
+      "modified": "2024-06-26T20:23:14Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "Baseline created",
+      "modified": "2024-06-26T19:52:42Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "edit summary",
+      "modified": "2024-05-11T15:30:50Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "cleaned up references; added Woźniak 2022",
+      "modified": "2022-07-06T21:09:09Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "added Woźniak 2021",
+      "modified": "2022-04-14T16:34:58Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "reference",
+      "modified": "2019-06-09T14:12:43Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "add ToposText reference provided by bkiesling",
+      "modified": "2018-06-07T23:47:47Z",
+      "modifiedBy": "admin"
+    },
+    {
+      "comment": "added more recent excavation website",
+      "modified": "2015-09-23T13:38:58Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "added link to old Berenike excavations website",
+      "modified": "2015-09-23T13:33:48Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "added connection",
+      "modified": "2013-02-22T18:01:56Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "DARE feature tag fix.",
+      "modified": "2012-10-23T19:37:53Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "comment": "Location updates and tags from Johan Ahlfeldt's (jahlfeldt) Digital Atlas of the Roman Empire in October 2012",
+      "modified": "2012-10-20T21:27:11Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "comment": "Global migration and reindexing of citations and provenance, February 2012",
+      "modified": "2012-02-15T08:24:53Z",
+      "modifiedBy": "admin"
+    },
+    {
+      "comment": "Fixing modern/alt locations fumbled in intial import",
+      "modified": "2011-12-20T22:59:16Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "comment": "Improved location, title, description, references, added modernish name.",
+      "modified": "2011-12-09T15:01:07Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "Baseline created",
+      "modified": "2011-12-07T16:00:27Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "action": "Publish externally",
+      "modified": "2009-10-13T15:23:23Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "action": "Submit for review",
+      "modified": "2009-10-12T11:03:02Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "action": "Create",
+      "modified": "2009-10-12T10:32:37Z",
+      "modifiedBy": "sgillies"
+    }
+  ],
+  "id": "785986",
+  "locations": [
+    {
+      "@type": "Location",
+      "accuracy": "https://pleiades.stoa.org/features/metadata/google-geoeye-2011",
+      "accuracy_value": 5.0,
+      "archaeologicalRemains": "unknown",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "hellenistic-republican",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/hellenistic-republican"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "late-antique",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/late-antique"
+        }
+      ],
+      "contributors": [],
+      "created": "2011-12-07T17:42:16Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "description": "",
+      "details": "\r\n<p>Coordinates obtained from Wikipedia; verified in Google Earth.</p>\r\n",
+      "end": 640,
+      "featureType": [
+        "unknown"
+      ],
+      "featureTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/unknown"
+      ],
+      "geometry": {
+        "coordinates": [
+          35.4737,
+          23.9103
+        ],
+        "type": "Point"
+      },
+      "history": [
+        {
+          "comment": "Global migration and reindexing of citations and provenance, February 2012",
+          "modified": "2012-02-15T08:24:54Z",
+          "modifiedBy": "admin"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2011-12-09T15:00:10Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2011-12-07T18:23:03Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Initial revision",
+          "modified": "2011-12-07T17:42:19Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Create",
+          "modified": "2011-12-07T17:42:17Z",
+          "modifiedBy": "thomase"
+        }
+      ],
+      "id": "centerpoint-of-visible-ancient-remains-of-berenice",
+      "locationType": [
+        "representative"
+      ],
+      "locationTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/unknown"
+      ],
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "https://en.wikipedia.org/wiki/Berenice_Troglodytica",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/2533/items/CI6F6W7W",
+          "citationDetail": "Berenice Troglodytica",
+          "citationTypeURI": "http://purl.org/spar/cito/cites",
+          "formattedCitation": "Wikipedia: the free encyclopedia that anyone can edit (2001-), Berenice Troglodytica.",
+          "otherIdentifier": " ",
+          "shortTitle": "Wikipedia (English)",
+          "type": "cites"
+        }
+      ],
+      "review_state": "published",
+      "start": -330,
+      "title": "Centerpoint of visible ancient remains of Berenice",
+      "uri": "https://pleiades.stoa.org/places/785986/centerpoint-of-visible-ancient-remains-of-berenice"
+    },
+    {
+      "@type": "Location",
+      "accuracy": "https://pleiades.stoa.org/features/metadata/generic-osm-accuracy-assessment",
+      "accuracy_value": 20.0,
+      "archaeologicalRemains": "unknown",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "hellenistic-republican",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/hellenistic-republican"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "late-antique",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/late-antique"
+        }
+      ],
+      "contributors": [],
+      "created": "2024-05-11T15:29:40Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Jeffrey Becker",
+          "uri": "https://pleiades.stoa.org/author/jbecker",
+          "username": "jbecker"
+        }
+      ],
+      "description": "Representative location based on OpenStreetMap",
+      "details": "",
+      "end": 640,
+      "featureType": [
+        "archaeological-site"
+      ],
+      "featureTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/archaeological-site"
+      ],
+      "geometry": {
+        "coordinates": [
+          35.4759377,
+          23.9109505
+        ],
+        "type": "Point"
+      },
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2024-06-11T14:29:36Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2024-05-11T15:30:11Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "add OSM location",
+          "modified": "2024-05-11T15:30:06Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "Location from OSM created by Products.PleiadesEntity.browser.osm.OSMLocationFactory",
+          "modified": "2024-05-11T15:29:40Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Create",
+          "modified": "2024-05-11T15:29:40Z",
+          "modifiedBy": "jbecker"
+        }
+      ],
+      "id": "osm-location-of-medinet-el-haras",
+      "locationType": [
+        "representative"
+      ],
+      "locationTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/archaeological-site"
+      ],
+      "provenance": "OpenStreetMap (Node 4694083817, version 3, osm:changeset=46816771, 2017-03-13T16:00:16Z)",
+      "references": [
+        {
+          "accessURI": "https://www.openstreetmap.org/browse/node/4694083817",
+          "alternateURI": "",
+          "bibliographicURI": "",
+          "citationDetail": "Node 4694083817",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsDataSource",
+          "formattedCitation": "osm:node=4694083817",
+          "otherIdentifier": "",
+          "shortTitle": "OSM",
+          "type": "citesAsDataSource"
+        }
+      ],
+      "review_state": "published",
+      "start": -330,
+      "title": "OSM location of Medinet-el Haras",
+      "uri": "https://pleiades.stoa.org/places/785986/osm-location-of-medinet-el-haras"
+    }
+  ],
+  "names": [
+    {
+      "@type": "Name",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "hellenistic-republican",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/hellenistic-republican"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "late-antique",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/late-antique"
+        }
+      ],
+      "attested": "",
+      "contributors": [
+        {
+          "name": "R. Talbert",
+          "username": null
+        },
+        {
+          "name": "T. Elliott",
+          "username": null
+        },
+        {
+          "homepage": null,
+          "name": "Sean Gillies",
+          "uri": "https://pleiades.stoa.org/author/sgillies",
+          "username": "sgillies"
+        }
+      ],
+      "created": "2009-10-12T10:32:37Z",
+      "creators": [
+        {
+          "name": "J. Keenan",
+          "username": null
+        },
+        {
+          "name": "S.E. Sidebotham",
+          "username": null
+        },
+        {
+          "name": "T. Wilfong",
+          "username": null
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 640,
+      "history": [
+        {
+          "comment": "Global migration and reindexing of citations and provenance, February 2012",
+          "modified": "2012-02-15T08:24:54Z",
+          "modifiedBy": "admin"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2011-12-07T16:00:32Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2011-12-07T16:00:32Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Create",
+          "modified": "2011-12-07T16:00:31Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2009-10-13T15:23:23Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2009-10-12T11:03:02Z",
+          "modifiedBy": "sgillies"
+        },
+        {
+          "action": "Create",
+          "modified": "2009-10-12T10:32:38Z",
+          "modifiedBy": "sgillies"
+        }
+      ],
+      "id": "berenice",
+      "language": "",
+      "nameType": "geographic",
+      "provenance": "Barrington Atlas: BAtlas 80 inset Berenice",
+      "references": [],
+      "review_state": "published",
+      "romanized": "Berenice",
+      "start": -330,
+      "transcriptionAccuracy": "accurate",
+      "transcriptionCompleteness": "complete",
+      "uri": "https://pleiades.stoa.org/places/785986/berenice"
+    },
+    {
+      "@type": "Name",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "modern",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/modern"
+        }
+      ],
+      "attested": "Berenice Troglodytica",
+      "contributors": [],
+      "created": "2011-12-07T17:51:03Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "description": "Traditional name of the site of Berenike on the Red Sea coast, commonly found in modern literature, but not attested in ancient sources.",
+      "details": "\r\n<p>Meredith 1957, at page 56, writes: \"The traditional form Troglodytica (or Trogodytica), coupled with the name of Berenice, does not seem to occur in ancient texts.\"</p>\r\n",
+      "end": 2100,
+      "history": [
+        {
+          "comment": "Global migration and reindexing of citations and provenance, February 2012",
+          "modified": "2012-02-15T08:24:54Z",
+          "modifiedBy": "admin"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2011-12-09T15:00:11Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2011-12-07T18:23:04Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Initial revision",
+          "modified": "2011-12-07T17:51:05Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Create",
+          "modified": "2011-12-07T17:51:03Z",
+          "modifiedBy": "thomase"
+        }
+      ],
+      "id": "berenice-troglodytica",
+      "language": "en",
+      "nameType": "geographic",
+      "provenance": "Barrington Atlas: BAtlas 80 inset Berenice",
+      "references": [
+        {
+          "accessURI": "",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/itemKey/NJZCTT78",
+          "citationDetail": "",
+          "citationTypeURI": "http://purl.org/spar/cito/cites",
+          "formattedCitation": "Meredith 1957, 56",
+          "otherIdentifier": " ",
+          "shortTitle": "",
+          "type": "cites"
+        },
+        {
+          "accessURI": "https://en.wikipedia.org/wiki/Berenice_Troglodytica",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/2533/items/CI6F6W7W",
+          "citationDetail": "Berenice Troglodytica",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+          "formattedCitation": "Wikipedia: the free encyclopedia that anyone can edit (2001-), Berenice Troglodytica.",
+          "otherIdentifier": " ",
+          "shortTitle": "Wikipedia (English)",
+          "type": "citesAsEvidence"
+        }
+      ],
+      "review_state": "published",
+      "romanized": "Berenice Troglodytica",
+      "start": 1700,
+      "transcriptionAccuracy": "accurate",
+      "transcriptionCompleteness": "complete",
+      "uri": "https://pleiades.stoa.org/places/785986/berenice-troglodytica"
+    },
+    {
+      "@type": "Name",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "late-antique",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/late-antique"
+        }
+      ],
+      "attested": "Pernicide portvm",
+      "contributors": [],
+      "created": "2025-12-29T15:40:34Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Jeffrey Becker",
+          "uri": "https://pleiades.stoa.org/author/jbecker",
+          "username": "jbecker"
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 640,
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2026-02-05T20:04:30Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2025-12-29T15:40:44Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "TP name TP reference",
+          "modified": "2025-12-29T15:40:38Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Create",
+          "modified": "2025-12-29T15:40:34Z",
+          "modifiedBy": "jbecker"
+        }
+      ],
+      "id": "pernicide-portum",
+      "language": "la",
+      "nameType": "geographic",
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "https://www.cambridge.org/us/talbert/talbertdatabase/TPPlace410.html",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/QT8GLGGI",
+          "citationDetail": "8C5 (Talbert 410)",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+          "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard. “Database: Peutinger Map Names and Features, with Commentary and User’s Guide.” In <i>Explore the Peutinger Map</i>. Cambridge UP, 2010. http://www.cambridge.org/us/talbert/talbertdatabase/prm.html.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "TP (Talbert: CUP)",
+          "type": "citesAsEvidence"
+        }
+      ],
+      "review_state": "published",
+      "romanized": "Pernicide portum",
+      "start": 300,
+      "transcriptionAccuracy": "accurate",
+      "transcriptionCompleteness": "complete",
+      "uri": "https://pleiades.stoa.org/places/785986/pernicide-portum"
+    }
+  ],
+  "placeTypeURIs": [
+    "https://pleiades.stoa.org/vocabularies/place-types/settlement",
+    "https://pleiades.stoa.org/vocabularies/place-types/port",
+    "https://pleiades.stoa.org/vocabularies/place-types/archaeological-site"
+  ],
+  "placeTypes": [
+    "settlement",
+    "port",
+    "archaeological-site"
+  ],
+  "provenance": "Barrington Atlas: BAtlas 80 inset Berenice",
+  "references": [
+    {
+      "accessURI": "http://www.worldcat.org/oclc/43970336",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/MIAGQ5C6",
+      "citationDetail": "80 inset Berenice",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard J. A., ed. <i>Barrington Atlas of the Greek and Roman World</i>. Princeton, N.J.: Princeton University Press, 2000. http://www.worldcat.org/oclc/43970336.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "BAtlas",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/C88MK99P",
+      "citationDetail": "2 40",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Calderini, Aristide, and Sergio Daris. <i>Dizionario Dei Nomi Geografici e Topografici Dell’Egitto Greco-Romano</i>. 5 vols. + periodic supplements vols. Cairo, Madrid, Milan, Bonn, Pisa, etc., 1935.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "C-D",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://www.jstor.org/stable/3855279",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/NJZCTT78",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Meredith, David. “Berenice Troglodytica.” <i>The Journal of Egyptian Archaeology</i> 43 (1957): 56–70. https://doi.org/10.2307/3855279.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Meredith 1957",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://www.penn.museum/expedition-back-issues/97-volumes-31-40/483-expedition-volume-37-number-2-summer-1995.html",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/BDXTJ9TH",
+      "citationDetail": "5-11",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Sidebotham, S.E., and R.E. Zitterkopf. “Routes through the Eastern Desert of Egypt.” <i>Expedition</i> 37, no. 2 (1995): 39–52. http://www.penn.museum/expedition-back-issues/97-volumes-31-40/483-expedition-volume-37-number-2-summer-1995.html.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Sidebotham 1995",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/AE6M579A",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Sidebotham, Steven E., and Willemina Wendrich, eds. <i>Berenike 1994: Preliminary Report of the 1994 Excavations at Berenike (Egyptian Red Sea Coast) and the Survey of the Eastern Desert</i>. CNWS Publications, Special Series 1. Leiden: Research School, CNWS, 1995.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Sidebotham 1995; Sidebotham 1995a",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://www.worldcat.org/oclc/36381064",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/HE3JJXH3",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Sidebotham, Steven, Willemina Wendrich, and Fred Aldsworth. <i>Berenike 1995 : Preliminary Report of the 1995 Excavations at Berenike (Egyptian Red Sea Coast) and the Survey of the Eastern Desert</i>. Leiden: Research School CNWS  School of Asian  African  and Amerindian Studies, 1996. http://www.worldcat.org/oclc/36381064.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Sidebotham 1996",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/NQ457WST",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Sidebotham, S.E., and R.E. Zitterkopf. “Survey of the via Hadriana by the University of Delaware : The 1996 Season.” <i>Bulletin de l’Institut Français d’archéologie Orientale</i> 97 (1997): 221–37.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Sidebotham 1997",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://books.google.com/books?id=_VJyAAAAMAAJ",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/CRUXV2TT",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Sidebotham, Steven E., and Fred Aldsworth. <i>Berenike 1996: Report of the 1996 Excavations at Berenike (Egyptian Red Sea Coast) and the Survey of the Eastern Desert</i>. Vol. Berenike. 3 vols. Research School, CNWS, 1998. http://books.google.com/books?id=_VJyAAAAMAAJ.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Sidebotham 1998",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://books.google.com/books?id=B_yRH2U3ZJYC",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/9AR6EQ6S",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Sidebotham, Steven E. <i>Berenike and the Ancient Maritime Spice Route</i>. California World History Library 18. University of California Press, 2011. http://books.google.com/books?id=B_yRH2U3ZJYC.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Sidebotham 2011",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://www.worldcat.org/oclc/122715381",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/KG32KCNV",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Wendrich, Willeke, and Steven E. Sidebotham. <i>Berenike 1999/2000: Report on the Excavations at Berenike, Including Excavations in Wadi Kalalat and Siket, and the Survey of the Mons Smaragdus Region</i>. Berenike Report 6. Cotsen Institute of Archaeology, University of California, Los Angeles, 2007. http://www.worldcat.org/oclc/122715381.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Wendrich 2007",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://books.google.com/books?id=zMf9SAAACAAJ",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/C3V7SVBK",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Sidebotham, Steven E., and Roger S. Bagnall. <i>Report of the 1998 Excavations at Berenike and the Survey of the Egyptian Eastern Desert, Including Excavations in Wadi Kalalat</i>. Research School CNWS, 2000. http://books.google.com/books?id=zMf9SAAACAAJ.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Sidebotham 2000",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://www.archbase.com/berenike/",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/6NJPH5VC",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Sidebotham, Steven E., and Willemina Wendrich. “The Berenike Project (1994-2001),” 2001 1994. http://www.archbase.com/berenike/.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Sidebotham and Wendrich 1994-2001",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://www.pcma.uw.edu.pl/en/projects/egypt/berenike/",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/ER5FI2BP",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Polish Centre of Mediterranean Archaeology UW. “The Berenike Project: Polsko-Amerykańska Misja Archeologiczna w Berenike,” 2008. http://www.pcma.uw.edu.pl/en/projects/egypt/berenike/.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "The Berenike Project",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://topostext.org/place/239355UBer",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/MC9RGDVB",
+      "citationDetail": "Berenike (Red Sea)",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Kiesling, Brady. <i>ToposText – a Reference Tool for Greek Civilization</i>. Version 2.0. Aikaterini Laskaridis Foundation, 2016. https://topostext.org/.</div>",
+      "otherIdentifier": "http://dbpedia.org/resource/Berenice_Troglodytica",
+      "shortTitle": "ToposText",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://en.wikipedia.org/wiki/Berenice_Troglodytica",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/CI6F6W7W",
+      "citationDetail": "Berenice Troglodytica",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\"><i>Wikipedia: The Free Encyclopedia That Anyone Can Edit</i>. Wikimedia Foundation, 2001. https://en.wikipedia.org.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Wikipedia (English)",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://www.cambridge.org/core/journals/antiquity/article/when-the-well-runs-dry-climatic-instability-and-the-abandonment-of-early-hellenistic-berenike/E1AA39BF13169FD964D29BFDBB1CB42D",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/2TIF65KZ",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Woźniak, Marek A., and James A. Harrell. “When the Well Runs Dry: Climatic Instability and the Abandonment of Early Hellenistic Berenike.” <i>Antiquity</i> 95, no. 380 (April 2021): 349–66. https://doi.org/10.15184/aqy.2021.16.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Woźniak 2021",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://books.openedition.org/momeditions/16351",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/6NHPEBDV",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Woźniak, Marek Adam. “Berenike – Why There? : Environmental, Economic and Logistic Conditions of the Hellenistic Port/Base Location.” In <i>Networked Spaces : The Spatiality of Networks in the Red Sea and Western Indian Ocean</i>, edited by Caroline Durand, Julie Marchand, Bérangère Redon, and Pierre Schneider, 73–96. Archéologie(s). Lyon: MOM Éditions, 2022. http://books.openedition.org/momeditions/16351.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Woźniak 2022",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://www.smithsonianmag.com/history/hidden-ancient-egyptian-port-reveals-180984485/",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/2PJJNPHR",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Marchant, Jo. “A Buried Ancient Egyptian Port Reveals the Hidden Connections Between Distant Civilizations.” <i>Smithsonian Magazine</i>, August 2024. https://www.smithsonianmag.com/history/hidden-ancient-egyptian-port-reveals-180984485/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Marchant 2024",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://www.wikidata.org/wiki/Q819050",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/BCQIKDKS",
+      "citationDetail": "Berenice Troglodytica (Q819050)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\"><i>Wikidata: The Free Knowledge Base That Anyone Can Edit</i>. Wikimedia Foundation, 2014. https://www.wikidata.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Wikidata",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://www.trismegistos.org/place/416",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/TN3GJAU8",
+      "citationDetail": "Geo 416: Berenike (Bender el-Kebir)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Depauw, Mark, Tom Gheldof, Herbert Verreth, Nico Dogaer, Willy Clarysse, Yanne Broux, Gert Baetens, and Heinz-Josef Thissen. <i>Trismegistos: An Interdisciplinary Portal of the Ancient World</i>. Leuven, 2006. http://www.trismegistos.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "TM",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://vici.org/vici/2474/",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/CQWHNDIM",
+      "citationDetail": "2474: Berenice",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Voorburg, René. <i>Vici.Org: Archaeological Atlas of Antiquity</i>, 2012. https://vici.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "vici.org",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://www.cambridge.org/us/talbert/talbertdatabase/TPPlace410.html",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/QT8GLGGI",
+      "citationDetail": "8C5 (Talbert 410)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+      "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard. “Database: Peutinger Map Names and Features, with Commentary and User’s Guide.” In <i>Explore the Peutinger Map</i>. Cambridge UP, 2010. http://www.cambridge.org/us/talbert/talbertdatabase/prm.html.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "TP (Talbert: CUP)",
+      "type": "citesAsEvidence"
+    },
+    {
+      "accessURI": "http://www.worldcat.org/oclc/936644063",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/M4UH8NCU",
+      "citationDetail": "173,4 Beronicen",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Cuntz, Otto, ed. <i>Itineraria Antonini Augusti et Burdigalense</i>. Itineraria Romana 1. Leipzig: Teubner, 1929. http://www.worldcat.org/oclc/936644063.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "ItAnt (Cuntz)",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://www.worldcat.org/oclc/6684340",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/Q8X83VMV",
+      "citationDetail": "863",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Miller, Konrad. <i>Itineraria romana: Römische Reisewege an der Hand der Tabula Peutingeriana</i>. Stuttgart: Strecker und Schröder, 1916. http://www.worldcat.org/oclc/6684340.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "ItMiller",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://edh.ub.uni-heidelberg.de/edh/geographie/G000141",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/PY3AZV8F",
+      "citationDetail": "Geographic Database G000141: Berenice – Bender el-Kebir",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Alföldy, Géza, and Christian Witschel, eds. <i>Epigraphic Database Heidelberg</i>. Heidelberg: Heidelberg Academy of Sciences and Humanities, 1997. http://edh-www.adw.uni-heidelberg.de/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "EDH",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://tp-online.ku.de/trefferanzeige_en.php?id=2835",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/KDZ6Q72N",
+      "citationDetail": "2835: Pernicide portum",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Ingolstadt, Katholische Universität Eichstätt-. “Tabula Peutingeriana.” Datenbank tp-online. Accessed June 4, 2025. https://www.ku.de/ggf/geschichte/alte-geschichte/forschung/datenbank-tp-online.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "KU TP Database (Rathmann)",
+      "type": "citesAsRelated"
+    }
+  ],
+  "reprPoint": [
+    35.474818850000005,
+    23.91062525
+  ],
+  "review_state": "published",
+  "rights": "Copyright © The Creators. Sharing and remixing permitted under terms of the Creative Commons Attribution 3.0 License (cc-by).",
+  "subject": [
+    "dare:ancient=1",
+    "dare:major=1",
+    "dare:feature=major settlement"
+  ],
+  "title": "Berenice/Berenike",
+  "type": "FeatureCollection",
+  "uri": "https://pleiades.stoa.org/places/785986"
+}

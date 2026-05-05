@@ -1,0 +1,1011 @@
+{
+  "@context": {
+    "created": "dcterms:created",
+    "dcterms": "http://purl.org/dc/terms/",
+    "description": "dcterms:description",
+    "rights": "dcterms:rights",
+    "snippet": "dcterms:abstract",
+    "subject": "dcterms:subject",
+    "title": "dcterms:title",
+    "uri": "@id"
+  },
+  "@type": "Place",
+  "bbox": [
+    33.7084827,
+    16.933976,
+    33.7153707,
+    16.9395798
+  ],
+  "connections": [
+    {
+      "@type": "Connection",
+      "associationCertainty": "certain",
+      "attestations": [],
+      "connectionType": "on",
+      "connectionTypeURI": "https://pleiades.stoa.org/vocabularies/relationship-types/on",
+      "connectsTo": "https://pleiades.stoa.org/places/727172",
+      "contributors": [],
+      "created": "2016-09-27T19:01:49Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Jeffrey Becker",
+          "uri": "https://pleiades.stoa.org/author/jbecker",
+          "username": "jbecker"
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": null,
+      "history": [
+        {
+          "comment": "reference",
+          "modified": "2017-07-24T12:13:50Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2017-07-24T12:13:08Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2016-09-27T19:01:59Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "added cnxn",
+          "modified": "2016-09-27T19:01:53Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Create",
+          "modified": "2016-09-27T19:01:49Z",
+          "modifiedBy": "jbecker"
+        }
+      ],
+      "id": "nilus-river",
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "https://en.wikipedia.org/wiki/Mero%C3%AB",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/2533/items/CI6F6W7W",
+          "citationDetail": "Meroë",
+          "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+          "formattedCitation": "Wikipedia: the free encyclopedia that anyone can edit (2001-), Meroë.",
+          "otherIdentifier": "",
+          "shortTitle": "Wikipedia (English)",
+          "type": "seeFurther"
+        }
+      ],
+      "review_state": "published",
+      "start": null,
+      "title": "Nilus (river)",
+      "uri": "https://pleiades.stoa.org/places/805630/nilus-river"
+    },
+    {
+      "@type": "Connection",
+      "associationCertainty": "certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "late-period-egypt",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/late-period-egypt"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "ptolemaic-egypt",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/ptolemaic-egypt"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "macedonian-egypt",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/macedonian-egypt"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        }
+      ],
+      "connectionType": "capital",
+      "connectionTypeURI": "https://pleiades.stoa.org/vocabularies/relationship-types/capital",
+      "connectsTo": "https://pleiades.stoa.org/places/827790769",
+      "contributors": [],
+      "created": "2022-10-10T17:59:15Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Gabriel Mckee",
+          "uri": "https://pleiades.stoa.org/author/gmckee",
+          "username": "gmckee"
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 300,
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2022-10-10T21:09:02Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2022-10-10T17:59:20Z",
+          "modifiedBy": "gmckee"
+        },
+        {
+          "comment": "Initial revision",
+          "modified": "2022-10-10T17:59:15Z",
+          "modifiedBy": "gmckee"
+        },
+        {
+          "action": "Create",
+          "modified": "2022-10-10T17:59:15Z",
+          "modifiedBy": "gmckee"
+        }
+      ],
+      "id": "kush-kingdom",
+      "provenance": "Pleiades",
+      "references": [],
+      "review_state": "published",
+      "start": -664,
+      "title": "Kush (kingdom)",
+      "uri": "https://pleiades.stoa.org/places/805630/kush-kingdom"
+    }
+  ],
+  "connectsWith": [
+    "https://pleiades.stoa.org/places/727172",
+    "https://pleiades.stoa.org/places/827790769",
+    "https://pleiades.stoa.org/places/97711900"
+  ],
+  "contributors": [
+    {
+      "name": "DARMC",
+      "username": null
+    },
+    {
+      "name": "R. Talbert",
+      "username": null
+    },
+    {
+      "homepage": null,
+      "name": "Brady Kiesling",
+      "uri": "https://pleiades.stoa.org/author/bkiesling",
+      "username": "bkiesling"
+    },
+    {
+      "homepage": null,
+      "name": "Sean Gillies",
+      "uri": "https://pleiades.stoa.org/author/sgillies",
+      "username": "sgillies"
+    },
+    {
+      "homepage": null,
+      "name": "Jeffrey Becker",
+      "uri": "https://pleiades.stoa.org/author/jbecker",
+      "username": "jbecker"
+    },
+    {
+      "homepage": null,
+      "name": "Tom Elliott",
+      "uri": "https://pleiades.stoa.org/author/thomase",
+      "username": "thomase"
+    }
+  ],
+  "created": "2018-06-08T00:25:33Z",
+  "creators": [
+    {
+      "name": "N.B. Millet",
+      "username": null
+    }
+  ],
+  "description": "Meroë is an ancient city located on the east bank of the Nile river near Shendi, Sudan. The city was a center of the kingdom of Kush.",
+  "details": "<p>The Barrington Atlas Directory notes: Bagrawiya</p>",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            33.7153707,
+            16.9374656
+          ],
+          [
+            33.709856,
+            16.9395798
+          ],
+          [
+            33.7093196,
+            16.9389846
+          ],
+          [
+            33.7090406,
+            16.9385535
+          ],
+          [
+            33.7087617,
+            16.9381224
+          ],
+          [
+            33.7086115,
+            16.937794
+          ],
+          [
+            33.7085471,
+            16.9375477
+          ],
+          [
+            33.7085042,
+            16.9370961
+          ],
+          [
+            33.7084827,
+            16.9366855
+          ],
+          [
+            33.7085042,
+            16.9364392
+          ],
+          [
+            33.7140617,
+            16.933976
+          ],
+          [
+            33.7153707,
+            16.9374656
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "osm-location-of-meroe",
+      "properties": {
+        "description": "Location based on OpenStreetMap",
+        "link": "https://pleiades.stoa.org/places/805630/osm-location-of-meroe",
+        "location_precision": "precise",
+        "snippet": "Settlement, ; 550 BC - AD 300",
+        "title": "OSM location of Meroe"
+      },
+      "type": "Feature"
+    }
+  ],
+  "history": [
+    {
+      "comment": "update references",
+      "modified": "2025-01-22T16:27:36Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "Edited",
+      "modified": "2025-01-22T16:15:42Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "Edited",
+      "modified": "2024-05-11T02:20:01Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "updates",
+      "modified": "2021-02-26T04:47:10Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "add ToposText reference provided by bkiesling",
+      "modified": "2018-06-08T00:25:38Z",
+      "modifiedBy": "admin"
+    },
+    {
+      "comment": "Edited",
+      "modified": "2017-12-19T14:48:55Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "added DARMC reference after retracting location",
+      "modified": "2017-12-19T12:01:59Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "added references",
+      "modified": "2016-09-27T18:59:57Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "added references",
+      "modified": "2015-03-09T01:26:21Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "Edited",
+      "modified": "2015-03-09T00:58:02Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "added UWHS",
+      "modified": "2012-11-30T23:09:06Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "DARE feature tag fix.",
+      "modified": "2012-10-23T19:38:22Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "comment": "Location updates and tags from Johan Ahlfeldt's (jahlfeldt) Digital Atlas of the Roman Empire in October 2012",
+      "modified": "2012-10-20T21:37:38Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "comment": "Global migration and reindexing of citations and provenance, February 2012",
+      "modified": "2012-02-15T08:36:05Z",
+      "modifiedBy": "admin"
+    },
+    {
+      "comment": "Fixing modern/alt locations fumbled in intial import",
+      "modified": "2011-12-20T23:09:34Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "comment": "New locations, coordinates, and metadata from Harvard's DARMC project. See http://atlantides.org/trac/pleiades/wiki/PlaceUpgradesAndMigrations",
+      "modified": "2011-03-10T00:36:30Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "action": "Publish externally",
+      "modified": "2009-10-13T15:50:03Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "action": "Submit for review",
+      "modified": "2009-10-12T11:27:08Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "action": "Create",
+      "modified": "2009-10-12T11:22:31Z",
+      "modifiedBy": "sgillies"
+    }
+  ],
+  "id": "805630",
+  "locations": [
+    {
+      "@type": "Location",
+      "accuracy": "https://pleiades.stoa.org/features/metadata/generic-osm-accuracy-assessment",
+      "accuracy_value": 20.0,
+      "archaeologicalRemains": "traces",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "classical",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/classical"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        }
+      ],
+      "contributors": [],
+      "created": "2016-09-27T19:12:49Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Jeffrey Becker",
+          "uri": "https://pleiades.stoa.org/author/jbecker",
+          "username": "jbecker"
+        }
+      ],
+      "description": "Location based on OpenStreetMap",
+      "details": "",
+      "end": 300,
+      "featureType": [
+        "settlement",
+        ""
+      ],
+      "featureTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/settlement",
+        "https://pleiades.stoa.org/vocabularies/place-types/"
+      ],
+      "geometry": {
+        "coordinates": [
+          [
+            33.7153707,
+            16.9374656
+          ],
+          [
+            33.709856,
+            16.9395798
+          ],
+          [
+            33.7093196,
+            16.9389846
+          ],
+          [
+            33.7090406,
+            16.9385535
+          ],
+          [
+            33.7087617,
+            16.9381224
+          ],
+          [
+            33.7086115,
+            16.937794
+          ],
+          [
+            33.7085471,
+            16.9375477
+          ],
+          [
+            33.7085042,
+            16.9370961
+          ],
+          [
+            33.7084827,
+            16.9366855
+          ],
+          [
+            33.7085042,
+            16.9364392
+          ],
+          [
+            33.7140617,
+            16.933976
+          ],
+          [
+            33.7153707,
+            16.9374656
+          ]
+        ],
+        "type": "LineString"
+      },
+      "history": [
+        {
+          "comment": "Reimported full way geometry and updated provenance",
+          "modified": "2024-05-11T02:19:37Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2017-12-19T12:00:15Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2016-09-27T19:13:29Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "added location",
+          "modified": "2016-09-27T19:13:24Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "Location from OSM created by Products.PleiadesEntity.browser.osm.OSMLocationFactory",
+          "modified": "2016-09-27T19:12:50Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Create",
+          "modified": "2016-09-27T19:12:49Z",
+          "modifiedBy": "jbecker"
+        }
+      ],
+      "id": "osm-location-of-meroe",
+      "locationType": [
+        "representative",
+        ""
+      ],
+      "locationTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/settlement",
+        "https://pleiades.stoa.org/vocabularies/place-types/"
+      ],
+      "provenance": "OpenStreetMap (Way 438303994, version 2, osm:changeset=41599069, 2016-08-21T18:23:49Z)",
+      "references": [
+        {
+          "accessURI": "http://www.openstreetmap.org/browse/way/438303994",
+          "alternateURI": "",
+          "bibliographicURI": "",
+          "citationDetail": "Way 438303994",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsDataSource",
+          "formattedCitation": "osm:way=438303994",
+          "otherIdentifier": "http://www.openstreetmap.org/browse/way/438303994",
+          "shortTitle": "OSM",
+          "type": "citesAsDataSource"
+        }
+      ],
+      "review_state": "published",
+      "start": -550,
+      "title": "OSM location of Meroe",
+      "uri": "https://pleiades.stoa.org/places/805630/osm-location-of-meroe"
+    }
+  ],
+  "names": [
+    {
+      "@type": "Name",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "classical",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/classical"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "hellenistic-republican",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/hellenistic-republican"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        }
+      ],
+      "attested": "Meroe",
+      "contributors": [
+        {
+          "name": "R. Talbert",
+          "username": null
+        },
+        {
+          "homepage": null,
+          "name": "Sean Gillies",
+          "uri": "https://pleiades.stoa.org/author/sgillies",
+          "username": "sgillies"
+        },
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        },
+        {
+          "homepage": null,
+          "name": "Jeffrey Becker",
+          "uri": "https://pleiades.stoa.org/author/jbecker",
+          "username": "jbecker"
+        }
+      ],
+      "created": "2009-10-12T11:22:31Z",
+      "creators": [
+        {
+          "name": "N.B. Millet",
+          "username": null
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 300,
+      "history": [
+        {
+          "comment": "update Pliny reference",
+          "modified": "2024-05-11T02:21:40Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "added attested form",
+          "modified": "2017-12-19T12:04:39Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "added reference",
+          "modified": "2015-03-09T01:21:28Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "Global migration and reindexing of citations and provenance, February 2012",
+          "modified": "2012-02-15T08:36:06Z",
+          "modifiedBy": "admin"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2009-10-13T15:50:03Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2009-10-12T11:27:08Z",
+          "modifiedBy": "sgillies"
+        },
+        {
+          "action": "Create",
+          "modified": "2009-10-12T11:22:32Z",
+          "modifiedBy": "sgillies"
+        }
+      ],
+      "id": "meroe",
+      "language": "la",
+      "nameType": "geographic",
+      "provenance": "Barrington Atlas: BAtlas 82 D5 Meroe",
+      "references": [
+        {
+          "accessURI": "http://latin.packhum.org/loc/978/1/179/1244-1250#179",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/8AK7HSRG",
+          "citationDetail": "2.178.11",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+          "formattedCitation": "<div class=\"csl-entry\">Plinius Secundus Maior, C. <i>Naturalis Historiae</i>. Edited by Karl Friedrich Theodor Mayhoff. Bibliotheca Scriptorum Graecorum et Romanorum Teubneriana. Lipsiae: Teubner, 1906. http://latin.packhum.org/loc/978/1/0.</div>",
+          "otherIdentifier": " ",
+          "shortTitle": "Plin., NH (Mayhoff: PHI)",
+          "type": "citesAsEvidence"
+        }
+      ],
+      "review_state": "published",
+      "romanized": "Meroe",
+      "start": -550,
+      "transcriptionAccuracy": "accurate",
+      "transcriptionCompleteness": "complete",
+      "uri": "https://pleiades.stoa.org/places/805630/meroe"
+    },
+    {
+      "@type": "Name",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "modern",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/modern"
+        }
+      ],
+      "attested": "Meroë",
+      "contributors": [],
+      "created": "2016-09-27T19:01:33Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Jeffrey Becker",
+          "uri": "https://pleiades.stoa.org/author/jbecker",
+          "username": "jbecker"
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 2100,
+      "history": [
+        {
+          "comment": "Edited",
+          "modified": "2024-05-11T02:21:13Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2017-12-19T12:05:02Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2016-09-27T19:02:04Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "added name",
+          "modified": "2016-09-27T19:01:33Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Create",
+          "modified": "2016-09-27T19:01:33Z",
+          "modifiedBy": "jbecker"
+        }
+      ],
+      "id": "name.2016-09-27.8518201373",
+      "language": "en",
+      "nameType": "geographic",
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "http://www.geonames.org/370131/meroe.html",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/IIFE4W6M",
+          "citationDetail": "370131: Meroe",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+          "formattedCitation": "<div class=\"csl-entry\">Marc Wick, and Christophe Boutreux. <i>GeoNames</i>, 2005. https://www.geonames.org/.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "GeoNames",
+          "type": "citesAsEvidence"
+        }
+      ],
+      "review_state": "published",
+      "romanized": "Meroe",
+      "start": 1700,
+      "transcriptionAccuracy": "accurate",
+      "transcriptionCompleteness": "complete",
+      "uri": "https://pleiades.stoa.org/places/805630/name.2016-09-27.8518201373"
+    },
+    {
+      "@type": "Name",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "classical",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/classical"
+        }
+      ],
+      "attested": "Μερόη",
+      "contributors": [
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "created": "2015-03-09T01:02:54Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Jeffrey Becker",
+          "uri": "https://pleiades.stoa.org/author/jbecker",
+          "username": "jbecker"
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": -330,
+      "history": [
+        {
+          "comment": "update reference",
+          "modified": "2024-05-11T02:20:34Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2017-12-19T12:04:12Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Edited",
+          "modified": "2017-12-19T12:02:34Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2016-09-27T18:59:23Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "added name",
+          "modified": "2015-03-09T01:03:02Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Create",
+          "modified": "2015-03-09T01:02:57Z",
+          "modifiedBy": "jbecker"
+        }
+      ],
+      "id": "meroe-grc",
+      "language": "grc",
+      "nameType": "geographic",
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "http://data.perseus.org/citations/urn:cts:greekLit:tlg0016.tlg001.perseus-grc1:2.29",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/ZXF7J4U2",
+          "citationDetail": "2.29",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+          "formattedCitation": "<div class=\"csl-entry\">Herodotus. <i>Herodotus</i>. Edited by A. D Godley. 4 vols. Loeb Classical Library. London; New York: W. Heinemann; G.P. Putnam’s Sons, 1921. http://data.perseus.org/citations/urn:cts:greekLit:tlg0016.tlg001.</div>",
+          "otherIdentifier": " ",
+          "shortTitle": "Hdt. (Godley: Perseus)",
+          "type": "citesAsEvidence"
+        }
+      ],
+      "review_state": "published",
+      "romanized": "Meroe, Meróē",
+      "start": -550,
+      "transcriptionAccuracy": "accurate",
+      "transcriptionCompleteness": "complete",
+      "uri": "https://pleiades.stoa.org/places/805630/meroe-grc"
+    }
+  ],
+  "placeTypeURIs": [
+    "https://pleiades.stoa.org/vocabularies/place-types/settlement",
+    "https://pleiades.stoa.org/vocabularies/place-types/temple-2"
+  ],
+  "placeTypes": [
+    "settlement",
+    "temple-2"
+  ],
+  "provenance": "Barrington Atlas: BAtlas 82 D5 Meroe",
+  "references": [
+    {
+      "accessURI": "http://www.worldcat.org/oclc/43970336",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/MIAGQ5C6",
+      "citationDetail": "82 D5 Meroe",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard J. A., ed. <i>Barrington Atlas of the Greek and Roman World</i>. Princeton, N.J.: Princeton University Press, 2000. http://www.worldcat.org/oclc/43970336.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "BAtlas",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/HSGNAEBR",
+      "citationDetail": "Meroe",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Pauly, August Friedrich von, Georg Wissowa, Wilhelm Kroll, Kurt Witte, Karl Mittelhaus, and Konrat Ziegler, eds. <i>Real-Encyclopaedie der classischen Altertumswissenschaft</i>. 83 vols. Stuttgart: J. B. Metzler, 1894.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "RE",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://whc.unesco.org/en/list/1336",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/BIIFWTIR",
+      "citationDetail": "1336: Archaeological Sites of the Island of Meroe",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">UNESCO World Heritage Centre. <i>World Heritage List</i>, 1978. http://whc.unesco.org/en/list/.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "WHL",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://en.wikipedia.org/wiki/Meroe",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/2533/items/CI6F6W7W",
+      "citationDetail": "Meroe",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "Wikipedia: the free encyclopedia that anyone can edit (2001-), Meroe.",
+      "otherIdentifier": " ",
+      "shortTitle": "Wikipedia (English)",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://www.trismegistos.org/place/3460",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/TN3GJAU8",
+      "citationDetail": "GEO ID 3460: Meroe (Begrawiya)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Depauw, Mark, Tom Gheldof, Herbert Verreth, Nico Dogaer, Willy Clarysse, Yanne Broux, Gert Baetens, and Heinz-Josef Thissen. <i>Trismegistos: An Interdisciplinary Portal of the Ancient World</i>. Leuven, 2006. http://www.trismegistos.org/.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "TM",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://doi.org/10.1163/1574-9347_bnp_e800280",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/DUTS58MJ",
+      "citationDetail": "Meroe  (Angelika Lohwasser)",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Hubert Cancik, Helmuth Schneider, Manfred Landfester, Christine F. Salazar, and Francis G. Gentry, eds. <i>Brill’s New Pauly: Encyclopaedia of the Ancient World.</i> Brill, 2015. https://referenceworks.brillonline.com/browse/brill-s-new-pauly.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "New Pauly",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://data.perseus.org/citations/urn:cts:greekLit:tlg0525.tlg001.perseus-eng1:1.33.4",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/GTGBFEI9",
+      "citationDetail": "1.33.4",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+      "formattedCitation": "<div class=\"csl-entry\">Pausanias. <i>Pausaniae Graeciae descriptio</i>. Edited by Friedrich Spiro. 3 vols. Bibliotheca Teubneriana. Lipsiae: Teubner, 1903. http://data.perseus.org/citations/urn:cts:greekLit:tlg0525.tlg001.perseus-grc1:1.1.1.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Paus. (Spiro: Perseus)",
+      "type": "citesAsEvidence"
+    },
+    {
+      "accessURI": "http://data.perseus.org/citations/urn:cts:greekLit:tlg0016.tlg001.perseus-grc1:2.29",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/ZXF7J4U2",
+      "citationDetail": "2.29",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+      "formattedCitation": "<div class=\"csl-entry\">Herodotus. <i>Herodotus</i>. Edited by A. D Godley. 4 vols. Loeb Classical Library. London; New York: W. Heinemann; G.P. Putnam’s Sons, 1921. http://data.perseus.org/citations/urn:cts:greekLit:tlg0016.tlg001.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Hdt. (Godley: Perseus)",
+      "type": "citesAsEvidence"
+    },
+    {
+      "accessURI": "http://www.geonames.org/443831/sun-temple.html",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/IIFE4W6M",
+      "citationDetail": "443831: Sun Temple",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Marc Wick, and Christophe Boutreux. “GeoNames,” 2005. http://www.geonames.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "GeoNames",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "http://www.geonames.org/11126072/temple-of-amun.html",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/IIFE4W6M",
+      "citationDetail": "11126072: Temple of Amun",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Marc Wick, and Christophe Boutreux. “GeoNames,” 2005. http://www.geonames.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "GeoNames",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "http://www.geonames.org/",
+      "alternateURI": "http://www.geonames.org/370131/meroe.html",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/IIFE4W6M",
+      "citationDetail": "370131: Meroe",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Marc Wick, and Christophe Boutreux. “GeoNames,” 2005. http://www.geonames.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "GeoNames",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://darmc.harvard.edu/",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/9UD9W75C",
+      "citationDetail": "21407 ",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Michael McCormick, Giovanni Zambotti, Leland Grigoli, and Kelly Gibson, eds. <i>The Digital Atlas of Roman and Medieval Civilizations</i>. Cambridge (Massachusetts): Harvard University, 2007. https://darmc.harvard.edu/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "DARMC",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://topostext.org/place/169337UMer",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/2533/items/MC9RGDVB",
+      "citationDetail": "Meroe (Ethiopia)",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "Kiesling, Brady. ToposText – a Reference Tool for Greek Civilization. Version 2.0. Aikaterini Laskaridis Foundation, 2016-.",
+      "otherIdentifier": "http://atlantides.org/bibliography/",
+      "shortTitle": "ToposText",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://www.wikidata.org/wiki/Q5780",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/BCQIKDKS",
+      "citationDetail": "Meroë (Q5780)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\"><i>Wikidata: The Free Knowledge Base That Anyone Can Edit</i>. Wikimedia Foundation, 2014. https://www.wikidata.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Wikidata",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://arachne.dainst.org/entity/2260847",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/HUWENJCW",
+      "citationDetail": "Meroë, (Meroe / Meron / Ⲡⲉⲣⲟⲩⲉ) NE-36-O, Sudan, Afrika",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Reinhard Foertsch, ed. <i>Arachne: IDAI Objects</i>. Köln; Berlin: Archaeological Institute, University of Cologne; German Archaeological Institute. Accessed February 5, 2020. https://arachne.uni-koeln.de/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Arachne",
+      "type": "citesAsRelated"
+    }
+  ],
+  "reprPoint": [
+    33.71192022614201,
+    16.936857973308044
+  ],
+  "review_state": "published",
+  "rights": "Copyright © The Creators. Sharing and remixing permitted under terms of the Creative Commons Attribution 3.0 License (cc-by).",
+  "subject": [
+    "dare:ancient=1",
+    "dare:major=1",
+    "dare:feature=major settlement",
+    "UWHS"
+  ],
+  "title": "Meroe",
+  "type": "FeatureCollection",
+  "uri": "https://pleiades.stoa.org/places/805630"
+}

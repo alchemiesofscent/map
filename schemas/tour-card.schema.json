@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/tour-card.schema.json",
+  "title": "Tour card file",
+  "type": "array",
+  "$defs": {
+    "certainty": {
+      "type": "string"
+    },
+    "placeKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "nullableNumber": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "items": {
+    "type": "object",
+    "required": [
+      "tour_card_id",
+      "section_order",
+      "chunk_id",
+      "title",
+      "subtitle",
+      "focus_place_key",
+      "place_keys",
+      "summary",
+      "goods",
+      "display_layers",
+      "ui_note"
+    ],
+    "properties": {
+      "tour_card_id": {
+        "type": "string"
+      },
+      "section_order": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "chunk_id": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "subtitle": {
+        "type": "string"
+      },
+      "focus_place_key": {
+        "$ref": "#/$defs/placeKey"
+      },
+      "place_keys": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/placeKey"
+        }
+      },
+      "summary": {
+        "type": "string"
+      },
+      "goods": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "display_layers": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "ui_note": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false
+  }
+}

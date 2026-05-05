@@ -1,0 +1,47 @@
+[
+  {
+    "leg_id": "leg_001_myos_berenike",
+    "from_place_key": "myos_hormos",
+    "to_place_key": "berenike",
+    "from_sequence_index": 1,
+    "to_sequence_index": 2,
+    "section_order": 1,
+    "distance_text": "1,800 stades",
+    "distance_value": 1800,
+    "distance_unit": "stades",
+    "estimated_km_at_185m_stade": 333.0,
+    "route_type": "coastal_sea",
+    "certainty": "text_explicit",
+    "notes": "The conversion is a rough UI helper only; keep the ancient distance in the main label."
+  },
+  {
+    "leg_id": "leg_002_berenike_ptolemais",
+    "from_place_key": "berenike",
+    "to_place_key": "ptolemais_theron",
+    "from_sequence_index": 2,
+    "to_sequence_index": 3,
+    "section_order": 2,
+    "distance_text": "narrative continuation; no direct section-to-section distance in the sample",
+    "distance_value": null,
+    "distance_unit": null,
+    "estimated_km_at_185m_stade": null,
+    "route_type": "coastal_sea",
+    "certainty": "inferred_from_sequence",
+    "notes": "This leg is drawn to keep the tour continuous, but the sample text names intervening peoples rather than a single measured leg."
+  },
+  {
+    "leg_id": "leg_003_ptolemais_adulis",
+    "from_place_key": "ptolemais_theron",
+    "to_place_key": "adulis",
+    "from_sequence_index": 3,
+    "to_sequence_index": 4,
+    "section_order": 4,
+    "distance_text": "about 3,000 stades",
+    "distance_value": 3000,
+    "distance_unit": "stades",
+    "estimated_km_at_185m_stade": 555.0,
+    "route_type": "coastal_sea",
+    "certainty": "text_explicit",
+    "notes": "This is the explicit sailing distance from Ptolemais of the Hunts to Adulis in section 4."
+  }
+]

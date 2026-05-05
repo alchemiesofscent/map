@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/route-leg.schema.json",
+  "title": "Route leg file",
+  "type": "array",
+  "$defs": {
+    "certainty": {
+      "type": "string"
+    },
+    "placeKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "nullableNumber": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "items": {
+    "type": "object",
+    "required": [
+      "leg_id",
+      "from_place_key",
+      "to_place_key",
+      "from_sequence_index",
+      "to_sequence_index",
+      "section_order",
+      "distance_text",
+      "distance_value",
+      "distance_unit",
+      "estimated_km_at_185m_stade",
+      "route_type",
+      "certainty",
+      "notes"
+    ],
+    "properties": {
+      "leg_id": {
+        "type": "string"
+      },
+      "from_place_key": {
+        "$ref": "#/$defs/placeKey"
+      },
+      "to_place_key": {
+        "$ref": "#/$defs/placeKey"
+      },
+      "from_sequence_index": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "to_sequence_index": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "section_order": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "distance_text": {
+        "type": "string"
+      },
+      "distance_value": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "distance_unit": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "estimated_km_at_185m_stade": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "route_type": {
+        "type": "string"
+      },
+      "certainty": {
+        "$ref": "#/$defs/certainty"
+      },
+      "notes": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false
+  }
+}

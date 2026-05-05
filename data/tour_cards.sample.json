@@ -1,0 +1,97 @@
+[
+  {
+    "tour_card_id": "card_001_myos_to_berenike",
+    "section_order": 1,
+    "chunk_id": "section_0001",
+    "title": "First harbors of Egypt's Red Sea gulf",
+    "subtitle": "Myos Hormos to Berenike",
+    "focus_place_key": "myos_hormos",
+    "place_keys": [
+      "myos_hormos",
+      "berenike"
+    ],
+    "summary": "The voyage opens with two Egyptian Red Sea harbors, Myos Hormos and Berenike, with a stated inward sailing distance of 1,800 stades.",
+    "goods": [],
+    "display_layers": [
+      "main_route"
+    ],
+    "ui_note": "Show both harbors and highlight the first sea leg."
+  },
+  {
+    "tour_card_id": "card_002_beyond_berenike",
+    "section_order": 2,
+    "chunk_id": "section_0002",
+    "title": "The coast beyond Berenike",
+    "subtitle": "Named peoples, scattered settlement, and inland Meroe",
+    "focus_place_key": "berenike",
+    "place_keys": [
+      "berenike",
+      "barbarian_country",
+      "fish_eaters_red_sea",
+      "moschophagoi_territory",
+      "meroe"
+    ],
+    "summary": "The sailor uses ethnographic and regional markers rather than secure ports: Fish-Eaters along the coast, inland groups, and Meroe farther west.",
+    "goods": [],
+    "display_layers": [
+      "main_route",
+      "regional_context"
+    ],
+    "ui_note": "Keep the coastal peoples as text labels or filters unless a project-specific region geometry is added."
+  },
+  {
+    "tour_card_id": "card_003_ptolemais",
+    "section_order": 3,
+    "chunk_id": "section_0003",
+    "title": "Ptolemais of the Hunts",
+    "subtitle": "A small emporion with no real harbor",
+    "focus_place_key": "ptolemais_theron",
+    "place_keys": [
+      "ptolemais_theron",
+      "moschophagoi_territory",
+      "adulis"
+    ],
+    "summary": "The route reaches Ptolemais of the Hunts, a small landing place associated with shell and occasional ivory.",
+    "goods": [
+      "true tortoise shell",
+      "land tortoise shell",
+      "small white tortoise shell",
+      "ivory"
+    ],
+    "display_layers": [
+      "main_route",
+      "goods"
+    ],
+    "ui_note": "Use an uncertain marker because the exact location is not secure."
+  },
+  {
+    "tour_card_id": "card_004_adulis",
+    "section_order": 4,
+    "chunk_id": "section_0004",
+    "title": "Adulis and its inland supply lines",
+    "subtitle": "Harbor, islands, ivory roads, and Aksumite routes",
+    "focus_place_key": "adulis",
+    "place_keys": [
+      "adulis",
+      "oreine_island",
+      "diodoros_island",
+      "koloe",
+      "aksum_metropolis",
+      "kyeneion",
+      "beyond_the_nile",
+      "alalaiou_islands"
+    ],
+    "summary": "Adulis is presented as a lawful emporion that receives ivory from inland routes and tortoise shell from nearby islands.",
+    "goods": [
+      "ivory",
+      "tortoise shell",
+      "rhinoceros horn or rhinoceros product"
+    ],
+    "display_layers": [
+      "main_route",
+      "movements",
+      "goods"
+    ],
+    "ui_note": "Show side-routes as dashed overlays and keep unresolved route points in the passage panel."
+  }
+]

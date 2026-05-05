@@ -1,0 +1,1134 @@
+{
+  "@context": {
+    "created": "dcterms:created",
+    "dcterms": "http://purl.org/dc/terms/",
+    "description": "dcterms:description",
+    "rights": "dcterms:rights",
+    "snippet": "dcterms:abstract",
+    "subject": "dcterms:subject",
+    "title": "dcterms:title",
+    "uri": "@id"
+  },
+  "@type": "Place",
+  "bbox": [
+    37.331236,
+    18.1728,
+    38.4397,
+    19.103071
+  ],
+  "connections": [
+    {
+      "@type": "Connection",
+      "associationCertainty": "certain",
+      "attestations": [],
+      "connectionType": "abuts",
+      "connectionTypeURI": "https://pleiades.stoa.org/vocabularies/relationship-types/abuts",
+      "connectsTo": "https://pleiades.stoa.org/places/39290",
+      "contributors": [
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "created": "2021-12-26T14:01:21Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Sean Gillies",
+          "uri": "https://pleiades.stoa.org/author/sgillies",
+          "username": "sgillies"
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": null,
+      "history": [
+        {
+          "comment": "ctype: abuts",
+          "modified": "2021-12-26T19:56:45Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "Baseline created",
+          "modified": "2021-12-26T14:01:21Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2016-07-13T13:34:13Z",
+          "modifiedBy": "admin"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2016-07-13T13:34:13Z",
+          "modifiedBy": "admin"
+        },
+        {
+          "action": "Create",
+          "modified": "2016-07-13T13:34:13Z",
+          "modifiedBy": "admin"
+        }
+      ],
+      "id": "39290",
+      "provenance": "Pleiades",
+      "references": [],
+      "review_state": "published",
+      "start": null,
+      "title": "Arabicus Sinus/Erythr(ae)um/Rubrum Mare",
+      "uri": "https://pleiades.stoa.org/places/39409/39290"
+    },
+    {
+      "@type": "Connection",
+      "associationCertainty": "certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        }
+      ],
+      "connectionType": "near",
+      "connectionTypeURI": "https://pleiades.stoa.org/vocabularies/relationship-types/near",
+      "connectsTo": "https://pleiades.stoa.org/places/40274",
+      "contributors": [],
+      "created": "2021-12-26T13:56:53Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 300,
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2021-12-26T19:56:07Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2021-12-26T13:57:05Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Initial revision",
+          "modified": "2021-12-26T13:56:54Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Create",
+          "modified": "2021-12-26T13:56:53Z",
+          "modifiedBy": "thomase"
+        }
+      ],
+      "id": "sabastrikon-stoma-sabastikon-stoma",
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "https://babel.hathitrust.org/cgi/pt?id=mdp.39015022717592&view=1up&seq=313&skin=2021&q1=%CF%80%CF%84%CE%BF%CE%BB%CE%B5%CE%BC%CE%B1%CE%B9%CF%82%20%CE%B8%CE%B7%CF%81%CF%89%CE%BD",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/56UMLU8H",
+          "citationDetail": "4.7.1",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+          "formattedCitation": "<div class=\"csl-entry\">Ptolemy. <i>Claudii Ptolemaei geographia</i>. Edited by Karl Friedrich August Nobbe. 3 in 2 vols. Lipsiae: Sumptibus et typis Caroli Tauchnitii, 1843. https://catalog.hathitrust.org/Record/002504277.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "Ptol. (Nobbe: Hathi)",
+          "type": "citesAsEvidence"
+        }
+      ],
+      "review_state": "published",
+      "start": -30,
+      "title": "Sabastrikon Stoma/Sebastikon Stoma",
+      "uri": "https://pleiades.stoa.org/places/39409/sabastrikon-stoma-sabastikon-stoma"
+    }
+  ],
+  "connectsWith": [
+    "https://pleiades.stoa.org/places/39290",
+    "https://pleiades.stoa.org/places/40274"
+  ],
+  "contributors": [
+    {
+      "name": "DARMC",
+      "username": null
+    },
+    {
+      "name": "R. Talbert",
+      "username": null
+    },
+    {
+      "homepage": null,
+      "name": "Brady Kiesling",
+      "uri": "https://pleiades.stoa.org/author/bkiesling",
+      "username": "bkiesling"
+    },
+    {
+      "homepage": null,
+      "name": "Sean Gillies",
+      "uri": "https://pleiades.stoa.org/author/sgillies",
+      "username": "sgillies"
+    },
+    {
+      "homepage": null,
+      "name": "Jeffrey Becker",
+      "uri": "https://pleiades.stoa.org/author/jbecker",
+      "username": "jbecker"
+    },
+    {
+      "homepage": null,
+      "name": "Tom Elliott",
+      "uri": "https://pleiades.stoa.org/author/thomase",
+      "username": "thomase"
+    }
+  ],
+  "created": "2021-12-26T14:02:17Z",
+  "creators": [
+    {
+      "name": "D.T. Potts",
+      "username": null
+    }
+  ],
+  "description": "Ptolemais Theron was an ancient marketplace on the western coast of the Red Sea. Its precise location on the Sudanese Red Sea coast is now unknown, but many scholars view modern Aqiq (Hillat `Agig) as the most likely alternative.",
+  "details": "<p>The Barrington Atlas Directory notes: on the coast between 18-19 degrees N lat. SUD. Casson pages 100-101 helpfully summarizes the various modern locations posited by earlier scholars.</p>",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          37.331236,
+          19.103071
+        ],
+        "type": "Point"
+      },
+      "id": "osm-location-of-modern-sawakin",
+      "properties": {
+        "description": "Location based on OpenStreetMap",
+        "link": "https://pleiades.stoa.org/places/39409/osm-location-of-modern-sawakin",
+        "location_precision": "precise",
+        "snippet": "Settlement-modern; AD 1900 - AD 2099",
+        "title": "OSM Location of Modern Sawakin"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          38.1927,
+          18.2278
+        ],
+        "type": "Point"
+      },
+      "id": "osm-location-of-modern-hillat-agig",
+      "properties": {
+        "description": "Location based on OpenStreetMap",
+        "link": "https://pleiades.stoa.org/places/39409/osm-location-of-modern-hillat-agig",
+        "location_precision": "precise",
+        "snippet": "Settlement-modern; AD 1900 - AD 2099",
+        "title": "OSM Location of Modern Hillat `Agig"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          37.71667,
+          18.73333
+        ],
+        "type": "Point"
+      },
+      "id": "geonames-location-of-modern-marsa-maqdam-anchorage",
+      "properties": {
+        "description": "",
+        "link": "https://pleiades.stoa.org/places/39409/geonames-location-of-modern-marsa-maqdam-anchorage",
+        "location_precision": "precise",
+        "snippet": "Anchorage; AD 1900 - AD 2099",
+        "title": "Geonames location of modern Marsá Maqdam anchorage"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          37.74691,
+          18.676001
+        ],
+        "type": "Point"
+      },
+      "id": "osm-locations-of-modern-trinkitat",
+      "properties": {
+        "description": "Location based on OpenStreetMap",
+        "link": "https://pleiades.stoa.org/places/39409/osm-locations-of-modern-trinkitat",
+        "location_precision": "precise",
+        "snippet": "Settlement-modern; AD 1900 - AD 2099",
+        "title": "OSM Locations of modern Trinkitat"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          38.4397,
+          18.1728
+        ],
+        "type": "Point"
+      },
+      "id": "geonames-location-of-modern-gazirat-2018iri",
+      "properties": {
+        "description": "",
+        "link": "https://pleiades.stoa.org/places/39409/geonames-location-of-modern-gazirat-2018iri",
+        "location_precision": "precise",
+        "snippet": "Island; AD 1900 - AD 2099",
+        "title": "Geonames location of modern Gazirat ‘Iri"
+      },
+      "type": "Feature"
+    }
+  ],
+  "history": [
+    {
+      "comment": "fixed topostext uri",
+      "modified": "2022-01-05T16:43:27Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "added wikidata, topostext references",
+      "modified": "2021-12-27T13:44:06Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "summary; cleaned up references; Ptolemy; PME Casson commentary; added Locations for all possible alternatives summarized by Casson; details",
+      "modified": "2021-12-27T13:41:33Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "Baseline created",
+      "modified": "2021-12-26T14:02:16Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "edited description; added references",
+      "modified": "2013-05-21T16:52:08Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "Location updates and tags from Johan Ahlfeldt's (jahlfeldt) Digital Atlas of the Roman Empire in October 2012",
+      "modified": "2012-10-20T19:33:06Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "comment": "Global migration and reindexing of citations and provenance, February 2012",
+      "modified": "2012-02-15T04:41:00Z",
+      "modifiedBy": "admin"
+    },
+    {
+      "comment": "New locations, coordinates, and metadata from Harvard's DARMC project. See http://atlantides.org/trac/pleiades/wiki/PlaceUpgradesAndMigrations",
+      "modified": "2011-03-09T20:34:39Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "comment": "Detail text updated from former modernLocation. See http://atlantides.org/trac/pleiades/wiki/PlaceDetailsUpgrade",
+      "modified": "2011-01-14T19:38:46Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "action": "Publish externally",
+      "modified": "2010-09-23T16:33:51Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "action": "Submit for review",
+      "modified": "2010-09-22T23:35:44Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "action": "Create",
+      "modified": "2010-09-22T22:06:16Z",
+      "modifiedBy": "sgillies"
+    }
+  ],
+  "id": "39409",
+  "locations": [
+    {
+      "@type": "Location",
+      "accuracy": "https://pleiades.stoa.org/features/metadata/generic-osm-accuracy-assessment",
+      "accuracy_value": 20.0,
+      "archaeologicalRemains": "unknown",
+      "associationCertainty": "uncertain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/uncertain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "twentieth-ce",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/twentieth-ce"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "twenty-first-ce",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/twenty-first-ce"
+        }
+      ],
+      "contributors": [],
+      "created": "2021-12-26T23:09:45Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "description": "Location based on OpenStreetMap",
+      "details": "",
+      "end": 2099,
+      "featureType": [
+        "settlement-modern"
+      ],
+      "featureTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/settlement-modern"
+      ],
+      "geometry": {
+        "coordinates": [
+          37.331236,
+          19.103071
+        ],
+        "type": "Point"
+      },
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2021-12-27T13:42:04Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2021-12-26T23:49:50Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Initial revision",
+          "modified": "2021-12-26T23:10:56Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Location from OSM created by Products.PleiadesEntity.browser.osm.OSMLocationFactory",
+          "modified": "2021-12-26T23:09:45Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Create",
+          "modified": "2021-12-26T23:09:45Z",
+          "modifiedBy": "thomase"
+        }
+      ],
+      "id": "osm-location-of-modern-sawakin",
+      "locationType": [
+        "associated_modern"
+      ],
+      "locationTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/settlement-modern"
+      ],
+      "provenance": "OpenStreetMap (Node 288512635, version 13, osm:changeset=88228714, 2020-07-20T07:54:51Z)",
+      "references": [
+        {
+          "accessURI": "https://www.openstreetmap.org/browse/node/288512635",
+          "alternateURI": "",
+          "bibliographicURI": "",
+          "citationDetail": "Node 288512635",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsDataSource",
+          "formattedCitation": "osm:node=288512635",
+          "otherIdentifier": "",
+          "shortTitle": "OSM",
+          "type": "citesAsDataSource"
+        },
+        {
+          "accessURI": "",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/Q4N2Z8P5",
+          "citationDetail": "pages 100-101",
+          "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+          "formattedCitation": "<div class=\"csl-entry\">Casson, Lionel. <i>The Periplus maris Erythraei: text with introduction, translation, and commentary</i>. Princeton, NJ: Princeton University Press, 1989.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "PME (Casson)",
+          "type": "seeFurther"
+        }
+      ],
+      "review_state": "published",
+      "start": 1900,
+      "title": "OSM Location of Modern Sawakin",
+      "uri": "https://pleiades.stoa.org/places/39409/osm-location-of-modern-sawakin"
+    },
+    {
+      "@type": "Location",
+      "accuracy": "https://pleiades.stoa.org/features/metadata/generic-osm-accuracy-assessment",
+      "accuracy_value": 20.0,
+      "archaeologicalRemains": "unknown",
+      "associationCertainty": "less-certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/less-certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "twentieth-ce",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/twentieth-ce"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "twenty-first-ce",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/twenty-first-ce"
+        }
+      ],
+      "contributors": [],
+      "created": "2021-12-26T23:06:54Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "description": "Location based on OpenStreetMap",
+      "details": "",
+      "end": 2099,
+      "featureType": [
+        "settlement-modern"
+      ],
+      "featureTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/settlement-modern"
+      ],
+      "geometry": {
+        "coordinates": [
+          38.1927,
+          18.2278
+        ],
+        "type": "Point"
+      },
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2021-12-27T13:42:04Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2021-12-26T23:49:50Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Initial revision",
+          "modified": "2021-12-26T23:08:13Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Location from OSM created by Products.PleiadesEntity.browser.osm.OSMLocationFactory",
+          "modified": "2021-12-26T23:06:54Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Create",
+          "modified": "2021-12-26T23:06:54Z",
+          "modifiedBy": "thomase"
+        }
+      ],
+      "id": "osm-location-of-modern-hillat-agig",
+      "locationType": [
+        "associated_modern"
+      ],
+      "locationTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/settlement-modern"
+      ],
+      "provenance": "OpenStreetMap (Node 7730429913, version 1, osm:changeset=88231012, 2020-07-20T08:05:39Z)",
+      "references": [
+        {
+          "accessURI": "https://www.openstreetmap.org/browse/node/7730429913",
+          "alternateURI": "",
+          "bibliographicURI": "",
+          "citationDetail": "Node 7730429913",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsDataSource",
+          "formattedCitation": "osm:node=7730429913",
+          "otherIdentifier": "",
+          "shortTitle": "OSM",
+          "type": "citesAsDataSource"
+        },
+        {
+          "accessURI": "",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/Q4N2Z8P5",
+          "citationDetail": "pages 100-101",
+          "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+          "formattedCitation": "<div class=\"csl-entry\">Casson, Lionel. <i>The Periplus maris Erythraei: text with introduction, translation, and commentary</i>. Princeton, NJ: Princeton University Press, 1989.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "PME (Casson)",
+          "type": "seeFurther"
+        }
+      ],
+      "review_state": "published",
+      "start": 1900,
+      "title": "OSM Location of Modern Hillat `Agig",
+      "uri": "https://pleiades.stoa.org/places/39409/osm-location-of-modern-hillat-agig"
+    },
+    {
+      "@type": "Location",
+      "accuracy": "https://pleiades.stoa.org/features/metadata/generic-geonames-accuracy-assessment",
+      "accuracy_value": 30.0,
+      "archaeologicalRemains": "unknown",
+      "associationCertainty": "uncertain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/uncertain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "twentieth-ce",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/twentieth-ce"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "twenty-first-ce",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/twenty-first-ce"
+        }
+      ],
+      "contributors": [],
+      "created": "2021-12-26T23:14:08Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 2099,
+      "featureType": [
+        "anchorage"
+      ],
+      "featureTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/anchorage"
+      ],
+      "geometry": {
+        "coordinates": [
+          37.71667,
+          18.73333
+        ],
+        "type": "Point"
+      },
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2021-12-27T13:42:04Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2021-12-26T23:49:50Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Edited",
+          "modified": "2021-12-26T23:46:22Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Edited",
+          "modified": "2021-12-26T23:46:00Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Edited",
+          "modified": "2021-12-26T23:30:06Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Edited",
+          "modified": "2021-12-26T23:14:26Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Initial revision",
+          "modified": "2021-12-26T23:14:08Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Create",
+          "modified": "2021-12-26T23:14:08Z",
+          "modifiedBy": "thomase"
+        }
+      ],
+      "id": "geonames-location-of-modern-marsa-maqdam-anchorage",
+      "locationType": [
+        "associated_modern"
+      ],
+      "locationTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/anchorage"
+      ],
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/Q4N2Z8P5",
+          "citationDetail": "pages 100-101",
+          "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+          "formattedCitation": "<div class=\"csl-entry\">Casson, Lionel. <i>The Periplus maris Erythraei: text with introduction, translation, and commentary</i>. Princeton, NJ: Princeton University Press, 1989.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "PME (Casson)",
+          "type": "seeFurther"
+        },
+        {
+          "accessURI": "https://www.geonames.org/370524/marsa-maqdam.html",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/IIFE4W6M",
+          "citationDetail": "370524: Marsá Maqdam",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsDataSource",
+          "formattedCitation": "<div class=\"csl-entry\">Marc Wick, and Christophe Boutreux. “GeoNames,” 2005. http://www.geonames.org/.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "GeoNames",
+          "type": "citesAsDataSource"
+        }
+      ],
+      "review_state": "published",
+      "start": 1900,
+      "title": "Geonames location of modern Marsá Maqdam anchorage",
+      "uri": "https://pleiades.stoa.org/places/39409/geonames-location-of-modern-marsa-maqdam-anchorage"
+    },
+    {
+      "@type": "Location",
+      "accuracy": "https://pleiades.stoa.org/features/metadata/generic-osm-accuracy-assessment",
+      "accuracy_value": 20.0,
+      "archaeologicalRemains": "unknown",
+      "associationCertainty": "uncertain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/uncertain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "twentieth-ce",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/twentieth-ce"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "twenty-first-ce",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/twenty-first-ce"
+        }
+      ],
+      "contributors": [],
+      "created": "2021-12-26T23:37:04Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "description": "Location based on OpenStreetMap",
+      "details": "",
+      "end": 2099,
+      "featureType": [
+        "settlement-modern"
+      ],
+      "featureTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/settlement-modern"
+      ],
+      "geometry": {
+        "coordinates": [
+          37.74691,
+          18.676001
+        ],
+        "type": "Point"
+      },
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2021-12-27T13:42:05Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2021-12-26T23:49:50Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Initial revision",
+          "modified": "2021-12-26T23:38:15Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Location from OSM created by Products.PleiadesEntity.browser.osm.OSMLocationFactory",
+          "modified": "2021-12-26T23:37:04Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Create",
+          "modified": "2021-12-26T23:37:04Z",
+          "modifiedBy": "thomase"
+        }
+      ],
+      "id": "osm-locations-of-modern-trinkitat",
+      "locationType": [
+        "associated_modern"
+      ],
+      "locationTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/settlement-modern"
+      ],
+      "provenance": "OpenStreetMap (Node 7730407162, version 1, osm:changeset=88231012, 2020-07-20T08:05:53Z)",
+      "references": [
+        {
+          "accessURI": "https://www.openstreetmap.org/browse/node/7730407162",
+          "alternateURI": "",
+          "bibliographicURI": "",
+          "citationDetail": "Node 7730407162",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsDataSource",
+          "formattedCitation": "osm:node=7730407162",
+          "otherIdentifier": "",
+          "shortTitle": "OSM",
+          "type": "citesAsDataSource"
+        },
+        {
+          "accessURI": "",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/Q4N2Z8P5",
+          "citationDetail": "pages 100-101",
+          "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+          "formattedCitation": "<div class=\"csl-entry\">Casson, Lionel. <i>The Periplus maris Erythraei: text with introduction, translation, and commentary</i>. Princeton, NJ: Princeton University Press, 1989.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "PME (Casson)",
+          "type": "seeFurther"
+        }
+      ],
+      "review_state": "published",
+      "start": 1900,
+      "title": "OSM Locations of modern Trinkitat",
+      "uri": "https://pleiades.stoa.org/places/39409/osm-locations-of-modern-trinkitat"
+    },
+    {
+      "@type": "Location",
+      "accuracy": "https://pleiades.stoa.org/features/metadata/generic-geonames-accuracy-assessment",
+      "accuracy_value": 30.0,
+      "archaeologicalRemains": "unknown",
+      "associationCertainty": "uncertain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/uncertain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "twentieth-ce",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/twentieth-ce"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "twenty-first-ce",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/twenty-first-ce"
+        }
+      ],
+      "contributors": [],
+      "created": "2021-12-26T23:44:21Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 2099,
+      "featureType": [
+        "island"
+      ],
+      "featureTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/island"
+      ],
+      "geometry": {
+        "coordinates": [
+          38.4397,
+          18.1728
+        ],
+        "type": "Point"
+      },
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2021-12-27T13:42:05Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2021-12-26T23:49:50Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Initial revision",
+          "modified": "2021-12-26T23:44:23Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Create",
+          "modified": "2021-12-26T23:44:21Z",
+          "modifiedBy": "thomase"
+        }
+      ],
+      "id": "geonames-location-of-modern-gazirat-2018iri",
+      "locationType": [
+        "associated_modern"
+      ],
+      "locationTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/island"
+      ],
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "https://www.geonames.org/368071/gazirat-iri.html",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/IIFE4W6M",
+          "citationDetail": "368071: Gazirat ‘Iri",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsDataSource",
+          "formattedCitation": "<div class=\"csl-entry\">Marc Wick, and Christophe Boutreux. “GeoNames,” 2005. http://www.geonames.org/.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "GeoNames",
+          "type": "citesAsDataSource"
+        },
+        {
+          "accessURI": "",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/Q4N2Z8P5",
+          "citationDetail": "pages 100-101",
+          "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+          "formattedCitation": "<div class=\"csl-entry\">Casson, Lionel. <i>The Periplus maris Erythraei: text with introduction, translation, and commentary</i>. Princeton, NJ: Princeton University Press, 1989.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "PME (Casson)",
+          "type": "seeFurther"
+        }
+      ],
+      "review_state": "published",
+      "start": 1900,
+      "title": "Geonames location of modern Gazirat ‘Iri",
+      "uri": "https://pleiades.stoa.org/places/39409/geonames-location-of-modern-gazirat-2018iri"
+    }
+  ],
+  "names": [
+    {
+      "@type": "Name",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        }
+      ],
+      "attested": "Πτολεμαΐς Θηρῶν",
+      "contributors": [
+        {
+          "name": "R. Talbert",
+          "username": null
+        },
+        {
+          "homepage": null,
+          "name": "Sean Gillies",
+          "uri": "https://pleiades.stoa.org/author/sgillies",
+          "username": "sgillies"
+        },
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "created": "2021-12-26T13:57:15Z",
+      "creators": [
+        {
+          "name": "D.T. Potts",
+          "username": null
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 300,
+      "history": [
+        {
+          "comment": "Greek language and orthography; Ptolemy reference",
+          "modified": "2021-12-26T19:56:32Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "Global migration and reindexing of citations and provenance, February 2012",
+          "modified": "2012-02-15T04:41:01Z",
+          "modifiedBy": "admin"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2010-09-23T16:33:51Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2010-09-22T23:35:44Z",
+          "modifiedBy": "sgillies"
+        },
+        {
+          "action": "Create",
+          "modified": "2010-09-22T22:06:17Z",
+          "modifiedBy": "sgillies"
+        }
+      ],
+      "id": "ptolemais-theron",
+      "language": "grc",
+      "nameType": "geographic",
+      "provenance": "Barrington Atlas: BAtlas 4 A2 Ptolemais Theron",
+      "references": [
+        {
+          "accessURI": "https://babel.hathitrust.org/cgi/pt?id=mdp.39015022717592&view=1up&seq=313&skin=2021&q1=%CF%80%CF%84%CE%BF%CE%BB%CE%B5%CE%BC%CE%B1%CE%B9%CF%82%20%CE%B8%CE%B7%CF%81%CF%89%CE%BD",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/56UMLU8H",
+          "citationDetail": "4.7.1",
+          "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+          "formattedCitation": "<div class=\"csl-entry\">Ptolemy. <i>Claudii Ptolemaei geographia</i>. Edited by Karl Friedrich August Nobbe. 3 in 2 vols. Lipsiae: Sumptibus et typis Caroli Tauchnitii, 1843. https://catalog.hathitrust.org/Record/002504277.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "Ptol. (Nobbe: Hathi)",
+          "type": "seeFurther"
+        }
+      ],
+      "review_state": "published",
+      "romanized": "Ptolemais Theron",
+      "start": -30,
+      "transcriptionAccuracy": "accurate",
+      "transcriptionCompleteness": "complete",
+      "uri": "https://pleiades.stoa.org/places/39409/ptolemais-theron"
+    }
+  ],
+  "placeTypeURIs": [
+    "https://pleiades.stoa.org/vocabularies/place-types/settlement-modern",
+    "https://pleiades.stoa.org/vocabularies/place-types/island",
+    "https://pleiades.stoa.org/vocabularies/place-types/anchorage",
+    "https://pleiades.stoa.org/vocabularies/place-types/settlement",
+    "https://pleiades.stoa.org/vocabularies/place-types/port"
+  ],
+  "placeTypes": [
+    "settlement-modern",
+    "island",
+    "anchorage",
+    "settlement",
+    "port"
+  ],
+  "provenance": "Barrington Atlas: BAtlas 4 A2 Ptolemais Theron",
+  "references": [
+    {
+      "accessURI": "http://www.worldcat.org/oclc/43970336",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/MIAGQ5C6",
+      "citationDetail": "4 A2 Ptolemais Theron",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard J. A., ed. <i>Barrington Atlas of the Greek and Roman World</i>. Princeton, N.J.: Princeton University Press, 2000. http://www.worldcat.org/oclc/43970336.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "BAtlas",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/Q4N2Z8P5",
+      "citationDetail": "3-4 (pages 50-51)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+      "formattedCitation": "<div class=\"csl-entry\">Casson, Lionel. <i>The Periplus maris Erythraei: text with introduction, translation, and commentary</i>. Princeton, NJ: Princeton University Press, 1989.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "PME (Casson)",
+      "type": "citesAsEvidence"
+    },
+    {
+      "accessURI": "https://en.wikipedia.org/wiki/Ptolemais_Theron",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/2533/items/CI6F6W7W",
+      "citationDetail": "Ptolemais Theron",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "Wikipedia: the free encyclopedia that anyone can edit (2001-), Ptolemais Theron.",
+      "otherIdentifier": " ",
+      "shortTitle": "Wikipedia (English)",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:16.4.7",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/FEVTVBA7",
+      "citationDetail": "16.4.7",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+      "formattedCitation": "<div class=\"csl-entry\">Strabo. <i>Strabonis Geographica: recognovit Augustus Meineke.</i> Edited by August Meineke. 3 in 2 vols. Lipsiae, 1877. http://data.perseus.org/texts/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "Str. (Meineke: Perseus)",
+      "type": "citesAsEvidence"
+    },
+    {
+      "accessURI": "https://babel.hathitrust.org/cgi/pt?id=mdp.39015022717592&view=1up&seq=313&q1=%CF%80%CF%84%CE%BF%CE%BB%CE%B5%CE%BC%CE%B1%CE%B9%CF%82%20%CE%B8%CE%B7%CF%81%CF%89%CE%BD",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/56UMLU8H",
+      "citationDetail": "5.7.1",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+      "formattedCitation": "<div class=\"csl-entry\">Ptolemy. <i>Claudii Ptolemaei geographia</i>. Edited by Karl Friedrich August Nobbe. 3 in 2 vols. Lipsiae: Sumptibus et typis Caroli Tauchnitii, 1843. https://catalog.hathitrust.org/Record/002504277.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Ptol. (Nobbe: Hathi)",
+      "type": "citesAsEvidence"
+    },
+    {
+      "accessURI": "",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/Q4N2Z8P5",
+      "citationDetail": "pages 45, 100-102, 110",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Casson, Lionel. <i>The Periplus maris Erythraei: text with introduction, translation, and commentary</i>. Princeton, NJ: Princeton University Press, 1989.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "PME (Casson)",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://topostext.org/place/191373UPto",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/MC9RGDVB",
+      "citationDetail": "Ptolemais Theron (Red Sea)",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Kiesling, Brady. <i>ToposText – a Reference Tool for Greek Civilization</i>. Version 2.0. Aikaterini Laskaridis Foundation, 2016. https://topostext.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "ToposText",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://www.wikidata.org/wiki/Q7257098",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/BCQIKDKS",
+      "citationDetail": "Q7257098: Ptolemais Theron",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\"><i>Wikidata: The Free Knowledge Base That Anyone Can Edit</i>. Wikimedia Foundation, 2014. https://www.wikidata.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Wikidata",
+      "type": "citesAsRelated"
+    }
+  ],
+  "reprPoint": [
+    37.8854432,
+    18.582600399999997
+  ],
+  "review_state": "published",
+  "rights": "Copyright © The Contributors. Sharing and remixing permitted under terms of the Creative Commons Attribution 3.0 License (cc-by).",
+  "subject": [
+    "dare:ancient=1",
+    "dare:feature=settlement",
+    "dare:major=0"
+  ],
+  "title": "Ptolemais Theron",
+  "type": "FeatureCollection",
+  "uri": "https://pleiades.stoa.org/places/39409"
+}

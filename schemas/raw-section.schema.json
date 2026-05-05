@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/raw-section.schema.json",
+  "title": "Raw periplus section file",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "chunk_id",
+      "passage_id",
+      "source_ref",
+      "section_order",
+      "draft_translation",
+      "places",
+      "commodity_entities",
+      "movement_events"
+    ],
+    "properties": {
+      "chunk_id": {
+        "type": "string"
+      },
+      "passage_id": {
+        "type": "string"
+      },
+      "source_ref": {
+        "type": "string"
+      },
+      "section_order": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "draft_translation": {
+        "type": "string"
+      },
+      "places": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "commodity_entities": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "movement_events": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

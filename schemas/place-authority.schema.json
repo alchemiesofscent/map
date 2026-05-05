@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/place-authority.schema.json",
+  "title": "Place authority file",
+  "type": "array",
+  "$defs": {
+    "certainty": {
+      "type": "string"
+    },
+    "placeKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "nullableNumber": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "items": {
+    "type": "object",
+    "required": [
+      "place_key",
+      "display_name",
+      "greek_names",
+      "aliases",
+      "place_type",
+      "lat",
+      "lon",
+      "certainty",
+      "pleiades_id",
+      "pleiades_uri",
+      "coordinates_source",
+      "notes"
+    ],
+    "properties": {
+      "place_key": {
+        "$ref": "#/$defs/placeKey"
+      },
+      "display_name": {
+        "type": "string"
+      },
+      "greek_names": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "aliases": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "place_type": {
+        "type": "string"
+      },
+      "lat": {
+        "$ref": "#/$defs/nullableNumber"
+      },
+      "lon": {
+        "$ref": "#/$defs/nullableNumber"
+      },
+      "certainty": {
+        "$ref": "#/$defs/certainty"
+      },
+      "pleiades_id": {
+        "$ref": "#/$defs/nullableString"
+      },
+      "pleiades_uri": {
+        "$ref": "#/$defs/nullableString"
+      },
+      "coordinates_source": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false
+  }
+}

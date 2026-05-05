@@ -1,0 +1,14 @@
+{
+  "name": "periplus-tour-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static visual tour scaffold for periploi route data, including a scroll-driven viewer feature.",
+  "scripts": {
+    "check": "python3 scripts/check_data.py",
+    "check:generated": "python3 scripts/check_generated_tour.py",
+    "ingest": "python3 scripts/ingest_tour_chunk.py --start 1 --count 10",
+    "geojson": "python3 scripts/export_geojson.py",
+    "serve": "python3 -m http.server 8000",
+    "serve:scrolly": "python3 -m http.server 8000"
+  }
+}

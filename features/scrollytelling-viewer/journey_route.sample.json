@@ -1,0 +1,97 @@
+{
+  "route_title": "Periplus of the Erythraean Sea: opening Red Sea route",
+  "main_route_place_keys": ["myos_hormos", "berenike", "ptolemais_theron", "adulis"],
+  "steps": [
+    {
+      "step_id": "step_001_myos_hormos",
+      "type": "stop",
+      "title": "Myos Hormos",
+      "route_label": "Main route stop 1 of 4",
+      "focus_place_key": "myos_hormos",
+      "section_refs": ["section_0001"],
+      "translation": "The first marked harbor of the Red Sea and its trading places is Myos Hormos in Egypt.",
+      "greek_text": null,
+      "place_mentions": [
+        {"surface": "Myos Hormos", "place_key": "myos_hormos", "kind": "main_route"}
+      ]
+    },
+    {
+      "step_id": "step_002_berenike",
+      "type": "stop",
+      "title": "Berenike",
+      "route_label": "Main route stop 2 of 4",
+      "focus_place_key": "berenike",
+      "section_refs": ["section_0001", "section_0002"],
+      "translation": "After Myos Hormos, sailing inward 1,800 stades, Berenike lies on the right at the far end of Egypt's gulf of the Red Sea. From the right-hand side from Berenike the Barbarian country adjoins the route. The coast is inhabited here and there by Fish-Eaters, while inland live Barbarians and, after them, Calf-Eaters under local rulers; behind them, toward the west, lies the metropolis called Meroe.",
+      "greek_text": null,
+      "place_mentions": [
+        {"surface": "Myos Hormos", "place_key": "myos_hormos", "kind": "main_route"},
+        {"surface": "Berenike", "place_key": "berenike", "kind": "main_route"},
+        {"surface": "Barbarian country", "place_key": "barbarian_country", "kind": "off_route"},
+        {"surface": "Fish-Eaters", "place_key": "fish_eaters_red_sea", "kind": "off_route"},
+        {"surface": "Calf-Eaters", "place_key": "moschophagoi_territory", "kind": "off_route"},
+        {"surface": "Meroe", "place_key": "meroe", "kind": "off_route"}
+      ]
+    },
+    {
+      "step_id": "step_003_ptolemais",
+      "type": "stop",
+      "title": "Ptolemais of the Hunts",
+      "route_label": "Main route stop 3 of 4",
+      "focus_place_key": "ptolemais_theron",
+      "section_refs": ["section_0003"],
+      "translation": "After the Calf-Eaters, on the coast, is the small trading station called Ptolemais of the Hunts, about four thousand stades from the end of the voyage up the gulf. From there the royal hunters under the Ptolemies went inland. The station has true tortoise shell, a little land tortoise shell, and a smaller white shell; occasionally a little ivory like that of Adulis is found there. The place has no harbor and offers only a landing by small boats.",
+      "greek_text": null,
+      "place_mentions": [
+        {"surface": "Calf-Eaters", "place_key": "moschophagoi_territory", "kind": "off_route"},
+        {"surface": "Ptolemais of the Hunts", "place_key": "ptolemais_theron", "kind": "main_route"},
+        {"surface": "Adulis", "place_key": "adulis", "kind": "comparison_or_forward_reference"}
+      ]
+    },
+    {
+      "step_id": "step_004_adulis",
+      "type": "stop",
+      "title": "Adulis",
+      "route_label": "Main route stop 4 of 4",
+      "focus_place_key": "adulis",
+      "section_refs": ["section_0004"],
+      "translation": "About three thousand stades after Ptolemais of the Hunts lies the lawful trading station Adulis, set in a deep south-facing bay. The island called Oreine lies before it, where ships now anchor because of attacks from the mainland; formerly they anchored deeper in the bay at Diodoros island. From Adulis a three-day road leads to inland Koloe, the first ivory market; five more days lead to the metropolis of the Aksumites, where all ivory from beyond the Nile is brought through Kyeneion and then onward to Adulis. Offshore islands called Alalaiou have tortoise shell carried to the emporion by the Fish-Eaters.",
+      "greek_text": null,
+      "place_mentions": [
+        {"surface": "Ptolemais of the Hunts", "place_key": "ptolemais_theron", "kind": "main_route"},
+        {"surface": "Adulis", "place_key": "adulis", "kind": "main_route"},
+        {"surface": "Oreine", "place_key": "oreine_island", "kind": "off_route"},
+        {"surface": "Diodoros island", "place_key": "diodoros_island", "kind": "off_route"},
+        {"surface": "Koloe", "place_key": "koloe", "kind": "off_route"},
+        {"surface": "Aksumites", "place_key": "aksum_metropolis", "kind": "off_route"},
+        {"surface": "Kyeneion", "place_key": "kyeneion", "kind": "off_route"},
+        {"surface": "beyond the Nile", "place_key": "beyond_the_nile", "kind": "off_route"},
+        {"surface": "Alalaiou", "place_key": "alalaiou_islands", "kind": "off_route"},
+        {"surface": "Fish-Eaters", "place_key": "fish_eaters_red_sea", "kind": "off_route"}
+      ]
+    }
+  ],
+  "legs": [
+    {
+      "from_place_key": "myos_hormos",
+      "to_place_key": "berenike",
+      "section_refs": ["section_0001"],
+      "distance_text": "1,800 stades",
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "berenike",
+      "to_place_key": "ptolemais_theron",
+      "section_refs": ["section_0002", "section_0003"],
+      "distance_text": "narrative continuation; section 2 gives ethnographic/coastal markers beyond Berenike rather than a secure port",
+      "certainty": "inferred_from_sequence"
+    },
+    {
+      "from_place_key": "ptolemais_theron",
+      "to_place_key": "adulis",
+      "section_refs": ["section_0004"],
+      "distance_text": "about 3,000 stades",
+      "certainty": "text_explicit"
+    }
+  ]
+}

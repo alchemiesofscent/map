@@ -1,0 +1,42 @@
+{
+  "project": "Periplus Red Sea visual tour MVP",
+  "description": "Source and reconciliation manifest for the starter scaffold.",
+  "text_source": {
+    "label": "First1KGreek TEI / CTS text supplied by project data",
+    "cts_urn": "urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1",
+    "local_records": "data/raw_sections.sample.json",
+    "note": "This scaffold preserves chunk_id, passage_id, and source_ref from the supplied extraction. Add the repository URL or TEI file path used by your project here."
+  },
+  "translation_source": {
+    "label": "LLM-assisted draft translations supplied in the prompt",
+    "local_records": "data/raw_sections.sample.json",
+    "review_status": "starter_sample_not_final_scholarly_translation"
+  },
+  "place_sources": [
+    {
+      "label": "Pleiades",
+      "use": "stable place identifiers, canonical URIs, representative points when available",
+      "url": "https://pleiades.stoa.org/"
+    },
+    {
+      "label": "Pleiades API",
+      "use": "place JSON endpoint pattern /places/{pid}/json",
+      "url": "https://api.pleiades.stoa.org/"
+    },
+    {
+      "label": "Pleiades downloads",
+      "use": "recommended source for bulk reconciliation against reprLat/reprLong",
+      "url": "https://pleiades.stoa.org/downloads"
+    },
+    {
+      "label": "Digital Atlas of the Roman Empire",
+      "use": "supplementary coordinates for selected places where referenced in the starter file",
+      "url": "https://imperium.ahlfeldt.se/"
+    }
+  ],
+  "warnings": [
+    "Ptolemais of the Hunts is treated as uncertain; the demo marker follows a candidate location and should not be published as definitive.",
+    "Koloe has competing candidate identifications; the starter route draws the Pleiades Koloe representative point and includes Matara as an optional candidate.",
+    "Unresolved islands and ethnographic regions are intentionally not assigned invented coordinates."
+  ]
+}

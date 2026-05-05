@@ -1,0 +1,209 @@
+[
+  {
+    "chunk_id": "section_0001",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/head",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/head",
+    "section_order": 1,
+    "draft_translation": "The first marked harbor of the Red Sea and its trading places is Myos Hormos in Egypt. After it, sailing inward 1,800 stades, Berenike lies on the right. Both harbors are at the far end of Egypt's gulf of the Red Sea.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0002",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[2]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[2]/p",
+    "section_order": 2,
+    "draft_translation": "From the right-hand side from Berenike the Barbarian country adjoins the route. The coast is inhabited here and there by Fish-Eaters in narrow built enclosures, while inland live Barbarians and, after them, Wild-Eaters and Calf-Eaters under local rulers; behind them inland, toward the west, lies the metropolis called Meroe.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0003",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[3]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[3]/p",
+    "section_order": 3,
+    "draft_translation": "After the Calf-Eaters, on the coast, is the small trading station called Ptolemais of the Hunts, about four thousand stades from the end of the voyage up the gulf. From there the royal hunters under the Ptolemies went inland. The station has true tortoise shell, a little land tortoise shell, and a smaller white shell; occasionally a little ivory like that of Adulis is found there. The place has no harbor and offers only a landing by small boats.",
+    "places": [
+      {
+        "greek_surface": "Πτολεμαῒς ἡ τῶν θηρῶν",
+        "english_label": "Ptolemais of the Hunts",
+        "role": "destination_port",
+        "notes": "Small coastal emporion after the Moschophagoi."
+      },
+      {
+        "greek_surface": "Μοσχοφάγους",
+        "english_label": "Moschophagoi territory",
+        "role": "route_or_intermediate_place",
+        "notes": "Preceding coastal people/place marker on the route."
+      },
+      {
+        "greek_surface": "Ἀδουλιτικῷ",
+        "english_label": "Adulis",
+        "role": "comparison_place",
+        "notes": "Used as the comparison for the quality of the ivory, not the destination in this section."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "true tortoise shell",
+        "greek_surface": "χελώνην ἀληθινήν",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Exportable shell available at Ptolemais."
+      },
+      {
+        "english_label": "land tortoise shell",
+        "greek_surface": "χελώνην ... χερσαίαν",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Listed separately from true tortoise shell."
+      },
+      {
+        "english_label": "small white tortoise shell",
+        "greek_surface": "λευκὴν μικροτέραν",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "A smaller white shell variety, probably a tortoise-shell type."
+      },
+      {
+        "english_label": "ivory",
+        "greek_surface": "ἐλέφας",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Only a little is found, compared with Adulitic ivory."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_availability",
+        "source_place": "Ptolemais of the Hunts",
+        "destination_place": "Ptolemais of the Hunts",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "true tortoise shell",
+          "land tortoise shell",
+          "small white tortoise shell",
+          "ivory"
+        ],
+        "notes": "Goods are described as present or occasionally found at the emporion rather than as a directional cargo movement."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0004",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[4]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[4]/p",
+    "section_order": 4,
+    "draft_translation": "About three thousand stades after Ptolemais of the Hunts lies the lawful trading station Adulis, set in a deep south-facing bay. The island called Oreine lies before it, where ships now anchor because of attacks from the mainland; formerly they anchored deeper in the bay at Diodoros island. On the mainland opposite Oreine, twenty stades from the sea, is the village of Adulis. From it a three-day road leads to inland Koloe, the first ivory market; five more days lead to the metropolis of the Aksumites, where all ivory from beyond the Nile is brought through Kyeneion and then onward to Adulis. Elephants and rhinoceroses mostly range in the upper country, though rarely near coastal Adulis. Offshore islands called Alalaiou have tortoise shell carried to the emporion by the Fish-Eaters.",
+    "places": [
+      {
+        "greek_surface": "Ἀδουλὶ",
+        "english_label": "Adulis",
+        "role": "destination_port",
+        "notes": "Lawful emporion and endpoint for ivory carried from inland routes."
+      },
+      {
+        "greek_surface": "Πτολεμαΐδα τὴν τῶν θηρῶν",
+        "english_label": "Ptolemais of the Hunts",
+        "role": "route_or_intermediate_place",
+        "notes": "Previous route marker."
+      },
+      {
+        "greek_surface": "Ὀρεινὴ",
+        "english_label": "Oreine island",
+        "role": "route_or_intermediate_place",
+        "notes": "Island anchorage before the bay; ships anchor there."
+      },
+      {
+        "greek_surface": "Διοδώρου ... νήσῳ",
+        "english_label": "Diodoros island",
+        "role": "route_or_intermediate_place",
+        "notes": "Former anchorage deeper in the bay."
+      },
+      {
+        "greek_surface": "Κολόην",
+        "english_label": "Koloe",
+        "role": "source_place",
+        "notes": "Inland city and first emporion of ivory."
+      },
+      {
+        "greek_surface": "Aὐξωμιτῶν",
+        "english_label": "Aksumite metropolis",
+        "role": "source_place",
+        "notes": "Inland metropolis receiving ivory from beyond the Nile."
+      },
+      {
+        "greek_surface": "Κυηνείου",
+        "english_label": "Kyeneion",
+        "role": "route_or_intermediate_place",
+        "notes": "Named route point for ivory from beyond the Nile."
+      },
+      {
+        "greek_surface": "πέραν τοῦ Νείλου",
+        "english_label": "Beyond the Nile",
+        "role": "source_place",
+        "notes": "Ultimate source region for the ivory."
+      },
+      {
+        "greek_surface": "Ἀλαλαίου",
+        "english_label": "Alalaiou islands",
+        "role": "source_place",
+        "notes": "Offshore islands with tortoise shell."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "ivory",
+        "greek_surface": "ἐλέφας",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "Main inland commodity routed through Koloe, the Aksumite metropolis, Kyeneion, and Adulis."
+      },
+      {
+        "english_label": "rhinoceros horn or rhinoceros product",
+        "greek_surface": "ῥινοκερώτων",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "medium",
+        "notes": "Rhinoceroses are mentioned with hunted elephants; commodity form is not explicit."
+      },
+      {
+        "english_label": "tortoise shell",
+        "greek_surface": "χελώνην",
+        "category": "animal_product",
+        "structure_type": "separate_good",
+        "confidence": "high",
+        "notes": "From the Alalaiou islands, carried into the emporion by Fish-Eaters."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "inland_export_to_port",
+        "source_place": "Beyond the Nile",
+        "destination_place": "Adulis",
+        "route_or_intermediate_place": "Kyeneion; Aksumite metropolis; Koloe",
+        "goods": [
+          "ivory"
+        ],
+        "notes": "All ivory is said to be brought inland through these points and then to Adulis."
+      },
+      {
+        "movement_type": "local_supply_to_port",
+        "source_place": "Alalaiou islands",
+        "destination_place": "Adulis",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "tortoise shell"
+        ],
+        "notes": "Fish-Eaters carry tortoise shell from the islands into the emporion."
+      }
+    ]
+  }
+]
