@@ -3,17 +3,22 @@
 }
 
 :root {
-  --paper: #f6f1e8;
-  --paper-strong: #fffaf0;
-  --ink: #211d18;
-  --muted: #665f55;
-  --line: #d6cbb9;
-  --line-strong: #aa9781;
-  --sea: #2c6f8f;
-  --sea-soft: #9bb8c5;
-  --land: #7b674f;
-  --accent: #8c4c2f;
-  --shadow: 0 22px 60px rgba(34, 27, 19, 0.18);
+  --paper: #071015;
+  --paper-strong: #0c171d;
+  --panel: rgba(13, 24, 31, 0.9);
+  --panel-strong: rgba(18, 31, 39, 0.98);
+  --ink: #edf3ee;
+  --muted: #95a8a8;
+  --line: rgba(137, 160, 159, 0.28);
+  --line-strong: rgba(240, 195, 106, 0.52);
+  --sea: #56a6b6;
+  --sea-soft: #173b45;
+  --land: #9db38f;
+  --accent: #f0c36a;
+  --accent-low: rgba(240, 195, 106, 0.14);
+  --shadow: 0 26px 80px rgba(0, 0, 0, 0.48);
+  --stage-top: clamp(1.5rem, 7vh, 4.5rem);
+  --stage-height: min(76vh, 820px);
 }
 
 html {
@@ -23,8 +28,11 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 18% 4%, rgba(86, 166, 182, 0.24), transparent 30rem),
+    radial-gradient(circle at 82% 12%, rgba(240, 195, 106, 0.12), transparent 24rem),
+    linear-gradient(180deg, #061014 0%, #0c171d 46%, #05090d 100%);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
 }
 
 a {
@@ -47,7 +55,8 @@ button {
   align-items: flex-end;
   padding: 1.35rem clamp(1rem, 4vw, 3rem);
   border-bottom: 1px solid var(--line);
-  background: var(--paper-strong);
+  background: rgba(7, 16, 21, 0.94);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.28);
 }
 
 .feature-header h1 {
@@ -67,13 +76,21 @@ button {
   border: 1px solid var(--line);
   border-radius: 999px;
   text-decoration: none;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ink);
+}
+
+.feature-header nav a:hover,
+.feature-header nav a:focus-visible {
+  border-color: var(--line-strong);
+  outline: none;
 }
 
 .eyebrow {
   margin: 0;
-  color: var(--muted);
-  font-size: 0.73rem;
+  color: var(--accent);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.095em;
   text-transform: uppercase;
@@ -97,13 +114,14 @@ button {
   height: 100vh;
   overflow: hidden;
   border-right: 1px solid var(--line);
-  background: #d9e1df;
+  background: #d9e6e4;
 }
 
 #map {
   width: 100%;
   height: 100%;
   z-index: 1;
+  background: #d9e6e4;
 }
 
 .map-hud {
@@ -115,11 +133,11 @@ button {
   display: grid;
   gap: 0.7rem;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: 1rem;
-  background: rgba(255, 250, 240, 0.94);
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: rgba(7, 16, 21, 0.62);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(14px);
 }
 
 .map-hud h2 {
@@ -138,7 +156,7 @@ button {
   padding: 0.65rem 0.75rem;
   border: 1px dashed var(--line-strong);
   border-radius: 0.7rem;
-  background: rgba(255, 244, 220, 0.85);
+  background: rgba(18, 41, 45, 0.7);
 }
 
 .off-route-status p:first-of-type + p {
@@ -156,7 +174,7 @@ button {
   padding: 0.3rem 0.65rem;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
-  background: #fff;
+  background: rgba(240, 195, 106, 0.1);
   color: var(--ink);
   font-size: 0.82rem;
 }
@@ -166,6 +184,7 @@ button {
   flex-wrap: wrap;
   gap: 0.55rem 0.9rem;
   color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.87rem;
 }
 
@@ -177,11 +196,11 @@ button {
 
 .story-column {
   min-width: 0;
-  padding: 8vh clamp(1rem, 5vw, 4.5rem) 18vh;
+  padding: 8vh clamp(1rem, 5vw, 4.5rem) 14vh;
 }
 
 .story-intro,
-.tour-step {
+.story-steps {
   max-width: 720px;
   margin-inline: auto;
 }
@@ -207,27 +226,56 @@ button {
 }
 
 .story-steps {
-  display: grid;
-  gap: 36vh;
+  position: relative;
+}
+
+.story-card-stage {
+  position: sticky;
+  top: var(--stage-top);
+  z-index: 2;
+  height: var(--stage-height);
+  max-height: calc(100vh - (var(--stage-top) * 1.35));
+}
+
+.story-trigger-track {
+  margin-top: calc(var(--stage-height) * -0.82);
+  padding-top: calc(var(--stage-height) * 0.82);
+}
+
+.story-trigger {
+  min-height: 150vh;
+}
+
+.story-trigger:last-child {
+  min-height: 170vh;
 }
 
 .tour-step {
-  min-height: 58vh;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: start;
+  overflow: auto;
   padding: clamp(1rem, 3vw, 2rem);
   border: 1px solid var(--line);
-  border-radius: 1.2rem;
-  background: rgba(255, 250, 240, 0.82);
-  box-shadow: 0 18px 55px rgba(45, 35, 24, 0.09);
-  opacity: 0.5;
-  transform: translateY(20px);
-  transition: opacity 240ms ease, transform 240ms ease, border-color 240ms ease, background 240ms ease;
+  border-radius: 0.75rem;
+  background:
+    linear-gradient(145deg, rgba(20, 34, 42, 0.98), rgba(9, 18, 24, 0.96)),
+    var(--panel);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: none;
+  transition: opacity 920ms ease, border-color 920ms ease, background 920ms ease;
 }
 
 .tour-step.active {
-  border-color: var(--accent);
-  background: rgba(255, 250, 240, 0.98);
+  border-color: var(--line-strong);
+  background:
+    linear-gradient(145deg, rgba(24, 39, 48, 0.99), rgba(10, 19, 26, 0.98)),
+    var(--panel-strong);
   opacity: 1;
-  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .tour-step h2 {
@@ -240,16 +288,17 @@ button {
   margin-top: 1rem;
   padding: 0.95rem 1.05rem;
   border: 1px solid var(--line);
-  border-radius: 0.9rem;
-  background: rgba(255, 255, 255, 0.55);
+  border-radius: 0.55rem;
+  background: rgba(255, 255, 255, 0.035);
 }
 
 .reading-block h3 {
   margin: 0 0 0.45rem;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
 }
 
 .reading-block p {
@@ -259,7 +308,7 @@ button {
 }
 
 .reading-block--greek {
-  background: rgba(248, 244, 235, 0.7);
+  background: rgba(86, 166, 182, 0.08);
   border-style: dashed;
 }
 
@@ -277,6 +326,7 @@ button {
   margin-top: 1rem;
   overflow-wrap: anywhere;
   color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.78rem;
   letter-spacing: 0.02em;
 }
@@ -296,7 +346,7 @@ button {
 
 .place-link:hover,
 .place-link:focus-visible {
-  background: rgba(140, 76, 47, 0.12);
+  background: var(--accent-low);
   color: var(--accent);
   outline: none;
 }
@@ -320,12 +370,39 @@ button {
   padding: 1.5rem clamp(1rem, 4vw, 3rem);
   border-top: 1px solid var(--line);
   color: var(--muted);
-  background: var(--paper-strong);
+  background: rgba(7, 16, 21, 0.96);
 }
 
 .leaflet-popup-content {
   margin: 0.75rem 0.9rem;
   line-height: 1.4;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #101d24;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.44);
+}
+
+.leaflet-container a {
+  color: var(--accent);
+}
+
+.leaflet-tooltip {
+  background: rgba(7, 16, 21, 0.92);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.34);
+}
+
+.sail-line {
+  filter: drop-shadow(0 0 8px rgba(240, 195, 106, 0.72));
+}
+
+.sail-dot {
+  filter: drop-shadow(0 0 10px rgba(240, 195, 106, 0.9));
 }
 
 .popup-title {
@@ -334,7 +411,7 @@ button {
 
 .popup-meta {
   margin: 0.3rem 0 0;
-  color: #4f4a43;
+  color: #b6c5c2;
 }
 
 .map-controls label:has(input:disabled) {
@@ -349,7 +426,7 @@ button {
 .external-popup__kicker {
   display: block;
   margin-bottom: 0.35rem;
-  color: var(--muted);
+  color: var(--accent);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -374,6 +451,11 @@ button {
 }
 
 @media (max-width: 880px) {
+  :root {
+    --stage-top: calc(52vh + 0.75rem);
+    --stage-height: 43vh;
+  }
+
   .feature-header {
     display: block;
   }
@@ -405,12 +487,20 @@ button {
     padding-top: 3vh;
   }
 
-  .story-steps {
-    gap: 26vh;
+  .story-intro {
+    min-height: 36vh;
+  }
+
+  .story-card-stage {
+    max-height: var(--stage-height);
+  }
+
+  .story-trigger {
+    min-height: 118vh;
   }
 
   .tour-step {
-    min-height: 66vh;
+    padding: 0.95rem;
   }
 }
 

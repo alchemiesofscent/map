@@ -20,6 +20,10 @@ const state = {
   layers: {},
   routeMarkers: new Map(),
   offRouteMarkers: new Map(),
+  routeSegments: new Map(),
+  sailDot: null,
+  sailLine: null,
+  sailFrame: null,
   reduceMotion: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
   coarsePointer: window.matchMedia("(pointer: coarse)").matches,
 };
@@ -36,6 +40,22 @@ function escapeHtml(value) {
 function placeLatLng(place) {
   if (place && place.lat !== null && place.lon !== null) return [place.lat, place.lon];
   return null;
+}
+
+function clamp(value, min = 0, max = 1) {
+  return Math.min(max, Math.max(min, value));
+}
+
+function interpolateLatLng(a, b, progress) {
+  const t = clamp(progress);
+  return [
+    a[0] + (b[0] - a[0]) * t,
+    a[1] + (b[1] - a[1]) * t,
+  ];
+}
+
+function legKey(from, to) {
+  return `${from}->${to}`;
 }
 
 function loadJson(path) {
@@ -135,10 +155,10 @@ function mainRouteMarkerStyle(active) {
   return {
     radius: active ? 11 : 7,
     weight: active ? 3 : 2,
-    color: "#1f1a15",
-    fillColor: active ? "#8c4c2f" : "#fefefe",
+    color: active ? "#f0c36a" : "#0d1820",
+    fillColor: active ? "#f0c36a" : "#e7eef0",
     opacity: 1,
-    fillOpacity: active ? 0.9 : 0.85,
+    fillOpacity: active ? 0.95 : 0.86,
   };
 }
 
@@ -146,10 +166,10 @@ function offRouteMarkerStyle() {
   return {
     radius: 4.5,
     weight: 1,
-    color: "#7b674f",
-    fillColor: "#fff4dc",
+    color: "#7ba7a5",
+    fillColor: "#132f36",
     opacity: 0.85,
-    fillOpacity: 0.8,
+    fillOpacity: 0.72,
     dashArray: "3 3",
   };
 }
@@ -157,12 +177,35 @@ function offRouteMarkerStyle() {
 function legStyle(leg, active) {
   const inferred = leg.certainty !== "text_explicit";
   return {
-    color: active ? "#8c4c2f" : "#2c6f8f",
-    weight: active ? 5.5 : 3.5,
-    opacity: active ? 0.95 : 0.7,
+    color: active ? "#1f7989" : "#2f8fa0",
+    weight: active ? 5 : 3.5,
+    opacity: active ? 0.72 : 0.58,
     dashArray: inferred ? "8 7" : null,
     lineCap: "round",
     lineJoin: "round",
+  };
+}
+
+function sailLineStyle() {
+  return {
+    color: "#f0c36a",
+    weight: 6.5,
+    opacity: 0.95,
+    lineCap: "round",
+    lineJoin: "round",
+    className: "sail-line",
+  };
+}
+
+function sailDotStyle(visible = true) {
+  return {
+    radius: 8,
+    weight: 4,
+    color: "rgba(7, 16, 21, 0.72)",
+    fillColor: "#f0c36a",
+    opacity: visible ? 1 : 0,
+    fillOpacity: visible ? 0.98 : 0,
+    className: "sail-dot",
   };
 }
 
@@ -198,6 +241,7 @@ function initMap() {
   state.layers.legs = L.layerGroup().addTo(map);
   state.layers.offRoute = L.layerGroup().addTo(map);
   state.layers.routeMarkers = L.layerGroup().addTo(map);
+  state.layers.sailing = L.layerGroup().addTo(map);
 
   // First invalidateSize on the next animation frame so the map measures the
   // sticky container after layout has settled.
@@ -218,6 +262,7 @@ function drawMainRoute() {
   state.layers.legs.clearLayers();
   state.layers.routeMarkers.clearLayers();
   state.routeMarkers = new Map();
+  state.routeSegments = new Map();
 
   for (const leg of journey.legs) {
     const a = state.byPlace.get(leg.from_place_key);
@@ -226,12 +271,20 @@ function drawMainRoute() {
     const bLatLng = placeLatLng(b);
     if (!aLatLng || !bLatLng) continue;
 
+    const key = legKey(leg.from_place_key, leg.to_place_key);
     const polyline = L.polyline([aLatLng, bLatLng], legStyle(leg, false));
-    polyline._legKey = `${leg.from_place_key}->${leg.to_place_key}`;
+    polyline._legKey = key;
     polyline.bindPopup(
       `<strong>${escapeHtml(a.display_name)} → ${escapeHtml(b.display_name)}</strong><br>${escapeHtml(leg.distance_text)}<br>Certainty: ${escapeHtml(leg.certainty)}`,
     );
     polyline.addTo(state.layers.legs);
+    state.routeSegments.set(key, {
+      fromKey: leg.from_place_key,
+      toKey: leg.to_place_key,
+      fromLatLng: aLatLng,
+      toLatLng: bLatLng,
+      leg,
+    });
   }
 
   for (const key of journey.main_route_place_keys) {
@@ -244,6 +297,12 @@ function drawMainRoute() {
     marker.addTo(state.layers.routeMarkers);
     state.routeMarkers.set(key, marker);
   }
+}
+
+function initSailingLayer() {
+  state.layers.sailing.clearLayers();
+  state.sailLine = L.polyline([], sailLineStyle()).addTo(state.layers.sailing);
+  state.sailDot = L.circleMarker([0, 0], sailDotStyle(false)).addTo(state.layers.sailing);
 }
 
 function drawOffRouteContext() {
@@ -276,23 +335,128 @@ function highlightActiveStep(index) {
   const journey = state.journey;
   const step = journey.steps[index];
   if (!step) return;
+  const segment = sailingSegmentForStep(index);
+  const progress = triggerProgress(index);
+  const sailingNow = segment && !segment.stationary && progress > 0.45;
 
   for (const [key, marker] of state.routeMarkers.entries()) {
     marker.setStyle(mainRouteMarkerStyle(key === step.focus_place_key));
   }
 
-  const activeKeys = new Set();
-  if (index > 0) activeKeys.add(journey.steps[index - 1].focus_place_key);
-  activeKeys.add(step.focus_place_key);
-
   state.layers.legs.eachLayer((layer) => {
     if (!layer._legKey) return;
+    const isActive = sailingNow && layer._legKey === legKey(segment.fromKey, segment.toKey);
     const [from, to] = layer._legKey.split("->");
-    const isActive =
-      activeKeys.has(from) && activeKeys.has(to) && from !== to && index > 0;
     const leg = journey.legs.find((l) => l.from_place_key === from && l.to_place_key === to);
     if (leg) layer.setStyle(legStyle(leg, isActive));
   });
+}
+
+function nextMappedFocus(index, currentKey) {
+  const steps = state.journey.steps;
+  for (let i = index + 1; i < steps.length; i += 1) {
+    const key = steps[i].focus_place_key;
+    if (!key || key === currentKey) continue;
+    const latLng = placeLatLng(state.byPlace.get(key));
+    if (latLng) return { key, latLng };
+  }
+  return null;
+}
+
+function sailingSegmentForStep(index) {
+  const step = state.journey.steps[index];
+  if (!step) return null;
+
+  const currentKey = step.focus_place_key;
+  const currentLatLng = placeLatLng(state.byPlace.get(currentKey));
+  if (!currentKey || !currentLatLng) return null;
+
+  const next = nextMappedFocus(index, currentKey);
+  if (!next) {
+    return {
+      fromKey: currentKey,
+      toKey: currentKey,
+      fromLatLng: currentLatLng,
+      toLatLng: currentLatLng,
+      stationary: true,
+    };
+  }
+
+  const keyed = state.routeSegments.get(legKey(currentKey, next.key));
+  if (keyed) return keyed;
+
+  return {
+    fromKey: currentKey,
+    toKey: next.key,
+    fromLatLng: currentLatLng,
+    toLatLng: next.latLng,
+    stationary: false,
+  };
+}
+
+function sailingProgress(rawProgress) {
+  if (state.reduceMotion) return 0;
+  if (rawProgress <= 0.45) return 0;
+  if (rawProgress >= 0.95) return 1;
+  return (rawProgress - 0.45) / 0.5;
+}
+
+function triggerProgress(index) {
+  const trigger = document.querySelector(`.story-trigger[data-index="${index}"]`);
+  if (!trigger) return 1;
+
+  const rect = trigger.getBoundingClientRect();
+  const start = window.innerHeight * 0.78;
+  const end = -rect.height + window.innerHeight * 0.22;
+  return clamp((start - rect.top) / (start - end));
+}
+
+function updateSailingProgress() {
+  state.sailFrame = null;
+  if (!state.map || !state.sailDot || !state.sailLine || state.currentIndex < 0) return;
+
+  const segment = sailingSegmentForStep(state.currentIndex);
+  if (!segment) {
+    state.sailLine.setLatLngs([]);
+    state.sailDot.setStyle(sailDotStyle(false));
+    return;
+  }
+
+  const rawProgress = triggerProgress(state.currentIndex);
+  const progress = segment.stationary ? 0 : sailingProgress(rawProgress);
+  const position = interpolateLatLng(segment.fromLatLng, segment.toLatLng, progress);
+  const lineLatLngs = segment.stationary ? [] : [segment.fromLatLng, position];
+
+  state.sailLine.setLatLngs(lineLatLngs);
+  state.sailDot.setLatLng(position);
+  state.sailDot.setStyle(sailDotStyle(true));
+  highlightActiveStep(state.currentIndex);
+}
+
+function scheduleSailingProgress() {
+  if (state.sailFrame !== null) return;
+  state.sailFrame = requestAnimationFrame(updateSailingProgress);
+}
+
+function activeIndexFromScroll() {
+  const triggers = [...document.querySelectorAll(".story-trigger")];
+  if (!triggers.length) return 0;
+
+  const activationLine = window.innerHeight * 0.25;
+  let activeIndex = 0;
+  for (const trigger of triggers) {
+    if (trigger.getBoundingClientRect().top <= activationLine) {
+      activeIndex = Number(trigger.dataset.index);
+    } else {
+      break;
+    }
+  }
+  return activeIndex;
+}
+
+function handleScrollProgress() {
+  activateStep(activeIndexFromScroll(), { move: true });
+  scheduleSailingProgress();
 }
 
 function focusStepOnMap(step, options = {}) {
@@ -370,7 +534,7 @@ function sourceRefForStep(step) {
 
 function renderStorySteps() {
   const node = document.getElementById("story-steps");
-  node.innerHTML = state.journey.steps
+  const cards = state.journey.steps
     .map((step, index) => {
       const translationHtml = linkifyText(step.translation, step.place_mentions);
       const greekText = step.greek_text ?? step.section_refs
@@ -383,7 +547,7 @@ function renderStorySteps() {
       const sourceRef = sourceRefForStep(step);
 
       return `
-        <article class="tour-step" id="${escapeHtml(step.step_id)}" data-index="${index}" data-step-id="${escapeHtml(step.step_id)}" tabindex="-1">
+        <article class="tour-step" id="${escapeHtml(step.step_id)}" data-index="${index}" data-step-id="${escapeHtml(step.step_id)}" tabindex="-1" aria-hidden="true" inert>
           <p class="eyebrow">${escapeHtml(step.route_label)}</p>
           <h2>${escapeHtml(step.title)}</h2>
 
@@ -403,6 +567,21 @@ function renderStorySteps() {
     })
     .join("");
 
+  const triggers = state.journey.steps
+    .map((step, index) => {
+      return `<div class="story-trigger" data-index="${index}" aria-hidden="true" data-step-id="${escapeHtml(step.step_id)}"></div>`;
+    })
+    .join("");
+
+  node.innerHTML = `
+    <div class="story-card-stage" aria-live="polite">
+      ${cards}
+    </div>
+    <div class="story-trigger-track">
+      ${triggers}
+    </div>
+  `;
+
   node.querySelectorAll(".place-link").forEach((button) => {
     button.addEventListener("click", (event) => {
       event.preventDefault();
@@ -420,6 +599,11 @@ function updateHud(step) {
     : step.title;
 }
 
+function setStepInteractivity(el, isActive) {
+  el.setAttribute("aria-hidden", isActive ? "false" : "true");
+  el.toggleAttribute("inert", !isActive);
+}
+
 function activateStep(index, options = {}) {
   if (index < 0 || index >= state.journey.steps.length) return;
   const changed = index !== state.currentIndex;
@@ -427,11 +611,14 @@ function activateStep(index, options = {}) {
   const step = state.journey.steps[index];
 
   document.querySelectorAll(".tour-step").forEach((el) => {
-    el.classList.toggle("active", Number(el.dataset.index) === index);
+    const isActive = Number(el.dataset.index) === index;
+    el.classList.toggle("active", isActive);
+    setStepInteractivity(el, isActive);
   });
 
   updateHud(step);
   highlightActiveStep(index);
+  scheduleSailingProgress();
 
   if (options.move !== false && changed) {
     focusStepOnMap(step, { instant: options.instant });
@@ -444,21 +631,17 @@ function activateStep(index, options = {}) {
 
 function setupObserver() {
   const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (!visible) return;
-      activateStep(Number(visible.target.dataset.index), { move: true });
+    () => {
+      handleScrollProgress();
     },
     {
       root: null,
-      rootMargin: "-30% 0px -45% 0px",
-      threshold: [0.15, 0.4, 0.7],
+      rootMargin: "-22% 0px -74% 0px",
+      threshold: 0,
     },
   );
 
-  document.querySelectorAll(".tour-step").forEach((step) => observer.observe(step));
+  document.querySelectorAll(".story-trigger").forEach((trigger) => observer.observe(trigger));
   state.observer = observer;
 }
 
@@ -495,7 +678,9 @@ function setupControls() {
 
   window.addEventListener("resize", () => {
     if (state.map) state.map.invalidateSize();
+    scheduleSailingProgress();
   });
+  window.addEventListener("scroll", handleScrollProgress, { passive: true });
 }
 
 async function setupExternalReferenceLayer() {
@@ -524,6 +709,7 @@ async function main() {
     renderStorySteps();
     initMap();
     drawMainRoute();
+    initSailingLayer();
     drawOffRouteContext();
     fitToMainRoute();
     setupControls();
