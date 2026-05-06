@@ -1,0 +1,763 @@
+[
+  {
+    "chunk_id": "section_0011",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[11]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[11]/p",
+    "section_order": 11,
+    "greek_text": "11. Ἀπὸ δὲ τοῦ Μοσύλλου μετὰ δύο δρόμους, παραπλεύσαντι τὸ λεγόμενον Νειλοπτολεμαῖον καὶ ταπατηγη καὶ δαφνῶνα μικρὸν, ἀκρωτήριον Ἐλέφας· ποταμὸν δʼ ἔχει τὸν λεγόμενον Ἐλέφαντα καὶ δαφνῶνα μέγαν λεγόμενον Ἀκάνναι, ἐν ᾗ μονογενῶς λίβανος ὁ περατικὸς πλεῖστος καὶ διάφορος γίνεται.",
+    "draft_translation": "After Mosyllon, two runs farther, one sails past the place called Neiloptolemaion, Tapatage, and a small laurel-grove to Cape Elephant. It has the river called Elephant and the large laurel-grove called Akannai, where far-side frankincense alone grows in the greatest and best quantity.",
+    "places": [
+      {
+        "greek_surface": "Μοσύλλου",
+        "english_label": "Mosyllon",
+        "role": "route_or_intermediate_place",
+        "notes": "Previous emporion."
+      },
+      {
+        "greek_surface": "Νειλοπτολεμαῖον",
+        "english_label": "Neiloptolemaion",
+        "role": "route_or_intermediate_place",
+        "notes": "Place passed while sailing toward Cape Elephant."
+      },
+      {
+        "greek_surface": "ταπατηγη",
+        "english_label": "Tapatage",
+        "role": "route_or_intermediate_place",
+        "notes": "Route place named before Cape Elephant."
+      },
+      {
+        "greek_surface": "Ἐλέφας",
+        "english_label": "Cape Elephant",
+        "role": "route_or_intermediate_place",
+        "notes": "Cape after the named route places."
+      },
+      {
+        "greek_surface": "Ἐλέφαντα",
+        "english_label": "Elephant River",
+        "role": "route_or_intermediate_place",
+        "notes": "River associated with Cape Elephant."
+      },
+      {
+        "greek_surface": "Ἀκάνναι",
+        "english_label": "Akannai",
+        "role": "source_place",
+        "notes": "Large laurel-grove where far-side frankincense grows."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "far-side frankincense",
+        "greek_surface": "λίβανος ὁ περατικὸς",
+        "category": "aromatic_resin",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Said to grow uniquely, abundantly, and excellently at Akannai."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_product",
+        "source_place": "Akannai",
+        "destination_place": null,
+        "route_or_intermediate_place": "Cape Elephant; Elephant River",
+        "goods": [
+          "far-side frankincense"
+        ],
+        "notes": "The passage describes production/growth at Akannai, not shipment."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0012",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[12]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[12]/p",
+    "section_order": 12,
+    "greek_text": "12. Καὶ μετὰ ταύτην, τῆς γῆς ὑποχωρούσης εἰς τὸν νότον ἤδη, τὸ τῶν Ἀρωμάτων ἐμπόριον καὶ ἀκρωτήριον τελευταῖον τῆς Βαρβαρικῆς ἠπείρου πρὸς ἀνατολὴν ἀπόκοπον· ὁ δὲ ὅρμος ἐπίσαλος καὶ κατὰ καιροὺς ἐπικίνδωνος διὰ τὸ προσεχῆ τὸν τόπον εἶναι τῷ βορέᾳ. Σημεῖον δὲ τοῦ μέλλοντος χειμῶνος τοπικὸν τὸ τὸν βυθὸν θολερώτερον γίνεσθαι καὶ τὴν χρόαν ἀλλάσσειν. Τούτου δὲ γενομένου πάντες ἀποφεύγουσιν εἰς τὸ μέγα ἀκρωτήριον, τόπον καὶ σκέπην, τὸ λεγόμενον προχωρεῖ εἶτα εἰς λίβα ἡ χώρα ποταμοὺς ἔχεικτλ. Τέβαι. Προχωρεῖ δὲ εἰς τὸ ἐμπόριον ὁμοίως τὰ προειρημένα· γίνεται δὲ τὰ ἐν αὐτῷ κασσία καὶ γίζειρ καὶ ἀσύφη καὶ ἄρωμα καὶ μάγλα καὶ μοτὼ καὶ λίβανος.",
+    "draft_translation": "After this, as the coast now turns south, lies the last Aromata trading station and cape of the Barbarian mainland toward the east. Its roadstead is rough and seasonally dangerous in the north wind; when local signs of bad weather appear, sailors withdraw to the great cape and shelter called Tabae. The same previously mentioned wares reach the emporium, and cassia, gizeir, asypha, aromatics, magla, moto, and frankincense are produced there.",
+    "places": [
+      {
+        "greek_surface": "τὸ τῶν Ἀρωμάτων ἐμπόριον",
+        "english_label": "Aromata emporium",
+        "role": "destination port and production market",
+        "notes": "Last emporium on this part of the Barbarian mainland."
+      },
+      {
+        "greek_surface": "ἀκρωτήριον",
+        "english_label": "Aromata cape",
+        "role": "cape/landmark",
+        "notes": "Associated with the Aromata emporium."
+      },
+      {
+        "greek_surface": "Βαρβαρικῆς ἠπείρου",
+        "english_label": "Barbarian mainland",
+        "role": "region",
+        "notes": "Regional setting for the emporium."
+      },
+      {
+        "greek_surface": "Τέβαι",
+        "english_label": "Tabae",
+        "role": "route/intermediate shelter",
+        "notes": "Cape or shelter used when bad weather threatens."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "cassia",
+        "greek_surface": "κασσία",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Listed among goods produced at the emporium."
+      },
+      {
+        "english_label": "gizeir",
+        "greek_surface": "γίζειρ",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Specialized aromatic term retained transliterated."
+      },
+      {
+        "english_label": "asypha",
+        "greek_surface": "ἀσύφη",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Specialized aromatic term retained transliterated."
+      },
+      {
+        "english_label": "aromatics",
+        "greek_surface": "ἄρωμα",
+        "category": "aromatic",
+        "structure_type": "generic material",
+        "confidence": "high",
+        "notes": "Generic aromatic product in a list of local goods."
+      },
+      {
+        "english_label": "magla",
+        "greek_surface": "μάγλα",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Specialized aromatic term retained transliterated."
+      },
+      {
+        "english_label": "moto",
+        "greek_surface": "μοτὼ",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Specialized aromatic term retained transliterated."
+      },
+      {
+        "english_label": "frankincense",
+        "greek_surface": "λίβανος",
+        "category": "aromatic resin",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Listed as produced at the emporium."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_production",
+        "source_place": "Aromata emporium",
+        "destination_place": "Aromata emporium",
+        "route_or_intermediate_place": "Tabae",
+        "goods": [
+          "cassia",
+          "gizeir",
+          "asypha",
+          "aromatics",
+          "magla",
+          "moto",
+          "frankincense"
+        ],
+        "notes": "The passage says these goods are produced in the emporium; previously mentioned wares also reach it but are not named in this row."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0013",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[13]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[13]/p",
+    "section_order": 13,
+    "greek_text": "13. Ἀπὸ δὲ Τάβαι μετὰ σταδίους τετρακοσίους παραπλεύσαντι χερσόνησον, καθʼ ὃν τόπον καὶ ὁ ῥοῦς ἕλκει, ἕτερόν ἐστιν ἐμπόριον Ὀπώνη, εἰς ἣν καὶ αὐτὴν προχωρεῖ μὲν τὰ προειρημένα, τὸ δὲ πλεῖστον ἐν αὐτῇ γεννᾶται κασσία καὶ ἄρωμα καὶ μοτὼ καὶ δουλικὰ κρείσσονα, ἃ εἰς Aἴγυπτον προχωρεῖ μᾶλλον, καὶ χελώνη πλείστη καὶ διαφορωτέρα τῆς ἄλλης.",
+    "draft_translation": "From Tabae, after sailing four hundred stades around a peninsula where the current draws, there is another emporium, Opone. The previously mentioned wares reach it too, and especially cassia, aromatics, moto, and a very large and distinctive supply of tortoise-shell are produced there. The passage also mentions better enslaved persons going especially to Egypt, but they are not treated here as goods or materials.",
+    "places": [
+      {
+        "greek_surface": "Τάβαι",
+        "english_label": "Tabae",
+        "role": "source/route point",
+        "notes": "Starting point for the sail to Opone."
+      },
+      {
+        "greek_surface": "Ὀπώνη",
+        "english_label": "Opone",
+        "role": "destination port and production market",
+        "notes": "Emporium reached after sailing from Tabae."
+      },
+      {
+        "greek_surface": "Aἴγυπτον",
+        "english_label": "Egypt",
+        "role": "destination market",
+        "notes": "Mentioned only for enslaved persons, excluded from commodity extraction."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "cassia",
+        "greek_surface": "κασσία",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Produced especially at Opone."
+      },
+      {
+        "english_label": "aromatics",
+        "greek_surface": "ἄρωμα",
+        "category": "aromatic",
+        "structure_type": "generic material",
+        "confidence": "high",
+        "notes": "Produced especially at Opone."
+      },
+      {
+        "english_label": "moto",
+        "greek_surface": "μοτὼ",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Specialized aromatic term retained transliterated."
+      },
+      {
+        "english_label": "tortoise-shell",
+        "greek_surface": "χελώνη",
+        "category": "animal material",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Abundant and distinct from other varieties."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_production",
+        "source_place": "Opone",
+        "destination_place": "Opone",
+        "route_or_intermediate_place": "Tabae",
+        "goods": [
+          "cassia",
+          "aromatics",
+          "moto",
+          "tortoise-shell"
+        ],
+        "notes": "Goods are described as produced at Opone; unnamed previously mentioned goods also reach the port."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0014",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[14]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[14]/p",
+    "section_order": 14,
+    "greek_text": "14. Πλεῖται δὲ εἰς πάντα ταῦτα τὰ τοῦ πέραν ἐμπόρια ἀπὸ μὲν Αἰγύπτου περὶ τὸν Ἰούλιον μῆνα, ὅ ἐστιν Ἐπιφί. Ἐξαρτίζεται δὲ συνήθως καὶ ἀπὸ τῶν ἔσω τόπων, τῆς Ἀριακῆς καὶ Βαρυγάζων, εἰς τὰ αὐτὰ τὰ τοῦ πέραν ἐμπόρια γένη προχωροῦντα ἀπὸ τῶν τόπων, σῖτος καὶ ὄρυζα καὶ βούτυρον καὶ ἔλαιον σησάμινον καὶ ὀθόνιον, ἥ τε μοναχὴ καὶ ἡ σαγματογήνη, καὶ περιζώματα καὶ μέλι τὸ καλάμινον τὸ λεγόμενον σάκχαρι. Καὶοἱ μὲν προηγουμένως εἰς ταῦτα τὰ ἐμπόρια πλέουσιν, οἱ δὲ κατὰ τὸν παράπλουν ἀντιφορτίζονται τὰ ἐμπεσόντα. Οὐ βασιλεύεται δὲ ὁ τόπος, ἀλλὰ τυράννοις ἰδίοις καθʼ ἕκαστον ἐμπόριον διοικεῖται.",
+    "draft_translation": "Sailings to all these overseas emporia are made from Egypt around July, the month Epiphi. Outfitting also normally comes from the inland places, Ariake and Barygaza, carrying to the same overseas emporia wheat, rice, butter, sesame oil, cotton cloth of the monache and sagmatogene kinds, girdles, and sugarcane honey called sugar. Some sail directly to these emporia, while others exchange any cargoes encountered during the coasting voyage. The area is not under one king but is governed by local rulers at each emporium.",
+    "places": [
+      {
+        "greek_surface": "Αἰγύπτου",
+        "english_label": "Egypt",
+        "role": "source sailing region",
+        "notes": "Ships sail from Egypt toward the overseas emporia."
+      },
+      {
+        "greek_surface": "τὰ τοῦ πέραν ἐμπόρια",
+        "english_label": "overseas emporia",
+        "role": "destination markets",
+        "notes": "Collective destination for the trade described."
+      },
+      {
+        "greek_surface": "Ἀριακῆς",
+        "english_label": "Ariake",
+        "role": "source region",
+        "notes": "Inland source for outfitting goods."
+      },
+      {
+        "greek_surface": "Βαρυγάζων",
+        "english_label": "Barygaza",
+        "role": "source port/region",
+        "notes": "Source for outfitting goods sent to the overseas emporia."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "wheat",
+        "greek_surface": "σῖτος",
+        "category": "foodstuff",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "One item in the outfitting list."
+      },
+      {
+        "english_label": "rice",
+        "greek_surface": "ὄρυζα",
+        "category": "foodstuff",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "One item in the outfitting list."
+      },
+      {
+        "english_label": "butter",
+        "greek_surface": "βούτυρον",
+        "category": "foodstuff",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Probably clarified butter or ghee in trade context."
+      },
+      {
+        "english_label": "sesame oil",
+        "greek_surface": "ἔλαιον σησάμινον",
+        "category": "oil",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Compound noun phrase preserved."
+      },
+      {
+        "english_label": "cotton cloth, monache type",
+        "greek_surface": "ὀθόνιον ἡ μοναχή",
+        "category": "textile",
+        "structure_type": "appositional subtype",
+        "confidence": "medium",
+        "notes": "One named cloth type in the coordinated textile phrase."
+      },
+      {
+        "english_label": "cotton cloth, sagmatogene type",
+        "greek_surface": "ὀθόνιον ἡ σαγματογήνη",
+        "category": "textile",
+        "structure_type": "appositional subtype",
+        "confidence": "medium",
+        "notes": "Second named cloth type in the coordinated textile phrase."
+      },
+      {
+        "english_label": "girdles",
+        "greek_surface": "περιζώματα",
+        "category": "textile/apparel",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Separate item in the list."
+      },
+      {
+        "english_label": "sugarcane honey called sugar",
+        "greek_surface": "μέλι τὸ καλάμινον τὸ λεγόμενον σάκχαρι",
+        "category": "sweetener",
+        "structure_type": "compound with apposition",
+        "confidence": "high",
+        "notes": "Compound expression and appositional name preserved as one entity."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "outfitting/export",
+        "source_place": "Ariake and Barygaza",
+        "destination_place": "overseas emporia",
+        "route_or_intermediate_place": "Egyptian/Red Sea sailing route",
+        "goods": [
+          "wheat",
+          "rice",
+          "butter",
+          "sesame oil",
+          "cotton cloth, monache type",
+          "cotton cloth, sagmatogene type",
+          "girdles",
+          "sugarcane honey called sugar"
+        ],
+        "notes": "The passage says these goods are normally outfitted from inland places and Barygaza for the overseas emporia."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0015",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[15]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[15]/p",
+    "section_order": 15,
+    "greek_text": "15. Ἀπὸ δὲ Ὀπώνης τῆς ἀκτῆς εἰς τὸν νότον ὑποχωρούσης ἐπὶ πλεῖον, πρῶτα μέν ἐστι τὰ λεγομενα μικρὰ Ἀπόκοπα καὶ μεγάλα τῆς Ἀζανίας διὰ ἀγκυροβολίων ποταμοὶ ἐπὶ δρόμους ἓξ παῤ αὐτὸν ἤδη τὸν λίβα εἶτα Αἰγιαλὸς καὶ μικρὸς καὶ μέγας ἐπʼ ἄλλους δρόμους ἓξ καὶ μετʼ αὐτὸν κατὰ τὸ ἑξῆς οἱ τῆς Ἀζανίας δρόμοι, πρῶτον μὲν ὁ λεγόμενος Σαραπίωνος, εἶθʼ ὁ Νίκωνος, μεθʼ ὃν ποταμοὶ πλείονες καὶ ἄλλοι συνεχεῖς ὅρμοι, διῃρημένοι κατὰ σταθμοὺς καὶ δρόμους ἡμερησίους πλείονας , τοὺς πάντας ἑπτά, μέχρι Πυραλάων νήσων καὶ τῆς λεγομένης διώρυχος, ἀφʼ ἧς μικρὸν ἐπάνω τοῦ λιβὸς μετὰ δύο δρόμους νυχθημέρους παῤ αὐτὴν τὴν δύσιν εἰτενηδιωμ Μενουθιὰς ἀπαντᾷ νῆσος ἀπὸ σταδίων τῆς γῆς ὡςεὶ τριακοσίων, ταπεινὴ καὶ κατάδενδρος, ἐν ᾗ καὶ ποταμοὶ καὶ ὀρνέων γένη πλεῖστα καὶ χελώνη ὀρεινή. Θηρίων δὲ οὐδὲν ὅλως ἔχει πλὴν κροκοδείλων· οὐδένα δὲ ἀνθρώπων ἀδικοῦσιν. Ἔστι δὲ ἐν αὐτῇ πλοιάρια ῥαπτὰ καὶ μονόξυλα, οἷς χρῶνται πρὸς ἁλίαν καὶ ἄγρον χελώνης. Ἐν δὲ ταύτῆ τῇ νήσῳ καὶ γυργάθοις αὐτὰς ἰδίως λινεύουσιν, ἀντὶ δικτύων καθιέντες αὐτοὺς περὶ τὰ στόματα τῶν προρράχων.",
+    "draft_translation": "From Opone the coast turns farther south through the Little and Great Bluffs of Azania, beaches, Sarapion, Nikon, many rivers and successive harbors, the Pyralaon islands, and the channel. Beyond this, after two days and nights toward the west, lies the island Menuthias, low and wooded, with rivers, many birds, and mountain tortoise-shell. It has sewn boats and dugouts used for fishing and for hunting tortoise-shell, which is caught with baskets instead of nets near rocky mouths.",
+    "places": [
+      {
+        "greek_surface": "Ὀπώνης",
+        "english_label": "Opone",
+        "role": "source/route point",
+        "notes": "Starting point for the southward coastal route."
+      },
+      {
+        "greek_surface": "Ἀζανίας",
+        "english_label": "Azania",
+        "role": "region",
+        "notes": "Region containing the named coastal stages."
+      },
+      {
+        "greek_surface": "μικρὰ Ἀπόκοπα καὶ μεγάλα",
+        "english_label": "Little and Great Bluffs",
+        "role": "route/intermediate places",
+        "notes": "Early stages after Opone."
+      },
+      {
+        "greek_surface": "Αἰγιαλὸς καὶ μικρὸς καὶ μέγας",
+        "english_label": "Small and Great Beach",
+        "role": "route/intermediate places",
+        "notes": "Coastal stages in Azania."
+      },
+      {
+        "greek_surface": "Σαραπίωνος",
+        "english_label": "Sarapion",
+        "role": "route/intermediate place",
+        "notes": "Named stage in the Azanian run."
+      },
+      {
+        "greek_surface": "Νίκωνος",
+        "english_label": "Nikon",
+        "role": "route/intermediate place",
+        "notes": "Named stage after Sarapion."
+      },
+      {
+        "greek_surface": "Πυραλάων νήσων",
+        "english_label": "Pyralaon islands",
+        "role": "route/intermediate place",
+        "notes": "Island group before the channel."
+      },
+      {
+        "greek_surface": "διώρυχος",
+        "english_label": "the channel",
+        "role": "route/intermediate place",
+        "notes": "Point from which Menuthias is reached."
+      },
+      {
+        "greek_surface": "Μενουθιὰς",
+        "english_label": "Menuthias",
+        "role": "source place",
+        "notes": "Island with tortoise-shell hunting."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "mountain tortoise-shell",
+        "greek_surface": "χελώνη ὀρεινή",
+        "category": "animal material",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Resource on Menuthias; birds and crocodiles are not extracted as goods."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_harvest",
+        "source_place": "Menuthias",
+        "destination_place": "Menuthias",
+        "route_or_intermediate_place": "Azanian coastal route",
+        "goods": [
+          "mountain tortoise-shell"
+        ],
+        "notes": "The passage describes local capture/hunting rather than an explicit export movement."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0016",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[16]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[16]/p",
+    "section_order": 16,
+    "greek_text": "16. Ἀφʼ ἧς μετὰ δύο δρόμους τῆς ἠπείρου τὸ τελευταιότατον τῆς Ἀζανίας ἐμπόριον κεῖται, τὰ Ῥαπτὰ λεγόμενα, ταύτην ἔχον τὴν προσωνυμίαν ἀπὸ τῶν προειρημένων ῥαπτῶν πλοιαρίων, ἐν ᾧ καὶ πλεῖστός ἐστιν ἐλέφας καὶ χελώνη. Μέγιστοι δὲ ἐν σώμασι περὶ ταύτην τὴν χώραν ἄνθρωποι ὁρατοὶ κατοικοῦσι καὶ κατὰ τόπον ἕκαστος ὁμοίως τιθέμενοι τυράννοις. Νέμεται δὲ αὐτὴν, κατά τι δίκαιον ἀρχαῖον ὑποπίπτουσαν τῇ βασιλεία τῆς πρώτης γινομένης Ἀραβίας, ὁ Μοφαρείτης τύραννος. Παρὰ δὲ τοῦ βασιλέως ὑπόφορον αὐτὴν ἔχουσιν οἱ ἀπὸ Μούζα, καὶ πέμπουσιν εἰς αὐτὴν ἐφόλκια τὰ πλείονα κυβερνήταις καὶ χρειακοῖς Ἄραψι χρώμενοι τοῖς καὶ συνήθειαν καὶ ἐπιγαμβρίαν ἔχουσιν ἐμπείροις τε οὖσε τῶν τόπων καὶ τῆς φωνῆς αὐτὼν.",
+    "draft_translation": "Two runs from Menuthias lies Rhapta, the last emporium of Azania, named from the sewn boats just mentioned. There is very much ivory and tortoise-shell there. The people are large-bodied and locally governed, while the Mopharite ruler administers the area under an old claim of the kingdom of First Arabia. People from Muza hold it as a dependency from the king and send many small craft there with Arab captains and agents who know the places and language through familiarity and marriage connections.",
+    "places": [
+      {
+        "greek_surface": "Ῥαπτὰ",
+        "english_label": "Rhapta",
+        "role": "destination port and production market",
+        "notes": "Last emporium of Azania; named from sewn boats."
+      },
+      {
+        "greek_surface": "Ἀζανίας",
+        "english_label": "Azania",
+        "role": "region",
+        "notes": "Rhapta is described as the furthest emporium of Azania."
+      },
+      {
+        "greek_surface": "Μούζα",
+        "english_label": "Muza",
+        "role": "source port",
+        "notes": "Sends small craft to Rhapta."
+      },
+      {
+        "greek_surface": "πρώτης γινομένης Ἀραβίας",
+        "english_label": "First Arabia",
+        "role": "political source region",
+        "notes": "Political authority over the area, not a commodity source."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "ivory",
+        "greek_surface": "ἐλέφας",
+        "category": "animal material",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "In this trade context ἐλέφας denotes elephant ivory rather than live animals."
+      },
+      {
+        "english_label": "tortoise-shell",
+        "greek_surface": "χελώνη",
+        "category": "animal material",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Listed as abundant at Rhapta."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_production",
+        "source_place": "Rhapta",
+        "destination_place": "Rhapta",
+        "route_or_intermediate_place": "Azanian coast",
+        "goods": [
+          "ivory",
+          "tortoise-shell"
+        ],
+        "notes": "Goods are stated to be abundant at Rhapta."
+      },
+      {
+        "movement_type": "shipping/outfitting",
+        "source_place": "Muza",
+        "destination_place": "Rhapta",
+        "route_or_intermediate_place": "Azanian coast",
+        "goods": [],
+        "notes": "Small craft are sent from Muza, but this row does not name their cargo."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0017",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[17]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[17]/p",
+    "section_order": 17,
+    "greek_text": "17. Εἰσφέρεται δὲ εἰς τὰ ἐμπόρια ταῦτα προηγουμένως ἡ τοπικῶς ἐν Μούζα κατασκευαζομένη λόγχη καὶ πελύκια καὶ μαχαίρια καὶ ὀπήτια καὶ λιθίας ὑαλῆς πλείονα γένη, εἰς δέ τινας τόπους οἶνός τε καὶ σῑτος οὐκ ὀλίγος, οὐ πρὸς ἐργασίαν ἀλλὰ δαπάνης χάριν εἰς φιλανθρωπίαν τῶν βαρβάρων. Ἐκφέρεται δὲ ἀπὸ τῶν τόπων ἐλέφας πλεῖστος ἥσσων δὲ τοῦ Ἀθουλιτικοῦ καὶ ῥινόκερως καὶ χελώνη διάφορος μετὰ τὴν Ἰνδικὴν καὶ ναύπλιος ὀλίγος.",
+    "draft_translation": "Into these emporia are brought chiefly the locally manufactured goods of Muza: lances, axes, knives, awls, and many kinds of glass stones. To some places they also bring wine and a good deal of grain, not for trade but for expenditure in gifts or goodwill toward the local people. From the places are exported very much ivory, inferior to that of Adulis, rhinoceros horn, tortoise-shell second to the Indian kind, and a little nautilus shell.",
+    "places": [
+      {
+        "greek_surface": "τὰ ἐμπόρια ταῦτα",
+        "english_label": "these Azanian emporia",
+        "role": "destination ports and source markets",
+        "notes": "Refers back to the Rhapta/Azanian emporia."
+      },
+      {
+        "greek_surface": "Μούζα",
+        "english_label": "Muza",
+        "role": "source port/manufacturing place",
+        "notes": "Local source of manufactured import goods."
+      },
+      {
+        "greek_surface": "Ἀθουλιτικοῦ",
+        "english_label": "Adulis",
+        "role": "comparison port",
+        "notes": "Used only to compare the quality/size of ivory."
+      },
+      {
+        "greek_surface": "Ἰνδικὴν",
+        "english_label": "India",
+        "role": "comparison region",
+        "notes": "Used only to compare tortoise-shell quality."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "lances",
+        "greek_surface": "λόγχη",
+        "category": "weapon/metalwork",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Manufactured locally at Muza and imported to the emporia."
+      },
+      {
+        "english_label": "axes",
+        "greek_surface": "πελύκια",
+        "category": "tool/metalwork",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Manufactured import item from Muza."
+      },
+      {
+        "english_label": "knives",
+        "greek_surface": "μαχαίρια",
+        "category": "tool/weapon",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Manufactured import item from Muza."
+      },
+      {
+        "english_label": "awls",
+        "greek_surface": "ὀπήτια",
+        "category": "tool/metalwork",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Specialized tool term; translation uncertain but treated as a manufactured item."
+      },
+      {
+        "english_label": "glass stones",
+        "greek_surface": "λιθίας ὑαλῆς πλείονα γένη",
+        "category": "glass/bead material",
+        "structure_type": "compound",
+        "confidence": "medium",
+        "notes": "Phrase describes multiple kinds of glassy stones or beads."
+      },
+      {
+        "english_label": "wine",
+        "greek_surface": "οἶνός",
+        "category": "drink",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Brought to some places for gift/expenditure rather than commercial sale."
+      },
+      {
+        "english_label": "grain",
+        "greek_surface": "σῑτος",
+        "category": "foodstuff",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Brought to some places for gift/expenditure rather than commercial sale."
+      },
+      {
+        "english_label": "ivory",
+        "greek_surface": "ἐλέφας",
+        "category": "animal material",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Exported from these places; described as less than the Adulis variety."
+      },
+      {
+        "english_label": "rhinoceros horn",
+        "greek_surface": "ῥινόκερως",
+        "category": "animal material",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Likely rhinoceros horn or related material in export list."
+      },
+      {
+        "english_label": "tortoise-shell",
+        "greek_surface": "χελώνη",
+        "category": "animal material",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Exported variety compared after the Indian kind."
+      },
+      {
+        "english_label": "nautilus shell",
+        "greek_surface": "ναύπλιος",
+        "category": "shell material",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Small quantity exported."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "import",
+        "source_place": "Muza",
+        "destination_place": "these Azanian emporia",
+        "route_or_intermediate_place": "Azanian coast",
+        "goods": [
+          "lances",
+          "axes",
+          "knives",
+          "awls",
+          "glass stones",
+          "wine",
+          "grain"
+        ],
+        "notes": "Wine and grain are included because they are moved as consumable supplies/gifts, not because the passage presents them as commercial profit goods."
+      },
+      {
+        "movement_type": "export",
+        "source_place": "these Azanian emporia",
+        "destination_place": null,
+        "route_or_intermediate_place": "Azanian coast",
+        "goods": [
+          "ivory",
+          "rhinoceros horn",
+          "tortoise-shell",
+          "nautilus shell"
+        ],
+        "notes": "Destination is not named in this row."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0018",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[18]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[18]/p",
+    "section_order": 18,
+    "greek_text": "18. Καὶ σχεδὸν τελευταιότατά ἐστι ταῦτα τὰ ἐμπόρια τῆς Ἀζανίας τῆς ἐν δεξιοῖς ἀπὸ Βερνίκης ἠπείρου· ὁ γὰρ μετὰ τούτους τοὺς τόπους ὠκεανὸς ἀνερεύνητος ὧν εἰς τὴν δύσιν ἀνακάμπτει καὶ τοῖς ἀπεστραμμένοις μέρεσι τῆς Αἰθιοπίας καὶ Λιβύης καὶ Ἀφρικῆς κατὰ τὸν νότον παρεκτείνων εἰς τὴν ἑσπέριον συμμίσγει θάλασσαν.",
+    "draft_translation": "These are almost the last emporia of Azania on the mainland to the right of Berenice. Beyond these places the unexplored ocean turns west and, running along the remote parts of Ethiopia, Libya, and Africa toward the south, joins the western sea.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0019",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[19]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[19]/p",
+    "section_order": 19,
+    "greek_text": "19. Ἐκ δὲ τῶν εὐωνύμων Βερνίκης ἀπὸ Μυὸς ὅρμου δυσὶ δρόμοις ἢ τρισὶν εἰς τὴν ἀνατολὴν διαπλεύσαντι τὸν παρακείμενον κόλπον ὅρμος ἐστὶν ἕτερος καὶ φρούριον, ὃ λέγεται Λευκὴ κώμη, διʼ ἧς ὁδός ἐστιν εἰς Πέτραν πρὸς Μάλιχον, βασιλέα Ναβαταίων. Ἔχει δὲ ἐμπορίου τινὰ καὶ αὐτὴ τάξιν τοῖς ἀπὸ τῆς Ἀραβίας ἐξαρτιζομένοις εἰς αὐτὴν πλοίοις οὐ μεγάλοις. Διὸ καὶ εἰς αὐτήν καὶ παραλήπτης τῆς τετάρτης τῶν εἰσφερομένων φορτίων, καὶ παραφυλακῆς χάριν ἑκατοντάρχῆς μετὰ στρατεύματος ἀποστέλλεται.",
+    "draft_translation": "On the left from Berenice, after crossing the adjoining gulf eastward from Myos Hormos in two or three runs, there is another harbor and fort called Leuke Kome. Through it runs a road to Petra and to Malichus, king of the Nabataeans. Leuke Kome also has something of an emporium arrangement for the not very large ships outfitted from Arabia; therefore a collector of the quarter-duty on incoming cargoes and a centurion with troops are sent there for guard duty.",
+    "places": [
+      {
+        "greek_surface": "Βερνίκης",
+        "english_label": "Berenice",
+        "role": "route reference/source region",
+        "notes": "Orientation point for the left-hand route."
+      },
+      {
+        "greek_surface": "Μυὸς ὅρμου",
+        "english_label": "Myos Hormos",
+        "role": "source harbor",
+        "notes": "Starting harbor for the crossing described."
+      },
+      {
+        "greek_surface": "Λευκὴ κώμη",
+        "english_label": "Leuke Kome",
+        "role": "destination port and customs station",
+        "notes": "Harbor/fort with an emporium-like status."
+      },
+      {
+        "greek_surface": "Πέτραν",
+        "english_label": "Petra",
+        "role": "inland destination",
+        "notes": "Reached by road through Leuke Kome."
+      },
+      {
+        "greek_surface": "Ἀραβίας",
+        "english_label": "Arabia",
+        "role": "source region",
+        "notes": "Ships are outfitted from Arabia for Leuke Kome."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": [
+      {
+        "movement_type": "shipping/outfitting",
+        "source_place": "Arabia",
+        "destination_place": "Leuke Kome",
+        "route_or_intermediate_place": "Red Sea gulf crossing from Myos Hormos",
+        "goods": [],
+        "notes": "Cargoes are mentioned only generically as incoming freight; no specific goods are named."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0020",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[20]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[20]/p",
+    "section_order": 20,
+    "greek_text": "20. Μετὰ δὲ ταύτην εὐθέως ἐστὶ συναφὴς Ἀραβικὴ χώρα, κατὰ μῆκος ἐπὶ πολὺ παρατείνουσα τῇ Ἐρυθρᾷ θαλάσσῃ. Διάφορα δὲ ἐν αὐτῇ ἔθνη κατοικεῖται, τινὰ μὲν ἐπὶ ποσὸν, τινὰ δὲ καὶ τελείως τῆ γλώσση διαλάσσοντα. Τούτων τὰ παρὰ θάλασσαν ὁμοίως Ἰχθυοφάγων μάνδραις διείληπται, τὰ δὲ ἐπάνω κατὰ κώμας καὶ νομαδίας οἰκεῖται πονηροῖς ἀνθρώποις διφώνοις, οἷς παραπίπτοντες ἀπὸ τοῦ μέσου πλόου οἱ μὲν διαρπάζονται, οἱ δὲ καὶ ἀπὸ ναυαγίων σωθέντες ἀνδραποδίζονται. Διὸ καὶ συνεχῶς ἀπὸ τῶν τυράννων καὶ βασιλέων τῆς Ἀραβίας αἰχμαλωτίζονται· λέγονται δὲ Κανρσῖται. Καθόλου μὲν οὖν οὗτος ὁ τῆς Ἀραβικῆς ἠπείρου παράπλους ἐστὶν ἐπισφαλὴς, καὶ ἀλίμενος ἡ χώρα καὶ δύσορμος καὶ ἀκάθαρτος ῥαχίαις καὶ σπίλοις ἀπρόσιτος καὶ κατὰ πάντα φοβερά. Διὸ καὶ εἰσπλέοντες τὸν μέσον πλοῦν κατέχομεν καὶ εἰς τὴν Ἀραβικήνχώραν μᾶλλον παροξύνομεν ἄχρι τῆς Κατακεκαυμένης νήσου, μεθʼ ἣν εὐθέως ἡμέρων ἀνθρώπων καὶ νομαδιαίων θρεμμάτων καὶ καμήλων συνεχεῖς χῶραι .",
+    "draft_translation": "Immediately after Leuke Kome the Arabian country extends for a long distance along the Red Sea. Different peoples live there, the coast being occupied like fish-eater settlements and the interior by villages and nomadic groups. The passage describes dangers of robbery, enslavement, wrecking, lack of harbors, reefs, shoals, and the safer mid-channel course toward the Burnt Island, after which come more settled peoples, herds, and camels.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  }
+]

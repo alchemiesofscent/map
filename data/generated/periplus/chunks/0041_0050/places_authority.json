@@ -1,0 +1,624 @@
+[
+  {
+    "place_key": "myos_hormos",
+    "display_name": "Myos Hormos",
+    "greek_names": [
+      "Μυὸς ὅρμος"
+    ],
+    "aliases": [
+      "Aphrodites Hormos",
+      "Quseir el-Qadim"
+    ],
+    "place_type": "port",
+    "lat": 26.156611,
+    "lon": 34.24401,
+    "certainty": "medium",
+    "pleiades_id": "786069",
+    "pleiades_uri": "https://pleiades.stoa.org/places/786069",
+    "coordinates_source": "Pleiades representative point; title includes a question mark, so keep identification certainty below high.",
+    "notes": "Opening harbor in section 1. Use as a primary tour stop."
+  },
+  {
+    "place_key": "berenike",
+    "display_name": "Berenike",
+    "greek_names": [
+      "Βερενίκη"
+    ],
+    "aliases": [
+      "Berenice",
+      "Berenice Troglodytica",
+      "Bender el-Kebir"
+    ],
+    "place_type": "port",
+    "lat": 23.91062525,
+    "lon": 35.47481885,
+    "certainty": "high",
+    "pleiades_id": "785986",
+    "pleiades_uri": "https://pleiades.stoa.org/places/785986",
+    "coordinates_source": "Pleiades representative point.",
+    "notes": "Second harbor in section 1 and route anchor for section 2."
+  },
+  {
+    "place_key": "barbarian_country",
+    "display_name": "Barbarian country beyond Berenike",
+    "greek_names": [],
+    "aliases": [
+      "Barbarian country"
+    ],
+    "place_type": "region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Not mapped in this starter authority file.",
+    "notes": "Narrative coastal region in section 2; model as a descriptive region rather than a fixed point."
+  },
+  {
+    "place_key": "fish_eaters_red_sea",
+    "display_name": "Fish-Eaters territory",
+    "greek_names": [],
+    "aliases": [
+      "Ichthyophagoi",
+      "Fish-Eaters"
+    ],
+    "place_type": "ethnographic_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": "40028",
+    "pleiades_uri": "https://pleiades.stoa.org/places/40028",
+    "coordinates_source": "Identifier noted from Pleiades-linked bibliography; coordinates not set in this scaffold.",
+    "notes": "Use as a label/filter, not as a point, unless a project-specific polygon is drawn."
+  },
+  {
+    "place_key": "moschophagoi_territory",
+    "display_name": "Moschophagoi territory",
+    "greek_names": [
+      "Μοσχοφάγοι"
+    ],
+    "aliases": [
+      "Calf-Eaters"
+    ],
+    "place_type": "ethnographic_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unresolved in starter authority file.",
+    "notes": "Preceding route marker before Ptolemais in section 3."
+  },
+  {
+    "place_key": "ptolemais_theron",
+    "display_name": "Ptolemais of the Hunts",
+    "greek_names": [
+      "Πτολεμαῒς ἡ τῶν θηρῶν"
+    ],
+    "aliases": [
+      "Ptolemais Theron",
+      "Ptolemais of the Hunts",
+      "Trinkatat"
+    ],
+    "place_type": "emporion",
+    "lat": 18.222236,
+    "lon": 38.184316,
+    "certainty": "low",
+    "pleiades_id": "39409",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39409",
+    "coordinates_source": "DARE/Trinkatat coordinate used for the demo; Pleiades notes that the precise location is unknown.",
+    "notes": "Small trading station. Keep the map marker visually uncertain."
+  },
+  {
+    "place_key": "adulis",
+    "display_name": "Adulis",
+    "greek_names": [
+      "Ἀδουλίς",
+      "Ἀδουλὶ"
+    ],
+    "aliases": [
+      "Adouli",
+      "Azouli",
+      "Zula"
+    ],
+    "place_type": "port",
+    "lat": 15.275955,
+    "lon": 39.676537,
+    "certainty": "high",
+    "pleiades_id": "39271",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39271",
+    "coordinates_source": "DARE coordinate associated with Pleiades 39271; Pleiades describes Adouli as near modern Zula.",
+    "notes": "Lawful emporion and hub for inland ivory and island tortoise-shell supply."
+  },
+  {
+    "place_key": "oreine_island",
+    "display_name": "Oreine island",
+    "greek_names": [
+      "Ὀρεινή"
+    ],
+    "aliases": [
+      "Oreine"
+    ],
+    "place_type": "island",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unresolved in starter authority file.",
+    "notes": "Island anchorage outside the bay of Adulis in section 4."
+  },
+  {
+    "place_key": "diodoros_island",
+    "display_name": "Diodoros island",
+    "greek_names": [
+      "Διοδώρου νῆσος"
+    ],
+    "aliases": [
+      "Diodoros"
+    ],
+    "place_type": "island",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unresolved in starter authority file.",
+    "notes": "Former anchorage deeper in the bay of Adulis."
+  },
+  {
+    "place_key": "koloe",
+    "display_name": "Koloe",
+    "greek_names": [
+      "Κολόη"
+    ],
+    "aliases": [
+      "Koloe",
+      "Matara candidate",
+      "Qohaito candidate"
+    ],
+    "place_type": "inland_market",
+    "lat": 14.709112,
+    "lon": 39.552787,
+    "certainty": "low",
+    "pleiades_id": "39363",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39363",
+    "coordinates_source": "Pleiades representative point for Koloe; Pleiades notes multiple candidate identifications. Matara is also separately identified in Pleiades as a possible Koloe candidate.",
+    "notes": "First ivory market inland from Adulis. Treat as a candidate location."
+  },
+  {
+    "place_key": "matara_candidate_for_koloe",
+    "display_name": "Matara, possible Koloe candidate",
+    "greek_names": [],
+    "aliases": [
+      "Matara",
+      "Metera"
+    ],
+    "place_type": "archaeological_site",
+    "lat": 14.675334944,
+    "lon": 39.4256591657,
+    "certainty": "medium",
+    "pleiades_id": "403627899",
+    "pleiades_uri": "https://pleiades.stoa.org/places/403627899",
+    "coordinates_source": "Pleiades representative point for Matara.",
+    "notes": "Included as an optional candidate layer for Koloe, not used in the default route line."
+  },
+  {
+    "place_key": "aksum_metropolis",
+    "display_name": "Aksumite metropolis",
+    "greek_names": [
+      "Αὐξωμίτης"
+    ],
+    "aliases": [
+      "Aksum",
+      "A(u)xoume",
+      "Axoume"
+    ],
+    "place_type": "metropolis",
+    "lat": 14.1338504591,
+    "lon": 38.7212920204,
+    "certainty": "high",
+    "pleiades_id": "39303",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39303",
+    "coordinates_source": "Pleiades representative point.",
+    "notes": "Inland metropolis in the ivory chain of section 4."
+  },
+  {
+    "place_key": "kyeneion",
+    "display_name": "Kyeneion",
+    "greek_names": [
+      "Κυήνειον"
+    ],
+    "aliases": [
+      "Kyeneion"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unresolved in starter authority file.",
+    "notes": "Named transit point for ivory from beyond the Nile."
+  },
+  {
+    "place_key": "beyond_the_nile",
+    "display_name": "Beyond the Nile",
+    "greek_names": [
+      "πέραν τοῦ Νείλου"
+    ],
+    "aliases": [
+      "Beyond the Nile"
+    ],
+    "place_type": "source_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Not a point; model as a region/source label.",
+    "notes": "Ultimate source region in the ivory movement."
+  },
+  {
+    "place_key": "alalaiou_islands",
+    "display_name": "Alalaiou islands",
+    "greek_names": [
+      "Ἀλαλαίου"
+    ],
+    "aliases": [
+      "Dahlak Archipelago",
+      "Aliaeu"
+    ],
+    "place_type": "archipelago",
+    "lat": 15.7289257455,
+    "lon": 40.0031505062,
+    "certainty": "high",
+    "pleiades_id": "39281",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39281",
+    "coordinates_source": "Pleiades representative point.",
+    "notes": "Offshore islands supplying tortoise shell to Adulis."
+  },
+  {
+    "place_key": "meroe",
+    "display_name": "Meroe",
+    "greek_names": [
+      "Μερόη"
+    ],
+    "aliases": [
+      "Meroë",
+      "Begrawiya"
+    ],
+    "place_type": "metropolis",
+    "lat": 16.94,
+    "lon": 33.75,
+    "certainty": "high",
+    "pleiades_id": "805630",
+    "pleiades_uri": "https://pleiades.stoa.org/places/805630",
+    "coordinates_source": "DARE coordinate associated with Pleiades 805630.",
+    "notes": "Inland metropolis noted westward behind coastal peoples in section 2."
+  },
+  {
+    "place_key": "barake",
+    "display_name": "Barake",
+    "greek_names": [
+      "Βαράκην"
+    ],
+    "aliases": [
+      "Barake"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 41: Previous cape in the route."
+  },
+  {
+    "place_key": "gulf_of_barygaza",
+    "display_name": "Gulf of Barygaza",
+    "greek_names": [
+      "Βαρυγάζων κόλπος"
+    ],
+    "aliases": [
+      "Gulf of Barygaza"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 41: Gulf after Barake."
+  },
+  {
+    "place_key": "ariake",
+    "display_name": "Ariake",
+    "greek_names": [
+      "Ἀριακῆς χώρας"
+    ],
+    "aliases": [
+      "Ariake"
+    ],
+    "place_type": "region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 41: Mainland region at the beginning of India."
+  },
+  {
+    "place_key": "aberia",
+    "display_name": "Aberia",
+    "greek_names": [
+      "Ἀβηρία"
+    ],
+    "aliases": [
+      "Aberia"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 41: Interior part bordering Scythia."
+  },
+  {
+    "place_key": "syrastrene",
+    "display_name": "Syrastrene",
+    "greek_names": [
+      "Συραστρηνή"
+    ],
+    "aliases": [
+      "Syrastrene"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 41: Coastal part of Ariake."
+  },
+  {
+    "place_key": "minnagara",
+    "display_name": "Minnagara",
+    "greek_names": [
+      "Μιννάγαρα"
+    ],
+    "aliases": [
+      "Minnagara"
+    ],
+    "place_type": "source_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 41: Metropolis supplying cloth to Barygaza."
+  },
+  {
+    "place_key": "barygaza",
+    "display_name": "Barygaza",
+    "greek_names": [
+      "Βαρύγαζα"
+    ],
+    "aliases": [
+      "Barygaza"
+    ],
+    "place_type": "emporion",
+    "lat": 21.705136,
+    "lon": 72.995875,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Provisional Google MyMaps point matched by label to 'Barygaza/Baruch'. Not a Pleiades identification.",
+    "notes": "Generated from section 41: Destination port for cloth from Minnagara."
+  },
+  {
+    "place_key": "astakapra",
+    "display_name": "Astakapra",
+    "greek_names": [
+      "Ἀστάκαπρα"
+    ],
+    "aliases": [
+      "Astakapra"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 41: Reference point for the coastal route beyond Barygaza."
+  },
+  {
+    "place_key": "papike",
+    "display_name": "Papike",
+    "greek_names": [
+      "Παπικῆς"
+    ],
+    "aliases": [
+      "Papike"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 41: Cape/region associated with Astakapra."
+  },
+  {
+    "place_key": "baiones",
+    "display_name": "Baiones",
+    "greek_names": [
+      "Bαιώνης"
+    ],
+    "aliases": [
+      "Baiones"
+    ],
+    "place_type": "route_marker",
+    "lat": 21.599167,
+    "lon": 72.354722,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Provisional Google MyMaps point matched by label to 'Baeones'. Not a Pleiades identification.",
+    "notes": "Generated from section 42: Island at the mouth of the gulf."
+  },
+  {
+    "place_key": "mais_river",
+    "display_name": "Mais River",
+    "greek_names": [
+      "Μάϊς"
+    ],
+    "aliases": [
+      "Mais River"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 42: Large river in the inner gulf."
+  },
+  {
+    "place_key": "namnadios_river",
+    "display_name": "Namnadios River",
+    "greek_names": [
+      "Ναμνάδιος"
+    ],
+    "aliases": [
+      "Namnadios River"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 42: River of Barygaza."
+  },
+  {
+    "place_key": "herone",
+    "display_name": "Herone",
+    "greek_names": [
+      "Ἡρώνη"
+    ],
+    "aliases": [
+      "Herone"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 43: Rough strip on the right side of the gulf mouth."
+  },
+  {
+    "place_key": "kammoni",
+    "display_name": "Kammoni",
+    "greek_names": [
+      "Καμμωνὶ"
+    ],
+    "aliases": [
+      "Kammoni"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 43: Village near Herone."
+  },
+  {
+    "place_key": "ozene",
+    "display_name": "Ozene",
+    "greek_names": [
+      "Ὀζήνη"
+    ],
+    "aliases": [
+      "Ozene"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 48: Former royal city inland and east of Barygaza."
+  },
+  {
+    "place_key": "proklais",
+    "display_name": "Proklais",
+    "greek_names": [
+      "Προκλαΐδος"
+    ],
+    "aliases": [
+      "Proklais"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 48: Route named for nard coming from upper regions."
+  },
+  {
+    "place_key": "scythia",
+    "display_name": "Scythia",
+    "greek_names": [
+      "Συυθίας"
+    ],
+    "aliases": [
+      "Scythia"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 48: Adjoining region named as a route context for aromatics."
+  },
+  {
+    "place_key": "egypt",
+    "display_name": "Egypt",
+    "greek_names": [
+      "Αἰγύπτου"
+    ],
+    "aliases": [
+      "Egypt"
+    ],
+    "place_type": "source_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 49: Named as the departure region for ships sailing to this market."
+  }
+]

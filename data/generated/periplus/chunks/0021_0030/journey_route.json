@@ -1,0 +1,618 @@
+{
+  "route_title": "Periplus of the Erythraean Sea: generated sections 1-10",
+  "source_range": {
+    "start_section": 21,
+    "end_section": 30
+  },
+  "main_route_place_keys": [
+    "berenike",
+    "adulis"
+  ],
+  "steps": [
+    {
+      "step_id": "step_0021_berenike",
+      "type": "stop",
+      "title": "Berenike",
+      "route_label": "Section 21 of 10 · mapped stop",
+      "focus_place_key": "berenike",
+      "section_refs": [
+        "section_0021"
+      ],
+      "translation": "After these, in the innermost gulf on the left side of this sea, lies Muza, a lawful seaside emporium, about twelve thousand stades from Berenice when sailing south. It is filled with Arab shipowners and sailors and is active in commercial affairs, since they participate both in the overseas trade and in the trade of Barygaza with their own outfitting arrangements.",
+      "greek_text": "21. Καὶ μετὰ ταύτας ἐν κόλπῳ τῷ τελευταιοτάτῳ τῶν εὐωνύμων τούτου τοῦ πελάγους ἐμπόριόν ἐστι νόμιμον παραθαλάσσιον Μούζα, σταδίους ἀπέχον τοὺς πάντας ἀπὸ Βερνίκης, παῤ αὐτὸν τὸν νότον πλεόντων, ὡς εἰς μυρίους δισχιλίους. Τὸ μὲν ὅλον Ἀράβων ναυκληρικῶν ἐνθρώπων καὶ ναυτικῶν πλεονάζει καὶ τοῖς ἀπʼ ἐμπορίας πράγμασι κινεῖται· συγχρῶνται γὰρ τῇ τοῦ πέραν ἐργασίᾳ καὶ Βαρυγάζων ἰδίοις ἐξαρτισμοῖς.",
+      "place_mentions": [
+        {
+          "surface": "Muza",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Berenice",
+          "place_key": "berenike",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βερνίκης",
+          "place_key": "berenike",
+          "kind": "main_route"
+        },
+        {
+          "surface": "overseas trade",
+          "place_key": "overseas_trade",
+          "kind": "off_route"
+        },
+        {
+          "surface": "τῇ τοῦ πέραν ἐργασίᾳ",
+          "place_key": "overseas_trade",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0022_berenike",
+      "type": "stop",
+      "title": "Berenike",
+      "route_label": "Section 22 of 10 · mapped stop",
+      "focus_place_key": "berenike",
+      "section_refs": [
+        "section_0022"
+      ],
+      "translation": "Above Muza, three days inland, lies the city Saua in the region called Mapharitis, and its resident ruler is Cholaibos.",
+      "greek_text": "22. Ὑπέρκειται δὲ αὐτῆς ἀπὸ τριῶν ἡμερῶν πόλις Σαύη, τῆς περὶ αὐτὴν Μαφαρίτιδος λεγομένης χώρας· ἔστι δὲ τύραννος καὶ κατοικῶν αὐτὴν Χόλαιβος.",
+      "place_mentions": [
+        {
+          "surface": "Muza",
+          "place_key": "muza",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0023_berenike",
+      "type": "stop",
+      "title": "Berenike",
+      "route_label": "Section 23 of 10 · mapped stop",
+      "focus_place_key": "berenike",
+      "section_refs": [
+        "section_0023"
+      ],
+      "translation": "After another nine days comes Saphar, a metropolis where Charibael, lawful king of two peoples, the Homerite and the neighboring so-called Sabaite, maintains friendship with the emperors through repeated embassies and gifts.",
+      "greek_text": "23. Καὶ μετʼ ἄλλας ἐννέα ἡμέρας Σαφὰρ μητρόπολις, ἐν ᾗ Χαριβαὴλ, ἔνθεσμος βασιλεὺς ἐθνῶν δύο, τοῦ τε Ὁμηρίτου καὶ τοῦ παρακειμένου λεγομένου Σαβαΐτου, συνεχέσι πρεσβείαις καὶ δώροις φίλος τῶν αὐτοκρατόρων.",
+      "place_mentions": [
+        {
+          "surface": "Saphar",
+          "place_key": "saphar",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σαφὰρ",
+          "place_key": "saphar",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Homerite territory or people",
+          "place_key": "homerite_territory_or_people",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὁμηρίτου",
+          "place_key": "homerite_territory_or_people",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sabaite territory or people",
+          "place_key": "sabaite_territory_or_people",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σαβαΐτου",
+          "place_key": "sabaite_territory_or_people",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0024_section_24_trade_goods",
+      "type": "stop",
+      "title": "Section 24: trade goods",
+      "route_label": "Section 24 of 10 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0024"
+      ],
+      "translation": "Muza is a trading station without a harbor but with good roadsteads and anchorages because of the sandy ground around it. Into it go purple cloth, Arabian garments, saffron, cyperus, linen, cloaks, blankets, girdles, moderate perfume, money, wine, and some grain; the local country also produces wheat and more wine. For the king and tyrant are given horses, pack mules, gold objects, turned silver objects, costly clothing, and copper manufactures. From Muza are exported local choice myrrh, stacte myrrh, and lybdos, together with the previously mentioned cargoes from the Adulis side. The suitable sailing to it is around September, though earlier is possible.",
+      "greek_text": "24. Τὸ δὲ ἐμπόριον ἡ Μούζα ἀλίμενον μὲν εὔσαλον δὲ καὶ εὔορμον διὰ τὰ περὶ αὐτὴν ἀμμόγεια ἀγκυροβόλια. Φορτία δὲ εἰς αὐτὴν προχωρεῖ πορφύρα, διάφορος καὶ χυδαία, καὶ ἱματισμὸς Ἀραβικὸς χειριδωτὸς, ὅ τε ἁκλοῦς καὶ ὁ κοινὸς, καὶ σκοτουλάτος καὶ διάχρυσος, καὶ κρόκος καὶ κύπερος καὶ ὀθόνιον καὶ ἀβόλλαι καὶ λώδιικες οὐ πολλαὶ, ἁπλοῖ τε καὶ ἐντόπιοι, ζῶναι σκιωταὶ καὶ μύρον μέτριον καὶ χρῆμα ἱκανὸν οἶνός τε καὶ σῖτος οὐ πολύς. Φέρει γὰρ καὶ ἡ χώρα πυρὸν μετρίως καὶ οἶνον πλείονα. Τῷ δὲ βασιλεῖ καὶ τῷ τυράννῳ δίδονται ἵπποι τε καὶ ἡμίονοι νωτηγοὶ καὶ χρυσώματα καὶ τορνευτὰ ἀργυρώματα καὶ ἱματισμὸς πολυτελὴς καὶ χαλκουργήματα. Ἐξάγεται δὲ ἐξ αὐτῆς ἐντόπια μὲν, σμύρνα ἐκλεκτὴ καὶ στακτὴ * ἀβειρμιναία, λύγδος καὶ τὰ ἀπὸ τῆς πέραν Ἀδουλὶ προειρημένα φορτία πέντα. Πλεῖται δὲ εἰς αὐτὴν εὐκαίρως περὶ τὸν Σεπτέμβριον μῆνα, ὅς ἐστι Θώθ· οὐδὲν δὲ κωλύει κἂν τάχιον.",
+      "place_mentions": [
+        {
+          "surface": "Muza",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "the local country around Muza",
+          "place_key": "the_local_country_around_muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "ἡ χώρα",
+          "place_key": "the_local_country_around_muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "the king and the tyrant at Muza",
+          "place_key": "the_king_and_the_tyrant_at_muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Adulis side",
+          "place_key": "adulis_side",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀδουλὶ",
+          "place_key": "adulis_side",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Adulis",
+          "place_key": "adulis",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Ἀδουλὶ",
+          "place_key": "adulis",
+          "kind": "main_route"
+        }
+      ],
+      "goods": [
+        "purple cloth, fine and common",
+        "Arabian sleeved garments, plain and common",
+        "checkered Arabian garments",
+        "gold-embroidered Arabian garments",
+        "saffron",
+        "cyperus",
+        "linen cloth",
+        "abollai cloaks",
+        "lodikes blankets or coverlets",
+        "shadow-patterned girdles",
+        "perfume",
+        "money",
+        "wine",
+        "grain",
+        "wheat",
+        "horses",
+        "pack mules",
+        "gold objects",
+        "turned silver objects",
+        "costly clothing",
+        "copper manufactures",
+        "choice myrrh",
+        "stacte myrrh, Abirminaian",
+        "lybdos"
+      ]
+    },
+    {
+      "step_id": "step_0025_adulis",
+      "type": "stop",
+      "title": "Adulis",
+      "route_label": "Section 25 of 10 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0025"
+      ],
+      "translation": "After this, sailing about three hundred stades, where Arabia and the Barbarian country opposite near Avalites draw together, there is a short channel that narrows the sea; Diodorus island lies in the passage, making the crossing rough because of winds from the nearby mountains. At this isthmus is Okelis, an Arabian coastal village under the same tyranny, not so much a trading station as an anchorage, watering place, and first landing for those sailing inward.",
+      "greek_text": "25. Μετὰ δὲ ταύτην ὡσεὶ τριακοσίους παραπλεύσαντες σταδίους, ἤδη συνερχομένης τε τῆς Ἀραβικῆς ἠπείρου καὶ τῆς πέραν κατὰ τὸν Aὐαλίτην Βαρβαρικῆς χώρας, αὐλών ἐστιν οὐ μακρὸς, ὁ συνάγων καὶ εἰς στενὸν ἀποκλείων τὸ πέλαγος, οδ τὸν μεταξὺ πόρον ἑξήκοντα σταδίων μεσολαβεῖ νῆσος ἡ Διοδώρου· διὸ καὶ ῥοώδης, καταπνεόμενος ἀπὸ τῶν παρακειμένων ὀρῶν, ἐστὶν ὁ κατʼ αὐτὴν διάπλους. Κατὰ τοῦτον τὸν ἰσθμὸν παραθαλάσσιός ἐστιν Ἀράβων κώμη τῆς αὐτῆς τυραννίδος Ὄκηλις, οὐχ οὕτως ἐμπόριον ὡς ὅρμος καὶ ὕδρευμα καὶ πρώτη καταγωγὴ τοῖς ἔσω διαίρουσι.",
+      "place_mentions": [
+        {
+          "surface": "Arabian mainland",
+          "place_key": "arabian_mainland",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβικῆς ἠπείρου",
+          "place_key": "arabian_mainland",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barbarian country near Avalites",
+          "place_key": "barbarian_country_near_avalites",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aὐαλίτην Βαρβαρικῆς χώρας",
+          "place_key": "barbarian_country_near_avalites",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Diodorus island",
+          "place_key": "diodorus_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Διοδώρου",
+          "place_key": "diodorus_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Okelis",
+          "place_key": "okelis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὄκηλις",
+          "place_key": "okelis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barbarian country",
+          "place_key": "barbarian_country",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0026_adulis",
+      "type": "stop",
+      "title": "Adulis",
+      "route_label": "Section 26 of 10 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0026"
+      ],
+      "translation": "After Okelis, as the sea opens eastward into the open water, after about twelve hundred stades lies Eudaimon Arabia, a coastal village of Charibael's kingdom. It has good water and is the first meeting point for those coming from outside and for those departing from the interior. It was called Eudaimon because formerly, before direct sailings from India to Egypt and from Egypt across the sea, it received the cargoes from both sides, as Alexandria now receives goods from abroad and Egypt sends goods onward.",
+      "greek_text": "26. Μετὰ δὲ Ὄκηλιν, ἀνοιγομένης πάλιν τῆς θαλάσσης εἰς ἀνατολὴν καὶ κατὰ μικρὸν εἰς πέλαγος ἀποφαινομένης, ἀπὸ σταδίων ὡς χιλίων διακοσίων ἐστὶν Εὐδαίμων Ἀραβία, κώμη παραθαλάσσιος, βασιλείας τῆς αὐτῆς Χαριβαὴλ, τοὺς ὅρμους μὲν ἐπιτηδείους καὶ ὑδρεύματα γλυκύτερα καὶ κρείσσονα τῆς Ὀκήλεως ἔχουσα, ἤδη δὲ ἐν ἀρχῇ κόλπου κειμένη τῷ τὴν χώραν ὑποφεύγειν. Εὐδαίμων δʼ ἐπεκλήθη, πρότερον οὖσα πόλις, ὅτε, μήπω ἀπὸ τῆς Ἰνδικῆς εἰς τὴν Αἴγυπτον ἐρχομένων μηδὲ ἀπὸ τῆς Αἰγύπτου τολμώντων εἰς τοὺς ἔσω τόπους διαίρειν, ἀλλʼ ἄχρι ταύτης παραγινομένων, τοὺς παῤ ἀμφοτέρων φόρτους ἀπεδέχετο, ὥσπερ Ἀλεξάνδρεια καὶ τῶν ἔξωθεν καὶ τῶν ἀπὸ τῆς Αἰγύπτου φερομένων ἀποδέχεται. Νῦν δὲ οὐ πρὸ πολλοῦ τῶν ἡμετέρωνχρόνων Καῖσαρ αὐτὴν κατεστρέψατο.",
+      "place_mentions": [
+        {
+          "surface": "Okelis",
+          "place_key": "okelis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὄκηλιν",
+          "place_key": "okelis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Eudaimon Arabia",
+          "place_key": "eudaimon_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Εὐδαίμων Ἀραβία",
+          "place_key": "eudaimon_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Alexandria",
+          "place_key": "alexandria",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀλεξάνδρεια",
+          "place_key": "alexandria",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0027_section_27_trade_goods",
+      "type": "stop",
+      "title": "Section 27: trade goods",
+      "route_label": "Section 27 of 10 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0027"
+      ],
+      "translation": "After Eudaimon Arabia there follows a long connected shore with bays for more than two thousand stades, inhabited by nomads and fish-eaters. Beyond the Calai islands is another coastal place, Canê, in the kingdom of Eleazus and the frankincense-bearing country; opposite it lie two desert islands, Bird Island and Dome Island. Inland above it is Sabbatha, where the king lives. All the frankincense produced in the country is brought into Canê as if to a storehouse, by rafts supported on inflated skins in the local manner and by boats. Canê trades with the emporia across the sea, with Barygaza, Scythia, Omana, and neighboring Persis.",
+      "greek_text": "27. Ἀπὸ δὲ τῆς Εὐδαίμονος Ἀραβικῆς ἐκδέχεται συναφὴς αἰγιαλὸς ἐπιμήκης καὶ κόλπος ἐπὶ δισχιλίους ἢ πλείονας παρήκων σταδίους, Νομάδων τε καὶ Ἰχθυοφάγων κώμαις παροικούμενος, οὗ μετὰ τὴν προέχουσαν ἄκραν ἐμπόριόν ἐστιν ἕτερον παραθαλάσσιον, Κανὴ, βασιλείας Ἐλεάζου, χώρας λιβανωτοφόρου, καὶ κατʼ αὐτὴν ἔρημοι νῆσοι δύο, μία μὲν ἡ τῶν Ὀρνέων, ἡ δʼ ἑτέρα λεγομένη Τρούλλας, ἀπὸ σταδίων ἑκατὸν εἴκοσι τῆς Κανῆς. Ὑπέρκειται δὲ αὐτῆς μεσόγειος ἡ μητρόπολις Σαββαθὰ, ἐν ᾗ καὶ ὁ βασιλεὺς κατοικεῖ. Πᾶς δὲ ὁ γεννώμενος ἐν τῇ χώρᾳ λίβανος εἰς αὐτὴν ὥσπερ ἐκδοχεῖον εἰσάγεται καμήλοις τε καὶ σχεδίαις ἐντοπίοις δερματίναις ἐξ ἀσκῶν καὶ πλοίοις. Ἔχει δὲ καὶ αὐτὴ σύγχρησιν τῶν τοῦ πέραν ἐμπορίων, Βαρυγάζων καὶ Σκυθίας καὶ Ὀμάνων καὶ τῆς παρακειμένης Περσίδος.",
+      "place_mentions": [
+        {
+          "surface": "Eudaimon Arabia",
+          "place_key": "eudaimon_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Εὐδαίμονος Ἀραβικῆς",
+          "place_key": "eudaimon_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Canê",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κανὴ",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "frankincense-bearing country",
+          "place_key": "frankincense_bearing_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "χώρας λιβανωτοφόρου",
+          "place_key": "frankincense_bearing_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Bird Island",
+          "place_key": "bird_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Dome Island",
+          "place_key": "dome_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sabbatha",
+          "place_key": "sabbatha",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Scythia",
+          "place_key": "scythia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σκυθίας",
+          "place_key": "scythia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Omana",
+          "place_key": "omana",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὀμάνων",
+          "place_key": "omana",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Persis",
+          "place_key": "persis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Περσίδος",
+          "place_key": "persis",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "frankincense"
+      ]
+    },
+    {
+      "step_id": "step_0028_section_28_trade_goods",
+      "type": "stop",
+      "title": "Section 28: trade goods",
+      "route_label": "Section 28 of 10 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0028"
+      ],
+      "translation": "Into Canê, from Egypt, come a little wheat and wine as into Muza, Arabian clothing, both common and plain, with more imitation fabric, copper, tin, coral, storax, and the other goods that go to Muza. For the king there are mostly chased silver objects and money, and also horses, statues, and fine plain clothing. From Canê are exported local cargoes, especially frankincense and aloe; the rest moves according to the same sailing season as Muza, but earlier.",
+      "greek_text": "28. Εἰσάγεται δὲ εἰς αὐτὴν ἀπʼ Αἰγύπτου μὲν ὁμοίως πυρὸς ὀλίγος καὶ οἶνος ὥσπερ καὶ εἰς Μούζα, καὶ ἱματισμὸς Ἀραβικὸς, ὁμοίως καὶ κοινὸς καὶ ἀπλοῦς καὶ ὁ νόθος περισσότερος, καὶ χαλκὸς καὶ κασσίτερος καὶ κοράλλιον καὶ στύραξ καὶ τὰ λοιπὰ ὅσα εἰς Μούζα· τὰ πλείονα δὲ ἀργυρώματα τετορευμένα καὶ χρήματα τῷ βασιλεῖ, καὶ ἵπποι δὲ καὶ ἀνδριάντες καὶ ἱματισμὸς διάφορος ἀπλοῦς. Ἐξάγεται δὲ ἐξ αὐτῆς ἐντόπια μὲν φορτία, λίβανος καὶ ἀλόη, τὰ δὲ λοιπὰ κατὰ μετοχὴν τῶν ἄλλων ἐμπορίων. Πλεῖται δὲ εἰς αὐτὴν περὶ τὸν αὐτὸν καιρὸν ὃν καὶ εἰς Μούζα, πρωῖμώτερον δέ.",
+      "place_mentions": [
+        {
+          "surface": "Canê",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Αἰγύπτου",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Muza",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "the king at Canê",
+          "place_key": "the_king_at_cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "τῷ βασιλεῖ",
+          "place_key": "the_king_at_cane",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "wheat",
+        "wine",
+        "Arabian clothing, common and plain",
+        "imitation Arabian clothing",
+        "copper",
+        "tin",
+        "coral",
+        "storax",
+        "chased silver objects",
+        "money",
+        "horses",
+        "statues",
+        "fine plain clothing",
+        "frankincense",
+        "aloe"
+      ]
+    },
+    {
+      "step_id": "step_0029_section_29_trade_goods",
+      "type": "stop",
+      "title": "Section 29: trade goods",
+      "route_label": "Section 29 of 10 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0029"
+      ],
+      "translation": "After Canê the land bends further inward and opens into a very deep bay called Sachalites, the frankincense-bearing country, mountainous, hard to traverse, unhealthy, and wrapped in clouds and mist. The frankincense-bearing trees are not very large or tall, and they yield frankincense in drops on the bark, as some trees in Egypt weep gum.",
+      "greek_text": "29. Μετὰ δὲ Κανὴν, τῆς γῆς ἐπὶ πλεῖον ὑποχωρούσης, ἄλλος ἐκδέχεται βαθύτατος κόλπος, ἐπὶ πολὺ παρεκτείνων, ὁ λεγόμενος Σαχαλίτης, καὶ χώρα λιβανωτοφόρος, ὀρεινή τε καὶ δύσβατος, ἀέρα παχὺν ἔχουσα καὶ ὁμιχλώδη καὶ κατὰ τῶν δένδρων φερόμενον τὸν λίβανον. Ἔστι δὲ τὰ δένδρα τὰ λιβανοφόρα οὐ μεγάλα λίαν οὐδὲ ὑψηλὰ, φέρει δὲ ἐπὶ τῷ φλοιῷ πησσόμενον τὸν λίβανον, ὥς τινα καὶ τῶν παῤ ἡμῖν ἐν Aἰγύπτῳ δένδρων δακρύει τὸ κόμμι. Μεταχειρίζεται δ ὁ λίβανος ὑπὸ δούλων βασιλικῶν καὶ τῶν ἐπὶ τιμωρίᾳ πεμπομένον. Ἐπίνοσοι δὲ δεινῶς οἱ τόποι, καὶ τοῖς μὲν παραπλέουσι λοιμικοὶ, τοῖς δὲ ἐργαζομένοις πάντοτε θανατώδεις, ἔτι δὲ καὶ διὰ τὴν ἔνδειαν τῆς τροφῆς εὐχερῶς ἀπολλυμένοις.",
+      "place_mentions": [
+        {
+          "surface": "Canê",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κανὴν",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sachalites bay and country",
+          "place_key": "sachalites_bay_and_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σαχαλίτης",
+          "place_key": "sachalites_bay_and_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κανὴ",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "frankincense-bearing country",
+          "place_key": "frankincense_bearing_country",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "frankincense",
+        "gum"
+      ]
+    },
+    {
+      "step_id": "step_0030_section_30_trade_goods",
+      "type": "stop",
+      "title": "Section 30: trade goods",
+      "route_label": "Section 30 of 10 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0030"
+      ],
+      "translation": "At the far eastern end of the bay is the promontory called Syagros, with a fort guarding the country. Opposite it, out in the open sea and more toward Azania, lies the large island called Dioscorida, mostly deserted, marshy, and rivered, with animals including crocodiles, snakes, and large lizards. The island has true, land, and white tortoise shell, and also the so-called Indian cinnabar, gathered in drops from trees.",
+      "greek_text": "30. Τούτου δʼ ἐστὶν ἀκρωτήριον τοῦ κόσμου μέγιστον, ἀποβλέπον εἰς ἀνατολὴν, ὁ καλούμενος Σύαγρος, ἐφ’ οἷ φρούριόν ἐστι τῆς χώρας καὶ λιμήν καὶ ἀποθήκη τοῦ συναγομένου λιβάνου· καὶ κατὰ τοῦτον ἐν τῷ πελάγει νῆσος, ἀνὰ μέσον τούτου καὶ τοῦ πέραν ἀκρωτηρίου τῶν Ἀρωμάτων, τῷ Συάγρῳ συνορίζουσα μᾶλλον, ἡ Διοσκορίδου καλουμένη, μεγίστη μὲν ἔρημος δὲ καὶ κάθυγρος, ἔχουσα ποταμοὺς ἐν αὑτῇ καὶ κροκοδείλους καὶ ἐχίδνας πλείστας καὶ σαύρας ὑπερμεγέθεις, ὧν τὸ κρέας ἐσθίουσι τὸ δὲ λίπος τήκουσι καὶ ἀντʼ ἐλαίου χρῶνται· καρπὸν δὲ οὔτε ἀμπέλου οὔτε σιτικὸν ἡ νῆσος φέρει. Οἱ δʼ ἐνοικοῦντες αὐτὴν ὀλίγοι κατὰ μίαν πλευρὰν τῆς νήσου τὴν πρὸς ἀπαρκτίαν οἰκοῦσι, καθʼ ὃ μέρος ἀποβλέπει τὴν ἤπειρον· εἶσὶ δὲ ἐπίξενοι καὶ ἐπίμικτοι Ἀράβων τε καὶ Ἰνδῶν καὶ ἔτι Ἐλλήνων τῶν πρὸς ἐργασίαν ἐκπλεόντων. Φέρει δὲ ἡ νῆσος χελώνην τήν τε ἀληθινὴν καὶ χερσαίαν καὶ τὴν λευκὴν, πλείστην τε καὶ διάφορον τοῖς ὀστράκοις μείζοσι, τήν τε ὀρεινὴν ὑπερμεγέθη καὶ παχύτατον ὄστρακον ἔχουσαν, οὗ τὰ παρὰ τὴν κοιλίαν μέρη μὲν τομὴν οὐκ ἐπιδέχεται, καίπερ στερρότερα ὄντα· ὁλοτελῶς δὲ τὰ εὐχρηστοῦντα εἰς γλωσσόκομα καὶ πινακίδια καὶ μαγίδια καὶ τοιαύτην τινὰ γρύτην κατατέμνεται. Γίνεται δὲ ἐν αὐτῇ καὶ κιννάβαρι τὸ λεγόμενον Ἰνδικὸν, ἀπὸ τῶν δένδρῶν ὡς δάκρυ συναγόμενον.",
+      "place_mentions": [
+        {
+          "surface": "Syagros",
+          "place_key": "syagros",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σύαγρος",
+          "place_key": "syagros",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Dioscorida island",
+          "place_key": "dioscorida_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Διοσκορίδου",
+          "place_key": "dioscorida_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Azania",
+          "place_key": "azania",
+          "kind": "off_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "true tortoise shell",
+        "land tortoise shell",
+        "white tortoise shell",
+        "Indian cinnabar"
+      ]
+    }
+  ],
+  "legs": [
+    {
+      "from_place_key": "berenike",
+      "to_place_key": "adulis",
+      "section_refs": [
+        "section_0024"
+      ],
+      "distance_text": "inferred from section sequence",
+      "distance_value": null,
+      "distance_unit": null,
+      "estimated_km_at_185m_stade": null,
+      "certainty": "inferred_from_sequence"
+    }
+  ]
+}

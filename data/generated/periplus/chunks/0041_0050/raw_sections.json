@@ -1,0 +1,768 @@
+[
+  {
+    "chunk_id": "section_0041",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[41]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[41]/p",
+    "section_order": 41,
+    "greek_text": "41. Μετὰ δὲ τὸν Βαράκην εὐθύς ἐστιν ὁ Βαρυγάζων κόλπος καὶ ἡ ἤπειρος τῆς Ἀριακῆς χώρας, τῆς Μαμβάρου βασιλείας ἀρχὴ καὶ τῆς ὅλης Ἰνδικῆς οὖσα. Ταύτης τὰ μὲν μεσόγεια τῇ Σκυθίᾳ συνορίζοντα Ἀβηρία καλεῖται, τὰ δὲ παραθαλάσσια Συραστρηνή. Πολυφόρος δὲ ἡ χώρα σίτου καὶ ὀρύζης καὶ ἐλαίου σησαμίνου καὶ βουτύρου καὶ καρπάσου καὶ τῶν ἐξ αὐτῆς Ἰνδικῶν ὀθονίων τῶν χυδαίων· βουκόλια δὲ ἐν αὐτῇ πλεῖστα καὶ ἄνδρες ὑπερμεγέθεις τῷ σώματι καὶ μέλανες τῇ χροιᾷ. Μητρόπολις δὲ τῆς χώρας Μιννάγαρα, ἀφʼ ἧς καὶ πλεῖστον ὀθόνιον εἰς Βαρύγαζα κατάγεται. Σώζεται δὲ ἔτι καὶ νῦν τῆς Ἀλεξάνδρου στρατιᾶς σημεῖα περὶ τοὺς τόπους, ἱερά τε ἀρχαῖα καὶ θεμέλιοι παρεμβολῶν καὶ φρέατα μέγιστα. Ὁ δὲ παράπλους ταύτης τῆς χώρας ἀπὸ τοῦ Βαρβαρικοῦ μέχρι τοῦ κατὰ Ἀστάκαπρα πέραν βαρυγάζων ἀκρωτηρίου, τῆς λεγομένης Παπικῆς, ἐστὶ σταδίων τριτχιλίων.",
+    "draft_translation": "After Barake comes the gulf of Barygaza and the mainland of Ariake, the beginning of Mambaro's kingdom and of all India. Inland, bordering Scythia, is called Aberia, and the coast Syrastrene. The country is rich in wheat, rice, sesame oil, butter, cotton, and coarse Indian cloth made from it. Its metropolis is Minnagara, from which a very large amount of cloth is brought down to Barygaza.",
+    "places": [
+      {
+        "greek_surface": "Βαράκην",
+        "english_label": "Barake",
+        "role": "route_or_intermediate_place",
+        "notes": "Previous cape in the route."
+      },
+      {
+        "greek_surface": "Βαρυγάζων κόλπος",
+        "english_label": "Gulf of Barygaza",
+        "role": "regional_waterway",
+        "notes": "Gulf after Barake."
+      },
+      {
+        "greek_surface": "Ἀριακῆς χώρας",
+        "english_label": "Ariake",
+        "role": "region",
+        "notes": "Mainland region at the beginning of India."
+      },
+      {
+        "greek_surface": "Ἀβηρία",
+        "english_label": "Aberia",
+        "role": "inland_region",
+        "notes": "Interior part bordering Scythia."
+      },
+      {
+        "greek_surface": "Συραστρηνή",
+        "english_label": "Syrastrene",
+        "role": "coastal_region",
+        "notes": "Coastal part of Ariake."
+      },
+      {
+        "greek_surface": "Μιννάγαρα",
+        "english_label": "Minnagara",
+        "role": "source_place",
+        "notes": "Metropolis supplying cloth to Barygaza."
+      },
+      {
+        "greek_surface": "Βαρύγαζα",
+        "english_label": "Barygaza",
+        "role": "destination_port",
+        "notes": "Destination port for cloth from Minnagara."
+      },
+      {
+        "greek_surface": "Ἀστάκαπρα",
+        "english_label": "Astakapra",
+        "role": "route_or_intermediate_place",
+        "notes": "Reference point for the coastal route beyond Barygaza."
+      },
+      {
+        "greek_surface": "Παπικῆς",
+        "english_label": "Papike",
+        "role": "cape_or_region",
+        "notes": "Cape/region associated with Astakapra."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "wheat",
+        "greek_surface": "σίτου",
+        "category": "grain",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Local product of Ariake."
+      },
+      {
+        "english_label": "rice",
+        "greek_surface": "ὀρύζης",
+        "category": "grain",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Local product of Ariake."
+      },
+      {
+        "english_label": "sesame oil",
+        "greek_surface": "ἐλαίου σησαμίνου",
+        "category": "oil",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Local product of Ariake; compound preserved."
+      },
+      {
+        "english_label": "butter",
+        "greek_surface": "βουτύρου",
+        "category": "food_or_drink",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Local product of Ariake."
+      },
+      {
+        "english_label": "cotton",
+        "greek_surface": "καρπάσου",
+        "category": "fiber",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Source fiber for Indian cloth."
+      },
+      {
+        "english_label": "coarse Indian cloth",
+        "greek_surface": "Ἰνδικῶν ὀθονίων τῶν χυδαίων",
+        "category": "textile",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Qualified cloth product made from cotton."
+      },
+      {
+        "english_label": "cloth",
+        "greek_surface": "ὀθόνιον",
+        "category": "textile",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Brought down in quantity from Minnagara to Barygaza."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "inland_to_port",
+        "source_place": "Minnagara",
+        "destination_place": "Barygaza",
+        "route_or_intermediate_place": "Ariake/Syrastrene",
+        "goods": [
+          "cloth"
+        ],
+        "notes": "The passage says much cloth is brought down from Minnagara to Barygaza."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0042",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[42]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[42]/p",
+    "section_order": 42,
+    "greek_text": "42. Μεθʼ ἡς ἕτερός ἐστι κόλπος, ἔσω κυμάτων, εἰς αὐτὸν ἐνδύνων τὸν βορέαν, οὗ κατὰ μὲν τὸ στόμα νῆσός ἐστιν ἡ λεγομένη Bαιώνης, ἐν δὲ τοῖς ἐσωτάτοις τόποις μέγιστος ποταμὸς ὁ λεγόμενος Μάϊς. Τοῦτον τὸν κόλπον, τὸ πλάτος ὡς σταδίων τριακοσίων, οἱ πλέοντες εἰς Bαρύγαζα διαπερῶνται, ἐξ εὐωνύμων ἀκροφανῆ καταλιπόντες τὴν νῆσον, καὶ εἰς αὐτὴν τὴν ἀνατολὴν ἐπʼ αὐτὸ τὸ στόμα τοῦ ποταμοῦ Βαρυγάζων· λέγεται δὲ αὐτὸς ὁ ποταμὸς Ναμνάδιος.",
+    "draft_translation": "After this is another wave-sheltered gulf entering northward, with the island called Baiones at its mouth and, in the innermost parts, the great river called Mais. Those sailing to Barygaza cross the gulf, leaving the island just visible on the left, and head east to the mouth of the river of Barygaza, called the Namnadios.",
+    "places": [
+      {
+        "greek_surface": "Bαιώνης",
+        "english_label": "Baiones",
+        "role": "route_or_intermediate_place",
+        "notes": "Island at the mouth of the gulf."
+      },
+      {
+        "greek_surface": "Μάϊς",
+        "english_label": "Mais River",
+        "role": "route_or_intermediate_place",
+        "notes": "Large river in the inner gulf."
+      },
+      {
+        "greek_surface": "Bαρύγαζα",
+        "english_label": "Barygaza",
+        "role": "destination_port",
+        "notes": "Destination of the sailing route."
+      },
+      {
+        "greek_surface": "Ναμνάδιος",
+        "english_label": "Namnadios River",
+        "role": "route_or_intermediate_place",
+        "notes": "River of Barygaza."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0043",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[43]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[43]/p",
+    "section_order": 43,
+    "greek_text": "43. Ὁ δὲ κόλπος αὐτὸς ὁ κατὰ Βαρύγαζα στενὸς ὢν τοῖς ἐκ πελάγους ἐρχομένοις ἐστὶ δυσεπίβολος· ἢ γὰρ εἰς τὰ δεξιὰ ἢ εἰς τὰ εὐώνυμα παραπίπτουσιν, ᾗ γε ἐπιβολὴ κρείσσων ἐστὶ τῆς ἑτέρας. Ἀλλʼ ἐκ μὲν τῶν δεξιῶν κατʼ αὐτὸ τὸ στόμα τοῦ κόλπου παράκειται ταινία τραχεῖα καὶ διάσπιλος, Ἡρώνη λεγομένη, κατὰ Καμμωνὶ κώμην· ἐκ δὲ τῶν εὐωνύμων ἀπέναντι ταύτης τὸ πρὸ Ἀστακάπρων ἀκρωτήριον, ἡ Παπικὴ λεγομένη, δύσορμος οὖσα διά τε τὸν ῥοῦν τὸν περὶ αὐτὴν καὶ διὰ τὸ ἀποκόπτειν τὰς ἀγκύρας τραχὺν ὄντα καὶ πετρώδη τὸν βυθόν. Κἂν κατʼ αὐτὸν δέ τις ἐπιβάλῃ τὸν κόλπον, αὐτὸ τὸ στόμα τοῦ κατὰ Βαρύγαζα ποταμοῦ δυσεύρετόν ἐστι διὰ τὸ τὴν χώραν ταπεινήν εἶναι καὶ μηδὲν ἐγγύτερον ἐνεχύρως θεωρεῖσθαι· κἂν εὑρεθῇ, δυσείσβολός ἐστι διὰ τὰ περὶ αὐτὸν τενάγη τοῦ ποταμοῦ.",
+    "draft_translation": "The gulf at Barygaza is narrow and hard for ships coming from the sea to enter; they tend to fall either right or left. On the right at the gulf mouth lies the rough, spotted strip called Herone near the village of Kammoni; on the left opposite it is the cape before Astakapra, called Papike, a difficult anchorage because of the current and the rough rocky bottom that cuts anchors. Even if one reaches the gulf, the mouth of the Barygaza river is hard to find and hard to enter because of the low land and river shallows.",
+    "places": [
+      {
+        "greek_surface": "Βαρύγαζα",
+        "english_label": "Barygaza",
+        "role": "destination_port",
+        "notes": "Difficult destination approached through the gulf and river."
+      },
+      {
+        "greek_surface": "Ἡρώνη",
+        "english_label": "Herone",
+        "role": "route_or_intermediate_place",
+        "notes": "Rough strip on the right side of the gulf mouth."
+      },
+      {
+        "greek_surface": "Καμμωνὶ",
+        "english_label": "Kammoni",
+        "role": "nearby_place",
+        "notes": "Village near Herone."
+      },
+      {
+        "greek_surface": "Ἀστακάπρων",
+        "english_label": "Astakapra",
+        "role": "nearby_place",
+        "notes": "Reference point for the left-hand cape."
+      },
+      {
+        "greek_surface": "Παπικὴ",
+        "english_label": "Papike",
+        "role": "route_or_intermediate_place",
+        "notes": "Difficult anchorage/cape opposite Herone."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0044",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[44]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[44]/p",
+    "section_order": 44,
+    "greek_text": "44. Τούτου χάριν περὶ αὐτὸν τὸν εἴσπλουν βασιλικοὶ ἁλιεῖς ἐντόπιοι πληρώμασι μακρῶν πλοίων, ἃ λέγεται τράππαγα καὶ κότυμβα, πρὸς ἀπάντησιν ἐξέρχονται μέχρι τῆς Συραστρηνῆς, ἀφʼ ὧν ὁδηγεῖται τὰ πλοῖα μέχρι Βαρυγάζων. Κλίνουσι γὰρ εὐθὺς ἀπὸ τοῦ στόματος τοῦ κόλπου διὰ τενάγη τοῖς πληρώμασι καὶ ῥυμουλκοῦσιν αὐτὰ σταθμοῖς ἤδη τεταγμένοις, ἀρχο μένης μὲν τῆς πλήμης αἴροντες, ἱσταμένης δὲ διορμίζοντες κατά τινας ὅρμους καὶ κυθρίνους. Οἱ δὲ κύθρινοι τόποι εἰσὶ τοῦ ποταμοῦ βαθύτεροι μέχρι Βαρυγάζων· ἀπέχει γὰρ ἀπὸ τοῦ στόματος ἄων παρὰ τὸν ποταμὸν κειμένη ὡς σταδίων τριακοσίων.",
+    "draft_translation": "For this reason, around the entrance local royal fishermen go out with crews of long vessels, called trappaga and kotymba, to meet incoming ships as far as Syrastrene, and from them the ships are guided to Barygaza. They immediately turn from the gulf mouth through the shallows, tow the ships by fixed stations, lift them as the flood begins, and moor them in certain anchorages and deeper river-basin places until Barygaza, which lies on the river about three hundred stadia from the mouth.",
+    "places": [
+      {
+        "greek_surface": "Συραστρηνῆς",
+        "english_label": "Syrastrene",
+        "role": "route_or_intermediate_place",
+        "notes": "Area to which pilots go out to meet ships."
+      },
+      {
+        "greek_surface": "Βαρυγάζων",
+        "english_label": "Barygaza",
+        "role": "destination_port",
+        "notes": "Port reached by guided and towed river approach."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0045",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[45]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[45]/p",
+    "section_order": 45,
+    "greek_text": "45. Πᾶσα μὲν ἡ Ἰνδικὴ χώρα ποταμοὺς ἔχει πλμίστους, ἀμπώτεις τε καὶ πλήμας μεγίστας, συναυξομένας ὑπὸ τὴν ἀνατολὴν καὶ τὴν πανσέληνον ἄχρι τριῶν ἡμερῶν, καὶ τοῖς μεταξὺ καταστήμασι τῆς σελήνης ἐλασσουμένας, πολὺ δὲ μᾶλλον ἡ κατὰ Βαρυγάζων, ὥστε αἰφνίδιον τόν τε βυθὸν δρᾶσθαι, καὶ τινα μέρη τῆς ἠπείρου, ποτὶ δὲ ξηρὰ τὰ πρὸ μικροῦ πλωῖζόμενα, τούς τε ποταμοὺς ὑπὸ τὴν εἰσβολὴν τῆς πλήμης, τοῦ πελάγους ὅλου συνωθουμένου, σφοδρότερον ἄνω φέρεσθαι τοῦ κατὰ φύσιν ῥεύματος ἐπὶ πλείστους σταδίους.",
+    "draft_translation": "All India has many rivers and strong tidal rises and falls, especially around Barygaza, where the sea suddenly covers and uncovers ground and drives river water back upstream for many stadia.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0046",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[46]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[46]/p",
+    "section_order": 46,
+    "greek_text": "46. Διὸ καὶ κινδυνώδεις εἰσὶν αἱ τῶν πλοίων προσαγωγαὶ καὶ ἐξαγωγαὶ τοῖς ἀπείροις καὶ πρώτως εἰσάγουσιν εἰς τὸ ἐμπόριον. Γινομένης γὰρ ὁρμῆς ἤδη περὶ τὴν πλήμην οὐδὲν παριεμένης οὐκ ἀντέχουσιν αἱ ἄγκυραι· διὸ καὶ τὰ προληφθέντα πλοῖα τῇ ἰναίᾳ, πλαγιασθέντα ὑπὸ τῆς ὀξύτητος τοῦ ῥοὸς, ἐποκέλλει τοῖς τενάγεσι καὶ ἀνακλᾶται, τὰ δὲ μικρότερα καὶ περιτρέπεται, τινὰ δὲ καὶ περὶ τὰς διώρυχας ἀποκεκλικότα διὰ τὸ περὶ τὴν ἄμπωτιν, ὅταν μὴ διερείσῃς, τῆς πλήμης αἰφνίδιον ἐπελθούσης, ὑπὸ τῆς πρώτης κεφαλῆς τοῦ ῥοὸς ἐμπίμπλαται. Τοσαῦται γὰρ περὶ τὴν εἰσβολὴν τῆς θαλάσσης γίνονται βίαι κατὰ τὰς νεομηνίας ὑπὸ τὴν νυκτερινὴν μάλιστα πλήμην, ὥστε ἀρχομένης ἤδη τῆς εἰσαγωγῆς, ὅταν ἠρεμῇ τὸ πέλαγος, ὑπʼ αὐτοῦ φέρεσθαι τοῖς ἐπὶ τοῦ στόματος παραπλήσιον βοῇ στρατοπέδου μακρόθεν ἀκουομένῃ, καὶ μετʼ ὀλίγον αὐτὴν ἐπιτρέχειν τοῖς τενάγεσι ῥοίζῳ τὴν θάλασσαν.",
+    "draft_translation": "Because of these tides, entry to and departure from the Barygaza market are dangerous for inexperienced ships: large vessels can be swept onto shoals, smaller ones overturned, and the incoming tide arrives with a roar like an army.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0047",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[47]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[47]/p",
+    "section_order": 47,
+    "greek_text": "47. Ἐπίκειται δὲ τοῖς Βαρυγάζοις κατὰ τὰ μεσόγεια πλείονα ἔθνη, τό τε τῶν Ἀρατρίων καὶ Ἀραχωσίων καὶ Γανδαραίων καὶ τῆς Προκλαΐδος, ἐν ᾗ ἡ Βουκέφαλος Ἀλεξάνδρεια. Καὶ τούτων ἐπάνω μαχιμώτατον ἔθνος Βακτριανῶν, ὑπὸ βασιλέα ὄντων ἰδιότοπον. Καὶ Ἀλέξανδρος ὁρμηθεὶς ἀπὸ τῶν μερῶν τούτων ἄχρι τοῦ Γάγγους διῆλθε, καταλιπὼν τήν τε Λιμυρικήν καὶ τὰ νότια τῆς Ἰνδικῆς· ἀφʼ οὗ μέχρι νῦν ἐν Βαρυγάζοις παλαιαὶ προχωροῦσι δραχμαὶ, γράμμασιν Ἑλληνικοῖς ἐγκεχαραγμέναι ἐπίσημα τῶν μετʼ Ἀλέξανδρον βεβασιλευκότων Ἀπολλοδότου καὶ Μενάνδρου.",
+    "draft_translation": "The inland country above Barygaza includes many peoples and regions as far as the Ganges; Alexander is said to have passed from there, and old Greek-inscribed drachmas of later rulers still circulate at Barygaza.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0048",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[48]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[48]/p",
+    "section_order": 48,
+    "greek_text": "48. Ἔνι δὲ αὐτῇ καὶ ἐξ ἀνατολῆς πόλις λεγομένη Ὀζήνη, ἐν ᾗ καὶ τὰ βασίλεια πρότερον ἦν· ἀφʼ ἧς πάντα τὰ πρὸς εὐθηνίαν τῆς χώρας εἰς Βαρύγαζα καταφέρεται καὶ τὰ πρὸς ἐμπορίαν τὴν ἡμετέραν, ὀνυχίνη λιθία καὶ μουρρίνη καὶ σινδόνες Ἰνδικαὶ καὶ μολόχιναι καὶ ἱκανὸν χυδαῖον ὀθόνιον. Κατάγεται δὲ διʼ αὐτῆς καὶ ἀπὸ τῶν ἄνω τόπων ἡ διὰ Προκλαΐδος καταφερομένη νάρδος ἡ Καττυβουρίνη καὶ ἡ Πατροπαπίγη καὶ ἡ Καβαλίτη καὶ ἡ διὰ τῆς παρακειμένης Συυθίας, ὃ τε κόστος καὶ ἡ βδέλλα.",
+    "draft_translation": "East of this inland region is Ozene, formerly a royal residence, from which goods for Barygaza and for Roman trade are brought down; nard, costus, and bdellium also come down through Proklais and adjoining Scythia from the upper country.",
+    "places": [
+      {
+        "greek_surface": "Ὀζήνη",
+        "english_label": "Ozene",
+        "role": "source_city",
+        "notes": "Former royal city inland and east of Barygaza."
+      },
+      {
+        "greek_surface": "Βαρύγαζα",
+        "english_label": "Barygaza",
+        "role": "destination_port",
+        "notes": "Market receiving goods from Ozene and upper-country routes."
+      },
+      {
+        "greek_surface": "Προκλαΐδος",
+        "english_label": "Proklais",
+        "role": "route_or_intermediate_place",
+        "notes": "Route named for nard coming from upper regions."
+      },
+      {
+        "greek_surface": "Συυθίας",
+        "english_label": "Scythia",
+        "role": "route_or_intermediate_place",
+        "notes": "Adjoining region named as a route context for aromatics."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "onyx stone",
+        "greek_surface": "ὀνυχίνη λιθία",
+        "category": "stone",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Brought from Ozene for the Barygaza trade."
+      },
+      {
+        "english_label": "murrhine stone",
+        "greek_surface": "μουρρίνη",
+        "category": "stone",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Listed with onyx stone; exact ancient material identification is uncertain."
+      },
+      {
+        "english_label": "Indian cloth",
+        "greek_surface": "σινδόνες Ἰνδικαὶ",
+        "category": "textile",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Textile brought from Ozene."
+      },
+      {
+        "english_label": "mallow-colored cloth",
+        "greek_surface": "μολόχιναι",
+        "category": "textile",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Textile adjective used substantively in the goods list."
+      },
+      {
+        "english_label": "ordinary cotton cloth",
+        "greek_surface": "χυδαῖον ὀθόνιον",
+        "category": "textile",
+        "structure_type": "compound",
+        "confidence": "medium",
+        "notes": "Common-grade cloth; amount is said to be considerable."
+      },
+      {
+        "english_label": "nard with named regional varieties",
+        "greek_surface": "νάρδος ἡ Καττυβουρίνη καὶ ἡ Πατροπαπίγη καὶ ἡ Καβαλίτη",
+        "category": "aromatic",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Preserved as one compound nard entity with named varieties."
+      },
+      {
+        "english_label": "costus",
+        "greek_surface": "κόστος",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Aromatic/root drug brought down with bdellium."
+      },
+      {
+        "english_label": "bdellium",
+        "greek_surface": "βδέλλα",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Aromatic gum resin in the upper-country movement."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "inland_supply_to_port",
+        "source_place": "Ozene",
+        "destination_place": "Barygaza",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "onyx stone",
+          "murrhine stone",
+          "Indian cloth",
+          "mallow-colored cloth",
+          "ordinary cotton cloth"
+        ],
+        "notes": "Goods for the local country and for Roman trade are brought down from Ozene."
+      },
+      {
+        "movement_type": "upper_country_supply_to_port",
+        "source_place": "upper country",
+        "destination_place": "Barygaza",
+        "route_or_intermediate_place": "Proklais; adjoining Scythia",
+        "goods": [
+          "nard with named regional varieties",
+          "costus",
+          "bdellium"
+        ],
+        "notes": "The passage distinguishes route context from the destination port."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0049",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[49]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[49]/p",
+    "section_order": 49,
+    "greek_text": "49. Προχωρεῖ δὲ εἰς τὸ ἐμπόριον οἶνος προηγουμένως Ἰταλικὸς καὶ Λαοδικηνὸς καὶ Ἀραβικὸς καὶ χαλκὸς καὶ κασσίτερος καὶ μόλυβδος, κοράλλιον καὶ χρυσόλιθον, ἱματισμὸς ἀπλοῦς καὶ νόθος παντοῖος, πολύμιτοι ζῶναι πηχυαῖαι, στύραξ, μελίλωτον, ὕαλος ἀργὴ, σανδαράκη, στίμμι, δηνάριον χρυσοῦν καὶ ἀργυροῦν, ἔχον ἀλλαγὴν καὶ ἐπικέρδειάν τινα πρὸς τὸ ἐντόπιον νόμισμα, μύρον οὐ βαρύτιμον οὐδὲ πολύ· τῷ δὲ βασιλεῖ κατʼ ἐκείνους τοὺς καιροὺς εἰσφερόμενα βαρύτιμα ἀργυρώματα καὶ μουσικὰ καὶ παρθένοι εὐειδεῖς πρὸς παλλακίαν καὶ διάφορος οἶνος καὶ ἱματισμὸς ἁπλοῦς πολυτελὴς καὶ μύρον ἔξοχον. Φέρεται δὲ ἀπὸ τούτων τῶν τόπων νάρδος, κόστος, βδέλλα, ἐλέφας, ὀνυχίνη λιθία καὶ μουρρίνη καὶ λύκιον καὶ ὀθόνιον παντοῖον καὶ Σηρικὸν καὶ μολόχινον καὶ νῆμα καὶ πέπερι μακρὸν καὶ τὰ ἀπὸ τῶν ἐμπορίων φερόμενα. Ἀποπλέουσι δὲ κατὰ καιρὸν οἱ ἀπὸ τῆς Aἰγύπτου εἰς τὸ ἐμπόριον ἀναγόμενοι περὶ τὸν Ἰούλιον μῆνα, ὅς ἐστιν Ἐπιφί.",
+    "draft_translation": "Into Barygaza are imported wines, metals, stones, textiles, aromatics, minerals, glass, and coin; special luxury goods are brought for the king. From these places are exported aromatics, ivory, stones, textiles, thread, long pepper, and other goods brought from the market-towns. Ships bound for this market sail from Egypt around July, Epiphi.",
+    "places": [
+      {
+        "greek_surface": "τὸ ἐμπόριον",
+        "english_label": "Barygaza",
+        "role": "destination_port",
+        "notes": "The market-town is referred to deictically from the preceding Barygaza context."
+      },
+      {
+        "greek_surface": "Αἰγύπτου",
+        "english_label": "Egypt",
+        "role": "source_place",
+        "notes": "Named as the departure region for ships sailing to this market."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "Italian wine",
+        "greek_surface": "οἶνος ... Ἰταλικὸς",
+        "category": "foodstuff",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "One of the named imported wine origins."
+      },
+      {
+        "english_label": "Laodicean wine",
+        "greek_surface": "οἶνος ... Λαοδικηνὸς",
+        "category": "foodstuff",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "One of the named imported wine origins."
+      },
+      {
+        "english_label": "Arabian wine",
+        "greek_surface": "οἶνος ... Ἀραβικὸς",
+        "category": "foodstuff",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "One of the named imported wine origins."
+      },
+      {
+        "english_label": "copper",
+        "greek_surface": "χαλκὸς",
+        "category": "metal",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Listed among imported metals."
+      },
+      {
+        "english_label": "tin",
+        "greek_surface": "κασσίτερος",
+        "category": "metal",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Listed among imported metals."
+      },
+      {
+        "english_label": "lead",
+        "greek_surface": "μόλυβδος",
+        "category": "metal",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Listed among imported metals."
+      },
+      {
+        "english_label": "coral",
+        "greek_surface": "κοράλλιον",
+        "category": "animal_product",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Imported marine material."
+      },
+      {
+        "english_label": "chrysolite or topaz",
+        "greek_surface": "χρυσόλιθον",
+        "category": "stone",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Precious stone named in the import list; exact identification is uncertain."
+      },
+      {
+        "english_label": "plain and inferior clothing",
+        "greek_surface": "ἱματισμὸς ἀπλοῦς καὶ νόθος παντοῖος",
+        "category": "textile",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Textile import; quality terms are preserved in one entity."
+      },
+      {
+        "english_label": "multicolored cubit-wide girdles",
+        "greek_surface": "πολύμιτοι ζῶναι πηχυαῖαι",
+        "category": "textile",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Specific textile accessory in the import list."
+      },
+      {
+        "english_label": "storax",
+        "greek_surface": "στύραξ",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Aromatic resin in the import list."
+      },
+      {
+        "english_label": "melilot",
+        "greek_surface": "μελίλωτον",
+        "category": "plant_product",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Fragrant plant product in the import list."
+      },
+      {
+        "english_label": "crude glass",
+        "greek_surface": "ὕαλος ἀργὴ",
+        "category": "manufactured_good",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Glass material in the import list."
+      },
+      {
+        "english_label": "realgar",
+        "greek_surface": "σανδαράκη",
+        "category": "mineral",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Mineral pigment/substance in the import list."
+      },
+      {
+        "english_label": "antimony",
+        "greek_surface": "στίμμι",
+        "category": "mineral",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Mineral substance in the import list."
+      },
+      {
+        "english_label": "gold and silver denarii",
+        "greek_surface": "δηνάριον χρυσοῦν καὶ ἀργυροῦν",
+        "category": "coin_or_money",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Coin imported for exchange profit against local money."
+      },
+      {
+        "english_label": "modest perfume",
+        "greek_surface": "μύρον οὐ βαρύτιμον οὐδὲ πολύ",
+        "category": "aromatic",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Imported perfume, explicitly not costly or abundant."
+      },
+      {
+        "english_label": "costly silverware",
+        "greek_surface": "βαρύτιμα ἀργυρώματα",
+        "category": "manufactured_good",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Luxury objects brought for the king."
+      },
+      {
+        "english_label": "fine wine for the king",
+        "greek_surface": "διάφορος οἶνος",
+        "category": "foodstuff",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Royal import distinct from the general imported wine list."
+      },
+      {
+        "english_label": "costly plain clothing",
+        "greek_surface": "ἱματισμὸς ἁπλοῦς πολυτελὴς",
+        "category": "textile",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Luxury textile brought for the king."
+      },
+      {
+        "english_label": "choice perfume",
+        "greek_surface": "μύρον ἔξοχον",
+        "category": "aromatic",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Luxury aromatic brought for the king."
+      },
+      {
+        "english_label": "nard",
+        "greek_surface": "νάρδος",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Exported from these places."
+      },
+      {
+        "english_label": "costus",
+        "greek_surface": "κόστος",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Exported from these places."
+      },
+      {
+        "english_label": "bdellium",
+        "greek_surface": "βδέλλα",
+        "category": "aromatic",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Exported from these places."
+      },
+      {
+        "english_label": "ivory",
+        "greek_surface": "ἐλέφας",
+        "category": "animal_product",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Exported from these places."
+      },
+      {
+        "english_label": "onyx stone",
+        "greek_surface": "ὀνυχίνη λιθία",
+        "category": "stone",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Exported from these places."
+      },
+      {
+        "english_label": "murrhine stone",
+        "greek_surface": "μουρρίνη",
+        "category": "stone",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Exported luxury stone or stone-like material; exact identification is uncertain."
+      },
+      {
+        "english_label": "lycium",
+        "greek_surface": "λύκιον",
+        "category": "plant_product",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Medicinal plant extract or dye-like commodity in the export list."
+      },
+      {
+        "english_label": "cloth of all kinds",
+        "greek_surface": "ὀθόνιον παντοῖον",
+        "category": "textile",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Exported textile category."
+      },
+      {
+        "english_label": "silk cloth",
+        "greek_surface": "Σηρικὸν",
+        "category": "textile",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Ethnonym-derived textile term in the export list."
+      },
+      {
+        "english_label": "mallow-colored cloth",
+        "greek_surface": "μολόχινον",
+        "category": "textile",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Textile adjective used substantively."
+      },
+      {
+        "english_label": "thread",
+        "greek_surface": "νῆμα",
+        "category": "textile",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Exported textile material."
+      },
+      {
+        "english_label": "long pepper",
+        "greek_surface": "πέπερι μακρὸν",
+        "category": "spice",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Named spice in the export list."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "import_to_market",
+        "source_place": "Mediterranean and Arabian suppliers",
+        "destination_place": "Barygaza",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "Italian wine",
+          "Laodicean wine",
+          "Arabian wine",
+          "copper",
+          "tin",
+          "lead",
+          "coral",
+          "chrysolite or topaz",
+          "plain and inferior clothing",
+          "multicolored cubit-wide girdles",
+          "storax",
+          "melilot",
+          "crude glass",
+          "realgar",
+          "antimony",
+          "gold and silver denarii",
+          "modest perfume"
+        ],
+        "notes": "The passage lists commodities proceeding into the Barygaza market."
+      },
+      {
+        "movement_type": "royal_import",
+        "source_place": "external suppliers",
+        "destination_place": "Barygaza royal court",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "costly silverware",
+          "fine wine for the king",
+          "costly plain clothing",
+          "choice perfume"
+        ],
+        "notes": "Persons in the royal list are not extracted as goods."
+      },
+      {
+        "movement_type": "export_from_market",
+        "source_place": "Barygaza and associated market-towns",
+        "destination_place": "outbound trade",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "nard",
+          "costus",
+          "bdellium",
+          "ivory",
+          "onyx stone",
+          "murrhine stone",
+          "lycium",
+          "cloth of all kinds",
+          "silk cloth",
+          "mallow-colored cloth",
+          "thread",
+          "long pepper"
+        ],
+        "notes": "The text adds other goods brought from the market-towns without naming them individually."
+      },
+      {
+        "movement_type": "sailing_season",
+        "source_place": "Egypt",
+        "destination_place": "Barygaza",
+        "route_or_intermediate_place": "",
+        "goods": [],
+        "notes": "Ships bound for the market sail around July/Epiphi; no additional goods are named in this timing clause."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0050",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[50]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[50]/p",
+    "section_order": 50,
+    "greek_text": "50. Μετὰ δὲ τὰ Βαρύγαζα εὐθέως ἡ συναφὴς ἤπειρος ἐκ τοῦ βορέου εἰς τὸν νότον παρεκτείνει· διὸ καὶ Δαχιναβάδης καλεῖται ἡ χώρα· δάχανος γὰρ καλεῖται ὁ νότος τῆ αὐτῶν γλώσσῃ. Ταύτης ἡ μὲν ὑπερκειμένη πρὸς ἀνατολὰς μεσόγειος ἐμπεριέχει χώρας τε πολλὰς καὶ ἐρήμους καὶ ὄρη μεγάλα καὶ θηρίων γένη παντοίων, παρδάλεις τε καὶ τίγρεις καὶ ἐλέφαντας καὶ δράκοντας ὑπερμεγέθεις καὶ κροκόττας καὶ κυνοκεφάλων πλεῖστα γένη, ἕθνη τε πλεῖστα καὶ πολυάνθρωπα μέχρι τοῦ Γάγγους.",
+    "draft_translation": "Beyond Barygaza the coast runs north to south, called Dachinabades because the local word means south; inland to the east are deserts, mountains, many wild animals, and many peoples as far as the Ganges.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  }
+]

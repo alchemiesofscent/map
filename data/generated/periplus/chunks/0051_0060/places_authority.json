@@ -1,0 +1,1020 @@
+[
+  {
+    "place_key": "myos_hormos",
+    "display_name": "Myos Hormos",
+    "greek_names": [
+      "Μυὸς ὅρμος"
+    ],
+    "aliases": [
+      "Aphrodites Hormos",
+      "Quseir el-Qadim"
+    ],
+    "place_type": "port",
+    "lat": 26.156611,
+    "lon": 34.24401,
+    "certainty": "medium",
+    "pleiades_id": "786069",
+    "pleiades_uri": "https://pleiades.stoa.org/places/786069",
+    "coordinates_source": "Pleiades representative point; title includes a question mark, so keep identification certainty below high.",
+    "notes": "Opening harbor in section 1. Use as a primary tour stop."
+  },
+  {
+    "place_key": "berenike",
+    "display_name": "Berenike",
+    "greek_names": [
+      "Βερενίκη"
+    ],
+    "aliases": [
+      "Berenice",
+      "Berenice Troglodytica",
+      "Bender el-Kebir"
+    ],
+    "place_type": "port",
+    "lat": 23.91062525,
+    "lon": 35.47481885,
+    "certainty": "high",
+    "pleiades_id": "785986",
+    "pleiades_uri": "https://pleiades.stoa.org/places/785986",
+    "coordinates_source": "Pleiades representative point.",
+    "notes": "Second harbor in section 1 and route anchor for section 2."
+  },
+  {
+    "place_key": "barbarian_country",
+    "display_name": "Barbarian country beyond Berenike",
+    "greek_names": [],
+    "aliases": [
+      "Barbarian country"
+    ],
+    "place_type": "region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Not mapped in this starter authority file.",
+    "notes": "Narrative coastal region in section 2; model as a descriptive region rather than a fixed point."
+  },
+  {
+    "place_key": "fish_eaters_red_sea",
+    "display_name": "Fish-Eaters territory",
+    "greek_names": [],
+    "aliases": [
+      "Ichthyophagoi",
+      "Fish-Eaters"
+    ],
+    "place_type": "ethnographic_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": "40028",
+    "pleiades_uri": "https://pleiades.stoa.org/places/40028",
+    "coordinates_source": "Identifier noted from Pleiades-linked bibliography; coordinates not set in this scaffold.",
+    "notes": "Use as a label/filter, not as a point, unless a project-specific polygon is drawn."
+  },
+  {
+    "place_key": "moschophagoi_territory",
+    "display_name": "Moschophagoi territory",
+    "greek_names": [
+      "Μοσχοφάγοι"
+    ],
+    "aliases": [
+      "Calf-Eaters"
+    ],
+    "place_type": "ethnographic_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unresolved in starter authority file.",
+    "notes": "Preceding route marker before Ptolemais in section 3."
+  },
+  {
+    "place_key": "ptolemais_theron",
+    "display_name": "Ptolemais of the Hunts",
+    "greek_names": [
+      "Πτολεμαῒς ἡ τῶν θηρῶν"
+    ],
+    "aliases": [
+      "Ptolemais Theron",
+      "Ptolemais of the Hunts",
+      "Trinkatat"
+    ],
+    "place_type": "emporion",
+    "lat": 18.222236,
+    "lon": 38.184316,
+    "certainty": "low",
+    "pleiades_id": "39409",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39409",
+    "coordinates_source": "DARE/Trinkatat coordinate used for the demo; Pleiades notes that the precise location is unknown.",
+    "notes": "Small trading station. Keep the map marker visually uncertain."
+  },
+  {
+    "place_key": "adulis",
+    "display_name": "Adulis",
+    "greek_names": [
+      "Ἀδουλίς",
+      "Ἀδουλὶ"
+    ],
+    "aliases": [
+      "Adouli",
+      "Azouli",
+      "Zula"
+    ],
+    "place_type": "port",
+    "lat": 15.275955,
+    "lon": 39.676537,
+    "certainty": "high",
+    "pleiades_id": "39271",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39271",
+    "coordinates_source": "DARE coordinate associated with Pleiades 39271; Pleiades describes Adouli as near modern Zula.",
+    "notes": "Lawful emporion and hub for inland ivory and island tortoise-shell supply."
+  },
+  {
+    "place_key": "oreine_island",
+    "display_name": "Oreine island",
+    "greek_names": [
+      "Ὀρεινή"
+    ],
+    "aliases": [
+      "Oreine"
+    ],
+    "place_type": "island",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unresolved in starter authority file.",
+    "notes": "Island anchorage outside the bay of Adulis in section 4."
+  },
+  {
+    "place_key": "diodoros_island",
+    "display_name": "Diodoros island",
+    "greek_names": [
+      "Διοδώρου νῆσος"
+    ],
+    "aliases": [
+      "Diodoros"
+    ],
+    "place_type": "island",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unresolved in starter authority file.",
+    "notes": "Former anchorage deeper in the bay of Adulis."
+  },
+  {
+    "place_key": "koloe",
+    "display_name": "Koloe",
+    "greek_names": [
+      "Κολόη"
+    ],
+    "aliases": [
+      "Koloe",
+      "Matara candidate",
+      "Qohaito candidate"
+    ],
+    "place_type": "inland_market",
+    "lat": 14.709112,
+    "lon": 39.552787,
+    "certainty": "low",
+    "pleiades_id": "39363",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39363",
+    "coordinates_source": "Pleiades representative point for Koloe; Pleiades notes multiple candidate identifications. Matara is also separately identified in Pleiades as a possible Koloe candidate.",
+    "notes": "First ivory market inland from Adulis. Treat as a candidate location."
+  },
+  {
+    "place_key": "matara_candidate_for_koloe",
+    "display_name": "Matara, possible Koloe candidate",
+    "greek_names": [],
+    "aliases": [
+      "Matara",
+      "Metera"
+    ],
+    "place_type": "archaeological_site",
+    "lat": 14.675334944,
+    "lon": 39.4256591657,
+    "certainty": "medium",
+    "pleiades_id": "403627899",
+    "pleiades_uri": "https://pleiades.stoa.org/places/403627899",
+    "coordinates_source": "Pleiades representative point for Matara.",
+    "notes": "Included as an optional candidate layer for Koloe, not used in the default route line."
+  },
+  {
+    "place_key": "aksum_metropolis",
+    "display_name": "Aksumite metropolis",
+    "greek_names": [
+      "Αὐξωμίτης"
+    ],
+    "aliases": [
+      "Aksum",
+      "A(u)xoume",
+      "Axoume"
+    ],
+    "place_type": "metropolis",
+    "lat": 14.1338504591,
+    "lon": 38.7212920204,
+    "certainty": "high",
+    "pleiades_id": "39303",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39303",
+    "coordinates_source": "Pleiades representative point.",
+    "notes": "Inland metropolis in the ivory chain of section 4."
+  },
+  {
+    "place_key": "kyeneion",
+    "display_name": "Kyeneion",
+    "greek_names": [
+      "Κυήνειον"
+    ],
+    "aliases": [
+      "Kyeneion"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unresolved in starter authority file.",
+    "notes": "Named transit point for ivory from beyond the Nile."
+  },
+  {
+    "place_key": "beyond_the_nile",
+    "display_name": "Beyond the Nile",
+    "greek_names": [
+      "πέραν τοῦ Νείλου"
+    ],
+    "aliases": [
+      "Beyond the Nile"
+    ],
+    "place_type": "source_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Not a point; model as a region/source label.",
+    "notes": "Ultimate source region in the ivory movement."
+  },
+  {
+    "place_key": "alalaiou_islands",
+    "display_name": "Alalaiou islands",
+    "greek_names": [
+      "Ἀλαλαίου"
+    ],
+    "aliases": [
+      "Dahlak Archipelago",
+      "Aliaeu"
+    ],
+    "place_type": "archipelago",
+    "lat": 15.7289257455,
+    "lon": 40.0031505062,
+    "certainty": "high",
+    "pleiades_id": "39281",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39281",
+    "coordinates_source": "Pleiades representative point.",
+    "notes": "Offshore islands supplying tortoise shell to Adulis."
+  },
+  {
+    "place_key": "meroe",
+    "display_name": "Meroe",
+    "greek_names": [
+      "Μερόη"
+    ],
+    "aliases": [
+      "Meroë",
+      "Begrawiya"
+    ],
+    "place_type": "metropolis",
+    "lat": 16.94,
+    "lon": 33.75,
+    "certainty": "high",
+    "pleiades_id": "805630",
+    "pleiades_uri": "https://pleiades.stoa.org/places/805630",
+    "coordinates_source": "DARE coordinate associated with Pleiades 805630.",
+    "notes": "Inland metropolis noted westward behind coastal peoples in section 2."
+  },
+  {
+    "place_key": "dachinabades",
+    "display_name": "Dachinabades",
+    "greek_names": [
+      "Δαχιναβάδει"
+    ],
+    "aliases": [
+      "Dachinabades"
+    ],
+    "place_type": "region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 51: Southern region beyond Barygaza containing the inland market-towns."
+  },
+  {
+    "place_key": "paithana",
+    "display_name": "Paithana",
+    "greek_names": [
+      "Παίθανα"
+    ],
+    "aliases": [
+      "Paithana"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 51: Inland market about twenty days south of Barygaza."
+  },
+  {
+    "place_key": "tagara",
+    "display_name": "Tagara",
+    "greek_names": [
+      "Τάγαρα"
+    ],
+    "aliases": [
+      "Tagara"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 51: Large city about ten days east beyond Paithana."
+  },
+  {
+    "place_key": "barygaza",
+    "display_name": "Barygaza",
+    "greek_names": [
+      "Βαρύγαζα"
+    ],
+    "aliases": [
+      "Barygaza"
+    ],
+    "place_type": "emporion",
+    "lat": 21.705136,
+    "lon": 72.995875,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Provisional Google MyMaps point matched by label to 'Barygaza/Baruch'. Not a Pleiades identification.",
+    "notes": "Generated from section 51: Port receiving wagon-carried goods from inland markets."
+  },
+  {
+    "place_key": "limyrike",
+    "display_name": "Limyrike",
+    "greek_names": [
+      "Λιμυρικῆς"
+    ],
+    "aliases": [
+      "Limyrike"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 51: Named as the endpoint region for the longer coastal course."
+  },
+  {
+    "place_key": "suppara",
+    "display_name": "Suppara",
+    "greek_names": [
+      "Σούππαρα"
+    ],
+    "aliases": [
+      "Suppara"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 52: Named market after Barygaza."
+  },
+  {
+    "place_key": "calliena",
+    "display_name": "Calliena",
+    "greek_names": [
+      "Καλλίενα"
+    ],
+    "aliases": [
+      "Calliena"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 52: Former lawful market-town; later restricted."
+  },
+  {
+    "place_key": "semylla",
+    "display_name": "Semylla",
+    "greek_names": [
+      "Εήμυλλα"
+    ],
+    "aliases": [
+      "Semylla"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Local market-town after Calliena."
+  },
+  {
+    "place_key": "mandagora",
+    "display_name": "Mandagora",
+    "greek_names": [
+      "Μανδαγόρα"
+    ],
+    "aliases": [
+      "Mandagora"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Local market-town in the sequence."
+  },
+  {
+    "place_key": "palaepatmae",
+    "display_name": "Palaepatmae",
+    "greek_names": [
+      "Παλαιπάτμαι"
+    ],
+    "aliases": [
+      "Palaepatmae"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Local market-town in the sequence."
+  },
+  {
+    "place_key": "melizigara",
+    "display_name": "Melizigara",
+    "greek_names": [
+      "Μελιζειγάρα"
+    ],
+    "aliases": [
+      "Melizigara"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Local market-town in the sequence."
+  },
+  {
+    "place_key": "byzantium",
+    "display_name": "Byzantium",
+    "greek_names": [
+      "Βυζάντιον"
+    ],
+    "aliases": [
+      "Byzantium"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Local market-town in the sequence."
+  },
+  {
+    "place_key": "toparon",
+    "display_name": "Toparon",
+    "greek_names": [
+      "Τοπαρὸν"
+    ],
+    "aliases": [
+      "Toparon"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Local market-town in the sequence."
+  },
+  {
+    "place_key": "tyrannosboas",
+    "display_name": "Tyrannosboas",
+    "greek_names": [
+      "Τυραννοσβόας"
+    ],
+    "aliases": [
+      "Tyrannosboas"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Local market-town in the sequence."
+  },
+  {
+    "place_key": "sesecrienae_islands",
+    "display_name": "Sesecrienae Islands",
+    "greek_names": [
+      "Σησεκρείεναι"
+    ],
+    "aliases": [
+      "Sesecrienae Islands"
+    ],
+    "place_type": "island",
+    "lat": 15.88983,
+    "lon": 73.462512,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Provisional Google MyMaps point matched by label to 'Sesecrienae'. Not a Pleiades identification.",
+    "notes": "Generated from section 53: Islands after the market-town sequence."
+  },
+  {
+    "place_key": "aegidii_island",
+    "display_name": "Aegidii island",
+    "greek_names": [
+      "Aἰγιδίων"
+    ],
+    "aliases": [
+      "Aegidii island"
+    ],
+    "place_type": "island",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Island named near Chersonesus."
+  },
+  {
+    "place_key": "caenitae_island",
+    "display_name": "Caenitae island",
+    "greek_names": [
+      "Καινειτῶν"
+    ],
+    "aliases": [
+      "Caenitae island"
+    ],
+    "place_type": "island",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Island named near Chersonesus."
+  },
+  {
+    "place_key": "chersonesus",
+    "display_name": "Chersonesus",
+    "greek_names": [
+      "Χερσόνησον"
+    ],
+    "aliases": [
+      "Chersonesus"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Place opposite the islands; pirate context is noted, not a trade good."
+  },
+  {
+    "place_key": "white_island",
+    "display_name": "White Island",
+    "greek_names": [
+      "Λευκὴ νῆσος"
+    ],
+    "aliases": [
+      "White Island"
+    ],
+    "place_type": "island",
+    "lat": 25.053257,
+    "lon": 37.259445,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Provisional Google MyMaps point matched by label to 'White Village/Leuke Kome'. Not a Pleiades identification.",
+    "notes": "Generated from section 53: Island in the coastal sequence."
+  },
+  {
+    "place_key": "naura",
+    "display_name": "Naura",
+    "greek_names": [
+      "Νάουρα"
+    ],
+    "aliases": [
+      "Naura"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: One of the first markets of Limyrike."
+  },
+  {
+    "place_key": "tyndis",
+    "display_name": "Tyndis",
+    "greek_names": [
+      "Τύνδις"
+    ],
+    "aliases": [
+      "Tyndis"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: One of the first markets of Limyrike."
+  },
+  {
+    "place_key": "muziris",
+    "display_name": "Muziris",
+    "greek_names": [
+      "Μουζιρὶς"
+    ],
+    "aliases": [
+      "Muziris"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Named as currently of leading importance."
+  },
+  {
+    "place_key": "nelkynda",
+    "display_name": "Nelkynda",
+    "greek_names": [
+      "Νέλκυνδα"
+    ],
+    "aliases": [
+      "Nelkynda"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 53: Named as currently of leading importance."
+  },
+  {
+    "place_key": "ariaca",
+    "display_name": "Ariaca",
+    "greek_names": [
+      "Ἀριακῆς"
+    ],
+    "aliases": [
+      "Ariaca"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 54: Source region for ships coming to Muziris in the local Greek text."
+  },
+  {
+    "place_key": "bacare",
+    "display_name": "Bacare",
+    "greek_names": [
+      "βακαρὴ"
+    ],
+    "aliases": [
+      "Bacare"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 55: Village at the river mouth where ships anchor to load cargo."
+  },
+  {
+    "place_key": "cottonara",
+    "display_name": "Cottonara",
+    "greek_names": [
+      "Κοττοναρικῇ"
+    ],
+    "aliases": [
+      "Cottonara"
+    ],
+    "place_type": "source_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 56: Specific pepper-producing district."
+  },
+  {
+    "place_key": "egypt",
+    "display_name": "Egypt",
+    "greek_names": [
+      "Αἰγύπτου"
+    ],
+    "aliases": [
+      "Egypt"
+    ],
+    "place_type": "source_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 56: Seasonal ships sail from Egypt to Limyrike."
+  },
+  {
+    "place_key": "chryse_peninsula",
+    "display_name": "Chryse peninsula",
+    "greek_names": [
+      "Χρυσονησιωτικὴ"
+    ],
+    "aliases": [
+      "Chryse peninsula"
+    ],
+    "place_type": "source_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 56: Named source for one tortoise-shell variety."
+  },
+  {
+    "place_key": "bakare",
+    "display_name": "Bakare",
+    "greek_names": [
+      "Βακαρῆς"
+    ],
+    "aliases": [
+      "Bakare"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 58: Starting point for the described coastal sequence."
+  },
+  {
+    "place_key": "pyrrhon_mountain",
+    "display_name": "Pyrrhon mountain",
+    "greek_names": [
+      "Πυρρὸν ὄρος"
+    ],
+    "aliases": [
+      "Pyrrhon mountain"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 58: Coastal landmark."
+  },
+  {
+    "place_key": "paralia",
+    "display_name": "Paralia",
+    "greek_names": [
+      "Παραλίᾳ"
+    ],
+    "aliases": [
+      "Paralia"
+    ],
+    "place_type": "region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 58: Country along the southern coast."
+  },
+  {
+    "place_key": "balita",
+    "display_name": "Balita",
+    "greek_names": [
+      "Βαλίτα"
+    ],
+    "aliases": [
+      "Balita"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 58: Place with a good harbor."
+  },
+  {
+    "place_key": "kolchoi",
+    "display_name": "Kolchoi",
+    "greek_names": [
+      "Κόλχοι"
+    ],
+    "aliases": [
+      "Kolchoi"
+    ],
+    "place_type": "source_region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 58: City associated with pearl-fishing."
+  },
+  {
+    "place_key": "komarei",
+    "display_name": "Komarei",
+    "greek_names": [
+      "Κομαρεὶ"
+    ],
+    "aliases": [
+      "Komarei"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 59: Starting point for the southern coastal stretch."
+  },
+  {
+    "place_key": "epiodoros_island",
+    "display_name": "Epiodoros island",
+    "greek_names": [
+      "Ἠπιοδώρου νῆσον"
+    ],
+    "aliases": [
+      "Epiodoros island"
+    ],
+    "place_type": "island",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 59: Island around which pearls are collected."
+  },
+  {
+    "place_key": "kamara",
+    "display_name": "Kamara",
+    "greek_names": [
+      "Καμάρα"
+    ],
+    "aliases": [
+      "Kamara"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 60: Local emporion/roadstead."
+  },
+  {
+    "place_key": "poduke",
+    "display_name": "Poduke",
+    "greek_names": [
+      "Ποδούκη"
+    ],
+    "aliases": [
+      "Poduke"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 60: Local emporion/roadstead."
+  },
+  {
+    "place_key": "sopatma",
+    "display_name": "Sopatma",
+    "greek_names": [
+      "Σωπάτμα"
+    ],
+    "aliases": [
+      "Sopatma"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 60: Local emporion/roadstead."
+  },
+  {
+    "place_key": "chryse",
+    "display_name": "Chryse",
+    "greek_names": [
+      "Χρυσῆν"
+    ],
+    "aliases": [
+      "Chryse"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 60: Destination for larger vessels."
+  },
+  {
+    "place_key": "ganges",
+    "display_name": "Ganges",
+    "greek_names": [
+      "Γάγγην"
+    ],
+    "aliases": [
+      "Ganges"
+    ],
+    "place_type": "route_marker",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "notes": "Generated from section 60: Destination for larger vessels."
+  }
+]

@@ -1,0 +1,397 @@
+[
+  {
+    "chunk_id": "section_0061",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[61]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[61]/p",
+    "section_order": 61,
+    "greek_text": "61. Περὶ δὲ τὴν μετʼ αὐτὴν χώραν, ἤδη πρὸς ἀνατολὴν τοῦ πλοὸς ἀπονεύοντος, εἰς πέλαγος ἔκκειται πρὸς αὐτὴν τὴν δύσιν νῆσος λεγομένη Παλαισιμούνδου, παρὰ δὲ τοῖς ἀρχαίοις αὐτῶν Ταπροβάνη. Ταύτης τὰ μὲν πρὸς βορέαν ἐστὶν ἥμερα καὶ διαπλεῖται τοῖς εἰς τὸν πλιονακιστινει καὶ σχεδὸν εἰς τὸ κατʼ αὐτῆς ἀντιπαρακείμενον Ἀζανίας παρήκει. Γίνεται δὲ ἐν αὐτῇ πινικὸν καὶ λιθία διαφανής καὶ σινδόνες καὶ χελῶναι.",
+    "draft_translation": "Beyond the coast lies the island called Palaisimoundou, formerly Taprobane; it produces pearls, transparent stones, cloths, and tortoise-shell.",
+    "places": [
+      {
+        "greek_surface": "Παλαισιμούνδου",
+        "english_label": "Palaisimoundou",
+        "role": "source_place",
+        "notes": "Island named as the producing region."
+      },
+      {
+        "greek_surface": "Ταπροβάνη",
+        "english_label": "Taprobane",
+        "role": "alternate_name",
+        "notes": "Older name for Palaisimoundou."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "pearls",
+        "greek_surface": "πινικὸν",
+        "category": "marine_product",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Produced on the island."
+      },
+      {
+        "english_label": "transparent stones",
+        "greek_surface": "λιθία διαφανής",
+        "category": "stone",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Produced on the island."
+      },
+      {
+        "english_label": "cloths/muslins",
+        "greek_surface": "σινδόνες",
+        "category": "textile",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Produced on the island."
+      },
+      {
+        "english_label": "tortoise-shell",
+        "greek_surface": "χελῶναι",
+        "category": "animal_product",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Produced on the island."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_product",
+        "source_place": "Palaisimoundou/Taprobane",
+        "destination_place": "",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "pearls",
+          "transparent stones",
+          "cloths/muslins",
+          "tortoise-shell"
+        ],
+        "notes": "Production list without an explicit destination."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0062",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[62]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[62]/p",
+    "section_order": 62,
+    "greek_text": "62. Περὶ δὲ τούτους τοὺς τόπους πολὺ τῇ μεσογείῳ παρήκουσα Μασαλία παράκειται χώρα· γίνονται ἐν αὐτῇ σινδόνες πλεῖσται. Ἀπὸ δὲ ταύτης εἰς αὐτὴν τὴν ἀνατολὴν διαπεράσαντι τὸν παρακείμενον κόλπον ἡ Δησαρηνὴ χώρα, φέρουσα ἐλέφαντα τὸν λεγόμενον βωσαρὴ, καὶ μετʼ αὐτὴν, εἰς τὸν βορέαν ἤδη ἀπονεύοντος τοῦ πλοὸς, βάρβαρα πολλὰ ἔθνη, ἐν οἷς οἱ Κιρρᾶδαι, γένος ἀνθρώπων ἐντεθλιμμένων τὴν ῥῖνα, ἀγρίων, καὶ Βαργύσων ἕτερον ἔθνος καὶ τὸ τῶν Ἱππιοπροσώπων ἢ Μακροπροσώπων, λεγόμενον ἀνθρωποφάγον εἶναι.",
+    "draft_translation": "Masalia lies inland and produces many cloths. Across the adjoining gulf, Desarene supplies the ivory called Bosare.",
+    "places": [
+      {
+        "greek_surface": "Μασαλία",
+        "english_label": "Masalia",
+        "role": "source_place",
+        "notes": "Inland country producing many cloths."
+      },
+      {
+        "greek_surface": "Δησαρηνὴ χώρα",
+        "english_label": "Desarene",
+        "role": "source_place",
+        "notes": "Country across the gulf associated with Bosare ivory."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "cloths/muslins",
+        "greek_surface": "σινδόνες πλεῖσται",
+        "category": "textile",
+        "structure_type": "standalone-good",
+        "confidence": "high",
+        "notes": "Produced in Masalia in great quantity."
+      },
+      {
+        "english_label": "Bosare ivory",
+        "greek_surface": "ἐλέφαντα τὸν λεγόμενον βωσαρὴ",
+        "category": "animal_product",
+        "structure_type": "compound-entity",
+        "confidence": "medium",
+        "notes": "Preserved as a named ivory/elephant-product entity; exact rendering of Bosare is uncertain."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_product",
+        "source_place": "Masalia",
+        "destination_place": "",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "cloths/muslins"
+        ],
+        "notes": "Production without explicit destination."
+      },
+      {
+        "movement_type": "local_product",
+        "source_place": "Desarene",
+        "destination_place": "",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "Bosare ivory"
+        ],
+        "notes": "Named product associated with Desarene."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0063",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[63]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[63]/p",
+    "section_order": 63,
+    "greek_text": "63. Μετὰ δὲ ταῦτα, εἰς τὴν ἀνατολὴν πλεόντων καὶ τὸν ὠκεανὸν ἐν δεξιοῖς ἐχόντων, εὐώνυμα δὲ τὰ λοιπὰ μέρη ἔξωθεν παραπλεόντων, ὁ Γάγγης ἀπαντᾷ καὶ ἡ περὶ αὐτὴν ἐσχάτη τῆς ἀνατολῆς ἤπειρος, ἡ Χρυσῆ. Ποταμὸς δέ ἐστι περὶ αὐτὴν ὁ Γάγγης λεγόμενος, καὶ αὐτὸς μέγιστος τῶν κατὰ τὴν Ἰνδικὴν, ἀπόβασίν τε καὶ ἀνάβασιν τὴν αὐτὴν ἔχων τῷ Νείλῳ, καθʼ ὃν καὶ ἐμπόριόν ἐστιν ὁμώνυμον τῷ ποταμῷ, ὁ Γάγγης, διʼ οἷ φέρεται τό τε μαλάβαθρον καὶ ἡ Γαγγητικὴ νάρδος καὶ πινικὸν καὶ σινδόνες αἱ διαφορώταται, αἱ Γαγγητικαὶ λεγόμεναι. Λέγεται δὲ καὶ χρυσωρύχια περὶ τοὺς τόπους εἶναι, νόμισμά τε χρυ σοῦ, ὁ λεγόμενος κάλτις. Κατʼ αὐτὸν δὲ τὸν ποταμὸν νῆσός ἐστιν ὠκεάνιος, ἐσχάτη τῶν πρὸς ἀνατολὴν μερῶν τῆς οἰκουμένης, ὑπʼ αὐτὸν ἀνέχοντα τὸν ἥλιον, καλουμένη Χρυσῆ, χελώνην ἔχουσα πάντων τῶν κατὰ τὴν Ἐρυθρὰν τόπων ἀρίστην.",
+    "draft_translation": "The Ganges river has a same-named emporion, through which malabathrum, Gangetic nard, pearls, and the finest Gangetic cloths are carried. Chryse is described farther east, with gold-working nearby and the best tortoise-shell.",
+    "places": [
+      {
+        "greek_surface": "Γάγγης",
+        "english_label": "Ganges",
+        "role": "source_place",
+        "notes": "River and emporion through which goods are carried."
+      },
+      {
+        "greek_surface": "Χρυσῆ",
+        "english_label": "Chryse",
+        "role": "source_place",
+        "notes": "Eastern land associated with exceptional tortoise-shell."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "malabathrum",
+        "greek_surface": "μαλάβαθρον",
+        "category": "aromatic",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Carried through the Ganges emporion."
+      },
+      {
+        "english_label": "Gangetic nard",
+        "greek_surface": "ἡ Γαγγητικὴ νάρδος",
+        "category": "aromatic",
+        "structure_type": "compound-entity",
+        "confidence": "high",
+        "notes": "Named nard variety carried through the Ganges emporion."
+      },
+      {
+        "english_label": "pearls",
+        "greek_surface": "πινικὸν",
+        "category": "marine_product",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Carried through the Ganges emporion."
+      },
+      {
+        "english_label": "Gangetic muslins",
+        "greek_surface": "σινδόνες αἱ διαφορώταται, αἱ Γαγγητικαὶ",
+        "category": "textile",
+        "structure_type": "compound-entity",
+        "confidence": "high",
+        "notes": "Preserved as the named finest Gangetic cloths."
+      },
+      {
+        "english_label": "gold",
+        "greek_surface": "χρυσωρύχια",
+        "category": "metal",
+        "structure_type": "local-resource",
+        "confidence": "medium",
+        "notes": "Gold-mining is reported nearby; not presented as a port good."
+      },
+      {
+        "english_label": "tortoise-shell",
+        "greek_surface": "χελώνην",
+        "category": "animal_product",
+        "structure_type": "source-specific-entity",
+        "confidence": "high",
+        "notes": "Chryse is said to have the best tortoise-shell."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "carried_through_emporion",
+        "source_place": "Ganges region",
+        "destination_place": "",
+        "route_or_intermediate_place": "Ganges emporion",
+        "goods": [
+          "malabathrum",
+          "Gangetic nard",
+          "pearls",
+          "Gangetic muslins"
+        ],
+        "notes": "The destination is not named."
+      },
+      {
+        "movement_type": "local_product",
+        "source_place": "Chryse",
+        "destination_place": "",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "tortoise-shell"
+        ],
+        "notes": "Chryse is the source context for the tortoise-shell."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0064",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[64]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[64]/p",
+    "section_order": 64,
+    "greek_text": "64. Μετὰ δὲ ταύτην τὴν χώραν ὑπʼ αὐτὸν ἤδη τὸν βορέαν, ἔξωθεν εἰς Θινός τινα τόπον ἀποληγούσης τῆς θαλάσσης, παράκειται ἐν αὐτῇ πόλις μεσόγειος μεγίστη, λεγομένη Θῖναι, ἀφʼ ἧς τό τε ἔριον καὶ τὸ νῆμα καὶ τὸ οόνιον τὸ Σηρικὸν εἰς τὰ Βαρύγαζα διὰ Βάκτρων πεζῇ φέρεται καὶ εἰς τὴν Λιμυρικὴν πάλιν διὰ τοῦ Γάγγου ποταμοῦ. Εἰς δὲ τὴν Θῖνα ταύτην οὐκ ἔστιν εὐχερῶς ἀπελθεῖν· σπανίως γὰρ ἀπʼ αὐτῆς τινὲς οὐ πολλοὶ ἔρχονται. Κεῖται δὲ ὁ τόπος ὑπʼ αὐτὴν τὴν μικρὰν ἄρκτον, λέγεται δὲ συνορίζειν τοῖς ἀπεστραμμένοις μέρεσι τοῦ Πόντου καὶ τῆς Κασπίας θαλάσσης, καθʼ ἣν ἡ παρακειμένη λίμνη Μαιῶτις εἰς τὸν ὠκεανὸν συναναστομοῦσα.",
+    "draft_translation": "Thina is a great inland city from which Seric wool, thread, and cloth are brought by land through Bactria to Barygaza and again to Limyrike by way of the Ganges river; travel to Thina itself is difficult.",
+    "places": [
+      {
+        "greek_surface": "Θῖναι",
+        "english_label": "Thina",
+        "role": "source_place",
+        "notes": "Inland source city for Seric textiles."
+      },
+      {
+        "greek_surface": "Βαρύγαζα",
+        "english_label": "Barygaza",
+        "role": "destination_port",
+        "notes": "Western destination reached by land through Bactria."
+      },
+      {
+        "greek_surface": "Βάκτρων",
+        "english_label": "Bactria",
+        "role": "route_or_intermediate_place",
+        "notes": "Overland route to Barygaza."
+      },
+      {
+        "greek_surface": "Λιμυρικὴν",
+        "english_label": "Limyrike",
+        "role": "destination_market",
+        "notes": "Destination reached via the Ganges route."
+      },
+      {
+        "greek_surface": "Γάγγου ποταμοῦ",
+        "english_label": "Ganges river",
+        "role": "route_or_intermediate_place",
+        "notes": "River route to Limyrike."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "Seric wool",
+        "greek_surface": "τὸ ἔριον",
+        "category": "textile",
+        "structure_type": "coordinated-list-item",
+        "confidence": "medium",
+        "notes": "The final adjective 'Seric' appears to govern the series."
+      },
+      {
+        "english_label": "Seric thread",
+        "greek_surface": "τὸ νῆμα",
+        "category": "textile",
+        "structure_type": "coordinated-list-item",
+        "confidence": "medium",
+        "notes": "Thread from Thina, read as part of the Seric series."
+      },
+      {
+        "english_label": "Seric cloth",
+        "greek_surface": "τὸ οόνιον τὸ Σηρικὸν",
+        "category": "textile",
+        "structure_type": "compound-entity",
+        "confidence": "high",
+        "notes": "Compound textile entity preserved."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "overland_export",
+        "source_place": "Thina",
+        "destination_place": "Barygaza",
+        "route_or_intermediate_place": "Bactria",
+        "goods": [
+          "Seric wool",
+          "Seric thread",
+          "Seric cloth"
+        ],
+        "notes": "Brought by land through Bactria."
+      },
+      {
+        "movement_type": "riverine_export",
+        "source_place": "Thina",
+        "destination_place": "Limyrike",
+        "route_or_intermediate_place": "Ganges river",
+        "goods": [
+          "Seric wool",
+          "Seric thread",
+          "Seric cloth"
+        ],
+        "notes": "Also brought to Limyrike through the Ganges route."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0065",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[65]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[65]/p",
+    "section_order": 65,
+    "greek_text": "65. Κατʼ ἔτος δὲ παραγίνεται ἐπὶ τὴν συνορίαν τῆς Θινὸς ἔθνος τι, τῷ μὲν σώματι κολοβοὶ καὶ σφόδρα πλατυπρόσωποι, ἐννοίαις δὲ λῷστοι αὐτοὺς δὲ λέγεσθαί φασι Σησάτας, παρομοίους ἀνημέροις· παραγίνονται σὺν γυναιξὶ καὶ τέκνοις, βαστάζοντες φορτία μεγάλα καὶ ταρπόνας ὠμαμπελίνοις παραπλησίας, εἶτʼ ἐνεπιμένουσιν ἐπί τινα τόπον τῆς συνορίας αὐτῶν καὶ τῶν ἐπὶ τῆς Θινὸς, καὶ ἑορτάζουσιν ἐπί τινας ἡμέρας, ὑποστρώσαντες ἑαυτοῖς τὰς ταρπόνας, καὶ ἀπαίρουσιν εἰς τὰ ἴδια εἰς τοὺς ἐσωτέρους τόπους. Οἱ δὲ ταῦτα δοκεύοντες τότε παραγίνονται ἐπὶ τοὺς τόπους καὶ συλλέγουσι τὰ ἐκείνων ὑποστρώματα, καὶ ἐξινιάσαντες καλάμους τοὺς λεγομένους πέτρους ἐπὶ λεπτὸν ἐπιδιπλώσαντες τὰ φύλλα καὶ σφαιροειδῆ ποιοῦντες διείρουσι ταῖς ἀπὸ τῶν καλάμων ἴναις. Γίνεται δὲ γένη τρία· ἐκ μὲν τοῦ μείζονος φύλλου τὸ ἁδρόσφαιρον μαλάβαθρον λεγόμενον, ἐκ δὲ τοῦ ὑποδεεστέρου τὸ μεσόσφαιρον, ἐκ δὲ τοῦ μικροτέρου τὸ μικρόσφαιρον. Ἔνθεν τὰ τρία μέρη τοῦ μαλαβάθρου γίνεται καὶ τότε φέρεται εἰς τὴν Ἰνδικὴν ὑπὸ τῶν κατεργαζομένων αὐτά.",
+    "draft_translation": "The Sesatai gather and process malabathrum leaves near the Thina frontier. The processed leaves are sorted into three forms by leaf size and then carried into India by the workers who prepare them.",
+    "places": [
+      {
+        "greek_surface": "Θινὸς",
+        "english_label": "Thina",
+        "role": "source_region",
+        "notes": "The processing scene occurs at the frontier of Thina."
+      },
+      {
+        "greek_surface": "Ἰνδικὴν",
+        "english_label": "India",
+        "role": "destination_region",
+        "notes": "Destination into which the prepared malabathrum is carried."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "large-ball malabathrum",
+        "greek_surface": "ἁδρόσφαιρον μαλάβαθρον",
+        "category": "aromatic",
+        "structure_type": "compound-entity",
+        "confidence": "high",
+        "notes": "One of three processed malabathrum grades."
+      },
+      {
+        "english_label": "middle-ball malabathrum",
+        "greek_surface": "τὸ μεσόσφαιρον",
+        "category": "aromatic",
+        "structure_type": "compound-entity",
+        "confidence": "high",
+        "notes": "One of three processed malabathrum grades; head noun supplied from the list context."
+      },
+      {
+        "english_label": "small-ball malabathrum",
+        "greek_surface": "τὸ μικρόσφαιρον",
+        "category": "aromatic",
+        "structure_type": "compound-entity",
+        "confidence": "high",
+        "notes": "One of three processed malabathrum grades; head noun supplied from the list context."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "processed_and_carried_to_region",
+        "source_place": "Thina frontier",
+        "destination_place": "India",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "large-ball malabathrum",
+          "middle-ball malabathrum",
+          "small-ball malabathrum"
+        ],
+        "notes": "The mats and reeds are processing tools, not extracted as commodities."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0066",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[66]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[66]/p",
+    "section_order": 66,
+    "greek_text": "66. Τὰ δὲ μετὰ τούτους τοὺς τόπους, διά τε ὑπερβολὰς χειμώνων καὶ πάγους μεγίστους δύσβατα ὄντα, εἴτε καὶ θείᾳ τινὶ δυνάμει θεῶν, ἀνερεύνητά ἐστιν.",
+    "draft_translation": "The final notice describes the remoteness and difficulty of the farthest regions beyond Thina without listing a tradeable commodity or a concrete goods movement.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  }
+]

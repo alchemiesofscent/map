@@ -1,0 +1,829 @@
+[
+  {
+    "chunk_id": "section_0051",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[51]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[51]/p",
+    "section_order": 51,
+    "greek_text": "51. Τῶν δὲ ἐν αὐτῇ τῇ Δαχιναβάδει δύο ἐστὶ τὰ διασημότατα ἐμπόρια, Παίθανα μὲν ἀπὸ Βαρυγάζων ἀπέχοντα ὁδὸν ἡμερῶν εἴκοσι πρὸς νότον, ἀπὸ δὲ ταύτης ὡς ἡμερῶν δέκα πρὸς ἀνατολὴν ἑτέρα πόλις μεγίστη Τάγαρα. Κατάγεται δὲ ἐξ αὐτῶν, πορείαις ἁμαξῶν καὶ ἀνοδίαις μεγίσταις εἰς τὰ Βαρύγαζα ἀπὸ μὲν Παιθάνων ὀνυχίνη λιθία πλείστη, ἀπὸ δὲ Ταγάρων ὀθόνιον πολὺ χυδαῖον καὶ σινδόνων παντοῖα καὶ μολόχινα καί τινα ἄλλα τοπικῶς ἐκεῖ προχωροῦντα φορτία τῶν παραθαλασσίων μερῶν. Ὁ δὲ ὅλος παράπλους μέχρι τῆς Λιμυρικῆς ἐστὶ σταδίων ἑπτακισχιλίων, πλεῖστοι δὲ εἰς Aἰγιαλόν.",
+    "draft_translation": "In Dachinabades the notable markets are Paithana, about twenty days south from Barygaza, and Tagara, about ten days farther east. Goods are carried down to Barygaza by wagons through roadless country: much onyx from Paithana, and from Tagara much common cloth, various muslins, mallow cloth, and other local cargo from the coastal regions.",
+    "places": [
+      {
+        "greek_surface": "Δαχιναβάδει",
+        "english_label": "Dachinabades",
+        "role": "region",
+        "notes": "Southern region beyond Barygaza containing the inland market-towns."
+      },
+      {
+        "greek_surface": "Παίθανα",
+        "english_label": "Paithana",
+        "role": "source_market",
+        "notes": "Inland market about twenty days south of Barygaza."
+      },
+      {
+        "greek_surface": "Τάγαρα",
+        "english_label": "Tagara",
+        "role": "source_market",
+        "notes": "Large city about ten days east beyond Paithana."
+      },
+      {
+        "greek_surface": "Βαρύγαζα",
+        "english_label": "Barygaza",
+        "role": "destination_port",
+        "notes": "Port receiving wagon-carried goods from inland markets."
+      },
+      {
+        "greek_surface": "Λιμυρικῆς",
+        "english_label": "Limyrike",
+        "role": "route_region",
+        "notes": "Named as the endpoint region for the longer coastal course."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "onyx stone",
+        "greek_surface": "ὀνυχίνη λιθία",
+        "category": "stone",
+        "structure_type": "simple",
+        "confidence": "high",
+        "notes": "Brought in quantity from Paithana."
+      },
+      {
+        "english_label": "common cloth",
+        "greek_surface": "ὀθόνιον πολὺ χυδαῖον",
+        "category": "textile",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Brought in quantity from Tagara."
+      },
+      {
+        "english_label": "various muslins or cloths",
+        "greek_surface": "σινδόνων παντοῖα",
+        "category": "textile",
+        "structure_type": "compound",
+        "confidence": "high",
+        "notes": "Textiles in the Tagara cargo list."
+      },
+      {
+        "english_label": "mallow-colored cloth",
+        "greek_surface": "μολόχινα",
+        "category": "textile",
+        "structure_type": "simple",
+        "confidence": "medium",
+        "notes": "Textile item in the Tagara cargo list."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "inland_wagon_supply_to_port",
+        "source_place": "Paithana",
+        "destination_place": "Barygaza",
+        "route_or_intermediate_place": "roadless inland tracts",
+        "goods": [
+          "onyx stone"
+        ],
+        "notes": "The passage explicitly says these goods are brought down by wagons."
+      },
+      {
+        "movement_type": "inland_wagon_supply_to_port",
+        "source_place": "Tagara",
+        "destination_place": "Barygaza",
+        "route_or_intermediate_place": "roadless inland tracts",
+        "goods": [
+          "common cloth",
+          "various muslins or cloths",
+          "mallow-colored cloth"
+        ],
+        "notes": "Other local coastal cargo is mentioned generically but not extracted as a commodity."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0052",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[52]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[52]/p",
+    "section_order": 52,
+    "greek_text": "52. Τοπικὰ δὲ ἐμπόρια κατὰ τὸ ἑξῆς κείμενα Ἀκαβάρου, Σούππαρα, Καλλίενα πόλις, ἐπὶ τῶν Σαραγάνου τοῦ πρεσβυτέρου χρόνων ἐμπόριον ἔνθεσμον γενόμενον· μετὰ γὰρ τὸ κατασχεῖν αὐτὴν Σανδένην ἐκωλύθη ἐπὶ πολὺ, καὶ γὰρ τὰ ἐκ τύχης εἰς τούτους τοὺς τόπους εἰσβάλλοντα πλοῖα Ἑλληνικὰ μετὰ φυλακῆς εἰς Βαρύγαζα εἰσάγεται.",
+    "draft_translation": "The next local markets after Barygaza are Suppara and Calliena. Calliena was once a lawful market-town, but after Sandares took it the port was much obstructed, and Greek ships putting in there may be taken under guard to Barygaza.",
+    "places": [
+      {
+        "greek_surface": "Σούππαρα",
+        "english_label": "Suppara",
+        "role": "route_port",
+        "notes": "Named market after Barygaza."
+      },
+      {
+        "greek_surface": "Καλλίενα",
+        "english_label": "Calliena",
+        "role": "route_port",
+        "notes": "Former lawful market-town; later restricted."
+      },
+      {
+        "greek_surface": "Βαρύγαζα",
+        "english_label": "Barygaza",
+        "role": "destination_port",
+        "notes": "Greek ships landing at Calliena may be taken there under guard."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": [
+      {
+        "movement_type": "ship_diversion_under_guard",
+        "source_place": "Calliena",
+        "destination_place": "Barygaza",
+        "route_or_intermediate_place": "",
+        "goods": [],
+        "notes": "Greek ships are moved under guard; no named goods are extracted."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0053",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[53]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[53]/p",
+    "section_order": 53,
+    "greek_text": "53. Μετὰ δὲ Καλλίεναν ἄλλα ἐμπόρια τοπικὰ Εήμυλλα καὶ Μανδαγόρα καὶ Παλαιπάτμαι καὶ Μελιζειγάρα καὶ Βυζάντιον καὶ Τοπαρὸν καὶ Τυραννοσβόας. Εἶτα Σησεκρείεναι λεγόμεναι νῆσοι καὶ ἡ τῶν Aἰγιδίων καὶ ἡ τῶν Καινειτῶν κατὰ τὴν λεγομένην Χερσόνησον, καθʼ οὓς τόπους εἰσὶ πειραταὶ, καὶ μετὰ ταύτην Λευκὴ νῆσος. Εἶτα Νάουρα καὶ Τύνδις τὰ πρῶτα ἐμπόρια τῆς Λιμυρικῆς, καὶ μετὰ ταύτας, Μουζιρὶς καὶ Νέλκυνδα, αἱ νῦν πράσσουσαι.",
+    "draft_translation": "After Calliena come other local markets: Semylla, Mandagora, Palaepatmae, Melizigara, Byzantium, Toparon, and Tyrannosboas; then islands near Chersonesus, pirate areas, White Island, and then Naura and Tyndis, the first markets of Limyrike, followed by the leading ports Muziris and Nelkynda.",
+    "places": [
+      {
+        "greek_surface": "Καλλίεναν",
+        "english_label": "Calliena",
+        "role": "route_port",
+        "notes": "Starting point for the subsequent coastal sequence."
+      },
+      {
+        "greek_surface": "Εήμυλλα",
+        "english_label": "Semylla",
+        "role": "route_port",
+        "notes": "Local market-town after Calliena."
+      },
+      {
+        "greek_surface": "Μανδαγόρα",
+        "english_label": "Mandagora",
+        "role": "route_port",
+        "notes": "Local market-town in the sequence."
+      },
+      {
+        "greek_surface": "Παλαιπάτμαι",
+        "english_label": "Palaepatmae",
+        "role": "route_port",
+        "notes": "Local market-town in the sequence."
+      },
+      {
+        "greek_surface": "Μελιζειγάρα",
+        "english_label": "Melizigara",
+        "role": "route_port",
+        "notes": "Local market-town in the sequence."
+      },
+      {
+        "greek_surface": "Βυζάντιον",
+        "english_label": "Byzantium",
+        "role": "route_port",
+        "notes": "Local market-town in the sequence."
+      },
+      {
+        "greek_surface": "Τοπαρὸν",
+        "english_label": "Toparon",
+        "role": "route_port",
+        "notes": "Local market-town in the sequence."
+      },
+      {
+        "greek_surface": "Τυραννοσβόας",
+        "english_label": "Tyrannosboas",
+        "role": "route_port",
+        "notes": "Local market-town in the sequence."
+      },
+      {
+        "greek_surface": "Σησεκρείεναι",
+        "english_label": "Sesecrienae Islands",
+        "role": "route_or_intermediate_place",
+        "notes": "Islands after the market-town sequence."
+      },
+      {
+        "greek_surface": "Aἰγιδίων",
+        "english_label": "Aegidii island",
+        "role": "route_or_intermediate_place",
+        "notes": "Island named near Chersonesus."
+      },
+      {
+        "greek_surface": "Καινειτῶν",
+        "english_label": "Caenitae island",
+        "role": "route_or_intermediate_place",
+        "notes": "Island named near Chersonesus."
+      },
+      {
+        "greek_surface": "Χερσόνησον",
+        "english_label": "Chersonesus",
+        "role": "route_or_intermediate_place",
+        "notes": "Place opposite the islands; pirate context is noted, not a trade good."
+      },
+      {
+        "greek_surface": "Λευκὴ νῆσος",
+        "english_label": "White Island",
+        "role": "route_or_intermediate_place",
+        "notes": "Island in the coastal sequence."
+      },
+      {
+        "greek_surface": "Νάουρα",
+        "english_label": "Naura",
+        "role": "market_port",
+        "notes": "One of the first markets of Limyrike."
+      },
+      {
+        "greek_surface": "Τύνδις",
+        "english_label": "Tyndis",
+        "role": "market_port",
+        "notes": "One of the first markets of Limyrike."
+      },
+      {
+        "greek_surface": "Λιμυρικῆς",
+        "english_label": "Limyrike",
+        "role": "region",
+        "notes": "Region whose first markets are Naura and Tyndis."
+      },
+      {
+        "greek_surface": "Μουζιρὶς",
+        "english_label": "Muziris",
+        "role": "major_destination_port",
+        "notes": "Named as currently of leading importance."
+      },
+      {
+        "greek_surface": "Νέλκυνδα",
+        "english_label": "Nelkynda",
+        "role": "major_destination_port",
+        "notes": "Named as currently of leading importance."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0054",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[54]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[54]/p",
+    "section_order": 54,
+    "greek_text": "54. Βασιλείας δʼ ἐστὶν ἡ μὲν Τύνδις Κηπροβότρου, κώμη παραθαλάσσιος ἔνσημος· ἡ δὲ Μουζιρὶς βασιλείας μὲν τῆς αὐτῆς, ἀκμάζουσα δὲ τοῖς ἀπὸ τῆς Ἀριακῆς εἰς αὐτὴν ἐρχομένοις πλοίοις καὶ τοῖς Ἑλληνικοῖς· κεῖται δὲ παρὰ ποταμὸν, ἀπέχουσα ἀπὸ μὲν Τύνδεως διὰ τοῦ ποταμοῦ καὶ διὰ θαλάσσης σταδίους πεντακοσίους, ἀπὸ δὲ τοῦ κατʼ αὐτὴν εἴκοσι. Ἡ δὲ gentu, Νέλκυνδα σταδίους μὲν ἀπὸ Μουζιρέως ἀπέχει σχεδὸν πεντακοσίους, ὁμοίως διά τε ποταμοῦ καὶ πεζῇ καὶ διὰ θαλάσσης, βασιλείας δέ ἐστιν ἑτέρας, τῆς Πανδίονος· κεῖται δὲ καὶ αὐτὴ παρὰ ποταμὸν, ὡσεὶ ἀπὸ σταδίων ἑκατὸν εἴκοσι τῆς θαλάσσης.",
+    "draft_translation": "Tyndis belongs to the kingdom of Cerobothras and is a visible seaside village. Muziris, in the same kingdom, is busy with ships coming from Ariaca and with Greek ships; it lies on a river, five hundred stadia by river and sea from Tyndis and twenty stadia upstream from the shore. Nelkynda is about five hundred stadia from Muziris by river and land/sea route, belongs to the Pandion kingdom, and lies on a river about 120 stadia from the sea.",
+    "places": [
+      {
+        "greek_surface": "Τύνδις",
+        "english_label": "Tyndis",
+        "role": "market_port",
+        "notes": "Seaside village in the kingdom of Cerobothras."
+      },
+      {
+        "greek_surface": "Μουζιρὶς",
+        "english_label": "Muziris",
+        "role": "destination_port",
+        "notes": "Major river port receiving Ariaca and Greek ships."
+      },
+      {
+        "greek_surface": "Ἀριακῆς",
+        "english_label": "Ariaca",
+        "role": "source_region",
+        "notes": "Source region for ships coming to Muziris in the local Greek text."
+      },
+      {
+        "greek_surface": "Νέλκυνδα",
+        "english_label": "Nelkynda",
+        "role": "market_port",
+        "notes": "River port in another kingdom, associated with the Pandion."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": [
+      {
+        "movement_type": "ship_arrival_to_market",
+        "source_place": "Ariaca",
+        "destination_place": "Muziris",
+        "route_or_intermediate_place": "",
+        "goods": [],
+        "notes": "The passage notes arriving ships but names no commodities in this section."
+      },
+      {
+        "movement_type": "ship_arrival_to_market",
+        "source_place": "Greek ports or Greek merchants",
+        "destination_place": "Muziris",
+        "route_or_intermediate_place": "",
+        "goods": [],
+        "notes": "Greek ships are mentioned as arriving; no named goods are extracted."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0055",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[55]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[55]/p",
+    "section_order": 55,
+    "greek_text": "55. Ἑτέρα δὲ κατʼ αὐτὸ τὸ στόμα τοῦ ποταμοῦ πρόκειται κώμη βακαρὴ, εἰς ἣν ἀπὸ Νελκύνδων ἐπὶ τῆς ἀναγωγῆς προκαταβαίνουσι τὰ πλοῖα καὶ ἐπὶ σάλου διορμίζεται πρὸς ἀνάληψιν τῶν φορτίων διὰ δὴ τὸν ποταμὸν ἕρματα καὶ διάπλους ἔχειν ἐλαφρούς. Αὐτοὶ δὲ οἱ βασιλεῖς ἀμφοτέρων τῶν ἐμπορίων ἐν τῆ μεσογείᾳ κατοικοῦσι. Καὶ περὶ τούσδε τοὺς τόπους τοῖς ἐκ πελάγους ἐρχομένοις σημεῖον ἐπιβολῆς εἰσιν οἱ προαπαντῶντες ὄφεις, μέλανες μὲν καὶ αὐτοὶ τὴν χρόαν, βραχύτεροι δὲ καὶ δρακοντοειδεῖς τὴν κεφαλήν καὶ τοῖς ὄμμασιν αἱματώδεις.",
+    "draft_translation": "At the mouth of Nelkynda's river lies another village, Bacare, where ships drop down from Nelkynda on the outward voyage and anchor offshore to take on cargo because the river is shoaly and hard to navigate. The kings of both markets live inland; black snakes with blood-red eyes are a sign for those approaching from the sea.",
+    "places": [
+      {
+        "greek_surface": "βακαρὴ",
+        "english_label": "Bacare",
+        "role": "destination_roadstead",
+        "notes": "Village at the river mouth where ships anchor to load cargo."
+      },
+      {
+        "greek_surface": "Νελκύνδων",
+        "english_label": "Nelkynda",
+        "role": "source_port",
+        "notes": "Ships drop down from Nelkynda on the outward voyage."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": [
+      {
+        "movement_type": "outward_loading_stop",
+        "source_place": "Nelkynda",
+        "destination_place": "Bacare",
+        "route_or_intermediate_place": "river mouth roadstead",
+        "goods": [],
+        "notes": "Ships anchor to take on cargo, but no specific goods are named in this section."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0056",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[56]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[56]/p",
+    "section_order": 56,
+    "greek_text": "56. Πλεῖ δὲ εἰς τὰ ἐμπόρια ταῦτα μεγάλα πλοῖα διὰ τὸν ὄγκον καὶ τὸ πλῆθος τοῦ πεπέρεως καὶ τοῦ μαλαβάθρου. Προχωρεῖ δὲ εἰς αὐτὴν προηγουμένως χρήματα πλεῖστα, χρυσόλιθα, ἱματισμὸς ἁπλοῦς οὐ πολὺς, πολύμιτα, στίμμι, κοράλλιον, ὕαλος ἀργὴ, χαλκὸς, κασσίτερος, μόλυβδος, σἶνος οὐ πολὺς, ὡσεὶ δὲ τοσοῦτον ὅσον ἐν Βαρυγάζοις, σανδαράκη, ἀρσενικὸν, σῑτος δὲ ὅσος ἀρκέσει τοῖς περὶ τὸ ναυκλήριον διὰ τὸ μὴ τοὺς ἐμπόρους αὐτῷ χρῆσθαι. Φέρεται δὲ πέπερι μονογενῶς ἐν ἑνὶ τόπῳ τούτων τῶν ἐμπορίων γεννώμενον πολὺ, τῇ λεγομένῃ Κοττοναρικῇ· φέρεται δὲ καὶ μαργαρίτης ἱκανὸς καὶ διάφορος καὶ ἐλέφας καὶ ὀθόνια Σηρικὰ καὶ νάρδος ἡ Γαγγητικὴ καὶ μαλάβαθρον ἐκ τῶν ἔσω τόπων εἰς αὐτὴν, καὶ λιθία διαφανὴς παντοία καὶ ἀδάμας καὶ ὑάκινθος καὶ χελώνη ἥ τε Χρυσονησιωτικὴ καὶ ἡ περὶ τὰς νήσους θηρευομένη τὰς προκειμένας αὐτῆς τῆς Λιμυρικῆς. Πλέουσι δὲ εἰς αὐ τὴν οἱ κατὰ καιρὸν ἀναγόμενοι ἀπʼ Αἰγύπτου περὶ τὸν Ἰούλιον μῆνα, ὃ ἐστιν Ἐπιφί.",
+    "draft_translation": "Ships sailing from Egypt reach the Limyrike markets in season. Imports include money, stones, cloth, metals, wine, pigments, and grain for crews, while exports include pepper from Cottonara, pearls, ivory, Seric cloth, Gangetic nard, malabathrum, transparent stones, diamond, hyacinth, and tortoise-shell from Chryse and nearby islands.",
+    "places": [
+      {
+        "greek_surface": "Λιμυρικῆς",
+        "english_label": "Limyrike",
+        "role": "destination_market",
+        "notes": "Main destination for the incoming imports and collection market for exports."
+      },
+      {
+        "greek_surface": "Βαρυγάζοις",
+        "english_label": "Barygaza",
+        "role": "comparison_port",
+        "notes": "Used only as a comparison for wine volume."
+      },
+      {
+        "greek_surface": "Κοττοναρικῇ",
+        "english_label": "Cottonara",
+        "role": "source_place",
+        "notes": "Specific pepper-producing district."
+      },
+      {
+        "greek_surface": "Αἰγύπτου",
+        "english_label": "Egypt",
+        "role": "source_place",
+        "notes": "Seasonal ships sail from Egypt to Limyrike."
+      },
+      {
+        "greek_surface": "Χρυσονησιωτικὴ",
+        "english_label": "Chryse peninsula",
+        "role": "source_place",
+        "notes": "Named source for one tortoise-shell variety."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "money",
+        "greek_surface": "χρήματα",
+        "category": "currency",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported in large quantities."
+      },
+      {
+        "english_label": "chrysolite/topaz stones",
+        "greek_surface": "χρυσόλιθα",
+        "category": "stone",
+        "structure_type": "coordinated-list-item",
+        "confidence": "medium",
+        "notes": "Imported stone term; exact mineral label uncertain."
+      },
+      {
+        "english_label": "plain clothing",
+        "greek_surface": "ἱματισμὸς ἁπλοῦς",
+        "category": "textile",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported in limited quantity."
+      },
+      {
+        "english_label": "figured textiles",
+        "greek_surface": "πολύμιτα",
+        "category": "textile",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported patterned cloth."
+      },
+      {
+        "english_label": "antimony/stibium",
+        "greek_surface": "στίμμι",
+        "category": "mineral",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported cosmetic/mineral good."
+      },
+      {
+        "english_label": "coral",
+        "greek_surface": "κοράλλιον",
+        "category": "marine_product",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported good."
+      },
+      {
+        "english_label": "raw glass",
+        "greek_surface": "ὕαλος ἀργὴ",
+        "category": "glass",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported material."
+      },
+      {
+        "english_label": "copper",
+        "greek_surface": "χαλκὸς",
+        "category": "metal",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported metal."
+      },
+      {
+        "english_label": "tin",
+        "greek_surface": "κασσίτερος",
+        "category": "metal",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported metal."
+      },
+      {
+        "english_label": "lead",
+        "greek_surface": "μόλυβδος",
+        "category": "metal",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported metal."
+      },
+      {
+        "english_label": "wine",
+        "greek_surface": "οἶνος",
+        "category": "food_drink",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported, but not as much as at Barygaza."
+      },
+      {
+        "english_label": "realgar",
+        "greek_surface": "σανδαράκη",
+        "category": "pigment_mineral",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported pigment/mineral."
+      },
+      {
+        "english_label": "orpiment/arsenic pigment",
+        "greek_surface": "ἀρσενικὸν",
+        "category": "pigment_mineral",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported pigment/mineral."
+      },
+      {
+        "english_label": "grain",
+        "greek_surface": "σῖτος",
+        "category": "foodstuff",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Imported only as needed for sailors, not a general market commodity."
+      },
+      {
+        "english_label": "pepper",
+        "greek_surface": "πέπερι",
+        "category": "spice",
+        "structure_type": "source-specific-entity",
+        "confidence": "high",
+        "notes": "Said to grow abundantly in Cottonara."
+      },
+      {
+        "english_label": "pearls",
+        "greek_surface": "μαργαρίτης",
+        "category": "marine_product",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Exported in substantial and fine quality."
+      },
+      {
+        "english_label": "ivory",
+        "greek_surface": "ἐλέφας",
+        "category": "animal_product",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Exported material."
+      },
+      {
+        "english_label": "Seric cloth",
+        "greek_surface": "ὀθόνια Σηρικὰ",
+        "category": "textile",
+        "structure_type": "compound-entity",
+        "confidence": "high",
+        "notes": "Preserved as a compound textile entity."
+      },
+      {
+        "english_label": "Gangetic nard",
+        "greek_surface": "νάρδος ἡ Γαγγητικὴ",
+        "category": "aromatic",
+        "structure_type": "compound-entity",
+        "confidence": "high",
+        "notes": "Named nard variety."
+      },
+      {
+        "english_label": "malabathrum",
+        "greek_surface": "μαλάβαθρον",
+        "category": "aromatic",
+        "structure_type": "standalone-good",
+        "confidence": "high",
+        "notes": "Said to come from inland regions into Limyrike."
+      },
+      {
+        "english_label": "transparent stones",
+        "greek_surface": "λιθία διαφανὴς παντοία",
+        "category": "stone",
+        "structure_type": "compound-entity",
+        "confidence": "high",
+        "notes": "Assorted transparent stones."
+      },
+      {
+        "english_label": "diamond",
+        "greek_surface": "ἀδάμας",
+        "category": "stone",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Exported stone."
+      },
+      {
+        "english_label": "hyacinth stone",
+        "greek_surface": "ὑάκινθος",
+        "category": "stone",
+        "structure_type": "coordinated-list-item",
+        "confidence": "high",
+        "notes": "Exported stone."
+      },
+      {
+        "english_label": "tortoise-shell",
+        "greek_surface": "χελώνη",
+        "category": "animal_product",
+        "structure_type": "source-specific-entity",
+        "confidence": "high",
+        "notes": "Includes Chryse and nearby island varieties."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "imported_to_market",
+        "source_place": "Egypt",
+        "destination_place": "Limyrike",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "money",
+          "chrysolite/topaz stones",
+          "plain clothing",
+          "figured textiles",
+          "antimony/stibium",
+          "coral",
+          "raw glass",
+          "copper",
+          "tin",
+          "lead",
+          "wine",
+          "realgar",
+          "orpiment/arsenic pigment",
+          "grain"
+        ],
+        "notes": "Imports are listed as proceeding into Limyrike; Egypt is the named sailing origin."
+      },
+      {
+        "movement_type": "exported_or_collected_from_market",
+        "source_place": "Limyrike",
+        "destination_place": "Egypt-bound trade",
+        "route_or_intermediate_place": "Cottonara; inland regions; Chryse peninsula and nearby islands",
+        "goods": [
+          "pepper",
+          "pearls",
+          "ivory",
+          "Seric cloth",
+          "Gangetic nard",
+          "malabathrum",
+          "transparent stones",
+          "diamond",
+          "hyacinth stone",
+          "tortoise-shell"
+        ],
+        "notes": "Some goods have more specific source contexts within the larger Limyrike market."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0057",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[57]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[57]/p",
+    "section_order": 57,
+    "greek_text": "57. Τοῦτον δὲ ὅλον τὸν εἰρημένον περίπλουν ἀπὸ Κανῆς καὶ τῆς Εὐδαίμονος Ἀραβίας οἱ μὲν μικροτέροις πλοίοις περικολπίζοντες ἔπλεον, πρῶτος δὲ Ἵππαλος κυβερνήτης, κατανοήσας τὴν θέσιν τῶν ἐμπορίων καὶ τὸ σχῆμα τῆς θαλάσσης, τὸν διὰ πελάγους ἐξεῦρε πλοῦν, ἀφʼ οὐ καὶ τοπικῶς ἐκ τοῦ ὠκεανοῦ φυσώντων, κατὰ τὸν καιρὸν τῶν παῤ ἡμῖν, ἐτησίων ἐν τῶ Ἰνδικῷ πελάγει ὁ λιβόνοτος φαίνεται ἵππαλος προςονομάζεσθαι ἀπὸ τῆς προσηγορίας τοῦ πρώτως ἐξευρηκότος τὸν διάπλουν . Ἀφʼ οὗ μέχρι καὶ νῦν τινὲς μὲν εὐθὺς ἀπὸ τῶν Κανῆς, τινὲς δὲ ἀπὸ τῶν Ἀρωμάτων ἀφιέντες οἱ μὲν εἰς Λιμυρικὴν πλέοντες ἐπὶ πλεῖον τραχηλίζοντες, οἱ δὲ εἰς Βαρύγαζα οἵ τε εἰς Σκυθίαν οὐ πλεῖον ἢ τρεῖς ἡμέρας ἀντέχουσι καὶ τὸ λοιπὸν παρεπίφορον πρὸς ἴδιον δρόμον ἐκ τῆς χώρας ὑψηλοὶ διὰ τοῦ ἔξωθεν γῆς παραπλέουσι τοὺς προειρημένους κόλπους.",
+    "draft_translation": "The section explains the discovery and use of the open-sea monsoon route by Hippalos and distinguishes the courses toward Limyrike, Barygaza, and Scythia.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0058",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[58]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[58]/p",
+    "section_order": 58,
+    "greek_text": "58. Ἀπὸ δὲ Βακαρῆς τὸ λεγόμενον Πυρρὸν ὄρος ἄλλῃ παρήκει χώρα τῆ κης η Παραλίᾳ λεγομένῃ πρὸς αὐτὸν τὸν νότον ἐν ᾗ καὶ κολύμβησίς ἐστιν ὑπὸ τὸν βασιλέα Πανδίονα πινικοῦ καὶ πόλις ἡ λεγομένη Κόλχοι. Πρῶτος τόπος Βαλίτα καλούμενος ὅρμον καλὸν ἔχων καὶ κώμην παραθαλάσσιον· ἀπὸ δὲ ταύτης ἐστὶν ἕτερος τόπος τὸ Κομὰρ λεγόμενον, ἐν ᾧ τόπῳ βριάριόν ἐστι καὶ λιμὴν, εἰς ὃν οἱ βουλόμενοι τὸν μέλλοντα αὐτοῖς χρόνον ἱεροὶ γενέσθαι ἐρχόμενοι ἀπολούονται καὶ χῆροι μένουσιν αὐτοῦ· τὸ δὲ αὐτὸ καὶ γυναῖκες· ἱστορεῖται γὰρ τὴν θεὸν ἐκεῖ ἐπιμεῖναι κατά τινα χρόνον καὶ ἀπολελοῦσθαι.",
+    "draft_translation": "After Bakare comes the Pyrrhon mountain and the Paralia country; Balita has a good harbor, and Kolchoi is a city in the pearl-fishing zone under the Pandion kingdom.",
+    "places": [
+      {
+        "greek_surface": "Βακαρῆς",
+        "english_label": "Bakare",
+        "role": "route_anchor",
+        "notes": "Starting point for the described coastal sequence."
+      },
+      {
+        "greek_surface": "Πυρρὸν ὄρος",
+        "english_label": "Pyrrhon mountain",
+        "role": "route_or_intermediate_place",
+        "notes": "Coastal landmark."
+      },
+      {
+        "greek_surface": "Παραλίᾳ",
+        "english_label": "Paralia",
+        "role": "region",
+        "notes": "Country along the southern coast."
+      },
+      {
+        "greek_surface": "Βαλίτα",
+        "english_label": "Balita",
+        "role": "port",
+        "notes": "Place with a good harbor."
+      },
+      {
+        "greek_surface": "Κόλχοι",
+        "english_label": "Kolchoi",
+        "role": "source_place",
+        "notes": "City associated with pearl-fishing."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "pearls",
+        "greek_surface": "πινικοῦ",
+        "category": "marine_product",
+        "structure_type": "standalone-good",
+        "confidence": "high",
+        "notes": "The term occurs in the pearl-fishing context at Kolchoi."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "harvested_at",
+        "source_place": "Kolchoi",
+        "destination_place": "",
+        "route_or_intermediate_place": "Paralia",
+        "goods": [
+          "pearls"
+        ],
+        "notes": "Pearl-fishing is described, but no explicit shipping destination is given."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0059",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[59]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[59]/p",
+    "section_order": 59,
+    "greek_text": "59. Ἀπὸ δὲ τοῦ Κομαρεὶ ἐκτείνουσα πρὸς τὸν νότον χώρα μέχρι Κόλχων, ἐν ᾗ κολύμβησις τοῦ πινικοῦ ἐστίν ἀπὸ δὲ κατακρισίμων κατεργάζεται· ὑπὸ τὸν βασιλέα Πανδίονά ἐστι. Μετὰ δὲ Κόλχους ἐκδέχεται πρότερος αἰγιαλὸς ἐν κόλπῳ κείμενος, ἔχων χῶρον μεσόγειον, λεγόμενον Ἀργάλου· ἐν ἑνὶ τόπῳ τερονεῖται τὸ παῤ αὐτὴν τὴν Ἠπιοδώρου νῆσον συλλεγόμενον πινικόν· φέρονται γὰρ ἐξ αὐτῆς σινδόνες,",
+    "draft_translation": "The coast from Komarei to Kolchoi includes pearl fisheries, and farther along the gulf pearls are gathered around Epiodoros island; cloths are exported from that district.",
+    "places": [
+      {
+        "greek_surface": "Κομαρεὶ",
+        "english_label": "Komarei",
+        "role": "route_anchor",
+        "notes": "Starting point for the southern coastal stretch."
+      },
+      {
+        "greek_surface": "Κόλχων",
+        "english_label": "Kolchoi",
+        "role": "source_place",
+        "notes": "Pearl-fishing district."
+      },
+      {
+        "greek_surface": "Ἠπιοδώρου νῆσον",
+        "english_label": "Epiodoros island",
+        "role": "source_place",
+        "notes": "Island around which pearls are collected."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "pearls",
+        "greek_surface": "πινικόν",
+        "category": "marine_product",
+        "structure_type": "standalone-good",
+        "confidence": "high",
+        "notes": "Collected through pearl-fishing and around Epiodoros island."
+      },
+      {
+        "english_label": "cloths/muslins",
+        "greek_surface": "σινδόνες",
+        "category": "textile",
+        "structure_type": "standalone-good",
+        "confidence": "high",
+        "notes": "Said to be carried out from the district."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "harvested_at",
+        "source_place": "Kolchoi",
+        "destination_place": "",
+        "route_or_intermediate_place": "Epiodoros island",
+        "goods": [
+          "pearls"
+        ],
+        "notes": "Pearl collection is tied to Kolchoi and the island context."
+      },
+      {
+        "movement_type": "exported_from_region",
+        "source_place": "district near Epiodoros island",
+        "destination_place": "",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "cloths/muslins"
+        ],
+        "notes": "The passage says cloths are carried out from this place but does not name the destination."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0060",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[60]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[60]/p",
+    "section_order": 60,
+    "greek_text": "60. Τῶν δὲ τοπικῶν ἐμπορίων τε καὶ ὅρμων, εἰς οὃς οἵ τε ἀπὸ τῆς Aιμυρικῆς καὶ ἀπʼ ἄρκτου πλέοντες κατάγονται, ἐπισημότερα καὶ κατὰ τὸ ἑξῆς κείμενά ἐστιν ἐμπόρια Καμάρα καὶ Ποδούκη καὶ Σωπάτμα, ἐν οἷς τοπικὰ μέν ἐστι πλοῖα μέχρι Λιμυρικῆς παραλεγόμενα τὴν γῆν, ἕτερα ὃ ἐκ μονοξύλων πλοίων μεγίστων ἁφαῖς ἐζευγμένων, λεγόμενα σάγγαρα, τὰ δὲ εἰς τὴν Χρυσῆν καὶ εἰς τὸν Γάγγην διαίροντα κολανδιοφωντα τὰ μέγιστα. Προχωρεῖ δὲ εἰς τοὺς τόπους πάντα τὰ εἰς τὴν Aιμυρικὴν ἐργαζόμενα, καὶ σχεδὸν εἰς αὐτοὺς καταντᾷ τό τε χρῆμα τὸ ἀπʼ Aἰγύπτου φερόμενον τῷ παντὶ χρόνῳ καὶ τὰ πλεῖστα γένη πάντων τῶν ἀπὸ Λιμυρικῆς φερομένων, καὶ διὰ ταύτης τῆς παραλίας ἐπιχορηγουμένων.",
+    "draft_translation": "Kamara, Poduke, and Sopatma are local emporia and roadsteads. Local boats coast as far as Limyrike, while larger sewn vessels branch toward Chryse and the Ganges, and goods from Limyrike are supplied along this coast.",
+    "places": [
+      {
+        "greek_surface": "Καμάρα",
+        "english_label": "Kamara",
+        "role": "port",
+        "notes": "Local emporion/roadstead."
+      },
+      {
+        "greek_surface": "Ποδούκη",
+        "english_label": "Poduke",
+        "role": "port",
+        "notes": "Local emporion/roadstead."
+      },
+      {
+        "greek_surface": "Σωπάτμα",
+        "english_label": "Sopatma",
+        "role": "port",
+        "notes": "Local emporion/roadstead."
+      },
+      {
+        "greek_surface": "Λιμυρικῆς",
+        "english_label": "Limyrike",
+        "role": "route_or_intermediate_place",
+        "notes": "Endpoint of local coastal vessels and source of supplied goods."
+      },
+      {
+        "greek_surface": "Χρυσῆν",
+        "english_label": "Chryse",
+        "role": "destination_place",
+        "notes": "Destination for larger vessels."
+      },
+      {
+        "greek_surface": "Γάγγην",
+        "english_label": "Ganges",
+        "role": "destination_place",
+        "notes": "Destination for larger vessels."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": [
+      {
+        "movement_type": "coastal_distribution",
+        "source_place": "Limyrike",
+        "destination_place": "Kamara, Poduke, and Sopatma coast",
+        "route_or_intermediate_place": "",
+        "goods": [],
+        "notes": "The passage mentions supplies from Limyrike but does not enumerate specific goods."
+      },
+      {
+        "movement_type": "maritime_route",
+        "source_place": "Kamara, Poduke, and Sopatma coast",
+        "destination_place": "Chryse and the Ganges",
+        "route_or_intermediate_place": "",
+        "goods": [],
+        "notes": "Route of larger sewn vessels; no specific commodities named."
+      }
+    ]
+  }
+]

@@ -1,0 +1,494 @@
+{
+  "route_title": "Periplus of the Erythraean Sea: generated sections 1-10",
+  "source_range": {
+    "start_section": 41,
+    "end_section": 50
+  },
+  "main_route_place_keys": [
+    "barygaza"
+  ],
+  "steps": [
+    {
+      "step_id": "step_0041_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 41 of 10 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0041"
+      ],
+      "translation": "After Barake comes the gulf of Barygaza and the mainland of Ariake, the beginning of Mambaro's kingdom and of all India. Inland, bordering Scythia, is called Aberia, and the coast Syrastrene. The country is rich in wheat, rice, sesame oil, butter, cotton, and coarse Indian cloth made from it. Its metropolis is Minnagara, from which a very large amount of cloth is brought down to Barygaza.",
+      "greek_text": "41. Μετὰ δὲ τὸν Βαράκην εὐθύς ἐστιν ὁ Βαρυγάζων κόλπος καὶ ἡ ἤπειρος τῆς Ἀριακῆς χώρας, τῆς Μαμβάρου βασιλείας ἀρχὴ καὶ τῆς ὅλης Ἰνδικῆς οὖσα. Ταύτης τὰ μὲν μεσόγεια τῇ Σκυθίᾳ συνορίζοντα Ἀβηρία καλεῖται, τὰ δὲ παραθαλάσσια Συραστρηνή. Πολυφόρος δὲ ἡ χώρα σίτου καὶ ὀρύζης καὶ ἐλαίου σησαμίνου καὶ βουτύρου καὶ καρπάσου καὶ τῶν ἐξ αὐτῆς Ἰνδικῶν ὀθονίων τῶν χυδαίων· βουκόλια δὲ ἐν αὐτῇ πλεῖστα καὶ ἄνδρες ὑπερμεγέθεις τῷ σώματι καὶ μέλανες τῇ χροιᾷ. Μητρόπολις δὲ τῆς χώρας Μιννάγαρα, ἀφʼ ἧς καὶ πλεῖστον ὀθόνιον εἰς Βαρύγαζα κατάγεται. Σώζεται δὲ ἔτι καὶ νῦν τῆς Ἀλεξάνδρου στρατιᾶς σημεῖα περὶ τοὺς τόπους, ἱερά τε ἀρχαῖα καὶ θεμέλιοι παρεμβολῶν καὶ φρέατα μέγιστα. Ὁ δὲ παράπλους ταύτης τῆς χώρας ἀπὸ τοῦ Βαρβαρικοῦ μέχρι τοῦ κατὰ Ἀστάκαπρα πέραν βαρυγάζων ἀκρωτηρίου, τῆς λεγομένης Παπικῆς, ἐστὶ σταδίων τριτχιλίων.",
+      "place_mentions": [
+        {
+          "surface": "Barake",
+          "place_key": "barake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαράκην",
+          "place_key": "barake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Gulf of Barygaza",
+          "place_key": "gulf_of_barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων κόλπος",
+          "place_key": "gulf_of_barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ariake",
+          "place_key": "ariake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀριακῆς χώρας",
+          "place_key": "ariake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aberia",
+          "place_key": "aberia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀβηρία",
+          "place_key": "aberia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Syrastrene",
+          "place_key": "syrastrene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Συραστρηνή",
+          "place_key": "syrastrene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Minnagara",
+          "place_key": "minnagara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μιννάγαρα",
+          "place_key": "minnagara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Astakapra",
+          "place_key": "astakapra",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀστάκαπρα",
+          "place_key": "astakapra",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Papike",
+          "place_key": "papike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Παπικῆς",
+          "place_key": "papike",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "wheat",
+        "rice",
+        "sesame oil",
+        "butter",
+        "cotton",
+        "coarse Indian cloth",
+        "cloth"
+      ]
+    },
+    {
+      "step_id": "step_0042_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 42 of 10 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0042"
+      ],
+      "translation": "After this is another wave-sheltered gulf entering northward, with the island called Baiones at its mouth and, in the innermost parts, the great river called Mais. Those sailing to Barygaza cross the gulf, leaving the island just visible on the left, and head east to the mouth of the river of Barygaza, called the Namnadios.",
+      "greek_text": "42. Μεθʼ ἡς ἕτερός ἐστι κόλπος, ἔσω κυμάτων, εἰς αὐτὸν ἐνδύνων τὸν βορέαν, οὗ κατὰ μὲν τὸ στόμα νῆσός ἐστιν ἡ λεγομένη Bαιώνης, ἐν δὲ τοῖς ἐσωτάτοις τόποις μέγιστος ποταμὸς ὁ λεγόμενος Μάϊς. Τοῦτον τὸν κόλπον, τὸ πλάτος ὡς σταδίων τριακοσίων, οἱ πλέοντες εἰς Bαρύγαζα διαπερῶνται, ἐξ εὐωνύμων ἀκροφανῆ καταλιπόντες τὴν νῆσον, καὶ εἰς αὐτὴν τὴν ἀνατολὴν ἐπʼ αὐτὸ τὸ στόμα τοῦ ποταμοῦ Βαρυγάζων· λέγεται δὲ αὐτὸς ὁ ποταμὸς Ναμνάδιος.",
+      "place_mentions": [
+        {
+          "surface": "Baiones",
+          "place_key": "baiones",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Bαιώνης",
+          "place_key": "baiones",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Mais River",
+          "place_key": "mais_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μάϊς",
+          "place_key": "mais_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Bαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Namnadios River",
+          "place_key": "namnadios_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ναμνάδιος",
+          "place_key": "namnadios_river",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0043_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 43 of 10 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0043"
+      ],
+      "translation": "The gulf at Barygaza is narrow and hard for ships coming from the sea to enter; they tend to fall either right or left. On the right at the gulf mouth lies the rough, spotted strip called Herone near the village of Kammoni; on the left opposite it is the cape before Astakapra, called Papike, a difficult anchorage because of the current and the rough rocky bottom that cuts anchors. Even if one reaches the gulf, the mouth of the Barygaza river is hard to find and hard to enter because of the low land and river shallows.",
+      "greek_text": "43. Ὁ δὲ κόλπος αὐτὸς ὁ κατὰ Βαρύγαζα στενὸς ὢν τοῖς ἐκ πελάγους ἐρχομένοις ἐστὶ δυσεπίβολος· ἢ γὰρ εἰς τὰ δεξιὰ ἢ εἰς τὰ εὐώνυμα παραπίπτουσιν, ᾗ γε ἐπιβολὴ κρείσσων ἐστὶ τῆς ἑτέρας. Ἀλλʼ ἐκ μὲν τῶν δεξιῶν κατʼ αὐτὸ τὸ στόμα τοῦ κόλπου παράκειται ταινία τραχεῖα καὶ διάσπιλος, Ἡρώνη λεγομένη, κατὰ Καμμωνὶ κώμην· ἐκ δὲ τῶν εὐωνύμων ἀπέναντι ταύτης τὸ πρὸ Ἀστακάπρων ἀκρωτήριον, ἡ Παπικὴ λεγομένη, δύσορμος οὖσα διά τε τὸν ῥοῦν τὸν περὶ αὐτὴν καὶ διὰ τὸ ἀποκόπτειν τὰς ἀγκύρας τραχὺν ὄντα καὶ πετρώδη τὸν βυθόν. Κἂν κατʼ αὐτὸν δέ τις ἐπιβάλῃ τὸν κόλπον, αὐτὸ τὸ στόμα τοῦ κατὰ Βαρύγαζα ποταμοῦ δυσεύρετόν ἐστι διὰ τὸ τὴν χώραν ταπεινήν εἶναι καὶ μηδὲν ἐγγύτερον ἐνεχύρως θεωρεῖσθαι· κἂν εὑρεθῇ, δυσείσβολός ἐστι διὰ τὰ περὶ αὐτὸν τενάγη τοῦ ποταμοῦ.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Herone",
+          "place_key": "herone",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἡρώνη",
+          "place_key": "herone",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Kammoni",
+          "place_key": "kammoni",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Καμμωνὶ",
+          "place_key": "kammoni",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Astakapra",
+          "place_key": "astakapra",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀστακάπρων",
+          "place_key": "astakapra",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Papike",
+          "place_key": "papike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Παπικὴ",
+          "place_key": "papike",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0044_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 44 of 10 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0044"
+      ],
+      "translation": "For this reason, around the entrance local royal fishermen go out with crews of long vessels, called trappaga and kotymba, to meet incoming ships as far as Syrastrene, and from them the ships are guided to Barygaza. They immediately turn from the gulf mouth through the shallows, tow the ships by fixed stations, lift them as the flood begins, and moor them in certain anchorages and deeper river-basin places until Barygaza, which lies on the river about three hundred stadia from the mouth.",
+      "greek_text": "44. Τούτου χάριν περὶ αὐτὸν τὸν εἴσπλουν βασιλικοὶ ἁλιεῖς ἐντόπιοι πληρώμασι μακρῶν πλοίων, ἃ λέγεται τράππαγα καὶ κότυμβα, πρὸς ἀπάντησιν ἐξέρχονται μέχρι τῆς Συραστρηνῆς, ἀφʼ ὧν ὁδηγεῖται τὰ πλοῖα μέχρι Βαρυγάζων. Κλίνουσι γὰρ εὐθὺς ἀπὸ τοῦ στόματος τοῦ κόλπου διὰ τενάγη τοῖς πληρώμασι καὶ ῥυμουλκοῦσιν αὐτὰ σταθμοῖς ἤδη τεταγμένοις, ἀρχο μένης μὲν τῆς πλήμης αἴροντες, ἱσταμένης δὲ διορμίζοντες κατά τινας ὅρμους καὶ κυθρίνους. Οἱ δὲ κύθρινοι τόποι εἰσὶ τοῦ ποταμοῦ βαθύτεροι μέχρι Βαρυγάζων· ἀπέχει γὰρ ἀπὸ τοῦ στόματος ἄων παρὰ τὸν ποταμὸν κειμένη ὡς σταδίων τριακοσίων.",
+      "place_mentions": [
+        {
+          "surface": "Syrastrene",
+          "place_key": "syrastrene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Συραστρηνῆς",
+          "place_key": "syrastrene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0045_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 45 of 10 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0045"
+      ],
+      "translation": "All India has many rivers and strong tidal rises and falls, especially around Barygaza, where the sea suddenly covers and uncovers ground and drives river water back upstream for many stadia.",
+      "greek_text": "45. Πᾶσα μὲν ἡ Ἰνδικὴ χώρα ποταμοὺς ἔχει πλμίστους, ἀμπώτεις τε καὶ πλήμας μεγίστας, συναυξομένας ὑπὸ τὴν ἀνατολὴν καὶ τὴν πανσέληνον ἄχρι τριῶν ἡμερῶν, καὶ τοῖς μεταξὺ καταστήμασι τῆς σελήνης ἐλασσουμένας, πολὺ δὲ μᾶλλον ἡ κατὰ Βαρυγάζων, ὥστε αἰφνίδιον τόν τε βυθὸν δρᾶσθαι, καὶ τινα μέρη τῆς ἠπείρου, ποτὶ δὲ ξηρὰ τὰ πρὸ μικροῦ πλωῖζόμενα, τούς τε ποταμοὺς ὑπὸ τὴν εἰσβολὴν τῆς πλήμης, τοῦ πελάγους ὅλου συνωθουμένου, σφοδρότερον ἄνω φέρεσθαι τοῦ κατὰ φύσιν ῥεύματος ἐπὶ πλείστους σταδίους.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0046_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 46 of 10 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0046"
+      ],
+      "translation": "Because of these tides, entry to and departure from the Barygaza market are dangerous for inexperienced ships: large vessels can be swept onto shoals, smaller ones overturned, and the incoming tide arrives with a roar like an army.",
+      "greek_text": "46. Διὸ καὶ κινδυνώδεις εἰσὶν αἱ τῶν πλοίων προσαγωγαὶ καὶ ἐξαγωγαὶ τοῖς ἀπείροις καὶ πρώτως εἰσάγουσιν εἰς τὸ ἐμπόριον. Γινομένης γὰρ ὁρμῆς ἤδη περὶ τὴν πλήμην οὐδὲν παριεμένης οὐκ ἀντέχουσιν αἱ ἄγκυραι· διὸ καὶ τὰ προληφθέντα πλοῖα τῇ ἰναίᾳ, πλαγιασθέντα ὑπὸ τῆς ὀξύτητος τοῦ ῥοὸς, ἐποκέλλει τοῖς τενάγεσι καὶ ἀνακλᾶται, τὰ δὲ μικρότερα καὶ περιτρέπεται, τινὰ δὲ καὶ περὶ τὰς διώρυχας ἀποκεκλικότα διὰ τὸ περὶ τὴν ἄμπωτιν, ὅταν μὴ διερείσῃς, τῆς πλήμης αἰφνίδιον ἐπελθούσης, ὑπὸ τῆς πρώτης κεφαλῆς τοῦ ῥοὸς ἐμπίμπλαται. Τοσαῦται γὰρ περὶ τὴν εἰσβολὴν τῆς θαλάσσης γίνονται βίαι κατὰ τὰς νεομηνίας ὑπὸ τὴν νυκτερινὴν μάλιστα πλήμην, ὥστε ἀρχομένης ἤδη τῆς εἰσαγωγῆς, ὅταν ἠρεμῇ τὸ πέλαγος, ὑπʼ αὐτοῦ φέρεσθαι τοῖς ἐπὶ τοῦ στόματος παραπλήσιον βοῇ στρατοπέδου μακρόθεν ἀκουομένῃ, καὶ μετʼ ὀλίγον αὐτὴν ἐπιτρέχειν τοῖς τενάγεσι ῥοίζῳ τὴν θάλασσαν.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0047_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 47 of 10 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0047"
+      ],
+      "translation": "The inland country above Barygaza includes many peoples and regions as far as the Ganges; Alexander is said to have passed from there, and old Greek-inscribed drachmas of later rulers still circulate at Barygaza.",
+      "greek_text": "47. Ἐπίκειται δὲ τοῖς Βαρυγάζοις κατὰ τὰ μεσόγεια πλείονα ἔθνη, τό τε τῶν Ἀρατρίων καὶ Ἀραχωσίων καὶ Γανδαραίων καὶ τῆς Προκλαΐδος, ἐν ᾗ ἡ Βουκέφαλος Ἀλεξάνδρεια. Καὶ τούτων ἐπάνω μαχιμώτατον ἔθνος Βακτριανῶν, ὑπὸ βασιλέα ὄντων ἰδιότοπον. Καὶ Ἀλέξανδρος ὁρμηθεὶς ἀπὸ τῶν μερῶν τούτων ἄχρι τοῦ Γάγγους διῆλθε, καταλιπὼν τήν τε Λιμυρικήν καὶ τὰ νότια τῆς Ἰνδικῆς· ἀφʼ οὗ μέχρι νῦν ἐν Βαρυγάζοις παλαιαὶ προχωροῦσι δραχμαὶ, γράμμασιν Ἑλληνικοῖς ἐγκεχαραγμέναι ἐπίσημα τῶν μετʼ Ἀλέξανδρον βεβασιλευκότων Ἀπολλοδότου καὶ Μενάνδρου.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0048_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 48 of 10 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0048"
+      ],
+      "translation": "East of this inland region is Ozene, formerly a royal residence, from which goods for Barygaza and for Roman trade are brought down; nard, costus, and bdellium also come down through Proklais and adjoining Scythia from the upper country.",
+      "greek_text": "48. Ἔνι δὲ αὐτῇ καὶ ἐξ ἀνατολῆς πόλις λεγομένη Ὀζήνη, ἐν ᾗ καὶ τὰ βασίλεια πρότερον ἦν· ἀφʼ ἧς πάντα τὰ πρὸς εὐθηνίαν τῆς χώρας εἰς Βαρύγαζα καταφέρεται καὶ τὰ πρὸς ἐμπορίαν τὴν ἡμετέραν, ὀνυχίνη λιθία καὶ μουρρίνη καὶ σινδόνες Ἰνδικαὶ καὶ μολόχιναι καὶ ἱκανὸν χυδαῖον ὀθόνιον. Κατάγεται δὲ διʼ αὐτῆς καὶ ἀπὸ τῶν ἄνω τόπων ἡ διὰ Προκλαΐδος καταφερομένη νάρδος ἡ Καττυβουρίνη καὶ ἡ Πατροπαπίγη καὶ ἡ Καβαλίτη καὶ ἡ διὰ τῆς παρακειμένης Συυθίας, ὃ τε κόστος καὶ ἡ βδέλλα.",
+      "place_mentions": [
+        {
+          "surface": "Ozene",
+          "place_key": "ozene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὀζήνη",
+          "place_key": "ozene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Proklais",
+          "place_key": "proklais",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Προκλαΐδος",
+          "place_key": "proklais",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Scythia",
+          "place_key": "scythia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Συυθίας",
+          "place_key": "scythia",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "onyx stone",
+        "murrhine stone",
+        "Indian cloth",
+        "mallow-colored cloth",
+        "ordinary cotton cloth",
+        "nard with named regional varieties",
+        "costus",
+        "bdellium"
+      ]
+    },
+    {
+      "step_id": "step_0049_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 49 of 10 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0049"
+      ],
+      "translation": "Into Barygaza are imported wines, metals, stones, textiles, aromatics, minerals, glass, and coin; special luxury goods are brought for the king. From these places are exported aromatics, ivory, stones, textiles, thread, long pepper, and other goods brought from the market-towns. Ships bound for this market sail from Egypt around July, Epiphi.",
+      "greek_text": "49. Προχωρεῖ δὲ εἰς τὸ ἐμπόριον οἶνος προηγουμένως Ἰταλικὸς καὶ Λαοδικηνὸς καὶ Ἀραβικὸς καὶ χαλκὸς καὶ κασσίτερος καὶ μόλυβδος, κοράλλιον καὶ χρυσόλιθον, ἱματισμὸς ἀπλοῦς καὶ νόθος παντοῖος, πολύμιτοι ζῶναι πηχυαῖαι, στύραξ, μελίλωτον, ὕαλος ἀργὴ, σανδαράκη, στίμμι, δηνάριον χρυσοῦν καὶ ἀργυροῦν, ἔχον ἀλλαγὴν καὶ ἐπικέρδειάν τινα πρὸς τὸ ἐντόπιον νόμισμα, μύρον οὐ βαρύτιμον οὐδὲ πολύ· τῷ δὲ βασιλεῖ κατʼ ἐκείνους τοὺς καιροὺς εἰσφερόμενα βαρύτιμα ἀργυρώματα καὶ μουσικὰ καὶ παρθένοι εὐειδεῖς πρὸς παλλακίαν καὶ διάφορος οἶνος καὶ ἱματισμὸς ἁπλοῦς πολυτελὴς καὶ μύρον ἔξοχον. Φέρεται δὲ ἀπὸ τούτων τῶν τόπων νάρδος, κόστος, βδέλλα, ἐλέφας, ὀνυχίνη λιθία καὶ μουρρίνη καὶ λύκιον καὶ ὀθόνιον παντοῖον καὶ Σηρικὸν καὶ μολόχινον καὶ νῆμα καὶ πέπερι μακρὸν καὶ τὰ ἀπὸ τῶν ἐμπορίων φερόμενα. Ἀποπλέουσι δὲ κατὰ καιρὸν οἱ ἀπὸ τῆς Aἰγύπτου εἰς τὸ ἐμπόριον ἀναγόμενοι περὶ τὸν Ἰούλιον μῆνα, ὅς ἐστιν Ἐπιφί.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "τὸ ἐμπόριον",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "Italian wine",
+        "Laodicean wine",
+        "Arabian wine",
+        "copper",
+        "tin",
+        "lead",
+        "coral",
+        "chrysolite or topaz",
+        "plain and inferior clothing",
+        "multicolored cubit-wide girdles",
+        "storax",
+        "melilot",
+        "crude glass",
+        "realgar",
+        "antimony",
+        "gold and silver denarii",
+        "modest perfume",
+        "costly silverware",
+        "fine wine for the king",
+        "costly plain clothing",
+        "choice perfume",
+        "nard",
+        "costus",
+        "bdellium",
+        "ivory",
+        "onyx stone",
+        "murrhine stone",
+        "lycium",
+        "cloth of all kinds",
+        "silk cloth",
+        "mallow-colored cloth",
+        "thread",
+        "long pepper"
+      ]
+    },
+    {
+      "step_id": "step_0050_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 50 of 10 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0050"
+      ],
+      "translation": "Beyond Barygaza the coast runs north to south, called Dachinabades because the local word means south; inland to the east are deserts, mountains, many wild animals, and many peoples as far as the Ganges.",
+      "greek_text": "50. Μετὰ δὲ τὰ Βαρύγαζα εὐθέως ἡ συναφὴς ἤπειρος ἐκ τοῦ βορέου εἰς τὸν νότον παρεκτείνει· διὸ καὶ Δαχιναβάδης καλεῖται ἡ χώρα· δάχανος γὰρ καλεῖται ὁ νότος τῆ αὐτῶν γλώσσῃ. Ταύτης ἡ μὲν ὑπερκειμένη πρὸς ἀνατολὰς μεσόγειος ἐμπεριέχει χώρας τε πολλὰς καὶ ἐρήμους καὶ ὄρη μεγάλα καὶ θηρίων γένη παντοίων, παρδάλεις τε καὶ τίγρεις καὶ ἐλέφαντας καὶ δράκοντας ὑπερμεγέθεις καὶ κροκόττας καὶ κυνοκεφάλων πλεῖστα γένη, ἕθνη τε πλεῖστα καὶ πολυάνθρωπα μέχρι τοῦ Γάγγους.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        }
+      ],
+      "goods": []
+    }
+  ],
+  "legs": []
+}

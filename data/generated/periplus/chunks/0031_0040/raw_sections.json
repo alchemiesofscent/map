@@ -1,0 +1,968 @@
+[
+  {
+    "chunk_id": "section_0031",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[31]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[31]/p",
+    "section_order": 31,
+    "greek_text": "31. Ὑποπίπτει μὲν οὖν, ὥςπερ ἡ Ἀζανία Χαριβαῆλι καὶ τῷ Μαφαρείτῃ τυράννῳ, καὶ ἡ νῆσος αὐτῷ τῷ βασιλεῖ τῆς λιβανωτοφόρου. Συνεχρήσαντο δὲ αὐτῇ καὶ ἀπὸ Μούζα τινὲς καὶ τῶν ἐκπλεόντων ἀπὸ Aιμυρικῆς καὶ Βαρυγάζων ὅσοι κατὰ τύχην εἰς αὐτὴν ἐπιβάλλοντες ὄρυζάν τε καὶ σῖτον καὶ ὀθόνην Ἰνδικὴν ἀντικαταλλασσόμενοι καὶ σώματα θηλυκὰ διὰ σπάνιν ἐκεῖ προχωροῦντα, χελώνην ἀντεφορτίζοντο πλείστην· νῦν δὲ ὑπὸ τῶν βασιλέων ἡ νῆσος ἐκμεμίσθωται καὶ παραφυλάσσεται.",
+    "draft_translation": "The inhabitants of Dioscorida are few and mixed, Arabs, Indians, and Greeks who have gone there for trade. The island is subject to the king of the frankincense-bearing country. Some from Muza, and some sailing from Limyrike and Barygaza, used it when they happened to put in there, exchanging rice, wheat, and Indian cloth, and loading in return a very large amount of tortoise shell. Now the island has been leased by the kings and is guarded.",
+    "places": [
+      {
+        "greek_surface": "Διοσκορίδου",
+        "english_label": "Dioscorida island",
+        "role": "trade_destination_and_export_source",
+        "notes": "Island where visiting traders exchange goods and load tortoise shell."
+      },
+      {
+        "greek_surface": "Μούζα",
+        "english_label": "Muza",
+        "role": "source_port",
+        "notes": "Some traders come from Muza."
+      },
+      {
+        "greek_surface": "Λιμυρικῆς",
+        "english_label": "Limyrike",
+        "role": "source_region",
+        "notes": "Sailors from Limyrike put in at the island when chance allows."
+      },
+      {
+        "greek_surface": "Βαρυγάζων",
+        "english_label": "Barygaza",
+        "role": "source_port",
+        "notes": "Sailors from Barygaza are named among those using the island."
+      },
+      {
+        "greek_surface": "λιβανωτοφόρου",
+        "english_label": "frankincense-bearing country",
+        "role": "ruling_region",
+        "notes": "The island belongs to the king of this region."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "rice",
+        "greek_surface": "ὄρυζάν",
+        "category": "food_grain",
+        "structure_type": "simple_entity",
+        "confidence": 0.95,
+        "notes": "Brought for exchange by visiting traders."
+      },
+      {
+        "english_label": "wheat or grain",
+        "greek_surface": "σῖτον",
+        "category": "food_grain",
+        "structure_type": "simple_entity",
+        "confidence": 0.92,
+        "notes": "Brought for exchange by visiting traders."
+      },
+      {
+        "english_label": "Indian cloth",
+        "greek_surface": "ὀθόνην Ἰνδικὴν",
+        "category": "textile_cloth",
+        "structure_type": "compound_with_origin",
+        "confidence": 0.96,
+        "notes": "Brought for exchange; female slaves are mentioned in the same clause but are not extracted as goods under the instruction not to extract persons."
+      },
+      {
+        "english_label": "tortoise shell",
+        "greek_surface": "χελώνην",
+        "category": "marine_luxury_material",
+        "structure_type": "simple_entity",
+        "confidence": 0.96,
+        "notes": "Loaded in very large quantity in return."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "exchange_import",
+        "source_place": "Muza, Limyrike, and Barygaza",
+        "destination_place": "Dioscorida island",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "rice",
+          "wheat or grain",
+          "Indian cloth"
+        ],
+        "notes": "Visiting traders bring these goods to the island for exchange; persons mentioned in the passage are not modeled as goods."
+      },
+      {
+        "movement_type": "return_export",
+        "source_place": "Dioscorida island",
+        "destination_place": "Muza, Limyrike, Barygaza, and other outbound markets",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "tortoise shell"
+        ],
+        "notes": "The return cargo is a very large quantity of tortoise shell."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0032",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[32]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[32]/p",
+    "section_order": 32,
+    "greek_text": "32. Μετὰ δὲ τὸν Σύαγρον κόλπος ἐστὶ συναφὴς ἐπὶ βάθος ἐνδύνων εἰς τὴν ἤπειρον, Ὄμανα, σταδίους ἔχων ἑξακοσίους τὸ διαπέραμα, καὶ μετʼ αὐτὸν ὑψηλὰ ὄρη πετρώδη καὶ ἀπόκοπα ἀνθρώπων ἐν σπηλαίοις κατοικούντων, ἐπὶ σταδίους ἄλλους πεντακοσίους, καὶ μετʼ αὐτοὺς ὅρμος ἀποδεδειγμένος τοῦ Σαχαλίτου λιβάνου πρὸς ἐμβολὴν, Μόσχα λιμὴν λεγόμενος, εἰς ἣν ἀπὸ Κανῆς συνήθως πλοῖα πέμπεταί τινα, καὶ παραπλέοντα ἀπὸ Λιμυρικῆς ἢ Bαρυγάζων ὀψινοῖς καιροῖς παραχειμάσαντα παρὰ τῶν βασιλικῶν πρὸς ὀθόνιον καὶ σῑτον καὶ ἔλαιον λίβανον ἀντιφορτίζουσι παῤ ὅλον τὸν Σαχαλίτην χώμασι κείμενον καὶ ἀφύλακτον, δυνάμει θεῶν τινὶ τοῦτον τὸν τόπον ἐπιτηρούντων· οὔτε γὰρ λάθρα οὔτε φανερῶς χωρὶς βασιλικῆς δώσεως εἰς πλοῖον ἐμβληθῆναι δύναται· κἂν χόνδρον τις ἄρῃ, οὐ δύναται πλεῦσαι τὸ πλοῖον ἀπὸ τοῦ λιμένος.",
+    "draft_translation": "After Syagros a deep adjoining bay runs into the mainland, Omana, with a crossing of six hundred stades. After high rocky mountains and cave-dwellers comes an appointed harbor for loading Sachalite frankincense, called Moscha harbor. Ships are regularly sent there from Canê, and vessels sailing along from Limyrike or Barygaza in the late season winter there; from the royal agents they exchange linen, wheat, and oil for frankincense lying in heaps throughout Sachalites, unguarded but protected by divine power. Without a royal grant not even a grain can be put aboard.",
+    "places": [
+      {
+        "greek_surface": "Σύαγρον",
+        "english_label": "Syagros",
+        "role": "previous_route_place",
+        "notes": "Route reference at the start of the section."
+      },
+      {
+        "greek_surface": "Ὄμανα",
+        "english_label": "Omana bay",
+        "role": "bay_or_route_region",
+        "notes": "Deep bay after Syagros."
+      },
+      {
+        "greek_surface": "Μόσχα λιμὴν",
+        "english_label": "Moscha harbor",
+        "role": "destination_harbor_and_frankincense_loading_port",
+        "notes": "Designated harbor for loading Sachalite frankincense."
+      },
+      {
+        "greek_surface": "Σαχαλίτου",
+        "english_label": "Sachalites",
+        "role": "production_source_region",
+        "notes": "Region where frankincense lies in heaps."
+      },
+      {
+        "greek_surface": "Κανῆς",
+        "english_label": "Canê",
+        "role": "source_port",
+        "notes": "Ships are regularly sent from Canê to Moscha."
+      },
+      {
+        "greek_surface": "Λιμυρικῆς",
+        "english_label": "Limyrike",
+        "role": "source_region",
+        "notes": "Passing ships from Limyrike may winter at Moscha."
+      },
+      {
+        "greek_surface": "Bαρυγάζων",
+        "english_label": "Barygaza",
+        "role": "source_port",
+        "notes": "Passing ships from Barygaza may winter at Moscha."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "Sachalite frankincense",
+        "greek_surface": "Σαχαλίτου λιβάνου",
+        "category": "aromatic_resin",
+        "structure_type": "compound_with_origin",
+        "confidence": 0.98,
+        "notes": "The harbor is specifically for loading this material."
+      },
+      {
+        "english_label": "linen cloth",
+        "greek_surface": "ὀθόνιον",
+        "category": "textile_cloth",
+        "structure_type": "simple_entity",
+        "confidence": 0.94,
+        "notes": "Exchanged with royal agents for frankincense."
+      },
+      {
+        "english_label": "wheat or grain",
+        "greek_surface": "σῖτον",
+        "category": "food_grain",
+        "structure_type": "simple_entity",
+        "confidence": 0.92,
+        "notes": "Exchanged with royal agents for frankincense."
+      },
+      {
+        "english_label": "oil",
+        "greek_surface": "ἔλαιον",
+        "category": "food_oil",
+        "structure_type": "simple_entity",
+        "confidence": 0.94,
+        "notes": "Exchanged with royal agents for frankincense."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "shipment_to_loading_port",
+        "source_place": "Canê",
+        "destination_place": "Moscha harbor",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "linen cloth",
+          "wheat or grain",
+          "oil"
+        ],
+        "notes": "Ships are regularly sent from Canê; passing ships from Limyrike and Barygaza also winter there."
+      },
+      {
+        "movement_type": "exchange_for_export",
+        "source_place": "royal agents and Sachalites frankincense heaps",
+        "destination_place": "ships at Moscha harbor",
+        "route_or_intermediate_place": "Moscha harbor",
+        "goods": [
+          "Sachalite frankincense"
+        ],
+        "notes": "Linen, grain, and oil are exchanged for frankincense, which cannot be loaded without royal grant."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0033",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[33]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[33]/p",
+    "section_order": 33,
+    "greek_text": "33. Ἀπὸ δὲ Μόσχα λιμένος ἐπʼ ἄλλους σταδίους ὡς χιλίους πεντακοσίους ἕως Ἀσὶχ ὄρος τῇ γῇ παρατείνει, καὶ κατὰ τὸ ἀπολῆγον αὐτοῦ μέρος ἑπτὰ νῆσοι πρόκεινται κατὰ τὸ ἑξῆς, αἱ Ζηνοβίου λεγόμεναι, μεθʼ ὃς ἄλλη παράκειται χώρα βάρβαρος οὐκ ἔτι τῆς αὐτῆς βασιλείας, ἀλλʼ ἤδη τῆς Περσίδος, ἣν ἀφʼ ὕψους παραπλέοντι ὡς σταδίους δισχιλίους ἀπὸ τῶν Ζηνοβίου συναντᾷ νῆσος Σαράπιδος λεγομένη, ἀπὸ σταδίων τῆς γῆς ὡσεὶ ἑκατὸν εἴκοσι. Ταύτης τὸ μὲν πλάτος ἐστὶν ὡσεὶ σταδίων διακοσίων, τὸ δὲ μῆκος ἑξακοσίων, οἰκεῖται δὲ κώμαις τρισὶ καὶ ἀνθρώποις ἱεροῖς Ἰχθυοφάγων· γλώσση δὲ Ἀραβικῇ χρῶνται καὶ περιζώμασι φύλλων κουκίνων. Ἔχει δὲ ἡ νῆσος χελώνην ἱκανὴν καὶ διάφορον· ἐξαρτίζοωσι δὲ εἰς αὐτὴν συνήθως οἱ ἀπὸ Κανῆς σκάφας καὶ ἐφόλκια.",
+    "draft_translation": "From Moscha harbor the coast runs about fifteen hundred stades to Mount Asich; at its end lie seven islands called the islands of Zenobius. After them comes another barbarian coast, no longer under the same kingdom but now belonging to Persis. About two thousand stades from the Zenobius islands, offshore, is the island called Sarapis. It has three villages of sacred Fish-Eaters, who use the Arabic language and wear girdles of kukinon leaves. The island has abundant excellent tortoise shell, and those from Canê regularly fit out boats and small craft for it.",
+    "places": [
+      {
+        "greek_surface": "Μόσχα λιμένος",
+        "english_label": "Moscha harbor",
+        "role": "previous_route_place",
+        "notes": "Starting point for this route section."
+      },
+      {
+        "greek_surface": "Ἀσὶχ ὄρος",
+        "english_label": "Mount Asich",
+        "role": "route_landmark",
+        "notes": "Mountain reached along the coast from Moscha."
+      },
+      {
+        "greek_surface": "Ζηνοβίου",
+        "english_label": "Zenobius islands",
+        "role": "route_intermediate_islands",
+        "notes": "Seven islands lying off the end of Mount Asich."
+      },
+      {
+        "greek_surface": "Περσίδος",
+        "english_label": "Persis",
+        "role": "regional_authority",
+        "notes": "The next coast is said to belong to Persis."
+      },
+      {
+        "greek_surface": "Σαράπιδος",
+        "english_label": "Sarapis island",
+        "role": "destination_island_and_material_source",
+        "notes": "Island with abundant tortoise shell and regular vessels from Canê."
+      },
+      {
+        "greek_surface": "Κανῆς",
+        "english_label": "Canê",
+        "role": "source_port",
+        "notes": "Boats and small craft are regularly fitted out from Canê for Sarapis."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "tortoise shell",
+        "greek_surface": "χελώνην ἱκανὴν καὶ διάφορον",
+        "category": "marine_luxury_material",
+        "structure_type": "simple_entity_with_quality_and_quantity",
+        "confidence": 0.97,
+        "notes": "The island has abundant and excellent tortoise shell."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "collection_voyage",
+        "source_place": "Canê",
+        "destination_place": "Sarapis island",
+        "route_or_intermediate_place": "Zenobius islands and Persis coast by route context",
+        "goods": [
+          "tortoise shell"
+        ],
+        "notes": "Canê sends or equips boats and small craft to Sarapis; tortoise shell is the named material available there."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0034",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[34]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[34]/p",
+    "section_order": 34,
+    "greek_text": "34. Περικολπίζοντι δὲ τὴν ἐχομένην ἤπειρον εἰς αὐτὴν τὴν ἄρκτον ἤδη περὶ τὴν εἰσβολὴν τῆς Περσικῆς θαλάσσης κεῖνται νῆσοι πλείονες, αἱ Καλαίου λεγόμεναι νῆσοι , σχεδὸν ἐπὶ σταδίους δισχιλίους παρατεταμμέναι τῇ χώρᾳ· πονηροὶ δὲ οἱ κατοικοῦντες αὐτὰς ἄνθρωποι καὶ ἡμέρας οὐ πολύ τι βλέποντες.",
+    "draft_translation": "Sailing around the next mainland northward, near the entrance to the Persian Sea, lie several islands called the Calaean Islands, extending for about two thousand stadia along the coast; their inhabitants are hostile and see little by day.",
+    "places": [
+      {
+        "greek_surface": "Περσικῆς θαλάσσης",
+        "english_label": "Persian Sea",
+        "role": "regional_waterway",
+        "notes": "Entrance area used as route context."
+      },
+      {
+        "greek_surface": "Καλαίου ... νῆσοι",
+        "english_label": "Calaean Islands",
+        "role": "island_group",
+        "notes": "Islands along the mainland near the Persian Sea entrance."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0035",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[35]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[35]/p",
+    "section_order": 35,
+    "greek_text": "35. Περὶ δὲ τὴν ἐσχάτην κεφαλήν τῶν Καλαίου νήσων καὶ τὸ λεγόμενον Καλὸν ὄρος ἐκδέχεται μετʼ οὐ πολὺ τὸ στόμα τῆς Περσικῆς, καὶ πλεῖσται κολυμβήσεις εἰσὶ τοῦ πινικίου κόγχου. Τούτου δὲ τοῦ στόματος ἐκ τῶν εὐωνύμων ἐστὶν ὄρη μέγιστα λεγόμενα Ἀσαβῶν, ἐκ δὲ τῶν δεξιῶν ἄντικρυς ἀφορώμενον ἄλλο στρογγύλον ὑψηλὸν, τὸ Σεμιράμεως λεγόμενον, καὶ μέσος αὐτὸς ὁ διάπλους τοῦ στόματος ὡς σταδίους ἑξακοσίους, διʼ οὗ μέγιστος καὶ πλατύτατος εἰς τοὺς ἐσωτάτους τόπους ὁ Περσικὸς κόλπος ἀναχεῖται, καθʼ ὃν ἐν τοῖς ἐσχάτοις αὐτοῦ μέρεσιν ἐμπόριόν ἐστι νόμιμον, λεγόμενον ἡ Ἀπολόγου, κειμένη κατὰ Πασίνου Χάρακα καὶ ποτάμον Εὐφράτην.",
+    "draft_translation": "Near the outer end of the Calaean Islands and the so-called Fair Mountain the mouth of the Persian Gulf comes next, where there is much diving for pinna shell. On the left are the Asabon mountains, on the right the mountain called Semiramis, and through the passage the Persian Gulf opens inland to Apologos, a lawful emporium near Charax Pasinu and the Euphrates.",
+    "places": [
+      {
+        "greek_surface": "Καλαίου νήσων",
+        "english_label": "Calaean Islands",
+        "role": "route_or_intermediate_place",
+        "notes": "Western approach to the gulf mouth."
+      },
+      {
+        "greek_surface": "Καλὸν ὄρος",
+        "english_label": "Fair Mountain",
+        "role": "landmark",
+        "notes": "Landmark near the mouth of the Persian Gulf."
+      },
+      {
+        "greek_surface": "στόμα τῆς Περσικῆς",
+        "english_label": "Mouth of the Persian Gulf",
+        "role": "route_or_intermediate_place",
+        "notes": "Navigational entrance to the gulf."
+      },
+      {
+        "greek_surface": "Ἀσαβῶν",
+        "english_label": "Asabon Mountains",
+        "role": "landmark",
+        "notes": "Mountains on the left side of the entrance."
+      },
+      {
+        "greek_surface": "Σεμιράμεως",
+        "english_label": "Semiramis Mountain",
+        "role": "landmark",
+        "notes": "High round mountain on the right side of the entrance."
+      },
+      {
+        "greek_surface": "Περσικὸς κόλπος",
+        "english_label": "Persian Gulf",
+        "role": "regional_waterway",
+        "notes": "The gulf opening into the interior."
+      },
+      {
+        "greek_surface": "Ἀπολόγου",
+        "english_label": "Apologos",
+        "role": "destination_port",
+        "notes": "Lawful emporium in the inner Persian Gulf."
+      },
+      {
+        "greek_surface": "Πασίνου Χάρακα",
+        "english_label": "Charax Pasinu",
+        "role": "nearby_place",
+        "notes": "Reference point for Apologos."
+      },
+      {
+        "greek_surface": "Εὐφράτην",
+        "english_label": "Euphrates River",
+        "role": "nearby_place",
+        "notes": "River near Apologos."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "pinna shell",
+        "greek_surface": "πινικίου κόγχου",
+        "category": "shell_or_marine_product",
+        "structure_type": "single_good",
+        "confidence": "medium",
+        "notes": "Extracted as a tradeable marine shell because the passage describes abundant diving for it."
+      }
+    ],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0036",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[36]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[36]/p",
+    "section_order": 36,
+    "greek_text": "36. Παραπλεύσαντι δὲ τοῦτο τὸ στόμα τοῦ κόλπου μετὰ δρόμους ἓξ ἕτερον ἐμπόριόν ἐστι τῆς Περσίδος, τὰ λεγόμενα Ὄμανα. Ἐξαρτίζεται δὲ εἰς αὐτὴν συνήθως, ἀπὸ μὲν Βαρυγάζων εἰς ἀμφότερα ταῦτα τῆς Περσίδος ἐμπόρια πλοῖα μεγάλα χαλκοῦ καὶ ξύλων σανταλίνων καὶ δοκῶν καὶ κεράτων καὶ φαλάγγων σασαμίνων καὶ ἐβενίνων, εἰς δὲ τὰ Ὄμανα καὶ ἀπὸ Κανῆς λίβανος, καὶ ἀπ’ Ὀμάνων εἰς τὴν Ἀραβίαν ἐντόπια ῥαπτὰ πλοιάρια, τὰ λεγόμενα μαδάρα. Εἰσφέρεται δὲ ἀπὸ ἑκατέρων τῶν ἐμπορίων εἴς τε Βαρύγαζα καὶ εἰς Ἀραβίαν πινικὸν, πολὺ μὲν, χεῖρον δὲ τοῦ Ἰνδικοῦ, καὶ πορφύρα καὶ ἱματισμὸς ἐντόπιος καὶ οἶνος καὶ φοῖνιξ πολὺς καὶ χρυσὸς καὶ σώματα.",
+    "draft_translation": "After sailing past the mouth of the gulf, six runs farther on is another Persian emporium called Omana. Large ships usually outfit for both Persian emporia from Barygaza with copper, sandalwood, beams, horns, and logs of sesame-wood and ebony; to Omana frankincense also comes from Cane. From Omana local sewn boats called madara go to Arabia. From both emporia are brought into Barygaza and Arabia much Persian shell, inferior to Indian shell, along with purple dye, local clothing, wine, many dates, gold, and slaves.",
+    "places": [
+      {
+        "greek_surface": "Περσίδος",
+        "english_label": "Persis",
+        "role": "region",
+        "notes": "Region containing the emporium Omana."
+      },
+      {
+        "greek_surface": "Ὄμανα",
+        "english_label": "Omana",
+        "role": "source_place",
+        "notes": "Persian emporium sending goods to Barygaza and Arabia; also destination for imports."
+      },
+      {
+        "greek_surface": "Βαρυγάζων",
+        "english_label": "Barygaza",
+        "role": "source_place",
+        "notes": "Port sending large ships and cargo to Persian emporia; also destination for goods from them."
+      },
+      {
+        "greek_surface": "Κανῆς",
+        "english_label": "Cane",
+        "role": "source_place",
+        "notes": "Source of frankincense sent to Omana."
+      },
+      {
+        "greek_surface": "Ἀραβίαν",
+        "english_label": "Arabia",
+        "role": "destination_place",
+        "notes": "Destination for sewn boats and imports from the Persian emporia."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "copper",
+        "greek_surface": "χαλκοῦ",
+        "category": "metal",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Cargo from Barygaza to the Persian emporia."
+      },
+      {
+        "english_label": "sandalwood",
+        "greek_surface": "ξύλων σανταλίνων",
+        "category": "wood",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Cargo from Barygaza to the Persian emporia."
+      },
+      {
+        "english_label": "beams",
+        "greek_surface": "δοκῶν",
+        "category": "timber",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Cargo from Barygaza to the Persian emporia."
+      },
+      {
+        "english_label": "horns",
+        "greek_surface": "κεράτων",
+        "category": "animal_product",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Cargo from Barygaza to the Persian emporia."
+      },
+      {
+        "english_label": "sesame-wood logs",
+        "greek_surface": "φαλάγγων σασαμίνων",
+        "category": "wood",
+        "structure_type": "compound_entity",
+        "confidence": "medium",
+        "notes": "Preserved as a qualified timber item."
+      },
+      {
+        "english_label": "ebony logs",
+        "greek_surface": "φαλάγγων ... ἐβενίνων",
+        "category": "wood",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Preserved as a qualified timber item."
+      },
+      {
+        "english_label": "frankincense",
+        "greek_surface": "λίβανος",
+        "category": "aromatic_resin",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Sent from Cane to Omana."
+      },
+      {
+        "english_label": "sewn boats called madara",
+        "greek_surface": "ῥαπτὰ πλοιάρια ... μαδάρα",
+        "category": "manufactured_vessel",
+        "structure_type": "compound_entity",
+        "confidence": "medium",
+        "notes": "Included because the passage describes these local craft moving from Omana to Arabia."
+      },
+      {
+        "english_label": "Persian pinna shell",
+        "greek_surface": "πινικὸν",
+        "category": "shell_or_marine_product",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported from Persian emporia; explicitly inferior to Indian shell."
+      },
+      {
+        "english_label": "purple dye",
+        "greek_surface": "πορφύρα",
+        "category": "dye_or_colorant",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported from Persian emporia."
+      },
+      {
+        "english_label": "local clothing",
+        "greek_surface": "ἱματισμὸς ἐντόπιος",
+        "category": "textile",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Qualified clothing item."
+      },
+      {
+        "english_label": "wine",
+        "greek_surface": "οἶνος",
+        "category": "food_or_drink",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported from Persian emporia."
+      },
+      {
+        "english_label": "dates",
+        "greek_surface": "φοῖνιξ",
+        "category": "food_or_drink",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported in quantity from Persian emporia."
+      },
+      {
+        "english_label": "gold",
+        "greek_surface": "χρυσὸς",
+        "category": "metal",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported from Persian emporia."
+      },
+      {
+        "english_label": "slaves",
+        "greek_surface": "σώματα",
+        "category": "enslaved_people",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Human cargo; retained as a traded entity, not a generic person reference."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "export",
+        "source_place": "Barygaza",
+        "destination_place": "Persian emporia including Omana",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "copper",
+          "sandalwood",
+          "beams",
+          "horns",
+          "sesame-wood logs",
+          "ebony logs"
+        ],
+        "notes": "Large ships are outfitted from Barygaza for both Persian emporia."
+      },
+      {
+        "movement_type": "export",
+        "source_place": "Cane",
+        "destination_place": "Omana",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "frankincense"
+        ],
+        "notes": "Frankincense is specifically added for Omana."
+      },
+      {
+        "movement_type": "export",
+        "source_place": "Omana",
+        "destination_place": "Arabia",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "sewn boats called madara"
+        ],
+        "notes": "Local sewn boats are said to go from Omana to Arabia."
+      },
+      {
+        "movement_type": "import",
+        "source_place": "Persian emporia including Omana",
+        "destination_place": "Barygaza and Arabia",
+        "route_or_intermediate_place": "",
+        "goods": [
+          "Persian pinna shell",
+          "purple dye",
+          "local clothing",
+          "wine",
+          "dates",
+          "gold",
+          "slaves"
+        ],
+        "notes": "Goods are brought from both emporia into both destinations."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0037",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[37]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[37]/p",
+    "section_order": 37,
+    "greek_text": "37. Μετὰ δὲ τὴν Ὀμανιτικὴν χώραν ὁμοίως ἡ Παρσιδῶν παράκειται, βασιλείας ἑτέρας, καὶ κόλπος τῶν Τεράβδων λεγόμενος, οὗ κατὰ μέσον εἰς τὸν κόλπον ἄκρα παρανατείνει. Καὶ παῤ αὐτὸν ποταμός ἐστιν, ἔχων εἰσαγωγὴν πλοίοις, καὶ μικρὸν ἐπὶ τοῦ στόματος ἔμεπόριον Ὠραία λεγόμενον, καὶ κατὰ νώτου μεσόγειος πόλις, ἀπ έχουσα ὁδὸν ἡμερῶν ἑπτὰ ἀπὸ θαλάσσης, ἐν ᾗ καὶ βασιλεία ἡ λεγομένη . Φέρει δὲ ἡ χώρα σῖτον πολὺ καὶ οἶνον καὶ ὄρυζαν καὶ φοίνικα, πρὸς δὲ τὴν ἤπειρον οὐδὲν ἕτερον ἢ βδέλλαν.",
+    "draft_translation": "After the Omanitic country lies the country of the Parsidae, under another kingdom, and the gulf called that of the Terabdoi. Beside it is a river admitting ships, with a small emporium at its mouth called Oraea and an inland royal city seven days from the sea. The country produces much wheat, wine, rice, and dates, and inland nothing else except bdellium.",
+    "places": [
+      {
+        "greek_surface": "Ὀμανιτικὴν χώραν",
+        "english_label": "Omanitic country",
+        "role": "route_or_intermediate_place",
+        "notes": "Previous coastal region in the route sequence."
+      },
+      {
+        "greek_surface": "Παρσιδῶν",
+        "english_label": "Country of the Parsidae",
+        "role": "region",
+        "notes": "Region following Omana."
+      },
+      {
+        "greek_surface": "κόλπος τῶν Τεράβδων",
+        "english_label": "Gulf of the Terabdoi",
+        "role": "regional_waterway",
+        "notes": "Gulf in the Parsidae region."
+      },
+      {
+        "greek_surface": "Ὠραία",
+        "english_label": "Oraea",
+        "role": "destination_port",
+        "notes": "Small emporium at the river mouth."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "wheat",
+        "greek_surface": "σῖτον",
+        "category": "grain",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Local product of the country."
+      },
+      {
+        "english_label": "wine",
+        "greek_surface": "οἶνον",
+        "category": "food_or_drink",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Local product of the country."
+      },
+      {
+        "english_label": "rice",
+        "greek_surface": "ὄρυζαν",
+        "category": "grain",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Local product of the country."
+      },
+      {
+        "english_label": "dates",
+        "greek_surface": "φοίνικα",
+        "category": "food_or_drink",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Local product of the country."
+      },
+      {
+        "english_label": "bdellium",
+        "greek_surface": "βδέλλαν",
+        "category": "aromatic_resin",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Only inland product named."
+      }
+    ],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0038",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[38]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[38]/p",
+    "section_order": 38,
+    "greek_text": "38. Μετὰ δὲ ταύτην τὴν χώραν, ἤδη τῆς ἠπείρου διὰ τὸ βάθος τῶν κόλπων ἐκ τῆς ἀνατολῆς ὑπερκερώεης, ἐκδέχεται τὰ παραθαλάσσια μέρη τῆς Σκυθίας παῤ αὐτὸν κειμένης τὸν βορέαν, ταπεινὰ λίαν, ἐξ ὧν ποταμὸς Σίνθος, μέγιστος τῶν κατὰ τὴν Ἐρυθρὰν θάλασσαν ποταμῶν καὶ πλεῖστον ὕδωρ εἰς θάλασσαν ἐκβάλλων, ὥστε ἄχρι πολλοῦ καὶ πρὶν ἢ συμβάλῃ τῆ χώρᾳ εἰς τὸ πέλαγος ἀπαντᾶν ἀπʼ αὐτοῦ λευκὸν ὕδωρ. Σημεῖον δὲ ἤδη τῆς περὶ αὐτὴν τὴν χώραν ἐπιβολῆς τοῖς ἐκ πελάγους ἐρχομένοις οἱ προαπαντῶντες ὄφεις ἐκ τοῦ βάθους τῶν γὰρ ἐπάνω καὶ περὶ τὴν Περσίδα τόπων σημεῖόν ἐστιν αἱ λεγόμεναι γράαι. Ἑπτὰ δὲ οὗτος ὁ ποταμὸς ἔχει στόματα, λεπτὰ δὲ ταῦτα καὶ τεναγώδη, καὶ τὰ μὲν ἄλλα διάπλουν οὐκ ἔχει, μόνον δὲ τὸ μέσον, ἐφʼ οὗ καὶ παραθαλάσσιον ἐμπόριόν ἐστιν Βαρβαρικόν. Πρόκειται δὲ αὐτοῦ νησίον μικρὸν, καὶ κατὰ νώτου μεσόγειος ἡ μητρόπολις αὐτῆς τῆς Σκωθίας Μινναγάρ· βασιλεύεται δὲ ὑπὸ Πάρθων, συνεχῶς ἀλλήλους ἐνδιωκόντων.",
+    "draft_translation": "After this country, where the mainland has already swung eastward because of the deep gulfs, come the low coastal parts of Scythia to the north. From them flows the Sindus, the greatest river of the Erythraean Sea, with seven mouths; only the middle mouth is navigable, and there stands the seaside emporium Barbarikon. Behind it inland is Minnagar, metropolis of Scythia, ruled by Parthians who continually drive one another out.",
+    "places": [
+      {
+        "greek_surface": "Σκυθίας",
+        "english_label": "Scythia",
+        "role": "region",
+        "notes": "Northern low coastal region after the Parsidae."
+      },
+      {
+        "greek_surface": "Σίνθος",
+        "english_label": "Sindus River",
+        "role": "route_or_intermediate_place",
+        "notes": "Major river with seven mouths."
+      },
+      {
+        "greek_surface": "Βαρβαρικόν",
+        "english_label": "Barbarikon",
+        "role": "destination_port",
+        "notes": "Seaside emporium at the navigable middle mouth of the Sindus."
+      },
+      {
+        "greek_surface": "Μινναγάρ",
+        "english_label": "Minnagar",
+        "role": "inland_city",
+        "notes": "Inland metropolis of Scythia behind Barbarikon."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0039",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[39]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[39]/p",
+    "section_order": 39,
+    "greek_text": "39. Τὰ μὲν οὖν πλοῖα κατὰ τὴν Βαρβαρικὴν διορμίρεται διὰ τοῦ ποταμοῦ τῷ βασιλεῖ. Προχωρεῖ δὲ εἰς τὸ ἐμπόριον ἱματισμὸς ἁπλοῦς ἱκανὸς καὶ νόθος οὐ πολὺς, πολύμιτα καὶ χρυσόλιθον καὶ κοράλλιον καὶ στύραξ καὶ λίβανος καὶ ὑαλὰ σκεύη καὶ ἀργυρώματα καὶ χρῆμα, οἶνος δ οὐ πολύς. Ἀντιφορτίζεται δὲ κόστος, βδέλλα, λύκιον, νάρδος καὶ καλλεανὸς λίθος καὶ σάπφειρος καὶ Σηρικὰ δέρματα καὶ ὀθόνιον καὶ νῆμα Σηρικὸν καὶ Ἰνδικὸν μέλαν. Ἀνάγονται δὲ καὶ αὐτοὶ οἱ πλέοντες μετὰ τῶν Ἰνδκῶν περὶ τὸν Ἰούλιον μῆνα, ὅς ἐστιν Ἐπιφί· δυςεπίβολος μὲν, ἐπιφορώτερος δὲ ἐκείνων καὶ συντομώτερος ὁ πλοῦς.",
+    "draft_translation": "Ships are brought through the river to the king at Barbarikon. Into the emporium go sufficient plain clothing, a little counterfeit cloth, patterned textiles, chrysolith, coral, storax, frankincense, glass vessels, silverware, money, and a little wine. In exchange are loaded costus, bdellium, lycium, nard, callaine stone, sapphire, Chinese skins, cloth, Chinese thread, and Indian black pigment. Sailors depart with the Indian ships around July, the month Epiphi; the voyage is harder to enter but more favorable and shorter than the others.",
+    "places": [
+      {
+        "greek_surface": "Βαρβαρικὴν",
+        "english_label": "Barbarikon",
+        "role": "destination_port",
+        "notes": "Emporium reached through the river."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "plain clothing",
+        "greek_surface": "ἱματισμὸς ἁπλοῦς",
+        "category": "textile",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Imported into Barbarikon."
+      },
+      {
+        "english_label": "counterfeit cloth",
+        "greek_surface": "νόθος",
+        "category": "textile",
+        "structure_type": "single_good",
+        "confidence": "medium",
+        "notes": "Elliptic textile term coordinated with clothing."
+      },
+      {
+        "english_label": "patterned textiles",
+        "greek_surface": "πολύμιτα",
+        "category": "textile",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported into Barbarikon."
+      },
+      {
+        "english_label": "chrysolith",
+        "greek_surface": "χρυσόλιθον",
+        "category": "stone_or_gem",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported into Barbarikon."
+      },
+      {
+        "english_label": "coral",
+        "greek_surface": "κοράλλιον",
+        "category": "marine_product",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported into Barbarikon."
+      },
+      {
+        "english_label": "storax",
+        "greek_surface": "στύραξ",
+        "category": "aromatic_resin",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported into Barbarikon."
+      },
+      {
+        "english_label": "frankincense",
+        "greek_surface": "λίβανος",
+        "category": "aromatic_resin",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported into Barbarikon."
+      },
+      {
+        "english_label": "glass vessels",
+        "greek_surface": "ὑαλὰ σκεύη",
+        "category": "manufactured_good",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Imported into Barbarikon."
+      },
+      {
+        "english_label": "silverware",
+        "greek_surface": "ἀργυρώματα",
+        "category": "metalware",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported into Barbarikon."
+      },
+      {
+        "english_label": "money",
+        "greek_surface": "χρῆμα",
+        "category": "currency",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported payment or exchange medium."
+      },
+      {
+        "english_label": "wine",
+        "greek_surface": "οἶνος",
+        "category": "food_or_drink",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Imported in small quantity."
+      },
+      {
+        "english_label": "costus",
+        "greek_surface": "κόστος",
+        "category": "aromatic_or_medicinal_plant",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Loaded in exchange at Barbarikon."
+      },
+      {
+        "english_label": "bdellium",
+        "greek_surface": "βδέλλα",
+        "category": "aromatic_resin",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Loaded in exchange at Barbarikon."
+      },
+      {
+        "english_label": "lycium",
+        "greek_surface": "λύκιον",
+        "category": "plant_product",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Loaded in exchange at Barbarikon."
+      },
+      {
+        "english_label": "nard",
+        "greek_surface": "νάρδος",
+        "category": "aromatic_or_medicinal_plant",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Loaded in exchange at Barbarikon."
+      },
+      {
+        "english_label": "callaine stone",
+        "greek_surface": "καλλεανὸς λίθος",
+        "category": "stone_or_gem",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Loaded in exchange at Barbarikon."
+      },
+      {
+        "english_label": "sapphire",
+        "greek_surface": "σάπφειρος",
+        "category": "stone_or_gem",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Loaded in exchange at Barbarikon."
+      },
+      {
+        "english_label": "Chinese skins",
+        "greek_surface": "Σηρικὰ δέρματα",
+        "category": "animal_product",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Loaded in exchange at Barbarikon."
+      },
+      {
+        "english_label": "cloth",
+        "greek_surface": "ὀθόνιον",
+        "category": "textile",
+        "structure_type": "single_good",
+        "confidence": "high",
+        "notes": "Loaded in exchange at Barbarikon."
+      },
+      {
+        "english_label": "Chinese thread",
+        "greek_surface": "νῆμα Σηρικὸν",
+        "category": "textile",
+        "structure_type": "compound_entity",
+        "confidence": "high",
+        "notes": "Loaded in exchange at Barbarikon."
+      },
+      {
+        "english_label": "Indian black pigment",
+        "greek_surface": "Ἰνδικὸν μέλαν",
+        "category": "pigment_or_colorant",
+        "structure_type": "compound_entity",
+        "confidence": "medium",
+        "notes": "Loaded in exchange; exact substance uncertain, preserved as qualified pigment."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "import",
+        "source_place": "",
+        "destination_place": "Barbarikon",
+        "route_or_intermediate_place": "Sindus River",
+        "goods": [
+          "plain clothing",
+          "counterfeit cloth",
+          "patterned textiles",
+          "chrysolith",
+          "coral",
+          "storax",
+          "frankincense",
+          "glass vessels",
+          "silverware",
+          "money",
+          "wine"
+        ],
+        "notes": "Passage lists goods going into the emporium."
+      },
+      {
+        "movement_type": "export",
+        "source_place": "Barbarikon",
+        "destination_place": "",
+        "route_or_intermediate_place": "Indian shipping route",
+        "goods": [
+          "costus",
+          "bdellium",
+          "lycium",
+          "nard",
+          "callaine stone",
+          "sapphire",
+          "Chinese skins",
+          "cloth",
+          "Chinese thread",
+          "Indian black pigment"
+        ],
+        "notes": "Passage lists goods loaded in exchange."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0040",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[40]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[40]/p",
+    "section_order": 40,
+    "greek_text": "40. Μετὰ δὲ τὸν Σίνθον ποταμὸν ἕτερός ἐστι κόλπος ἀθεώρητος παρὰ τὸν βορέαν· ὀνομάζεται δὲ Εἰρινὸν, ἐπιλέγεται δὲ ὁ μὲν μικρὸν ὁ δὲ μέγα· πελάγη δέ ἐστιν ἀμφότερα τεναγώδη καὶ δίνας ἐλαφρὰς ἔχοντα καὶ συνεχεῖς καὶ μακρὰς ἀπὸ τῆς γῆς, ὡς πολλάκις, τῆς ἠπείρου μηδὲ βλεπομένης, ἐποκέλλειν τὰ πλοῖα, ἐνδοτέρω δὲ προληφθέντα καὶ ἀπόλλυσθαι. Τούτου δὲ ὑπερέχει τοῦ κόλπου ἀκρωτήριον, ἐπικαμπὲς ἀπὸ τοῦ Εἰρίνου μετὰ τὴν ἀνατολὴν καὶ τὸν νότον ὡς εἰς τὴν δύσιν, ἐμπεριλαμβάνον αὐτὸν τὸν κόλπον λεγόμενον Βαράκην, νήσους ἑπτὰ ἐμπεριειλημμένον, οὗ περὶ μὲν τὰς ἀρχὰς οἱ περιπεσόντες ὀλίγον ὀπίσω καὶ εἰς τὸ πέλαγος ἀναδραμόντες ἐκφεύγουσιν, οἱ δὲ εἰς αὐτὴν κατακλεισθέντες τὴν τοῦ Βαράκου κοιλίαν ἀπόλλυνται τὸ μὲν γὰρ κῦμα μέγα καὶ βαρὺ λίαν, ἡ δὲ θάλασσα ταραχώδης καὶ θολερὰ καὶ δίνας ἔχουσα καὶ ῥοώδεις εἰλίγγους. Ὁ δὲ βυθὸς ἔν τισι μὲν ἀπόκοπος ἔν τισι δὲ πετρώδης καὶ ἀπόξυρος, ὥστε τέμνεσθαι τὰς παρακειμένας ἀγκύρας διὰ ταχέων ἀποκοπτομένας, ἃς δὲ καὶ συντριβομένας ἐν τῷ βυθῷ. Σημεῖον δʼ αὐτῶν τοῖς ἀπὸ πελάγους ἐρχομένοις οἱ προαπαντῶντες ὄφεις ὑπερμεγέθεις καὶ μέλανες ἐν γὰρ τοῖς μετὰ ταῦτα τόποις καὶ τοῖς περὶ Βαρύγαζα μικρότεροι καὶ τῷ χρώματι χλωροὶ καὶ χρυσίζοντες ὑπαντῶσιν.",
+    "draft_translation": "After the Sindus River is another unexplored gulf toward the north, called Eirinon, divided into the Lesser and Greater, both shallow seas with light, continuous eddies far from land. Beyond it projects the curved cape called Barake, enclosing seven islands; ships that fall too far into the belly of Barake are lost among heavy waves, confused sea, eddies, rocky bottom, and dangerous anchors.",
+    "places": [
+      {
+        "greek_surface": "Σίνθον ποταμὸν",
+        "english_label": "Sindus River",
+        "role": "route_or_intermediate_place",
+        "notes": "Previous route marker."
+      },
+      {
+        "greek_surface": "Εἰρινὸν",
+        "english_label": "Eirinon Gulf",
+        "role": "regional_waterway",
+        "notes": "Unexplored northern gulf, divided into lesser and greater."
+      },
+      {
+        "greek_surface": "Βαράκην",
+        "english_label": "Barake",
+        "role": "cape",
+        "notes": "Curved cape enclosing the gulf and seven islands."
+      },
+      {
+        "greek_surface": "Βαρύγαζα",
+        "english_label": "Barygaza",
+        "role": "nearby_place",
+        "notes": "Later region used for comparison of sea-signs."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": []
+  }
+]

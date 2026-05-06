@@ -1,0 +1,280 @@
+{
+  "route_title": "Periplus of the Erythraean Sea: generated sections 1-10",
+  "source_range": {
+    "start_section": 61,
+    "end_section": 66
+  },
+  "main_route_place_keys": [
+    "myos_hormos",
+    "barygaza"
+  ],
+  "steps": [
+    {
+      "step_id": "step_0061_section_61_trade_goods",
+      "type": "stop",
+      "title": "Section 61: trade goods",
+      "route_label": "Section 61 of 6 · mapped stop",
+      "focus_place_key": "myos_hormos",
+      "section_refs": [
+        "section_0061"
+      ],
+      "translation": "Beyond the coast lies the island called Palaisimoundou, formerly Taprobane; it produces pearls, transparent stones, cloths, and tortoise-shell.",
+      "greek_text": "61. Περὶ δὲ τὴν μετʼ αὐτὴν χώραν, ἤδη πρὸς ἀνατολὴν τοῦ πλοὸς ἀπονεύοντος, εἰς πέλαγος ἔκκειται πρὸς αὐτὴν τὴν δύσιν νῆσος λεγομένη Παλαισιμούνδου, παρὰ δὲ τοῖς ἀρχαίοις αὐτῶν Ταπροβάνη. Ταύτης τὰ μὲν πρὸς βορέαν ἐστὶν ἥμερα καὶ διαπλεῖται τοῖς εἰς τὸν πλιονακιστινει καὶ σχεδὸν εἰς τὸ κατʼ αὐτῆς ἀντιπαρακείμενον Ἀζανίας παρήκει. Γίνεται δὲ ἐν αὐτῇ πινικὸν καὶ λιθία διαφανής καὶ σινδόνες καὶ χελῶναι.",
+      "place_mentions": [
+        {
+          "surface": "Palaisimoundou",
+          "place_key": "palaisimoundou",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Παλαισιμούνδου",
+          "place_key": "palaisimoundou",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Taprobane",
+          "place_key": "taprobane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ταπροβάνη",
+          "place_key": "taprobane",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "pearls",
+        "transparent stones",
+        "cloths/muslins",
+        "tortoise-shell"
+      ]
+    },
+    {
+      "step_id": "step_0062_section_62_trade_goods",
+      "type": "stop",
+      "title": "Section 62: trade goods",
+      "route_label": "Section 62 of 6 · mapped stop",
+      "focus_place_key": "myos_hormos",
+      "section_refs": [
+        "section_0062"
+      ],
+      "translation": "Masalia lies inland and produces many cloths. Across the adjoining gulf, Desarene supplies the ivory called Bosare.",
+      "greek_text": "62. Περὶ δὲ τούτους τοὺς τόπους πολὺ τῇ μεσογείῳ παρήκουσα Μασαλία παράκειται χώρα· γίνονται ἐν αὐτῇ σινδόνες πλεῖσται. Ἀπὸ δὲ ταύτης εἰς αὐτὴν τὴν ἀνατολὴν διαπεράσαντι τὸν παρακείμενον κόλπον ἡ Δησαρηνὴ χώρα, φέρουσα ἐλέφαντα τὸν λεγόμενον βωσαρὴ, καὶ μετʼ αὐτὴν, εἰς τὸν βορέαν ἤδη ἀπονεύοντος τοῦ πλοὸς, βάρβαρα πολλὰ ἔθνη, ἐν οἷς οἱ Κιρρᾶδαι, γένος ἀνθρώπων ἐντεθλιμμένων τὴν ῥῖνα, ἀγρίων, καὶ Βαργύσων ἕτερον ἔθνος καὶ τὸ τῶν Ἱππιοπροσώπων ἢ Μακροπροσώπων, λεγόμενον ἀνθρωποφάγον εἶναι.",
+      "place_mentions": [
+        {
+          "surface": "Masalia",
+          "place_key": "masalia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μασαλία",
+          "place_key": "masalia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Desarene",
+          "place_key": "desarene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Δησαρηνὴ χώρα",
+          "place_key": "desarene",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "cloths/muslins",
+        "Bosare ivory"
+      ]
+    },
+    {
+      "step_id": "step_0063_section_63_trade_goods",
+      "type": "stop",
+      "title": "Section 63: trade goods",
+      "route_label": "Section 63 of 6 · mapped stop",
+      "focus_place_key": "myos_hormos",
+      "section_refs": [
+        "section_0063"
+      ],
+      "translation": "The Ganges river has a same-named emporion, through which malabathrum, Gangetic nard, pearls, and the finest Gangetic cloths are carried. Chryse is described farther east, with gold-working nearby and the best tortoise-shell.",
+      "greek_text": "63. Μετὰ δὲ ταῦτα, εἰς τὴν ἀνατολὴν πλεόντων καὶ τὸν ὠκεανὸν ἐν δεξιοῖς ἐχόντων, εὐώνυμα δὲ τὰ λοιπὰ μέρη ἔξωθεν παραπλεόντων, ὁ Γάγγης ἀπαντᾷ καὶ ἡ περὶ αὐτὴν ἐσχάτη τῆς ἀνατολῆς ἤπειρος, ἡ Χρυσῆ. Ποταμὸς δέ ἐστι περὶ αὐτὴν ὁ Γάγγης λεγόμενος, καὶ αὐτὸς μέγιστος τῶν κατὰ τὴν Ἰνδικὴν, ἀπόβασίν τε καὶ ἀνάβασιν τὴν αὐτὴν ἔχων τῷ Νείλῳ, καθʼ ὃν καὶ ἐμπόριόν ἐστιν ὁμώνυμον τῷ ποταμῷ, ὁ Γάγγης, διʼ οἷ φέρεται τό τε μαλάβαθρον καὶ ἡ Γαγγητικὴ νάρδος καὶ πινικὸν καὶ σινδόνες αἱ διαφορώταται, αἱ Γαγγητικαὶ λεγόμεναι. Λέγεται δὲ καὶ χρυσωρύχια περὶ τοὺς τόπους εἶναι, νόμισμά τε χρυ σοῦ, ὁ λεγόμενος κάλτις. Κατʼ αὐτὸν δὲ τὸν ποταμὸν νῆσός ἐστιν ὠκεάνιος, ἐσχάτη τῶν πρὸς ἀνατολὴν μερῶν τῆς οἰκουμένης, ὑπʼ αὐτὸν ἀνέχοντα τὸν ἥλιον, καλουμένη Χρυσῆ, χελώνην ἔχουσα πάντων τῶν κατὰ τὴν Ἐρυθρὰν τόπων ἀρίστην.",
+      "place_mentions": [
+        {
+          "surface": "Ganges",
+          "place_key": "ganges",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Γάγγης",
+          "place_key": "ganges",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Chryse",
+          "place_key": "chryse",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Χρυσῆ",
+          "place_key": "chryse",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "malabathrum",
+        "Gangetic nard",
+        "pearls",
+        "Gangetic muslins",
+        "gold",
+        "tortoise-shell"
+      ]
+    },
+    {
+      "step_id": "step_0064_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 64 of 6 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0064"
+      ],
+      "translation": "Thina is a great inland city from which Seric wool, thread, and cloth are brought by land through Bactria to Barygaza and again to Limyrike by way of the Ganges river; travel to Thina itself is difficult.",
+      "greek_text": "64. Μετὰ δὲ ταύτην τὴν χώραν ὑπʼ αὐτὸν ἤδη τὸν βορέαν, ἔξωθεν εἰς Θινός τινα τόπον ἀποληγούσης τῆς θαλάσσης, παράκειται ἐν αὐτῇ πόλις μεσόγειος μεγίστη, λεγομένη Θῖναι, ἀφʼ ἧς τό τε ἔριον καὶ τὸ νῆμα καὶ τὸ οόνιον τὸ Σηρικὸν εἰς τὰ Βαρύγαζα διὰ Βάκτρων πεζῇ φέρεται καὶ εἰς τὴν Λιμυρικὴν πάλιν διὰ τοῦ Γάγγου ποταμοῦ. Εἰς δὲ τὴν Θῖνα ταύτην οὐκ ἔστιν εὐχερῶς ἀπελθεῖν· σπανίως γὰρ ἀπʼ αὐτῆς τινὲς οὐ πολλοὶ ἔρχονται. Κεῖται δὲ ὁ τόπος ὑπʼ αὐτὴν τὴν μικρὰν ἄρκτον, λέγεται δὲ συνορίζειν τοῖς ἀπεστραμμένοις μέρεσι τοῦ Πόντου καὶ τῆς Κασπίας θαλάσσης, καθʼ ἣν ἡ παρακειμένη λίμνη Μαιῶτις εἰς τὸν ὠκεανὸν συναναστομοῦσα.",
+      "place_mentions": [
+        {
+          "surface": "Thina",
+          "place_key": "thina",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Θῖναι",
+          "place_key": "thina",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Bactria",
+          "place_key": "bactria",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βάκτρων",
+          "place_key": "bactria",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Limyrike",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Λιμυρικὴν",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ganges river",
+          "place_key": "ganges_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Γάγγου ποταμοῦ",
+          "place_key": "ganges_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ganges",
+          "place_key": "ganges",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "Seric wool",
+        "Seric thread",
+        "Seric cloth"
+      ]
+    },
+    {
+      "step_id": "step_0065_section_65_trade_goods",
+      "type": "stop",
+      "title": "Section 65: trade goods",
+      "route_label": "Section 65 of 6 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0065"
+      ],
+      "translation": "The Sesatai gather and process malabathrum leaves near the Thina frontier. The processed leaves are sorted into three forms by leaf size and then carried into India by the workers who prepare them.",
+      "greek_text": "65. Κατʼ ἔτος δὲ παραγίνεται ἐπὶ τὴν συνορίαν τῆς Θινὸς ἔθνος τι, τῷ μὲν σώματι κολοβοὶ καὶ σφόδρα πλατυπρόσωποι, ἐννοίαις δὲ λῷστοι αὐτοὺς δὲ λέγεσθαί φασι Σησάτας, παρομοίους ἀνημέροις· παραγίνονται σὺν γυναιξὶ καὶ τέκνοις, βαστάζοντες φορτία μεγάλα καὶ ταρπόνας ὠμαμπελίνοις παραπλησίας, εἶτʼ ἐνεπιμένουσιν ἐπί τινα τόπον τῆς συνορίας αὐτῶν καὶ τῶν ἐπὶ τῆς Θινὸς, καὶ ἑορτάζουσιν ἐπί τινας ἡμέρας, ὑποστρώσαντες ἑαυτοῖς τὰς ταρπόνας, καὶ ἀπαίρουσιν εἰς τὰ ἴδια εἰς τοὺς ἐσωτέρους τόπους. Οἱ δὲ ταῦτα δοκεύοντες τότε παραγίνονται ἐπὶ τοὺς τόπους καὶ συλλέγουσι τὰ ἐκείνων ὑποστρώματα, καὶ ἐξινιάσαντες καλάμους τοὺς λεγομένους πέτρους ἐπὶ λεπτὸν ἐπιδιπλώσαντες τὰ φύλλα καὶ σφαιροειδῆ ποιοῦντες διείρουσι ταῖς ἀπὸ τῶν καλάμων ἴναις. Γίνεται δὲ γένη τρία· ἐκ μὲν τοῦ μείζονος φύλλου τὸ ἁδρόσφαιρον μαλάβαθρον λεγόμενον, ἐκ δὲ τοῦ ὑποδεεστέρου τὸ μεσόσφαιρον, ἐκ δὲ τοῦ μικροτέρου τὸ μικρόσφαιρον. Ἔνθεν τὰ τρία μέρη τοῦ μαλαβάθρου γίνεται καὶ τότε φέρεται εἰς τὴν Ἰνδικὴν ὑπὸ τῶν κατεργαζομένων αὐτά.",
+      "place_mentions": [
+        {
+          "surface": "Thina",
+          "place_key": "thina",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Θινὸς",
+          "place_key": "thina",
+          "kind": "off_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἰνδικὴν",
+          "place_key": "india",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "large-ball malabathrum",
+        "middle-ball malabathrum",
+        "small-ball malabathrum"
+      ]
+    },
+    {
+      "step_id": "step_0066_barygaza",
+      "type": "stop",
+      "title": "Barygaza",
+      "route_label": "Section 66 of 6 · mapped stop",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0066"
+      ],
+      "translation": "The final notice describes the remoteness and difficulty of the farthest regions beyond Thina without listing a tradeable commodity or a concrete goods movement.",
+      "greek_text": "66. Τὰ δὲ μετὰ τούτους τοὺς τόπους, διά τε ὑπερβολὰς χειμώνων καὶ πάγους μεγίστους δύσβατα ὄντα, εἴτε καὶ θείᾳ τινὶ δυνάμει θεῶν, ἀνερεύνητά ἐστιν.",
+      "place_mentions": [
+        {
+          "surface": "Thina",
+          "place_key": "thina",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    }
+  ],
+  "legs": [
+    {
+      "from_place_key": "myos_hormos",
+      "to_place_key": "barygaza",
+      "section_refs": [
+        "section_0064"
+      ],
+      "distance_text": "inferred from section sequence",
+      "distance_value": null,
+      "distance_unit": null,
+      "estimated_km_at_185m_stade": null,
+      "certainty": "inferred_from_sequence"
+    }
+  ]
+}

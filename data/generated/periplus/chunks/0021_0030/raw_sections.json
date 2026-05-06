@@ -1,0 +1,903 @@
+[
+  {
+    "chunk_id": "section_0021",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[21]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[21]/p",
+    "section_order": 21,
+    "greek_text": "21. Καὶ μετὰ ταύτας ἐν κόλπῳ τῷ τελευταιοτάτῳ τῶν εὐωνύμων τούτου τοῦ πελάγους ἐμπόριόν ἐστι νόμιμον παραθαλάσσιον Μούζα, σταδίους ἀπέχον τοὺς πάντας ἀπὸ Βερνίκης, παῤ αὐτὸν τὸν νότον πλεόντων, ὡς εἰς μυρίους δισχιλίους. Τὸ μὲν ὅλον Ἀράβων ναυκληρικῶν ἐνθρώπων καὶ ναυτικῶν πλεονάζει καὶ τοῖς ἀπʼ ἐμπορίας πράγμασι κινεῖται· συγχρῶνται γὰρ τῇ τοῦ πέραν ἐργασίᾳ καὶ Βαρυγάζων ἰδίοις ἐξαρτισμοῖς.",
+    "draft_translation": "After these, in the innermost gulf on the left side of this sea, lies Muza, a lawful seaside emporium, about twelve thousand stades from Berenice when sailing south. It is filled with Arab shipowners and sailors and is active in commercial affairs, since they participate both in the overseas trade and in the trade of Barygaza with their own outfitting arrangements.",
+    "places": [
+      {
+        "greek_surface": "Μούζα",
+        "english_label": "Muza",
+        "role": "destination port and trading market",
+        "notes": "Legal seaside emporium and commercial center."
+      },
+      {
+        "greek_surface": "Βερνίκης",
+        "english_label": "Berenice",
+        "role": "route reference/source region",
+        "notes": "Distance reference for sailing south to Muza."
+      },
+      {
+        "greek_surface": "τῇ τοῦ πέραν ἐργασίᾳ",
+        "english_label": "overseas trade",
+        "role": "trade route/context",
+        "notes": "General overseas commercial sphere, not a named port."
+      },
+      {
+        "greek_surface": "Βαρυγάζων",
+        "english_label": "Barygaza",
+        "role": "trade partner/source-destination port",
+        "notes": "Muza participates in Barygaza trade through its own outfitting."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": [
+      {
+        "movement_type": "trade_participation",
+        "source_place": "Muza",
+        "destination_place": "overseas emporia and Barygaza",
+        "route_or_intermediate_place": "Red Sea and Indian Ocean routes",
+        "goods": [],
+        "notes": "The row describes commercial participation and outfitting but gives no specific goods."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0022",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[22]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[22]/p",
+    "section_order": 22,
+    "greek_text": "22. Ὑπέρκειται δὲ αὐτῆς ἀπὸ τριῶν ἡμερῶν πόλις Σαύη, τῆς περὶ αὐτὴν Μαφαρίτιδος λεγομένης χώρας· ἔστι δὲ τύραννος καὶ κατοικῶν αὐτὴν Χόλαιβος.",
+    "draft_translation": "Above Muza, three days inland, lies the city Saua in the region called Mapharitis, and its resident ruler is Cholaibos.",
+    "places": [],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0023",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[23]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[23]/p",
+    "section_order": 23,
+    "greek_text": "23. Καὶ μετʼ ἄλλας ἐννέα ἡμέρας Σαφὰρ μητρόπολις, ἐν ᾗ Χαριβαὴλ, ἔνθεσμος βασιλεὺς ἐθνῶν δύο, τοῦ τε Ὁμηρίτου καὶ τοῦ παρακειμένου λεγομένου Σαβαΐτου, συνεχέσι πρεσβείαις καὶ δώροις φίλος τῶν αὐτοκρατόρων.",
+    "draft_translation": "After another nine days comes Saphar, a metropolis where Charibael, lawful king of two peoples, the Homerite and the neighboring so-called Sabaite, maintains friendship with the emperors through repeated embassies and gifts.",
+    "places": [
+      {
+        "greek_surface": "Σαφὰρ",
+        "english_label": "Saphar",
+        "role": "metropolis",
+        "notes": "Named inland or metropolitan center reached after the preceding route interval."
+      },
+      {
+        "greek_surface": "Ὁμηρίτου",
+        "english_label": "Homerite territory or people",
+        "role": "kingdom_or_people",
+        "notes": "One of the two peoples ruled by Charibael."
+      },
+      {
+        "greek_surface": "Σαβαΐτου",
+        "english_label": "Sabaite territory or people",
+        "role": "neighboring_kingdom_or_people",
+        "notes": "The neighboring people or region paired with the Homerite realm."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0024",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[24]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[24]/p",
+    "section_order": 24,
+    "greek_text": "24. Τὸ δὲ ἐμπόριον ἡ Μούζα ἀλίμενον μὲν εὔσαλον δὲ καὶ εὔορμον διὰ τὰ περὶ αὐτὴν ἀμμόγεια ἀγκυροβόλια. Φορτία δὲ εἰς αὐτὴν προχωρεῖ πορφύρα, διάφορος καὶ χυδαία, καὶ ἱματισμὸς Ἀραβικὸς χειριδωτὸς, ὅ τε ἁκλοῦς καὶ ὁ κοινὸς, καὶ σκοτουλάτος καὶ διάχρυσος, καὶ κρόκος καὶ κύπερος καὶ ὀθόνιον καὶ ἀβόλλαι καὶ λώδιικες οὐ πολλαὶ, ἁπλοῖ τε καὶ ἐντόπιοι, ζῶναι σκιωταὶ καὶ μύρον μέτριον καὶ χρῆμα ἱκανὸν οἶνός τε καὶ σῖτος οὐ πολύς. Φέρει γὰρ καὶ ἡ χώρα πυρὸν μετρίως καὶ οἶνον πλείονα. Τῷ δὲ βασιλεῖ καὶ τῷ τυράννῳ δίδονται ἵπποι τε καὶ ἡμίονοι νωτηγοὶ καὶ χρυσώματα καὶ τορνευτὰ ἀργυρώματα καὶ ἱματισμὸς πολυτελὴς καὶ χαλκουργήματα. Ἐξάγεται δὲ ἐξ αὐτῆς ἐντόπια μὲν, σμύρνα ἐκλεκτὴ καὶ στακτὴ * ἀβειρμιναία, λύγδος καὶ τὰ ἀπὸ τῆς πέραν Ἀδουλὶ προειρημένα φορτία πέντα. Πλεῖται δὲ εἰς αὐτὴν εὐκαίρως περὶ τὸν Σεπτέμβριον μῆνα, ὅς ἐστι Θώθ· οὐδὲν δὲ κωλύει κἂν τάχιον.",
+    "draft_translation": "Muza is a trading station without a harbor but with good roadsteads and anchorages because of the sandy ground around it. Into it go purple cloth, Arabian garments, saffron, cyperus, linen, cloaks, blankets, girdles, moderate perfume, money, wine, and some grain; the local country also produces wheat and more wine. For the king and tyrant are given horses, pack mules, gold objects, turned silver objects, costly clothing, and copper manufactures. From Muza are exported local choice myrrh, stacte myrrh, and lybdos, together with the previously mentioned cargoes from the Adulis side. The suitable sailing to it is around September, though earlier is possible.",
+    "places": [
+      {
+        "greek_surface": "Μούζα",
+        "english_label": "Muza",
+        "role": "destination_port_and_export_port",
+        "notes": "Main emporium for the section; imports arrive there and local products are exported from it."
+      },
+      {
+        "greek_surface": "ἡ χώρα",
+        "english_label": "the local country around Muza",
+        "role": "production_source",
+        "notes": "Produces wheat moderately and wine in greater quantity."
+      },
+      {
+        "greek_surface": "τῷ βασιλεῖ καὶ τῷ τυράννῳ",
+        "english_label": "the king and the tyrant at Muza",
+        "role": "elite_destination",
+        "notes": "Recipients of special prestige goods and animals."
+      },
+      {
+        "greek_surface": "Ἀδουλὶ",
+        "english_label": "Adulis side",
+        "role": "referenced_source_region",
+        "notes": "The text points back to five cargoes previously described from the opposite side near Adulis."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "purple cloth, fine and common",
+        "greek_surface": "πορφύρα, διάφορος καὶ χυδαία",
+        "category": "textile_dye_or_colored_textile",
+        "structure_type": "compound_with_quality_variants",
+        "confidence": 0.94,
+        "notes": "A coordinated quality pair attached to purple goods."
+      },
+      {
+        "english_label": "Arabian sleeved garments, plain and common",
+        "greek_surface": "ἱματισμὸς Ἀραβικὸς χειριδωτὸς",
+        "category": "textile_clothing",
+        "structure_type": "compound_with_origin_and_form",
+        "confidence": 0.95,
+        "notes": "Includes the following plain and common variants as part of the clothing entry."
+      },
+      {
+        "english_label": "checkered Arabian garments",
+        "greek_surface": "σκοτουλάτος",
+        "category": "textile_clothing",
+        "structure_type": "variant_in_coordinated_textile_list",
+        "confidence": 0.86,
+        "notes": "A textile variant in the Arabian clothing list."
+      },
+      {
+        "english_label": "gold-embroidered Arabian garments",
+        "greek_surface": "διάχρυσος",
+        "category": "textile_clothing",
+        "structure_type": "variant_in_coordinated_textile_list",
+        "confidence": 0.88,
+        "notes": "A decorative textile variant in the same clothing list."
+      },
+      {
+        "english_label": "saffron",
+        "greek_surface": "κρόκος",
+        "category": "aromatic_dye_spice",
+        "structure_type": "simple_entity",
+        "confidence": 0.95,
+        "notes": "Imported into Muza."
+      },
+      {
+        "english_label": "cyperus",
+        "greek_surface": "κύπερος",
+        "category": "aromatic_plant",
+        "structure_type": "simple_entity",
+        "confidence": 0.92,
+        "notes": "Imported into Muza."
+      },
+      {
+        "english_label": "linen cloth",
+        "greek_surface": "ὀθόνιον",
+        "category": "textile_cloth",
+        "structure_type": "simple_entity",
+        "confidence": 0.93,
+        "notes": "Imported into Muza."
+      },
+      {
+        "english_label": "abollai cloaks",
+        "greek_surface": "ἀβόλλαι",
+        "category": "textile_clothing",
+        "structure_type": "simple_entity",
+        "confidence": 0.9,
+        "notes": "Imported garment type."
+      },
+      {
+        "english_label": "lodikes blankets or coverlets",
+        "greek_surface": "λώδιικες",
+        "category": "textile_clothing",
+        "structure_type": "simple_entity_with_quantity_note",
+        "confidence": 0.86,
+        "notes": "Said to be not many, simple, and local."
+      },
+      {
+        "english_label": "shadow-patterned girdles",
+        "greek_surface": "ζῶναι σκιωταὶ",
+        "category": "textile_accessory",
+        "structure_type": "compound_with_quality",
+        "confidence": 0.82,
+        "notes": "Belt or girdle item in the import list."
+      },
+      {
+        "english_label": "perfume",
+        "greek_surface": "μύρον μέτριον",
+        "category": "aromatic_preparation",
+        "structure_type": "simple_entity_with_quantity_note",
+        "confidence": 0.92,
+        "notes": "Imported in moderate amount."
+      },
+      {
+        "english_label": "money",
+        "greek_surface": "χρῆμα ἱκανὸν",
+        "category": "money_metal",
+        "structure_type": "simple_entity_with_quantity_note",
+        "confidence": 0.84,
+        "notes": "Money is listed among imports, in sufficient quantity."
+      },
+      {
+        "english_label": "wine",
+        "greek_surface": "οἶνός",
+        "category": "food_drink",
+        "structure_type": "simple_entity",
+        "confidence": 0.93,
+        "notes": "Imported in the list and also produced locally in greater quantity."
+      },
+      {
+        "english_label": "grain",
+        "greek_surface": "σῖτος",
+        "category": "food_grain",
+        "structure_type": "simple_entity",
+        "confidence": 0.91,
+        "notes": "Imported in small amount."
+      },
+      {
+        "english_label": "wheat",
+        "greek_surface": "πυρὸν",
+        "category": "food_grain",
+        "structure_type": "simple_entity",
+        "confidence": 0.91,
+        "notes": "Local production around Muza is moderate."
+      },
+      {
+        "english_label": "horses",
+        "greek_surface": "ἵπποι",
+        "category": "live_animal_transport",
+        "structure_type": "simple_entity",
+        "confidence": 0.94,
+        "notes": "Given to the king and tyrant."
+      },
+      {
+        "english_label": "pack mules",
+        "greek_surface": "ἡμίονοι νωτηγοὶ",
+        "category": "live_animal_transport",
+        "structure_type": "compound_with_use",
+        "confidence": 0.94,
+        "notes": "Mules specified as load-bearing animals."
+      },
+      {
+        "english_label": "gold objects",
+        "greek_surface": "χρυσώματα",
+        "category": "metalwork_luxury",
+        "structure_type": "simple_entity",
+        "confidence": 0.9,
+        "notes": "Prestige items for rulers."
+      },
+      {
+        "english_label": "turned silver objects",
+        "greek_surface": "τορνευτὰ ἀργυρώματα",
+        "category": "metalwork_luxury",
+        "structure_type": "compound_with_manufacture",
+        "confidence": 0.93,
+        "notes": "Worked silver objects for rulers."
+      },
+      {
+        "english_label": "costly clothing",
+        "greek_surface": "ἱματισμὸς πολυτελὴς",
+        "category": "textile_clothing",
+        "structure_type": "compound_with_quality",
+        "confidence": 0.91,
+        "notes": "Prestige clothing for rulers."
+      },
+      {
+        "english_label": "copper manufactures",
+        "greek_surface": "χαλκουργήματα",
+        "category": "metalwork",
+        "structure_type": "simple_entity",
+        "confidence": 0.91,
+        "notes": "Worked copper items for rulers."
+      },
+      {
+        "english_label": "choice myrrh",
+        "greek_surface": "σμύρνα ἐκλεκτὴ",
+        "category": "aromatic_resin",
+        "structure_type": "compound_with_quality",
+        "confidence": 0.96,
+        "notes": "Local export from Muza."
+      },
+      {
+        "english_label": "stacte myrrh, Abirminaian",
+        "greek_surface": "στακτὴ ἀβειρμιναία",
+        "category": "aromatic_resin",
+        "structure_type": "compound_with_variety_or_origin",
+        "confidence": 0.9,
+        "notes": "A named stacte variety in the export list."
+      },
+      {
+        "english_label": "lybdos",
+        "greek_surface": "λύγδος",
+        "category": "stone_or_mineral",
+        "structure_type": "simple_entity",
+        "confidence": 0.72,
+        "notes": "Exported local material; identification is kept transliterated because the material is uncertain."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "import",
+        "source_place": "unspecified external suppliers, including Egypt-facing trade routes",
+        "destination_place": "Muza",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "purple cloth, fine and common",
+          "Arabian sleeved garments, plain and common",
+          "checkered Arabian garments",
+          "gold-embroidered Arabian garments",
+          "saffron",
+          "cyperus",
+          "linen cloth",
+          "abollai cloaks",
+          "lodikes blankets or coverlets",
+          "shadow-patterned girdles",
+          "perfume",
+          "money",
+          "wine",
+          "grain"
+        ],
+        "notes": "The first cargo list is introduced as goods going into Muza."
+      },
+      {
+        "movement_type": "local_production",
+        "source_place": "the local country around Muza",
+        "destination_place": "Muza",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "wheat",
+          "wine"
+        ],
+        "notes": "The country is said to produce wheat moderately and more wine."
+      },
+      {
+        "movement_type": "royal_gift_or_import",
+        "source_place": "unspecified external suppliers",
+        "destination_place": "the king and tyrant at Muza",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "horses",
+          "pack mules",
+          "gold objects",
+          "turned silver objects",
+          "costly clothing",
+          "copper manufactures"
+        ],
+        "notes": "The items are explicitly given to the local rulers."
+      },
+      {
+        "movement_type": "export",
+        "source_place": "Muza and its local hinterland",
+        "destination_place": "unspecified outbound markets",
+        "route_or_intermediate_place": "Adulis side referenced for earlier cargoes",
+        "goods": [
+          "choice myrrh",
+          "stacte myrrh, Abirminaian",
+          "lybdos"
+        ],
+        "notes": "The named local exports are followed by a cross-reference to five previously described Adulis-side cargoes."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0025",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[25]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[25]/p",
+    "section_order": 25,
+    "greek_text": "25. Μετὰ δὲ ταύτην ὡσεὶ τριακοσίους παραπλεύσαντες σταδίους, ἤδη συνερχομένης τε τῆς Ἀραβικῆς ἠπείρου καὶ τῆς πέραν κατὰ τὸν Aὐαλίτην Βαρβαρικῆς χώρας, αὐλών ἐστιν οὐ μακρὸς, ὁ συνάγων καὶ εἰς στενὸν ἀποκλείων τὸ πέλαγος, οδ τὸν μεταξὺ πόρον ἑξήκοντα σταδίων μεσολαβεῖ νῆσος ἡ Διοδώρου· διὸ καὶ ῥοώδης, καταπνεόμενος ἀπὸ τῶν παρακειμένων ὀρῶν, ἐστὶν ὁ κατʼ αὐτὴν διάπλους. Κατὰ τοῦτον τὸν ἰσθμὸν παραθαλάσσιός ἐστιν Ἀράβων κώμη τῆς αὐτῆς τυραννίδος Ὄκηλις, οὐχ οὕτως ἐμπόριον ὡς ὅρμος καὶ ὕδρευμα καὶ πρώτη καταγωγὴ τοῖς ἔσω διαίρουσι.",
+    "draft_translation": "After this, sailing about three hundred stades, where Arabia and the Barbarian country opposite near Avalites draw together, there is a short channel that narrows the sea; Diodorus island lies in the passage, making the crossing rough because of winds from the nearby mountains. At this isthmus is Okelis, an Arabian coastal village under the same tyranny, not so much a trading station as an anchorage, watering place, and first landing for those sailing inward.",
+    "places": [
+      {
+        "greek_surface": "Ἀραβικῆς ἠπείρου",
+        "english_label": "Arabian mainland",
+        "role": "coastal_region",
+        "notes": "One side of the narrowing channel."
+      },
+      {
+        "greek_surface": "Aὐαλίτην Βαρβαρικῆς χώρας",
+        "english_label": "Barbarian country near Avalites",
+        "role": "opposite_coastal_region",
+        "notes": "Opposite side of the channel."
+      },
+      {
+        "greek_surface": "Διοδώρου",
+        "english_label": "Diodorus island",
+        "role": "route_intermediate_place",
+        "notes": "Island in the middle of the passage."
+      },
+      {
+        "greek_surface": "Ὄκηλις",
+        "english_label": "Okelis",
+        "role": "anchorage_and_watering_place",
+        "notes": "Described as a village, harbor, watering point, and first landing rather than a true emporium."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": []
+  },
+  {
+    "chunk_id": "section_0026",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[26]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[26]/p",
+    "section_order": 26,
+    "greek_text": "26. Μετὰ δὲ Ὄκηλιν, ἀνοιγομένης πάλιν τῆς θαλάσσης εἰς ἀνατολὴν καὶ κατὰ μικρὸν εἰς πέλαγος ἀποφαινομένης, ἀπὸ σταδίων ὡς χιλίων διακοσίων ἐστὶν Εὐδαίμων Ἀραβία, κώμη παραθαλάσσιος, βασιλείας τῆς αὐτῆς Χαριβαὴλ, τοὺς ὅρμους μὲν ἐπιτηδείους καὶ ὑδρεύματα γλυκύτερα καὶ κρείσσονα τῆς Ὀκήλεως ἔχουσα, ἤδη δὲ ἐν ἀρχῇ κόλπου κειμένη τῷ τὴν χώραν ὑποφεύγειν. Εὐδαίμων δʼ ἐπεκλήθη, πρότερον οὖσα πόλις, ὅτε, μήπω ἀπὸ τῆς Ἰνδικῆς εἰς τὴν Αἴγυπτον ἐρχομένων μηδὲ ἀπὸ τῆς Αἰγύπτου τολμώντων εἰς τοὺς ἔσω τόπους διαίρειν, ἀλλʼ ἄχρι ταύτης παραγινομένων, τοὺς παῤ ἀμφοτέρων φόρτους ἀπεδέχετο, ὥσπερ Ἀλεξάνδρεια καὶ τῶν ἔξωθεν καὶ τῶν ἀπὸ τῆς Αἰγύπτου φερομένων ἀποδέχεται. Νῦν δὲ οὐ πρὸ πολλοῦ τῶν ἡμετέρωνχρόνων Καῖσαρ αὐτὴν κατεστρέψατο.",
+    "draft_translation": "After Okelis, as the sea opens eastward into the open water, after about twelve hundred stades lies Eudaimon Arabia, a coastal village of Charibael's kingdom. It has good water and is the first meeting point for those coming from outside and for those departing from the interior. It was called Eudaimon because formerly, before direct sailings from India to Egypt and from Egypt across the sea, it received the cargoes from both sides, as Alexandria now receives goods from abroad and Egypt sends goods onward.",
+    "places": [
+      {
+        "greek_surface": "Ὄκηλιν",
+        "english_label": "Okelis",
+        "role": "previous_route_place",
+        "notes": "Departure point for the route described in this section."
+      },
+      {
+        "greek_surface": "Εὐδαίμων Ἀραβία",
+        "english_label": "Eudaimon Arabia",
+        "role": "coastal_station_and_former_transshipment_place",
+        "notes": "Coastal village with good water and a former transshipment role."
+      },
+      {
+        "greek_surface": "Ἰνδίας",
+        "english_label": "India",
+        "role": "former_source_region",
+        "notes": "One side of the older indirect exchange route."
+      },
+      {
+        "greek_surface": "Aἰγύπτου",
+        "english_label": "Egypt",
+        "role": "former_destination_or_source_region",
+        "notes": "The opposite side in the older indirect exchange system."
+      },
+      {
+        "greek_surface": "Ἀλεξάνδρεια",
+        "english_label": "Alexandria",
+        "role": "comparison_port",
+        "notes": "Used as a comparison for receiving external cargoes and dispatching Egyptian cargoes."
+      }
+    ],
+    "commodity_entities": [],
+    "movement_events": [
+      {
+        "movement_type": "former_transshipment",
+        "source_place": "India and other overseas regions",
+        "destination_place": "Egypt and outward markets",
+        "route_or_intermediate_place": "Eudaimon Arabia",
+        "goods": [],
+        "notes": "The passage describes cargo movement in general but names no specific trade goods, so no commodity entities are extracted."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0027",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[27]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[27]/p",
+    "section_order": 27,
+    "greek_text": "27. Ἀπὸ δὲ τῆς Εὐδαίμονος Ἀραβικῆς ἐκδέχεται συναφὴς αἰγιαλὸς ἐπιμήκης καὶ κόλπος ἐπὶ δισχιλίους ἢ πλείονας παρήκων σταδίους, Νομάδων τε καὶ Ἰχθυοφάγων κώμαις παροικούμενος, οὗ μετὰ τὴν προέχουσαν ἄκραν ἐμπόριόν ἐστιν ἕτερον παραθαλάσσιον, Κανὴ, βασιλείας Ἐλεάζου, χώρας λιβανωτοφόρου, καὶ κατʼ αὐτὴν ἔρημοι νῆσοι δύο, μία μὲν ἡ τῶν Ὀρνέων, ἡ δʼ ἑτέρα λεγομένη Τρούλλας, ἀπὸ σταδίων ἑκατὸν εἴκοσι τῆς Κανῆς. Ὑπέρκειται δὲ αὐτῆς μεσόγειος ἡ μητρόπολις Σαββαθὰ, ἐν ᾗ καὶ ὁ βασιλεὺς κατοικεῖ. Πᾶς δὲ ὁ γεννώμενος ἐν τῇ χώρᾳ λίβανος εἰς αὐτὴν ὥσπερ ἐκδοχεῖον εἰσάγεται καμήλοις τε καὶ σχεδίαις ἐντοπίοις δερματίναις ἐξ ἀσκῶν καὶ πλοίοις. Ἔχει δὲ καὶ αὐτὴ σύγχρησιν τῶν τοῦ πέραν ἐμπορίων, Βαρυγάζων καὶ Σκυθίας καὶ Ὀμάνων καὶ τῆς παρακειμένης Περσίδος.",
+    "draft_translation": "After Eudaimon Arabia there follows a long connected shore with bays for more than two thousand stades, inhabited by nomads and fish-eaters. Beyond the Calai islands is another coastal place, Canê, in the kingdom of Eleazus and the frankincense-bearing country; opposite it lie two desert islands, Bird Island and Dome Island. Inland above it is Sabbatha, where the king lives. All the frankincense produced in the country is brought into Canê as if to a storehouse, by rafts supported on inflated skins in the local manner and by boats. Canê trades with the emporia across the sea, with Barygaza, Scythia, Omana, and neighboring Persis.",
+    "places": [
+      {
+        "greek_surface": "Εὐδαίμονος Ἀραβικῆς",
+        "english_label": "Eudaimon Arabia",
+        "role": "previous_route_place",
+        "notes": "Starting reference for the coast described here."
+      },
+      {
+        "greek_surface": "Κανὴ",
+        "english_label": "Canê",
+        "role": "destination_port_and_storehouse",
+        "notes": "Coastal place where the country's frankincense is gathered and from which trade connections run."
+      },
+      {
+        "greek_surface": "χώρας λιβανωτοφόρου",
+        "english_label": "frankincense-bearing country",
+        "role": "production_source_region",
+        "notes": "Source region for the frankincense gathered at Canê."
+      },
+      {
+        "greek_surface": "Ὀρνέων νῆσος",
+        "english_label": "Bird Island",
+        "role": "offshore_route_place",
+        "notes": "One of two desert islands opposite Canê."
+      },
+      {
+        "greek_surface": "Τρουλλὰ",
+        "english_label": "Dome Island",
+        "role": "offshore_route_place",
+        "notes": "Second desert island opposite Canê."
+      },
+      {
+        "greek_surface": "Σάββαθα",
+        "english_label": "Sabbatha",
+        "role": "inland_royal_center",
+        "notes": "Inland royal residence above Canê."
+      },
+      {
+        "greek_surface": "Βαρυγάζων",
+        "english_label": "Barygaza",
+        "role": "trade_partner_port",
+        "notes": "One of the named overseas markets connected with Canê."
+      },
+      {
+        "greek_surface": "Σκυθίας",
+        "english_label": "Scythia",
+        "role": "trade_partner_region",
+        "notes": "Named among the trading connections."
+      },
+      {
+        "greek_surface": "Ὀμάνων",
+        "english_label": "Omana",
+        "role": "trade_partner_region_or_port",
+        "notes": "Named among Canê's trading connections."
+      },
+      {
+        "greek_surface": "Περσίδος",
+        "english_label": "Persis",
+        "role": "neighboring_trade_region",
+        "notes": "Neighboring Persian region included in the trade network."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "frankincense",
+        "greek_surface": "λίβανος",
+        "category": "aromatic_resin",
+        "structure_type": "simple_entity",
+        "confidence": 0.98,
+        "notes": "The section says all frankincense produced in the country is brought into Canê."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "collection_to_storehouse",
+        "source_place": "frankincense-bearing country",
+        "destination_place": "Canê",
+        "route_or_intermediate_place": "rafts on inflated skins and boats",
+        "goods": [
+          "frankincense"
+        ],
+        "notes": "Frankincense from the whole country is gathered into Canê like a storehouse."
+      },
+      {
+        "movement_type": "trade_connection",
+        "source_place": "Canê",
+        "destination_place": "Barygaza, Scythia, Omana, and neighboring Persis",
+        "route_or_intermediate_place": "emporia across the sea",
+        "goods": [
+          "frankincense"
+        ],
+        "notes": "The goods moved in the trade network are inferred from the immediately preceding statement about Canê's frankincense stock."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0028",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[28]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[28]/p",
+    "section_order": 28,
+    "greek_text": "28. Εἰσάγεται δὲ εἰς αὐτὴν ἀπʼ Αἰγύπτου μὲν ὁμοίως πυρὸς ὀλίγος καὶ οἶνος ὥσπερ καὶ εἰς Μούζα, καὶ ἱματισμὸς Ἀραβικὸς, ὁμοίως καὶ κοινὸς καὶ ἀπλοῦς καὶ ὁ νόθος περισσότερος, καὶ χαλκὸς καὶ κασσίτερος καὶ κοράλλιον καὶ στύραξ καὶ τὰ λοιπὰ ὅσα εἰς Μούζα· τὰ πλείονα δὲ ἀργυρώματα τετορευμένα καὶ χρήματα τῷ βασιλεῖ, καὶ ἵπποι δὲ καὶ ἀνδριάντες καὶ ἱματισμὸς διάφορος ἀπλοῦς. Ἐξάγεται δὲ ἐξ αὐτῆς ἐντόπια μὲν φορτία, λίβανος καὶ ἀλόη, τὰ δὲ λοιπὰ κατὰ μετοχὴν τῶν ἄλλων ἐμπορίων. Πλεῖται δὲ εἰς αὐτὴν περὶ τὸν αὐτὸν καιρὸν ὃν καὶ εἰς Μούζα, πρωῖμώτερον δέ.",
+    "draft_translation": "Into Canê, from Egypt, come a little wheat and wine as into Muza, Arabian clothing, both common and plain, with more imitation fabric, copper, tin, coral, storax, and the other goods that go to Muza. For the king there are mostly chased silver objects and money, and also horses, statues, and fine plain clothing. From Canê are exported local cargoes, especially frankincense and aloe; the rest moves according to the same sailing season as Muza, but earlier.",
+    "places": [
+      {
+        "greek_surface": "Κανὴ",
+        "english_label": "Canê",
+        "role": "destination_port_and_export_port",
+        "notes": "Main port for the import and export lists in this section."
+      },
+      {
+        "greek_surface": "Αἰγύπτου",
+        "english_label": "Egypt",
+        "role": "source_region",
+        "notes": "Named as the source of the initial import list."
+      },
+      {
+        "greek_surface": "Μούζα",
+        "english_label": "Muza",
+        "role": "comparison_port",
+        "notes": "Used as comparison for both goods lists and sailing season."
+      },
+      {
+        "greek_surface": "τῷ βασιλεῖ",
+        "english_label": "the king at Canê",
+        "role": "elite_destination",
+        "notes": "Recipient of silver, money, animals, statues, and clothing."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "wheat",
+        "greek_surface": "πυρὸς ὀλίγος",
+        "category": "food_grain",
+        "structure_type": "simple_entity_with_quantity_note",
+        "confidence": 0.92,
+        "notes": "Imported from Egypt in small quantity."
+      },
+      {
+        "english_label": "wine",
+        "greek_surface": "οἶνος",
+        "category": "food_drink",
+        "structure_type": "simple_entity",
+        "confidence": 0.93,
+        "notes": "Imported as into Muza."
+      },
+      {
+        "english_label": "Arabian clothing, common and plain",
+        "greek_surface": "ἱματισμὸς Ἀραβικὸς",
+        "category": "textile_clothing",
+        "structure_type": "compound_with_origin_and_variants",
+        "confidence": 0.95,
+        "notes": "The following common and plain variants belong to the same clothing entry."
+      },
+      {
+        "english_label": "imitation Arabian clothing",
+        "greek_surface": "ὁ νόθος",
+        "category": "textile_clothing",
+        "structure_type": "variant_in_coordinated_textile_list",
+        "confidence": 0.82,
+        "notes": "Text says the imitation or adulterated kind is more abundant."
+      },
+      {
+        "english_label": "copper",
+        "greek_surface": "χαλκὸς",
+        "category": "metal",
+        "structure_type": "simple_entity",
+        "confidence": 0.94,
+        "notes": "Imported into Canê."
+      },
+      {
+        "english_label": "tin",
+        "greek_surface": "κασσίτερος",
+        "category": "metal",
+        "structure_type": "simple_entity",
+        "confidence": 0.95,
+        "notes": "Imported into Canê."
+      },
+      {
+        "english_label": "coral",
+        "greek_surface": "κοράλλιον",
+        "category": "marine_luxury_material",
+        "structure_type": "simple_entity",
+        "confidence": 0.95,
+        "notes": "Imported into Canê."
+      },
+      {
+        "english_label": "storax",
+        "greek_surface": "στύραξ",
+        "category": "aromatic_resin",
+        "structure_type": "simple_entity",
+        "confidence": 0.95,
+        "notes": "Imported into Canê."
+      },
+      {
+        "english_label": "chased silver objects",
+        "greek_surface": "ἀργυρώματα τετορευμένα",
+        "category": "metalwork_luxury",
+        "structure_type": "compound_with_manufacture",
+        "confidence": 0.94,
+        "notes": "Mostly for the king."
+      },
+      {
+        "english_label": "money",
+        "greek_surface": "χρήματα",
+        "category": "money_metal",
+        "structure_type": "simple_entity",
+        "confidence": 0.85,
+        "notes": "Listed with royal imports."
+      },
+      {
+        "english_label": "horses",
+        "greek_surface": "ἵπποι",
+        "category": "live_animal_transport",
+        "structure_type": "simple_entity",
+        "confidence": 0.94,
+        "notes": "For the king."
+      },
+      {
+        "english_label": "statues",
+        "greek_surface": "ἀνδριάντες",
+        "category": "luxury_object",
+        "structure_type": "simple_entity",
+        "confidence": 0.9,
+        "notes": "Royal import or gift item."
+      },
+      {
+        "english_label": "fine plain clothing",
+        "greek_surface": "ἱματισμὸς διάφορος ἀπλοῦς",
+        "category": "textile_clothing",
+        "structure_type": "compound_with_quality",
+        "confidence": 0.91,
+        "notes": "Royal textile item."
+      },
+      {
+        "english_label": "frankincense",
+        "greek_surface": "λίβανος",
+        "category": "aromatic_resin",
+        "structure_type": "simple_entity",
+        "confidence": 0.98,
+        "notes": "Local export from Canê."
+      },
+      {
+        "english_label": "aloe",
+        "greek_surface": "ἀλόη",
+        "category": "aromatic_or_medicinal_plant",
+        "structure_type": "simple_entity",
+        "confidence": 0.95,
+        "notes": "Local export from Canê."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "import",
+        "source_place": "Egypt",
+        "destination_place": "Canê",
+        "route_or_intermediate_place": "Muza as comparison route",
+        "goods": [
+          "wheat",
+          "wine",
+          "Arabian clothing, common and plain",
+          "imitation Arabian clothing",
+          "copper",
+          "tin",
+          "coral",
+          "storax"
+        ],
+        "notes": "The import list begins with goods from Egypt and continues by comparison with Muza."
+      },
+      {
+        "movement_type": "royal_gift_or_import",
+        "source_place": "unspecified external suppliers",
+        "destination_place": "the king at Canê",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "chased silver objects",
+          "money",
+          "horses",
+          "statues",
+          "fine plain clothing"
+        ],
+        "notes": "These items are marked as for the king."
+      },
+      {
+        "movement_type": "export",
+        "source_place": "Canê and its local hinterland",
+        "destination_place": "unspecified outbound markets",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "frankincense",
+          "aloe"
+        ],
+        "notes": "The section names these as the local export cargoes."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0029",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[29]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[29]/p",
+    "section_order": 29,
+    "greek_text": "29. Μετὰ δὲ Κανὴν, τῆς γῆς ἐπὶ πλεῖον ὑποχωρούσης, ἄλλος ἐκδέχεται βαθύτατος κόλπος, ἐπὶ πολὺ παρεκτείνων, ὁ λεγόμενος Σαχαλίτης, καὶ χώρα λιβανωτοφόρος, ὀρεινή τε καὶ δύσβατος, ἀέρα παχὺν ἔχουσα καὶ ὁμιχλώδη καὶ κατὰ τῶν δένδρων φερόμενον τὸν λίβανον. Ἔστι δὲ τὰ δένδρα τὰ λιβανοφόρα οὐ μεγάλα λίαν οὐδὲ ὑψηλὰ, φέρει δὲ ἐπὶ τῷ φλοιῷ πησσόμενον τὸν λίβανον, ὥς τινα καὶ τῶν παῤ ἡμῖν ἐν Aἰγύπτῳ δένδρων δακρύει τὸ κόμμι. Μεταχειρίζεται δ ὁ λίβανος ὑπὸ δούλων βασιλικῶν καὶ τῶν ἐπὶ τιμωρίᾳ πεμπομένον. Ἐπίνοσοι δὲ δεινῶς οἱ τόποι, καὶ τοῖς μὲν παραπλέουσι λοιμικοὶ, τοῖς δὲ ἐργαζομένοις πάντοτε θανατώδεις, ἔτι δὲ καὶ διὰ τὴν ἔνδειαν τῆς τροφῆς εὐχερῶς ἀπολλυμένοις.",
+    "draft_translation": "After Canê the land bends further inward and opens into a very deep bay called Sachalites, the frankincense-bearing country, mountainous, hard to traverse, unhealthy, and wrapped in clouds and mist. The frankincense-bearing trees are not very large or tall, and they yield frankincense in drops on the bark, as some trees in Egypt weep gum.",
+    "places": [
+      {
+        "greek_surface": "Κανὴν",
+        "english_label": "Canê",
+        "role": "previous_route_place",
+        "notes": "Route reference for the next coastal stretch."
+      },
+      {
+        "greek_surface": "Σαχαλίτης",
+        "english_label": "Sachalites bay and country",
+        "role": "production_source_region",
+        "notes": "The bay and land are explicitly frankincense-bearing."
+      },
+      {
+        "greek_surface": "Αἰγύπτῳ",
+        "english_label": "Egypt",
+        "role": "comparison_region",
+        "notes": "Egyptian gum-producing trees are used as an analogy."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "frankincense",
+        "greek_surface": "λίβανος",
+        "category": "aromatic_resin",
+        "structure_type": "simple_entity",
+        "confidence": 0.98,
+        "notes": "The country and trees are described as frankincense-bearing."
+      },
+      {
+        "english_label": "gum",
+        "greek_surface": "κόμμι",
+        "category": "plant_resin",
+        "structure_type": "comparison_entity",
+        "confidence": 0.82,
+        "notes": "Mentioned only in comparison with Egyptian trees, not as a local export of Sachalites."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_production",
+        "source_place": "Sachalites frankincense-bearing country",
+        "destination_place": "Canê and other regional ports by context",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "frankincense"
+        ],
+        "notes": "This section focuses on the natural production source rather than a shipment list."
+      }
+    ]
+  },
+  {
+    "chunk_id": "section_0030",
+    "passage_id": "text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[30]/p",
+    "source_ref": "anonymous_periplus:text/body/div[urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1]/div[30]/p",
+    "section_order": 30,
+    "greek_text": "30. Τούτου δʼ ἐστὶν ἀκρωτήριον τοῦ κόσμου μέγιστον, ἀποβλέπον εἰς ἀνατολὴν, ὁ καλούμενος Σύαγρος, ἐφ’ οἷ φρούριόν ἐστι τῆς χώρας καὶ λιμήν καὶ ἀποθήκη τοῦ συναγομένου λιβάνου· καὶ κατὰ τοῦτον ἐν τῷ πελάγει νῆσος, ἀνὰ μέσον τούτου καὶ τοῦ πέραν ἀκρωτηρίου τῶν Ἀρωμάτων, τῷ Συάγρῳ συνορίζουσα μᾶλλον, ἡ Διοσκορίδου καλουμένη, μεγίστη μὲν ἔρημος δὲ καὶ κάθυγρος, ἔχουσα ποταμοὺς ἐν αὑτῇ καὶ κροκοδείλους καὶ ἐχίδνας πλείστας καὶ σαύρας ὑπερμεγέθεις, ὧν τὸ κρέας ἐσθίουσι τὸ δὲ λίπος τήκουσι καὶ ἀντʼ ἐλαίου χρῶνται· καρπὸν δὲ οὔτε ἀμπέλου οὔτε σιτικὸν ἡ νῆσος φέρει. Οἱ δʼ ἐνοικοῦντες αὐτὴν ὀλίγοι κατὰ μίαν πλευρὰν τῆς νήσου τὴν πρὸς ἀπαρκτίαν οἰκοῦσι, καθʼ ὃ μέρος ἀποβλέπει τὴν ἤπειρον· εἶσὶ δὲ ἐπίξενοι καὶ ἐπίμικτοι Ἀράβων τε καὶ Ἰνδῶν καὶ ἔτι Ἐλλήνων τῶν πρὸς ἐργασίαν ἐκπλεόντων. Φέρει δὲ ἡ νῆσος χελώνην τήν τε ἀληθινὴν καὶ χερσαίαν καὶ τὴν λευκὴν, πλείστην τε καὶ διάφορον τοῖς ὀστράκοις μείζοσι, τήν τε ὀρεινὴν ὑπερμεγέθη καὶ παχύτατον ὄστρακον ἔχουσαν, οὗ τὰ παρὰ τὴν κοιλίαν μέρη μὲν τομὴν οὐκ ἐπιδέχεται, καίπερ στερρότερα ὄντα· ὁλοτελῶς δὲ τὰ εὐχρηστοῦντα εἰς γλωσσόκομα καὶ πινακίδια καὶ μαγίδια καὶ τοιαύτην τινὰ γρύτην κατατέμνεται. Γίνεται δὲ ἐν αὐτῇ καὶ κιννάβαρι τὸ λεγόμενον Ἰνδικὸν, ἀπὸ τῶν δένδρῶν ὡς δάκρυ συναγόμενον.",
+    "draft_translation": "At the far eastern end of the bay is the promontory called Syagros, with a fort guarding the country. Opposite it, out in the open sea and more toward Azania, lies the large island called Dioscorida, mostly deserted, marshy, and rivered, with animals including crocodiles, snakes, and large lizards. The island has true, land, and white tortoise shell, and also the so-called Indian cinnabar, gathered in drops from trees.",
+    "places": [
+      {
+        "greek_surface": "Σύαγρος",
+        "english_label": "Syagros",
+        "role": "promontory_and_guard_post",
+        "notes": "Promontory at the eastern end of the bay with a fort."
+      },
+      {
+        "greek_surface": "Διοσκορίδου",
+        "english_label": "Dioscorida island",
+        "role": "island_production_source",
+        "notes": "Island source for tortoise shell and Indian cinnabar."
+      },
+      {
+        "greek_surface": "Ἀζανίᾳ",
+        "english_label": "Azania",
+        "role": "orientation_region",
+        "notes": "Used to orient Dioscorida across the open sea."
+      }
+    ],
+    "commodity_entities": [
+      {
+        "english_label": "true tortoise shell",
+        "greek_surface": "χελώνην τήν τε ἀληθινὴν",
+        "category": "marine_luxury_material",
+        "structure_type": "compound_with_variety",
+        "confidence": 0.95,
+        "notes": "One of the tortoise-shell varieties present on Dioscorida."
+      },
+      {
+        "english_label": "land tortoise shell",
+        "greek_surface": "χελώνην χερσαίαν",
+        "category": "animal_luxury_material",
+        "structure_type": "compound_with_variety",
+        "confidence": 0.93,
+        "notes": "Terrestrial variety of tortoise shell."
+      },
+      {
+        "english_label": "white tortoise shell",
+        "greek_surface": "χελώνην λευκήν",
+        "category": "animal_luxury_material",
+        "structure_type": "compound_with_color_variant",
+        "confidence": 0.9,
+        "notes": "White variety of tortoise shell."
+      },
+      {
+        "english_label": "Indian cinnabar",
+        "greek_surface": "κιννάβαρι τὸ λεγόμενον Ἰνδικὸν",
+        "category": "pigment_or_resin",
+        "structure_type": "compound_with_origin_name",
+        "confidence": 0.93,
+        "notes": "Collected from trees in drops on the island."
+      }
+    ],
+    "movement_events": [
+      {
+        "movement_type": "local_product",
+        "source_place": "Dioscorida island",
+        "destination_place": "unspecified traders or outbound markets",
+        "route_or_intermediate_place": null,
+        "goods": [
+          "true tortoise shell",
+          "land tortoise shell",
+          "white tortoise shell",
+          "Indian cinnabar"
+        ],
+        "notes": "The section names materials found or collected on the island but does not give a specific shipment route."
+      }
+    ]
+  }
+]
