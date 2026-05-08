@@ -832,20 +832,45 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
 
   /* Reader: bottom ~quarter of the screen. */
   .dossier {
-    bottom: 48px;
+    bottom: 44px;
     left: 10px;
     width: calc(100vw - 20px);
-    max-height: 30vh;
+    max-height: 28vh;
   }
-  .dossier__inner { padding: 13px 16px 12px; }
+  .dossier__inner {
+    padding: 11px 14px 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
   .dossier__inner::before { display: none; }
-  .dossier__top { margin-bottom: 8px; }
-  .dossier__eyebrow { font-size: 9px; gap: 6px; margin-bottom: 5px; }
-  .dossier__title { font-size: 21px; line-height: 1.05; }
-  .dossier__greek-name { font-size: 13.5px; margin-top: 3px; }
+  .dossier__top { margin-bottom: 6px; flex: 0 0 auto; }
 
-  .dossier__body { max-height: 16vh; }
-  .dossier__translation { font-size: 14.5px; line-height: 1.5; }
+  /* Eyebrow on phones: single row, truncate with ellipsis instead of wrapping. */
+  .dossier__eyebrow {
+    font-size: 8.5px;
+    gap: 6px;
+    margin-bottom: 4px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+  .dossier__eyebrow span { vertical-align: middle; }
+
+  .dossier__title { font-size: 19px; line-height: 1.05; }
+
+  /* The italic Greek name often duplicates the Latin title; hide on phones. */
+  .dossier__greek-name { display: none; }
+
+  /* Body fills the remaining space inside the panel. */
+  .dossier__body {
+    max-height: none;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+  .dossier__translation { font-size: 14px; line-height: 1.5; }
 
   /* Greek source closed by default; opening it would blow past the panel.
    * On phones we collapse it entirely — the Pleiades link in the foot
@@ -853,14 +878,16 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
   .dossier__greek { display: none; }
 
   .dossier__foot {
-    margin-top: 8px;
-    padding-top: 6px;
-    font-size: 9px;
-    gap: 8px;
+    margin-top: 6px;
+    padding-top: 5px;
+    font-size: 8.5px;
+    gap: 6px;
+    letter-spacing: 0.14em;
+    flex: 0 0 auto;
   }
   .dossier__nav button {
-    width: 38px;
-    font-size: 20px;
+    width: 34px;
+    font-size: 18px;
   }
 
   .strip { padding: 6px 10px 8px; gap: 8px; }
