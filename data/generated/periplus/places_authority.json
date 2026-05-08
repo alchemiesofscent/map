@@ -15,7 +15,7 @@
     "certainty": "medium",
     "pleiades_id": "786069",
     "pleiades_uri": "https://pleiades.stoa.org/places/786069",
-    "coordinates_source": "Pleiades representative point; title includes a question mark, so keep identification certainty below high.",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 786069)",
     "notes": "Opening harbor in section 1. Use as a primary tour stop."
   },
   {
@@ -31,11 +31,11 @@
     ],
     "place_type": "port",
     "lat": 23.91062525,
-    "lon": 35.47481885,
+    "lon": 35.474818850000005,
     "certainty": "high",
     "pleiades_id": "785986",
     "pleiades_uri": "https://pleiades.stoa.org/places/785986",
-    "coordinates_source": "Pleiades representative point.",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 785986)",
     "notes": "Second harbor in section 1 and route anchor for section 2."
   },
   {
@@ -101,12 +101,12 @@
       "Trinkatat"
     ],
     "place_type": "emporion",
-    "lat": 18.222236,
-    "lon": 38.184316,
+    "lat": 18.582600399999997,
+    "lon": 37.8854432,
     "certainty": "low",
     "pleiades_id": "39409",
     "pleiades_uri": "https://pleiades.stoa.org/places/39409",
-    "coordinates_source": "DARE/Trinkatat coordinate used for the demo; Pleiades notes that the precise location is unknown.",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 39409)",
     "notes": "Small trading station. Keep the map marker visually uncertain."
   },
   {
@@ -122,12 +122,12 @@
       "Zula"
     ],
     "place_type": "port",
-    "lat": 15.275955,
-    "lon": 39.676537,
+    "lat": 15.2616612,
+    "lon": 39.6591296,
     "certainty": "high",
     "pleiades_id": "39271",
     "pleiades_uri": "https://pleiades.stoa.org/places/39271",
-    "coordinates_source": "DARE coordinate associated with Pleiades 39271; Pleiades describes Adouli as near modern Zula.",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 39271)",
     "notes": "Lawful emporion and hub for inland ivory and island tortoise-shell supply."
   },
   {
@@ -183,7 +183,7 @@
     "certainty": "low",
     "pleiades_id": "39363",
     "pleiades_uri": "https://pleiades.stoa.org/places/39363",
-    "coordinates_source": "Pleiades representative point for Koloe; Pleiades notes multiple candidate identifications. Matara is also separately identified in Pleiades as a possible Koloe candidate.",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 39363)",
     "notes": "First ivory market inland from Adulis. Treat as a candidate location."
   },
   {
@@ -195,12 +195,12 @@
       "Metera"
     ],
     "place_type": "archaeological_site",
-    "lat": 14.675334944,
-    "lon": 39.4256591657,
+    "lat": 14.675334943988744,
+    "lon": 39.42565916570811,
     "certainty": "medium",
     "pleiades_id": "403627899",
     "pleiades_uri": "https://pleiades.stoa.org/places/403627899",
-    "coordinates_source": "Pleiades representative point for Matara.",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 403627899)",
     "notes": "Included as an optional candidate layer for Koloe, not used in the default route line."
   },
   {
@@ -215,12 +215,12 @@
       "Axoume"
     ],
     "place_type": "metropolis",
-    "lat": 14.1338504591,
-    "lon": 38.7212920204,
+    "lat": 14.133850459089953,
+    "lon": 38.721292020401236,
     "certainty": "high",
     "pleiades_id": "39303",
     "pleiades_uri": "https://pleiades.stoa.org/places/39303",
-    "coordinates_source": "Pleiades representative point.",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 39303)",
     "notes": "Inland metropolis in the ivory chain of section 4."
   },
   {
@@ -270,12 +270,12 @@
       "Aliaeu"
     ],
     "place_type": "archipelago",
-    "lat": 15.7289257455,
-    "lon": 40.0031505062,
+    "lat": 15.728925745506515,
+    "lon": 40.00315050622464,
     "certainty": "high",
     "pleiades_id": "39281",
     "pleiades_uri": "https://pleiades.stoa.org/places/39281",
-    "coordinates_source": "Pleiades representative point.",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 39281)",
     "notes": "Offshore islands supplying tortoise shell to Adulis."
   },
   {
@@ -289,12 +289,12 @@
       "Begrawiya"
     ],
     "place_type": "metropolis",
-    "lat": 16.94,
-    "lon": 33.75,
+    "lat": 16.936857973308044,
+    "lon": 33.71192022614201,
     "certainty": "high",
     "pleiades_id": "805630",
     "pleiades_uri": "https://pleiades.stoa.org/places/805630",
-    "coordinates_source": "DARE coordinate associated with Pleiades 805630.",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 805630)",
     "notes": "Inland metropolis noted westward behind coastal peoples in section 2."
   },
   {
