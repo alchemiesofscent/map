@@ -13,7 +13,14 @@ const DATA = {
   routeViews: "../../data/generated/periplus/route_views.json",
 };
 
-const INLAND_RX = /(Inland|Metropolis|Frontier)/i;
+// Sites that should display as a "land" pin (diamond, terracotta) instead of
+// the default sea harbour circle. Includes regions so they get the same
+// distinct silhouette on the map.
+const INLAND_RX = /(Inland|Metropolis|Frontier|Region)/i;
+// Regions cover broad areas, not single harbours. We render them as pins so
+// the curator can click them, but the route polyline skips through them so
+// the sailing line doesn't lurch inland and back.
+const REGION_RX = /Region/i;
 
 const ROMAN = [
   [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"],
@@ -81,6 +88,13 @@ function loadJson(path) {
 
 function isInland(site) {
   return INLAND_RX.test(site?.periplus_place_type ?? "");
+}
+
+function isRegion(site) {
+  if (!site) return false;
+  if (REGION_RX.test(site.periplus_place_type ?? "")) return true;
+  if ((site.location_precision ?? "").toLowerCase() === "region") return true;
+  return false;
 }
 
 function siteLatLng(site) {
@@ -155,10 +169,13 @@ function buildFocusList() {
 }
 
 function buildLegs(sites) {
+  // Regions get a pin but no leg lines into or out of them: the route line
+  // jumps over a stretch of regions to the next non-region site.
+  const eligible = sites.filter((s) => !isRegion(s));
   const legs = [];
-  for (let i = 1; i < sites.length; i += 1) {
-    const a = sites[i - 1];
-    const b = sites[i];
+  for (let i = 1; i < eligible.length; i += 1) {
+    const a = eligible[i - 1];
+    const b = eligible[i];
     const aLL = siteLatLng(a);
     const bLL = siteLatLng(b);
     if (!aLL || !bLL) continue;

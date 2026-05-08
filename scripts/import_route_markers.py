@@ -69,6 +69,14 @@ ALIASES = {
     "calai islands": "kalaiou isles",
     "fortunate islands": "makaron",
     "white island": "white island",
+    # §41 ports/regions
+    "minnagara": "minnagar",
+    "minnagar": "minnagar",
+    "barake": "barake",
+    "barygaza": "barygaza",
+    "ariake": "ariake",
+    "aberia": "aberia",
+    "syrastrene": "syrastrene",
 }
 
 
@@ -107,9 +115,16 @@ def normalize(value: str) -> str:
     return folded.strip()
 
 
+# `normalize()` collapses repeated letters (e.g. "Minnagara" → "minagara"),
+# so any alias literal containing doubles (or whose RHS does) would otherwise
+# silently fail to match. Pre-normalise both sides at load time so authors
+# can write the alias map in human-readable spelling.
+_NORM_ALIASES = {normalize(k): normalize(v) for k, v in ALIASES.items()}
+
+
 def alias_key(value: str) -> str:
     norm = normalize(value)
-    return ALIASES.get(norm, norm)
+    return _NORM_ALIASES.get(norm, norm)
 
 
 def build_site_index(sites: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:

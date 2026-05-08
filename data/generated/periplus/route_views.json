@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-08T15:54:05+00:00",
+  "generated_at": "2026-05-08T19:35:08+00:00",
   "source": {
     "scrape_file": "data/review/periplus_sites_webmap_scrape.json",
     "section_sequence_file": "data/review/section_place_sequence.json",
     "pleiades_snapshot_dir": "data/pleiades",
-    "pleiades_override_count": 8,
+    "pleiades_override_count": 14,
     "webmap_url": "https://raw.githubusercontent.com/pbarchi/periplus-interactive-webmap/main/data/PeriplusSites_3.js",
     "location_page_base_url": "https://navigating-the-periplus.github.io/locations/",
-    "record_count": 83,
+    "record_count": 87,
     "notes": [
       "Route ordering and route membership are derived from the reviewed webmap scrape.",
       "Route labels are normalized to western/eastern regardless of source capitalization.",
@@ -2060,7 +2060,7 @@
           "lat": 22.060829,
           "lon": 73.075764,
           "has_geometry": true,
-          "coords_source": "webmap_scrape",
+          "coords_source": "pleiades_reprPoint",
           "modern_identification": "Mandasor",
           "modern_country": "India",
           "ancient_source": "Ptolemy, 7.1.63",
@@ -2188,7 +2188,7 @@
           "route_key": "eastern",
           "route_label": "Eastern",
           "source_route_label": "Eastern route",
-          "next_on_route": "Barygaza",
+          "next_on_route": "Barake",
           "periplus_place_type": "Village",
           "periplus_ancient_area": "India",
           "periplus_chapter": "PME, Ch. 41",
@@ -2221,7 +2221,7 @@
             "page_ancient_toponym": "Kammōni",
             "page_place_type": "Village",
             "page_route": "Eastern route",
-            "page_next_on_route": "Barygaza",
+            "page_next_on_route": "Barake",
             "page_ancient_area": "India",
             "page_periplus_chapter": "PME, Ch. 41",
             "page_location_source": "Pleiades"
@@ -2229,14 +2229,59 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0048_barygaza",
+          "site_key": "eastern_0048_barake",
           "source_order": 48,
+          "source_name": "Barake",
+          "input_name": "Barake",
+          "route_key": "eastern",
+          "route_label": "Eastern",
+          "source_route_label": "Eastern route",
+          "next_on_route": "Barygaza",
+          "periplus_place_type": "Port of trade",
+          "periplus_ancient_area": "India",
+          "periplus_chapter": "PME, Ch. 41",
+          "section_numbers": [
+            41
+          ],
+          "location_precision": "Precise",
+          "location_source": "Pleiades",
+          "pleiades_id": "59732",
+          "pleiades_uri": "https://pleiades.stoa.org/places/59732",
+          "lat": 22.45463247744228,
+          "lon": 69.11490452091387,
+          "has_geometry": true,
+          "coords_source": "pleiades_reprPoint",
+          "modern_identification": null,
+          "modern_country": null,
+          "ancient_source": null,
+          "bibliography_entries": [],
+          "github_location_url": null,
+          "source_urls": {
+            "pleiades": "https://pleiades.stoa.org/places/59732"
+          },
+          "page_metadata": {
+            "page_title": "Barake",
+            "page_ancient_toponym": "Barake",
+            "page_place_type": "Port of trade",
+            "page_route": "Eastern route",
+            "page_next_on_route": "Barygaza",
+            "page_ancient_area": "India",
+            "page_periplus_chapter": "PME, Ch. 41",
+            "page_location_source": "Pleiades"
+          },
+          "scrape_notes": [
+            "Manually inserted for PME §41 ingest (Pleiades 59732)."
+          ]
+        },
+        {
+          "site_key": "eastern_0049_barygaza",
+          "source_order": 49,
           "source_name": "Barygaza",
           "input_name": "Barygaza",
           "route_key": "eastern",
           "route_label": "Eastern",
           "source_route_label": "Eastern Route",
-          "next_on_route": "Ozēnē",
+          "next_on_route": "Ariake",
           "periplus_place_type": "Port of trade",
           "periplus_ancient_area": "India",
           "periplus_chapter": "PME, Ch. 40-47",
@@ -2251,7 +2296,7 @@
           "lat": 21.70078,
           "lon": 72.983068,
           "has_geometry": true,
-          "coords_source": "webmap_scrape",
+          "coords_source": "pleiades_reprPoint",
           "modern_identification": "Bharuch",
           "modern_country": "India",
           "ancient_source": "Ptolemy 7.1.62",
@@ -2267,7 +2312,7 @@
             "page_ancient_toponym": "Barygaza",
             "page_place_type": "Port of trade",
             "page_route": "Eastern Route",
-            "page_next_on_route": "Ozēnē",
+            "page_next_on_route": "Ariake",
             "page_ancient_area": "India",
             "page_periplus_chapter": "PME, Ch. 40-47",
             "page_location_source": "Pleiades"
@@ -2275,8 +2320,143 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0049_ozene",
-          "source_order": 49,
+          "site_key": "eastern_0050_ariake",
+          "source_order": 50,
+          "source_name": "Ariake",
+          "input_name": "Ariake",
+          "route_key": "eastern",
+          "route_label": "Eastern",
+          "source_route_label": "Eastern route",
+          "next_on_route": "Aberia",
+          "periplus_place_type": "Region",
+          "periplus_ancient_area": "India",
+          "periplus_chapter": "PME, Ch. 41",
+          "section_numbers": [
+            41
+          ],
+          "location_precision": "Region",
+          "location_source": "Pleiades",
+          "pleiades_id": "59700",
+          "pleiades_uri": "https://pleiades.stoa.org/places/59700",
+          "lat": 22.30414301467541,
+          "lon": 71.97578733971922,
+          "has_geometry": true,
+          "coords_source": "pleiades_reprPoint",
+          "modern_identification": null,
+          "modern_country": null,
+          "ancient_source": null,
+          "bibliography_entries": [],
+          "github_location_url": null,
+          "source_urls": {
+            "pleiades": "https://pleiades.stoa.org/places/59700"
+          },
+          "page_metadata": {
+            "page_title": "Ariake",
+            "page_ancient_toponym": "Ariake",
+            "page_place_type": "Region",
+            "page_route": "Eastern route",
+            "page_next_on_route": "Aberia",
+            "page_ancient_area": "India",
+            "page_periplus_chapter": "PME, Ch. 41",
+            "page_location_source": "Pleiades"
+          },
+          "scrape_notes": [
+            "Manually inserted for PME §41 ingest (Pleiades 59700)."
+          ]
+        },
+        {
+          "site_key": "eastern_0051_aberia",
+          "source_order": 51,
+          "source_name": "Aberia",
+          "input_name": "Aberia",
+          "route_key": "eastern",
+          "route_label": "Eastern",
+          "source_route_label": "Eastern route",
+          "next_on_route": "Syrastrene",
+          "periplus_place_type": "Region",
+          "periplus_ancient_area": "India",
+          "periplus_chapter": "PME, Ch. 41",
+          "section_numbers": [
+            41
+          ],
+          "location_precision": "Region",
+          "location_source": "Pleiades",
+          "pleiades_id": "59649",
+          "pleiades_uri": "https://pleiades.stoa.org/places/59649",
+          "lat": 26.222011238527823,
+          "lon": 68.70373216215937,
+          "has_geometry": true,
+          "coords_source": "pleiades_reprPoint",
+          "modern_identification": null,
+          "modern_country": null,
+          "ancient_source": null,
+          "bibliography_entries": [],
+          "github_location_url": null,
+          "source_urls": {
+            "pleiades": "https://pleiades.stoa.org/places/59649"
+          },
+          "page_metadata": {
+            "page_title": "Aberia",
+            "page_ancient_toponym": "Aberia",
+            "page_place_type": "Region",
+            "page_route": "Eastern route",
+            "page_next_on_route": "Syrastrene",
+            "page_ancient_area": "India",
+            "page_periplus_chapter": "PME, Ch. 41",
+            "page_location_source": "Pleiades"
+          },
+          "scrape_notes": [
+            "Manually inserted for PME §41 ingest (Pleiades 59649)."
+          ]
+        },
+        {
+          "site_key": "eastern_0052_syrastrene",
+          "source_order": 52,
+          "source_name": "Syrastrene",
+          "input_name": "Syrastrene",
+          "route_key": "eastern",
+          "route_label": "Eastern",
+          "source_route_label": "Eastern route",
+          "next_on_route": "Ozēnē",
+          "periplus_place_type": "Region",
+          "periplus_ancient_area": "India",
+          "periplus_chapter": "PME, Ch. 41",
+          "section_numbers": [
+            41
+          ],
+          "location_precision": "Region",
+          "location_source": "Pleiades",
+          "pleiades_id": "50291",
+          "pleiades_uri": "https://pleiades.stoa.org/places/50291",
+          "lat": 21.21847095452941,
+          "lon": 70.71643056261146,
+          "has_geometry": true,
+          "coords_source": "pleiades_reprPoint",
+          "modern_identification": null,
+          "modern_country": null,
+          "ancient_source": null,
+          "bibliography_entries": [],
+          "github_location_url": null,
+          "source_urls": {
+            "pleiades": "https://pleiades.stoa.org/places/50291"
+          },
+          "page_metadata": {
+            "page_title": "Syrastrene",
+            "page_ancient_toponym": "Syrastrene",
+            "page_place_type": "Region",
+            "page_route": "Eastern route",
+            "page_next_on_route": "Ozēnē",
+            "page_ancient_area": "India",
+            "page_periplus_chapter": "PME, Ch. 41",
+            "page_location_source": "Pleiades"
+          },
+          "scrape_notes": [
+            "Manually inserted for PME §41 ingest (Pleiades 50291)."
+          ]
+        },
+        {
+          "site_key": "eastern_0053_ozene",
+          "source_order": 53,
           "source_name": "Ozēnē",
           "input_name": "Ozene",
           "route_key": "eastern",
@@ -2320,8 +2500,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0050_paithana",
-          "source_order": 50,
+          "site_key": "eastern_0054_paithana",
+          "source_order": 54,
           "source_name": "Paithana",
           "input_name": "Paithana",
           "route_key": "eastern",
@@ -2365,8 +2545,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0051_tagara",
-          "source_order": 51,
+          "site_key": "eastern_0055_tagara",
+          "source_order": 55,
           "source_name": "Tagara",
           "input_name": "Tagara",
           "route_key": "eastern",
@@ -2410,8 +2590,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0052_akabaru",
-          "source_order": 52,
+          "site_key": "eastern_0056_akabaru",
+          "source_order": 56,
           "source_name": "Akabaru",
           "input_name": "Akabaru",
           "route_key": "eastern",
@@ -2455,8 +2635,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0053_souppara",
-          "source_order": 53,
+          "site_key": "eastern_0057_souppara",
+          "source_order": 57,
           "source_name": "Souppara",
           "input_name": "Souppara",
           "route_key": "eastern",
@@ -2502,8 +2682,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0054_kalliena",
-          "source_order": 54,
+          "site_key": "eastern_0058_kalliena",
+          "source_order": 58,
           "source_name": "Kalliena",
           "input_name": "Kalliena",
           "route_key": "eastern",
@@ -2550,8 +2730,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0055_semulla",
-          "source_order": 55,
+          "site_key": "eastern_0059_semulla",
+          "source_order": 59,
           "source_name": "Sēmulla",
           "input_name": "Semulla",
           "route_key": "eastern",
@@ -2595,8 +2775,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0056_mandagora",
-          "source_order": 56,
+          "site_key": "eastern_0060_mandagora",
+          "source_order": 60,
           "source_name": "Mandagora",
           "input_name": "Mandagora",
           "route_key": "eastern",
@@ -2643,8 +2823,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0057_palaipatmai",
-          "source_order": 57,
+          "site_key": "eastern_0061_palaipatmai",
+          "source_order": 61,
           "source_name": "Palaipatmai",
           "input_name": "Palaipatmai",
           "route_key": "eastern",
@@ -2691,8 +2871,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0058_melizeigara",
-          "source_order": 58,
+          "site_key": "eastern_0062_melizeigara",
+          "source_order": 62,
           "source_name": "Melizeigara",
           "input_name": "Melizeigara",
           "route_key": "eastern",
@@ -2736,8 +2916,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0059_byzantion",
-          "source_order": 59,
+          "site_key": "eastern_0063_byzantion",
+          "source_order": 63,
           "source_name": "Byzantion",
           "input_name": "Byzantion",
           "route_key": "eastern",
@@ -2781,8 +2961,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0060_toparon",
-          "source_order": 60,
+          "site_key": "eastern_0064_toparon",
+          "source_order": 64,
           "source_name": "Toparon",
           "input_name": "Toparon",
           "route_key": "eastern",
@@ -2826,8 +3006,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0061_erannoboas",
-          "source_order": 61,
+          "site_key": "eastern_0065_erannoboas",
+          "source_order": 65,
           "source_name": "Erannoboas",
           "input_name": "Erannoboas",
           "route_key": "eastern",
@@ -2871,8 +3051,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0062_sesekreienai_island",
-          "source_order": 62,
+          "site_key": "eastern_0066_sesekreienai_island",
+          "source_order": 66,
           "source_name": "Sēsekreienai Island",
           "input_name": "Sesekreienai Island",
           "route_key": "eastern",
@@ -2916,8 +3096,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0063_aigidion_island",
-          "source_order": 63,
+          "site_key": "eastern_0067_aigidion_island",
+          "source_order": 67,
           "source_name": "Aigidiōn Island",
           "input_name": "Aigidion Island",
           "route_key": "eastern",
@@ -2961,8 +3141,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0064_kaineiton_island",
-          "source_order": 64,
+          "site_key": "eastern_0068_kaineiton_island",
+          "source_order": 68,
           "source_name": "Kaineitōn Island",
           "input_name": "Kaineiton Island",
           "route_key": "eastern",
@@ -3006,8 +3186,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0065_white_island",
-          "source_order": 65,
+          "site_key": "eastern_0069_white_island",
+          "source_order": 69,
           "source_name": "White Island",
           "input_name": "White Island",
           "route_key": "eastern",
@@ -3051,8 +3231,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0066_naoura",
-          "source_order": 66,
+          "site_key": "eastern_0070_naoura",
+          "source_order": 70,
           "source_name": "Naoura",
           "input_name": "Naoura",
           "route_key": "eastern",
@@ -3099,8 +3279,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0067_tyndis",
-          "source_order": 67,
+          "site_key": "eastern_0071_tyndis",
+          "source_order": 71,
           "source_name": "Tyndis",
           "input_name": "Tyndis",
           "route_key": "eastern",
@@ -3147,8 +3327,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0068_muziris",
-          "source_order": 68,
+          "site_key": "eastern_0072_muziris",
+          "source_order": 72,
           "source_name": "Muziris",
           "input_name": "Muziris",
           "route_key": "eastern",
@@ -3194,8 +3374,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0069_nelkunda",
-          "source_order": 69,
+          "site_key": "eastern_0073_nelkunda",
+          "source_order": 73,
           "source_name": "Nelkunda",
           "input_name": "Nelkunda",
           "route_key": "eastern",
@@ -3243,8 +3423,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0070_bakare",
-          "source_order": 70,
+          "site_key": "eastern_0074_bakare",
+          "source_order": 74,
           "source_name": "Bakarē",
           "input_name": "Bakare",
           "route_key": "eastern",
@@ -3288,8 +3468,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0071_balita",
-          "source_order": 71,
+          "site_key": "eastern_0075_balita",
+          "source_order": 75,
           "source_name": "Balita",
           "input_name": "Balita",
           "route_key": "eastern",
@@ -3333,8 +3513,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0072_komarei",
-          "source_order": 72,
+          "site_key": "eastern_0076_komarei",
+          "source_order": 76,
           "source_name": "Komarei",
           "input_name": "Komarei",
           "route_key": "eastern",
@@ -3381,8 +3561,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0073_kolkhoi",
-          "source_order": 73,
+          "site_key": "eastern_0077_kolkhoi",
+          "source_order": 77,
           "source_name": "Kolkhoi",
           "input_name": "Kolkhoi",
           "route_key": "eastern",
@@ -3426,8 +3606,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0074_argalou",
-          "source_order": 74,
+          "site_key": "eastern_0078_argalou",
+          "source_order": 78,
           "source_name": "Argalou",
           "input_name": "Argalou",
           "route_key": "eastern",
@@ -3471,8 +3651,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0075_kamara",
-          "source_order": 75,
+          "site_key": "eastern_0079_kamara",
+          "source_order": 79,
           "source_name": "Kamara",
           "input_name": "Kamara",
           "route_key": "eastern",
@@ -3518,8 +3698,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0076_podouke",
-          "source_order": 76,
+          "site_key": "eastern_0080_podouke",
+          "source_order": 80,
           "source_name": "Podoukē",
           "input_name": "Podouke",
           "route_key": "eastern",
@@ -3565,8 +3745,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0077_sopatma",
-          "source_order": 77,
+          "site_key": "eastern_0081_sopatma",
+          "source_order": 81,
           "source_name": "Sōpatma",
           "input_name": "Sopatma",
           "route_key": "eastern",
@@ -3612,8 +3792,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0078_palaisimoundou",
-          "source_order": 78,
+          "site_key": "eastern_0082_palaisimoundou",
+          "source_order": 82,
           "source_name": "Palaisimoundou",
           "input_name": "Palaisimoundou",
           "route_key": "eastern",
@@ -3659,8 +3839,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0079_masalia",
-          "source_order": 79,
+          "site_key": "eastern_0083_masalia",
+          "source_order": 83,
           "source_name": "Masalia",
           "input_name": "Masalia",
           "route_key": "eastern",
@@ -3707,8 +3887,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0080_ganges",
-          "source_order": 80,
+          "site_key": "eastern_0084_ganges",
+          "source_order": 84,
           "source_name": "Gangēs",
           "input_name": "Ganges",
           "route_key": "eastern",
@@ -3752,8 +3932,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0081_khruse_island",
-          "source_order": 81,
+          "site_key": "eastern_0085_khruse_island",
+          "source_order": 85,
           "source_name": "Khrusē Island",
           "input_name": "Khruse Island",
           "route_key": "eastern",
@@ -3799,8 +3979,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0082_thina",
-          "source_order": 82,
+          "site_key": "eastern_0086_thina",
+          "source_order": 86,
           "source_name": "Thina",
           "input_name": "Thina",
           "route_key": "eastern",
@@ -3949,6 +4129,120 @@
               "reason": "political_context"
             }
           ]
+        },
+        {
+          "section_id": "section_0041",
+          "section_order": 41,
+          "card_title": null,
+          "review_status": "draft",
+          "focus_sequence": [
+            {
+              "focus_id": "section_0041_focus_01",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 1,
+              "display_name": "Barake",
+              "source_name": "Barake",
+              "route_site_key": "eastern_0048_barake",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 22.45463247744228,
+              "lon": 69.11490452091387,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_02",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 2,
+              "display_name": "Barygaza",
+              "source_name": "Barygaza",
+              "route_site_key": "eastern_0049_barygaza",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 21.70078,
+              "lon": 72.983068,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_03",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 3,
+              "display_name": "Ariake",
+              "source_name": "Ariake",
+              "route_site_key": "eastern_0050_ariake",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 22.30414301467541,
+              "lon": 71.97578733971922,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_04",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 4,
+              "display_name": "Aberia",
+              "source_name": "Aberia",
+              "route_site_key": "eastern_0051_aberia",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 26.222011238527823,
+              "lon": 68.70373216215937,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_05",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 5,
+              "display_name": "Syrastrene",
+              "source_name": "Syrastrene",
+              "route_site_key": "eastern_0052_syrastrene",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 21.21847095452941,
+              "lon": 70.71643056261146,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_06",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 6,
+              "display_name": "Minnagara",
+              "source_name": "Minnagar",
+              "route_site_key": "eastern_0044_minnagar",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 22.060829,
+              "lon": 73.075764,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_07",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 7,
+              "display_name": "Barygaza",
+              "source_name": "Barygaza",
+              "route_site_key": "eastern_0049_barygaza",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 21.70078,
+              "lon": 72.983068,
+              "note": null
+            }
+          ],
+          "context_places": []
         }
       ],
       "drawable_line_points": [
@@ -4241,202 +4535,226 @@
           "lon": 72.925301
         },
         {
-          "site_key": "eastern_0048_barygaza",
+          "site_key": "eastern_0048_barake",
           "source_order": 48,
+          "lat": 22.45463247744228,
+          "lon": 69.11490452091387
+        },
+        {
+          "site_key": "eastern_0049_barygaza",
+          "source_order": 49,
           "lat": 21.70078,
           "lon": 72.983068
         },
         {
-          "site_key": "eastern_0049_ozene",
-          "source_order": 49,
+          "site_key": "eastern_0050_ariake",
+          "source_order": 50,
+          "lat": 22.30414301467541,
+          "lon": 71.97578733971922
+        },
+        {
+          "site_key": "eastern_0051_aberia",
+          "source_order": 51,
+          "lat": 26.222011238527823,
+          "lon": 68.70373216215937
+        },
+        {
+          "site_key": "eastern_0052_syrastrene",
+          "source_order": 52,
+          "lat": 21.21847095452941,
+          "lon": 70.71643056261146
+        },
+        {
+          "site_key": "eastern_0053_ozene",
+          "source_order": 53,
           "lat": 23.17,
           "lon": 75.79
         },
         {
-          "site_key": "eastern_0050_paithana",
-          "source_order": 50,
+          "site_key": "eastern_0054_paithana",
+          "source_order": 54,
           "lat": 19.48,
           "lon": 75.38
         },
         {
-          "site_key": "eastern_0051_tagara",
-          "source_order": 51,
+          "site_key": "eastern_0055_tagara",
+          "source_order": 55,
           "lat": 18.301382,
           "lon": 76.14594
         },
         {
-          "site_key": "eastern_0053_souppara",
-          "source_order": 53,
+          "site_key": "eastern_0057_souppara",
+          "source_order": 57,
           "lat": 19.434113,
           "lon": 72.804527
         },
         {
-          "site_key": "eastern_0054_kalliena",
-          "source_order": 54,
+          "site_key": "eastern_0058_kalliena",
+          "source_order": 58,
           "lat": 19.27,
           "lon": 73.13
         },
         {
-          "site_key": "eastern_0055_semulla",
-          "source_order": 55,
+          "site_key": "eastern_0059_semulla",
+          "source_order": 59,
           "lat": 18.5212,
           "lon": 72.9472
         },
         {
-          "site_key": "eastern_0056_mandagora",
-          "source_order": 56,
+          "site_key": "eastern_0060_mandagora",
+          "source_order": 60,
           "lat": 17.951342,
           "lon": 73.03939
         },
         {
-          "site_key": "eastern_0057_palaipatmai",
-          "source_order": 57,
+          "site_key": "eastern_0061_palaipatmai",
+          "source_order": 61,
           "lat": 17.526305,
           "lon": 73.302413
         },
         {
-          "site_key": "eastern_0058_melizeigara",
-          "source_order": 58,
+          "site_key": "eastern_0062_melizeigara",
+          "source_order": 62,
           "lat": 17.29,
           "lon": 73.2377
         },
         {
-          "site_key": "eastern_0059_byzantion",
-          "source_order": 59,
+          "site_key": "eastern_0063_byzantion",
+          "source_order": 63,
           "lat": 16.503,
           "lon": 73.3334
         },
         {
-          "site_key": "eastern_0060_toparon",
-          "source_order": 60,
+          "site_key": "eastern_0064_toparon",
+          "source_order": 64,
           "lat": 16.220106,
           "lon": 73.58469
         },
         {
-          "site_key": "eastern_0061_erannoboas",
-          "source_order": 61,
+          "site_key": "eastern_0065_erannoboas",
+          "source_order": 65,
           "lat": 16.0667,
           "lon": 73.466698
         },
         {
-          "site_key": "eastern_0062_sesekreienai_island",
-          "source_order": 62,
+          "site_key": "eastern_0066_sesekreienai_island",
+          "source_order": 66,
           "lat": 17.5,
           "lon": 72.5
         },
         {
-          "site_key": "eastern_0063_aigidion_island",
-          "source_order": 63,
+          "site_key": "eastern_0067_aigidion_island",
+          "source_order": 67,
           "lat": 17.5,
           "lon": 72.5
         },
         {
-          "site_key": "eastern_0064_kaineiton_island",
-          "source_order": 64,
+          "site_key": "eastern_0068_kaineiton_island",
+          "source_order": 68,
           "lat": 12.5,
           "lon": 72.5
         },
         {
-          "site_key": "eastern_0065_white_island",
-          "source_order": 65,
+          "site_key": "eastern_0069_white_island",
+          "source_order": 69,
           "lat": 14.0165,
           "lon": 74.3259
         },
         {
-          "site_key": "eastern_0066_naoura",
-          "source_order": 66,
+          "site_key": "eastern_0070_naoura",
+          "source_order": 70,
           "lat": 14.281472,
           "lon": 74.449703
         },
         {
-          "site_key": "eastern_0067_tyndis",
-          "source_order": 67,
+          "site_key": "eastern_0071_tyndis",
+          "source_order": 71,
           "lat": 10.763548,
           "lon": 75.926477
         },
         {
-          "site_key": "eastern_0068_muziris",
-          "source_order": 68,
+          "site_key": "eastern_0072_muziris",
+          "source_order": 72,
           "lat": 10.153976,
           "lon": 76.213146
         },
         {
-          "site_key": "eastern_0069_nelkunda",
-          "source_order": 69,
+          "site_key": "eastern_0073_nelkunda",
+          "source_order": 73,
           "lat": 9.272624,
           "lon": 76.558846
         },
         {
-          "site_key": "eastern_0070_bakare",
-          "source_order": 70,
+          "site_key": "eastern_0074_bakare",
+          "source_order": 74,
           "lat": 9.5,
           "lon": 77.5
         },
         {
-          "site_key": "eastern_0071_balita",
-          "source_order": 71,
+          "site_key": "eastern_0075_balita",
+          "source_order": 75,
           "lat": 8.380214,
           "lon": 76.990276
         },
         {
-          "site_key": "eastern_0072_komarei",
-          "source_order": 72,
+          "site_key": "eastern_0076_komarei",
+          "source_order": 76,
           "lat": 8.0772932,
           "lon": 77.5513761
         },
         {
-          "site_key": "eastern_0073_kolkhoi",
-          "source_order": 73,
+          "site_key": "eastern_0077_kolkhoi",
+          "source_order": 77,
           "lat": 8.612651,
           "lon": 78.01884
         },
         {
-          "site_key": "eastern_0074_argalou",
-          "source_order": 74,
+          "site_key": "eastern_0078_argalou",
+          "source_order": 78,
           "lat": 12.5,
           "lon": 77.5
         },
         {
-          "site_key": "eastern_0075_kamara",
-          "source_order": 75,
+          "site_key": "eastern_0079_kamara",
+          "source_order": 79,
           "lat": 11.025067,
           "lon": 79.85456
         },
         {
-          "site_key": "eastern_0076_podouke",
-          "source_order": 76,
+          "site_key": "eastern_0080_podouke",
+          "source_order": 80,
           "lat": 11.862228,
           "lon": 79.74878
         },
         {
-          "site_key": "eastern_0077_sopatma",
-          "source_order": 77,
+          "site_key": "eastern_0081_sopatma",
+          "source_order": 81,
           "lat": 12.188994,
           "lon": 79.942282
         },
         {
-          "site_key": "eastern_0078_palaisimoundou",
-          "source_order": 78,
+          "site_key": "eastern_0082_palaisimoundou",
+          "source_order": 82,
           "lat": 6.9167,
           "lon": 79.8333
         },
         {
-          "site_key": "eastern_0079_masalia",
-          "source_order": 79,
+          "site_key": "eastern_0083_masalia",
+          "source_order": 83,
           "lat": 17.5,
           "lon": 77.5
         },
         {
-          "site_key": "eastern_0080_ganges",
-          "source_order": 80,
+          "site_key": "eastern_0084_ganges",
+          "source_order": 84,
           "lat": 22.697778,
           "lon": 88.688333
         }
       ],
       "unmapped_site_keys": [
-        "eastern_0052_akabaru",
-        "eastern_0081_khruse_island",
-        "eastern_0082_thina"
+        "eastern_0056_akabaru",
+        "eastern_0085_khruse_island",
+        "eastern_0086_thina"
       ]
     },
     "western": {
@@ -6624,7 +6942,7 @@
           "lat": 22.060829,
           "lon": 73.075764,
           "has_geometry": true,
-          "coords_source": "webmap_scrape",
+          "coords_source": "pleiades_reprPoint",
           "modern_identification": "Mandasor",
           "modern_country": "India",
           "ancient_source": "Ptolemy, 7.1.63",
@@ -6752,7 +7070,7 @@
           "route_key": "eastern",
           "route_label": "Eastern",
           "source_route_label": "Eastern route",
-          "next_on_route": "Barygaza",
+          "next_on_route": "Barake",
           "periplus_place_type": "Village",
           "periplus_ancient_area": "India",
           "periplus_chapter": "PME, Ch. 41",
@@ -6785,7 +7103,7 @@
             "page_ancient_toponym": "Kammōni",
             "page_place_type": "Village",
             "page_route": "Eastern route",
-            "page_next_on_route": "Barygaza",
+            "page_next_on_route": "Barake",
             "page_ancient_area": "India",
             "page_periplus_chapter": "PME, Ch. 41",
             "page_location_source": "Pleiades"
@@ -6793,14 +7111,59 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0048_barygaza",
+          "site_key": "eastern_0048_barake",
           "source_order": 48,
+          "source_name": "Barake",
+          "input_name": "Barake",
+          "route_key": "eastern",
+          "route_label": "Eastern",
+          "source_route_label": "Eastern route",
+          "next_on_route": "Barygaza",
+          "periplus_place_type": "Port of trade",
+          "periplus_ancient_area": "India",
+          "periplus_chapter": "PME, Ch. 41",
+          "section_numbers": [
+            41
+          ],
+          "location_precision": "Precise",
+          "location_source": "Pleiades",
+          "pleiades_id": "59732",
+          "pleiades_uri": "https://pleiades.stoa.org/places/59732",
+          "lat": 22.45463247744228,
+          "lon": 69.11490452091387,
+          "has_geometry": true,
+          "coords_source": "pleiades_reprPoint",
+          "modern_identification": null,
+          "modern_country": null,
+          "ancient_source": null,
+          "bibliography_entries": [],
+          "github_location_url": null,
+          "source_urls": {
+            "pleiades": "https://pleiades.stoa.org/places/59732"
+          },
+          "page_metadata": {
+            "page_title": "Barake",
+            "page_ancient_toponym": "Barake",
+            "page_place_type": "Port of trade",
+            "page_route": "Eastern route",
+            "page_next_on_route": "Barygaza",
+            "page_ancient_area": "India",
+            "page_periplus_chapter": "PME, Ch. 41",
+            "page_location_source": "Pleiades"
+          },
+          "scrape_notes": [
+            "Manually inserted for PME §41 ingest (Pleiades 59732)."
+          ]
+        },
+        {
+          "site_key": "eastern_0049_barygaza",
+          "source_order": 49,
           "source_name": "Barygaza",
           "input_name": "Barygaza",
           "route_key": "eastern",
           "route_label": "Eastern",
           "source_route_label": "Eastern Route",
-          "next_on_route": "Ozēnē",
+          "next_on_route": "Ariake",
           "periplus_place_type": "Port of trade",
           "periplus_ancient_area": "India",
           "periplus_chapter": "PME, Ch. 40-47",
@@ -6815,7 +7178,7 @@
           "lat": 21.70078,
           "lon": 72.983068,
           "has_geometry": true,
-          "coords_source": "webmap_scrape",
+          "coords_source": "pleiades_reprPoint",
           "modern_identification": "Bharuch",
           "modern_country": "India",
           "ancient_source": "Ptolemy 7.1.62",
@@ -6831,7 +7194,7 @@
             "page_ancient_toponym": "Barygaza",
             "page_place_type": "Port of trade",
             "page_route": "Eastern Route",
-            "page_next_on_route": "Ozēnē",
+            "page_next_on_route": "Ariake",
             "page_ancient_area": "India",
             "page_periplus_chapter": "PME, Ch. 40-47",
             "page_location_source": "Pleiades"
@@ -6839,8 +7202,143 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0049_ozene",
-          "source_order": 49,
+          "site_key": "eastern_0050_ariake",
+          "source_order": 50,
+          "source_name": "Ariake",
+          "input_name": "Ariake",
+          "route_key": "eastern",
+          "route_label": "Eastern",
+          "source_route_label": "Eastern route",
+          "next_on_route": "Aberia",
+          "periplus_place_type": "Region",
+          "periplus_ancient_area": "India",
+          "periplus_chapter": "PME, Ch. 41",
+          "section_numbers": [
+            41
+          ],
+          "location_precision": "Region",
+          "location_source": "Pleiades",
+          "pleiades_id": "59700",
+          "pleiades_uri": "https://pleiades.stoa.org/places/59700",
+          "lat": 22.30414301467541,
+          "lon": 71.97578733971922,
+          "has_geometry": true,
+          "coords_source": "pleiades_reprPoint",
+          "modern_identification": null,
+          "modern_country": null,
+          "ancient_source": null,
+          "bibliography_entries": [],
+          "github_location_url": null,
+          "source_urls": {
+            "pleiades": "https://pleiades.stoa.org/places/59700"
+          },
+          "page_metadata": {
+            "page_title": "Ariake",
+            "page_ancient_toponym": "Ariake",
+            "page_place_type": "Region",
+            "page_route": "Eastern route",
+            "page_next_on_route": "Aberia",
+            "page_ancient_area": "India",
+            "page_periplus_chapter": "PME, Ch. 41",
+            "page_location_source": "Pleiades"
+          },
+          "scrape_notes": [
+            "Manually inserted for PME §41 ingest (Pleiades 59700)."
+          ]
+        },
+        {
+          "site_key": "eastern_0051_aberia",
+          "source_order": 51,
+          "source_name": "Aberia",
+          "input_name": "Aberia",
+          "route_key": "eastern",
+          "route_label": "Eastern",
+          "source_route_label": "Eastern route",
+          "next_on_route": "Syrastrene",
+          "periplus_place_type": "Region",
+          "periplus_ancient_area": "India",
+          "periplus_chapter": "PME, Ch. 41",
+          "section_numbers": [
+            41
+          ],
+          "location_precision": "Region",
+          "location_source": "Pleiades",
+          "pleiades_id": "59649",
+          "pleiades_uri": "https://pleiades.stoa.org/places/59649",
+          "lat": 26.222011238527823,
+          "lon": 68.70373216215937,
+          "has_geometry": true,
+          "coords_source": "pleiades_reprPoint",
+          "modern_identification": null,
+          "modern_country": null,
+          "ancient_source": null,
+          "bibliography_entries": [],
+          "github_location_url": null,
+          "source_urls": {
+            "pleiades": "https://pleiades.stoa.org/places/59649"
+          },
+          "page_metadata": {
+            "page_title": "Aberia",
+            "page_ancient_toponym": "Aberia",
+            "page_place_type": "Region",
+            "page_route": "Eastern route",
+            "page_next_on_route": "Syrastrene",
+            "page_ancient_area": "India",
+            "page_periplus_chapter": "PME, Ch. 41",
+            "page_location_source": "Pleiades"
+          },
+          "scrape_notes": [
+            "Manually inserted for PME §41 ingest (Pleiades 59649)."
+          ]
+        },
+        {
+          "site_key": "eastern_0052_syrastrene",
+          "source_order": 52,
+          "source_name": "Syrastrene",
+          "input_name": "Syrastrene",
+          "route_key": "eastern",
+          "route_label": "Eastern",
+          "source_route_label": "Eastern route",
+          "next_on_route": "Ozēnē",
+          "periplus_place_type": "Region",
+          "periplus_ancient_area": "India",
+          "periplus_chapter": "PME, Ch. 41",
+          "section_numbers": [
+            41
+          ],
+          "location_precision": "Region",
+          "location_source": "Pleiades",
+          "pleiades_id": "50291",
+          "pleiades_uri": "https://pleiades.stoa.org/places/50291",
+          "lat": 21.21847095452941,
+          "lon": 70.71643056261146,
+          "has_geometry": true,
+          "coords_source": "pleiades_reprPoint",
+          "modern_identification": null,
+          "modern_country": null,
+          "ancient_source": null,
+          "bibliography_entries": [],
+          "github_location_url": null,
+          "source_urls": {
+            "pleiades": "https://pleiades.stoa.org/places/50291"
+          },
+          "page_metadata": {
+            "page_title": "Syrastrene",
+            "page_ancient_toponym": "Syrastrene",
+            "page_place_type": "Region",
+            "page_route": "Eastern route",
+            "page_next_on_route": "Ozēnē",
+            "page_ancient_area": "India",
+            "page_periplus_chapter": "PME, Ch. 41",
+            "page_location_source": "Pleiades"
+          },
+          "scrape_notes": [
+            "Manually inserted for PME §41 ingest (Pleiades 50291)."
+          ]
+        },
+        {
+          "site_key": "eastern_0053_ozene",
+          "source_order": 53,
           "source_name": "Ozēnē",
           "input_name": "Ozene",
           "route_key": "eastern",
@@ -6884,8 +7382,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0050_paithana",
-          "source_order": 50,
+          "site_key": "eastern_0054_paithana",
+          "source_order": 54,
           "source_name": "Paithana",
           "input_name": "Paithana",
           "route_key": "eastern",
@@ -6929,8 +7427,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0051_tagara",
-          "source_order": 51,
+          "site_key": "eastern_0055_tagara",
+          "source_order": 55,
           "source_name": "Tagara",
           "input_name": "Tagara",
           "route_key": "eastern",
@@ -6974,8 +7472,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0052_akabaru",
-          "source_order": 52,
+          "site_key": "eastern_0056_akabaru",
+          "source_order": 56,
           "source_name": "Akabaru",
           "input_name": "Akabaru",
           "route_key": "eastern",
@@ -7019,8 +7517,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0053_souppara",
-          "source_order": 53,
+          "site_key": "eastern_0057_souppara",
+          "source_order": 57,
           "source_name": "Souppara",
           "input_name": "Souppara",
           "route_key": "eastern",
@@ -7066,8 +7564,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0054_kalliena",
-          "source_order": 54,
+          "site_key": "eastern_0058_kalliena",
+          "source_order": 58,
           "source_name": "Kalliena",
           "input_name": "Kalliena",
           "route_key": "eastern",
@@ -7114,8 +7612,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0055_semulla",
-          "source_order": 55,
+          "site_key": "eastern_0059_semulla",
+          "source_order": 59,
           "source_name": "Sēmulla",
           "input_name": "Semulla",
           "route_key": "eastern",
@@ -7159,8 +7657,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0056_mandagora",
-          "source_order": 56,
+          "site_key": "eastern_0060_mandagora",
+          "source_order": 60,
           "source_name": "Mandagora",
           "input_name": "Mandagora",
           "route_key": "eastern",
@@ -7207,8 +7705,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0057_palaipatmai",
-          "source_order": 57,
+          "site_key": "eastern_0061_palaipatmai",
+          "source_order": 61,
           "source_name": "Palaipatmai",
           "input_name": "Palaipatmai",
           "route_key": "eastern",
@@ -7255,8 +7753,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0058_melizeigara",
-          "source_order": 58,
+          "site_key": "eastern_0062_melizeigara",
+          "source_order": 62,
           "source_name": "Melizeigara",
           "input_name": "Melizeigara",
           "route_key": "eastern",
@@ -7300,8 +7798,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0059_byzantion",
-          "source_order": 59,
+          "site_key": "eastern_0063_byzantion",
+          "source_order": 63,
           "source_name": "Byzantion",
           "input_name": "Byzantion",
           "route_key": "eastern",
@@ -7345,8 +7843,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0060_toparon",
-          "source_order": 60,
+          "site_key": "eastern_0064_toparon",
+          "source_order": 64,
           "source_name": "Toparon",
           "input_name": "Toparon",
           "route_key": "eastern",
@@ -7390,8 +7888,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0061_erannoboas",
-          "source_order": 61,
+          "site_key": "eastern_0065_erannoboas",
+          "source_order": 65,
           "source_name": "Erannoboas",
           "input_name": "Erannoboas",
           "route_key": "eastern",
@@ -7435,8 +7933,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0062_sesekreienai_island",
-          "source_order": 62,
+          "site_key": "eastern_0066_sesekreienai_island",
+          "source_order": 66,
           "source_name": "Sēsekreienai Island",
           "input_name": "Sesekreienai Island",
           "route_key": "eastern",
@@ -7480,8 +7978,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0063_aigidion_island",
-          "source_order": 63,
+          "site_key": "eastern_0067_aigidion_island",
+          "source_order": 67,
           "source_name": "Aigidiōn Island",
           "input_name": "Aigidion Island",
           "route_key": "eastern",
@@ -7525,8 +8023,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0064_kaineiton_island",
-          "source_order": 64,
+          "site_key": "eastern_0068_kaineiton_island",
+          "source_order": 68,
           "source_name": "Kaineitōn Island",
           "input_name": "Kaineiton Island",
           "route_key": "eastern",
@@ -7570,8 +8068,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0065_white_island",
-          "source_order": 65,
+          "site_key": "eastern_0069_white_island",
+          "source_order": 69,
           "source_name": "White Island",
           "input_name": "White Island",
           "route_key": "eastern",
@@ -7615,8 +8113,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0066_naoura",
-          "source_order": 66,
+          "site_key": "eastern_0070_naoura",
+          "source_order": 70,
           "source_name": "Naoura",
           "input_name": "Naoura",
           "route_key": "eastern",
@@ -7663,8 +8161,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0067_tyndis",
-          "source_order": 67,
+          "site_key": "eastern_0071_tyndis",
+          "source_order": 71,
           "source_name": "Tyndis",
           "input_name": "Tyndis",
           "route_key": "eastern",
@@ -7711,8 +8209,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0068_muziris",
-          "source_order": 68,
+          "site_key": "eastern_0072_muziris",
+          "source_order": 72,
           "source_name": "Muziris",
           "input_name": "Muziris",
           "route_key": "eastern",
@@ -7758,8 +8256,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0069_nelkunda",
-          "source_order": 69,
+          "site_key": "eastern_0073_nelkunda",
+          "source_order": 73,
           "source_name": "Nelkunda",
           "input_name": "Nelkunda",
           "route_key": "eastern",
@@ -7807,8 +8305,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0070_bakare",
-          "source_order": 70,
+          "site_key": "eastern_0074_bakare",
+          "source_order": 74,
           "source_name": "Bakarē",
           "input_name": "Bakare",
           "route_key": "eastern",
@@ -7852,8 +8350,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0071_balita",
-          "source_order": 71,
+          "site_key": "eastern_0075_balita",
+          "source_order": 75,
           "source_name": "Balita",
           "input_name": "Balita",
           "route_key": "eastern",
@@ -7897,8 +8395,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0072_komarei",
-          "source_order": 72,
+          "site_key": "eastern_0076_komarei",
+          "source_order": 76,
           "source_name": "Komarei",
           "input_name": "Komarei",
           "route_key": "eastern",
@@ -7945,8 +8443,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0073_kolkhoi",
-          "source_order": 73,
+          "site_key": "eastern_0077_kolkhoi",
+          "source_order": 77,
           "source_name": "Kolkhoi",
           "input_name": "Kolkhoi",
           "route_key": "eastern",
@@ -7990,8 +8488,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0074_argalou",
-          "source_order": 74,
+          "site_key": "eastern_0078_argalou",
+          "source_order": 78,
           "source_name": "Argalou",
           "input_name": "Argalou",
           "route_key": "eastern",
@@ -8035,8 +8533,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0075_kamara",
-          "source_order": 75,
+          "site_key": "eastern_0079_kamara",
+          "source_order": 79,
           "source_name": "Kamara",
           "input_name": "Kamara",
           "route_key": "eastern",
@@ -8082,8 +8580,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0076_podouke",
-          "source_order": 76,
+          "site_key": "eastern_0080_podouke",
+          "source_order": 80,
           "source_name": "Podoukē",
           "input_name": "Podouke",
           "route_key": "eastern",
@@ -8129,8 +8627,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0077_sopatma",
-          "source_order": 77,
+          "site_key": "eastern_0081_sopatma",
+          "source_order": 81,
           "source_name": "Sōpatma",
           "input_name": "Sopatma",
           "route_key": "eastern",
@@ -8176,8 +8674,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0078_palaisimoundou",
-          "source_order": 78,
+          "site_key": "eastern_0082_palaisimoundou",
+          "source_order": 82,
           "source_name": "Palaisimoundou",
           "input_name": "Palaisimoundou",
           "route_key": "eastern",
@@ -8223,8 +8721,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0079_masalia",
-          "source_order": 79,
+          "site_key": "eastern_0083_masalia",
+          "source_order": 83,
           "source_name": "Masalia",
           "input_name": "Masalia",
           "route_key": "eastern",
@@ -8271,8 +8769,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0080_ganges",
-          "source_order": 80,
+          "site_key": "eastern_0084_ganges",
+          "source_order": 84,
           "source_name": "Gangēs",
           "input_name": "Ganges",
           "route_key": "eastern",
@@ -8316,8 +8814,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0081_khruse_island",
-          "source_order": 81,
+          "site_key": "eastern_0085_khruse_island",
+          "source_order": 85,
           "source_name": "Khrusē Island",
           "input_name": "Khruse Island",
           "route_key": "eastern",
@@ -8363,8 +8861,8 @@
           "scrape_notes": []
         },
         {
-          "site_key": "eastern_0082_thina",
-          "source_order": 82,
+          "site_key": "eastern_0086_thina",
+          "source_order": 86,
           "source_name": "Thina",
           "input_name": "Thina",
           "route_key": "eastern",
@@ -8513,6 +9011,120 @@
               "reason": "political_context"
             }
           ]
+        },
+        {
+          "section_id": "section_0041",
+          "section_order": 41,
+          "card_title": null,
+          "review_status": "draft",
+          "focus_sequence": [
+            {
+              "focus_id": "section_0041_focus_01",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 1,
+              "display_name": "Barake",
+              "source_name": "Barake",
+              "route_site_key": "eastern_0048_barake",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 22.45463247744228,
+              "lon": 69.11490452091387,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_02",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 2,
+              "display_name": "Barygaza",
+              "source_name": "Barygaza",
+              "route_site_key": "eastern_0049_barygaza",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 21.70078,
+              "lon": 72.983068,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_03",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 3,
+              "display_name": "Ariake",
+              "source_name": "Ariake",
+              "route_site_key": "eastern_0050_ariake",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 22.30414301467541,
+              "lon": 71.97578733971922,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_04",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 4,
+              "display_name": "Aberia",
+              "source_name": "Aberia",
+              "route_site_key": "eastern_0051_aberia",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 26.222011238527823,
+              "lon": 68.70373216215937,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_05",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 5,
+              "display_name": "Syrastrene",
+              "source_name": "Syrastrene",
+              "route_site_key": "eastern_0052_syrastrene",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 21.21847095452941,
+              "lon": 70.71643056261146,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_06",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 6,
+              "display_name": "Minnagara",
+              "source_name": "Minnagar",
+              "route_site_key": "eastern_0044_minnagar",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 22.060829,
+              "lon": 73.075764,
+              "note": null
+            },
+            {
+              "focus_id": "section_0041_focus_07",
+              "section_id": "section_0041",
+              "section_order": 41,
+              "focus_order": 7,
+              "display_name": "Barygaza",
+              "source_name": "Barygaza",
+              "route_site_key": "eastern_0049_barygaza",
+              "geometry_policy": "mapped",
+              "mapping_status": "mapped",
+              "has_geometry": true,
+              "lat": 21.70078,
+              "lon": 72.983068,
+              "note": null
+            }
+          ],
+          "context_places": []
         }
       ],
       "drawable_line_points": [
@@ -8679,202 +9291,226 @@
           "lon": 72.925301
         },
         {
-          "site_key": "eastern_0048_barygaza",
+          "site_key": "eastern_0048_barake",
           "source_order": 48,
+          "lat": 22.45463247744228,
+          "lon": 69.11490452091387
+        },
+        {
+          "site_key": "eastern_0049_barygaza",
+          "source_order": 49,
           "lat": 21.70078,
           "lon": 72.983068
         },
         {
-          "site_key": "eastern_0049_ozene",
-          "source_order": 49,
+          "site_key": "eastern_0050_ariake",
+          "source_order": 50,
+          "lat": 22.30414301467541,
+          "lon": 71.97578733971922
+        },
+        {
+          "site_key": "eastern_0051_aberia",
+          "source_order": 51,
+          "lat": 26.222011238527823,
+          "lon": 68.70373216215937
+        },
+        {
+          "site_key": "eastern_0052_syrastrene",
+          "source_order": 52,
+          "lat": 21.21847095452941,
+          "lon": 70.71643056261146
+        },
+        {
+          "site_key": "eastern_0053_ozene",
+          "source_order": 53,
           "lat": 23.17,
           "lon": 75.79
         },
         {
-          "site_key": "eastern_0050_paithana",
-          "source_order": 50,
+          "site_key": "eastern_0054_paithana",
+          "source_order": 54,
           "lat": 19.48,
           "lon": 75.38
         },
         {
-          "site_key": "eastern_0051_tagara",
-          "source_order": 51,
+          "site_key": "eastern_0055_tagara",
+          "source_order": 55,
           "lat": 18.301382,
           "lon": 76.14594
         },
         {
-          "site_key": "eastern_0053_souppara",
-          "source_order": 53,
+          "site_key": "eastern_0057_souppara",
+          "source_order": 57,
           "lat": 19.434113,
           "lon": 72.804527
         },
         {
-          "site_key": "eastern_0054_kalliena",
-          "source_order": 54,
+          "site_key": "eastern_0058_kalliena",
+          "source_order": 58,
           "lat": 19.27,
           "lon": 73.13
         },
         {
-          "site_key": "eastern_0055_semulla",
-          "source_order": 55,
+          "site_key": "eastern_0059_semulla",
+          "source_order": 59,
           "lat": 18.5212,
           "lon": 72.9472
         },
         {
-          "site_key": "eastern_0056_mandagora",
-          "source_order": 56,
+          "site_key": "eastern_0060_mandagora",
+          "source_order": 60,
           "lat": 17.951342,
           "lon": 73.03939
         },
         {
-          "site_key": "eastern_0057_palaipatmai",
-          "source_order": 57,
+          "site_key": "eastern_0061_palaipatmai",
+          "source_order": 61,
           "lat": 17.526305,
           "lon": 73.302413
         },
         {
-          "site_key": "eastern_0058_melizeigara",
-          "source_order": 58,
+          "site_key": "eastern_0062_melizeigara",
+          "source_order": 62,
           "lat": 17.29,
           "lon": 73.2377
         },
         {
-          "site_key": "eastern_0059_byzantion",
-          "source_order": 59,
+          "site_key": "eastern_0063_byzantion",
+          "source_order": 63,
           "lat": 16.503,
           "lon": 73.3334
         },
         {
-          "site_key": "eastern_0060_toparon",
-          "source_order": 60,
+          "site_key": "eastern_0064_toparon",
+          "source_order": 64,
           "lat": 16.220106,
           "lon": 73.58469
         },
         {
-          "site_key": "eastern_0061_erannoboas",
-          "source_order": 61,
+          "site_key": "eastern_0065_erannoboas",
+          "source_order": 65,
           "lat": 16.0667,
           "lon": 73.466698
         },
         {
-          "site_key": "eastern_0062_sesekreienai_island",
-          "source_order": 62,
+          "site_key": "eastern_0066_sesekreienai_island",
+          "source_order": 66,
           "lat": 17.5,
           "lon": 72.5
         },
         {
-          "site_key": "eastern_0063_aigidion_island",
-          "source_order": 63,
+          "site_key": "eastern_0067_aigidion_island",
+          "source_order": 67,
           "lat": 17.5,
           "lon": 72.5
         },
         {
-          "site_key": "eastern_0064_kaineiton_island",
-          "source_order": 64,
+          "site_key": "eastern_0068_kaineiton_island",
+          "source_order": 68,
           "lat": 12.5,
           "lon": 72.5
         },
         {
-          "site_key": "eastern_0065_white_island",
-          "source_order": 65,
+          "site_key": "eastern_0069_white_island",
+          "source_order": 69,
           "lat": 14.0165,
           "lon": 74.3259
         },
         {
-          "site_key": "eastern_0066_naoura",
-          "source_order": 66,
+          "site_key": "eastern_0070_naoura",
+          "source_order": 70,
           "lat": 14.281472,
           "lon": 74.449703
         },
         {
-          "site_key": "eastern_0067_tyndis",
-          "source_order": 67,
+          "site_key": "eastern_0071_tyndis",
+          "source_order": 71,
           "lat": 10.763548,
           "lon": 75.926477
         },
         {
-          "site_key": "eastern_0068_muziris",
-          "source_order": 68,
+          "site_key": "eastern_0072_muziris",
+          "source_order": 72,
           "lat": 10.153976,
           "lon": 76.213146
         },
         {
-          "site_key": "eastern_0069_nelkunda",
-          "source_order": 69,
+          "site_key": "eastern_0073_nelkunda",
+          "source_order": 73,
           "lat": 9.272624,
           "lon": 76.558846
         },
         {
-          "site_key": "eastern_0070_bakare",
-          "source_order": 70,
+          "site_key": "eastern_0074_bakare",
+          "source_order": 74,
           "lat": 9.5,
           "lon": 77.5
         },
         {
-          "site_key": "eastern_0071_balita",
-          "source_order": 71,
+          "site_key": "eastern_0075_balita",
+          "source_order": 75,
           "lat": 8.380214,
           "lon": 76.990276
         },
         {
-          "site_key": "eastern_0072_komarei",
-          "source_order": 72,
+          "site_key": "eastern_0076_komarei",
+          "source_order": 76,
           "lat": 8.0772932,
           "lon": 77.5513761
         },
         {
-          "site_key": "eastern_0073_kolkhoi",
-          "source_order": 73,
+          "site_key": "eastern_0077_kolkhoi",
+          "source_order": 77,
           "lat": 8.612651,
           "lon": 78.01884
         },
         {
-          "site_key": "eastern_0074_argalou",
-          "source_order": 74,
+          "site_key": "eastern_0078_argalou",
+          "source_order": 78,
           "lat": 12.5,
           "lon": 77.5
         },
         {
-          "site_key": "eastern_0075_kamara",
-          "source_order": 75,
+          "site_key": "eastern_0079_kamara",
+          "source_order": 79,
           "lat": 11.025067,
           "lon": 79.85456
         },
         {
-          "site_key": "eastern_0076_podouke",
-          "source_order": 76,
+          "site_key": "eastern_0080_podouke",
+          "source_order": 80,
           "lat": 11.862228,
           "lon": 79.74878
         },
         {
-          "site_key": "eastern_0077_sopatma",
-          "source_order": 77,
+          "site_key": "eastern_0081_sopatma",
+          "source_order": 81,
           "lat": 12.188994,
           "lon": 79.942282
         },
         {
-          "site_key": "eastern_0078_palaisimoundou",
-          "source_order": 78,
+          "site_key": "eastern_0082_palaisimoundou",
+          "source_order": 82,
           "lat": 6.9167,
           "lon": 79.8333
         },
         {
-          "site_key": "eastern_0079_masalia",
-          "source_order": 79,
+          "site_key": "eastern_0083_masalia",
+          "source_order": 83,
           "lat": 17.5,
           "lon": 77.5
         },
         {
-          "site_key": "eastern_0080_ganges",
-          "source_order": 80,
+          "site_key": "eastern_0084_ganges",
+          "source_order": 84,
           "lat": 22.697778,
           "lon": 88.688333
         }
       ],
       "unmapped_site_keys": [
-        "eastern_0052_akabaru",
-        "eastern_0081_khruse_island",
-        "eastern_0082_thina"
+        "eastern_0056_akabaru",
+        "eastern_0085_khruse_island",
+        "eastern_0086_thina"
       ]
     }
   }

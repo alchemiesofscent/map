@@ -62,6 +62,57 @@
           "reason": "political_context"
         }
       ]
+    },
+    {
+      "section_order": 41,
+      "card_title": null,
+      "review_status": "draft",
+      "visit_sequence": [
+        {
+          "display_name": "Barake",
+          "source_name": "Barake",
+          "route_site_key": "eastern_0048_barake",
+          "geometry_policy": "mapped"
+        },
+        {
+          "display_name": "Barygaza",
+          "source_name": "Barygaza",
+          "route_site_key": "eastern_0049_barygaza",
+          "geometry_policy": "mapped"
+        },
+        {
+          "display_name": "Ariake",
+          "source_name": "Ariake",
+          "route_site_key": "eastern_0050_ariake",
+          "geometry_policy": "mapped"
+        },
+        {
+          "display_name": "Aberia",
+          "source_name": "Aberia",
+          "route_site_key": "eastern_0051_aberia",
+          "geometry_policy": "mapped"
+        },
+        {
+          "display_name": "Syrastrene",
+          "source_name": "Syrastrene",
+          "route_site_key": "eastern_0052_syrastrene",
+          "geometry_policy": "mapped"
+        },
+        {
+          "display_name": "Minnagara",
+          "source_name": "Minnagar",
+          "route_site_key": "eastern_0044_minnagar",
+          "geometry_policy": "mapped"
+        },
+        {
+          "display_name": "Barygaza",
+          "source_name": "Barygaza",
+          "route_site_key": "eastern_0049_barygaza",
+          "geometry_policy": "mapped"
+        }
+      ],
+      "context_places": []
     }
-  ]
+  ],
+  "last_marker_import": "2026-05-08T19:34:57+00:00"
 }

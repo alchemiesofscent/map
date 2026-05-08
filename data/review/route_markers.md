@@ -733,7 +733,7 @@ After the Sindus River is another unexplored gulf toward the north, called Eirin
      · Minnagar [off_route]
 -->
 
-After Barake comes the gulf of Barygaza and the mainland of Ariake, the beginning of Mambaro's kingdom and of all India. Inland, bordering Scythia, is called Aberia, and the coast Syrastrene. The country is rich in wheat, rice, sesame oil, butter, cotton, and coarse Indian cloth made from it. Its metropolis is Minnagara, from which a very large amount of cloth is brought down to Barygaza.
+After *Barake* comes the gulf of *Barygaza* and the mainland of *Ariake*, the beginning of Mambaro's kingdom and of all India. Inland, bordering Scythia, is called *Aberia*, and the coast *Syrastrene*. The country is rich in wheat, rice, sesame oil, butter, cotton, and coarse Indian cloth made from it. Its metropolis is *Minnagara*, from which a very large amount of cloth is brought down to *Barygaza*.
 
 
 ## §42 — section_0042

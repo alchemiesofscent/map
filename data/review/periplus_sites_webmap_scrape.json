@@ -1978,7 +1978,7 @@
       "source_feature_index": 50,
       "is_split_from_input": false,
       "route": "Eastern route",
-      "next_on_route": "Barygaza",
+      "next_on_route": "Barake",
       "periplus_place_type": "Village",
       "periplus_ancient_area": "India",
       "periplus_chapter": "PME, Ch. 41",
@@ -2003,7 +2003,7 @@
         "page_ancient_toponym": "Kammōni",
         "page_place_type": "Village",
         "page_route": "Eastern route",
-        "page_next_on_route": "Barygaza",
+        "page_next_on_route": "Barake",
         "page_ancient_area": "India",
         "page_periplus_chapter": "PME, Ch. 41",
         "page_location_source": "Pleiades"
@@ -2017,12 +2017,53 @@
     },
     {
       "source_order": 48,
+      "input_name": "Barake",
+      "source_name": "Barake",
+      "source_feature_index": null,
+      "is_split_from_input": false,
+      "route": "Eastern route",
+      "next_on_route": "Barygaza",
+      "periplus_place_type": "Port of trade",
+      "periplus_ancient_area": "India",
+      "periplus_chapter": "PME, Ch. 41",
+      "location_precision": "Precise",
+      "location_source": "Pleiades",
+      "pleiades_id": "59732",
+      "pleiades_uri": "https://pleiades.stoa.org/places/59732",
+      "lat": null,
+      "lon": null,
+      "github_location_url": null,
+      "modern_identification": null,
+      "modern_country": null,
+      "ancient_source": null,
+      "bibliography_entries": [],
+      "passage_present": false,
+      "passage_excerpt": null,
+      "page_metadata": {
+        "page_title": "Barake",
+        "page_ancient_toponym": "Barake",
+        "page_place_type": "Port of trade",
+        "page_route": "Eastern route",
+        "page_next_on_route": "Barygaza",
+        "page_ancient_area": "India",
+        "page_periplus_chapter": "PME, Ch. 41",
+        "page_location_source": "Pleiades"
+      },
+      "scrape_notes": [
+        "Manually inserted for PME §41 ingest (Pleiades 59732)."
+      ],
+      "source_urls": {
+        "pleiades": "https://pleiades.stoa.org/places/59732"
+      }
+    },
+    {
+      "source_order": 49,
       "input_name": "Barygaza",
       "source_name": "Barygaza",
       "source_feature_index": 51,
       "is_split_from_input": false,
       "route": "Eastern Route",
-      "next_on_route": "Ozēnē",
+      "next_on_route": "Ariake",
       "periplus_place_type": "Port of trade",
       "periplus_ancient_area": "India",
       "periplus_chapter": "PME, Ch. 40-47",
@@ -2044,7 +2085,7 @@
         "page_ancient_toponym": "Barygaza",
         "page_place_type": "Port of trade",
         "page_route": "Eastern Route",
-        "page_next_on_route": "Ozēnē",
+        "page_next_on_route": "Ariake",
         "page_ancient_area": "India",
         "page_periplus_chapter": "PME, Ch. 40-47",
         "page_location_source": "Pleiades"
@@ -2057,7 +2098,130 @@
       }
     },
     {
-      "source_order": 49,
+      "source_order": 50,
+      "input_name": "Ariake",
+      "source_name": "Ariake",
+      "source_feature_index": null,
+      "is_split_from_input": false,
+      "route": "Eastern route",
+      "next_on_route": "Aberia",
+      "periplus_place_type": "Region",
+      "periplus_ancient_area": "India",
+      "periplus_chapter": "PME, Ch. 41",
+      "location_precision": "Region",
+      "location_source": "Pleiades",
+      "pleiades_id": "59700",
+      "pleiades_uri": "https://pleiades.stoa.org/places/59700",
+      "lat": null,
+      "lon": null,
+      "github_location_url": null,
+      "modern_identification": null,
+      "modern_country": null,
+      "ancient_source": null,
+      "bibliography_entries": [],
+      "passage_present": false,
+      "passage_excerpt": null,
+      "page_metadata": {
+        "page_title": "Ariake",
+        "page_ancient_toponym": "Ariake",
+        "page_place_type": "Region",
+        "page_route": "Eastern route",
+        "page_next_on_route": "Aberia",
+        "page_ancient_area": "India",
+        "page_periplus_chapter": "PME, Ch. 41",
+        "page_location_source": "Pleiades"
+      },
+      "scrape_notes": [
+        "Manually inserted for PME §41 ingest (Pleiades 59700)."
+      ],
+      "source_urls": {
+        "pleiades": "https://pleiades.stoa.org/places/59700"
+      }
+    },
+    {
+      "source_order": 51,
+      "input_name": "Aberia",
+      "source_name": "Aberia",
+      "source_feature_index": null,
+      "is_split_from_input": false,
+      "route": "Eastern route",
+      "next_on_route": "Syrastrene",
+      "periplus_place_type": "Region",
+      "periplus_ancient_area": "India",
+      "periplus_chapter": "PME, Ch. 41",
+      "location_precision": "Region",
+      "location_source": "Pleiades",
+      "pleiades_id": "59649",
+      "pleiades_uri": "https://pleiades.stoa.org/places/59649",
+      "lat": null,
+      "lon": null,
+      "github_location_url": null,
+      "modern_identification": null,
+      "modern_country": null,
+      "ancient_source": null,
+      "bibliography_entries": [],
+      "passage_present": false,
+      "passage_excerpt": null,
+      "page_metadata": {
+        "page_title": "Aberia",
+        "page_ancient_toponym": "Aberia",
+        "page_place_type": "Region",
+        "page_route": "Eastern route",
+        "page_next_on_route": "Syrastrene",
+        "page_ancient_area": "India",
+        "page_periplus_chapter": "PME, Ch. 41",
+        "page_location_source": "Pleiades"
+      },
+      "scrape_notes": [
+        "Manually inserted for PME §41 ingest (Pleiades 59649)."
+      ],
+      "source_urls": {
+        "pleiades": "https://pleiades.stoa.org/places/59649"
+      }
+    },
+    {
+      "source_order": 52,
+      "input_name": "Syrastrene",
+      "source_name": "Syrastrene",
+      "source_feature_index": null,
+      "is_split_from_input": false,
+      "route": "Eastern route",
+      "next_on_route": "Ozēnē",
+      "periplus_place_type": "Region",
+      "periplus_ancient_area": "India",
+      "periplus_chapter": "PME, Ch. 41",
+      "location_precision": "Region",
+      "location_source": "Pleiades",
+      "pleiades_id": "50291",
+      "pleiades_uri": "https://pleiades.stoa.org/places/50291",
+      "lat": null,
+      "lon": null,
+      "github_location_url": null,
+      "modern_identification": null,
+      "modern_country": null,
+      "ancient_source": null,
+      "bibliography_entries": [],
+      "passage_present": false,
+      "passage_excerpt": null,
+      "page_metadata": {
+        "page_title": "Syrastrene",
+        "page_ancient_toponym": "Syrastrene",
+        "page_place_type": "Region",
+        "page_route": "Eastern route",
+        "page_next_on_route": "Ozēnē",
+        "page_ancient_area": "India",
+        "page_periplus_chapter": "PME, Ch. 41",
+        "page_location_source": "Pleiades"
+      },
+      "scrape_notes": [
+        "Manually inserted for PME §41 ingest (Pleiades 50291)."
+      ],
+      "source_urls": {
+        "pleiades": "https://pleiades.stoa.org/places/50291"
+      }
+    },
+    {
+      "source_order": 53,
       "input_name": "Ozene",
       "source_name": "Ozēnē",
       "source_feature_index": 52,
@@ -2098,7 +2262,7 @@
       }
     },
     {
-      "source_order": 50,
+      "source_order": 54,
       "input_name": "Paithana",
       "source_name": "Paithana",
       "source_feature_index": 53,
@@ -2139,7 +2303,7 @@
       }
     },
     {
-      "source_order": 51,
+      "source_order": 55,
       "input_name": "Tagara",
       "source_name": "Tagara",
       "source_feature_index": 54,
@@ -2180,7 +2344,7 @@
       }
     },
     {
-      "source_order": 52,
+      "source_order": 56,
       "input_name": "Akabaru",
       "source_name": "Akabaru",
       "source_feature_index": 55,
@@ -2221,7 +2385,7 @@
       }
     },
     {
-      "source_order": 53,
+      "source_order": 57,
       "input_name": "Souppara",
       "source_name": "Souppara",
       "source_feature_index": 56,
@@ -2264,7 +2428,7 @@
       }
     },
     {
-      "source_order": 54,
+      "source_order": 58,
       "input_name": "Kalliena",
       "source_name": "Kalliena",
       "source_feature_index": 57,
@@ -2307,7 +2471,7 @@
       }
     },
     {
-      "source_order": 55,
+      "source_order": 59,
       "input_name": "Semulla",
       "source_name": "Sēmulla",
       "source_feature_index": 58,
@@ -2348,7 +2512,7 @@
       }
     },
     {
-      "source_order": 56,
+      "source_order": 60,
       "input_name": "Mandagora",
       "source_name": "Mandagora",
       "source_feature_index": 59,
@@ -2392,7 +2556,7 @@
       }
     },
     {
-      "source_order": 57,
+      "source_order": 61,
       "input_name": "Palaipatmai",
       "source_name": "Palaipatmai",
       "source_feature_index": 60,
@@ -2436,7 +2600,7 @@
       }
     },
     {
-      "source_order": 58,
+      "source_order": 62,
       "input_name": "Melizeigara",
       "source_name": "Melizeigara",
       "source_feature_index": 61,
@@ -2477,7 +2641,7 @@
       }
     },
     {
-      "source_order": 59,
+      "source_order": 63,
       "input_name": "Byzantion",
       "source_name": "Byzantion",
       "source_feature_index": 62,
@@ -2518,7 +2682,7 @@
       }
     },
     {
-      "source_order": 60,
+      "source_order": 64,
       "input_name": "Toparon",
       "source_name": "Toparon",
       "source_feature_index": 63,
@@ -2559,7 +2723,7 @@
       }
     },
     {
-      "source_order": 61,
+      "source_order": 65,
       "input_name": "Erannoboas",
       "source_name": "Erannoboas",
       "source_feature_index": 64,
@@ -2600,7 +2764,7 @@
       }
     },
     {
-      "source_order": 62,
+      "source_order": 66,
       "input_name": "Sesekreienai Island",
       "source_name": "Sēsekreienai Island",
       "source_feature_index": 65,
@@ -2641,7 +2805,7 @@
       }
     },
     {
-      "source_order": 63,
+      "source_order": 67,
       "input_name": "Aigidion Island",
       "source_name": "Aigidiōn Island",
       "source_feature_index": 66,
@@ -2682,7 +2846,7 @@
       }
     },
     {
-      "source_order": 64,
+      "source_order": 68,
       "input_name": "Kaineiton Island",
       "source_name": "Kaineitōn Island",
       "source_feature_index": 67,
@@ -2723,7 +2887,7 @@
       }
     },
     {
-      "source_order": 65,
+      "source_order": 69,
       "input_name": "White Island",
       "source_name": "White Island",
       "source_feature_index": 68,
@@ -2764,7 +2928,7 @@
       }
     },
     {
-      "source_order": 66,
+      "source_order": 70,
       "input_name": "Naoura",
       "source_name": "Naoura",
       "source_feature_index": 69,
@@ -2808,7 +2972,7 @@
       }
     },
     {
-      "source_order": 67,
+      "source_order": 71,
       "input_name": "Tyndis",
       "source_name": "Tyndis",
       "source_feature_index": 70,
@@ -2851,7 +3015,7 @@
       }
     },
     {
-      "source_order": 68,
+      "source_order": 72,
       "input_name": "Muziris",
       "source_name": "Muziris",
       "source_feature_index": 71,
@@ -2894,7 +3058,7 @@
       }
     },
     {
-      "source_order": 69,
+      "source_order": 73,
       "input_name": "Nelkunda",
       "source_name": "Nelkunda",
       "source_feature_index": 72,
@@ -2938,7 +3102,7 @@
       }
     },
     {
-      "source_order": 70,
+      "source_order": 74,
       "input_name": "Bakare",
       "source_name": "Bakarē",
       "source_feature_index": 73,
@@ -2979,7 +3143,7 @@
       }
     },
     {
-      "source_order": 71,
+      "source_order": 75,
       "input_name": "Balita",
       "source_name": "Balita",
       "source_feature_index": 74,
@@ -3020,7 +3184,7 @@
       }
     },
     {
-      "source_order": 72,
+      "source_order": 76,
       "input_name": "Komarei",
       "source_name": "Komarei",
       "source_feature_index": 75,
@@ -3063,7 +3227,7 @@
       }
     },
     {
-      "source_order": 73,
+      "source_order": 77,
       "input_name": "Kolkhoi",
       "source_name": "Kolkhoi",
       "source_feature_index": 76,
@@ -3104,7 +3268,7 @@
       }
     },
     {
-      "source_order": 74,
+      "source_order": 78,
       "input_name": "Argalou",
       "source_name": "Argalou",
       "source_feature_index": 77,
@@ -3145,7 +3309,7 @@
       }
     },
     {
-      "source_order": 75,
+      "source_order": 79,
       "input_name": "Kamara",
       "source_name": "Kamara",
       "source_feature_index": 78,
@@ -3188,7 +3352,7 @@
       }
     },
     {
-      "source_order": 76,
+      "source_order": 80,
       "input_name": "Podouke",
       "source_name": "Podoukē",
       "source_feature_index": 79,
@@ -3231,7 +3395,7 @@
       }
     },
     {
-      "source_order": 77,
+      "source_order": 81,
       "input_name": "Sopatma",
       "source_name": "Sōpatma",
       "source_feature_index": 80,
@@ -3274,7 +3438,7 @@
       }
     },
     {
-      "source_order": 78,
+      "source_order": 82,
       "input_name": "Palaisimoundou",
       "source_name": "Palaisimoundou",
       "source_feature_index": 81,
@@ -3317,7 +3481,7 @@
       }
     },
     {
-      "source_order": 79,
+      "source_order": 83,
       "input_name": "Masalia",
       "source_name": "Masalia",
       "source_feature_index": 82,
@@ -3361,7 +3525,7 @@
       }
     },
     {
-      "source_order": 80,
+      "source_order": 84,
       "input_name": "Ganges",
       "source_name": "Gangēs",
       "source_feature_index": 83,
@@ -3402,7 +3566,7 @@
       }
     },
     {
-      "source_order": 81,
+      "source_order": 85,
       "input_name": "Khruse Island",
       "source_name": "Khrusē Island",
       "source_feature_index": 84,
@@ -3445,7 +3609,7 @@
       }
     },
     {
-      "source_order": 82,
+      "source_order": 86,
       "input_name": "Thina",
       "source_name": "Thina",
       "source_feature_index": 85,

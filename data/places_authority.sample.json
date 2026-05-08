@@ -296,5 +296,107 @@
     "pleiades_uri": "https://pleiades.stoa.org/places/805630",
     "coordinates_source": "Pleiades reprPoint (cached snapshot 805630)",
     "notes": "Inland metropolis noted westward behind coastal peoples in section 2."
+  },
+  {
+    "place_key": "barake",
+    "display_name": "Barake",
+    "greek_names": [
+      "Βαράκη"
+    ],
+    "aliases": [],
+    "place_type": "port",
+    "lat": 22.45463247744228,
+    "lon": 69.11490452091387,
+    "certainty": "medium",
+    "pleiades_id": "59732",
+    "pleiades_uri": "https://pleiades.stoa.org/places/59732",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 59732)",
+    "notes": "Harbor preceding the Gulf of Barygaza in section 41."
+  },
+  {
+    "place_key": "barygaza",
+    "display_name": "Barygaza",
+    "greek_names": [
+      "Βαρύγαζα"
+    ],
+    "aliases": [
+      "Bharuch"
+    ],
+    "place_type": "port",
+    "lat": 21.70078,
+    "lon": 72.983068,
+    "certainty": "high",
+    "pleiades_id": "59737",
+    "pleiades_uri": "https://pleiades.stoa.org/places/59737",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 59737)",
+    "notes": "Major Indian trading port; central to sections 40-47."
+  },
+  {
+    "place_key": "ariake",
+    "display_name": "Ariake",
+    "greek_names": [
+      "Ἀριακή"
+    ],
+    "aliases": [],
+    "place_type": "region",
+    "lat": 22.30414301467541,
+    "lon": 71.97578733971922,
+    "certainty": "medium",
+    "pleiades_id": "59700",
+    "pleiades_uri": "https://pleiades.stoa.org/places/59700",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 59700)",
+    "notes": "Mainland region opposite the Gulf of Barygaza, beginning of Mambaro's kingdom."
+  },
+  {
+    "place_key": "aberia",
+    "display_name": "Aberia",
+    "greek_names": [
+      "Ἀβηρία"
+    ],
+    "aliases": [],
+    "place_type": "region",
+    "lat": 26.222011238527823,
+    "lon": 68.70373216215937,
+    "certainty": "medium",
+    "pleiades_id": "59649",
+    "pleiades_uri": "https://pleiades.stoa.org/places/59649",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 59649)",
+    "notes": "Inland region bordering Scythia (section 41)."
+  },
+  {
+    "place_key": "syrastrene",
+    "display_name": "Syrastrene",
+    "greek_names": [
+      "Συραστρηνή"
+    ],
+    "aliases": [
+      "Saurashtra"
+    ],
+    "place_type": "region",
+    "lat": 21.21847095452941,
+    "lon": 70.71643056261146,
+    "certainty": "medium",
+    "pleiades_id": "50291",
+    "pleiades_uri": "https://pleiades.stoa.org/places/50291",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 50291)",
+    "notes": "Coastal region (Saurashtra peninsula) tied to section 41."
+  },
+  {
+    "place_key": "minnagara",
+    "display_name": "Minnagara",
+    "greek_names": [
+      "Μιννάγαρα"
+    ],
+    "aliases": [
+      "Minnagar"
+    ],
+    "place_type": "metropolis",
+    "lat": 22.060829,
+    "lon": 73.075764,
+    "certainty": "medium",
+    "pleiades_id": "59933",
+    "pleiades_uri": "https://pleiades.stoa.org/places/59933",
+    "coordinates_source": "Pleiades reprPoint (cached snapshot 59933)",
+    "notes": "Metropolis of Ariake; cloth source feeding Barygaza (section 41)."
   }
 ]

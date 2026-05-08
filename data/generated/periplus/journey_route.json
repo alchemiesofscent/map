@@ -13,6 +13,8 @@
     "malao",
     "mundu",
     "mosyllon",
+    "ariake",
+    "barygaza",
     "apologos",
     "oraea",
     "sindus_river",
@@ -859,7 +861,7 @@
       "type": "stop",
       "title": "Section 14: trade goods",
       "route_label": "Section 14 of 66 · mapped stop",
-      "focus_place_key": "mosyllon",
+      "focus_place_key": "ariake",
       "section_refs": [
         "section_0014"
       ],
@@ -889,22 +891,22 @@
         {
           "surface": "Ariake",
           "place_key": "ariake",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Ἀριακῆς",
           "place_key": "ariake",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Βαρυγάζων",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         }
       ],
       "goods": [
@@ -923,7 +925,7 @@
       "type": "stop",
       "title": "Section 15: trade goods",
       "route_label": "Section 15 of 66 · mapped stop",
-      "focus_place_key": "mosyllon",
+      "focus_place_key": "ariake",
       "section_refs": [
         "section_0015"
       ],
@@ -1035,7 +1037,7 @@
       "type": "stop",
       "title": "Section 16: trade goods",
       "route_label": "Section 16 of 66 · mapped stop",
-      "focus_place_key": "mosyllon",
+      "focus_place_key": "ariake",
       "section_refs": [
         "section_0016"
       ],
@@ -1350,12 +1352,12 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Βαρυγάζων",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Μούζα",
@@ -1710,7 +1712,7 @@
       "type": "stop",
       "title": "Section 27: trade goods",
       "route_label": "Section 27 of 66 · mapped stop",
-      "focus_place_key": "avalites",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0027"
       ],
@@ -1765,12 +1767,12 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Βαρυγάζων",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Scythia",
@@ -1842,7 +1844,7 @@
       "type": "stop",
       "title": "Section 28: trade goods",
       "route_label": "Section 28 of 66 · mapped stop",
-      "focus_place_key": "avalites",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0028"
       ],
@@ -1923,7 +1925,7 @@
       "type": "stop",
       "title": "Section 29: trade goods",
       "route_label": "Section 29 of 66 · mapped stop",
-      "focus_place_key": "avalites",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0029"
       ],
@@ -1986,7 +1988,7 @@
       "type": "stop",
       "title": "Section 30: trade goods",
       "route_label": "Section 30 of 66 · mapped stop",
-      "focus_place_key": "avalites",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0030"
       ],
@@ -2046,7 +2048,7 @@
       "type": "stop",
       "title": "Section 31: trade goods",
       "route_label": "Section 31 of 66 · mapped stop",
-      "focus_place_key": "avalites",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0031"
       ],
@@ -2076,12 +2078,12 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Βαρυγάζων",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "frankincense-bearing country",
@@ -2136,7 +2138,7 @@
       "type": "stop",
       "title": "Section 32: trade goods",
       "route_label": "Section 32 of 66 · mapped stop",
-      "focus_place_key": "avalites",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0032"
       ],
@@ -2206,12 +2208,12 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Bαρυγάζων",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Omana",
@@ -2231,7 +2233,7 @@
       "type": "stop",
       "title": "Section 33: trade goods",
       "route_label": "Section 33 of 66 · mapped stop",
-      "focus_place_key": "avalites",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0033"
       ],
@@ -2309,11 +2311,11 @@
       ]
     },
     {
-      "step_id": "step_0034_avalites",
+      "step_id": "step_0034_barygaza",
       "type": "stop",
-      "title": "Avalites",
+      "title": "Barygaza",
       "route_label": "Section 34 of 66 · mapped stop",
-      "focus_place_key": "avalites",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0034"
       ],
@@ -2450,7 +2452,7 @@
       "type": "stop",
       "title": "Section 36: trade goods",
       "route_label": "Section 36 of 66 · mapped stop",
-      "focus_place_key": "apologos",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0036"
       ],
@@ -2480,12 +2482,12 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Βαρυγάζων",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Cane",
@@ -2506,6 +2508,11 @@
           "surface": "Ἀραβίαν",
           "place_key": "arabia",
           "kind": "off_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
         },
         {
           "surface": "India",
@@ -2651,12 +2658,12 @@
         },
         {
           "surface": "Minnagar",
-          "place_key": "minnagar",
+          "place_key": "minnagara",
           "kind": "off_route"
         },
         {
           "surface": "Μινναγάρ",
-          "place_key": "minnagar",
+          "place_key": "minnagara",
           "kind": "off_route"
         }
       ],
@@ -2764,11 +2771,16 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Βαρύγαζα",
           "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαράκη",
+          "place_key": "barake",
           "kind": "off_route"
         },
         {
@@ -2781,9 +2793,9 @@
     },
     {
       "step_id": "step_0041_barygaza",
-      "type": "context",
+      "type": "stop",
       "title": "Barygaza",
-      "route_label": "Section 41 of 66 · context",
+      "route_label": "Section 41 of 66 · mapped stop",
       "focus_place_key": "barygaza",
       "section_refs": [
         "section_0041"
@@ -2814,12 +2826,12 @@
         {
           "surface": "Ariake",
           "place_key": "ariake",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Ἀριακῆς χώρας",
           "place_key": "ariake",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Aberia",
@@ -2882,13 +2894,13 @@
           "kind": "off_route"
         },
         {
-          "surface": "Ἀριακῆς",
-          "place_key": "ariake",
+          "surface": "Βαράκη",
+          "place_key": "barake",
           "kind": "off_route"
         },
         {
-          "surface": "Βαρυγάζων",
-          "place_key": "barygaza",
+          "surface": "Minnagar",
+          "place_key": "minnagara",
           "kind": "off_route"
         },
         {
@@ -2905,11 +2917,6 @@
           "surface": "Scythia",
           "place_key": "scythia",
           "kind": "off_route"
-        },
-        {
-          "surface": "Minnagar",
-          "place_key": "minnagar",
-          "kind": "off_route"
         }
       ],
       "goods": [
@@ -2924,9 +2931,9 @@
     },
     {
       "step_id": "step_0042_barygaza",
-      "type": "context",
+      "type": "stop",
       "title": "Barygaza",
-      "route_label": "Section 42 of 66 · context",
+      "route_label": "Section 42 of 66 · mapped stop",
       "focus_place_key": "barygaza",
       "section_refs": [
         "section_0042"
@@ -2978,20 +2985,15 @@
           "surface": "νῆσον",
           "place_key": "island_off_mundu",
           "kind": "off_route"
-        },
-        {
-          "surface": "Βαρυγάζων",
-          "place_key": "barygaza",
-          "kind": "off_route"
         }
       ],
       "goods": []
     },
     {
       "step_id": "step_0043_barygaza",
-      "type": "context",
+      "type": "stop",
       "title": "Barygaza",
-      "route_label": "Section 43 of 66 · context",
+      "route_label": "Section 43 of 66 · mapped stop",
       "focus_place_key": "barygaza",
       "section_refs": [
         "section_0043"
@@ -3059,9 +3061,9 @@
     },
     {
       "step_id": "step_0044_barygaza",
-      "type": "context",
+      "type": "stop",
       "title": "Barygaza",
-      "route_label": "Section 44 of 66 · context",
+      "route_label": "Section 44 of 66 · mapped stop",
       "focus_place_key": "barygaza",
       "section_refs": [
         "section_0044"
@@ -3093,11 +3095,11 @@
       "goods": []
     },
     {
-      "step_id": "step_0045_sindus_river",
+      "step_id": "step_0045_barygaza",
       "type": "stop",
-      "title": "Sindus River",
+      "title": "Barygaza",
       "route_label": "Section 45 of 66 · mapped stop",
-      "focus_place_key": "sindus_river",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0045"
       ],
@@ -3107,12 +3109,7 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
-        },
-        {
-          "surface": "Βαρυγάζων",
-          "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "India",
@@ -3123,11 +3120,11 @@
       "goods": []
     },
     {
-      "step_id": "step_0046_sindus_river",
+      "step_id": "step_0046_barygaza",
       "type": "stop",
-      "title": "Sindus River",
+      "title": "Barygaza",
       "route_label": "Section 46 of 66 · mapped stop",
-      "focus_place_key": "sindus_river",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0046"
       ],
@@ -3137,17 +3134,17 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         }
       ],
       "goods": []
     },
     {
-      "step_id": "step_0047_sindus_river",
+      "step_id": "step_0047_barygaza",
       "type": "stop",
-      "title": "Sindus River",
+      "title": "Barygaza",
       "route_label": "Section 47 of 66 · mapped stop",
-      "focus_place_key": "sindus_river",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0047"
       ],
@@ -3157,7 +3154,7 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Ἀλεξάνδρεια",
@@ -3169,9 +3166,9 @@
     },
     {
       "step_id": "step_0048_barygaza",
-      "type": "context",
+      "type": "stop",
       "title": "Barygaza",
-      "route_label": "Section 48 of 66 · context",
+      "route_label": "Section 48 of 66 · mapped stop",
       "focus_place_key": "barygaza",
       "section_refs": [
         "section_0048"
@@ -3233,9 +3230,9 @@
     },
     {
       "step_id": "step_0049_barygaza",
-      "type": "context",
+      "type": "stop",
       "title": "Barygaza",
-      "route_label": "Section 49 of 66 · context",
+      "route_label": "Section 49 of 66 · mapped stop",
       "focus_place_key": "barygaza",
       "section_refs": [
         "section_0049"
@@ -3296,11 +3293,11 @@
       ]
     },
     {
-      "step_id": "step_0050_sindus_river",
+      "step_id": "step_0050_barygaza",
       "type": "stop",
-      "title": "Sindus River",
+      "title": "Barygaza",
       "route_label": "Section 50 of 66 · mapped stop",
-      "focus_place_key": "sindus_river",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0050"
       ],
@@ -3310,7 +3307,12 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
         },
         {
           "surface": "ἡ χώρα",
@@ -3322,9 +3324,9 @@
     },
     {
       "step_id": "step_0051_barygaza",
-      "type": "context",
+      "type": "stop",
       "title": "Barygaza",
-      "route_label": "Section 51 of 66 · context",
+      "route_label": "Section 51 of 66 · mapped stop",
       "focus_place_key": "barygaza",
       "section_refs": [
         "section_0051"
@@ -3381,11 +3383,6 @@
           "surface": "Λιμυρικῆς",
           "place_key": "limyrike",
           "kind": "off_route"
-        },
-        {
-          "surface": "Βαρυγάζων",
-          "place_key": "barygaza",
-          "kind": "off_route"
         }
       ],
       "goods": [
@@ -3397,9 +3394,9 @@
     },
     {
       "step_id": "step_0052_barygaza",
-      "type": "context",
+      "type": "stop",
       "title": "Barygaza",
-      "route_label": "Section 52 of 66 · context",
+      "route_label": "Section 52 of 66 · mapped stop",
       "focus_place_key": "barygaza",
       "section_refs": [
         "section_0052"
@@ -3691,11 +3688,6 @@
           "surface": "Νέλκυνδα",
           "place_key": "nelkynda",
           "kind": "off_route"
-        },
-        {
-          "surface": "Ἀριακῆς",
-          "place_key": "ariake",
-          "kind": "off_route"
         }
       ],
       "goods": []
@@ -3740,7 +3732,7 @@
       "type": "stop",
       "title": "Section 56: trade goods",
       "route_label": "Section 56 of 66 · mapped stop",
-      "focus_place_key": "sesecrienae_islands",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0056"
       ],
@@ -3760,12 +3752,12 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Βαρυγάζοις",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
         },
         {
           "surface": "Cottonara",
@@ -3831,11 +3823,11 @@
       ]
     },
     {
-      "step_id": "step_0057_sesecrienae_islands",
+      "step_id": "step_0057_barygaza",
       "type": "stop",
-      "title": "Sesecrienae Islands",
+      "title": "Barygaza",
       "route_label": "Section 57 of 66 · mapped stop",
-      "focus_place_key": "sesecrienae_islands",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0057"
       ],
@@ -3845,7 +3837,12 @@
         {
           "surface": "Barygaza",
           "place_key": "barygaza",
-          "kind": "off_route"
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
         },
         {
           "surface": "Scythia",
@@ -3865,7 +3862,7 @@
       "type": "stop",
       "title": "Section 58: trade goods",
       "route_label": "Section 58 of 66 · mapped stop",
-      "focus_place_key": "sesecrienae_islands",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0058"
       ],
@@ -3932,7 +3929,7 @@
       "type": "stop",
       "title": "Section 59: trade goods",
       "route_label": "Section 59 of 66 · mapped stop",
-      "focus_place_key": "sesecrienae_islands",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0059"
       ],
@@ -3981,11 +3978,11 @@
       ]
     },
     {
-      "step_id": "step_0060_sesecrienae_islands",
+      "step_id": "step_0060_barygaza",
       "type": "stop",
-      "title": "Sesecrienae Islands",
+      "title": "Barygaza",
       "route_label": "Section 60 of 66 · mapped stop",
-      "focus_place_key": "sesecrienae_islands",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0060"
       ],
@@ -4060,7 +4057,7 @@
       "type": "stop",
       "title": "Section 61: trade goods",
       "route_label": "Section 61 of 66 · mapped stop",
-      "focus_place_key": "sesecrienae_islands",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0061"
       ],
@@ -4105,7 +4102,7 @@
       "type": "stop",
       "title": "Section 62: trade goods",
       "route_label": "Section 62 of 66 · mapped stop",
-      "focus_place_key": "sesecrienae_islands",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0062"
       ],
@@ -4143,7 +4140,7 @@
       "type": "stop",
       "title": "Section 63: trade goods",
       "route_label": "Section 63 of 66 · mapped stop",
-      "focus_place_key": "sesecrienae_islands",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0063"
       ],
@@ -4187,9 +4184,9 @@
     },
     {
       "step_id": "step_0064_barygaza",
-      "type": "context",
+      "type": "stop",
       "title": "Barygaza",
-      "route_label": "Section 64 of 66 · context",
+      "route_label": "Section 64 of 66 · mapped stop",
       "focus_place_key": "barygaza",
       "section_refs": [
         "section_0064"
@@ -4264,7 +4261,7 @@
       "type": "stop",
       "title": "Section 65: trade goods",
       "route_label": "Section 65 of 66 · mapped stop",
-      "focus_place_key": "sesecrienae_islands",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0065"
       ],
@@ -4299,11 +4296,11 @@
       ]
     },
     {
-      "step_id": "step_0066_sesecrienae_islands",
+      "step_id": "step_0066_barygaza",
       "type": "stop",
-      "title": "Sesecrienae Islands",
+      "title": "Barygaza",
       "route_label": "Section 66 of 66 · mapped stop",
-      "focus_place_key": "sesecrienae_islands",
+      "focus_place_key": "barygaza",
       "section_refs": [
         "section_0066"
       ],
@@ -4406,6 +4403,18 @@
     },
     {
       "from_place_key": "mosyllon",
+      "to_place_key": "ariake",
+      "section_refs": [
+        "section_0011"
+      ],
+      "distance_text": "two runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "ariake",
       "to_place_key": "adulis",
       "section_refs": [
         "section_0016"
@@ -4454,6 +4463,18 @@
     },
     {
       "from_place_key": "avalites",
+      "to_place_key": "barygaza",
+      "section_refs": [
+        "section_0019"
+      ],
+      "distance_text": "two or three runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "barygaza",
       "to_place_key": "apologos",
       "section_refs": [
         "section_0019"
@@ -4466,6 +4487,18 @@
     },
     {
       "from_place_key": "apologos",
+      "to_place_key": "barygaza",
+      "section_refs": [
+        "section_0019"
+      ],
+      "distance_text": "two or three runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "barygaza",
       "to_place_key": "oraea",
       "section_refs": [
         "section_0019"
@@ -4490,7 +4523,31 @@
     },
     {
       "from_place_key": "sindus_river",
+      "to_place_key": "barygaza",
+      "section_refs": [
+        "section_0019"
+      ],
+      "distance_text": "two or three runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "barygaza",
       "to_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0019"
+      ],
+      "distance_text": "two or three runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "sesecrienae_islands",
+      "to_place_key": "barygaza",
       "section_refs": [
         "section_0019"
       ],
