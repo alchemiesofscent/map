@@ -492,27 +492,49 @@ function setExploreMode(on) {
 }
 
 function bindInputs() {
-  // Wheel: throttled step advance.
-  window.addEventListener("wheel", (e) => {
-    if (state.exploreMode) return;
-    if (Math.abs(e.deltaY) < 4 && Math.abs(e.deltaX) < 4) return;
-    e.preventDefault();
-    const now = performance.now();
-    if (now < state.cooldownUntil) return;
-    if (now - state.wheelLast > 220) state.wheelAccum = 0;
-    state.wheelAccum += e.deltaY + e.deltaX;
-    state.wheelLast = now;
-    const threshold = 30;
-    if (state.wheelAccum > threshold) {
-      next();
-      state.wheelAccum = 0;
-      state.cooldownUntil = now + 520;
-    } else if (state.wheelAccum < -threshold) {
-      prev();
-      state.wheelAccum = 0;
-      state.cooldownUntil = now + 520;
-    }
-  }, { passive: false });
+  // Wheel: deliberate step advance. The handler:
+  //   1. Lets wheel events inside the dossier scroll its body natively.
+  //   2. Requires a "fresh" gesture (>= QUIET_MS of silence) before counting.
+  //   3. Accumulates delta until THRESHOLD is crossed, then fires once and
+  //      locks. Inertial trail keeps `lastWheel` updated, so the lock holds
+  //      until the user actually stops scrolling.
+  const QUIET_MS = 280;
+  const COOLDOWN_MS = 850;
+  const THRESHOLD = 90;
+
+  window.addEventListener(
+    "wheel",
+    (e) => {
+      if (state.exploreMode) return;
+      const target = e.target;
+      if (target && target.closest && target.closest(".dossier")) {
+        // Native scroll inside the reading panel; do not navigate.
+        return;
+      }
+      e.preventDefault();
+      const now = performance.now();
+      const sincePrev = now - state.wheelLast;
+      state.wheelLast = now;
+
+      if (now < state.cooldownUntil) return;
+      if (sincePrev > QUIET_MS) state.wheelAccum = 0;
+
+      const delta =
+        Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+      state.wheelAccum += delta;
+
+      if (state.wheelAccum > THRESHOLD) {
+        next();
+        state.wheelAccum = 0;
+        state.cooldownUntil = now + COOLDOWN_MS;
+      } else if (state.wheelAccum < -THRESHOLD) {
+        prev();
+        state.wheelAccum = 0;
+        state.cooldownUntil = now + COOLDOWN_MS;
+      }
+    },
+    { passive: false },
+  );
 
   // Keyboard.
   window.addEventListener("keydown", (e) => {
@@ -550,9 +572,15 @@ function bindInputs() {
     }
   });
 
-  // Touch swipes.
+  // Touch swipes — but never on the dossier itself, where scrolling the
+  // reading panel must remain native.
   window.addEventListener("touchstart", (e) => {
     if (state.exploreMode) return;
+    const target = e.target;
+    if (target && target.closest && target.closest(".dossier")) {
+      state.touchStartX = state.touchStartY = null;
+      return;
+    }
     const t = e.touches[0];
     state.touchStartX = t.clientX;
     state.touchStartY = t.clientY;
@@ -567,7 +595,7 @@ function bindInputs() {
     state.touchStartX = state.touchStartY = null;
     const absX = Math.abs(dx);
     const absY = Math.abs(dy);
-    if (Math.max(absX, absY) < 40) return;
+    if (Math.max(absX, absY) < 60) return;
     if (absX > absY) {
       if (dx < 0) next();
       else prev();

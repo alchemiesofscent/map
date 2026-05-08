@@ -316,8 +316,8 @@ body::after {
   left: 28px;
   bottom: 72px;
   z-index: 6;
-  width: min(420px, calc(100vw - 56px));
-  max-height: calc(100vh - 240px);
+  width: min(500px, calc(100vw - 56px));
+  max-height: calc(100vh - 220px);
   background: var(--dossier-bg);
   backdrop-filter: blur(16px) saturate(1.4);
   -webkit-backdrop-filter: blur(16px) saturate(1.4);
@@ -330,7 +330,7 @@ body::after {
 }
 
 .dossier__inner {
-  padding: 22px 28px 20px;
+  padding: 26px 32px 22px;
   position: relative;
   min-width: 0;
 }
@@ -395,8 +395,9 @@ body::after {
 
 .dossier__body {
   position: relative;
-  max-height: 30vh;
+  max-height: 46vh;
   overflow-y: auto;
+  overscroll-behavior: contain;
   scrollbar-width: thin;
   scrollbar-color: var(--rule) transparent;
 }
@@ -410,8 +411,8 @@ body::after {
 .dossier__translation {
   margin: 0;
   font-family: var(--serif);
-  font-size: 17px;
-  line-height: 1.55;
+  font-size: 18px;
+  line-height: 1.6;
   color: var(--vellum);
   transition: opacity 320ms ease;
 }
@@ -455,8 +456,8 @@ body::after {
 .dossier__greek-text {
   margin: 10px 0 0;
   font-family: var(--display);
-  font-size: 15.5px;
-  line-height: 1.65;
+  font-size: 16.5px;
+  line-height: 1.7;
   color: var(--vellum-muted);
   letter-spacing: 0.01em;
 }
