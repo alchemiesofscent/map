@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Periplus · Atlas Viewer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQfZkG8Lk4eCw6tGEaZxEECz7oI4xNQ="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="../scrollytelling-viewer/vendor/leaflet-fallback.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-explore="false">
+    <div id="map" role="application" aria-label="Periplus route map"></div>
+
+    <header class="masthead" aria-label="Title">
+      <div class="masthead__rule"></div>
+      <p class="masthead__series">Periplus Tour · Atlas prototype</p>
+      <h1 class="masthead__title">
+        <span>Periplvs</span>
+        <span class="masthead__title-sep">·</span>
+        <span>Maris Erythraei</span>
+      </h1>
+      <p class="masthead__counter" aria-live="polite">
+        <span id="counter-roman">—</span>
+        <span class="masthead__counter-of">of</span>
+        <span id="counter-total">—</span>
+      </p>
+    </header>
+
+    <div class="view-control" role="group" aria-label="Route view">
+      <button type="button" data-view="all" aria-pressed="true">All</button>
+      <button type="button" data-view="western" aria-pressed="false">Occidens</button>
+      <button type="button" data-view="eastern" aria-pressed="false">Oriens</button>
+      <span class="view-control__divider" aria-hidden="true"></span>
+      <label class="view-control__explore">
+        <input type="checkbox" id="toggle-explore" />
+        <span>Explore map</span>
+      </label>
+    </div>
+
+    <button class="hint" id="hint-banner" type="button" aria-label="Dismiss hint">
+      <span class="hint__keys">
+        <kbd>↑</kbd><kbd>↓</kbd>
+        <span class="hint__or">or</span>
+        <span class="hint__scroll">scroll</span>
+        <span class="hint__or">·</span>
+        click sites on the map
+      </span>
+    </button>
+
+    <aside class="dossier" aria-live="polite" aria-label="Active site">
+      <div class="dossier__inner">
+        <div class="dossier__top">
+          <p class="dossier__eyebrow">
+            <span id="dossier-route">—</span>
+            <span class="dossier__sep" aria-hidden="true">·</span>
+            <span id="dossier-type">—</span>
+            <span class="dossier__sep" aria-hidden="true">·</span>
+            <span id="dossier-section">—</span>
+          </p>
+          <h2 class="dossier__title" id="dossier-title">—</h2>
+          <p class="dossier__greek-name" id="dossier-greek-name" lang="grc"></p>
+        </div>
+
+        <div class="dossier__body">
+          <p class="dossier__translation" id="dossier-translation"></p>
+          <details class="dossier__greek" id="dossier-greek-block">
+            <summary>
+              <span class="dossier__eyebrow dossier__eyebrow--inline">Greek source</span>
+            </summary>
+            <p class="dossier__greek-text" id="dossier-greek" lang="grc"></p>
+          </details>
+        </div>
+
+        <div class="dossier__foot">
+          <span class="dossier__source" id="dossier-source"></span>
+          <a class="dossier__link" id="dossier-pleiades" href="#" target="_blank" rel="noreferrer" hidden>Pleiades ↗</a>
+        </div>
+      </div>
+
+      <div class="dossier__nav" aria-label="Step navigation">
+        <button type="button" id="prev-step" aria-label="Previous site">
+          <span aria-hidden="true">‹</span>
+        </button>
+        <button type="button" id="next-step" aria-label="Next site">
+          <span aria-hidden="true">›</span>
+        </button>
+      </div>
+    </aside>
+
+    <nav class="strip" aria-label="Site strip">
+      <div class="strip__legend">
+        <span class="strip__swatch strip__swatch--sea"></span>
+        <span class="strip__legend-label">Sea</span>
+        <span class="strip__swatch strip__swatch--land"></span>
+        <span class="strip__legend-label">Caravan</span>
+      </div>
+      <div class="strip__rail" id="strip-rail" role="listbox" aria-label="Sites in route order"></div>
+    </nav>
+
+    <noscript>
+      <p style="color: #f4ead5; padding: 2rem; font-family: 'EB Garamond', serif;">
+        This viewer requires JavaScript.
+      </p>
+    </noscript>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="viewer.js"></script>
+  </body>
+</html>
