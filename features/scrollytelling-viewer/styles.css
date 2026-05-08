@@ -225,6 +225,43 @@ button {
   font-size: 1.08rem;
 }
 
+.route-view-control {
+  display: inline-grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.25rem;
+  width: min(100%, 25rem);
+  margin: 0 0 1rem;
+  padding: 0.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: rgba(255, 255, 255, 0.045);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.route-view-control button {
+  min-width: 0;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid transparent;
+  border-radius: 0.35rem;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.route-view-control button:hover,
+.route-view-control button:focus-visible {
+  color: var(--ink);
+  border-color: var(--line);
+  outline: none;
+}
+
+.route-view-control button.active {
+  color: var(--paper);
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
 .story-steps {
   position: relative;
 }
@@ -282,6 +319,57 @@ button {
   margin: 0.3rem 0 0.4rem;
   font-size: clamp(1.55rem, 3vw, 2.4rem);
   line-height: 1.05;
+}
+
+.route-context {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.85rem;
+}
+
+.focus-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2rem;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.focus-chip:hover,
+.focus-chip:focus-visible {
+  border-color: var(--line-strong);
+  color: var(--ink);
+  outline: none;
+}
+
+.focus-chip.active {
+  border-color: var(--accent);
+  background: var(--accent-low);
+  color: var(--ink);
+  box-shadow: 0 0 0 1px rgba(240, 195, 106, 0.18);
+}
+
+.focus-chip__status {
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .reading-block {
@@ -366,6 +454,56 @@ button {
   border-bottom-style: dotted;
 }
 
+.step-nav {
+  position: sticky;
+  bottom: 1rem;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 2.4rem minmax(4.5rem, auto) 2.4rem;
+  gap: 0.35rem;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin: 2rem auto 0;
+  padding: 0.35rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(7, 16, 21, 0.84);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(14px);
+}
+
+.step-nav button {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.055);
+  color: var(--ink);
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.step-nav button:hover,
+.step-nav button:focus-visible {
+  border-color: var(--line-strong);
+  color: var(--accent);
+  outline: none;
+}
+
+.step-nav button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.step-nav span {
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 .feature-footer {
   padding: 1.5rem clamp(1rem, 4vw, 3rem);
   border-top: 1px solid var(--line);
@@ -403,6 +541,54 @@ button {
 
 .sail-dot {
   filter: drop-shadow(0 0 10px rgba(240, 195, 106, 0.9));
+}
+
+.route-pin-icon,
+.offroute-pin-icon {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.route-pin__dot,
+.offroute-pin__dot {
+  display: block;
+  border-radius: 50%;
+  pointer-events: auto;
+}
+
+.route-pin__dot {
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 3px solid #0d1820;
+  background: #e7eef0;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.84),
+    0 8px 18px rgba(0, 0, 0, 0.36);
+}
+
+.route-pin-icon--active .route-pin__dot {
+  border-color: #071015;
+  background: var(--accent);
+  box-shadow:
+    0 0 0 3px rgba(240, 195, 106, 0.42),
+    0 0 18px rgba(240, 195, 106, 0.86),
+    0 10px 22px rgba(0, 0, 0, 0.42);
+}
+
+.route-pin-icon:hover .route-pin__dot,
+.route-pin-icon:focus .route-pin__dot,
+.offroute-pin-icon:hover .offroute-pin__dot,
+.offroute-pin-icon:focus .offroute-pin__dot {
+  transform: scale(1.16);
+}
+
+.offroute-pin__dot {
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 2px dashed var(--land);
+  background: #132f36;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
 .popup-title {

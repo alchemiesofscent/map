@@ -1,8 +1,16 @@
 # Scrollytelling viewer feature
 
-A standalone, route-first scroll-driven viewer of generated 10-section passes through the *Periplus of the Erythraean Sea*.
+A standalone, route-first scroll-driven viewer of generated passes through the *Periplus of the Erythraean Sea*.
 
-The current generated payload covers sections 1-10. Each section is a scroll step with full English translation, Greek text, and linked place names. Places with curated authority records or provisional Google My Maps coordinates can focus the map; off-route places can focus their own markers but never change the main route line.
+The current generated payload covers sections 1-66. Each section is a scroll step with full English translation, Greek text, and linked place names. Places with curated authority records, provisional Google My Maps coordinates, or reviewed visual-coordinate decisions can focus the map; off-route places can focus their own markers but never change the main route line.
+
+The viewer has three selectable reading/map views:
+
+- **All**: sections 1-66 with both western and eastern route sites.
+- **Western**: sections 1-18 with western route sites.
+- **Eastern**: sections 19-66 with eastern route sites.
+
+Forward/back buttons and the keyboard Left/Right arrows move only within the selected view.
 
 ## Data files used
 
@@ -11,6 +19,7 @@ Generated:
 - `../../data/generated/periplus/places_authority.json` — curated starter authority plus generated candidates.
 - `../../data/generated/periplus/raw_sections.json` — Greek text, translation, and parsed entities for the active section pass.
 - `../../data/generated/periplus/journey_route.json` — defines `main_route_place_keys`, `steps`, `legs`, and per-step `place_mentions`.
+- `../../data/generated/periplus/route_views.json` — selectable route-view contract built from the reviewed webmap scrape.
 
 Reference:
 
@@ -25,7 +34,9 @@ From the repository root:
 
 ```bash
 python3 scripts/check_data.py
-python3 scripts/ingest_tour_chunk.py --start 1 --count 10
+python3 scripts/ingest_tour_chunk.py --start 1 --count 66
+python3 scripts/apply_place_review_decisions.py --max-section 66
+python3 scripts/build_route_views.py
 python3 scripts/check_generated_tour.py
 python3 scripts/export_geojson.py
 node --check features/scrollytelling-viewer/scrolly.js
@@ -52,6 +63,8 @@ Short version: the route-first interaction is the whole point of this prototype,
 
 The generator reads Greek from `texts.csv` and emits it into both `raw_sections.json` and the scrollytelling `steps`. Greek and English share the same `place_mentions` list; the viewer links only surfaces that actually appear in each panel.
 
+Route ordering comes from `data/review/periplus_sites_webmap_scrape.json`, transformed by `scripts/build_route_views.py` into `route_views.json`. The scrape controls route membership and route-site order; `texts.csv` and `translations.csv` remain the source for the full Greek and English reading windows.
+
 ## Place-link interaction
 
 The translation (and Greek, when present) is HTML-escaped first, then linked via `linkifyText` using `<button class="place-link" data-place-key="…">` rather than raw anchors. Mentions are sorted by descending surface length so longer forms ("Ptolemais of the Hunts") win over shorter substrings, and a substring is never double-linked.
@@ -67,11 +80,12 @@ The current scroll step is **not** changed by clicking a place link.
 
 ## Map behavior
 
-- Main route line drawn only from `journey_route.sample.json` legs.
-- Solid line for `text_explicit` legs; dashed line for `inferred_from_sequence`.
-- Active step highlights its focus marker and the leg leading into it.
+- Main route markers are drawn from the selected `route_views.json` view, not from generated `main_route_place_keys`.
+- Route lines are quiet sequence guides only. They are no longer animated as sailing tracks, and inland/metropolis sites are omitted from line drawing so the UI does not imply a ship is sailing across land.
+- Active step highlights its route marker. Clicking a route marker opens its popup and scrolls to the relevant source section when that section is in the current view.
 - Off-route mapped places appear as smaller dashed markers, never connected to the route.
 - Unmapped off-route places appear only in the text and the off-route status panel.
+- Route-view sites with null geometry, currently `Akabaru`, `Khrusē Island`, and `Thina`, remain in route metadata/status but do not draw markers or polyline points. When such a site is active, the map remains on the nearest previous mapped route site and shows an unmapped-route note.
 - No goods or movement overlays.
 
 ## Leaflet tile alignment

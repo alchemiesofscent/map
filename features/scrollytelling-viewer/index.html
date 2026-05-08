@@ -19,7 +19,7 @@
         <p class="eyebrow">Periplus Tour MVP · feature prototype</p>
         <h1>Scroll the sailor's route</h1>
         <p class="dek">
-          A route-first viewer of the generated 10-section pass through the <em>Periplus of the Erythraean Sea</em>, with Greek, English, linked places, and provisional review markers.
+          A route-first viewer of the generated 66-section pass through the <em>Periplus of the Erythraean Sea</em>, with Greek, English, linked places, and reviewed route ordering.
         </p>
       </div>
       <nav aria-label="Prototype navigation">
@@ -38,7 +38,7 @@
           <p id="active-route-label">Preparing the route data.</p>
 
           <div class="off-route-status" id="off-route-status" hidden>
-            <p class="eyebrow">Off route</p>
+            <p class="eyebrow" id="route-status-kicker">Off route</p>
             <p id="off-route-name">—</p>
             <p class="off-route-note" id="off-route-note"></p>
             <button type="button" id="off-route-clear">Clear</button>
@@ -58,11 +58,21 @@
         <article class="story-intro">
           <p class="eyebrow">Guided reading</p>
           <h2>Move through the route by scrolling.</h2>
+          <div class="route-view-control" aria-label="Route view">
+            <button type="button" class="active" data-route-view="all" aria-pressed="true">All</button>
+            <button type="button" data-route-view="western" aria-pressed="false">Western</button>
+            <button type="button" data-route-view="eastern" aria-pressed="false">Eastern</button>
+          </div>
           <p>
             Each card is one source section. Click any underlined place name to focus the map; off-route places do not change the main route line.
           </p>
         </article>
         <div id="story-steps" class="story-steps"></div>
+        <nav class="step-nav" aria-label="Section navigation">
+          <button type="button" id="nav-previous-step" aria-label="Previous section">‹</button>
+          <span id="step-count">0 / 0</span>
+          <button type="button" id="nav-next-step" aria-label="Next section">›</button>
+        </nav>
       </section>
     </main>
 
