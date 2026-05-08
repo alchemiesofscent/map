@@ -1,8 +1,8 @@
 {
-  "route_title": "Periplus of the Erythraean Sea: generated sections 1-10",
+  "route_title": "Periplus of the Erythraean Sea: generated sections 1-66",
   "source_range": {
     "start_section": 1,
-    "end_section": 10
+    "end_section": 66
   },
   "main_route_place_keys": [
     "myos_hormos",
@@ -12,14 +12,18 @@
     "avalites",
     "malao",
     "mundu",
-    "mosyllon"
+    "mosyllon",
+    "apologos",
+    "oraea",
+    "sindus_river",
+    "sesecrienae_islands"
   ],
   "steps": [
     {
       "step_id": "step_0001_myos_hormos",
       "type": "stop",
       "title": "Myos Hormos",
-      "route_label": "Section 1 of 10 · mapped stop",
+      "route_label": "Section 1 of 66 · mapped stop",
       "focus_place_key": "myos_hormos",
       "section_refs": [
         "section_0001"
@@ -49,7 +53,7 @@
       "step_id": "step_0002_berenike",
       "type": "stop",
       "title": "Berenike",
-      "route_label": "Section 2 of 10 · mapped stop",
+      "route_label": "Section 2 of 66 · mapped stop",
       "focus_place_key": "berenike",
       "section_refs": [
         "section_0002"
@@ -94,7 +98,7 @@
       "step_id": "step_0003_ptolemais_of_the_hunts",
       "type": "stop",
       "title": "Ptolemais of the Hunts",
-      "route_label": "Section 3 of 10 · mapped stop",
+      "route_label": "Section 3 of 66 · mapped stop",
       "focus_place_key": "ptolemais_theron",
       "section_refs": [
         "section_0003"
@@ -149,7 +153,7 @@
       "step_id": "step_0004_adulis",
       "type": "stop",
       "title": "Adulis",
-      "route_label": "Section 4 of 10 · mapped stop",
+      "route_label": "Section 4 of 66 · mapped stop",
       "focus_place_key": "adulis",
       "section_refs": [
         "section_0004"
@@ -278,7 +282,7 @@
       "step_id": "step_0005_section_5_trade_goods",
       "type": "stop",
       "title": "Section 5: trade goods",
-      "route_label": "Section 5 of 10 · mapped stop",
+      "route_label": "Section 5 of 66 · mapped stop",
       "focus_place_key": "adulis",
       "section_refs": [
         "section_0005"
@@ -320,7 +324,7 @@
       "step_id": "step_0006_adulis",
       "type": "stop",
       "title": "Adulis",
-      "route_label": "Section 6 of 10 · mapped stop",
+      "route_label": "Section 6 of 66 · mapped stop",
       "focus_place_key": "adulis",
       "section_refs": [
         "section_0006"
@@ -415,7 +419,7 @@
       "step_id": "step_0007_avalites",
       "type": "stop",
       "title": "Avalites",
-      "route_label": "Section 7 of 10 · mapped stop",
+      "route_label": "Section 7 of 66 · mapped stop",
       "focus_place_key": "avalites",
       "section_refs": [
         "section_0007"
@@ -501,7 +505,7 @@
       "step_id": "step_0008_malao",
       "type": "stop",
       "title": "Malao",
-      "route_label": "Section 8 of 10 · mapped stop",
+      "route_label": "Section 8 of 66 · mapped stop",
       "focus_place_key": "malao",
       "section_refs": [
         "section_0008"
@@ -562,7 +566,7 @@
       "step_id": "step_0009_mundu",
       "type": "stop",
       "title": "Mundu",
-      "route_label": "Section 9 of 10 · mapped stop",
+      "route_label": "Section 9 of 66 · mapped stop",
       "focus_place_key": "mundu",
       "section_refs": [
         "section_0009"
@@ -611,7 +615,7 @@
       "step_id": "step_0010_mosyllon",
       "type": "stop",
       "title": "Mosyllon",
-      "route_label": "Section 10 of 10 · mapped stop",
+      "route_label": "Section 10 of 66 · mapped stop",
       "focus_place_key": "mosyllon",
       "section_refs": [
         "section_0010"
@@ -654,6 +658,3665 @@
         "ivory",
         "myrrh"
       ]
+    },
+    {
+      "step_id": "step_0011_section_11_trade_goods",
+      "type": "stop",
+      "title": "Section 11: trade goods",
+      "route_label": "Section 11 of 66 · mapped stop",
+      "focus_place_key": "mosyllon",
+      "section_refs": [
+        "section_0011"
+      ],
+      "translation": "After Mosyllon, two runs farther, one sails past the place called Neiloptolemaion, Tapatage, and a small laurel-grove to Cape Elephant. It has the river called Elephant and the large laurel-grove called Akannai, where far-side frankincense alone grows in the greatest and best quantity.",
+      "greek_text": "11. Ἀπὸ δὲ τοῦ Μοσύλλου μετὰ δύο δρόμους, παραπλεύσαντι τὸ λεγόμενον Νειλοπτολεμαῖον καὶ ταπατηγη καὶ δαφνῶνα μικρὸν, ἀκρωτήριον Ἐλέφας· ποταμὸν δʼ ἔχει τὸν λεγόμενον Ἐλέφαντα καὶ δαφνῶνα μέγαν λεγόμενον Ἀκάνναι, ἐν ᾗ μονογενῶς λίβανος ὁ περατικὸς πλεῖστος καὶ διάφορος γίνεται.",
+      "place_mentions": [
+        {
+          "surface": "Mosyllon",
+          "place_key": "mosyllon",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Μοσύλλου",
+          "place_key": "mosyllon",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Neiloptolemaion",
+          "place_key": "neiloptolemaion",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Νειλοπτολεμαῖον",
+          "place_key": "neiloptolemaion",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Tapatage",
+          "place_key": "tapatage",
+          "kind": "off_route"
+        },
+        {
+          "surface": "ταπατηγη",
+          "place_key": "tapatage",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Cape Elephant",
+          "place_key": "cape_elephant",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἐλέφας",
+          "place_key": "cape_elephant",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Elephant River",
+          "place_key": "elephant_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἐλέφαντα",
+          "place_key": "elephant_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Akannai",
+          "place_key": "akannai",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀκάνναι",
+          "place_key": "akannai",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "far-side frankincense"
+      ]
+    },
+    {
+      "step_id": "step_0012_section_12_trade_goods",
+      "type": "stop",
+      "title": "Section 12: trade goods",
+      "route_label": "Section 12 of 66 · mapped stop",
+      "focus_place_key": "mosyllon",
+      "section_refs": [
+        "section_0012"
+      ],
+      "translation": "After this, as the coast now turns south, lies the last Aromata trading station and cape of the Barbarian mainland toward the east. Its roadstead is rough and seasonally dangerous in the north wind; when local signs of bad weather appear, sailors withdraw to the great cape and shelter called Tabae. The same previously mentioned wares reach the emporium, and cassia, gizeir, asypha, aromatics, magla, moto, and frankincense are produced there.",
+      "greek_text": "12. Καὶ μετὰ ταύτην, τῆς γῆς ὑποχωρούσης εἰς τὸν νότον ἤδη, τὸ τῶν Ἀρωμάτων ἐμπόριον καὶ ἀκρωτήριον τελευταῖον τῆς Βαρβαρικῆς ἠπείρου πρὸς ἀνατολὴν ἀπόκοπον· ὁ δὲ ὅρμος ἐπίσαλος καὶ κατὰ καιροὺς ἐπικίνδωνος διὰ τὸ προσεχῆ τὸν τόπον εἶναι τῷ βορέᾳ. Σημεῖον δὲ τοῦ μέλλοντος χειμῶνος τοπικὸν τὸ τὸν βυθὸν θολερώτερον γίνεσθαι καὶ τὴν χρόαν ἀλλάσσειν. Τούτου δὲ γενομένου πάντες ἀποφεύγουσιν εἰς τὸ μέγα ἀκρωτήριον, τόπον καὶ σκέπην, τὸ λεγόμενον προχωρεῖ εἶτα εἰς λίβα ἡ χώρα ποταμοὺς ἔχεικτλ. Τέβαι. Προχωρεῖ δὲ εἰς τὸ ἐμπόριον ὁμοίως τὰ προειρημένα· γίνεται δὲ τὰ ἐν αὐτῷ κασσία καὶ γίζειρ καὶ ἀσύφη καὶ ἄρωμα καὶ μάγλα καὶ μοτὼ καὶ λίβανος.",
+      "place_mentions": [
+        {
+          "surface": "Aromata emporium",
+          "place_key": "aromata_emporium",
+          "kind": "off_route"
+        },
+        {
+          "surface": "τὸ τῶν Ἀρωμάτων ἐμπόριον",
+          "place_key": "aromata_emporium",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aromata cape",
+          "place_key": "aromata_cape",
+          "kind": "off_route"
+        },
+        {
+          "surface": "ἀκρωτήριον",
+          "place_key": "aromata_cape",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barbarian mainland",
+          "place_key": "barbarian_mainland",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρβαρικῆς ἠπείρου",
+          "place_key": "barbarian_mainland",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Tabae",
+          "place_key": "tabae",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Τέβαι",
+          "place_key": "tabae",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barbaria",
+          "place_key": "barbaria",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "cassia",
+        "gizeir",
+        "asypha",
+        "aromatics",
+        "magla",
+        "moto",
+        "frankincense"
+      ]
+    },
+    {
+      "step_id": "step_0013_section_13_trade_goods",
+      "type": "stop",
+      "title": "Section 13: trade goods",
+      "route_label": "Section 13 of 66 · mapped stop",
+      "focus_place_key": "mosyllon",
+      "section_refs": [
+        "section_0013"
+      ],
+      "translation": "From Tabae, after sailing four hundred stades around a peninsula where the current draws, there is another emporium, Opone. The previously mentioned wares reach it too, and especially cassia, aromatics, moto, and a very large and distinctive supply of tortoise-shell are produced there. The passage also mentions better enslaved persons going especially to Egypt, but they are not treated here as goods or materials.",
+      "greek_text": "13. Ἀπὸ δὲ Τάβαι μετὰ σταδίους τετρακοσίους παραπλεύσαντι χερσόνησον, καθʼ ὃν τόπον καὶ ὁ ῥοῦς ἕλκει, ἕτερόν ἐστιν ἐμπόριον Ὀπώνη, εἰς ἣν καὶ αὐτὴν προχωρεῖ μὲν τὰ προειρημένα, τὸ δὲ πλεῖστον ἐν αὐτῇ γεννᾶται κασσία καὶ ἄρωμα καὶ μοτὼ καὶ δουλικὰ κρείσσονα, ἃ εἰς Aἴγυπτον προχωρεῖ μᾶλλον, καὶ χελώνη πλείστη καὶ διαφορωτέρα τῆς ἄλλης.",
+      "place_mentions": [
+        {
+          "surface": "Tabae",
+          "place_key": "tabae",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Τάβαι",
+          "place_key": "tabae",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Opone",
+          "place_key": "opone",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὀπώνη",
+          "place_key": "opone",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aἴγυπτον",
+          "place_key": "egypt",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "cassia",
+        "aromatics",
+        "moto",
+        "tortoise-shell"
+      ]
+    },
+    {
+      "step_id": "step_0014_section_14_trade_goods",
+      "type": "stop",
+      "title": "Section 14: trade goods",
+      "route_label": "Section 14 of 66 · mapped stop",
+      "focus_place_key": "mosyllon",
+      "section_refs": [
+        "section_0014"
+      ],
+      "translation": "Sailings to all these overseas emporia are made from Egypt around July, the month Epiphi. Outfitting also normally comes from the inland places, Ariake and Barygaza, carrying to the same overseas emporia wheat, rice, butter, sesame oil, cotton cloth of the monache and sagmatogene kinds, girdles, and sugarcane honey called sugar. Some sail directly to these emporia, while others exchange any cargoes encountered during the coasting voyage. The area is not under one king but is governed by local rulers at each emporium.",
+      "greek_text": "14. Πλεῖται δὲ εἰς πάντα ταῦτα τὰ τοῦ πέραν ἐμπόρια ἀπὸ μὲν Αἰγύπτου περὶ τὸν Ἰούλιον μῆνα, ὅ ἐστιν Ἐπιφί. Ἐξαρτίζεται δὲ συνήθως καὶ ἀπὸ τῶν ἔσω τόπων, τῆς Ἀριακῆς καὶ Βαρυγάζων, εἰς τὰ αὐτὰ τὰ τοῦ πέραν ἐμπόρια γένη προχωροῦντα ἀπὸ τῶν τόπων, σῖτος καὶ ὄρυζα καὶ βούτυρον καὶ ἔλαιον σησάμινον καὶ ὀθόνιον, ἥ τε μοναχὴ καὶ ἡ σαγματογήνη, καὶ περιζώματα καὶ μέλι τὸ καλάμινον τὸ λεγόμενον σάκχαρι. Καὶοἱ μὲν προηγουμένως εἰς ταῦτα τὰ ἐμπόρια πλέουσιν, οἱ δὲ κατὰ τὸν παράπλουν ἀντιφορτίζονται τὰ ἐμπεσόντα. Οὐ βασιλεύεται δὲ ὁ τόπος, ἀλλὰ τυράννοις ἰδίοις καθʼ ἕκαστον ἐμπόριον διοικεῖται.",
+      "place_mentions": [
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Αἰγύπτου",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "overseas emporia",
+          "place_key": "overseas_emporia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "τὰ τοῦ πέραν ἐμπόρια",
+          "place_key": "overseas_emporia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ariake",
+          "place_key": "ariake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀριακῆς",
+          "place_key": "ariake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "wheat",
+        "rice",
+        "butter",
+        "sesame oil",
+        "cotton cloth, monache type",
+        "cotton cloth, sagmatogene type",
+        "girdles",
+        "sugarcane honey called sugar"
+      ]
+    },
+    {
+      "step_id": "step_0015_section_15_trade_goods",
+      "type": "stop",
+      "title": "Section 15: trade goods",
+      "route_label": "Section 15 of 66 · mapped stop",
+      "focus_place_key": "mosyllon",
+      "section_refs": [
+        "section_0015"
+      ],
+      "translation": "From Opone the coast turns farther south through the Little and Great Bluffs of Azania, beaches, Sarapion, Nikon, many rivers and successive harbors, the Pyralaon islands, and the channel. Beyond this, after two days and nights toward the west, lies the island Menuthias, low and wooded, with rivers, many birds, and mountain tortoise-shell. It has sewn boats and dugouts used for fishing and for hunting tortoise-shell, which is caught with baskets instead of nets near rocky mouths.",
+      "greek_text": "15. Ἀπὸ δὲ Ὀπώνης τῆς ἀκτῆς εἰς τὸν νότον ὑποχωρούσης ἐπὶ πλεῖον, πρῶτα μέν ἐστι τὰ λεγομενα μικρὰ Ἀπόκοπα καὶ μεγάλα τῆς Ἀζανίας διὰ ἀγκυροβολίων ποταμοὶ ἐπὶ δρόμους ἓξ παῤ αὐτὸν ἤδη τὸν λίβα εἶτα Αἰγιαλὸς καὶ μικρὸς καὶ μέγας ἐπʼ ἄλλους δρόμους ἓξ καὶ μετʼ αὐτὸν κατὰ τὸ ἑξῆς οἱ τῆς Ἀζανίας δρόμοι, πρῶτον μὲν ὁ λεγόμενος Σαραπίωνος, εἶθʼ ὁ Νίκωνος, μεθʼ ὃν ποταμοὶ πλείονες καὶ ἄλλοι συνεχεῖς ὅρμοι, διῃρημένοι κατὰ σταθμοὺς καὶ δρόμους ἡμερησίους πλείονας , τοὺς πάντας ἑπτά, μέχρι Πυραλάων νήσων καὶ τῆς λεγομένης διώρυχος, ἀφʼ ἧς μικρὸν ἐπάνω τοῦ λιβὸς μετὰ δύο δρόμους νυχθημέρους παῤ αὐτὴν τὴν δύσιν εἰτενηδιωμ Μενουθιὰς ἀπαντᾷ νῆσος ἀπὸ σταδίων τῆς γῆς ὡςεὶ τριακοσίων, ταπεινὴ καὶ κατάδενδρος, ἐν ᾗ καὶ ποταμοὶ καὶ ὀρνέων γένη πλεῖστα καὶ χελώνη ὀρεινή. Θηρίων δὲ οὐδὲν ὅλως ἔχει πλὴν κροκοδείλων· οὐδένα δὲ ἀνθρώπων ἀδικοῦσιν. Ἔστι δὲ ἐν αὐτῇ πλοιάρια ῥαπτὰ καὶ μονόξυλα, οἷς χρῶνται πρὸς ἁλίαν καὶ ἄγρον χελώνης. Ἐν δὲ ταύτῆ τῇ νήσῳ καὶ γυργάθοις αὐτὰς ἰδίως λινεύουσιν, ἀντὶ δικτύων καθιέντες αὐτοὺς περὶ τὰ στόματα τῶν προρράχων.",
+      "place_mentions": [
+        {
+          "surface": "Opone",
+          "place_key": "opone",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὀπώνης",
+          "place_key": "opone",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Azania",
+          "place_key": "azania",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀζανίας",
+          "place_key": "azania",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Little and Great Bluffs",
+          "place_key": "little_and_great_bluffs",
+          "kind": "off_route"
+        },
+        {
+          "surface": "μικρὰ Ἀπόκοπα καὶ μεγάλα",
+          "place_key": "little_and_great_bluffs",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Small and Great Beach",
+          "place_key": "small_and_great_beach",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Αἰγιαλὸς καὶ μικρὸς καὶ μέγας",
+          "place_key": "small_and_great_beach",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sarapion",
+          "place_key": "sarapion",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σαραπίωνος",
+          "place_key": "sarapion",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Nikon",
+          "place_key": "nikon",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Νίκωνος",
+          "place_key": "nikon",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Pyralaon islands",
+          "place_key": "pyralaon_islands",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Πυραλάων νήσων",
+          "place_key": "pyralaon_islands",
+          "kind": "off_route"
+        },
+        {
+          "surface": "the channel",
+          "place_key": "the_channel",
+          "kind": "off_route"
+        },
+        {
+          "surface": "διώρυχος",
+          "place_key": "the_channel",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Menuthias",
+          "place_key": "menuthias",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μενουθιὰς",
+          "place_key": "menuthias",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὀπώνη",
+          "place_key": "opone",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "mountain tortoise-shell"
+      ]
+    },
+    {
+      "step_id": "step_0016_section_16_trade_goods",
+      "type": "stop",
+      "title": "Section 16: trade goods",
+      "route_label": "Section 16 of 66 · mapped stop",
+      "focus_place_key": "mosyllon",
+      "section_refs": [
+        "section_0016"
+      ],
+      "translation": "Two runs from Menuthias lies Rhapta, the last emporium of Azania, named from the sewn boats just mentioned. There is very much ivory and tortoise-shell there. The people are large-bodied and locally governed, while the Mopharite ruler administers the area under an old claim of the kingdom of First Arabia. People from Muza hold it as a dependency from the king and send many small craft there with Arab captains and agents who know the places and language through familiarity and marriage connections.",
+      "greek_text": "16. Ἀφʼ ἧς μετὰ δύο δρόμους τῆς ἠπείρου τὸ τελευταιότατον τῆς Ἀζανίας ἐμπόριον κεῖται, τὰ Ῥαπτὰ λεγόμενα, ταύτην ἔχον τὴν προσωνυμίαν ἀπὸ τῶν προειρημένων ῥαπτῶν πλοιαρίων, ἐν ᾧ καὶ πλεῖστός ἐστιν ἐλέφας καὶ χελώνη. Μέγιστοι δὲ ἐν σώμασι περὶ ταύτην τὴν χώραν ἄνθρωποι ὁρατοὶ κατοικοῦσι καὶ κατὰ τόπον ἕκαστος ὁμοίως τιθέμενοι τυράννοις. Νέμεται δὲ αὐτὴν, κατά τι δίκαιον ἀρχαῖον ὑποπίπτουσαν τῇ βασιλεία τῆς πρώτης γινομένης Ἀραβίας, ὁ Μοφαρείτης τύραννος. Παρὰ δὲ τοῦ βασιλέως ὑπόφορον αὐτὴν ἔχουσιν οἱ ἀπὸ Μούζα, καὶ πέμπουσιν εἰς αὐτὴν ἐφόλκια τὰ πλείονα κυβερνήταις καὶ χρειακοῖς Ἄραψι χρώμενοι τοῖς καὶ συνήθειαν καὶ ἐπιγαμβρίαν ἔχουσιν ἐμπείροις τε οὖσε τῶν τόπων καὶ τῆς φωνῆς αὐτὼν.",
+      "place_mentions": [
+        {
+          "surface": "Rhapta",
+          "place_key": "rhapta",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ῥαπτὰ",
+          "place_key": "rhapta",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Azania",
+          "place_key": "azania",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀζανίας",
+          "place_key": "azania",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Muza",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "First Arabia",
+          "place_key": "first_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "πρώτης γινομένης Ἀραβίας",
+          "place_key": "first_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Arabia",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "mouza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Menuthias",
+          "place_key": "menuthias",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "ivory",
+        "tortoise-shell"
+      ]
+    },
+    {
+      "step_id": "step_0017_section_17_trade_goods",
+      "type": "stop",
+      "title": "Section 17: trade goods",
+      "route_label": "Section 17 of 66 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0017"
+      ],
+      "translation": "Into these emporia are brought chiefly the locally manufactured goods of Muza: lances, axes, knives, awls, and many kinds of glass stones. To some places they also bring wine and a good deal of grain, not for trade but for expenditure in gifts or goodwill toward the local people. From the places are exported very much ivory, inferior to that of Adulis, rhinoceros horn, tortoise-shell second to the Indian kind, and a little nautilus shell.",
+      "greek_text": "17. Εἰσφέρεται δὲ εἰς τὰ ἐμπόρια ταῦτα προηγουμένως ἡ τοπικῶς ἐν Μούζα κατασκευαζομένη λόγχη καὶ πελύκια καὶ μαχαίρια καὶ ὀπήτια καὶ λιθίας ὑαλῆς πλείονα γένη, εἰς δέ τινας τόπους οἶνός τε καὶ σῑτος οὐκ ὀλίγος, οὐ πρὸς ἐργασίαν ἀλλὰ δαπάνης χάριν εἰς φιλανθρωπίαν τῶν βαρβάρων. Ἐκφέρεται δὲ ἀπὸ τῶν τόπων ἐλέφας πλεῖστος ἥσσων δὲ τοῦ Ἀθουλιτικοῦ καὶ ῥινόκερως καὶ χελώνη διάφορος μετὰ τὴν Ἰνδικὴν καὶ ναύπλιος ὀλίγος.",
+      "place_mentions": [
+        {
+          "surface": "these Azanian emporia",
+          "place_key": "these_azanian_emporia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "τὰ ἐμπόρια ταῦτα",
+          "place_key": "these_azanian_emporia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Muza",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Adulis",
+          "place_key": "adulis",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Ἀθουλιτικοῦ",
+          "place_key": "adulis",
+          "kind": "main_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἰνδικὴν",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "mouza",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "lances",
+        "axes",
+        "knives",
+        "awls",
+        "glass stones",
+        "wine",
+        "grain",
+        "ivory",
+        "rhinoceros horn",
+        "tortoise-shell",
+        "nautilus shell"
+      ]
+    },
+    {
+      "step_id": "step_0018_berenike",
+      "type": "stop",
+      "title": "Berenike",
+      "route_label": "Section 18 of 66 · mapped stop",
+      "focus_place_key": "berenike",
+      "section_refs": [
+        "section_0018"
+      ],
+      "translation": "These are almost the last emporia of Azania on the mainland to the right of Berenice. Beyond these places the unexplored ocean turns west and, running along the remote parts of Ethiopia, Libya, and Africa toward the south, joins the western sea.",
+      "greek_text": "18. Καὶ σχεδὸν τελευταιότατά ἐστι ταῦτα τὰ ἐμπόρια τῆς Ἀζανίας τῆς ἐν δεξιοῖς ἀπὸ Βερνίκης ἠπείρου· ὁ γὰρ μετὰ τούτους τοὺς τόπους ὠκεανὸς ἀνερεύνητος ὧν εἰς τὴν δύσιν ἀνακάμπτει καὶ τοῖς ἀπεστραμμένοις μέρεσι τῆς Αἰθιοπίας καὶ Λιβύης καὶ Ἀφρικῆς κατὰ τὸν νότον παρεκτείνων εἰς τὴν ἑσπέριον συμμίσγει θάλασσαν.",
+      "place_mentions": [
+        {
+          "surface": "Berenice",
+          "place_key": "berenike",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Azania",
+          "place_key": "azania",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀζανίας",
+          "place_key": "azania",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0019_berenike",
+      "type": "stop",
+      "title": "Berenike",
+      "route_label": "Section 19 of 66 · mapped stop",
+      "focus_place_key": "berenike",
+      "section_refs": [
+        "section_0019"
+      ],
+      "translation": "On the left from Berenice, after crossing the adjoining gulf eastward from Myos Hormos in two or three runs, there is another harbor and fort called Leuke Kome. Through it runs a road to Petra and to Malichus, king of the Nabataeans. Leuke Kome also has something of an emporium arrangement for the not very large ships outfitted from Arabia; therefore a collector of the quarter-duty on incoming cargoes and a centurion with troops are sent there for guard duty.",
+      "greek_text": "19. Ἐκ δὲ τῶν εὐωνύμων Βερνίκης ἀπὸ Μυὸς ὅρμου δυσὶ δρόμοις ἢ τρισὶν εἰς τὴν ἀνατολὴν διαπλεύσαντι τὸν παρακείμενον κόλπον ὅρμος ἐστὶν ἕτερος καὶ φρούριον, ὃ λέγεται Λευκὴ κώμη, διʼ ἧς ὁδός ἐστιν εἰς Πέτραν πρὸς Μάλιχον, βασιλέα Ναβαταίων. Ἔχει δὲ ἐμπορίου τινὰ καὶ αὐτὴ τάξιν τοῖς ἀπὸ τῆς Ἀραβίας ἐξαρτιζομένοις εἰς αὐτὴν πλοίοις οὐ μεγάλοις. Διὸ καὶ εἰς αὐτήν καὶ παραλήπτης τῆς τετάρτης τῶν εἰσφερομένων φορτίων, καὶ παραφυλακῆς χάριν ἑκατοντάρχῆς μετὰ στρατεύματος ἀποστέλλεται.",
+      "place_mentions": [
+        {
+          "surface": "Berenice",
+          "place_key": "berenike",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βερνίκης",
+          "place_key": "berenike",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Myos Hormos",
+          "place_key": "myos_hormos",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Μυὸς ὅρμου",
+          "place_key": "myos_hormos",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Leuke Kome",
+          "place_key": "leuke_kome",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Λευκὴ κώμη",
+          "place_key": "leuke_kome",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Petra",
+          "place_key": "petra",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Πέτραν",
+          "place_key": "petra",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Arabia",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβίας",
+          "place_key": "arabia",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0020_berenike",
+      "type": "stop",
+      "title": "Berenike",
+      "route_label": "Section 20 of 66 · mapped stop",
+      "focus_place_key": "berenike",
+      "section_refs": [
+        "section_0020"
+      ],
+      "translation": "Immediately after Leuke Kome the Arabian country extends for a long distance along the Red Sea. Different peoples live there, the coast being occupied like fish-eater settlements and the interior by villages and nomadic groups. The passage describes dangers of robbery, enslavement, wrecking, lack of harbors, reefs, shoals, and the safer mid-channel course toward the Burnt Island, after which come more settled peoples, herds, and camels.",
+      "greek_text": "20. Μετὰ δὲ ταύτην εὐθέως ἐστὶ συναφὴς Ἀραβικὴ χώρα, κατὰ μῆκος ἐπὶ πολὺ παρατείνουσα τῇ Ἐρυθρᾷ θαλάσσῃ. Διάφορα δὲ ἐν αὐτῇ ἔθνη κατοικεῖται, τινὰ μὲν ἐπὶ ποσὸν, τινὰ δὲ καὶ τελείως τῆ γλώσση διαλάσσοντα. Τούτων τὰ παρὰ θάλασσαν ὁμοίως Ἰχθυοφάγων μάνδραις διείληπται, τὰ δὲ ἐπάνω κατὰ κώμας καὶ νομαδίας οἰκεῖται πονηροῖς ἀνθρώποις διφώνοις, οἷς παραπίπτοντες ἀπὸ τοῦ μέσου πλόου οἱ μὲν διαρπάζονται, οἱ δὲ καὶ ἀπὸ ναυαγίων σωθέντες ἀνδραποδίζονται. Διὸ καὶ συνεχῶς ἀπὸ τῶν τυράννων καὶ βασιλέων τῆς Ἀραβίας αἰχμαλωτίζονται· λέγονται δὲ Κανρσῖται. Καθόλου μὲν οὖν οὗτος ὁ τῆς Ἀραβικῆς ἠπείρου παράπλους ἐστὶν ἐπισφαλὴς, καὶ ἀλίμενος ἡ χώρα καὶ δύσορμος καὶ ἀκάθαρτος ῥαχίαις καὶ σπίλοις ἀπρόσιτος καὶ κατὰ πάντα φοβερά. Διὸ καὶ εἰσπλέοντες τὸν μέσον πλοῦν κατέχομεν καὶ εἰς τὴν Ἀραβικήνχώραν μᾶλλον παροξύνομεν ἄχρι τῆς Κατακεκαυμένης νήσου, μεθʼ ἣν εὐθέως ἡμέρων ἀνθρώπων καὶ νομαδιαίων θρεμμάτων καὶ καμήλων συνεχεῖς χῶραι .",
+      "place_mentions": [
+        {
+          "surface": "Ἀραβικῆς",
+          "place_key": "inland_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Arabia",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβικῆς",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Leuke Kome",
+          "place_key": "leuke_kome",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0021_berenike",
+      "type": "stop",
+      "title": "Berenike",
+      "route_label": "Section 21 of 66 · mapped stop",
+      "focus_place_key": "berenike",
+      "section_refs": [
+        "section_0021"
+      ],
+      "translation": "After these, in the innermost gulf on the left side of this sea, lies Muza, a lawful seaside emporium, about twelve thousand stades from Berenice when sailing south. It is filled with Arab shipowners and sailors and is active in commercial affairs, since they participate both in the overseas trade and in the trade of Barygaza with their own outfitting arrangements.",
+      "greek_text": "21. Καὶ μετὰ ταύτας ἐν κόλπῳ τῷ τελευταιοτάτῳ τῶν εὐωνύμων τούτου τοῦ πελάγους ἐμπόριόν ἐστι νόμιμον παραθαλάσσιον Μούζα, σταδίους ἀπέχον τοὺς πάντας ἀπὸ Βερνίκης, παῤ αὐτὸν τὸν νότον πλεόντων, ὡς εἰς μυρίους δισχιλίους. Τὸ μὲν ὅλον Ἀράβων ναυκληρικῶν ἐνθρώπων καὶ ναυτικῶν πλεονάζει καὶ τοῖς ἀπʼ ἐμπορίας πράγμασι κινεῖται· συγχρῶνται γὰρ τῇ τοῦ πέραν ἐργασίᾳ καὶ Βαρυγάζων ἰδίοις ἐξαρτισμοῖς.",
+      "place_mentions": [
+        {
+          "surface": "Muza",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Berenice",
+          "place_key": "berenike",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βερνίκης",
+          "place_key": "berenike",
+          "kind": "main_route"
+        },
+        {
+          "surface": "overseas trade",
+          "place_key": "overseas_trade",
+          "kind": "off_route"
+        },
+        {
+          "surface": "τῇ τοῦ πέραν ἐργασίᾳ",
+          "place_key": "overseas_trade",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "mouza",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0022_berenike",
+      "type": "stop",
+      "title": "Berenike",
+      "route_label": "Section 22 of 66 · mapped stop",
+      "focus_place_key": "berenike",
+      "section_refs": [
+        "section_0022"
+      ],
+      "translation": "Above Muza, three days inland, lies the city Saua in the region called Mapharitis, and its resident ruler is Cholaibos.",
+      "greek_text": "22. Ὑπέρκειται δὲ αὐτῆς ἀπὸ τριῶν ἡμερῶν πόλις Σαύη, τῆς περὶ αὐτὴν Μαφαρίτιδος λεγομένης χώρας· ἔστι δὲ τύραννος καὶ κατοικῶν αὐτὴν Χόλαιβος.",
+      "place_mentions": [
+        {
+          "surface": "Muza",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Saua",
+          "place_key": "saua",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σαύη",
+          "place_key": "saua",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Mapharitis",
+          "place_key": "mapharitis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μαφαρίτιδος",
+          "place_key": "mapharitis",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0023_berenike",
+      "type": "stop",
+      "title": "Berenike",
+      "route_label": "Section 23 of 66 · mapped stop",
+      "focus_place_key": "berenike",
+      "section_refs": [
+        "section_0023"
+      ],
+      "translation": "After another nine days comes Saphar, a metropolis where Charibael, lawful king of two peoples, the Homerite and the neighboring so-called Sabaite, maintains friendship with the emperors through repeated embassies and gifts.",
+      "greek_text": "23. Καὶ μετʼ ἄλλας ἐννέα ἡμέρας Σαφὰρ μητρόπολις, ἐν ᾗ Χαριβαὴλ, ἔνθεσμος βασιλεὺς ἐθνῶν δύο, τοῦ τε Ὁμηρίτου καὶ τοῦ παρακειμένου λεγομένου Σαβαΐτου, συνεχέσι πρεσβείαις καὶ δώροις φίλος τῶν αὐτοκρατόρων.",
+      "place_mentions": [
+        {
+          "surface": "Saphar",
+          "place_key": "saphar",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σαφὰρ",
+          "place_key": "saphar",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Homerite territory or people",
+          "place_key": "homerite_territory_or_people",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὁμηρίτου",
+          "place_key": "homerite_territory_or_people",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sabaite territory or people",
+          "place_key": "sabaite_territory_or_people",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σαβαΐτου",
+          "place_key": "sabaite_territory_or_people",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0024_section_24_trade_goods",
+      "type": "stop",
+      "title": "Section 24: trade goods",
+      "route_label": "Section 24 of 66 · mapped stop",
+      "focus_place_key": "adulis",
+      "section_refs": [
+        "section_0024"
+      ],
+      "translation": "Muza is a trading station without a harbor but with good roadsteads and anchorages because of the sandy ground around it. Into it go purple cloth, Arabian garments, saffron, cyperus, linen, cloaks, blankets, girdles, moderate perfume, money, wine, and some grain; the local country also produces wheat and more wine. For the king and tyrant are given horses, pack mules, gold objects, turned silver objects, costly clothing, and copper manufactures. From Muza are exported local choice myrrh, stacte myrrh, and lybdos, together with the previously mentioned cargoes from the Adulis side. The suitable sailing to it is around September, though earlier is possible.",
+      "greek_text": "24. Τὸ δὲ ἐμπόριον ἡ Μούζα ἀλίμενον μὲν εὔσαλον δὲ καὶ εὔορμον διὰ τὰ περὶ αὐτὴν ἀμμόγεια ἀγκυροβόλια. Φορτία δὲ εἰς αὐτὴν προχωρεῖ πορφύρα, διάφορος καὶ χυδαία, καὶ ἱματισμὸς Ἀραβικὸς χειριδωτὸς, ὅ τε ἁκλοῦς καὶ ὁ κοινὸς, καὶ σκοτουλάτος καὶ διάχρυσος, καὶ κρόκος καὶ κύπερος καὶ ὀθόνιον καὶ ἀβόλλαι καὶ λώδιικες οὐ πολλαὶ, ἁπλοῖ τε καὶ ἐντόπιοι, ζῶναι σκιωταὶ καὶ μύρον μέτριον καὶ χρῆμα ἱκανὸν οἶνός τε καὶ σῖτος οὐ πολύς. Φέρει γὰρ καὶ ἡ χώρα πυρὸν μετρίως καὶ οἶνον πλείονα. Τῷ δὲ βασιλεῖ καὶ τῷ τυράννῳ δίδονται ἵπποι τε καὶ ἡμίονοι νωτηγοὶ καὶ χρυσώματα καὶ τορνευτὰ ἀργυρώματα καὶ ἱματισμὸς πολυτελὴς καὶ χαλκουργήματα. Ἐξάγεται δὲ ἐξ αὐτῆς ἐντόπια μὲν, σμύρνα ἐκλεκτὴ καὶ στακτὴ * ἀβειρμιναία, λύγδος καὶ τὰ ἀπὸ τῆς πέραν Ἀδουλὶ προειρημένα φορτία πέντα. Πλεῖται δὲ εἰς αὐτὴν εὐκαίρως περὶ τὸν Σεπτέμβριον μῆνα, ὅς ἐστι Θώθ· οὐδὲν δὲ κωλύει κἂν τάχιον.",
+      "place_mentions": [
+        {
+          "surface": "Muza",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "the local country around Muza",
+          "place_key": "the_local_country_around_muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "ἡ χώρα",
+          "place_key": "the_local_country_around_muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "the king and the tyrant at Muza",
+          "place_key": "the_king_and_the_tyrant_at_muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Adulis side",
+          "place_key": "adulis_side",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀδουλὶ",
+          "place_key": "adulis_side",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Adulis",
+          "place_key": "adulis",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Ἀδουλὶ",
+          "place_key": "adulis",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Arabia",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "mouza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "τῷ βασιλεῖ καὶ τῷ τυράννῳ",
+          "place_key": "the_king_and_the_tyrant_at_muza",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "purple cloth, fine and common",
+        "Arabian sleeved garments, plain and common",
+        "checkered Arabian garments",
+        "gold-embroidered Arabian garments",
+        "saffron",
+        "cyperus",
+        "linen cloth",
+        "abollai cloaks",
+        "lodikes blankets or coverlets",
+        "shadow-patterned girdles",
+        "perfume",
+        "money",
+        "wine",
+        "grain",
+        "wheat",
+        "horses",
+        "pack mules",
+        "gold objects",
+        "turned silver objects",
+        "costly clothing",
+        "copper manufactures",
+        "choice myrrh",
+        "stacte myrrh, Abirminaian",
+        "lybdos"
+      ]
+    },
+    {
+      "step_id": "step_0025_avalites",
+      "type": "stop",
+      "title": "Avalites",
+      "route_label": "Section 25 of 66 · mapped stop",
+      "focus_place_key": "avalites",
+      "section_refs": [
+        "section_0025"
+      ],
+      "translation": "After this, sailing about three hundred stades, where Arabia and the Barbarian country opposite near Avalites draw together, there is a short channel that narrows the sea; Diodorus island lies in the passage, making the crossing rough because of winds from the nearby mountains. At this isthmus is Okelis, an Arabian coastal village under the same tyranny, not so much a trading station as an anchorage, watering place, and first landing for those sailing inward.",
+      "greek_text": "25. Μετὰ δὲ ταύτην ὡσεὶ τριακοσίους παραπλεύσαντες σταδίους, ἤδη συνερχομένης τε τῆς Ἀραβικῆς ἠπείρου καὶ τῆς πέραν κατὰ τὸν Aὐαλίτην Βαρβαρικῆς χώρας, αὐλών ἐστιν οὐ μακρὸς, ὁ συνάγων καὶ εἰς στενὸν ἀποκλείων τὸ πέλαγος, οδ τὸν μεταξὺ πόρον ἑξήκοντα σταδίων μεσολαβεῖ νῆσος ἡ Διοδώρου· διὸ καὶ ῥοώδης, καταπνεόμενος ἀπὸ τῶν παρακειμένων ὀρῶν, ἐστὶν ὁ κατʼ αὐτὴν διάπλους. Κατὰ τοῦτον τὸν ἰσθμὸν παραθαλάσσιός ἐστιν Ἀράβων κώμη τῆς αὐτῆς τυραννίδος Ὄκηλις, οὐχ οὕτως ἐμπόριον ὡς ὅρμος καὶ ὕδρευμα καὶ πρώτη καταγωγὴ τοῖς ἔσω διαίρουσι.",
+      "place_mentions": [
+        {
+          "surface": "Arabian mainland",
+          "place_key": "arabian_mainland",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβικῆς ἠπείρου",
+          "place_key": "arabian_mainland",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barbarian country near Avalites",
+          "place_key": "barbarian_country_near_avalites",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aὐαλίτην Βαρβαρικῆς χώρας",
+          "place_key": "barbarian_country_near_avalites",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Diodorus island",
+          "place_key": "diodorus_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Διοδώρου",
+          "place_key": "diodorus_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Okelis",
+          "place_key": "okelis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὄκηλις",
+          "place_key": "okelis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barbarian country",
+          "place_key": "barbarian_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barbaria",
+          "place_key": "barbaria",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβικῆς",
+          "place_key": "inland_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Avalites",
+          "place_key": "avalites",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Arabia",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβικῆς",
+          "place_key": "arabia",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0026_avalites",
+      "type": "stop",
+      "title": "Avalites",
+      "route_label": "Section 26 of 66 · mapped stop",
+      "focus_place_key": "avalites",
+      "section_refs": [
+        "section_0026"
+      ],
+      "translation": "After Okelis, as the sea opens eastward into the open water, after about twelve hundred stades lies Eudaimon Arabia, a coastal village of Charibael's kingdom. It has good water and is the first meeting point for those coming from outside and for those departing from the interior. It was called Eudaimon because formerly, before direct sailings from India to Egypt and from Egypt across the sea, it received the cargoes from both sides, as Alexandria now receives goods from abroad and Egypt sends goods onward.",
+      "greek_text": "26. Μετὰ δὲ Ὄκηλιν, ἀνοιγομένης πάλιν τῆς θαλάσσης εἰς ἀνατολὴν καὶ κατὰ μικρὸν εἰς πέλαγος ἀποφαινομένης, ἀπὸ σταδίων ὡς χιλίων διακοσίων ἐστὶν Εὐδαίμων Ἀραβία, κώμη παραθαλάσσιος, βασιλείας τῆς αὐτῆς Χαριβαὴλ, τοὺς ὅρμους μὲν ἐπιτηδείους καὶ ὑδρεύματα γλυκύτερα καὶ κρείσσονα τῆς Ὀκήλεως ἔχουσα, ἤδη δὲ ἐν ἀρχῇ κόλπου κειμένη τῷ τὴν χώραν ὑποφεύγειν. Εὐδαίμων δʼ ἐπεκλήθη, πρότερον οὖσα πόλις, ὅτε, μήπω ἀπὸ τῆς Ἰνδικῆς εἰς τὴν Αἴγυπτον ἐρχομένων μηδὲ ἀπὸ τῆς Αἰγύπτου τολμώντων εἰς τοὺς ἔσω τόπους διαίρειν, ἀλλʼ ἄχρι ταύτης παραγινομένων, τοὺς παῤ ἀμφοτέρων φόρτους ἀπεδέχετο, ὥσπερ Ἀλεξάνδρεια καὶ τῶν ἔξωθεν καὶ τῶν ἀπὸ τῆς Αἰγύπτου φερομένων ἀποδέχεται. Νῦν δὲ οὐ πρὸ πολλοῦ τῶν ἡμετέρωνχρόνων Καῖσαρ αὐτὴν κατεστρέψατο.",
+      "place_mentions": [
+        {
+          "surface": "Okelis",
+          "place_key": "okelis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὄκηλιν",
+          "place_key": "okelis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Eudaimon Arabia",
+          "place_key": "eudaimon_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Εὐδαίμων Ἀραβία",
+          "place_key": "eudaimon_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Alexandria",
+          "place_key": "alexandria",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀλεξάνδρεια",
+          "place_key": "alexandria",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Arabia",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἰνδίας",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aἰγύπτου",
+          "place_key": "egypt",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0027_section_27_trade_goods",
+      "type": "stop",
+      "title": "Section 27: trade goods",
+      "route_label": "Section 27 of 66 · mapped stop",
+      "focus_place_key": "avalites",
+      "section_refs": [
+        "section_0027"
+      ],
+      "translation": "After Eudaimon Arabia there follows a long connected shore with bays for more than two thousand stades, inhabited by nomads and fish-eaters. Beyond the Calai islands is another coastal place, Canê, in the kingdom of Eleazus and the frankincense-bearing country; opposite it lie two desert islands, Bird Island and Dome Island. Inland above it is Sabbatha, where the king lives. All the frankincense produced in the country is brought into Canê as if to a storehouse, by rafts supported on inflated skins in the local manner and by boats. Canê trades with the emporia across the sea, with Barygaza, Scythia, Omana, and neighboring Persis.",
+      "greek_text": "27. Ἀπὸ δὲ τῆς Εὐδαίμονος Ἀραβικῆς ἐκδέχεται συναφὴς αἰγιαλὸς ἐπιμήκης καὶ κόλπος ἐπὶ δισχιλίους ἢ πλείονας παρήκων σταδίους, Νομάδων τε καὶ Ἰχθυοφάγων κώμαις παροικούμενος, οὗ μετὰ τὴν προέχουσαν ἄκραν ἐμπόριόν ἐστιν ἕτερον παραθαλάσσιον, Κανὴ, βασιλείας Ἐλεάζου, χώρας λιβανωτοφόρου, καὶ κατʼ αὐτὴν ἔρημοι νῆσοι δύο, μία μὲν ἡ τῶν Ὀρνέων, ἡ δʼ ἑτέρα λεγομένη Τρούλλας, ἀπὸ σταδίων ἑκατὸν εἴκοσι τῆς Κανῆς. Ὑπέρκειται δὲ αὐτῆς μεσόγειος ἡ μητρόπολις Σαββαθὰ, ἐν ᾗ καὶ ὁ βασιλεὺς κατοικεῖ. Πᾶς δὲ ὁ γεννώμενος ἐν τῇ χώρᾳ λίβανος εἰς αὐτὴν ὥσπερ ἐκδοχεῖον εἰσάγεται καμήλοις τε καὶ σχεδίαις ἐντοπίοις δερματίναις ἐξ ἀσκῶν καὶ πλοίοις. Ἔχει δὲ καὶ αὐτὴ σύγχρησιν τῶν τοῦ πέραν ἐμπορίων, Βαρυγάζων καὶ Σκυθίας καὶ Ὀμάνων καὶ τῆς παρακειμένης Περσίδος.",
+      "place_mentions": [
+        {
+          "surface": "Eudaimon Arabia",
+          "place_key": "eudaimon_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Εὐδαίμονος Ἀραβικῆς",
+          "place_key": "eudaimon_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Canê",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κανὴ",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "frankincense-bearing country",
+          "place_key": "frankincense_bearing_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "χώρας λιβανωτοφόρου",
+          "place_key": "frankincense_bearing_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Bird Island",
+          "place_key": "bird_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Dome Island",
+          "place_key": "dome_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sabbatha",
+          "place_key": "sabbatha",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Scythia",
+          "place_key": "scythia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σκυθίας",
+          "place_key": "scythia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Omana",
+          "place_key": "omana",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὀμάνων",
+          "place_key": "omana",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Persis",
+          "place_key": "persis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Περσίδος",
+          "place_key": "persis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβικῆς",
+          "place_key": "inland_arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Arabia",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβικῆς",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὀρνέων νῆσος",
+          "place_key": "bird_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Τρουλλὰ",
+          "place_key": "dome_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σάββαθα",
+          "place_key": "sabbatha",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "frankincense"
+      ]
+    },
+    {
+      "step_id": "step_0028_section_28_trade_goods",
+      "type": "stop",
+      "title": "Section 28: trade goods",
+      "route_label": "Section 28 of 66 · mapped stop",
+      "focus_place_key": "avalites",
+      "section_refs": [
+        "section_0028"
+      ],
+      "translation": "Into Canê, from Egypt, come a little wheat and wine as into Muza, Arabian clothing, both common and plain, with more imitation fabric, copper, tin, coral, storax, and the other goods that go to Muza. For the king there are mostly chased silver objects and money, and also horses, statues, and fine plain clothing. From Canê are exported local cargoes, especially frankincense and aloe; the rest moves according to the same sailing season as Muza, but earlier.",
+      "greek_text": "28. Εἰσάγεται δὲ εἰς αὐτὴν ἀπʼ Αἰγύπτου μὲν ὁμοίως πυρὸς ὀλίγος καὶ οἶνος ὥσπερ καὶ εἰς Μούζα, καὶ ἱματισμὸς Ἀραβικὸς, ὁμοίως καὶ κοινὸς καὶ ἀπλοῦς καὶ ὁ νόθος περισσότερος, καὶ χαλκὸς καὶ κασσίτερος καὶ κοράλλιον καὶ στύραξ καὶ τὰ λοιπὰ ὅσα εἰς Μούζα· τὰ πλείονα δὲ ἀργυρώματα τετορευμένα καὶ χρήματα τῷ βασιλεῖ, καὶ ἵπποι δὲ καὶ ἀνδριάντες καὶ ἱματισμὸς διάφορος ἀπλοῦς. Ἐξάγεται δὲ ἐξ αὐτῆς ἐντόπια μὲν φορτία, λίβανος καὶ ἀλόη, τὰ δὲ λοιπὰ κατὰ μετοχὴν τῶν ἄλλων ἐμπορίων. Πλεῖται δὲ εἰς αὐτὴν περὶ τὸν αὐτὸν καιρὸν ὃν καὶ εἰς Μούζα, πρωῖμώτερον δέ.",
+      "place_mentions": [
+        {
+          "surface": "Canê",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Αἰγύπτου",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Muza",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "the king at Canê",
+          "place_key": "the_king_at_cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "τῷ βασιλεῖ",
+          "place_key": "the_king_at_cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Arabia",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "mouza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κανὴ",
+          "place_key": "cane",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "wheat",
+        "wine",
+        "Arabian clothing, common and plain",
+        "imitation Arabian clothing",
+        "copper",
+        "tin",
+        "coral",
+        "storax",
+        "chased silver objects",
+        "money",
+        "horses",
+        "statues",
+        "fine plain clothing",
+        "frankincense",
+        "aloe"
+      ]
+    },
+    {
+      "step_id": "step_0029_section_29_trade_goods",
+      "type": "stop",
+      "title": "Section 29: trade goods",
+      "route_label": "Section 29 of 66 · mapped stop",
+      "focus_place_key": "avalites",
+      "section_refs": [
+        "section_0029"
+      ],
+      "translation": "After Canê the land bends further inward and opens into a very deep bay called Sachalites, the frankincense-bearing country, mountainous, hard to traverse, unhealthy, and wrapped in clouds and mist. The frankincense-bearing trees are not very large or tall, and they yield frankincense in drops on the bark, as some trees in Egypt weep gum.",
+      "greek_text": "29. Μετὰ δὲ Κανὴν, τῆς γῆς ἐπὶ πλεῖον ὑποχωρούσης, ἄλλος ἐκδέχεται βαθύτατος κόλπος, ἐπὶ πολὺ παρεκτείνων, ὁ λεγόμενος Σαχαλίτης, καὶ χώρα λιβανωτοφόρος, ὀρεινή τε καὶ δύσβατος, ἀέρα παχὺν ἔχουσα καὶ ὁμιχλώδη καὶ κατὰ τῶν δένδρων φερόμενον τὸν λίβανον. Ἔστι δὲ τὰ δένδρα τὰ λιβανοφόρα οὐ μεγάλα λίαν οὐδὲ ὑψηλὰ, φέρει δὲ ἐπὶ τῷ φλοιῷ πησσόμενον τὸν λίβανον, ὥς τινα καὶ τῶν παῤ ἡμῖν ἐν Aἰγύπτῳ δένδρων δακρύει τὸ κόμμι. Μεταχειρίζεται δ ὁ λίβανος ὑπὸ δούλων βασιλικῶν καὶ τῶν ἐπὶ τιμωρίᾳ πεμπομένον. Ἐπίνοσοι δὲ δεινῶς οἱ τόποι, καὶ τοῖς μὲν παραπλέουσι λοιμικοὶ, τοῖς δὲ ἐργαζομένοις πάντοτε θανατώδεις, ἔτι δὲ καὶ διὰ τὴν ἔνδειαν τῆς τροφῆς εὐχερῶς ἀπολλυμένοις.",
+      "place_mentions": [
+        {
+          "surface": "Canê",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κανὴν",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sachalites bay and country",
+          "place_key": "sachalites_bay_and_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σαχαλίτης",
+          "place_key": "sachalites_bay_and_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aἰγύπτῳ",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κανὴ",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "frankincense-bearing country",
+          "place_key": "frankincense_bearing_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Αἰγύπτῳ",
+          "place_key": "egypt",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "frankincense",
+        "gum"
+      ]
+    },
+    {
+      "step_id": "step_0030_section_30_trade_goods",
+      "type": "stop",
+      "title": "Section 30: trade goods",
+      "route_label": "Section 30 of 66 · mapped stop",
+      "focus_place_key": "avalites",
+      "section_refs": [
+        "section_0030"
+      ],
+      "translation": "At the far eastern end of the bay is the promontory called Syagros, with a fort guarding the country. Opposite it, out in the open sea and more toward Azania, lies the large island called Dioscorida, mostly deserted, marshy, and rivered, with animals including crocodiles, snakes, and large lizards. The island has true, land, and white tortoise shell, and also the so-called Indian cinnabar, gathered in drops from trees.",
+      "greek_text": "30. Τούτου δʼ ἐστὶν ἀκρωτήριον τοῦ κόσμου μέγιστον, ἀποβλέπον εἰς ἀνατολὴν, ὁ καλούμενος Σύαγρος, ἐφ’ οἷ φρούριόν ἐστι τῆς χώρας καὶ λιμήν καὶ ἀποθήκη τοῦ συναγομένου λιβάνου· καὶ κατὰ τοῦτον ἐν τῷ πελάγει νῆσος, ἀνὰ μέσον τούτου καὶ τοῦ πέραν ἀκρωτηρίου τῶν Ἀρωμάτων, τῷ Συάγρῳ συνορίζουσα μᾶλλον, ἡ Διοσκορίδου καλουμένη, μεγίστη μὲν ἔρημος δὲ καὶ κάθυγρος, ἔχουσα ποταμοὺς ἐν αὑτῇ καὶ κροκοδείλους καὶ ἐχίδνας πλείστας καὶ σαύρας ὑπερμεγέθεις, ὧν τὸ κρέας ἐσθίουσι τὸ δὲ λίπος τήκουσι καὶ ἀντʼ ἐλαίου χρῶνται· καρπὸν δὲ οὔτε ἀμπέλου οὔτε σιτικὸν ἡ νῆσος φέρει. Οἱ δʼ ἐνοικοῦντες αὐτὴν ὀλίγοι κατὰ μίαν πλευρὰν τῆς νήσου τὴν πρὸς ἀπαρκτίαν οἰκοῦσι, καθʼ ὃ μέρος ἀποβλέπει τὴν ἤπειρον· εἶσὶ δὲ ἐπίξενοι καὶ ἐπίμικτοι Ἀράβων τε καὶ Ἰνδῶν καὶ ἔτι Ἐλλήνων τῶν πρὸς ἐργασίαν ἐκπλεόντων. Φέρει δὲ ἡ νῆσος χελώνην τήν τε ἀληθινὴν καὶ χερσαίαν καὶ τὴν λευκὴν, πλείστην τε καὶ διάφορον τοῖς ὀστράκοις μείζοσι, τήν τε ὀρεινὴν ὑπερμεγέθη καὶ παχύτατον ὄστρακον ἔχουσαν, οὗ τὰ παρὰ τὴν κοιλίαν μέρη μὲν τομὴν οὐκ ἐπιδέχεται, καίπερ στερρότερα ὄντα· ὁλοτελῶς δὲ τὰ εὐχρηστοῦντα εἰς γλωσσόκομα καὶ πινακίδια καὶ μαγίδια καὶ τοιαύτην τινὰ γρύτην κατατέμνεται. Γίνεται δὲ ἐν αὐτῇ καὶ κιννάβαρι τὸ λεγόμενον Ἰνδικὸν, ἀπὸ τῶν δένδρῶν ὡς δάκρυ συναγόμενον.",
+      "place_mentions": [
+        {
+          "surface": "Syagros",
+          "place_key": "syagros",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σύαγρος",
+          "place_key": "syagros",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Dioscorida island",
+          "place_key": "dioscorida_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Διοσκορίδου",
+          "place_key": "dioscorida_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Azania",
+          "place_key": "azania",
+          "kind": "off_route"
+        },
+        {
+          "surface": "ἀκρωτήριον",
+          "place_key": "aromata_cape",
+          "kind": "off_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀζανίᾳ",
+          "place_key": "azania",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "true tortoise shell",
+        "land tortoise shell",
+        "white tortoise shell",
+        "Indian cinnabar"
+      ]
+    },
+    {
+      "step_id": "step_0031_section_31_trade_goods",
+      "type": "stop",
+      "title": "Section 31: trade goods",
+      "route_label": "Section 31 of 66 · mapped stop",
+      "focus_place_key": "avalites",
+      "section_refs": [
+        "section_0031"
+      ],
+      "translation": "The inhabitants of Dioscorida are few and mixed, Arabs, Indians, and Greeks who have gone there for trade. The island is subject to the king of the frankincense-bearing country. Some from Muza, and some sailing from Limyrike and Barygaza, used it when they happened to put in there, exchanging rice, wheat, and Indian cloth, and loading in return a very large amount of tortoise shell. Now the island has been leased by the kings and is guarded.",
+      "greek_text": "31. Ὑποπίπτει μὲν οὖν, ὥςπερ ἡ Ἀζανία Χαριβαῆλι καὶ τῷ Μαφαρείτῃ τυράννῳ, καὶ ἡ νῆσος αὐτῷ τῷ βασιλεῖ τῆς λιβανωτοφόρου. Συνεχρήσαντο δὲ αὐτῇ καὶ ἀπὸ Μούζα τινὲς καὶ τῶν ἐκπλεόντων ἀπὸ Aιμυρικῆς καὶ Βαρυγάζων ὅσοι κατὰ τύχην εἰς αὐτὴν ἐπιβάλλοντες ὄρυζάν τε καὶ σῖτον καὶ ὀθόνην Ἰνδικὴν ἀντικαταλλασσόμενοι καὶ σώματα θηλυκὰ διὰ σπάνιν ἐκεῖ προχωροῦντα, χελώνην ἀντεφορτίζοντο πλείστην· νῦν δὲ ὑπὸ τῶν βασιλέων ἡ νῆσος ἐκμεμίσθωται καὶ παραφυλάσσεται.",
+      "place_mentions": [
+        {
+          "surface": "Dioscorida island",
+          "place_key": "dioscorida_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Muza",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Limyrike",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "frankincense-bearing country",
+          "place_key": "frankincense_bearing_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "λιβανωτοφόρου",
+          "place_key": "frankincense_bearing_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μούζα",
+          "place_key": "mouza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἰνδικὴν",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "τῷ βασιλεῖ",
+          "place_key": "the_king_at_cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Διοσκορίδου",
+          "place_key": "dioscorida_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Λιμυρικῆς",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "rice",
+        "wheat or grain",
+        "Indian cloth",
+        "tortoise shell"
+      ]
+    },
+    {
+      "step_id": "step_0032_section_32_trade_goods",
+      "type": "stop",
+      "title": "Section 32: trade goods",
+      "route_label": "Section 32 of 66 · mapped stop",
+      "focus_place_key": "avalites",
+      "section_refs": [
+        "section_0032"
+      ],
+      "translation": "After Syagros a deep adjoining bay runs into the mainland, Omana, with a crossing of six hundred stades. After high rocky mountains and cave-dwellers comes an appointed harbor for loading Sachalite frankincense, called Moscha harbor. Ships are regularly sent there from Canê, and vessels sailing along from Limyrike or Barygaza in the late season winter there; from the royal agents they exchange linen, wheat, and oil for frankincense lying in heaps throughout Sachalites, unguarded but protected by divine power. Without a royal grant not even a grain can be put aboard.",
+      "greek_text": "32. Μετὰ δὲ τὸν Σύαγρον κόλπος ἐστὶ συναφὴς ἐπὶ βάθος ἐνδύνων εἰς τὴν ἤπειρον, Ὄμανα, σταδίους ἔχων ἑξακοσίους τὸ διαπέραμα, καὶ μετʼ αὐτὸν ὑψηλὰ ὄρη πετρώδη καὶ ἀπόκοπα ἀνθρώπων ἐν σπηλαίοις κατοικούντων, ἐπὶ σταδίους ἄλλους πεντακοσίους, καὶ μετʼ αὐτοὺς ὅρμος ἀποδεδειγμένος τοῦ Σαχαλίτου λιβάνου πρὸς ἐμβολὴν, Μόσχα λιμὴν λεγόμενος, εἰς ἣν ἀπὸ Κανῆς συνήθως πλοῖα πέμπεταί τινα, καὶ παραπλέοντα ἀπὸ Λιμυρικῆς ἢ Bαρυγάζων ὀψινοῖς καιροῖς παραχειμάσαντα παρὰ τῶν βασιλικῶν πρὸς ὀθόνιον καὶ σῑτον καὶ ἔλαιον λίβανον ἀντιφορτίζουσι παῤ ὅλον τὸν Σαχαλίτην χώμασι κείμενον καὶ ἀφύλακτον, δυνάμει θεῶν τινὶ τοῦτον τὸν τόπον ἐπιτηρούντων· οὔτε γὰρ λάθρα οὔτε φανερῶς χωρὶς βασιλικῆς δώσεως εἰς πλοῖον ἐμβληθῆναι δύναται· κἂν χόνδρον τις ἄρῃ, οὐ δύναται πλεῦσαι τὸ πλοῖον ἀπὸ τοῦ λιμένος.",
+      "place_mentions": [
+        {
+          "surface": "Syagros",
+          "place_key": "syagros",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σύαγρον",
+          "place_key": "syagros",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Omana bay",
+          "place_key": "omana_bay",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὄμανα",
+          "place_key": "omana_bay",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Moscha harbor",
+          "place_key": "moscha_harbor",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μόσχα λιμὴν",
+          "place_key": "moscha_harbor",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sachalites",
+          "place_key": "sachalites",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σαχαλίτου",
+          "place_key": "sachalites",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Canê",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κανῆς",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Limyrike",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Λιμυρικῆς",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Bαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Omana",
+          "place_key": "omana",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "Sachalite frankincense",
+        "linen cloth",
+        "wheat or grain",
+        "oil"
+      ]
+    },
+    {
+      "step_id": "step_0033_section_33_trade_goods",
+      "type": "stop",
+      "title": "Section 33: trade goods",
+      "route_label": "Section 33 of 66 · mapped stop",
+      "focus_place_key": "avalites",
+      "section_refs": [
+        "section_0033"
+      ],
+      "translation": "From Moscha harbor the coast runs about fifteen hundred stades to Mount Asich; at its end lie seven islands called the islands of Zenobius. After them comes another barbarian coast, no longer under the same kingdom but now belonging to Persis. About two thousand stades from the Zenobius islands, offshore, is the island called Sarapis. It has three villages of sacred Fish-Eaters, who use the Arabic language and wear girdles of kukinon leaves. The island has abundant excellent tortoise shell, and those from Canê regularly fit out boats and small craft for it.",
+      "greek_text": "33. Ἀπὸ δὲ Μόσχα λιμένος ἐπʼ ἄλλους σταδίους ὡς χιλίους πεντακοσίους ἕως Ἀσὶχ ὄρος τῇ γῇ παρατείνει, καὶ κατὰ τὸ ἀπολῆγον αὐτοῦ μέρος ἑπτὰ νῆσοι πρόκεινται κατὰ τὸ ἑξῆς, αἱ Ζηνοβίου λεγόμεναι, μεθʼ ὃς ἄλλη παράκειται χώρα βάρβαρος οὐκ ἔτι τῆς αὐτῆς βασιλείας, ἀλλʼ ἤδη τῆς Περσίδος, ἣν ἀφʼ ὕψους παραπλέοντι ὡς σταδίους δισχιλίους ἀπὸ τῶν Ζηνοβίου συναντᾷ νῆσος Σαράπιδος λεγομένη, ἀπὸ σταδίων τῆς γῆς ὡσεὶ ἑκατὸν εἴκοσι. Ταύτης τὸ μὲν πλάτος ἐστὶν ὡσεὶ σταδίων διακοσίων, τὸ δὲ μῆκος ἑξακοσίων, οἰκεῖται δὲ κώμαις τρισὶ καὶ ἀνθρώποις ἱεροῖς Ἰχθυοφάγων· γλώσση δὲ Ἀραβικῇ χρῶνται καὶ περιζώμασι φύλλων κουκίνων. Ἔχει δὲ ἡ νῆσος χελώνην ἱκανὴν καὶ διάφορον· ἐξαρτίζοωσι δὲ εἰς αὐτὴν συνήθως οἱ ἀπὸ Κανῆς σκάφας καὶ ἐφόλκια.",
+      "place_mentions": [
+        {
+          "surface": "Moscha harbor",
+          "place_key": "moscha_harbor",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μόσχα λιμένος",
+          "place_key": "moscha_harbor",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Mount Asich",
+          "place_key": "mount_asich",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀσὶχ ὄρος",
+          "place_key": "mount_asich",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Zenobius islands",
+          "place_key": "zenobius_islands",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ζηνοβίου",
+          "place_key": "zenobius_islands",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Persis",
+          "place_key": "persis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Περσίδος",
+          "place_key": "persis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sarapis island",
+          "place_key": "sarapis_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σαράπιδος",
+          "place_key": "sarapis_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Canê",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κανῆς",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Fish-Eaters",
+          "place_key": "fish_eaters_red_sea",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "tortoise shell"
+      ]
+    },
+    {
+      "step_id": "step_0034_avalites",
+      "type": "stop",
+      "title": "Avalites",
+      "route_label": "Section 34 of 66 · mapped stop",
+      "focus_place_key": "avalites",
+      "section_refs": [
+        "section_0034"
+      ],
+      "translation": "Sailing around the next mainland northward, near the entrance to the Persian Sea, lie several islands called the Calaean Islands, extending for about two thousand stadia along the coast; their inhabitants are hostile and see little by day.",
+      "greek_text": "34. Περικολπίζοντι δὲ τὴν ἐχομένην ἤπειρον εἰς αὐτὴν τὴν ἄρκτον ἤδη περὶ τὴν εἰσβολὴν τῆς Περσικῆς θαλάσσης κεῖνται νῆσοι πλείονες, αἱ Καλαίου λεγόμεναι νῆσοι , σχεδὸν ἐπὶ σταδίους δισχιλίους παρατεταμμέναι τῇ χώρᾳ· πονηροὶ δὲ οἱ κατοικοῦντες αὐτὰς ἄνθρωποι καὶ ἡμέρας οὐ πολύ τι βλέποντες.",
+      "place_mentions": [
+        {
+          "surface": "Persian Sea",
+          "place_key": "persian_sea",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Περσικῆς θαλάσσης",
+          "place_key": "persian_sea",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Calaean Islands",
+          "place_key": "calaean_islands",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0035_apologos",
+      "type": "stop",
+      "title": "Apologos",
+      "route_label": "Section 35 of 66 · mapped stop",
+      "focus_place_key": "apologos",
+      "section_refs": [
+        "section_0035"
+      ],
+      "translation": "Near the outer end of the Calaean Islands and the so-called Fair Mountain the mouth of the Persian Gulf comes next, where there is much diving for pinna shell. On the left are the Asabon mountains, on the right the mountain called Semiramis, and through the passage the Persian Gulf opens inland to Apologos, a lawful emporium near Charax Pasinu and the Euphrates.",
+      "greek_text": "35. Περὶ δὲ τὴν ἐσχάτην κεφαλήν τῶν Καλαίου νήσων καὶ τὸ λεγόμενον Καλὸν ὄρος ἐκδέχεται μετʼ οὐ πολὺ τὸ στόμα τῆς Περσικῆς, καὶ πλεῖσται κολυμβήσεις εἰσὶ τοῦ πινικίου κόγχου. Τούτου δὲ τοῦ στόματος ἐκ τῶν εὐωνύμων ἐστὶν ὄρη μέγιστα λεγόμενα Ἀσαβῶν, ἐκ δὲ τῶν δεξιῶν ἄντικρυς ἀφορώμενον ἄλλο στρογγύλον ὑψηλὸν, τὸ Σεμιράμεως λεγόμενον, καὶ μέσος αὐτὸς ὁ διάπλους τοῦ στόματος ὡς σταδίους ἑξακοσίους, διʼ οὗ μέγιστος καὶ πλατύτατος εἰς τοὺς ἐσωτάτους τόπους ὁ Περσικὸς κόλπος ἀναχεῖται, καθʼ ὃν ἐν τοῖς ἐσχάτοις αὐτοῦ μέρεσιν ἐμπόριόν ἐστι νόμιμον, λεγόμενον ἡ Ἀπολόγου, κειμένη κατὰ Πασίνου Χάρακα καὶ ποτάμον Εὐφράτην.",
+      "place_mentions": [
+        {
+          "surface": "Calaean Islands",
+          "place_key": "calaean_islands",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Καλαίου νήσων",
+          "place_key": "calaean_islands",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Fair Mountain",
+          "place_key": "fair_mountain",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Καλὸν ὄρος",
+          "place_key": "fair_mountain",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Mouth of the Persian Gulf",
+          "place_key": "mouth_of_the_persian_gulf",
+          "kind": "off_route"
+        },
+        {
+          "surface": "στόμα τῆς Περσικῆς",
+          "place_key": "mouth_of_the_persian_gulf",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Asabon Mountains",
+          "place_key": "asabon_mountains",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀσαβῶν",
+          "place_key": "asabon_mountains",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Semiramis Mountain",
+          "place_key": "semiramis_mountain",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σεμιράμεως",
+          "place_key": "semiramis_mountain",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Persian Gulf",
+          "place_key": "persian_gulf",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Περσικὸς κόλπος",
+          "place_key": "persian_gulf",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Apologos",
+          "place_key": "apologos",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Ἀπολόγου",
+          "place_key": "apologos",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Charax Pasinu",
+          "place_key": "charax_pasinu",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Πασίνου Χάρακα",
+          "place_key": "charax_pasinu",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Euphrates River",
+          "place_key": "euphrates_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Εὐφράτην",
+          "place_key": "euphrates_river",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "pinna shell"
+      ]
+    },
+    {
+      "step_id": "step_0036_section_36_trade_goods",
+      "type": "stop",
+      "title": "Section 36: trade goods",
+      "route_label": "Section 36 of 66 · mapped stop",
+      "focus_place_key": "apologos",
+      "section_refs": [
+        "section_0036"
+      ],
+      "translation": "After sailing past the mouth of the gulf, six runs farther on is another Persian emporium called Omana. Large ships usually outfit for both Persian emporia from Barygaza with copper, sandalwood, beams, horns, and logs of sesame-wood and ebony; to Omana frankincense also comes from Cane. From Omana local sewn boats called madara go to Arabia. From both emporia are brought into Barygaza and Arabia much Persian shell, inferior to Indian shell, along with purple dye, local clothing, wine, many dates, gold, and slaves.",
+      "greek_text": "36. Παραπλεύσαντι δὲ τοῦτο τὸ στόμα τοῦ κόλπου μετὰ δρόμους ἓξ ἕτερον ἐμπόριόν ἐστι τῆς Περσίδος, τὰ λεγόμενα Ὄμανα. Ἐξαρτίζεται δὲ εἰς αὐτὴν συνήθως, ἀπὸ μὲν Βαρυγάζων εἰς ἀμφότερα ταῦτα τῆς Περσίδος ἐμπόρια πλοῖα μεγάλα χαλκοῦ καὶ ξύλων σανταλίνων καὶ δοκῶν καὶ κεράτων καὶ φαλάγγων σασαμίνων καὶ ἐβενίνων, εἰς δὲ τὰ Ὄμανα καὶ ἀπὸ Κανῆς λίβανος, καὶ ἀπ’ Ὀμάνων εἰς τὴν Ἀραβίαν ἐντόπια ῥαπτὰ πλοιάρια, τὰ λεγόμενα μαδάρα. Εἰσφέρεται δὲ ἀπὸ ἑκατέρων τῶν ἐμπορίων εἴς τε Βαρύγαζα καὶ εἰς Ἀραβίαν πινικὸν, πολὺ μὲν, χεῖρον δὲ τοῦ Ἰνδικοῦ, καὶ πορφύρα καὶ ἱματισμὸς ἐντόπιος καὶ οἶνος καὶ φοῖνιξ πολὺς καὶ χρυσὸς καὶ σώματα.",
+      "place_mentions": [
+        {
+          "surface": "Persis",
+          "place_key": "persis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Περσίδος",
+          "place_key": "persis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Omana",
+          "place_key": "omana",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὄμανα",
+          "place_key": "omana",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Cane",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κανῆς",
+          "place_key": "cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Arabia",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀραβίαν",
+          "place_key": "arabia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὀμάνων",
+          "place_key": "omana",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὄμανα",
+          "place_key": "omana_bay",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "copper",
+        "sandalwood",
+        "beams",
+        "horns",
+        "sesame-wood logs",
+        "ebony logs",
+        "frankincense",
+        "sewn boats called madara",
+        "Persian pinna shell",
+        "purple dye",
+        "local clothing",
+        "wine",
+        "dates",
+        "gold",
+        "slaves"
+      ]
+    },
+    {
+      "step_id": "step_0037_oraea",
+      "type": "stop",
+      "title": "Oraea",
+      "route_label": "Section 37 of 66 · mapped stop",
+      "focus_place_key": "oraea",
+      "section_refs": [
+        "section_0037"
+      ],
+      "translation": "After the Omanitic country lies the country of the Parsidae, under another kingdom, and the gulf called that of the Terabdoi. Beside it is a river admitting ships, with a small emporium at its mouth called Oraea and an inland royal city seven days from the sea. The country produces much wheat, wine, rice, and dates, and inland nothing else except bdellium.",
+      "greek_text": "37. Μετὰ δὲ τὴν Ὀμανιτικὴν χώραν ὁμοίως ἡ Παρσιδῶν παράκειται, βασιλείας ἑτέρας, καὶ κόλπος τῶν Τεράβδων λεγόμενος, οὗ κατὰ μέσον εἰς τὸν κόλπον ἄκρα παρανατείνει. Καὶ παῤ αὐτὸν ποταμός ἐστιν, ἔχων εἰσαγωγὴν πλοίοις, καὶ μικρὸν ἐπὶ τοῦ στόματος ἔμεπόριον Ὠραία λεγόμενον, καὶ κατὰ νώτου μεσόγειος πόλις, ἀπ έχουσα ὁδὸν ἡμερῶν ἑπτὰ ἀπὸ θαλάσσης, ἐν ᾗ καὶ βασιλεία ἡ λεγομένη . Φέρει δὲ ἡ χώρα σῖτον πολὺ καὶ οἶνον καὶ ὄρυζαν καὶ φοίνικα, πρὸς δὲ τὴν ἤπειρον οὐδὲν ἕτερον ἢ βδέλλαν.",
+      "place_mentions": [
+        {
+          "surface": "Omanitic country",
+          "place_key": "omanitic_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὀμανιτικὴν χώραν",
+          "place_key": "omanitic_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Country of the Parsidae",
+          "place_key": "country_of_the_parsidae",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Παρσιδῶν",
+          "place_key": "country_of_the_parsidae",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Gulf of the Terabdoi",
+          "place_key": "gulf_of_the_terabdoi",
+          "kind": "off_route"
+        },
+        {
+          "surface": "κόλπος τῶν Τεράβδων",
+          "place_key": "gulf_of_the_terabdoi",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Oraea",
+          "place_key": "oraea",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Ὠραία",
+          "place_key": "oraea",
+          "kind": "main_route"
+        },
+        {
+          "surface": "ἡ χώρα",
+          "place_key": "the_local_country_around_muza",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "wheat",
+        "wine",
+        "rice",
+        "dates",
+        "bdellium"
+      ]
+    },
+    {
+      "step_id": "step_0038_barbarikon",
+      "type": "context",
+      "title": "Barbarikon",
+      "route_label": "Section 38 of 66 · context",
+      "focus_place_key": "barbarikon",
+      "section_refs": [
+        "section_0038"
+      ],
+      "translation": "After this country, where the mainland has already swung eastward because of the deep gulfs, come the low coastal parts of Scythia to the north. From them flows the Sindus, the greatest river of the Erythraean Sea, with seven mouths; only the middle mouth is navigable, and there stands the seaside emporium Barbarikon. Behind it inland is Minnagar, metropolis of Scythia, ruled by Parthians who continually drive one another out.",
+      "greek_text": "38. Μετὰ δὲ ταύτην τὴν χώραν, ἤδη τῆς ἠπείρου διὰ τὸ βάθος τῶν κόλπων ἐκ τῆς ἀνατολῆς ὑπερκερώεης, ἐκδέχεται τὰ παραθαλάσσια μέρη τῆς Σκυθίας παῤ αὐτὸν κειμένης τὸν βορέαν, ταπεινὰ λίαν, ἐξ ὧν ποταμὸς Σίνθος, μέγιστος τῶν κατὰ τὴν Ἐρυθρὰν θάλασσαν ποταμῶν καὶ πλεῖστον ὕδωρ εἰς θάλασσαν ἐκβάλλων, ὥστε ἄχρι πολλοῦ καὶ πρὶν ἢ συμβάλῃ τῆ χώρᾳ εἰς τὸ πέλαγος ἀπαντᾶν ἀπʼ αὐτοῦ λευκὸν ὕδωρ. Σημεῖον δὲ ἤδη τῆς περὶ αὐτὴν τὴν χώραν ἐπιβολῆς τοῖς ἐκ πελάγους ἐρχομένοις οἱ προαπαντῶντες ὄφεις ἐκ τοῦ βάθους τῶν γὰρ ἐπάνω καὶ περὶ τὴν Περσίδα τόπων σημεῖόν ἐστιν αἱ λεγόμεναι γράαι. Ἑπτὰ δὲ οὗτος ὁ ποταμὸς ἔχει στόματα, λεπτὰ δὲ ταῦτα καὶ τεναγώδη, καὶ τὰ μὲν ἄλλα διάπλουν οὐκ ἔχει, μόνον δὲ τὸ μέσον, ἐφʼ οὗ καὶ παραθαλάσσιον ἐμπόριόν ἐστιν Βαρβαρικόν. Πρόκειται δὲ αὐτοῦ νησίον μικρὸν, καὶ κατὰ νώτου μεσόγειος ἡ μητρόπολις αὐτῆς τῆς Σκωθίας Μινναγάρ· βασιλεύεται δὲ ὑπὸ Πάρθων, συνεχῶς ἀλλήλους ἐνδιωκόντων.",
+      "place_mentions": [
+        {
+          "surface": "Scythia",
+          "place_key": "scythia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σκυθίας",
+          "place_key": "scythia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sindus River",
+          "place_key": "sindus_river",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Σίνθος",
+          "place_key": "sindus_river",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Barbarikon",
+          "place_key": "barbarikon",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρβαρικόν",
+          "place_key": "barbarikon",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Minnagar",
+          "place_key": "minnagar",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μινναγάρ",
+          "place_key": "minnagar",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0039_barbarikon",
+      "type": "context",
+      "title": "Barbarikon",
+      "route_label": "Section 39 of 66 · context",
+      "focus_place_key": "barbarikon",
+      "section_refs": [
+        "section_0039"
+      ],
+      "translation": "Ships are brought through the river to the king at Barbarikon. Into the emporium go sufficient plain clothing, a little counterfeit cloth, patterned textiles, chrysolith, coral, storax, frankincense, glass vessels, silverware, money, and a little wine. In exchange are loaded costus, bdellium, lycium, nard, callaine stone, sapphire, Chinese skins, cloth, Chinese thread, and Indian black pigment. Sailors depart with the Indian ships around July, the month Epiphi; the voyage is harder to enter but more favorable and shorter than the others.",
+      "greek_text": "39. Τὰ μὲν οὖν πλοῖα κατὰ τὴν Βαρβαρικὴν διορμίρεται διὰ τοῦ ποταμοῦ τῷ βασιλεῖ. Προχωρεῖ δὲ εἰς τὸ ἐμπόριον ἱματισμὸς ἁπλοῦς ἱκανὸς καὶ νόθος οὐ πολὺς, πολύμιτα καὶ χρυσόλιθον καὶ κοράλλιον καὶ στύραξ καὶ λίβανος καὶ ὑαλὰ σκεύη καὶ ἀργυρώματα καὶ χρῆμα, οἶνος δ οὐ πολύς. Ἀντιφορτίζεται δὲ κόστος, βδέλλα, λύκιον, νάρδος καὶ καλλεανὸς λίθος καὶ σάπφειρος καὶ Σηρικὰ δέρματα καὶ ὀθόνιον καὶ νῆμα Σηρικὸν καὶ Ἰνδικὸν μέλαν. Ἀνάγονται δὲ καὶ αὐτοὶ οἱ πλέοντες μετὰ τῶν Ἰνδκῶν περὶ τὸν Ἰούλιον μῆνα, ὅς ἐστιν Ἐπιφί· δυςεπίβολος μὲν, ἐπιφορώτερος δὲ ἐκείνων καὶ συντομώτερος ὁ πλοῦς.",
+      "place_mentions": [
+        {
+          "surface": "Barbarikon",
+          "place_key": "barbarikon",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρβαρικὴν",
+          "place_key": "barbarikon",
+          "kind": "main_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "τῷ βασιλεῖ",
+          "place_key": "the_king_at_cane",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "plain clothing",
+        "counterfeit cloth",
+        "patterned textiles",
+        "chrysolith",
+        "coral",
+        "storax",
+        "frankincense",
+        "glass vessels",
+        "silverware",
+        "money",
+        "wine",
+        "costus",
+        "bdellium",
+        "lycium",
+        "nard",
+        "callaine stone",
+        "sapphire",
+        "Chinese skins",
+        "cloth",
+        "Chinese thread",
+        "Indian black pigment"
+      ]
+    },
+    {
+      "step_id": "step_0040_sindus_river",
+      "type": "stop",
+      "title": "Sindus River",
+      "route_label": "Section 40 of 66 · mapped stop",
+      "focus_place_key": "sindus_river",
+      "section_refs": [
+        "section_0040"
+      ],
+      "translation": "After the Sindus River is another unexplored gulf toward the north, called Eirinon, divided into the Lesser and Greater, both shallow seas with light, continuous eddies far from land. Beyond it projects the curved cape called Barake, enclosing seven islands; ships that fall too far into the belly of Barake are lost among heavy waves, confused sea, eddies, rocky bottom, and dangerous anchors.",
+      "greek_text": "40. Μετὰ δὲ τὸν Σίνθον ποταμὸν ἕτερός ἐστι κόλπος ἀθεώρητος παρὰ τὸν βορέαν· ὀνομάζεται δὲ Εἰρινὸν, ἐπιλέγεται δὲ ὁ μὲν μικρὸν ὁ δὲ μέγα· πελάγη δέ ἐστιν ἀμφότερα τεναγώδη καὶ δίνας ἐλαφρὰς ἔχοντα καὶ συνεχεῖς καὶ μακρὰς ἀπὸ τῆς γῆς, ὡς πολλάκις, τῆς ἠπείρου μηδὲ βλεπομένης, ἐποκέλλειν τὰ πλοῖα, ἐνδοτέρω δὲ προληφθέντα καὶ ἀπόλλυσθαι. Τούτου δὲ ὑπερέχει τοῦ κόλπου ἀκρωτήριον, ἐπικαμπὲς ἀπὸ τοῦ Εἰρίνου μετὰ τὴν ἀνατολὴν καὶ τὸν νότον ὡς εἰς τὴν δύσιν, ἐμπεριλαμβάνον αὐτὸν τὸν κόλπον λεγόμενον Βαράκην, νήσους ἑπτὰ ἐμπεριειλημμένον, οὗ περὶ μὲν τὰς ἀρχὰς οἱ περιπεσόντες ὀλίγον ὀπίσω καὶ εἰς τὸ πέλαγος ἀναδραμόντες ἐκφεύγουσιν, οἱ δὲ εἰς αὐτὴν κατακλεισθέντες τὴν τοῦ Βαράκου κοιλίαν ἀπόλλυνται τὸ μὲν γὰρ κῦμα μέγα καὶ βαρὺ λίαν, ἡ δὲ θάλασσα ταραχώδης καὶ θολερὰ καὶ δίνας ἔχουσα καὶ ῥοώδεις εἰλίγγους. Ὁ δὲ βυθὸς ἔν τισι μὲν ἀπόκοπος ἔν τισι δὲ πετρώδης καὶ ἀπόξυρος, ὥστε τέμνεσθαι τὰς παρακειμένας ἀγκύρας διὰ ταχέων ἀποκοπτομένας, ἃς δὲ καὶ συντριβομένας ἐν τῷ βυθῷ. Σημεῖον δʼ αὐτῶν τοῖς ἀπὸ πελάγους ἐρχομένοις οἱ προαπαντῶντες ὄφεις ὑπερμεγέθεις καὶ μέλανες ἐν γὰρ τοῖς μετὰ ταῦτα τόποις καὶ τοῖς περὶ Βαρύγαζα μικρότεροι καὶ τῷ χρώματι χλωροὶ καὶ χρυσίζοντες ὑπαντῶσιν.",
+      "place_mentions": [
+        {
+          "surface": "Sindus River",
+          "place_key": "sindus_river",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Σίνθον ποταμὸν",
+          "place_key": "sindus_river",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Eirinon Gulf",
+          "place_key": "eirinon_gulf",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Εἰρινὸν",
+          "place_key": "eirinon_gulf",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barake",
+          "place_key": "barake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαράκην",
+          "place_key": "barake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "ἀκρωτήριον",
+          "place_key": "aromata_cape",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0041_barygaza",
+      "type": "context",
+      "title": "Barygaza",
+      "route_label": "Section 41 of 66 · context",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0041"
+      ],
+      "translation": "After Barake comes the gulf of Barygaza and the mainland of Ariake, the beginning of Mambaro's kingdom and of all India. Inland, bordering Scythia, is called Aberia, and the coast Syrastrene. The country is rich in wheat, rice, sesame oil, butter, cotton, and coarse Indian cloth made from it. Its metropolis is Minnagara, from which a very large amount of cloth is brought down to Barygaza.",
+      "greek_text": "41. Μετὰ δὲ τὸν Βαράκην εὐθύς ἐστιν ὁ Βαρυγάζων κόλπος καὶ ἡ ἤπειρος τῆς Ἀριακῆς χώρας, τῆς Μαμβάρου βασιλείας ἀρχὴ καὶ τῆς ὅλης Ἰνδικῆς οὖσα. Ταύτης τὰ μὲν μεσόγεια τῇ Σκυθίᾳ συνορίζοντα Ἀβηρία καλεῖται, τὰ δὲ παραθαλάσσια Συραστρηνή. Πολυφόρος δὲ ἡ χώρα σίτου καὶ ὀρύζης καὶ ἐλαίου σησαμίνου καὶ βουτύρου καὶ καρπάσου καὶ τῶν ἐξ αὐτῆς Ἰνδικῶν ὀθονίων τῶν χυδαίων· βουκόλια δὲ ἐν αὐτῇ πλεῖστα καὶ ἄνδρες ὑπερμεγέθεις τῷ σώματι καὶ μέλανες τῇ χροιᾷ. Μητρόπολις δὲ τῆς χώρας Μιννάγαρα, ἀφʼ ἧς καὶ πλεῖστον ὀθόνιον εἰς Βαρύγαζα κατάγεται. Σώζεται δὲ ἔτι καὶ νῦν τῆς Ἀλεξάνδρου στρατιᾶς σημεῖα περὶ τοὺς τόπους, ἱερά τε ἀρχαῖα καὶ θεμέλιοι παρεμβολῶν καὶ φρέατα μέγιστα. Ὁ δὲ παράπλους ταύτης τῆς χώρας ἀπὸ τοῦ Βαρβαρικοῦ μέχρι τοῦ κατὰ Ἀστάκαπρα πέραν βαρυγάζων ἀκρωτηρίου, τῆς λεγομένης Παπικῆς, ἐστὶ σταδίων τριτχιλίων.",
+      "place_mentions": [
+        {
+          "surface": "Barake",
+          "place_key": "barake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαράκην",
+          "place_key": "barake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Gulf of Barygaza",
+          "place_key": "gulf_of_barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων κόλπος",
+          "place_key": "gulf_of_barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ariake",
+          "place_key": "ariake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀριακῆς χώρας",
+          "place_key": "ariake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aberia",
+          "place_key": "aberia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀβηρία",
+          "place_key": "aberia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Syrastrene",
+          "place_key": "syrastrene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Συραστρηνή",
+          "place_key": "syrastrene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Minnagara",
+          "place_key": "minnagara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μιννάγαρα",
+          "place_key": "minnagara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Astakapra",
+          "place_key": "astakapra",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀστάκαπρα",
+          "place_key": "astakapra",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Papike",
+          "place_key": "papike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Παπικῆς",
+          "place_key": "papike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀριακῆς",
+          "place_key": "ariake",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "ἡ χώρα",
+          "place_key": "the_local_country_around_muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Scythia",
+          "place_key": "scythia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Minnagar",
+          "place_key": "minnagar",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "wheat",
+        "rice",
+        "sesame oil",
+        "butter",
+        "cotton",
+        "coarse Indian cloth",
+        "cloth"
+      ]
+    },
+    {
+      "step_id": "step_0042_barygaza",
+      "type": "context",
+      "title": "Barygaza",
+      "route_label": "Section 42 of 66 · context",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0042"
+      ],
+      "translation": "After this is another wave-sheltered gulf entering northward, with the island called Baiones at its mouth and, in the innermost parts, the great river called Mais. Those sailing to Barygaza cross the gulf, leaving the island just visible on the left, and head east to the mouth of the river of Barygaza, called the Namnadios.",
+      "greek_text": "42. Μεθʼ ἡς ἕτερός ἐστι κόλπος, ἔσω κυμάτων, εἰς αὐτὸν ἐνδύνων τὸν βορέαν, οὗ κατὰ μὲν τὸ στόμα νῆσός ἐστιν ἡ λεγομένη Bαιώνης, ἐν δὲ τοῖς ἐσωτάτοις τόποις μέγιστος ποταμὸς ὁ λεγόμενος Μάϊς. Τοῦτον τὸν κόλπον, τὸ πλάτος ὡς σταδίων τριακοσίων, οἱ πλέοντες εἰς Bαρύγαζα διαπερῶνται, ἐξ εὐωνύμων ἀκροφανῆ καταλιπόντες τὴν νῆσον, καὶ εἰς αὐτὴν τὴν ἀνατολὴν ἐπʼ αὐτὸ τὸ στόμα τοῦ ποταμοῦ Βαρυγάζων· λέγεται δὲ αὐτὸς ὁ ποταμὸς Ναμνάδιος.",
+      "place_mentions": [
+        {
+          "surface": "Baiones",
+          "place_key": "baiones",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Bαιώνης",
+          "place_key": "baiones",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Mais River",
+          "place_key": "mais_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μάϊς",
+          "place_key": "mais_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Bαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Namnadios River",
+          "place_key": "namnadios_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ναμνάδιος",
+          "place_key": "namnadios_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "νῆσον",
+          "place_key": "island_off_mundu",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0043_barygaza",
+      "type": "context",
+      "title": "Barygaza",
+      "route_label": "Section 43 of 66 · context",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0043"
+      ],
+      "translation": "The gulf at Barygaza is narrow and hard for ships coming from the sea to enter; they tend to fall either right or left. On the right at the gulf mouth lies the rough, spotted strip called Herone near the village of Kammoni; on the left opposite it is the cape before Astakapra, called Papike, a difficult anchorage because of the current and the rough rocky bottom that cuts anchors. Even if one reaches the gulf, the mouth of the Barygaza river is hard to find and hard to enter because of the low land and river shallows.",
+      "greek_text": "43. Ὁ δὲ κόλπος αὐτὸς ὁ κατὰ Βαρύγαζα στενὸς ὢν τοῖς ἐκ πελάγους ἐρχομένοις ἐστὶ δυσεπίβολος· ἢ γὰρ εἰς τὰ δεξιὰ ἢ εἰς τὰ εὐώνυμα παραπίπτουσιν, ᾗ γε ἐπιβολὴ κρείσσων ἐστὶ τῆς ἑτέρας. Ἀλλʼ ἐκ μὲν τῶν δεξιῶν κατʼ αὐτὸ τὸ στόμα τοῦ κόλπου παράκειται ταινία τραχεῖα καὶ διάσπιλος, Ἡρώνη λεγομένη, κατὰ Καμμωνὶ κώμην· ἐκ δὲ τῶν εὐωνύμων ἀπέναντι ταύτης τὸ πρὸ Ἀστακάπρων ἀκρωτήριον, ἡ Παπικὴ λεγομένη, δύσορμος οὖσα διά τε τὸν ῥοῦν τὸν περὶ αὐτὴν καὶ διὰ τὸ ἀποκόπτειν τὰς ἀγκύρας τραχὺν ὄντα καὶ πετρώδη τὸν βυθόν. Κἂν κατʼ αὐτὸν δέ τις ἐπιβάλῃ τὸν κόλπον, αὐτὸ τὸ στόμα τοῦ κατὰ Βαρύγαζα ποταμοῦ δυσεύρετόν ἐστι διὰ τὸ τὴν χώραν ταπεινήν εἶναι καὶ μηδὲν ἐγγύτερον ἐνεχύρως θεωρεῖσθαι· κἂν εὑρεθῇ, δυσείσβολός ἐστι διὰ τὰ περὶ αὐτὸν τενάγη τοῦ ποταμοῦ.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Herone",
+          "place_key": "herone",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἡρώνη",
+          "place_key": "herone",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Kammoni",
+          "place_key": "kammoni",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Καμμωνὶ",
+          "place_key": "kammoni",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Astakapra",
+          "place_key": "astakapra",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀστακάπρων",
+          "place_key": "astakapra",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Papike",
+          "place_key": "papike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Παπικὴ",
+          "place_key": "papike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "ἀκρωτήριον",
+          "place_key": "aromata_cape",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0044_barygaza",
+      "type": "context",
+      "title": "Barygaza",
+      "route_label": "Section 44 of 66 · context",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0044"
+      ],
+      "translation": "For this reason, around the entrance local royal fishermen go out with crews of long vessels, called trappaga and kotymba, to meet incoming ships as far as Syrastrene, and from them the ships are guided to Barygaza. They immediately turn from the gulf mouth through the shallows, tow the ships by fixed stations, lift them as the flood begins, and moor them in certain anchorages and deeper river-basin places until Barygaza, which lies on the river about three hundred stadia from the mouth.",
+      "greek_text": "44. Τούτου χάριν περὶ αὐτὸν τὸν εἴσπλουν βασιλικοὶ ἁλιεῖς ἐντόπιοι πληρώμασι μακρῶν πλοίων, ἃ λέγεται τράππαγα καὶ κότυμβα, πρὸς ἀπάντησιν ἐξέρχονται μέχρι τῆς Συραστρηνῆς, ἀφʼ ὧν ὁδηγεῖται τὰ πλοῖα μέχρι Βαρυγάζων. Κλίνουσι γὰρ εὐθὺς ἀπὸ τοῦ στόματος τοῦ κόλπου διὰ τενάγη τοῖς πληρώμασι καὶ ῥυμουλκοῦσιν αὐτὰ σταθμοῖς ἤδη τεταγμένοις, ἀρχο μένης μὲν τῆς πλήμης αἴροντες, ἱσταμένης δὲ διορμίζοντες κατά τινας ὅρμους καὶ κυθρίνους. Οἱ δὲ κύθρινοι τόποι εἰσὶ τοῦ ποταμοῦ βαθύτεροι μέχρι Βαρυγάζων· ἀπέχει γὰρ ἀπὸ τοῦ στόματος ἄων παρὰ τὸν ποταμὸν κειμένη ὡς σταδίων τριακοσίων.",
+      "place_mentions": [
+        {
+          "surface": "Syrastrene",
+          "place_key": "syrastrene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Συραστρηνῆς",
+          "place_key": "syrastrene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0045_sindus_river",
+      "type": "stop",
+      "title": "Sindus River",
+      "route_label": "Section 45 of 66 · mapped stop",
+      "focus_place_key": "sindus_river",
+      "section_refs": [
+        "section_0045"
+      ],
+      "translation": "All India has many rivers and strong tidal rises and falls, especially around Barygaza, where the sea suddenly covers and uncovers ground and drives river water back upstream for many stadia.",
+      "greek_text": "45. Πᾶσα μὲν ἡ Ἰνδικὴ χώρα ποταμοὺς ἔχει πλμίστους, ἀμπώτεις τε καὶ πλήμας μεγίστας, συναυξομένας ὑπὸ τὴν ἀνατολὴν καὶ τὴν πανσέληνον ἄχρι τριῶν ἡμερῶν, καὶ τοῖς μεταξὺ καταστήμασι τῆς σελήνης ἐλασσουμένας, πολὺ δὲ μᾶλλον ἡ κατὰ Βαρυγάζων, ὥστε αἰφνίδιον τόν τε βυθὸν δρᾶσθαι, καὶ τινα μέρη τῆς ἠπείρου, ποτὶ δὲ ξηρὰ τὰ πρὸ μικροῦ πλωῖζόμενα, τούς τε ποταμοὺς ὑπὸ τὴν εἰσβολὴν τῆς πλήμης, τοῦ πελάγους ὅλου συνωθουμένου, σφοδρότερον ἄνω φέρεσθαι τοῦ κατὰ φύσιν ῥεύματος ἐπὶ πλείστους σταδίους.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0046_sindus_river",
+      "type": "stop",
+      "title": "Sindus River",
+      "route_label": "Section 46 of 66 · mapped stop",
+      "focus_place_key": "sindus_river",
+      "section_refs": [
+        "section_0046"
+      ],
+      "translation": "Because of these tides, entry to and departure from the Barygaza market are dangerous for inexperienced ships: large vessels can be swept onto shoals, smaller ones overturned, and the incoming tide arrives with a roar like an army.",
+      "greek_text": "46. Διὸ καὶ κινδυνώδεις εἰσὶν αἱ τῶν πλοίων προσαγωγαὶ καὶ ἐξαγωγαὶ τοῖς ἀπείροις καὶ πρώτως εἰσάγουσιν εἰς τὸ ἐμπόριον. Γινομένης γὰρ ὁρμῆς ἤδη περὶ τὴν πλήμην οὐδὲν παριεμένης οὐκ ἀντέχουσιν αἱ ἄγκυραι· διὸ καὶ τὰ προληφθέντα πλοῖα τῇ ἰναίᾳ, πλαγιασθέντα ὑπὸ τῆς ὀξύτητος τοῦ ῥοὸς, ἐποκέλλει τοῖς τενάγεσι καὶ ἀνακλᾶται, τὰ δὲ μικρότερα καὶ περιτρέπεται, τινὰ δὲ καὶ περὶ τὰς διώρυχας ἀποκεκλικότα διὰ τὸ περὶ τὴν ἄμπωτιν, ὅταν μὴ διερείσῃς, τῆς πλήμης αἰφνίδιον ἐπελθούσης, ὑπὸ τῆς πρώτης κεφαλῆς τοῦ ῥοὸς ἐμπίμπλαται. Τοσαῦται γὰρ περὶ τὴν εἰσβολὴν τῆς θαλάσσης γίνονται βίαι κατὰ τὰς νεομηνίας ὑπὸ τὴν νυκτερινὴν μάλιστα πλήμην, ὥστε ἀρχομένης ἤδη τῆς εἰσαγωγῆς, ὅταν ἠρεμῇ τὸ πέλαγος, ὑπʼ αὐτοῦ φέρεσθαι τοῖς ἐπὶ τοῦ στόματος παραπλήσιον βοῇ στρατοπέδου μακρόθεν ἀκουομένῃ, καὶ μετʼ ὀλίγον αὐτὴν ἐπιτρέχειν τοῖς τενάγεσι ῥοίζῳ τὴν θάλασσαν.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0047_sindus_river",
+      "type": "stop",
+      "title": "Sindus River",
+      "route_label": "Section 47 of 66 · mapped stop",
+      "focus_place_key": "sindus_river",
+      "section_refs": [
+        "section_0047"
+      ],
+      "translation": "The inland country above Barygaza includes many peoples and regions as far as the Ganges; Alexander is said to have passed from there, and old Greek-inscribed drachmas of later rulers still circulate at Barygaza.",
+      "greek_text": "47. Ἐπίκειται δὲ τοῖς Βαρυγάζοις κατὰ τὰ μεσόγεια πλείονα ἔθνη, τό τε τῶν Ἀρατρίων καὶ Ἀραχωσίων καὶ Γανδαραίων καὶ τῆς Προκλαΐδος, ἐν ᾗ ἡ Βουκέφαλος Ἀλεξάνδρεια. Καὶ τούτων ἐπάνω μαχιμώτατον ἔθνος Βακτριανῶν, ὑπὸ βασιλέα ὄντων ἰδιότοπον. Καὶ Ἀλέξανδρος ὁρμηθεὶς ἀπὸ τῶν μερῶν τούτων ἄχρι τοῦ Γάγγους διῆλθε, καταλιπὼν τήν τε Λιμυρικήν καὶ τὰ νότια τῆς Ἰνδικῆς· ἀφʼ οὗ μέχρι νῦν ἐν Βαρυγάζοις παλαιαὶ προχωροῦσι δραχμαὶ, γράμμασιν Ἑλληνικοῖς ἐγκεχαραγμέναι ἐπίσημα τῶν μετʼ Ἀλέξανδρον βεβασιλευκότων Ἀπολλοδότου καὶ Μενάνδρου.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀλεξάνδρεια",
+          "place_key": "alexandria",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0048_barygaza",
+      "type": "context",
+      "title": "Barygaza",
+      "route_label": "Section 48 of 66 · context",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0048"
+      ],
+      "translation": "East of this inland region is Ozene, formerly a royal residence, from which goods for Barygaza and for Roman trade are brought down; nard, costus, and bdellium also come down through Proklais and adjoining Scythia from the upper country.",
+      "greek_text": "48. Ἔνι δὲ αὐτῇ καὶ ἐξ ἀνατολῆς πόλις λεγομένη Ὀζήνη, ἐν ᾗ καὶ τὰ βασίλεια πρότερον ἦν· ἀφʼ ἧς πάντα τὰ πρὸς εὐθηνίαν τῆς χώρας εἰς Βαρύγαζα καταφέρεται καὶ τὰ πρὸς ἐμπορίαν τὴν ἡμετέραν, ὀνυχίνη λιθία καὶ μουρρίνη καὶ σινδόνες Ἰνδικαὶ καὶ μολόχιναι καὶ ἱκανὸν χυδαῖον ὀθόνιον. Κατάγεται δὲ διʼ αὐτῆς καὶ ἀπὸ τῶν ἄνω τόπων ἡ διὰ Προκλαΐδος καταφερομένη νάρδος ἡ Καττυβουρίνη καὶ ἡ Πατροπαπίγη καὶ ἡ Καβαλίτη καὶ ἡ διὰ τῆς παρακειμένης Συυθίας, ὃ τε κόστος καὶ ἡ βδέλλα.",
+      "place_mentions": [
+        {
+          "surface": "Ozene",
+          "place_key": "ozene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ὀζήνη",
+          "place_key": "ozene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Proklais",
+          "place_key": "proklais",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Προκλαΐδος",
+          "place_key": "proklais",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Scythia",
+          "place_key": "scythia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Συυθίας",
+          "place_key": "scythia",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "onyx stone",
+        "murrhine stone",
+        "Indian cloth",
+        "mallow-colored cloth",
+        "ordinary cotton cloth",
+        "nard with named regional varieties",
+        "costus",
+        "bdellium"
+      ]
+    },
+    {
+      "step_id": "step_0049_barygaza",
+      "type": "context",
+      "title": "Barygaza",
+      "route_label": "Section 49 of 66 · context",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0049"
+      ],
+      "translation": "Into Barygaza are imported wines, metals, stones, textiles, aromatics, minerals, glass, and coin; special luxury goods are brought for the king. From these places are exported aromatics, ivory, stones, textiles, thread, long pepper, and other goods brought from the market-towns. Ships bound for this market sail from Egypt around July, Epiphi.",
+      "greek_text": "49. Προχωρεῖ δὲ εἰς τὸ ἐμπόριον οἶνος προηγουμένως Ἰταλικὸς καὶ Λαοδικηνὸς καὶ Ἀραβικὸς καὶ χαλκὸς καὶ κασσίτερος καὶ μόλυβδος, κοράλλιον καὶ χρυσόλιθον, ἱματισμὸς ἀπλοῦς καὶ νόθος παντοῖος, πολύμιτοι ζῶναι πηχυαῖαι, στύραξ, μελίλωτον, ὕαλος ἀργὴ, σανδαράκη, στίμμι, δηνάριον χρυσοῦν καὶ ἀργυροῦν, ἔχον ἀλλαγὴν καὶ ἐπικέρδειάν τινα πρὸς τὸ ἐντόπιον νόμισμα, μύρον οὐ βαρύτιμον οὐδὲ πολύ· τῷ δὲ βασιλεῖ κατʼ ἐκείνους τοὺς καιροὺς εἰσφερόμενα βαρύτιμα ἀργυρώματα καὶ μουσικὰ καὶ παρθένοι εὐειδεῖς πρὸς παλλακίαν καὶ διάφορος οἶνος καὶ ἱματισμὸς ἁπλοῦς πολυτελὴς καὶ μύρον ἔξοχον. Φέρεται δὲ ἀπὸ τούτων τῶν τόπων νάρδος, κόστος, βδέλλα, ἐλέφας, ὀνυχίνη λιθία καὶ μουρρίνη καὶ λύκιον καὶ ὀθόνιον παντοῖον καὶ Σηρικὸν καὶ μολόχινον καὶ νῆμα καὶ πέπερι μακρὸν καὶ τὰ ἀπὸ τῶν ἐμπορίων φερόμενα. Ἀποπλέουσι δὲ κατὰ καιρὸν οἱ ἀπὸ τῆς Aἰγύπτου εἰς τὸ ἐμπόριον ἀναγόμενοι περὶ τὸν Ἰούλιον μῆνα, ὅς ἐστιν Ἐπιφί.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "τὸ ἐμπόριον",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "Italian wine",
+        "Laodicean wine",
+        "Arabian wine",
+        "copper",
+        "tin",
+        "lead",
+        "coral",
+        "chrysolite or topaz",
+        "plain and inferior clothing",
+        "multicolored cubit-wide girdles",
+        "storax",
+        "melilot",
+        "crude glass",
+        "realgar",
+        "antimony",
+        "gold and silver denarii",
+        "modest perfume",
+        "costly silverware",
+        "fine wine for the king",
+        "costly plain clothing",
+        "choice perfume",
+        "nard",
+        "costus",
+        "bdellium",
+        "ivory",
+        "onyx stone",
+        "murrhine stone",
+        "lycium",
+        "cloth of all kinds",
+        "silk cloth",
+        "mallow-colored cloth",
+        "thread",
+        "long pepper"
+      ]
+    },
+    {
+      "step_id": "step_0050_sindus_river",
+      "type": "stop",
+      "title": "Sindus River",
+      "route_label": "Section 50 of 66 · mapped stop",
+      "focus_place_key": "sindus_river",
+      "section_refs": [
+        "section_0050"
+      ],
+      "translation": "Beyond Barygaza the coast runs north to south, called Dachinabades because the local word means south; inland to the east are deserts, mountains, many wild animals, and many peoples as far as the Ganges.",
+      "greek_text": "50. Μετὰ δὲ τὰ Βαρύγαζα εὐθέως ἡ συναφὴς ἤπειρος ἐκ τοῦ βορέου εἰς τὸν νότον παρεκτείνει· διὸ καὶ Δαχιναβάδης καλεῖται ἡ χώρα· δάχανος γὰρ καλεῖται ὁ νότος τῆ αὐτῶν γλώσσῃ. Ταύτης ἡ μὲν ὑπερκειμένη πρὸς ἀνατολὰς μεσόγειος ἐμπεριέχει χώρας τε πολλὰς καὶ ἐρήμους καὶ ὄρη μεγάλα καὶ θηρίων γένη παντοίων, παρδάλεις τε καὶ τίγρεις καὶ ἐλέφαντας καὶ δράκοντας ὑπερμεγέθεις καὶ κροκόττας καὶ κυνοκεφάλων πλεῖστα γένη, ἕθνη τε πλεῖστα καὶ πολυάνθρωπα μέχρι τοῦ Γάγγους.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "ἡ χώρα",
+          "place_key": "the_local_country_around_muza",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0051_barygaza",
+      "type": "context",
+      "title": "Barygaza",
+      "route_label": "Section 51 of 66 · context",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0051"
+      ],
+      "translation": "In Dachinabades the notable markets are Paithana, about twenty days south from Barygaza, and Tagara, about ten days farther east. Goods are carried down to Barygaza by wagons through roadless country: much onyx from Paithana, and from Tagara much common cloth, various muslins, mallow cloth, and other local cargo from the coastal regions.",
+      "greek_text": "51. Τῶν δὲ ἐν αὐτῇ τῇ Δαχιναβάδει δύο ἐστὶ τὰ διασημότατα ἐμπόρια, Παίθανα μὲν ἀπὸ Βαρυγάζων ἀπέχοντα ὁδὸν ἡμερῶν εἴκοσι πρὸς νότον, ἀπὸ δὲ ταύτης ὡς ἡμερῶν δέκα πρὸς ἀνατολὴν ἑτέρα πόλις μεγίστη Τάγαρα. Κατάγεται δὲ ἐξ αὐτῶν, πορείαις ἁμαξῶν καὶ ἀνοδίαις μεγίσταις εἰς τὰ Βαρύγαζα ἀπὸ μὲν Παιθάνων ὀνυχίνη λιθία πλείστη, ἀπὸ δὲ Ταγάρων ὀθόνιον πολὺ χυδαῖον καὶ σινδόνων παντοῖα καὶ μολόχινα καί τινα ἄλλα τοπικῶς ἐκεῖ προχωροῦντα φορτία τῶν παραθαλασσίων μερῶν. Ὁ δὲ ὅλος παράπλους μέχρι τῆς Λιμυρικῆς ἐστὶ σταδίων ἑπτακισχιλίων, πλεῖστοι δὲ εἰς Aἰγιαλόν.",
+      "place_mentions": [
+        {
+          "surface": "Dachinabades",
+          "place_key": "dachinabades",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Δαχιναβάδει",
+          "place_key": "dachinabades",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Paithana",
+          "place_key": "paithana",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Παίθανα",
+          "place_key": "paithana",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Tagara",
+          "place_key": "tagara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Τάγαρα",
+          "place_key": "tagara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Limyrike",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Λιμυρικῆς",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζων",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "onyx stone",
+        "common cloth",
+        "various muslins or cloths",
+        "mallow-colored cloth"
+      ]
+    },
+    {
+      "step_id": "step_0052_barygaza",
+      "type": "context",
+      "title": "Barygaza",
+      "route_label": "Section 52 of 66 · context",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0052"
+      ],
+      "translation": "The next local markets after Barygaza are Suppara and Calliena. Calliena was once a lawful market-town, but after Sandares took it the port was much obstructed, and Greek ships putting in there may be taken under guard to Barygaza.",
+      "greek_text": "52. Τοπικὰ δὲ ἐμπόρια κατὰ τὸ ἑξῆς κείμενα Ἀκαβάρου, Σούππαρα, Καλλίενα πόλις, ἐπὶ τῶν Σαραγάνου τοῦ πρεσβυτέρου χρόνων ἐμπόριον ἔνθεσμον γενόμενον· μετὰ γὰρ τὸ κατασχεῖν αὐτὴν Σανδένην ἐκωλύθη ἐπὶ πολὺ, καὶ γὰρ τὰ ἐκ τύχης εἰς τούτους τοὺς τόπους εἰσβάλλοντα πλοῖα Ἑλληνικὰ μετὰ φυλακῆς εἰς Βαρύγαζα εἰσάγεται.",
+      "place_mentions": [
+        {
+          "surface": "Suppara",
+          "place_key": "suppara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σούππαρα",
+          "place_key": "suppara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Calliena",
+          "place_key": "calliena",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Καλλίενα",
+          "place_key": "calliena",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0053_sesecrienae_islands",
+      "type": "stop",
+      "title": "Sesecrienae Islands",
+      "route_label": "Section 53 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0053"
+      ],
+      "translation": "After Calliena come other local markets: Semylla, Mandagora, Palaepatmae, Melizigara, Byzantium, Toparon, and Tyrannosboas; then islands near Chersonesus, pirate areas, White Island, and then Naura and Tyndis, the first markets of Limyrike, followed by the leading ports Muziris and Nelkynda.",
+      "greek_text": "53. Μετὰ δὲ Καλλίεναν ἄλλα ἐμπόρια τοπικὰ Εήμυλλα καὶ Μανδαγόρα καὶ Παλαιπάτμαι καὶ Μελιζειγάρα καὶ Βυζάντιον καὶ Τοπαρὸν καὶ Τυραννοσβόας. Εἶτα Σησεκρείεναι λεγόμεναι νῆσοι καὶ ἡ τῶν Aἰγιδίων καὶ ἡ τῶν Καινειτῶν κατὰ τὴν λεγομένην Χερσόνησον, καθʼ οὓς τόπους εἰσὶ πειραταὶ, καὶ μετὰ ταύτην Λευκὴ νῆσος. Εἶτα Νάουρα καὶ Τύνδις τὰ πρῶτα ἐμπόρια τῆς Λιμυρικῆς, καὶ μετὰ ταύτας, Μουζιρὶς καὶ Νέλκυνδα, αἱ νῦν πράσσουσαι.",
+      "place_mentions": [
+        {
+          "surface": "Calliena",
+          "place_key": "calliena",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Καλλίεναν",
+          "place_key": "calliena",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Semylla",
+          "place_key": "semylla",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Εήμυλλα",
+          "place_key": "semylla",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Mandagora",
+          "place_key": "mandagora",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μανδαγόρα",
+          "place_key": "mandagora",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Palaepatmae",
+          "place_key": "palaepatmae",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Παλαιπάτμαι",
+          "place_key": "palaepatmae",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Melizigara",
+          "place_key": "melizigara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μελιζειγάρα",
+          "place_key": "melizigara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Byzantium",
+          "place_key": "byzantium",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βυζάντιον",
+          "place_key": "byzantium",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Toparon",
+          "place_key": "toparon",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Τοπαρὸν",
+          "place_key": "toparon",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Tyrannosboas",
+          "place_key": "tyrannosboas",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Τυραννοσβόας",
+          "place_key": "tyrannosboas",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sesecrienae Islands",
+          "place_key": "sesecrienae_islands",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Σησεκρείεναι",
+          "place_key": "sesecrienae_islands",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Aegidii island",
+          "place_key": "aegidii_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aἰγιδίων",
+          "place_key": "aegidii_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Caenitae island",
+          "place_key": "caenitae_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Καινειτῶν",
+          "place_key": "caenitae_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Chersonesus",
+          "place_key": "chersonesus",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Χερσόνησον",
+          "place_key": "chersonesus",
+          "kind": "off_route"
+        },
+        {
+          "surface": "White Island",
+          "place_key": "white_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Λευκὴ νῆσος",
+          "place_key": "white_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Naura",
+          "place_key": "naura",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Νάουρα",
+          "place_key": "naura",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Tyndis",
+          "place_key": "tyndis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Τύνδις",
+          "place_key": "tyndis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Limyrike",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Λιμυρικῆς",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Muziris",
+          "place_key": "muziris",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μουζιρὶς",
+          "place_key": "muziris",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Nelkynda",
+          "place_key": "nelkynda",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Νέλκυνδα",
+          "place_key": "nelkynda",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Καλλίενα",
+          "place_key": "calliena",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0054_muziris",
+      "type": "context",
+      "title": "Muziris",
+      "route_label": "Section 54 of 66 · context",
+      "focus_place_key": "muziris",
+      "section_refs": [
+        "section_0054"
+      ],
+      "translation": "Tyndis belongs to the kingdom of Cerobothras and is a visible seaside village. Muziris, in the same kingdom, is busy with ships coming from Ariaca and with Greek ships; it lies on a river, five hundred stadia by river and sea from Tyndis and twenty stadia upstream from the shore. Nelkynda is about five hundred stadia from Muziris by river and land/sea route, belongs to the Pandion kingdom, and lies on a river about 120 stadia from the sea.",
+      "greek_text": "54. Βασιλείας δʼ ἐστὶν ἡ μὲν Τύνδις Κηπροβότρου, κώμη παραθαλάσσιος ἔνσημος· ἡ δὲ Μουζιρὶς βασιλείας μὲν τῆς αὐτῆς, ἀκμάζουσα δὲ τοῖς ἀπὸ τῆς Ἀριακῆς εἰς αὐτὴν ἐρχομένοις πλοίοις καὶ τοῖς Ἑλληνικοῖς· κεῖται δὲ παρὰ ποταμὸν, ἀπέχουσα ἀπὸ μὲν Τύνδεως διὰ τοῦ ποταμοῦ καὶ διὰ θαλάσσης σταδίους πεντακοσίους, ἀπὸ δὲ τοῦ κατʼ αὐτὴν εἴκοσι. Ἡ δὲ gentu, Νέλκυνδα σταδίους μὲν ἀπὸ Μουζιρέως ἀπέχει σχεδὸν πεντακοσίους, ὁμοίως διά τε ποταμοῦ καὶ πεζῇ καὶ διὰ θαλάσσης, βασιλείας δέ ἐστιν ἑτέρας, τῆς Πανδίονος· κεῖται δὲ καὶ αὐτὴ παρὰ ποταμὸν, ὡσεὶ ἀπὸ σταδίων ἑκατὸν εἴκοσι τῆς θαλάσσης.",
+      "place_mentions": [
+        {
+          "surface": "Tyndis",
+          "place_key": "tyndis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Τύνδις",
+          "place_key": "tyndis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Muziris",
+          "place_key": "muziris",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Μουζιρὶς",
+          "place_key": "muziris",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Ariaca",
+          "place_key": "ariaca",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀριακῆς",
+          "place_key": "ariaca",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Nelkynda",
+          "place_key": "nelkynda",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Νέλκυνδα",
+          "place_key": "nelkynda",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀριακῆς",
+          "place_key": "ariake",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0055_sesecrienae_islands",
+      "type": "stop",
+      "title": "Sesecrienae Islands",
+      "route_label": "Section 55 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0055"
+      ],
+      "translation": "At the mouth of Nelkynda's river lies another village, Bacare, where ships drop down from Nelkynda on the outward voyage and anchor offshore to take on cargo because the river is shoaly and hard to navigate. The kings of both markets live inland; black snakes with blood-red eyes are a sign for those approaching from the sea.",
+      "greek_text": "55. Ἑτέρα δὲ κατʼ αὐτὸ τὸ στόμα τοῦ ποταμοῦ πρόκειται κώμη βακαρὴ, εἰς ἣν ἀπὸ Νελκύνδων ἐπὶ τῆς ἀναγωγῆς προκαταβαίνουσι τὰ πλοῖα καὶ ἐπὶ σάλου διορμίζεται πρὸς ἀνάληψιν τῶν φορτίων διὰ δὴ τὸν ποταμὸν ἕρματα καὶ διάπλους ἔχειν ἐλαφρούς. Αὐτοὶ δὲ οἱ βασιλεῖς ἀμφοτέρων τῶν ἐμπορίων ἐν τῆ μεσογείᾳ κατοικοῦσι. Καὶ περὶ τούσδε τοὺς τόπους τοῖς ἐκ πελάγους ἐρχομένοις σημεῖον ἐπιβολῆς εἰσιν οἱ προαπαντῶντες ὄφεις, μέλανες μὲν καὶ αὐτοὶ τὴν χρόαν, βραχύτεροι δὲ καὶ δρακοντοειδεῖς τὴν κεφαλήν καὶ τοῖς ὄμμασιν αἱματώδεις.",
+      "place_mentions": [
+        {
+          "surface": "Bacare",
+          "place_key": "bacare",
+          "kind": "off_route"
+        },
+        {
+          "surface": "βακαρὴ",
+          "place_key": "bacare",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Nelkynda",
+          "place_key": "nelkynda",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Νελκύνδων",
+          "place_key": "nelkynda",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0056_section_56_trade_goods",
+      "type": "stop",
+      "title": "Section 56: trade goods",
+      "route_label": "Section 56 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0056"
+      ],
+      "translation": "Ships sailing from Egypt reach the Limyrike markets in season. Imports include money, stones, cloth, metals, wine, pigments, and grain for crews, while exports include pepper from Cottonara, pearls, ivory, Seric cloth, Gangetic nard, malabathrum, transparent stones, diamond, hyacinth, and tortoise-shell from Chryse and nearby islands.",
+      "greek_text": "56. Πλεῖ δὲ εἰς τὰ ἐμπόρια ταῦτα μεγάλα πλοῖα διὰ τὸν ὄγκον καὶ τὸ πλῆθος τοῦ πεπέρεως καὶ τοῦ μαλαβάθρου. Προχωρεῖ δὲ εἰς αὐτὴν προηγουμένως χρήματα πλεῖστα, χρυσόλιθα, ἱματισμὸς ἁπλοῦς οὐ πολὺς, πολύμιτα, στίμμι, κοράλλιον, ὕαλος ἀργὴ, χαλκὸς, κασσίτερος, μόλυβδος, σἶνος οὐ πολὺς, ὡσεὶ δὲ τοσοῦτον ὅσον ἐν Βαρυγάζοις, σανδαράκη, ἀρσενικὸν, σῑτος δὲ ὅσος ἀρκέσει τοῖς περὶ τὸ ναυκλήριον διὰ τὸ μὴ τοὺς ἐμπόρους αὐτῷ χρῆσθαι. Φέρεται δὲ πέπερι μονογενῶς ἐν ἑνὶ τόπῳ τούτων τῶν ἐμπορίων γεννώμενον πολὺ, τῇ λεγομένῃ Κοττοναρικῇ· φέρεται δὲ καὶ μαργαρίτης ἱκανὸς καὶ διάφορος καὶ ἐλέφας καὶ ὀθόνια Σηρικὰ καὶ νάρδος ἡ Γαγγητικὴ καὶ μαλάβαθρον ἐκ τῶν ἔσω τόπων εἰς αὐτὴν, καὶ λιθία διαφανὴς παντοία καὶ ἀδάμας καὶ ὑάκινθος καὶ χελώνη ἥ τε Χρυσονησιωτικὴ καὶ ἡ περὶ τὰς νήσους θηρευομένη τὰς προκειμένας αὐτῆς τῆς Λιμυρικῆς. Πλέουσι δὲ εἰς αὐ τὴν οἱ κατὰ καιρὸν ἀναγόμενοι ἀπʼ Αἰγύπτου περὶ τὸν Ἰούλιον μῆνα, ὃ ἐστιν Ἐπιφί.",
+      "place_mentions": [
+        {
+          "surface": "Limyrike",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Λιμυρικῆς",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαρυγάζοις",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Cottonara",
+          "place_key": "cottonara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κοττοναρικῇ",
+          "place_key": "cottonara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Egypt",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Αἰγύπτου",
+          "place_key": "egypt",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Chryse peninsula",
+          "place_key": "chryse_peninsula",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Χρυσονησιωτικὴ",
+          "place_key": "chryse_peninsula",
+          "kind": "off_route"
+        },
+        {
+          "surface": "τὰ ἐμπόρια ταῦτα",
+          "place_key": "these_azanian_emporia",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "money",
+        "chrysolite/topaz stones",
+        "plain clothing",
+        "figured textiles",
+        "antimony/stibium",
+        "coral",
+        "raw glass",
+        "copper",
+        "tin",
+        "lead",
+        "wine",
+        "realgar",
+        "orpiment/arsenic pigment",
+        "grain",
+        "pepper",
+        "pearls",
+        "ivory",
+        "Seric cloth",
+        "Gangetic nard",
+        "malabathrum",
+        "transparent stones",
+        "diamond",
+        "hyacinth stone",
+        "tortoise-shell"
+      ]
+    },
+    {
+      "step_id": "step_0057_sesecrienae_islands",
+      "type": "stop",
+      "title": "Sesecrienae Islands",
+      "route_label": "Section 57 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0057"
+      ],
+      "translation": "The section explains the discovery and use of the open-sea monsoon route by Hippalos and distinguishes the courses toward Limyrike, Barygaza, and Scythia.",
+      "greek_text": "57. Τοῦτον δὲ ὅλον τὸν εἰρημένον περίπλουν ἀπὸ Κανῆς καὶ τῆς Εὐδαίμονος Ἀραβίας οἱ μὲν μικροτέροις πλοίοις περικολπίζοντες ἔπλεον, πρῶτος δὲ Ἵππαλος κυβερνήτης, κατανοήσας τὴν θέσιν τῶν ἐμπορίων καὶ τὸ σχῆμα τῆς θαλάσσης, τὸν διὰ πελάγους ἐξεῦρε πλοῦν, ἀφʼ οὐ καὶ τοπικῶς ἐκ τοῦ ὠκεανοῦ φυσώντων, κατὰ τὸν καιρὸν τῶν παῤ ἡμῖν, ἐτησίων ἐν τῶ Ἰνδικῷ πελάγει ὁ λιβόνοτος φαίνεται ἵππαλος προςονομάζεσθαι ἀπὸ τῆς προσηγορίας τοῦ πρώτως ἐξευρηκότος τὸν διάπλουν . Ἀφʼ οὗ μέχρι καὶ νῦν τινὲς μὲν εὐθὺς ἀπὸ τῶν Κανῆς, τινὲς δὲ ἀπὸ τῶν Ἀρωμάτων ἀφιέντες οἱ μὲν εἰς Λιμυρικὴν πλέοντες ἐπὶ πλεῖον τραχηλίζοντες, οἱ δὲ εἰς Βαρύγαζα οἵ τε εἰς Σκυθίαν οὐ πλεῖον ἢ τρεῖς ἡμέρας ἀντέχουσι καὶ τὸ λοιπὸν παρεπίφορον πρὸς ἴδιον δρόμον ἐκ τῆς χώρας ὑψηλοὶ διὰ τοῦ ἔξωθεν γῆς παραπλέουσι τοὺς προειρημένους κόλπους.",
+      "place_mentions": [
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Scythia",
+          "place_key": "scythia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Limyrike",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0058_section_58_trade_goods",
+      "type": "stop",
+      "title": "Section 58: trade goods",
+      "route_label": "Section 58 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0058"
+      ],
+      "translation": "After Bakare comes the Pyrrhon mountain and the Paralia country; Balita has a good harbor, and Kolchoi is a city in the pearl-fishing zone under the Pandion kingdom.",
+      "greek_text": "58. Ἀπὸ δὲ Βακαρῆς τὸ λεγόμενον Πυρρὸν ὄρος ἄλλῃ παρήκει χώρα τῆ κης η Παραλίᾳ λεγομένῃ πρὸς αὐτὸν τὸν νότον ἐν ᾗ καὶ κολύμβησίς ἐστιν ὑπὸ τὸν βασιλέα Πανδίονα πινικοῦ καὶ πόλις ἡ λεγομένη Κόλχοι. Πρῶτος τόπος Βαλίτα καλούμενος ὅρμον καλὸν ἔχων καὶ κώμην παραθαλάσσιον· ἀπὸ δὲ ταύτης ἐστὶν ἕτερος τόπος τὸ Κομὰρ λεγόμενον, ἐν ᾧ τόπῳ βριάριόν ἐστι καὶ λιμὴν, εἰς ὃν οἱ βουλόμενοι τὸν μέλλοντα αὐτοῖς χρόνον ἱεροὶ γενέσθαι ἐρχόμενοι ἀπολούονται καὶ χῆροι μένουσιν αὐτοῦ· τὸ δὲ αὐτὸ καὶ γυναῖκες· ἱστορεῖται γὰρ τὴν θεὸν ἐκεῖ ἐπιμεῖναι κατά τινα χρόνον καὶ ἀπολελοῦσθαι.",
+      "place_mentions": [
+        {
+          "surface": "Bakare",
+          "place_key": "bakare",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βακαρῆς",
+          "place_key": "bakare",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Pyrrhon mountain",
+          "place_key": "pyrrhon_mountain",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Πυρρὸν ὄρος",
+          "place_key": "pyrrhon_mountain",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Paralia",
+          "place_key": "paralia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Παραλίᾳ",
+          "place_key": "paralia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Balita",
+          "place_key": "balita",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βαλίτα",
+          "place_key": "balita",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Kolchoi",
+          "place_key": "kolchoi",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κόλχοι",
+          "place_key": "kolchoi",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "pearls"
+      ]
+    },
+    {
+      "step_id": "step_0059_section_59_trade_goods",
+      "type": "stop",
+      "title": "Section 59: trade goods",
+      "route_label": "Section 59 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0059"
+      ],
+      "translation": "The coast from Komarei to Kolchoi includes pearl fisheries, and farther along the gulf pearls are gathered around Epiodoros island; cloths are exported from that district.",
+      "greek_text": "59. Ἀπὸ δὲ τοῦ Κομαρεὶ ἐκτείνουσα πρὸς τὸν νότον χώρα μέχρι Κόλχων, ἐν ᾗ κολύμβησις τοῦ πινικοῦ ἐστίν ἀπὸ δὲ κατακρισίμων κατεργάζεται· ὑπὸ τὸν βασιλέα Πανδίονά ἐστι. Μετὰ δὲ Κόλχους ἐκδέχεται πρότερος αἰγιαλὸς ἐν κόλπῳ κείμενος, ἔχων χῶρον μεσόγειον, λεγόμενον Ἀργάλου· ἐν ἑνὶ τόπῳ τερονεῖται τὸ παῤ αὐτὴν τὴν Ἠπιοδώρου νῆσον συλλεγόμενον πινικόν· φέρονται γὰρ ἐξ αὐτῆς σινδόνες,",
+      "place_mentions": [
+        {
+          "surface": "Komarei",
+          "place_key": "komarei",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κομαρεὶ",
+          "place_key": "komarei",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Kolchoi",
+          "place_key": "kolchoi",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κόλχων",
+          "place_key": "kolchoi",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Epiodoros island",
+          "place_key": "epiodoros_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἠπιοδώρου νῆσον",
+          "place_key": "epiodoros_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "νῆσον",
+          "place_key": "island_off_mundu",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "pearls",
+        "cloths/muslins"
+      ]
+    },
+    {
+      "step_id": "step_0060_sesecrienae_islands",
+      "type": "stop",
+      "title": "Sesecrienae Islands",
+      "route_label": "Section 60 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0060"
+      ],
+      "translation": "Kamara, Poduke, and Sopatma are local emporia and roadsteads. Local boats coast as far as Limyrike, while larger sewn vessels branch toward Chryse and the Ganges, and goods from Limyrike are supplied along this coast.",
+      "greek_text": "60. Τῶν δὲ τοπικῶν ἐμπορίων τε καὶ ὅρμων, εἰς οὃς οἵ τε ἀπὸ τῆς Aιμυρικῆς καὶ ἀπʼ ἄρκτου πλέοντες κατάγονται, ἐπισημότερα καὶ κατὰ τὸ ἑξῆς κείμενά ἐστιν ἐμπόρια Καμάρα καὶ Ποδούκη καὶ Σωπάτμα, ἐν οἷς τοπικὰ μέν ἐστι πλοῖα μέχρι Λιμυρικῆς παραλεγόμενα τὴν γῆν, ἕτερα ὃ ἐκ μονοξύλων πλοίων μεγίστων ἁφαῖς ἐζευγμένων, λεγόμενα σάγγαρα, τὰ δὲ εἰς τὴν Χρυσῆν καὶ εἰς τὸν Γάγγην διαίροντα κολανδιοφωντα τὰ μέγιστα. Προχωρεῖ δὲ εἰς τοὺς τόπους πάντα τὰ εἰς τὴν Aιμυρικὴν ἐργαζόμενα, καὶ σχεδὸν εἰς αὐτοὺς καταντᾷ τό τε χρῆμα τὸ ἀπʼ Aἰγύπτου φερόμενον τῷ παντὶ χρόνῳ καὶ τὰ πλεῖστα γένη πάντων τῶν ἀπὸ Λιμυρικῆς φερομένων, καὶ διὰ ταύτης τῆς παραλίας ἐπιχορηγουμένων.",
+      "place_mentions": [
+        {
+          "surface": "Kamara",
+          "place_key": "kamara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Καμάρα",
+          "place_key": "kamara",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Poduke",
+          "place_key": "poduke",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ποδούκη",
+          "place_key": "poduke",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Sopatma",
+          "place_key": "sopatma",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σωπάτμα",
+          "place_key": "sopatma",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Limyrike",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Λιμυρικῆς",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Chryse",
+          "place_key": "chryse",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Χρυσῆν",
+          "place_key": "chryse",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ganges",
+          "place_key": "ganges",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Γάγγην",
+          "place_key": "ganges",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
+    },
+    {
+      "step_id": "step_0061_section_61_trade_goods",
+      "type": "stop",
+      "title": "Section 61: trade goods",
+      "route_label": "Section 61 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0061"
+      ],
+      "translation": "Beyond the coast lies the island called Palaisimoundou, formerly Taprobane; it produces pearls, transparent stones, cloths, and tortoise-shell.",
+      "greek_text": "61. Περὶ δὲ τὴν μετʼ αὐτὴν χώραν, ἤδη πρὸς ἀνατολὴν τοῦ πλοὸς ἀπονεύοντος, εἰς πέλαγος ἔκκειται πρὸς αὐτὴν τὴν δύσιν νῆσος λεγομένη Παλαισιμούνδου, παρὰ δὲ τοῖς ἀρχαίοις αὐτῶν Ταπροβάνη. Ταύτης τὰ μὲν πρὸς βορέαν ἐστὶν ἥμερα καὶ διαπλεῖται τοῖς εἰς τὸν πλιονακιστινει καὶ σχεδὸν εἰς τὸ κατʼ αὐτῆς ἀντιπαρακείμενον Ἀζανίας παρήκει. Γίνεται δὲ ἐν αὐτῇ πινικὸν καὶ λιθία διαφανής καὶ σινδόνες καὶ χελῶναι.",
+      "place_mentions": [
+        {
+          "surface": "Palaisimoundou",
+          "place_key": "palaisimoundou",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Παλαισιμούνδου",
+          "place_key": "palaisimoundou",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Taprobane",
+          "place_key": "taprobane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ταπροβάνη",
+          "place_key": "taprobane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀζανίας",
+          "place_key": "azania",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "pearls",
+        "transparent stones",
+        "cloths/muslins",
+        "tortoise-shell"
+      ]
+    },
+    {
+      "step_id": "step_0062_section_62_trade_goods",
+      "type": "stop",
+      "title": "Section 62: trade goods",
+      "route_label": "Section 62 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0062"
+      ],
+      "translation": "Masalia lies inland and produces many cloths. Across the adjoining gulf, Desarene supplies the ivory called Bosare.",
+      "greek_text": "62. Περὶ δὲ τούτους τοὺς τόπους πολὺ τῇ μεσογείῳ παρήκουσα Μασαλία παράκειται χώρα· γίνονται ἐν αὐτῇ σινδόνες πλεῖσται. Ἀπὸ δὲ ταύτης εἰς αὐτὴν τὴν ἀνατολὴν διαπεράσαντι τὸν παρακείμενον κόλπον ἡ Δησαρηνὴ χώρα, φέρουσα ἐλέφαντα τὸν λεγόμενον βωσαρὴ, καὶ μετʼ αὐτὴν, εἰς τὸν βορέαν ἤδη ἀπονεύοντος τοῦ πλοὸς, βάρβαρα πολλὰ ἔθνη, ἐν οἷς οἱ Κιρρᾶδαι, γένος ἀνθρώπων ἐντεθλιμμένων τὴν ῥῖνα, ἀγρίων, καὶ Βαργύσων ἕτερον ἔθνος καὶ τὸ τῶν Ἱππιοπροσώπων ἢ Μακροπροσώπων, λεγόμενον ἀνθρωποφάγον εἶναι.",
+      "place_mentions": [
+        {
+          "surface": "Masalia",
+          "place_key": "masalia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μασαλία",
+          "place_key": "masalia",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Desarene",
+          "place_key": "desarene",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Δησαρηνὴ χώρα",
+          "place_key": "desarene",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "cloths/muslins",
+        "Bosare ivory"
+      ]
+    },
+    {
+      "step_id": "step_0063_section_63_trade_goods",
+      "type": "stop",
+      "title": "Section 63: trade goods",
+      "route_label": "Section 63 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0063"
+      ],
+      "translation": "The Ganges river has a same-named emporion, through which malabathrum, Gangetic nard, pearls, and the finest Gangetic cloths are carried. Chryse is described farther east, with gold-working nearby and the best tortoise-shell.",
+      "greek_text": "63. Μετὰ δὲ ταῦτα, εἰς τὴν ἀνατολὴν πλεόντων καὶ τὸν ὠκεανὸν ἐν δεξιοῖς ἐχόντων, εὐώνυμα δὲ τὰ λοιπὰ μέρη ἔξωθεν παραπλεόντων, ὁ Γάγγης ἀπαντᾷ καὶ ἡ περὶ αὐτὴν ἐσχάτη τῆς ἀνατολῆς ἤπειρος, ἡ Χρυσῆ. Ποταμὸς δέ ἐστι περὶ αὐτὴν ὁ Γάγγης λεγόμενος, καὶ αὐτὸς μέγιστος τῶν κατὰ τὴν Ἰνδικὴν, ἀπόβασίν τε καὶ ἀνάβασιν τὴν αὐτὴν ἔχων τῷ Νείλῳ, καθʼ ὃν καὶ ἐμπόριόν ἐστιν ὁμώνυμον τῷ ποταμῷ, ὁ Γάγγης, διʼ οἷ φέρεται τό τε μαλάβαθρον καὶ ἡ Γαγγητικὴ νάρδος καὶ πινικὸν καὶ σινδόνες αἱ διαφορώταται, αἱ Γαγγητικαὶ λεγόμεναι. Λέγεται δὲ καὶ χρυσωρύχια περὶ τοὺς τόπους εἶναι, νόμισμά τε χρυ σοῦ, ὁ λεγόμενος κάλτις. Κατʼ αὐτὸν δὲ τὸν ποταμὸν νῆσός ἐστιν ὠκεάνιος, ἐσχάτη τῶν πρὸς ἀνατολὴν μερῶν τῆς οἰκουμένης, ὑπʼ αὐτὸν ἀνέχοντα τὸν ἥλιον, καλουμένη Χρυσῆ, χελώνην ἔχουσα πάντων τῶν κατὰ τὴν Ἐρυθρὰν τόπων ἀρίστην.",
+      "place_mentions": [
+        {
+          "surface": "Ganges",
+          "place_key": "ganges",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Γάγγης",
+          "place_key": "ganges",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Chryse",
+          "place_key": "chryse",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Χρυσῆ",
+          "place_key": "chryse",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἰνδικὴν",
+          "place_key": "india",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "malabathrum",
+        "Gangetic nard",
+        "pearls",
+        "Gangetic muslins",
+        "gold",
+        "tortoise-shell"
+      ]
+    },
+    {
+      "step_id": "step_0064_barygaza",
+      "type": "context",
+      "title": "Barygaza",
+      "route_label": "Section 64 of 66 · context",
+      "focus_place_key": "barygaza",
+      "section_refs": [
+        "section_0064"
+      ],
+      "translation": "Thina is a great inland city from which Seric wool, thread, and cloth are brought by land through Bactria to Barygaza and again to Limyrike by way of the Ganges river; travel to Thina itself is difficult.",
+      "greek_text": "64. Μετὰ δὲ ταύτην τὴν χώραν ὑπʼ αὐτὸν ἤδη τὸν βορέαν, ἔξωθεν εἰς Θινός τινα τόπον ἀποληγούσης τῆς θαλάσσης, παράκειται ἐν αὐτῇ πόλις μεσόγειος μεγίστη, λεγομένη Θῖναι, ἀφʼ ἧς τό τε ἔριον καὶ τὸ νῆμα καὶ τὸ οόνιον τὸ Σηρικὸν εἰς τὰ Βαρύγαζα διὰ Βάκτρων πεζῇ φέρεται καὶ εἰς τὴν Λιμυρικὴν πάλιν διὰ τοῦ Γάγγου ποταμοῦ. Εἰς δὲ τὴν Θῖνα ταύτην οὐκ ἔστιν εὐχερῶς ἀπελθεῖν· σπανίως γὰρ ἀπʼ αὐτῆς τινὲς οὐ πολλοὶ ἔρχονται. Κεῖται δὲ ὁ τόπος ὑπʼ αὐτὴν τὴν μικρὰν ἄρκτον, λέγεται δὲ συνορίζειν τοῖς ἀπεστραμμένοις μέρεσι τοῦ Πόντου καὶ τῆς Κασπίας θαλάσσης, καθʼ ἣν ἡ παρακειμένη λίμνη Μαιῶτις εἰς τὸν ὠκεανὸν συναναστομοῦσα.",
+      "place_mentions": [
+        {
+          "surface": "Thina",
+          "place_key": "thina",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Θῖναι",
+          "place_key": "thina",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Barygaza",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Βαρύγαζα",
+          "place_key": "barygaza",
+          "kind": "main_route"
+        },
+        {
+          "surface": "Bactria",
+          "place_key": "bactria",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Βάκτρων",
+          "place_key": "bactria",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Limyrike",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Λιμυρικὴν",
+          "place_key": "limyrike",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ganges river",
+          "place_key": "ganges_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Γάγγου ποταμοῦ",
+          "place_key": "ganges_river",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ganges",
+          "place_key": "ganges",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "Seric wool",
+        "Seric thread",
+        "Seric cloth"
+      ]
+    },
+    {
+      "step_id": "step_0065_section_65_trade_goods",
+      "type": "stop",
+      "title": "Section 65: trade goods",
+      "route_label": "Section 65 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0065"
+      ],
+      "translation": "The Sesatai gather and process malabathrum leaves near the Thina frontier. The processed leaves are sorted into three forms by leaf size and then carried into India by the workers who prepare them.",
+      "greek_text": "65. Κατʼ ἔτος δὲ παραγίνεται ἐπὶ τὴν συνορίαν τῆς Θινὸς ἔθνος τι, τῷ μὲν σώματι κολοβοὶ καὶ σφόδρα πλατυπρόσωποι, ἐννοίαις δὲ λῷστοι αὐτοὺς δὲ λέγεσθαί φασι Σησάτας, παρομοίους ἀνημέροις· παραγίνονται σὺν γυναιξὶ καὶ τέκνοις, βαστάζοντες φορτία μεγάλα καὶ ταρπόνας ὠμαμπελίνοις παραπλησίας, εἶτʼ ἐνεπιμένουσιν ἐπί τινα τόπον τῆς συνορίας αὐτῶν καὶ τῶν ἐπὶ τῆς Θινὸς, καὶ ἑορτάζουσιν ἐπί τινας ἡμέρας, ὑποστρώσαντες ἑαυτοῖς τὰς ταρπόνας, καὶ ἀπαίρουσιν εἰς τὰ ἴδια εἰς τοὺς ἐσωτέρους τόπους. Οἱ δὲ ταῦτα δοκεύοντες τότε παραγίνονται ἐπὶ τοὺς τόπους καὶ συλλέγουσι τὰ ἐκείνων ὑποστρώματα, καὶ ἐξινιάσαντες καλάμους τοὺς λεγομένους πέτρους ἐπὶ λεπτὸν ἐπιδιπλώσαντες τὰ φύλλα καὶ σφαιροειδῆ ποιοῦντες διείρουσι ταῖς ἀπὸ τῶν καλάμων ἴναις. Γίνεται δὲ γένη τρία· ἐκ μὲν τοῦ μείζονος φύλλου τὸ ἁδρόσφαιρον μαλάβαθρον λεγόμενον, ἐκ δὲ τοῦ ὑποδεεστέρου τὸ μεσόσφαιρον, ἐκ δὲ τοῦ μικροτέρου τὸ μικρόσφαιρον. Ἔνθεν τὰ τρία μέρη τοῦ μαλαβάθρου γίνεται καὶ τότε φέρεται εἰς τὴν Ἰνδικὴν ὑπὸ τῶν κατεργαζομένων αὐτά.",
+      "place_mentions": [
+        {
+          "surface": "Thina",
+          "place_key": "thina",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Θινὸς",
+          "place_key": "thina",
+          "kind": "off_route"
+        },
+        {
+          "surface": "India",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἰνδικὴν",
+          "place_key": "india",
+          "kind": "off_route"
+        }
+      ],
+      "goods": [
+        "large-ball malabathrum",
+        "middle-ball malabathrum",
+        "small-ball malabathrum"
+      ]
+    },
+    {
+      "step_id": "step_0066_sesecrienae_islands",
+      "type": "stop",
+      "title": "Sesecrienae Islands",
+      "route_label": "Section 66 of 66 · mapped stop",
+      "focus_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0066"
+      ],
+      "translation": "The final notice describes the remoteness and difficulty of the farthest regions beyond Thina without listing a tradeable commodity or a concrete goods movement.",
+      "greek_text": "66. Τὰ δὲ μετὰ τούτους τοὺς τόπους, διά τε ὑπερβολὰς χειμώνων καὶ πάγους μεγίστους δύσβατα ὄντα, εἴτε καὶ θείᾳ τινὶ δυνάμει θεῶν, ἀνερεύνητά ἐστιν.",
+      "place_mentions": [
+        {
+          "surface": "Thina",
+          "place_key": "thina",
+          "kind": "off_route"
+        }
+      ],
+      "goods": []
     }
   ],
   "legs": [
@@ -734,6 +4397,102 @@
       "to_place_key": "mosyllon",
       "section_refs": [
         "section_0010"
+      ],
+      "distance_text": "two or three runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "mosyllon",
+      "to_place_key": "adulis",
+      "section_refs": [
+        "section_0016"
+      ],
+      "distance_text": "two runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "adulis",
+      "to_place_key": "berenike",
+      "section_refs": [
+        "section_0016"
+      ],
+      "distance_text": "two runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "berenike",
+      "to_place_key": "adulis",
+      "section_refs": [
+        "section_0019"
+      ],
+      "distance_text": "two or three runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "adulis",
+      "to_place_key": "avalites",
+      "section_refs": [
+        "section_0019"
+      ],
+      "distance_text": "two or three runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "avalites",
+      "to_place_key": "apologos",
+      "section_refs": [
+        "section_0019"
+      ],
+      "distance_text": "two or three runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "apologos",
+      "to_place_key": "oraea",
+      "section_refs": [
+        "section_0019"
+      ],
+      "distance_text": "two or three runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "oraea",
+      "to_place_key": "sindus_river",
+      "section_refs": [
+        "section_0019"
+      ],
+      "distance_text": "two or three runs",
+      "distance_value": null,
+      "distance_unit": "runs",
+      "estimated_km_at_185m_stade": null,
+      "certainty": "text_explicit"
+    },
+    {
+      "from_place_key": "sindus_river",
+      "to_place_key": "sesecrienae_islands",
+      "section_refs": [
+        "section_0019"
       ],
       "distance_text": "two or three runs",
       "distance_value": null,

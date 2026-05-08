@@ -1,0 +1,1054 @@
+# Periplus ingestion report: sections 1-66
+
+## Outputs
+
+- `raw_sections.json`: Greek text plus parsed translation records.
+- `places_authority.json`: curated authority plus generated candidates.
+- `journey_route.json`: scrollytelling route contract.
+
+## Generated story steps
+
+- Section 1: Myos Hormos (`myos_hormos`), 3 linked mention surfaces.
+- Section 2: Berenike (`berenike`), 6 linked mention surfaces.
+- Section 3: Ptolemais of the Hunts (`ptolemais_theron`), 7 linked mention surfaces.
+- Section 4: Adulis (`adulis`), 22 linked mention surfaces.
+- Section 5: Section 5: trade goods (`adulis`), 5 linked mention surfaces.
+- Section 6: Adulis (`adulis`), 9 linked mention surfaces.
+- Section 7: Avalites (`avalites`), 12 linked mention surfaces.
+- Section 8: Malao (`malao`), 6 linked mention surfaces.
+- Section 9: Mundu (`mundu`), 6 linked mention surfaces.
+- Section 10: Mosyllon (`mosyllon`), 4 linked mention surfaces.
+- Section 11: Section 11: trade goods (`mosyllon`), 12 linked mention surfaces.
+- Section 12: Section 12: trade goods (`mosyllon`), 9 linked mention surfaces.
+- Section 13: Section 13: trade goods (`mosyllon`), 6 linked mention surfaces.
+- Section 14: Section 14: trade goods (`mosyllon`), 8 linked mention surfaces.
+- Section 15: Section 15: trade goods (`mosyllon`), 19 linked mention surfaces.
+- Section 16: Section 16: trade goods (`mosyllon`), 11 linked mention surfaces.
+- Section 17: Section 17: trade goods (`adulis`), 9 linked mention surfaces.
+- Section 18: Berenike (`berenike`), 3 linked mention surfaces.
+- Section 19: Berenike (`berenike`), 10 linked mention surfaces.
+- Section 20: Berenike (`berenike`), 4 linked mention surfaces.
+- Section 21: Berenike (`berenike`), 9 linked mention surfaces.
+- Section 22: Berenike (`berenike`), 1 linked mention surfaces.
+- Section 23: Berenike (`berenike`), 6 linked mention surfaces.
+- Section 24: Section 24: trade goods (`adulis`), 11 linked mention surfaces.
+- Section 25: Avalites (`avalites`), 14 linked mention surfaces.
+- Section 26: Avalites (`avalites`), 9 linked mention surfaces.
+- Section 27: Section 27: trade goods (`avalites`), 20 linked mention surfaces.
+- Section 28: Section 28: trade goods (`avalites`), 9 linked mention surfaces.
+- Section 29: Section 29: trade goods (`avalites`), 8 linked mention surfaces.
+- Section 30: Section 30: trade goods (`avalites`), 7 linked mention surfaces.
+- Section 31: Section 31: trade goods (`avalites`), 12 linked mention surfaces.
+- Section 32: Section 32: trade goods (`avalites`), 15 linked mention surfaces.
+- Section 33: Section 33: trade goods (`avalites`), 13 linked mention surfaces.
+- Section 34: Avalites (`avalites`), 3 linked mention surfaces.
+- Section 35: Apologos (`apologos`), 18 linked mention surfaces.
+- Section 36: Section 36: trade goods (`apologos`), 13 linked mention surfaces.
+- Section 37: Oraea (`oraea`), 9 linked mention surfaces.
+- Section 38: Barbarikon (`barbarikon`), 8 linked mention surfaces.
+- Section 39: Barbarikon (`barbarikon`), 4 linked mention surfaces.
+- Section 40: Sindus River (`sindus_river`), 9 linked mention surfaces.
+- Section 41: Barygaza (`barygaza`), 24 linked mention surfaces.
+- Section 42: Barygaza (`barygaza`), 10 linked mention surfaces.
+- Section 43: Barygaza (`barygaza`), 11 linked mention surfaces.
+- Section 44: Barygaza (`barygaza`), 4 linked mention surfaces.
+- Section 45: Sindus River (`sindus_river`), 3 linked mention surfaces.
+- Section 46: Sindus River (`sindus_river`), 1 linked mention surfaces.
+- Section 47: Sindus River (`sindus_river`), 2 linked mention surfaces.
+- Section 48: Barygaza (`barygaza`), 8 linked mention surfaces.
+- Section 49: Barygaza (`barygaza`), 3 linked mention surfaces.
+- Section 50: Sindus River (`sindus_river`), 2 linked mention surfaces.
+- Section 51: Barygaza (`barygaza`), 11 linked mention surfaces.
+- Section 52: Barygaza (`barygaza`), 6 linked mention surfaces.
+- Section 53: Sesecrienae Islands (`sesecrienae_islands`), 37 linked mention surfaces.
+- Section 54: Muziris (`muziris`), 9 linked mention surfaces.
+- Section 55: Sesecrienae Islands (`sesecrienae_islands`), 4 linked mention surfaces.
+- Section 56: Section 56: trade goods (`sesecrienae_islands`), 11 linked mention surfaces.
+- Section 57: Sesecrienae Islands (`sesecrienae_islands`), 3 linked mention surfaces.
+- Section 58: Section 58: trade goods (`sesecrienae_islands`), 10 linked mention surfaces.
+- Section 59: Section 59: trade goods (`sesecrienae_islands`), 7 linked mention surfaces.
+- Section 60: Sesecrienae Islands (`sesecrienae_islands`), 12 linked mention surfaces.
+- Section 61: Section 61: trade goods (`sesecrienae_islands`), 5 linked mention surfaces.
+- Section 62: Section 62: trade goods (`sesecrienae_islands`), 4 linked mention surfaces.
+- Section 63: Section 63: trade goods (`sesecrienae_islands`), 5 linked mention surfaces.
+- Section 64: Barygaza (`barygaza`), 11 linked mention surfaces.
+- Section 65: Section 65: trade goods (`sesecrienae_islands`), 4 linked mention surfaces.
+- Section 66: Sesecrienae Islands (`sesecrienae_islands`), 1 linked mention surfaces.
+
+## Route legs
+
+- Section 2: `myos_hormos` -> `berenike` (text_explicit; 1,800 stades).
+- Section 3: `berenike` -> `ptolemais_theron` (text_explicit; about four thousand stades).
+- Section 4: `ptolemais_theron` -> `adulis` (text_explicit; about three thousand stades).
+- Section 7: `adulis` -> `avalites` (text_explicit; about four thousand stades).
+- Section 8: `avalites` -> `malao` (text_explicit; about eight hundred stades).
+- Section 9: `malao` -> `mundu` (text_explicit; two runs).
+- Section 10: `mundu` -> `mosyllon` (text_explicit; two or three runs).
+- Section 17: `mosyllon` -> `adulis` (text_explicit; two runs).
+- Section 18: `adulis` -> `berenike` (text_explicit; two runs).
+- Section 24: `berenike` -> `adulis` (text_explicit; two or three runs).
+- Section 25: `adulis` -> `avalites` (text_explicit; two or three runs).
+- Section 35: `avalites` -> `apologos` (text_explicit; two or three runs).
+- Section 37: `apologos` -> `oraea` (text_explicit; two or three runs).
+- Section 40: `oraea` -> `sindus_river` (text_explicit; two or three runs).
+- Section 53: `sindus_river` -> `sesecrienae_islands` (text_explicit; two or three runs).
+
+## New MyMaps provisional matches
+
+- Section 7: Avalites -> `avalites` using MyMaps label `Avalites`.
+- Section 8: Malao -> `malao` using MyMaps label `Malao`.
+- Section 9: Mundu -> `mundu` using MyMaps label `Mundus/ Moundou/Mundou Emporion`.
+- Section 10: Mosyllon -> `mosyllon` using MyMaps label `Mosyllum/Mosylon Emporion`.
+- Section 11: Neiloptolemaion -> `neiloptolemaion` using MyMaps label `Little Nile River/Neilopotamion/Tokwina`.
+- Section 35: Apologos -> `apologos` using MyMaps label `Apologus`.
+- Section 37: Oraea -> `oraea` using MyMaps label `Oraea`.
+- Section 38: Sindus River -> `sindus_river` using MyMaps label `Sinthus/Indus River`.
+- Section 42: Baiones -> `baiones` using MyMaps label `Baeones`.
+- Section 53: Sesecrienae Islands -> `sesecrienae_islands` using MyMaps label `Sesecrienae`.
+- Section 53: White Island -> `white_island` using MyMaps label `White Village/Leuke Kome`.
+
+## New unmapped candidates
+
+- Section 5: Barbaria -> `barbaria`.
+- Section 6: Egypt -> `egypt`.
+- Section 6: Diospolis -> `diospolis`.
+- Section 6: inland Arabia -> `inland_arabia`.
+- Section 7: Arabia -> `arabia`.
+- Section 7: Okelis -> `okelis`.
+- Section 7: Mouza -> `mouza`.
+- Section 7: Barbarian coast -> `barbarian_coast`.
+- Section 9: island off Mundu -> `island_off_mundu`.
+- Section 11: Tapatage -> `tapatage`.
+- Section 11: Cape Elephant -> `cape_elephant`.
+- Section 11: Elephant River -> `elephant_river`.
+- Section 11: Akannai -> `akannai`.
+- Section 12: Aromata emporium -> `aromata_emporium`.
+- Section 12: Aromata cape -> `aromata_cape`.
+- Section 12: Barbarian mainland -> `barbarian_mainland`.
+- Section 12: Tabae -> `tabae`.
+- Section 13: Opone -> `opone`.
+- Section 14: overseas emporia -> `overseas_emporia`.
+- Section 14: Ariake -> `ariake`.
+- Section 14: Barygaza -> `barygaza`.
+- Section 15: Azania -> `azania`.
+- Section 15: Little and Great Bluffs -> `little_and_great_bluffs`.
+- Section 15: Small and Great Beach -> `small_and_great_beach`.
+- Section 15: Sarapion -> `sarapion`.
+- Section 15: Nikon -> `nikon`.
+- Section 15: Pyralaon islands -> `pyralaon_islands`.
+- Section 15: the channel -> `the_channel`.
+- Section 15: Menuthias -> `menuthias`.
+- Section 16: Rhapta -> `rhapta`.
+- Section 16: Muza -> `muza`.
+- Section 16: First Arabia -> `first_arabia`.
+- Section 17: these Azanian emporia -> `these_azanian_emporia`.
+- Section 17: India -> `india`.
+- Section 19: Leuke Kome -> `leuke_kome`.
+- Section 19: Petra -> `petra`.
+- Section 21: overseas trade -> `overseas_trade`.
+- Section 23: Saphar -> `saphar`.
+- Section 23: Homerite territory or people -> `homerite_territory_or_people`.
+- Section 23: Sabaite territory or people -> `sabaite_territory_or_people`.
+- Section 24: the local country around Muza -> `the_local_country_around_muza`.
+- Section 24: the king and the tyrant at Muza -> `the_king_and_the_tyrant_at_muza`.
+- Section 24: Adulis side -> `adulis_side`.
+- Section 25: Arabian mainland -> `arabian_mainland`.
+- Section 25: Barbarian country near Avalites -> `barbarian_country_near_avalites`.
+- Section 25: Diodorus island -> `diodorus_island`.
+- Section 26: Eudaimon Arabia -> `eudaimon_arabia`.
+- Section 26: Alexandria -> `alexandria`.
+- Section 27: Canê -> `cane`.
+- Section 27: frankincense-bearing country -> `frankincense_bearing_country`.
+- Section 27: Bird Island -> `bird_island`.
+- Section 27: Dome Island -> `dome_island`.
+- Section 27: Sabbatha -> `sabbatha`.
+- Section 27: Scythia -> `scythia`.
+- Section 27: Omana -> `omana`.
+- Section 27: Persis -> `persis`.
+- Section 28: the king at Canê -> `the_king_at_cane`.
+- Section 29: Sachalites bay and country -> `sachalites_bay_and_country`.
+- Section 30: Syagros -> `syagros`.
+- Section 30: Dioscorida island -> `dioscorida_island`.
+- Section 31: Limyrike -> `limyrike`.
+- Section 32: Omana bay -> `omana_bay`.
+- Section 32: Moscha harbor -> `moscha_harbor`.
+- Section 32: Sachalites -> `sachalites`.
+- Section 33: Mount Asich -> `mount_asich`.
+- Section 33: Zenobius islands -> `zenobius_islands`.
+- Section 33: Sarapis island -> `sarapis_island`.
+- Section 34: Persian Sea -> `persian_sea`.
+- Section 34: Calaean Islands -> `calaean_islands`.
+- Section 35: Fair Mountain -> `fair_mountain`.
+- Section 35: Mouth of the Persian Gulf -> `mouth_of_the_persian_gulf`.
+- Section 35: Asabon Mountains -> `asabon_mountains`.
+- Section 35: Semiramis Mountain -> `semiramis_mountain`.
+- Section 35: Persian Gulf -> `persian_gulf`.
+- Section 35: Charax Pasinu -> `charax_pasinu`.
+- Section 35: Euphrates River -> `euphrates_river`.
+- Section 37: Omanitic country -> `omanitic_country`.
+- Section 37: Country of the Parsidae -> `country_of_the_parsidae`.
+- Section 37: Gulf of the Terabdoi -> `gulf_of_the_terabdoi`.
+- Section 38: Barbarikon -> `barbarikon`.
+- Section 38: Minnagar -> `minnagar`.
+- Section 40: Eirinon Gulf -> `eirinon_gulf`.
+- Section 40: Barake -> `barake`.
+- Section 41: Gulf of Barygaza -> `gulf_of_barygaza`.
+- Section 41: Aberia -> `aberia`.
+- Section 41: Syrastrene -> `syrastrene`.
+- Section 41: Minnagara -> `minnagara`.
+- Section 41: Astakapra -> `astakapra`.
+- Section 41: Papike -> `papike`.
+- Section 42: Mais River -> `mais_river`.
+- Section 42: Namnadios River -> `namnadios_river`.
+- Section 43: Herone -> `herone`.
+- Section 43: Kammoni -> `kammoni`.
+- Section 48: Ozene -> `ozene`.
+- Section 48: Proklais -> `proklais`.
+- Section 51: Dachinabades -> `dachinabades`.
+- Section 51: Paithana -> `paithana`.
+- Section 51: Tagara -> `tagara`.
+- Section 52: Suppara -> `suppara`.
+- Section 52: Calliena -> `calliena`.
+- Section 53: Semylla -> `semylla`.
+- Section 53: Mandagora -> `mandagora`.
+- Section 53: Palaepatmae -> `palaepatmae`.
+- Section 53: Melizigara -> `melizigara`.
+- Section 53: Byzantium -> `byzantium`.
+- Section 53: Toparon -> `toparon`.
+- Section 53: Tyrannosboas -> `tyrannosboas`.
+- Section 53: Aegidii island -> `aegidii_island`.
+- Section 53: Caenitae island -> `caenitae_island`.
+- Section 53: Chersonesus -> `chersonesus`.
+- Section 53: Naura -> `naura`.
+- Section 53: Tyndis -> `tyndis`.
+- Section 53: Muziris -> `muziris`.
+- Section 53: Nelkynda -> `nelkynda`.
+- Section 54: Ariaca -> `ariaca`.
+- Section 55: Bacare -> `bacare`.
+- Section 56: Cottonara -> `cottonara`.
+- Section 56: Chryse peninsula -> `chryse_peninsula`.
+- Section 58: Bakare -> `bakare`.
+- Section 58: Pyrrhon mountain -> `pyrrhon_mountain`.
+- Section 58: Paralia -> `paralia`.
+- Section 58: Balita -> `balita`.
+- Section 58: Kolchoi -> `kolchoi`.
+- Section 59: Komarei -> `komarei`.
+- Section 59: Epiodoros island -> `epiodoros_island`.
+- Section 60: Kamara -> `kamara`.
+- Section 60: Poduke -> `poduke`.
+- Section 60: Sopatma -> `sopatma`.
+- Section 60: Chryse -> `chryse`.
+- Section 60: Ganges -> `ganges`.
+- Section 61: Palaisimoundou -> `palaisimoundou`.
+- Section 61: Taprobane -> `taprobane`.
+- Section 62: Masalia -> `masalia`.
+- Section 62: Desarene -> `desarene`.
+- Section 64: Thina -> `thina`.
+- Section 64: Bactria -> `bactria`.
+- Section 64: Ganges river -> `ganges_river`.
+
+## Existing authority matches
+
+- Section 3: Ptolemais of the Hunts -> `ptolemais_theron`.
+- Section 3: Moschophagoi territory -> `moschophagoi_territory`.
+- Section 3: Adulis -> `adulis`.
+- Section 4: Adulis -> `adulis`.
+- Section 4: Ptolemais of the Hunts -> `ptolemais_theron`.
+- Section 4: Oreine island -> `oreine_island`.
+- Section 4: Diodoros island -> `diodoros_island`.
+- Section 4: Koloe -> `koloe`.
+- Section 4: Aksumite metropolis -> `aksum_metropolis`.
+- Section 4: Kyeneion -> `kyeneion`.
+- Section 4: Beyond the Nile -> `beyond_the_nile`.
+- Section 4: Alalaiou islands -> `alalaiou_islands`.
+- Section 5: Moschophagoi territory -> `moschophagoi_territory`.
+- Section 6: Adulis -> `adulis`.
+- Section 8: Avalites -> `avalites`.
+- Section 8: Arabia -> `arabia`.
+- Section 9: Malao -> `malao`.
+- Section 10: Mundu -> `mundu`.
+- Section 11: Mosyllon -> `mosyllon`.
+- Section 13: Tabae -> `tabae`.
+- Section 13: Egypt -> `egypt`.
+- Section 14: Egypt -> `egypt`.
+- Section 15: Opone -> `opone`.
+- Section 16: Azania -> `azania`.
+- Section 17: Muza -> `muza`.
+- Section 17: Adulis -> `adulis`.
+- Section 19: Berenice -> `berenike`.
+- Section 19: Myos Hormos -> `myos_hormos`.
+- Section 19: Arabia -> `arabia`.
+- Section 21: Muza -> `muza`.
+- Section 21: Berenice -> `berenike`.
+- Section 21: Barygaza -> `barygaza`.
+- Section 24: Muza -> `muza`.
+- Section 25: Okelis -> `okelis`.
+- Section 26: Okelis -> `okelis`.
+- Section 26: India -> `india`.
+- Section 26: Egypt -> `egypt`.
+- Section 27: Eudaimon Arabia -> `eudaimon_arabia`.
+- Section 27: Barygaza -> `barygaza`.
+- Section 28: Canê -> `cane`.
+- Section 28: Egypt -> `egypt`.
+- Section 28: Muza -> `muza`.
+- Section 29: Canê -> `cane`.
+- Section 29: Egypt -> `egypt`.
+- Section 30: Azania -> `azania`.
+- Section 31: Dioscorida island -> `dioscorida_island`.
+- Section 31: Muza -> `muza`.
+- Section 31: Barygaza -> `barygaza`.
+- Section 31: frankincense-bearing country -> `frankincense_bearing_country`.
+- Section 32: Syagros -> `syagros`.
+- Section 32: Canê -> `cane`.
+- Section 32: Limyrike -> `limyrike`.
+- Section 32: Barygaza -> `barygaza`.
+- Section 33: Moscha harbor -> `moscha_harbor`.
+- Section 33: Persis -> `persis`.
+- Section 33: Canê -> `cane`.
+- Section 35: Calaean Islands -> `calaean_islands`.
+- Section 36: Persis -> `persis`.
+- Section 36: Omana -> `omana`.
+- Section 36: Barygaza -> `barygaza`.
+- Section 36: Cane -> `cane`.
+- Section 36: Arabia -> `arabia`.
+- Section 38: Scythia -> `scythia`.
+- Section 39: Barbarikon -> `barbarikon`.
+- Section 40: Sindus River -> `sindus_river`.
+- Section 40: Barygaza -> `barygaza`.
+- Section 41: Barake -> `barake`.
+- Section 41: Ariake -> `ariake`.
+- Section 41: Barygaza -> `barygaza`.
+- Section 42: Barygaza -> `barygaza`.
+- Section 43: Barygaza -> `barygaza`.
+- Section 43: Astakapra -> `astakapra`.
+- Section 43: Papike -> `papike`.
+- Section 44: Syrastrene -> `syrastrene`.
+- Section 44: Barygaza -> `barygaza`.
+- Section 48: Barygaza -> `barygaza`.
+- Section 48: Scythia -> `scythia`.
+- Section 49: Barygaza -> `barygaza`.
+- Section 49: Egypt -> `egypt`.
+- Section 51: Barygaza -> `barygaza`.
+- Section 51: Limyrike -> `limyrike`.
+- Section 52: Barygaza -> `barygaza`.
+- Section 53: Calliena -> `calliena`.
+- Section 53: Limyrike -> `limyrike`.
+- Section 54: Tyndis -> `tyndis`.
+- Section 54: Muziris -> `muziris`.
+- Section 54: Nelkynda -> `nelkynda`.
+- Section 55: Nelkynda -> `nelkynda`.
+- Section 56: Limyrike -> `limyrike`.
+- Section 56: Barygaza -> `barygaza`.
+- Section 56: Egypt -> `egypt`.
+- Section 59: Kolchoi -> `kolchoi`.
+- Section 60: Limyrike -> `limyrike`.
+- Section 63: Ganges -> `ganges`.
+- Section 63: Chryse -> `chryse`.
+- Section 64: Barygaza -> `barygaza`.
+- Section 64: Limyrike -> `limyrike`.
+- Section 65: Thina -> `thina`.
+- Section 65: India -> `india`.
+
+## Authority-backed fallback mentions
+
+- Section 1: `Myos Hormos` -> `myos_hormos` (translation).
+- Section 1: `Μυὸς ὅρμος` -> `myos_hormos` (greek).
+- Section 1: `Berenike` -> `berenike` (translation).
+- Section 2: `Berenike` -> `berenike` (translation).
+- Section 2: `Barbarian country` -> `barbarian_country` (translation).
+- Section 2: `Fish-Eaters` -> `fish_eaters_red_sea` (translation).
+- Section 2: `Calf-Eaters` -> `moschophagoi_territory` (translation).
+- Section 2: `Meroe` -> `meroe` (translation).
+- Section 2: `Meroe` -> `meroe` (translation).
+- Section 2: `Μερόη` -> `meroe` (greek).
+- Section 3: `Calf-Eaters` -> `moschophagoi_territory` (translation).
+- Section 3: `Ptolemais of the Hunts` -> `ptolemais_theron` (translation).
+- Section 3: `Ptolemais of the Hunts` -> `ptolemais_theron` (translation).
+- Section 3: `Πτολεμαῒς ἡ τῶν θηρῶν` -> `ptolemais_theron` (greek).
+- Section 3: `Adulis` -> `adulis` (translation).
+- Section 4: `Fish-Eaters` -> `fish_eaters_red_sea` (translation).
+- Section 4: `Ptolemais of the Hunts` -> `ptolemais_theron` (translation).
+- Section 4: `Ptolemais of the Hunts` -> `ptolemais_theron` (translation).
+- Section 4: `Adulis` -> `adulis` (translation).
+- Section 4: `Ἀδουλὶ` -> `adulis` (greek).
+- Section 4: `Oreine` -> `oreine_island` (translation).
+- Section 4: `Diodoros island` -> `diodoros_island` (translation).
+- Section 4: `Diodoros` -> `diodoros_island` (translation).
+- Section 4: `Koloe` -> `koloe` (translation).
+- Section 4: `Koloe` -> `koloe` (translation).
+- Section 4: `Κολόη` -> `koloe` (greek).
+- Section 4: `Aksum` -> `aksum_metropolis` (translation).
+- Section 4: `Kyeneion` -> `kyeneion` (translation).
+- Section 4: `Kyeneion` -> `kyeneion` (translation).
+- Section 4: `πέραν τοῦ Νείλου` -> `beyond_the_nile` (greek).
+- Section 5: `Calf-Eaters` -> `moschophagoi_territory` (translation).
+- Section 5: `Barbaria` -> `barbaria` (translation).
+- Section 5: `Barbaria` -> `barbaria` (translation).
+- Section 5: `Bαρβαρίας` -> `barbaria` (greek).
+- Section 6: `Barbaria` -> `barbaria` (translation).
+- Section 6: `Barbaria` -> `barbaria` (translation).
+- Section 6: `Egypt` -> `egypt` (translation).
+- Section 6: `Egypt` -> `egypt` (translation).
+- Section 6: `Aἰγύπτῳ` -> `egypt` (greek).
+- Section 6: `Diospolis` -> `diospolis` (translation).
+- Section 6: `Diospolis` -> `diospolis` (translation).
+- Section 6: `Διοςπόλει` -> `diospolis` (greek).
+- Section 6: `Ἀραβικῆς` -> `inland_arabia` (greek).
+- Section 7: `Barbaria` -> `barbaria` (translation).
+- Section 7: `Barbaria` -> `barbaria` (translation).
+- Section 7: `Ἀραβικῆς` -> `inland_arabia` (greek).
+- Section 7: `Avalites` -> `avalites` (translation).
+- Section 7: `Avalites` -> `avalites` (translation).
+- Section 7: `Aὐαλίτης` -> `avalites` (greek).
+- Section 7: `Arabia` -> `arabia` (translation).
+- Section 7: `Arabia` -> `arabia` (translation).
+- Section 7: `Ἀραβικῆς` -> `arabia` (greek).
+- Section 7: `Okelis` -> `okelis` (translation).
+- Section 7: `Okelis` -> `okelis` (translation).
+- Section 7: `Ὄκηλιν` -> `okelis` (greek).
+- Section 7: `Mouza` -> `mouza` (translation).
+- Section 7: `Mouza` -> `mouza` (translation).
+- Section 7: `Μούζα` -> `mouza` (greek).
+- Section 7: `Βαρβαρικὰ` -> `barbarian_coast` (greek).
+- Section 8: `Avalites` -> `avalites` (translation).
+- Section 8: `Avalites` -> `avalites` (translation).
+- Section 8: `Arabia` -> `arabia` (translation).
+- Section 8: `Arabia` -> `arabia` (translation).
+- Section 8: `Malao` -> `malao` (translation).
+- Section 8: `Malao` -> `malao` (translation).
+- Section 8: `Μαλαὼ` -> `malao` (greek).
+- Section 9: `Malao` -> `malao` (translation).
+- Section 9: `Malao` -> `malao` (translation).
+- Section 9: `Μαλαὼ` -> `malao` (greek).
+- Section 9: `Mundu` -> `mundu` (translation).
+- Section 9: `Mundu` -> `mundu` (translation).
+- Section 9: `Μούνδου` -> `mundu` (greek).
+- Section 9: `νῆσον` -> `island_off_mundu` (greek).
+- Section 10: `Mundu` -> `mundu` (translation).
+- Section 10: `Mundu` -> `mundu` (translation).
+- Section 10: `Μούνδου` -> `mundu` (greek).
+- Section 10: `Mosyllon` -> `mosyllon` (translation).
+- Section 10: `Mosyllon` -> `mosyllon` (translation).
+- Section 10: `Μόσυλον` -> `mosyllon` (greek).
+- Section 11: `Mosyllon` -> `mosyllon` (translation).
+- Section 11: `Mosyllon` -> `mosyllon` (translation).
+- Section 11: `Neiloptolemaion` -> `neiloptolemaion` (translation).
+- Section 11: `Neiloptolemaion` -> `neiloptolemaion` (translation).
+- Section 11: `Νειλοπτολεμαῖον` -> `neiloptolemaion` (greek).
+- Section 11: `Tapatage` -> `tapatage` (translation).
+- Section 11: `Tapatage` -> `tapatage` (translation).
+- Section 11: `ταπατηγη` -> `tapatage` (greek).
+- Section 11: `Cape Elephant` -> `cape_elephant` (translation).
+- Section 11: `Cape Elephant` -> `cape_elephant` (translation).
+- Section 11: `Ἐλέφας` -> `cape_elephant` (greek).
+- Section 11: `Ἐλέφαντα` -> `elephant_river` (greek).
+- Section 11: `Akannai` -> `akannai` (translation).
+- Section 11: `Akannai` -> `akannai` (translation).
+- Section 11: `Ἀκάνναι` -> `akannai` (greek).
+- Section 12: `Barbaria` -> `barbaria` (translation).
+- Section 12: `Barbaria` -> `barbaria` (translation).
+- Section 12: `τὸ τῶν Ἀρωμάτων ἐμπόριον` -> `aromata_emporium` (greek).
+- Section 12: `ἀκρωτήριον` -> `aromata_cape` (greek).
+- Section 12: `Barbarian mainland` -> `barbarian_mainland` (translation).
+- Section 12: `Barbarian mainland` -> `barbarian_mainland` (translation).
+- Section 12: `Βαρβαρικῆς ἠπείρου` -> `barbarian_mainland` (greek).
+- Section 12: `Tabae` -> `tabae` (translation).
+- Section 12: `Tabae` -> `tabae` (translation).
+- Section 12: `Τέβαι` -> `tabae` (greek).
+- Section 13: `Egypt` -> `egypt` (translation).
+- Section 13: `Egypt` -> `egypt` (translation).
+- Section 13: `Tabae` -> `tabae` (translation).
+- Section 13: `Tabae` -> `tabae` (translation).
+- Section 13: `Opone` -> `opone` (translation).
+- Section 13: `Opone` -> `opone` (translation).
+- Section 13: `Ὀπώνη` -> `opone` (greek).
+- Section 14: `Egypt` -> `egypt` (translation).
+- Section 14: `Egypt` -> `egypt` (translation).
+- Section 14: `overseas emporia` -> `overseas_emporia` (translation).
+- Section 14: `overseas emporia` -> `overseas_emporia` (translation).
+- Section 14: `τὰ τοῦ πέραν ἐμπόρια` -> `overseas_emporia` (greek).
+- Section 14: `Ariake` -> `ariake` (translation).
+- Section 14: `Ariake` -> `ariake` (translation).
+- Section 14: `Ἀριακῆς` -> `ariake` (greek).
+- Section 14: `Barygaza` -> `barygaza` (translation).
+- Section 14: `Barygaza` -> `barygaza` (translation).
+- Section 14: `Βαρυγάζων` -> `barygaza` (greek).
+- Section 15: `Opone` -> `opone` (translation).
+- Section 15: `Opone` -> `opone` (translation).
+- Section 15: `Ὀπώνη` -> `opone` (greek).
+- Section 15: `Azania` -> `azania` (translation).
+- Section 15: `Azania` -> `azania` (translation).
+- Section 15: `Ἀζανίας` -> `azania` (greek).
+- Section 15: `Little and Great Bluffs` -> `little_and_great_bluffs` (translation).
+- Section 15: `Little and Great Bluffs` -> `little_and_great_bluffs` (translation).
+- Section 15: `μικρὰ Ἀπόκοπα καὶ μεγάλα` -> `little_and_great_bluffs` (greek).
+- Section 15: `Αἰγιαλὸς καὶ μικρὸς καὶ μέγας` -> `small_and_great_beach` (greek).
+- Section 15: `Sarapion` -> `sarapion` (translation).
+- Section 15: `Sarapion` -> `sarapion` (translation).
+- Section 15: `Σαραπίωνος` -> `sarapion` (greek).
+- Section 15: `Nikon` -> `nikon` (translation).
+- Section 15: `Nikon` -> `nikon` (translation).
+- Section 15: `Νίκωνος` -> `nikon` (greek).
+- Section 15: `Pyralaon islands` -> `pyralaon_islands` (translation).
+- Section 15: `Pyralaon islands` -> `pyralaon_islands` (translation).
+- Section 15: `Πυραλάων νήσων` -> `pyralaon_islands` (greek).
+- Section 15: `the channel` -> `the_channel` (translation).
+- Section 15: `the channel` -> `the_channel` (translation).
+- Section 15: `διώρυχος` -> `the_channel` (greek).
+- Section 15: `Menuthias` -> `menuthias` (translation).
+- Section 15: `Menuthias` -> `menuthias` (translation).
+- Section 15: `Μενουθιὰς` -> `menuthias` (greek).
+- Section 16: `Arabia` -> `arabia` (translation).
+- Section 16: `Arabia` -> `arabia` (translation).
+- Section 16: `Μούζα` -> `mouza` (greek).
+- Section 16: `Azania` -> `azania` (translation).
+- Section 16: `Azania` -> `azania` (translation).
+- Section 16: `Ἀζανίας` -> `azania` (greek).
+- Section 16: `Menuthias` -> `menuthias` (translation).
+- Section 16: `Menuthias` -> `menuthias` (translation).
+- Section 16: `Rhapta` -> `rhapta` (translation).
+- Section 16: `Rhapta` -> `rhapta` (translation).
+- Section 16: `Ῥαπτὰ` -> `rhapta` (greek).
+- Section 16: `Muza` -> `muza` (translation).
+- Section 16: `Muza` -> `muza` (translation).
+- Section 16: `Μούζα` -> `muza` (greek).
+- Section 16: `First Arabia` -> `first_arabia` (translation).
+- Section 16: `First Arabia` -> `first_arabia` (translation).
+- Section 16: `πρώτης γινομένης Ἀραβίας` -> `first_arabia` (greek).
+- Section 17: `Adulis` -> `adulis` (translation).
+- Section 17: `Μούζα` -> `mouza` (greek).
+- Section 17: `Muza` -> `muza` (translation).
+- Section 17: `Muza` -> `muza` (translation).
+- Section 17: `Μούζα` -> `muza` (greek).
+- Section 17: `τὰ ἐμπόρια ταῦτα` -> `these_azanian_emporia` (greek).
+- Section 17: `India` -> `india` (translation).
+- Section 17: `India` -> `india` (translation).
+- Section 17: `Ἰνδικὴν` -> `india` (greek).
+- Section 18: `Berenice` -> `berenike` (translation).
+- Section 18: `Azania` -> `azania` (translation).
+- Section 18: `Azania` -> `azania` (translation).
+- Section 18: `Ἀζανίας` -> `azania` (greek).
+- Section 19: `Myos Hormos` -> `myos_hormos` (translation).
+- Section 19: `Berenice` -> `berenike` (translation).
+- Section 19: `Arabia` -> `arabia` (translation).
+- Section 19: `Arabia` -> `arabia` (translation).
+- Section 19: `Leuke Kome` -> `leuke_kome` (translation).
+- Section 19: `Leuke Kome` -> `leuke_kome` (translation).
+- Section 19: `Λευκὴ κώμη` -> `leuke_kome` (greek).
+- Section 19: `Petra` -> `petra` (translation).
+- Section 19: `Petra` -> `petra` (translation).
+- Section 19: `Πέτραν` -> `petra` (greek).
+- Section 20: `Ἀραβικῆς` -> `inland_arabia` (greek).
+- Section 20: `Arabia` -> `arabia` (translation).
+- Section 20: `Arabia` -> `arabia` (translation).
+- Section 20: `Ἀραβικῆς` -> `arabia` (greek).
+- Section 20: `Leuke Kome` -> `leuke_kome` (translation).
+- Section 20: `Leuke Kome` -> `leuke_kome` (translation).
+- Section 21: `Berenice` -> `berenike` (translation).
+- Section 21: `Μούζα` -> `mouza` (greek).
+- Section 21: `Barygaza` -> `barygaza` (translation).
+- Section 21: `Barygaza` -> `barygaza` (translation).
+- Section 21: `Βαρυγάζων` -> `barygaza` (greek).
+- Section 21: `Muza` -> `muza` (translation).
+- Section 21: `Muza` -> `muza` (translation).
+- Section 21: `Μούζα` -> `muza` (greek).
+- Section 21: `overseas trade` -> `overseas_trade` (translation).
+- Section 21: `overseas trade` -> `overseas_trade` (translation).
+- Section 21: `τῇ τοῦ πέραν ἐργασίᾳ` -> `overseas_trade` (greek).
+- Section 22: `Muza` -> `muza` (translation).
+- Section 22: `Muza` -> `muza` (translation).
+- Section 23: `Saphar` -> `saphar` (translation).
+- Section 23: `Saphar` -> `saphar` (translation).
+- Section 23: `Σαφὰρ` -> `saphar` (greek).
+- Section 23: `Ὁμηρίτου` -> `homerite_territory_or_people` (greek).
+- Section 23: `Σαβαΐτου` -> `sabaite_territory_or_people` (greek).
+- Section 24: `Adulis` -> `adulis` (translation).
+- Section 24: `Ἀδουλὶ` -> `adulis` (greek).
+- Section 24: `Arabia` -> `arabia` (translation).
+- Section 24: `Arabia` -> `arabia` (translation).
+- Section 24: `Μούζα` -> `mouza` (greek).
+- Section 24: `Muza` -> `muza` (translation).
+- Section 24: `Muza` -> `muza` (translation).
+- Section 24: `Μούζα` -> `muza` (greek).
+- Section 24: `ἡ χώρα` -> `the_local_country_around_muza` (greek).
+- Section 24: `Adulis side` -> `adulis_side` (translation).
+- Section 24: `Adulis side` -> `adulis_side` (translation).
+- Section 24: `Ἀδουλὶ` -> `adulis_side` (greek).
+- Section 25: `Barbarian country` -> `barbarian_country` (translation).
+- Section 25: `Barbaria` -> `barbaria` (translation).
+- Section 25: `Barbaria` -> `barbaria` (translation).
+- Section 25: `Ἀραβικῆς` -> `inland_arabia` (greek).
+- Section 25: `Avalites` -> `avalites` (translation).
+- Section 25: `Avalites` -> `avalites` (translation).
+- Section 25: `Arabia` -> `arabia` (translation).
+- Section 25: `Arabia` -> `arabia` (translation).
+- Section 25: `Ἀραβικῆς` -> `arabia` (greek).
+- Section 25: `Okelis` -> `okelis` (translation).
+- Section 25: `Okelis` -> `okelis` (translation).
+- Section 25: `Ἀραβικῆς ἠπείρου` -> `arabian_mainland` (greek).
+- Section 25: `Aὐαλίτην Βαρβαρικῆς χώρας` -> `barbarian_country_near_avalites` (greek).
+- Section 25: `Diodorus island` -> `diodorus_island` (translation).
+- Section 25: `Diodorus island` -> `diodorus_island` (translation).
+- Section 25: `Διοδώρου` -> `diodorus_island` (greek).
+- Section 26: `Egypt` -> `egypt` (translation).
+- Section 26: `Egypt` -> `egypt` (translation).
+- Section 26: `Arabia` -> `arabia` (translation).
+- Section 26: `Arabia` -> `arabia` (translation).
+- Section 26: `Okelis` -> `okelis` (translation).
+- Section 26: `Okelis` -> `okelis` (translation).
+- Section 26: `Ὄκηλιν` -> `okelis` (greek).
+- Section 26: `India` -> `india` (translation).
+- Section 26: `India` -> `india` (translation).
+- Section 26: `Eudaimon Arabia` -> `eudaimon_arabia` (translation).
+- Section 26: `Eudaimon Arabia` -> `eudaimon_arabia` (translation).
+- Section 26: `Εὐδαίμων Ἀραβία` -> `eudaimon_arabia` (greek).
+- Section 26: `Alexandria` -> `alexandria` (translation).
+- Section 26: `Alexandria` -> `alexandria` (translation).
+- Section 26: `Ἀλεξάνδρεια` -> `alexandria` (greek).
+- Section 27: `Ἀραβικῆς` -> `inland_arabia` (greek).
+- Section 27: `Arabia` -> `arabia` (translation).
+- Section 27: `Arabia` -> `arabia` (translation).
+- Section 27: `Ἀραβικῆς` -> `arabia` (greek).
+- Section 27: `Barygaza` -> `barygaza` (translation).
+- Section 27: `Barygaza` -> `barygaza` (translation).
+- Section 27: `Βαρυγάζων` -> `barygaza` (greek).
+- Section 27: `Eudaimon Arabia` -> `eudaimon_arabia` (translation).
+- Section 27: `Eudaimon Arabia` -> `eudaimon_arabia` (translation).
+- Section 27: `Canê` -> `cane` (translation).
+- Section 27: `Canê` -> `cane` (translation).
+- Section 27: `Κανὴ` -> `cane` (greek).
+- Section 27: `frankincense-bearing country` -> `frankincense_bearing_country` (translation).
+- Section 27: `frankincense-bearing country` -> `frankincense_bearing_country` (translation).
+- Section 27: `χώρας λιβανωτοφόρου` -> `frankincense_bearing_country` (greek).
+- Section 27: `Bird Island` -> `bird_island` (translation).
+- Section 27: `Bird Island` -> `bird_island` (translation).
+- Section 27: `Dome Island` -> `dome_island` (translation).
+- Section 27: `Dome Island` -> `dome_island` (translation).
+- Section 27: `Sabbatha` -> `sabbatha` (translation).
+- Section 27: `Sabbatha` -> `sabbatha` (translation).
+- Section 27: `Scythia` -> `scythia` (translation).
+- Section 27: `Scythia` -> `scythia` (translation).
+- Section 27: `Σκυθίας` -> `scythia` (greek).
+- Section 27: `Omana` -> `omana` (translation).
+- Section 27: `Omana` -> `omana` (translation).
+- Section 27: `Ὀμάνων` -> `omana` (greek).
+- Section 27: `Persis` -> `persis` (translation).
+- Section 27: `Persis` -> `persis` (translation).
+- Section 27: `Περσίδος` -> `persis` (greek).
+- Section 28: `Egypt` -> `egypt` (translation).
+- Section 28: `Egypt` -> `egypt` (translation).
+- Section 28: `Arabia` -> `arabia` (translation).
+- Section 28: `Arabia` -> `arabia` (translation).
+- Section 28: `Μούζα` -> `mouza` (greek).
+- Section 28: `Muza` -> `muza` (translation).
+- Section 28: `Muza` -> `muza` (translation).
+- Section 28: `Μούζα` -> `muza` (greek).
+- Section 28: `Canê` -> `cane` (translation).
+- Section 28: `Canê` -> `cane` (translation).
+- Section 28: `τῷ βασιλεῖ` -> `the_king_at_cane` (greek).
+- Section 29: `Egypt` -> `egypt` (translation).
+- Section 29: `Egypt` -> `egypt` (translation).
+- Section 29: `Aἰγύπτῳ` -> `egypt` (greek).
+- Section 29: `Canê` -> `cane` (translation).
+- Section 29: `Canê` -> `cane` (translation).
+- Section 29: `Κανὴ` -> `cane` (greek).
+- Section 29: `frankincense-bearing country` -> `frankincense_bearing_country` (translation).
+- Section 29: `frankincense-bearing country` -> `frankincense_bearing_country` (translation).
+- Section 29: `Σαχαλίτης` -> `sachalites_bay_and_country` (greek).
+- Section 30: `ἀκρωτήριον` -> `aromata_cape` (greek).
+- Section 30: `Azania` -> `azania` (translation).
+- Section 30: `Azania` -> `azania` (translation).
+- Section 30: `India` -> `india` (translation).
+- Section 30: `India` -> `india` (translation).
+- Section 30: `Syagros` -> `syagros` (translation).
+- Section 30: `Syagros` -> `syagros` (translation).
+- Section 30: `Σύαγρος` -> `syagros` (greek).
+- Section 30: `Διοσκορίδου` -> `dioscorida_island` (greek).
+- Section 31: `Μούζα` -> `mouza` (greek).
+- Section 31: `Barygaza` -> `barygaza` (translation).
+- Section 31: `Barygaza` -> `barygaza` (translation).
+- Section 31: `Βαρυγάζων` -> `barygaza` (greek).
+- Section 31: `Muza` -> `muza` (translation).
+- Section 31: `Muza` -> `muza` (translation).
+- Section 31: `Μούζα` -> `muza` (greek).
+- Section 31: `India` -> `india` (translation).
+- Section 31: `India` -> `india` (translation).
+- Section 31: `Ἰνδικὴν` -> `india` (greek).
+- Section 31: `frankincense-bearing country` -> `frankincense_bearing_country` (translation).
+- Section 31: `frankincense-bearing country` -> `frankincense_bearing_country` (translation).
+- Section 31: `τῷ βασιλεῖ` -> `the_king_at_cane` (greek).
+- Section 31: `Limyrike` -> `limyrike` (translation).
+- Section 31: `Limyrike` -> `limyrike` (translation).
+- Section 32: `Barygaza` -> `barygaza` (translation).
+- Section 32: `Barygaza` -> `barygaza` (translation).
+- Section 32: `Canê` -> `cane` (translation).
+- Section 32: `Canê` -> `cane` (translation).
+- Section 32: `Omana` -> `omana` (translation).
+- Section 32: `Omana` -> `omana` (translation).
+- Section 32: `Syagros` -> `syagros` (translation).
+- Section 32: `Syagros` -> `syagros` (translation).
+- Section 32: `Limyrike` -> `limyrike` (translation).
+- Section 32: `Limyrike` -> `limyrike` (translation).
+- Section 32: `Λιμυρικῆς` -> `limyrike` (greek).
+- Section 32: `Ὄμανα` -> `omana_bay` (greek).
+- Section 32: `Moscha harbor` -> `moscha_harbor` (translation).
+- Section 32: `Moscha harbor` -> `moscha_harbor` (translation).
+- Section 32: `Μόσχα λιμὴν` -> `moscha_harbor` (greek).
+- Section 32: `Sachalites` -> `sachalites` (translation).
+- Section 32: `Sachalites` -> `sachalites` (translation).
+- Section 32: `Σαχαλίτου` -> `sachalites` (greek).
+- Section 33: `Fish-Eaters` -> `fish_eaters_red_sea` (translation).
+- Section 33: `Canê` -> `cane` (translation).
+- Section 33: `Canê` -> `cane` (translation).
+- Section 33: `Persis` -> `persis` (translation).
+- Section 33: `Persis` -> `persis` (translation).
+- Section 33: `Περσίδος` -> `persis` (greek).
+- Section 33: `Moscha harbor` -> `moscha_harbor` (translation).
+- Section 33: `Moscha harbor` -> `moscha_harbor` (translation).
+- Section 33: `Mount Asich` -> `mount_asich` (translation).
+- Section 33: `Mount Asich` -> `mount_asich` (translation).
+- Section 33: `Ἀσὶχ ὄρος` -> `mount_asich` (greek).
+- Section 33: `Zenobius islands` -> `zenobius_islands` (translation).
+- Section 33: `Zenobius islands` -> `zenobius_islands` (translation).
+- Section 33: `Ζηνοβίου` -> `zenobius_islands` (greek).
+- Section 33: `Σαράπιδος` -> `sarapis_island` (greek).
+- Section 34: `Persian Sea` -> `persian_sea` (translation).
+- Section 34: `Persian Sea` -> `persian_sea` (translation).
+- Section 34: `Περσικῆς θαλάσσης` -> `persian_sea` (greek).
+- Section 34: `Calaean Islands` -> `calaean_islands` (translation).
+- Section 34: `Calaean Islands` -> `calaean_islands` (translation).
+- Section 35: `Calaean Islands` -> `calaean_islands` (translation).
+- Section 35: `Calaean Islands` -> `calaean_islands` (translation).
+- Section 35: `Fair Mountain` -> `fair_mountain` (translation).
+- Section 35: `Fair Mountain` -> `fair_mountain` (translation).
+- Section 35: `Καλὸν ὄρος` -> `fair_mountain` (greek).
+- Section 35: `στόμα τῆς Περσικῆς` -> `mouth_of_the_persian_gulf` (greek).
+- Section 35: `Ἀσαβῶν` -> `asabon_mountains` (greek).
+- Section 35: `Σεμιράμεως` -> `semiramis_mountain` (greek).
+- Section 35: `Persian Gulf` -> `persian_gulf` (translation).
+- Section 35: `Persian Gulf` -> `persian_gulf` (translation).
+- Section 35: `Περσικὸς κόλπος` -> `persian_gulf` (greek).
+- Section 35: `Apologos` -> `apologos` (translation).
+- Section 35: `Apologos` -> `apologos` (translation).
+- Section 35: `Ἀπολόγου` -> `apologos` (greek).
+- Section 35: `Charax Pasinu` -> `charax_pasinu` (translation).
+- Section 35: `Charax Pasinu` -> `charax_pasinu` (translation).
+- Section 35: `Πασίνου Χάρακα` -> `charax_pasinu` (greek).
+- Section 35: `Εὐφράτην` -> `euphrates_river` (greek).
+- Section 36: `Arabia` -> `arabia` (translation).
+- Section 36: `Arabia` -> `arabia` (translation).
+- Section 36: `Barygaza` -> `barygaza` (translation).
+- Section 36: `Barygaza` -> `barygaza` (translation).
+- Section 36: `Βαρυγάζων` -> `barygaza` (greek).
+- Section 36: `India` -> `india` (translation).
+- Section 36: `India` -> `india` (translation).
+- Section 36: `Omana` -> `omana` (translation).
+- Section 36: `Omana` -> `omana` (translation).
+- Section 36: `Ὀμάνων` -> `omana` (greek).
+- Section 36: `Περσίδος` -> `persis` (greek).
+- Section 36: `Ὄμανα` -> `omana_bay` (greek).
+- Section 37: `ἡ χώρα` -> `the_local_country_around_muza` (greek).
+- Section 37: `Omanitic country` -> `omanitic_country` (translation).
+- Section 37: `Omanitic country` -> `omanitic_country` (translation).
+- Section 37: `Ὀμανιτικὴν χώραν` -> `omanitic_country` (greek).
+- Section 37: `Παρσιδῶν` -> `country_of_the_parsidae` (greek).
+- Section 37: `κόλπος τῶν Τεράβδων` -> `gulf_of_the_terabdoi` (greek).
+- Section 37: `Oraea` -> `oraea` (translation).
+- Section 37: `Oraea` -> `oraea` (translation).
+- Section 37: `Ὠραία` -> `oraea` (greek).
+- Section 38: `Scythia` -> `scythia` (translation).
+- Section 38: `Scythia` -> `scythia` (translation).
+- Section 38: `Σκυθίας` -> `scythia` (greek).
+- Section 38: `Σίνθος` -> `sindus_river` (greek).
+- Section 38: `Barbarikon` -> `barbarikon` (translation).
+- Section 38: `Barbarikon` -> `barbarikon` (translation).
+- Section 38: `Βαρβαρικόν` -> `barbarikon` (greek).
+- Section 38: `Minnagar` -> `minnagar` (translation).
+- Section 38: `Minnagar` -> `minnagar` (translation).
+- Section 38: `Μινναγάρ` -> `minnagar` (greek).
+- Section 39: `India` -> `india` (translation).
+- Section 39: `India` -> `india` (translation).
+- Section 39: `τῷ βασιλεῖ` -> `the_king_at_cane` (greek).
+- Section 39: `Barbarikon` -> `barbarikon` (translation).
+- Section 39: `Barbarikon` -> `barbarikon` (translation).
+- Section 40: `ἀκρωτήριον` -> `aromata_cape` (greek).
+- Section 40: `Sindus River` -> `sindus_river` (translation).
+- Section 40: `Sindus River` -> `sindus_river` (translation).
+- Section 40: `Εἰρινὸν` -> `eirinon_gulf` (greek).
+- Section 40: `Barake` -> `barake` (translation).
+- Section 40: `Barake` -> `barake` (translation).
+- Section 40: `Βαράκην` -> `barake` (greek).
+- Section 41: `Ariake` -> `ariake` (translation).
+- Section 41: `Ariake` -> `ariake` (translation).
+- Section 41: `Ἀριακῆς` -> `ariake` (greek).
+- Section 41: `Barygaza` -> `barygaza` (translation).
+- Section 41: `Barygaza` -> `barygaza` (translation).
+- Section 41: `Βαρυγάζων` -> `barygaza` (greek).
+- Section 41: `India` -> `india` (translation).
+- Section 41: `India` -> `india` (translation).
+- Section 41: `ἡ χώρα` -> `the_local_country_around_muza` (greek).
+- Section 41: `Scythia` -> `scythia` (translation).
+- Section 41: `Scythia` -> `scythia` (translation).
+- Section 41: `Minnagar` -> `minnagar` (translation).
+- Section 41: `Minnagar` -> `minnagar` (translation).
+- Section 41: `Barake` -> `barake` (translation).
+- Section 41: `Barake` -> `barake` (translation).
+- Section 41: `Βαράκην` -> `barake` (greek).
+- Section 41: `Βαρυγάζων κόλπος` -> `gulf_of_barygaza` (greek).
+- Section 41: `Aberia` -> `aberia` (translation).
+- Section 41: `Aberia` -> `aberia` (translation).
+- Section 41: `Ἀβηρία` -> `aberia` (greek).
+- Section 41: `Syrastrene` -> `syrastrene` (translation).
+- Section 41: `Syrastrene` -> `syrastrene` (translation).
+- Section 41: `Συραστρηνή` -> `syrastrene` (greek).
+- Section 41: `Minnagara` -> `minnagara` (translation).
+- Section 41: `Minnagara` -> `minnagara` (translation).
+- Section 41: `Μιννάγαρα` -> `minnagara` (greek).
+- Section 41: `Ἀστάκαπρα` -> `astakapra` (greek).
+- Section 41: `Παπικῆς` -> `papike` (greek).
+- Section 42: `νῆσον` -> `island_off_mundu` (greek).
+- Section 42: `Barygaza` -> `barygaza` (translation).
+- Section 42: `Barygaza` -> `barygaza` (translation).
+- Section 42: `Βαρυγάζων` -> `barygaza` (greek).
+- Section 42: `Baiones` -> `baiones` (translation).
+- Section 42: `Baiones` -> `baiones` (translation).
+- Section 42: `Bαιώνης` -> `baiones` (greek).
+- Section 42: `Μάϊς` -> `mais_river` (greek).
+- Section 42: `Ναμνάδιος` -> `namnadios_river` (greek).
+- Section 43: `ἀκρωτήριον` -> `aromata_cape` (greek).
+- Section 43: `Barygaza` -> `barygaza` (translation).
+- Section 43: `Barygaza` -> `barygaza` (translation).
+- Section 43: `Astakapra` -> `astakapra` (translation).
+- Section 43: `Astakapra` -> `astakapra` (translation).
+- Section 43: `Papike` -> `papike` (translation).
+- Section 43: `Papike` -> `papike` (translation).
+- Section 43: `Herone` -> `herone` (translation).
+- Section 43: `Herone` -> `herone` (translation).
+- Section 43: `Ἡρώνη` -> `herone` (greek).
+- Section 43: `Kammoni` -> `kammoni` (translation).
+- Section 43: `Kammoni` -> `kammoni` (translation).
+- Section 43: `Καμμωνὶ` -> `kammoni` (greek).
+- Section 44: `Barygaza` -> `barygaza` (translation).
+- Section 44: `Barygaza` -> `barygaza` (translation).
+- Section 44: `Βαρυγάζων` -> `barygaza` (greek).
+- Section 44: `Syrastrene` -> `syrastrene` (translation).
+- Section 44: `Syrastrene` -> `syrastrene` (translation).
+- Section 45: `Barygaza` -> `barygaza` (translation).
+- Section 45: `Barygaza` -> `barygaza` (translation).
+- Section 45: `Βαρυγάζων` -> `barygaza` (greek).
+- Section 45: `India` -> `india` (translation).
+- Section 45: `India` -> `india` (translation).
+- Section 46: `Barygaza` -> `barygaza` (translation).
+- Section 46: `Barygaza` -> `barygaza` (translation).
+- Section 47: `Barygaza` -> `barygaza` (translation).
+- Section 47: `Barygaza` -> `barygaza` (translation).
+- Section 47: `Ἀλεξάνδρεια` -> `alexandria` (greek).
+- Section 48: `Barygaza` -> `barygaza` (translation).
+- Section 48: `Barygaza` -> `barygaza` (translation).
+- Section 48: `Scythia` -> `scythia` (translation).
+- Section 48: `Scythia` -> `scythia` (translation).
+- Section 48: `Ozene` -> `ozene` (translation).
+- Section 48: `Ozene` -> `ozene` (translation).
+- Section 48: `Ὀζήνη` -> `ozene` (greek).
+- Section 48: `Proklais` -> `proklais` (translation).
+- Section 48: `Proklais` -> `proklais` (translation).
+- Section 48: `Προκλαΐδος` -> `proklais` (greek).
+- Section 49: `Egypt` -> `egypt` (translation).
+- Section 49: `Egypt` -> `egypt` (translation).
+- Section 49: `Barygaza` -> `barygaza` (translation).
+- Section 49: `Barygaza` -> `barygaza` (translation).
+- Section 50: `Barygaza` -> `barygaza` (translation).
+- Section 50: `Barygaza` -> `barygaza` (translation).
+- Section 50: `ἡ χώρα` -> `the_local_country_around_muza` (greek).
+- Section 51: `Barygaza` -> `barygaza` (translation).
+- Section 51: `Barygaza` -> `barygaza` (translation).
+- Section 51: `Βαρυγάζων` -> `barygaza` (greek).
+- Section 51: `Λιμυρικῆς` -> `limyrike` (greek).
+- Section 51: `Dachinabades` -> `dachinabades` (translation).
+- Section 51: `Dachinabades` -> `dachinabades` (translation).
+- Section 51: `Δαχιναβάδει` -> `dachinabades` (greek).
+- Section 51: `Paithana` -> `paithana` (translation).
+- Section 51: `Paithana` -> `paithana` (translation).
+- Section 51: `Παίθανα` -> `paithana` (greek).
+- Section 51: `Tagara` -> `tagara` (translation).
+- Section 51: `Tagara` -> `tagara` (translation).
+- Section 51: `Τάγαρα` -> `tagara` (greek).
+- Section 52: `Barygaza` -> `barygaza` (translation).
+- Section 52: `Barygaza` -> `barygaza` (translation).
+- Section 52: `Suppara` -> `suppara` (translation).
+- Section 52: `Suppara` -> `suppara` (translation).
+- Section 52: `Σούππαρα` -> `suppara` (greek).
+- Section 52: `Calliena` -> `calliena` (translation).
+- Section 52: `Calliena` -> `calliena` (translation).
+- Section 52: `Καλλίενα` -> `calliena` (greek).
+- Section 53: `Limyrike` -> `limyrike` (translation).
+- Section 53: `Limyrike` -> `limyrike` (translation).
+- Section 53: `Λιμυρικῆς` -> `limyrike` (greek).
+- Section 53: `Calliena` -> `calliena` (translation).
+- Section 53: `Calliena` -> `calliena` (translation).
+- Section 53: `Καλλίενα` -> `calliena` (greek).
+- Section 53: `Semylla` -> `semylla` (translation).
+- Section 53: `Semylla` -> `semylla` (translation).
+- Section 53: `Εήμυλλα` -> `semylla` (greek).
+- Section 53: `Mandagora` -> `mandagora` (translation).
+- Section 53: `Mandagora` -> `mandagora` (translation).
+- Section 53: `Μανδαγόρα` -> `mandagora` (greek).
+- Section 53: `Palaepatmae` -> `palaepatmae` (translation).
+- Section 53: `Palaepatmae` -> `palaepatmae` (translation).
+- Section 53: `Παλαιπάτμαι` -> `palaepatmae` (greek).
+- Section 53: `Melizigara` -> `melizigara` (translation).
+- Section 53: `Melizigara` -> `melizigara` (translation).
+- Section 53: `Μελιζειγάρα` -> `melizigara` (greek).
+- Section 53: `Byzantium` -> `byzantium` (translation).
+- Section 53: `Byzantium` -> `byzantium` (translation).
+- Section 53: `Βυζάντιον` -> `byzantium` (greek).
+- Section 53: `Toparon` -> `toparon` (translation).
+- Section 53: `Toparon` -> `toparon` (translation).
+- Section 53: `Τοπαρὸν` -> `toparon` (greek).
+- Section 53: `Tyrannosboas` -> `tyrannosboas` (translation).
+- Section 53: `Tyrannosboas` -> `tyrannosboas` (translation).
+- Section 53: `Τυραννοσβόας` -> `tyrannosboas` (greek).
+- Section 53: `Σησεκρείεναι` -> `sesecrienae_islands` (greek).
+- Section 53: `Aἰγιδίων` -> `aegidii_island` (greek).
+- Section 53: `Καινειτῶν` -> `caenitae_island` (greek).
+- Section 53: `Chersonesus` -> `chersonesus` (translation).
+- Section 53: `Chersonesus` -> `chersonesus` (translation).
+- Section 53: `Χερσόνησον` -> `chersonesus` (greek).
+- Section 53: `White Island` -> `white_island` (translation).
+- Section 53: `White Island` -> `white_island` (translation).
+- Section 53: `Λευκὴ νῆσος` -> `white_island` (greek).
+- Section 53: `Naura` -> `naura` (translation).
+- Section 53: `Naura` -> `naura` (translation).
+- Section 53: `Νάουρα` -> `naura` (greek).
+- Section 53: `Tyndis` -> `tyndis` (translation).
+- Section 53: `Tyndis` -> `tyndis` (translation).
+- Section 53: `Τύνδις` -> `tyndis` (greek).
+- Section 53: `Muziris` -> `muziris` (translation).
+- Section 53: `Muziris` -> `muziris` (translation).
+- Section 53: `Μουζιρὶς` -> `muziris` (greek).
+- Section 53: `Nelkynda` -> `nelkynda` (translation).
+- Section 53: `Nelkynda` -> `nelkynda` (translation).
+- Section 53: `Νέλκυνδα` -> `nelkynda` (greek).
+- Section 54: `Ἀριακῆς` -> `ariake` (greek).
+- Section 54: `Tyndis` -> `tyndis` (translation).
+- Section 54: `Tyndis` -> `tyndis` (translation).
+- Section 54: `Τύνδις` -> `tyndis` (greek).
+- Section 54: `Muziris` -> `muziris` (translation).
+- Section 54: `Muziris` -> `muziris` (translation).
+- Section 54: `Μουζιρὶς` -> `muziris` (greek).
+- Section 54: `Nelkynda` -> `nelkynda` (translation).
+- Section 54: `Nelkynda` -> `nelkynda` (translation).
+- Section 54: `Νέλκυνδα` -> `nelkynda` (greek).
+- Section 54: `Ariaca` -> `ariaca` (translation).
+- Section 54: `Ariaca` -> `ariaca` (translation).
+- Section 54: `Ἀριακῆς` -> `ariaca` (greek).
+- Section 55: `Nelkynda` -> `nelkynda` (translation).
+- Section 55: `Nelkynda` -> `nelkynda` (translation).
+- Section 55: `Bacare` -> `bacare` (translation).
+- Section 55: `Bacare` -> `bacare` (translation).
+- Section 55: `βακαρὴ` -> `bacare` (greek).
+- Section 56: `Egypt` -> `egypt` (translation).
+- Section 56: `Egypt` -> `egypt` (translation).
+- Section 56: `τὰ ἐμπόρια ταῦτα` -> `these_azanian_emporia` (greek).
+- Section 56: `Limyrike` -> `limyrike` (translation).
+- Section 56: `Limyrike` -> `limyrike` (translation).
+- Section 56: `Λιμυρικῆς` -> `limyrike` (greek).
+- Section 56: `Cottonara` -> `cottonara` (translation).
+- Section 56: `Cottonara` -> `cottonara` (translation).
+- Section 56: `Κοττοναρικῇ` -> `cottonara` (greek).
+- Section 56: `Χρυσονησιωτικὴ` -> `chryse_peninsula` (greek).
+- Section 57: `Barygaza` -> `barygaza` (translation).
+- Section 57: `Barygaza` -> `barygaza` (translation).
+- Section 57: `Scythia` -> `scythia` (translation).
+- Section 57: `Scythia` -> `scythia` (translation).
+- Section 57: `Limyrike` -> `limyrike` (translation).
+- Section 57: `Limyrike` -> `limyrike` (translation).
+- Section 58: `Bakare` -> `bakare` (translation).
+- Section 58: `Bakare` -> `bakare` (translation).
+- Section 58: `Βακαρῆς` -> `bakare` (greek).
+- Section 58: `Pyrrhon mountain` -> `pyrrhon_mountain` (translation).
+- Section 58: `Pyrrhon mountain` -> `pyrrhon_mountain` (translation).
+- Section 58: `Πυρρὸν ὄρος` -> `pyrrhon_mountain` (greek).
+- Section 58: `Paralia` -> `paralia` (translation).
+- Section 58: `Paralia` -> `paralia` (translation).
+- Section 58: `Παραλίᾳ` -> `paralia` (greek).
+- Section 58: `Balita` -> `balita` (translation).
+- Section 58: `Balita` -> `balita` (translation).
+- Section 58: `Βαλίτα` -> `balita` (greek).
+- Section 58: `Kolchoi` -> `kolchoi` (translation).
+- Section 58: `Kolchoi` -> `kolchoi` (translation).
+- Section 58: `Κόλχοι` -> `kolchoi` (greek).
+- Section 59: `νῆσον` -> `island_off_mundu` (greek).
+- Section 59: `Kolchoi` -> `kolchoi` (translation).
+- Section 59: `Kolchoi` -> `kolchoi` (translation).
+- Section 59: `Komarei` -> `komarei` (translation).
+- Section 59: `Komarei` -> `komarei` (translation).
+- Section 59: `Κομαρεὶ` -> `komarei` (greek).
+- Section 59: `Epiodoros island` -> `epiodoros_island` (translation).
+- Section 59: `Epiodoros island` -> `epiodoros_island` (translation).
+- Section 59: `Ἠπιοδώρου νῆσον` -> `epiodoros_island` (greek).
+- Section 60: `Limyrike` -> `limyrike` (translation).
+- Section 60: `Limyrike` -> `limyrike` (translation).
+- Section 60: `Λιμυρικῆς` -> `limyrike` (greek).
+- Section 60: `Kamara` -> `kamara` (translation).
+- Section 60: `Kamara` -> `kamara` (translation).
+- Section 60: `Καμάρα` -> `kamara` (greek).
+- Section 60: `Poduke` -> `poduke` (translation).
+- Section 60: `Poduke` -> `poduke` (translation).
+- Section 60: `Ποδούκη` -> `poduke` (greek).
+- Section 60: `Sopatma` -> `sopatma` (translation).
+- Section 60: `Sopatma` -> `sopatma` (translation).
+- Section 60: `Σωπάτμα` -> `sopatma` (greek).
+- Section 60: `Chryse` -> `chryse` (translation).
+- Section 60: `Chryse` -> `chryse` (translation).
+- Section 60: `Χρυσῆν` -> `chryse` (greek).
+- Section 60: `Ganges` -> `ganges` (translation).
+- Section 60: `Ganges` -> `ganges` (translation).
+- Section 60: `Γάγγην` -> `ganges` (greek).
+- Section 61: `Ἀζανίας` -> `azania` (greek).
+- Section 61: `Palaisimoundou` -> `palaisimoundou` (translation).
+- Section 61: `Palaisimoundou` -> `palaisimoundou` (translation).
+- Section 61: `Παλαισιμούνδου` -> `palaisimoundou` (greek).
+- Section 61: `Taprobane` -> `taprobane` (translation).
+- Section 61: `Taprobane` -> `taprobane` (translation).
+- Section 61: `Ταπροβάνη` -> `taprobane` (greek).
+- Section 62: `Masalia` -> `masalia` (translation).
+- Section 62: `Masalia` -> `masalia` (translation).
+- Section 62: `Μασαλία` -> `masalia` (greek).
+- Section 62: `Desarene` -> `desarene` (translation).
+- Section 62: `Desarene` -> `desarene` (translation).
+- Section 62: `Δησαρηνὴ χώρα` -> `desarene` (greek).
+- Section 63: `Ἰνδικὴν` -> `india` (greek).
+- Section 63: `Chryse` -> `chryse` (translation).
+- Section 63: `Chryse` -> `chryse` (translation).
+- Section 63: `Ganges` -> `ganges` (translation).
+- Section 63: `Ganges` -> `ganges` (translation).
+- Section 64: `Barygaza` -> `barygaza` (translation).
+- Section 64: `Barygaza` -> `barygaza` (translation).
+- Section 64: `Limyrike` -> `limyrike` (translation).
+- Section 64: `Limyrike` -> `limyrike` (translation).
+- Section 64: `Ganges` -> `ganges` (translation).
+- Section 64: `Ganges` -> `ganges` (translation).
+- Section 64: `Thina` -> `thina` (translation).
+- Section 64: `Thina` -> `thina` (translation).
+- Section 64: `Θῖναι` -> `thina` (greek).
+- Section 64: `Bactria` -> `bactria` (translation).
+- Section 64: `Bactria` -> `bactria` (translation).
+- Section 64: `Βάκτρων` -> `bactria` (greek).
+- Section 64: `Ganges river` -> `ganges_river` (translation).
+- Section 64: `Ganges river` -> `ganges_river` (translation).
+- Section 64: `Γάγγου ποταμοῦ` -> `ganges_river` (greek).
+- Section 65: `India` -> `india` (translation).
+- Section 65: `India` -> `india` (translation).
+- Section 65: `Ἰνδικὴν` -> `india` (greek).
+- Section 65: `Thina` -> `thina` (translation).
+- Section 65: `Thina` -> `thina` (translation).
+- Section 66: `Thina` -> `thina` (translation).
+- Section 66: `Thina` -> `thina` (translation).
+
+## Review notes
+
+- Main route keys: `myos_hormos`, `berenike`, `ptolemais_theron`, `adulis`, `avalites`, `malao`, `mundu`, `mosyllon`, `apologos`, `oraea`, `sindus_river`, `sesecrienae_islands`.
+- Places without Pleiades IDs: 154.
+- Provisional MyMaps coordinate records: 11.
+- MyMaps coordinates are provisional visual aids, not Pleiades identifications.

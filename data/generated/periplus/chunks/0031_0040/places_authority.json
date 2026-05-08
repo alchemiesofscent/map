@@ -307,12 +307,12 @@
       "Dioscorida island"
     ],
     "place_type": "island",
-    "lat": null,
-    "lon": null,
+    "lat": 12.447305,
+    "lon": 53.811035,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Dioscorida' (periplus-0031-dioscorida-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 31: Island where visiting traders exchange goods and load tortoise shell."
   },
   {
@@ -325,12 +325,12 @@
       "Muza"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 13.320302,
+    "lon": 43.247315,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Muza/Al Mokha' (periplus-0031-muza-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 31: Some traders come from Muza."
   },
   {
@@ -348,7 +348,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0032-limyrike-polygon-reuse). Accepted in Codex review by reusing the existing broad-region defer decision for Limyrike.",
     "notes": "Generated from section 31: Sailors from Limyrike put in at the island when chance allows."
   },
   {
@@ -361,12 +361,12 @@
       "Barygaza"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 21.705136,
+    "lon": 72.995875,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Barygaza/Baruch' (periplus-0032-barygaza-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 31: Sailors from Barygaza are named among those using the island."
   },
   {
@@ -384,7 +384,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0031-frankincense-country-polygon-reuse). Accepted in Codex review by reusing the existing defer decision for the broad frankincense-bearing country.",
     "notes": "Generated from section 31: The island belongs to the king of this region."
   },
   {
@@ -397,12 +397,12 @@
       "Syagros"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 15.635278,
+    "lon": 52.223611,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Syagrus' (periplus-0032-syagros-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 32: Route reference at the start of the section."
   },
   {
@@ -415,12 +415,12 @@
       "Omana bay"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 16.288506,
+    "lon": 52.695923,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Bay of Omana' (periplus-0032-omana-anchor-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 32: Deep bay after Syagros."
   },
   {
@@ -433,12 +433,12 @@
       "Moscha harbor"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 17.033333,
+    "lon": 54.433333,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from google_mymaps candidate 'Moscha' (periplus-0032-moscha-mymaps). Not a Pleiades identification.",
     "notes": "Generated from section 32: Designated harbor for loading Sachalite frankincense."
   },
   {
@@ -451,12 +451,12 @@
       "Sachalites"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 14.568563,
+    "lon": 49.669106,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Bay of Sachalites' (periplus-0032-sachalites-anchor-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 32: Region where frankincense lies in heaps."
   },
   {
@@ -469,12 +469,12 @@
       "Canê"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 14.026018,
+    "lon": 48.344994,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Cana' (periplus-0032-cane-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 32: Ships are regularly sent from Canê to Moscha."
   },
   {
@@ -528,7 +528,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0027-persis-polygon). Reviewer agreed to leave this broad region unmapped for now and return later for possible polygon or area modeling.",
     "notes": "Generated from section 33: The next coast is said to belong to Persis."
   },
   {
@@ -739,12 +739,12 @@
       "Omana"
     ],
     "place_type": "source_region",
-    "lat": null,
-    "lon": null,
+    "lat": 16.288506,
+    "lon": 52.695923,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from google_mymaps_anchor candidate 'Bay of Omana' (periplus-0027-omana-anchor). Not a Pleiades identification.",
     "notes": "Generated from section 36: Persian emporium sending goods to Barygaza and Arabia; also destination for imports."
   },
   {
@@ -852,7 +852,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0027-scythia-polygon). Reviewer agreed to leave this broad region unmapped for now and return later for possible polygon or area modeling.",
     "notes": "Generated from section 38: Northern low coastal region after the Parsidae."
   },
   {

@@ -307,12 +307,12 @@
       "Muza"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 13.320302,
+    "lon": 43.247315,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Muza/Al Mokha' (periplus-0031-muza-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 21: Legal seaside emporium and commercial center."
   },
   {
@@ -343,12 +343,12 @@
       "Barygaza"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 21.705136,
+    "lon": 72.995875,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Barygaza/Baruch' (periplus-0032-barygaza-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 21: Muza participates in Barygaza trade through its own outfitting."
   },
   {
@@ -361,12 +361,12 @@
       "Saphar"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 14.172159,
+    "lon": 44.383228,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from google_mymaps candidate 'Saphar' (periplus-0023-saphar-mymaps). Not a Pleiades identification.",
     "notes": "Generated from section 23: Named inland or metropolitan center reached after the preceding route interval."
   },
   {
@@ -384,7 +384,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0023-homerite-territory-polygon). Reviewer chose to leave unmapped for now and return later for possible polygon modeling. No matching Google MyMaps feature found.",
     "notes": "Generated from section 23: One of the two peoples ruled by Charibael."
   },
   {
@@ -402,7 +402,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0023-sabaite-territory-polygon). Reviewer chose to leave unmapped for now and return later for possible polygon modeling. Google MyMaps has Sabbatha/Sabatha, but no Sabaite territory feature.",
     "notes": "Generated from section 23: The neighboring people or region paired with the Homerite realm."
   },
   {
@@ -420,7 +420,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0024-local-country-around-muza-polygon). Reviewer chose to leave unmapped for now and return later for possible area or polygon modeling.",
     "notes": "Generated from section 24: Produces wheat moderately and wine in greater quantity."
   },
   {
@@ -438,7 +438,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (skipped; periplus-0024-king-and-tyrant-at-muza). Reviewer chose to skip this office/person context as not a distinct place.",
     "notes": "Generated from section 24: Recipients of special prestige goods and animals."
   },
   {
@@ -451,12 +451,12 @@
       "Adulis side"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 15.275955,
+    "lon": 39.676537,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from curated_authority_anchor candidate 'Adulis' (periplus-0024-adulis-side-anchor). Not a Pleiades identification.",
     "notes": "Generated from section 24: The text points back to five cargoes previously described from the opposite side near Adulis."
   },
   {
@@ -474,7 +474,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0025-arabian-mainland-polygon). Reviewer chose to leave this broad region unmapped for now and return later for possible polygon or area modeling.",
     "notes": "Generated from section 25: One side of the narrowing channel."
   },
   {
@@ -487,12 +487,12 @@
       "Barbarian country near Avalites"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 11.353687,
+    "lon": 43.475314,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from google_mymaps_anchor candidate 'Avalites' (periplus-0025-barbarian-country-avalites-anchor). Not a Pleiades identification.",
     "notes": "Generated from section 25: Opposite side of the channel."
   },
   {
@@ -505,12 +505,12 @@
       "Diodorus island"
     ],
     "place_type": "island",
-    "lat": null,
-    "lon": null,
+    "lat": 12.651728,
+    "lon": 43.424835,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from google_mymaps candidate 'Diodorus' (periplus-0025-diodorus-island-mymaps). Not a Pleiades identification.",
     "notes": "Generated from section 25: Island in the middle of the passage."
   },
   {
@@ -526,9 +526,9 @@
     "lat": null,
     "lon": null,
     "certainty": "low",
-    "pleiades_id": null,
-    "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "pleiades_id": "39279",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39279",
+    "coordinates_source": "Reviewer-accepted Pleiades URI (periplus-0026-okelis-reuse); coordinates pending review. Reviewer chose to reuse the accepted section 25 Okelis Pleiades decision. Coordinates are pending Pleiades JSON refresh.",
     "notes": "Generated from section 25: Described as a village, harbor, watering point, and first landing rather than a true emporium."
   },
   {
@@ -541,12 +541,12 @@
       "Eudaimon Arabia"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 12.785497,
+    "lon": 45.018655,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Eudaemon Arabia' (periplus-0027-eudaimon-arabia-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 26: Coastal village with good water and a former transshipment role."
   },
   {
@@ -564,7 +564,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0026-india-polygon). Reviewer chose to leave this broad region unmapped for now and return later for possible polygon or area modeling.",
     "notes": "Generated from section 26: One side of the older indirect exchange route."
   },
   {
@@ -582,7 +582,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0029-egypt-polygon-reuse). Accepted in Codex review by reusing the existing broad-region defer decision for Egypt.",
     "notes": "Generated from section 26: The opposite side in the older indirect exchange system."
   },
   {
@@ -598,9 +598,9 @@
     "lat": null,
     "lon": null,
     "certainty": "low",
-    "pleiades_id": null,
-    "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "pleiades_id": "727070",
+    "pleiades_uri": "https://pleiades.stoa.org/places/727070",
+    "coordinates_source": "Reviewer-accepted Pleiades URI (periplus-0026-alexandria-pleiades); coordinates pending review. Reviewer supplied and accepted Pleiades place URI for Egyptian Alexandria. Rejected generated MyMaps candidate Bucephalus Alexandria as the wrong Alexandria. Coordinates are pending Pleiades JSON refresh.",
     "notes": "Generated from section 26: Used as a comparison for receiving external cargoes and dispatching Egyptian cargoes."
   },
   {
@@ -613,12 +613,12 @@
       "Canê"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 14.026018,
+    "lon": 48.344994,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Cana' (periplus-0032-cane-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 27: Coastal place where the country's frankincense is gathered and from which trade connections run."
   },
   {
@@ -636,7 +636,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0031-frankincense-country-polygon-reuse). Accepted in Codex review by reusing the existing defer decision for the broad frankincense-bearing country.",
     "notes": "Generated from section 27: Source region for the frankincense gathered at Canê."
   },
   {
@@ -654,7 +654,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (rejected; periplus-0027-bird-island-reject-burnt-island). Reviewer agreed to reject the fuzzy Burnt Island candidate and leave Bird Island unmapped for now.",
     "notes": "Generated from section 27: One of two desert islands opposite Canê."
   },
   {
@@ -672,7 +672,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_review; periplus-0027-dome-island-polygon). Reviewer agreed to defer Dome Island for later source/candidate checking.",
     "notes": "Generated from section 27: Second desert island opposite Canê."
   },
   {
@@ -685,12 +685,12 @@
       "Sabbatha"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 15.369026,
+    "lon": 47.027293,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from google_mymaps candidate 'Sabbatha/Sabatha' (periplus-0027-sabbatha-mymaps). Not a Pleiades identification.",
     "notes": "Generated from section 27: Inland royal residence above Canê."
   },
   {
@@ -708,7 +708,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0027-scythia-polygon). Reviewer agreed to leave this broad region unmapped for now and return later for possible polygon or area modeling.",
     "notes": "Generated from section 27: Named among the trading connections."
   },
   {
@@ -721,12 +721,12 @@
       "Omana"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 16.288506,
+    "lon": 52.695923,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from google_mymaps_anchor candidate 'Bay of Omana' (periplus-0027-omana-anchor). Not a Pleiades identification.",
     "notes": "Generated from section 27: Named among Canê's trading connections."
   },
   {
@@ -744,7 +744,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0027-persis-polygon). Reviewer agreed to leave this broad region unmapped for now and return later for possible polygon or area modeling.",
     "notes": "Generated from section 27: Neighboring Persian region included in the trade network."
   },
   {
@@ -762,7 +762,7 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (skipped; periplus-0028-king-at-cane). Reviewer agreed to skip this office/person context as not a distinct place.",
     "notes": "Generated from section 28: Recipient of silver, money, animals, statues, and clothing."
   },
   {
@@ -775,12 +775,12 @@
       "Sachalites bay and country"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 14.568563,
+    "lon": 49.669106,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from google_mymaps_anchor candidate 'Bay of Sachalites' (periplus-0029-sachalites-anchor). Not a Pleiades identification.",
     "notes": "Generated from section 29: The bay and land are explicitly frankincense-bearing."
   },
   {
@@ -793,12 +793,12 @@
       "Syagros"
     ],
     "place_type": "route_marker",
-    "lat": null,
-    "lon": null,
+    "lat": 15.635278,
+    "lon": 52.223611,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Syagrus' (periplus-0032-syagros-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 30: Promontory at the eastern end of the bay with a fort."
   },
   {
@@ -811,12 +811,12 @@
       "Dioscorida island"
     ],
     "place_type": "island",
-    "lat": null,
-    "lon": null,
+    "lat": 12.447305,
+    "lon": 53.811035,
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Reviewed visual coordinate aid from review_decision candidate 'Dioscorida' (periplus-0031-dioscorida-reuse). Not a Pleiades identification.",
     "notes": "Generated from section 30: Island source for tortoise shell and Indian cinnabar."
   },
   {
@@ -834,7 +834,43 @@
     "certainty": "low",
     "pleiades_id": null,
     "pleiades_uri": null,
-    "coordinates_source": "Unmapped generated candidate; requires authority review.",
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0030-azania-polygon). Deferred in Codex review because Azania is a broad orientation region; leave unmapped until polygon or region modeling is designed.",
     "notes": "Generated from section 30: Used to orient Dioscorida across the open sea."
+  },
+  {
+    "place_key": "saua",
+    "display_name": "Saua",
+    "greek_names": [
+      "Σαύη"
+    ],
+    "aliases": [
+      "Saua"
+    ],
+    "place_type": "settlement",
+    "lat": 13.0,
+    "lon": 44.0,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Reviewed visual coordinate aid from google_mymaps candidate 'Saua(?)' (periplus-0022-saua-mymaps). Not a Pleiades identification.",
+    "notes": "Generated from review ledger decision periplus-0022-saua-mymaps for section 22."
+  },
+  {
+    "place_key": "mapharitis",
+    "display_name": "Mapharitis",
+    "greek_names": [
+      "Μαφαρίτιδος"
+    ],
+    "aliases": [
+      "Mapharitis"
+    ],
+    "place_type": "region",
+    "lat": null,
+    "lon": null,
+    "certainty": "low",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Intentionally unmapped after review (deferred_polygon_review; periplus-0022-mapharitis-polygon). Targeted Pleiades searches found no direct Mapharitis match. Defer for possible polygon modeling; Schoff notes identify it with the Ma'afir in southern Tehama.",
+    "notes": "Generated from review ledger decision periplus-0022-mapharitis-polygon for section 22."
   }
 ]

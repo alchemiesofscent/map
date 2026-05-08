@@ -51,7 +51,22 @@
     "section_order": 22,
     "greek_text": "22. Ὑπέρκειται δὲ αὐτῆς ἀπὸ τριῶν ἡμερῶν πόλις Σαύη, τῆς περὶ αὐτὴν Μαφαρίτιδος λεγομένης χώρας· ἔστι δὲ τύραννος καὶ κατοικῶν αὐτὴν Χόλαιβος.",
     "draft_translation": "Above Muza, three days inland, lies the city Saua in the region called Mapharitis, and its resident ruler is Cholaibos.",
-    "places": [],
+    "places": [
+      {
+        "english_label": "Saua",
+        "greek_surface": "Σαύη",
+        "role": "city",
+        "generated_place_key": "saua",
+        "notes": "Added from review ledger decision periplus-0022-saua-mymaps."
+      },
+      {
+        "english_label": "Mapharitis",
+        "greek_surface": "Μαφαρίτιδος",
+        "role": "region",
+        "generated_place_key": "mapharitis",
+        "notes": "Added from review ledger decision periplus-0022-mapharitis-polygon."
+      }
+    ],
     "commodity_entities": [],
     "movement_events": []
   },

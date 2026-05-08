@@ -17,6 +17,7 @@ The first sample uses the opening Red Sea sequence from the anonymous *Periplus 
 9. `scripts/export_geojson.py` — creates GeoJSON exports for GIS or debugging.
 10. `scripts/refresh_pleiades.py` — fetches per-place Pleiades JSON snapshots into `data/pleiades/` and writes a drift report.
 11. `scripts/import_mymaps_kml.py` — converts a Google My Maps KML export into a GeoJSON reference layer for the scrollytelling viewer.
+12. `scripts/build_route_views.py` — converts the reviewed webmap scrape into selectable `All`, `Western`, and `Eastern` route views.
 
 ## Run locally
 
@@ -24,7 +25,9 @@ From the repo root:
 
 ```bash
 python3 scripts/check_data.py
-python3 scripts/ingest_tour_chunk.py --start 1 --count 10
+python3 scripts/ingest_tour_chunk.py --start 1 --count 66
+python3 scripts/apply_place_review_decisions.py --max-section 66
+python3 scripts/build_route_views.py
 python3 scripts/check_generated_tour.py
 python3 scripts/export_geojson.py
 python3 scripts/refresh_pleiades.py     # optional: refresh data/pleiades/ + drift report
@@ -55,7 +58,7 @@ Then open:
 http://localhost:8000/features/scrollytelling-viewer/
 ```
 
-The feature reads generated data from `data/generated/periplus/`. Run `python3 scripts/ingest_tour_chunk.py --start 1 --count 10` to rebuild the current generated pass from `texts.csv`, `translations.csv`, the curated starter authority, and provisional Google My Maps matches. Each source section becomes a scroll step; the active step drives map camera movement, route highlighting, active markers, and linked Greek/English place mentions.
+The feature reads generated data from `data/generated/periplus/`. Run `npm run ingest` to rebuild the current 66-section generated pass from `texts.csv`, `translations.csv`, the curated starter authority, provisional Google My Maps matches, the reviewed place ledger, and the reviewed webmap scrape. Each source section becomes a scroll step; the active step drives map camera movement, route highlighting, active markers, and linked Greek/English place mentions. The scrollytelling viewer can filter that sequence to `All`, `Western` sections 1-18, or `Eastern` sections 19-66.
 
 ## Make this into a git repo
 

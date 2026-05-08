@@ -1,5 +1,5 @@
 {
-  "route_title": "Periplus of the Erythraean Sea: generated sections 1-10",
+  "route_title": "Periplus of the Erythraean Sea: generated sections 21-30",
   "source_range": {
     "start_section": 21,
     "end_section": 30
@@ -79,6 +79,26 @@
         {
           "surface": "Muza",
           "place_key": "muza",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Saua",
+          "place_key": "saua",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σαύη",
+          "place_key": "saua",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Mapharitis",
+          "place_key": "mapharitis",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Μαφαρίτιδος",
+          "place_key": "mapharitis",
           "kind": "off_route"
         }
       ],
@@ -185,6 +205,11 @@
           "surface": "Ἀδουλὶ",
           "place_key": "adulis",
           "kind": "main_route"
+        },
+        {
+          "surface": "τῷ βασιλεῖ καὶ τῷ τυράννῳ",
+          "place_key": "the_king_and_the_tyrant_at_muza",
+          "kind": "off_route"
         }
       ],
       "goods": [
@@ -325,6 +350,16 @@
           "surface": "Ἀλεξάνδρεια",
           "place_key": "alexandria",
           "kind": "off_route"
+        },
+        {
+          "surface": "Ἰνδίας",
+          "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Aἰγύπτου",
+          "place_key": "egypt",
+          "kind": "off_route"
         }
       ],
       "goods": []
@@ -425,6 +460,21 @@
           "surface": "Περσίδος",
           "place_key": "persis",
           "kind": "off_route"
+        },
+        {
+          "surface": "Ὀρνέων νῆσος",
+          "place_key": "bird_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Τρουλλὰ",
+          "place_key": "dome_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Σάββαθα",
+          "place_key": "sabbatha",
+          "kind": "off_route"
         }
       ],
       "goods": [
@@ -476,6 +526,11 @@
         {
           "surface": "τῷ βασιλεῖ",
           "place_key": "the_king_at_cane",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Κανὴ",
+          "place_key": "cane",
           "kind": "off_route"
         }
       ],
@@ -543,6 +598,11 @@
           "surface": "frankincense-bearing country",
           "place_key": "frankincense_bearing_country",
           "kind": "off_route"
+        },
+        {
+          "surface": "Αἰγύπτῳ",
+          "place_key": "egypt",
+          "kind": "off_route"
         }
       ],
       "goods": [
@@ -590,6 +650,11 @@
         {
           "surface": "India",
           "place_key": "india",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Ἀζανίᾳ",
+          "place_key": "azania",
           "kind": "off_route"
         }
       ],

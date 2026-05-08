@@ -1,5 +1,5 @@
 {
-  "route_title": "Periplus of the Erythraean Sea: generated sections 1-10",
+  "route_title": "Periplus of the Erythraean Sea: generated sections 31-40",
   "source_range": {
     "start_section": 31,
     "end_section": 40
@@ -61,6 +61,16 @@
         {
           "surface": "λιβανωτοφόρου",
           "place_key": "frankincense_bearing_country",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Διοσκορίδου",
+          "place_key": "dioscorida_island",
+          "kind": "off_route"
+        },
+        {
+          "surface": "Λιμυρικῆς",
+          "place_key": "limyrike",
           "kind": "off_route"
         }
       ],

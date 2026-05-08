@@ -524,7 +524,10 @@ def generate(args: argparse.Namespace) -> dict[str, Path]:
                 mention["kind"] = "main_route"
 
     journey = {
-        "route_title": "Periplus of the Erythraean Sea: generated sections 1-10",
+        "route_title": (
+            "Periplus of the Erythraean Sea: "
+            f"generated sections {args.start}-{args.start + args.count - 1}"
+        ),
         "source_range": {
             "start_section": args.start,
             "end_section": args.start + args.count - 1,

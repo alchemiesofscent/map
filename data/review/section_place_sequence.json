@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "description": "Reviewed chapter-level place focus sequences for the Periplus scrollytelling viewer. Generated runtime files may copy these records, but this sidecar is the durable curation source.",
+  "sections": [
+    {
+      "section_order": 27,
+      "card_title": "Kanē and the Frankincense Coast",
+      "review_status": "reviewed",
+      "visit_sequence": [
+        {
+          "display_name": "Calai islands",
+          "source_name": "Calai islands",
+          "route_site_key": null,
+          "geometry_policy": "needs_followup",
+          "note": "Mentioned as the preceding islands in section 27. The webmap has Kalaiou Isles in chapter 34, which is not a safe match for this section."
+        },
+        {
+          "display_name": "Kanē",
+          "source_name": "Kanē",
+          "route_site_key": "eastern_0028_kane",
+          "geometry_policy": "mapped"
+        },
+        {
+          "display_name": "Bird Island",
+          "source_name": "Isle of Birds",
+          "route_site_key": "eastern_0029_isle_of_birds",
+          "geometry_policy": "mapped"
+        },
+        {
+          "display_name": "Dome Island",
+          "source_name": "Troullas",
+          "route_site_key": "eastern_0030_troullas",
+          "geometry_policy": "mapped",
+          "note": "Display label follows the generated section translation; route site source label is Troullas."
+        },
+        {
+          "display_name": "Saubatha",
+          "source_name": "Saubatha",
+          "route_site_key": "eastern_0031_saubatha",
+          "geometry_policy": "mapped"
+        }
+      ],
+      "context_places": [
+        {
+          "display_name": "Barygaza",
+          "reason": "trading_partner"
+        },
+        {
+          "display_name": "Scythia",
+          "reason": "comparison_region"
+        },
+        {
+          "display_name": "Omana",
+          "reason": "trading_partner"
+        },
+        {
+          "display_name": "Persis",
+          "reason": "political_context"
+        },
+        {
+          "display_name": "neighboring Arabia",
+          "reason": "political_context"
+        }
+      ]
+    }
+  ]
+}

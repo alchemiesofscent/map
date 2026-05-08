@@ -3,7 +3,9 @@ check:
 	python3 scripts/check_generated_tour.py
 
 ingest:
-	python3 scripts/ingest_tour_chunk.py --start 1 --count 10
+	python3 scripts/ingest_tour_chunk.py --start 1 --count 66
+	python3 scripts/apply_place_review_decisions.py --max-section 66
+	python3 scripts/build_route_views.py
 
 geojson:
 	python3 scripts/export_geojson.py
