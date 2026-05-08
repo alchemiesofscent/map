@@ -432,18 +432,27 @@ function highlightActive(focus) {
 // ───────────────────────── navigation ─────────────────────────
 
 /** Compute a map-center latlng such that the given target appears in the
- *  visual centre of the right-of-dossier region (1/3 dossier | 2/3 map). */
+ *  visual centre of whatever region the dossier doesn't cover. On wide
+ *  viewports the dossier is left-anchored (offset horizontally); on phones
+ *  it's bottom-anchored (offset vertically). */
 function dossierOffsetCenter(targetLatLng, zoom) {
   const target = L.latLng(targetLatLng[0], targetLatLng[1]);
-  if (window.innerWidth < 720) return target;
   const dossierEl = document.querySelector(".dossier");
   if (!dossierEl) return target;
   const rect = dossierEl.getBoundingClientRect();
-  // Visual centre of unblocked area is at x = (rect.right + viewport.right) / 2.
-  // The map's geometric centre is at viewport.right / 2.
-  // Difference (how far right of geo centre the target should appear):
-  const offsetX = (rect.right + window.innerWidth) / 2 - window.innerWidth / 2;
   const point = state.map.project(target, zoom);
+
+  if (window.innerWidth < 720) {
+    // Mobile: visual centre of unblocked area is at y = rect.top / 2.
+    // Geo centre is at y = vh / 2. Target should appear above geo centre
+    // by (vh - rect.top) / 2; in projected pixels (y grows southward) that
+    // means the map centre sits south of the target by the same amount.
+    const offsetY = (window.innerHeight - rect.top) / 2;
+    return state.map.unproject(L.point(point.x, point.y + offsetY), zoom);
+  }
+
+  // Desktop: visual centre of unblocked area is at x = (rect.right + vw) / 2.
+  const offsetX = (rect.right + window.innerWidth) / 2 - window.innerWidth / 2;
   return state.map.unproject(L.point(point.x - offsetX, point.y), zoom);
 }
 
