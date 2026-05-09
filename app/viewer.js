@@ -1,16 +1,16 @@
-/* Periplus · Atlas viewer v2
+/* Periplus · Atlas viewer
  *
- * A second prototype: full-bleed map, no scrollytelling sidebar.
- * Inputs: scroll wheel (debounced step advance), arrow keys, marker clicks,
- * site-strip clicks, dossier nav arrows. Smooth flyTo transitions between sites.
- * Sea legs and land/caravan legs are visually distinguished.
+ * Full-bleed map, no scrollytelling sidebar. Inputs: scroll wheel (debounced
+ * step advance), arrow keys, marker clicks, site-strip clicks, dossier nav
+ * arrows. Smooth flyTo transitions between sites. Sea legs and land/caravan
+ * legs are visually distinguished.
  */
 
 const DATA = {
-  places: "../../data/generated/periplus/places_authority.json",
-  sections: "../../data/generated/periplus/raw_sections.json",
-  journey: "../../data/generated/periplus/journey_route.json",
-  routeViews: "../../data/generated/periplus/route_views.json",
+  places: "../data/generated/periplus/places_authority.json",
+  sections: "../data/generated/periplus/raw_sections.json",
+  journey: "../data/generated/periplus/journey_route.json",
+  routeViews: "../data/generated/periplus/route_views.json",
 };
 
 // Sites that should display as a "land" pin (diamond, terracotta) instead of
@@ -396,8 +396,7 @@ function renderDossier(focus) {
 
   const greekEl = document.getElementById("dossier-greek");
   greekEl.textContent = focus.greekText || "";
-  const greekBlock = document.getElementById("dossier-greek-block");
-  greekBlock.style.display = focus.greekText ? "" : "none";
+  document.getElementById("dossier-greek-block").hidden = !focus.greekText;
 
   const sourceEl = document.getElementById("dossier-source");
   const sourceBits = [focus.modernId, focus.chapter].filter(Boolean);
@@ -714,7 +713,7 @@ async function main() {
     if (title) title.textContent = "Could not load tour data";
     if (trans) {
       trans.textContent =
-        "Serve the repository root with `python3 -m http.server 8000` and open /features/scrollytelling-viewer-v2/.";
+        "Serve the repository root with `python3 -m http.server 8000` and open /app/.";
     }
   }
 }

@@ -11,8 +11,8 @@ The first sample uses the opening Red Sea sequence from the anonymous *Periplus 
 3. `docs/03-frontend-wireframe-spec.md` — wireframe and UI behavior spec.
 4. `data/*.sample.json` — starter data for passages, places, stops, route legs, movements, and tour cards.
 5. `schemas/*.schema.json` — machine-readable JSON Schema drafts.
-6. `app/` — a static Leaflet prototype with buttons and a route strip.
-7. `features/scrollytelling-viewer/` — a standalone scroll-driven viewer feature for dev testing.
+6. `app/` — the canonical full-bleed Atlas viewer (Leaflet, dossier panel, route strip).
+7. `features/scrollytelling-viewer/` — an earlier scroll-driven viewer kept for reference and dev testing.
 8. `scripts/check_data.py` — referential-integrity checks.
 9. `scripts/export_geojson.py` — creates GeoJSON exports for GIS or debugging.
 10. `scripts/refresh_pleiades.py` — fetches per-place Pleiades JSON snapshots into `data/pleiades/` and writes a drift report.
@@ -40,25 +40,17 @@ Then open:
 http://localhost:8000/app/
 ```
 
-The app uses Leaflet and OpenStreetMap tiles from CDNs, so the visual map needs network access. The data model and scripts do not.
+The Atlas viewer at `/app/` is a full-bleed Leaflet map with a dossier reading panel and a sites strip along the bottom. It reads the generated payload from `data/generated/periplus/`. Run `npm run ingest` to rebuild the current 66-section pass from `texts.csv`, `translations.csv`, the curated starter authority, provisional Google My Maps matches, the reviewed place ledger, and the reviewed webmap scrape. The viewer can filter the sequence to `All`, `Occidens` (sections 1-18), or `Oriens` (sections 19-66). Move between sites with the scroll wheel, arrow keys, the dossier nav, the strip, or by clicking pins on the map.
 
-## Scrollytelling feature
+The app uses Leaflet and CartoDB / OpenStreetMap tiles from public CDNs, so the visual map needs network access. The data model and scripts do not.
 
-A scroll-driven viewer has been added in its own folder so it can be tested independently from the base prototype.
+## Earlier scroll-driven viewer
 
-Serve the repository root:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open:
+An earlier scroll-driven viewer is kept under `features/scrollytelling-viewer/` for reference. It has a sticky reading column with an `IntersectionObserver`-driven story, a place-link popup interaction, and an external My Maps reference layer that the canonical Atlas viewer does not yet reproduce. Open it at:
 
 ```text
 http://localhost:8000/features/scrollytelling-viewer/
 ```
-
-The feature reads generated data from `data/generated/periplus/`. Run `npm run ingest` to rebuild the current 66-section generated pass from `texts.csv`, `translations.csv`, the curated starter authority, provisional Google My Maps matches, the reviewed place ledger, and the reviewed webmap scrape. Each source section becomes a scroll step; the active step drives map camera movement, route highlighting, active markers, and linked Greek/English place mentions. The scrollytelling viewer can filter that sequence to `All`, `Western` sections 1-18, or `Eastern` sections 19-66.
 
 ## Make this into a git repo
 
