@@ -1,0 +1,1811 @@
+{
+  "schema_version": "0.2",
+  "stage": "2-candidate-survey-v2",
+  "summary": {
+    "SMT": {
+      "tei_id": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1",
+      "sentence_count": 6530,
+      "hit_sentence_count": 13,
+      "candidate_count": 10,
+      "annotated_path": "data/tei/annotated/tlg0057.tlg075.annotated.xml"
+    },
+    "De_antidotis": {
+      "tei_id": "urn:cts:greekLit:tlg0057.tlg078.1st1K-grc1",
+      "sentence_count": 3033,
+      "hit_sentence_count": 7,
+      "candidate_count": 6,
+      "annotated_path": "data/tei/annotated/tlg0057.tlg078.annotated.xml"
+    }
+  },
+  "candidates": {
+    "SMT": [
+      {
+        "work": "SMT",
+        "book": "9",
+        "chapter": "1",
+        "chapter_ref": "9.1",
+        "kuhn_citation_start": "K. XII 168.7–178.1",
+        "kuhn_citation_end": "K. XII 168.7–178.1",
+        "places_in_order": [
+          {
+            "surface": "Κύπρον",
+            "lemma": "Κύπρος",
+            "pleiades_ids": [
+              "cyprus_island"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "κοίλην Συρίαν",
+            "lemma": "κοιλην συριαν",
+            "pleiades_ids": [
+              "coele_syria"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Παλαιστίνης",
+            "lemma": "παλαιστινης",
+            "pleiades_ids": [
+              "palestine"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Λῆμνον",
+            "lemma": "Λῆμνος",
+            "pleiades_ids": [
+              "lemnos"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ἀσίας",
+            "lemma": "Ἀσία",
+            "pleiades_ids": [
+              "asia_province"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ῥώμην",
+            "lemma": "Ῥώμη",
+            "pleiades_ids": [
+              "rome"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Θρᾴκης",
+            "lemma": "Θρᾳκία",
+            "pleiades_ids": [
+              "thracia_region"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Μακεδονίας",
+            "lemma": "Μακεδονία",
+            "pleiades_ids": [
+              "macedonia_region"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Τρῳάδος Ἀλεξανδρείας",
+            "lemma": "τρωαδος αλεξανδρειας",
+            "pleiades_ids": [
+              "alexandria_troas"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Θεσσαλονίκην",
+            "lemma": "θεσσαλονικην",
+            "pleiades_ids": [
+              "thessalonica"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Σάμον",
+            "lemma": "Σάμος",
+            "pleiades_ids": [
+              "samos"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Χίον",
+            "lemma": "Χίος",
+            "pleiades_ids": [
+              "chios"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Αἰγαῖον",
+            "lemma": "Αἰγαῖος",
+            "pleiades_ids": [
+              "aegean_sea"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "επλευσα",
+            "category": "movement"
+          },
+          {
+            "form": "επορευθην",
+            "category": "movement"
+          }
+        ],
+        "sentence_count": 3,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XII 168.7–178.1",
+            "chapter_ref": "9.1.2",
+            "greek": "ὥσπερ οὖν εἰς Κύπρον ἕνεκα τῶν ἐν αὐτῇ μετάλλων, εἴς τε τὴν κοίλην Συρίαν, μόριον οὖσαν τῆς Παλαιστίνης, ἕνεκεν ἀσφάλτου καί τινων ἄλλων κατ’ αὐτὴν ἀξίων ἱστορίας ἐπορεύθην, οὕτως καὶ εἰς Λῆμνον οὐκ ὤκνησα πλεῦσαι, θεασόμενος ὁπόσον μίγνυται τοῦ αἵματος τῇ γῇ.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Κύπρον",
+                "lemma": "Κύπρος",
+                "pleiades_ids": [
+                  "cyprus_island"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "κοίλην Συρίαν",
+                "lemma": "κοιλην συριαν",
+                "pleiades_ids": [
+                  "coele_syria"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Παλαιστίνης",
+                "lemma": "παλαιστινης",
+                "pleiades_ids": [
+                  "palestine"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Λῆμνον",
+                "lemma": "Λῆμνος",
+                "pleiades_ids": [
+                  "lemnos"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "επορευθην",
+                "category": "movement"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 168.7–178.1",
+            "chapter_ref": "9.1.2",
+            "greek": "καὶ τό γε δεύτερον ἐξ Ἀσίας εἰς Ῥώμην ἀφικέσθαι πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας, ἔπλευσα πρότερον ἀπὸ Τρῳάδος Ἀλεξανδρείας εἰς Λῆμνον, ἐπιτυχὼν εἰς Θεσσαλονίκην ἀναγομένου πλοίου, συνθεμένῳ τῷ ναυκλήρῳ παραβάλλειν πρότερον τῇ Λήμνῳ· ὁ δὲ προσέσχε μὲν, οὐ μὴν ᾗ γ’ ἐχρῆν πόλει.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Ἀσίας",
+                "lemma": "Ἀσία",
+                "pleiades_ids": [
+                  "asia_province"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Ῥώμην",
+                "lemma": "Ῥώμη",
+                "pleiades_ids": [
+                  "rome"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Θρᾴκης",
+                "lemma": "Θρᾳκία",
+                "pleiades_ids": [
+                  "thracia_region"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Μακεδονίας",
+                "lemma": "Μακεδονία",
+                "pleiades_ids": [
+                  "macedonia_region"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Τρῳάδος Ἀλεξανδρείας",
+                "lemma": "τρωαδος αλεξανδρειας",
+                "pleiades_ids": [
+                  "alexandria_troas"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Λῆμνον",
+                "lemma": "Λῆμνος",
+                "pleiades_ids": [
+                  "lemnos"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Θεσσαλονίκην",
+                "lemma": "θεσσαλονικην",
+                "pleiades_ids": [
+                  "thessalonica"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "επλευσα",
+                "category": "movement"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 168.7–178.1",
+            "chapter_ref": "9.1.2",
+            "greek": "τὴν ἀρχὴν γὰρ οὐδ’ ἠπιστάμην δύο πόλεις εἶναι κατὰ τὴν νῆσον, ἀλλὰ ᾤμην, ὡς Σάμον καὶ Χίον καὶ Κῶ Ἄνδρον τε καὶ Τῆνον καὶ πάσας τὰς κατὰ τὸ Αἰγαῖον, οὕτω καὶ τὴν Λῆμνον ὁμώνυμον ἔχειν πόλιν ὅλῃ τῇ νήσῳ μίαν.",
+            "is_hit": false,
+            "place_mentions": [
+              {
+                "surface": "Σάμον",
+                "lemma": "Σάμος",
+                "pleiades_ids": [
+                  "samos"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Χίον",
+                "lemma": "Χίος",
+                "pleiades_ids": [
+                  "chios"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Αἰγαῖον",
+                "lemma": "Αἰγαῖος",
+                "pleiades_ids": [
+                  "aegean_sea"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Λῆμνον",
+                "lemma": "Λῆμνος",
+                "pleiades_ids": [
+                  "lemnos"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "SMT",
+        "book": "9",
+        "chapter": "1",
+        "chapter_ref": "9.1",
+        "kuhn_citation_start": "K. XII 168.7–178.1",
+        "kuhn_citation_end": "K. XII 168.7–178.1",
+        "places_in_order": [
+          {
+            "surface": "Ἰταλίας",
+            "lemma": "Ἰταλία",
+            "pleiades_ids": [
+              "italia_peninsula"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Μακεδονίαν",
+            "lemma": "Μακεδονία",
+            "pleiades_ids": [
+              "macedonia_region"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Φιλίπποις",
+            "lemma": "φιλιπποις",
+            "pleiades_ids": [
+              "philippi"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Θρᾴκῃ",
+            "lemma": "Θρᾳκία",
+            "pleiades_ids": [
+              "thracia_region"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Θάσον",
+            "lemma": "Θάσος",
+            "pleiades_ids": [
+              "thasos"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Λῆμνον",
+            "lemma": "Λῆμνος",
+            "pleiades_ids": [
+              "lemnos"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ἀλεξανδρείαν Τρῳάδα",
+            "lemma": "αλεξανδρειαν τρωαδα",
+            "pleiades_ids": [
+              "alexandria_troas"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ἡφαιστιάδα",
+            "lemma": "ηφαιστιαδα",
+            "pleiades_ids": [
+              "hephaistia"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "επλευσα",
+            "category": "movement"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XII 168.7–178.1",
+            "chapter_ref": "9.1.2",
+            "greek": "ὡς γὰρ ἀπὸ τῆς Ἰταλίας διαβαλὼν εἰς τὴν Μακεδονίαν καὶ σχεδὸν ὅλην αὐτὴν ὁδοιπορήσας ἐν Φιλίπποις ἐγενόμην, ἥπερ ἐστὶν ὅμορος τῇ Θρᾴκῃ πόλις, ἐντεῦθεν ἐπὶ τὴν πλησίον θάλατταν εἴκοσιν ἐπὶ τοῖς ἑκατὸν ἀπέχουσαν στάδια κατελθὼν, ἔπλευσα πρότερον μὲν εἰς Θάσον ἐγγύς που διακοσίους σταδίους, ἐκεῖθεν δὲ εἰς Λῆμνον ἑπτακοσίους, εἶτ’ αὖθις ἀπὸ Λήμνου τοὺς ἴσους ἑπτακοσίους εἰς Ἀλεξανδρείαν Τρῳάδα.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Ἰταλίας",
+                "lemma": "Ἰταλία",
+                "pleiades_ids": [
+                  "italia_peninsula"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Μακεδονίαν",
+                "lemma": "Μακεδονία",
+                "pleiades_ids": [
+                  "macedonia_region"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Φιλίπποις",
+                "lemma": "φιλιπποις",
+                "pleiades_ids": [
+                  "philippi"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Θρᾴκῃ",
+                "lemma": "Θρᾳκία",
+                "pleiades_ids": [
+                  "thracia_region"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Θάσον",
+                "lemma": "Θάσος",
+                "pleiades_ids": [
+                  "thasos"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Λῆμνον",
+                "lemma": "Λῆμνος",
+                "pleiades_ids": [
+                  "lemnos"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Ἀλεξανδρείαν Τρῳάδα",
+                "lemma": "αλεξανδρειαν τρωαδα",
+                "pleiades_ids": [
+                  "alexandria_troas"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "επλευσα",
+                "category": "movement"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 168.7–178.1",
+            "chapter_ref": "9.1.2",
+            "greek": "καὶ διὰ τοῦτ’ ἐξεπίτηδες ἔγραψα περί τε τοῦ πλοῦ καὶ τῶν σταδίων, ὅπως εἴ τις ἐθέλῃ θεάσασθαι καὶ αὐτὸς ὁμοίως ἐμοὶ τὴν Ἡφαιστιάδα διαγινώσκων τὴν θέσιν αὐτῆς, οὕτως παρασκευάζοιτο πρὸς τὸν πλοῦν.",
+            "is_hit": false,
+            "place_mentions": [
+              {
+                "surface": "Ἡφαιστιάδα",
+                "lemma": "ηφαιστιαδα",
+                "pleiades_ids": [
+                  "hephaistia"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "SMT",
+        "book": "9",
+        "chapter": "2",
+        "chapter_ref": "9.2",
+        "kuhn_citation_start": "K. XII 203.0–204.2",
+        "kuhn_citation_end": "K. XII 203.0–204.2",
+        "places_in_order": [
+          {
+            "surface": "Λυκίαν",
+            "lemma": "Λυκία",
+            "pleiades_ids": [
+              "lycia"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "κοίλης Συρίας",
+            "lemma": "κοιλης συριας",
+            "pleiades_ids": [
+              "coele_syria"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "ειδον",
+            "category": "autopsy"
+          },
+          {
+            "form": "εκομισα",
+            "category": "acquisition"
+          }
+        ],
+        "sentence_count": 3,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XII 203.0–204.2",
+            "chapter_ref": "9.2.10",
+            "greek": "οὐ μὴν ἐγὼ εἶδον ἐκεῖνον τὸν ποταμὸν, καίτοι παραπλεύσας ὅλην Λυκίαν μικρῷ πλοίῳ τῆς ἱστορίας ἕνεκα τῶν ἐν αὐτῇ.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Λυκίαν",
+                "lemma": "Λυκία",
+                "pleiades_ids": [
+                  "lycia"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "ειδον",
+                "category": "autopsy"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 203.0–204.2",
+            "chapter_ref": "9.2.10",
+            "greek": "πλακώδεις δὲ λίθους μελαίνας, εἰ κατὰ πυρὸς ἐπιτεθεῖεν, ἀσθενῆ φλόγα γεννῶντας ἐκόμισα πολλὰς ἐκ τῆς κοίλης Συρίας, ἐν τῷ λόφῳ γεννωμένας τῷ περιέχοντι τὴν νεκρὰν ὀνομαζομένην θάλασσαν, ἐν τοῖς ἀνατολικοῖς αὐτῆς μέρεσιν, ἔνθα καὶ ἡ ἄσφαλτος γίνεται.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "κοίλης Συρίας",
+                "lemma": "κοιλης συριας",
+                "pleiades_ids": [
+                  "coele_syria"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "εκομισα",
+                "category": "acquisition"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 203.0–204.2",
+            "chapter_ref": "9.2.10",
+            "greek": "καὶ ἦν ἡ ὀσμὴ τῶν λίθων τῇ ἀσφάλτῳ παραπλησία.",
+            "is_hit": false,
+            "place_mentions": [],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "SMT",
+        "book": "9",
+        "chapter": "3",
+        "chapter_ref": "9.3",
+        "kuhn_citation_start": "K. XII 214.5–217.3",
+        "kuhn_citation_end": "K. XII 214.5–217.3",
+        "places_in_order": [
+          {
+            "surface": "Κύπρῳ",
+            "lemma": "Κύπρος",
+            "pleiades_ids": [
+              "cyprus_island"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Σόλων",
+            "lemma": "σολων",
+            "pleiades_ids": [
+              "soloi_cyprus"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "εκομισα",
+            "category": "acquisition"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XII 214.5–217.3",
+            "chapter_ref": "9.3.8",
+            "greek": "ἐκόμισα δὲ καὶ τούτου τοῦ φαρμάκου πολύ τι πλῆθος ἐκ τῶν ἐν Κύπρῳ Σόλων, ἔνθα τὸ μέταλλόν ἐστιν, ὡς ἀπὸ σταδίων τῆς πόλεως τριάκοντα.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Κύπρῳ",
+                "lemma": "Κύπρος",
+                "pleiades_ids": [
+                  "cyprus_island"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Σόλων",
+                "lemma": "σολων",
+                "pleiades_ids": [
+                  "soloi_cyprus"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "εκομισα",
+                "category": "acquisition"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 214.5–217.3",
+            "chapter_ref": "9.3.8",
+            "greek": "ἔῤῥιπτο γὰρ ἐν τῷ μεταξὺ τόπῳ τοῦ τε προκειμένου κατὰ τὸ μέταλλον οἴκου καὶ τῆς ὑποκειμένης αὐτῷ κώμης.",
+            "is_hit": false,
+            "place_mentions": [],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "SMT",
+        "book": "9",
+        "chapter": "3",
+        "chapter_ref": "9.3",
+        "kuhn_citation_start": "K. XII 219.5–221.13",
+        "kuhn_citation_end": "K. XII 219.5–221.13",
+        "places_in_order": [
+          {
+            "surface": "Σόλοις",
+            "lemma": "σολοις",
+            "pleiades_ids": [
+              "soloi_cyprus"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ἀσίαν",
+            "lemma": "Ἀσία",
+            "pleiades_ids": [
+              "asia_province"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ἰταλίαν",
+            "lemma": "Ἰταλία",
+            "pleiades_ids": [
+              "italia_peninsula"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "επεδημησα",
+            "category": "movement"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XII 219.5–221.13",
+            "chapter_ref": "9.3.11",
+            "greek": "ἐν γοῦν τοῖς Σόλοις τῆς ἐν ταῖς καμινείαις γεννωμένης καδμείας ὀλίγιστον ἦν ἔτι καθ’ ὃν ἐγὼ χρόνον ἐπεδήμησα τῇ νήσῳ.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Σόλοις",
+                "lemma": "σολοις",
+                "pleiades_ids": [
+                  "soloi_cyprus"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "επεδημησα",
+                "category": "movement"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 219.5–221.13",
+            "chapter_ref": "9.3.11",
+            "greek": "λίθους δὲ λαβὼν παρὰ τοῦ τοῖς μετάλλοις ἐπιτεταγμένου κατά τε τὰ ὄρη καὶ τοὺς ῥύακας εὑρισκομένους, οὓς εἰς Ἀσίαν τε καὶ Ἰταλίαν κομίσαντός μου, μέγιστον δῶρον ἐδόκουν οἱ φίλοι λαμβάνειν, ὡς τῆς ἄλλης καδμείας ἐκείνην οὖσαν ἀμείνονα.",
+            "is_hit": false,
+            "place_mentions": [
+              {
+                "surface": "Ἀσίαν",
+                "lemma": "Ἀσία",
+                "pleiades_ids": [
+                  "asia_province"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Ἰταλίαν",
+                "lemma": "Ἰταλία",
+                "pleiades_ids": [
+                  "italia_peninsula"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "SMT",
+        "book": "9",
+        "chapter": "3",
+        "chapter_ref": "9.3",
+        "kuhn_citation_start": "K. XII 226.7–229.7",
+        "kuhn_citation_end": "K. XII 226.7–229.7",
+        "places_in_order": [
+          {
+            "surface": "Κύπρῳ",
+            "lemma": "Κύπρος",
+            "pleiades_ids": [
+              "cyprus_island"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Σόλων",
+            "lemma": "σολων",
+            "pleiades_ids": [
+              "soloi_cyprus"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ἀσίαν",
+            "lemma": "Ἀσία",
+            "pleiades_ids": [
+              "asia_province"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ῥώμην",
+            "lemma": "Ῥώμη",
+            "pleiades_ids": [
+              "rome"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "εθεασαμην",
+            "category": "autopsy"
+          },
+          {
+            "form": "εκομισα",
+            "category": "acquisition"
+          }
+        ],
+        "sentence_count": 4,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XII 226.7–229.7",
+            "chapter_ref": "9.3.21",
+            "greek": "κατὰ τὸ μέταλλον ἐν Κύπρῳ τὸ προειρημένον ἐν τοῖς τῶν Σόλων ὄρεσι μέγας τις ἦν οἶκος, οὗ κατὰ τὸν δεξιὸν τοῖχον, ὡς πρὸς ἡμᾶς δὲ τοὺς εἰσιόντας ἀριστερὸν, εἴσοδος ἦν εἰς αὐτὸ τὸ μέταλλον, ἐν ᾧ τινας ἐθεασάμην ἐπὶ πλεῖστον ἐκτεταμένας οἷον ζώνας ἐπ’ ἀλλήλαις τρεῖς, ταπεινοτάτην μὲν τὴν τοῦ σώρεως, ἐπ’ αὐτῇ δὲ τὴν τῆς χαλκίτεως, εἶτα τοῦ μίσυος.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Κύπρῳ",
+                "lemma": "Κύπρος",
+                "pleiades_ids": [
+                  "cyprus_island"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Σόλων",
+                "lemma": "σολων",
+                "pleiades_ids": [
+                  "soloi_cyprus"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "εθεασαμην",
+                "category": "autopsy"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 226.7–229.7",
+            "chapter_ref": "9.3.21",
+            "greek": "ὁ δὲ κατ’ ἐκεῖνον τὸν καιρὸν ἐπίτροπος τοῦ μετάλλου, δεικνύς μοι ταῦτα, καθάπερ, ἔφη, νῦν ἥκεις ἐν πενίᾳ τῆς καμινευομένης καδμείας ὄντων ἡμῶν, οὕτω ἐν πλούτῳ θαυμαστῷ τὰ τρία ταῦτα ὁρᾷς καθεστηκότα.",
+            "is_hit": false,
+            "place_mentions": [],
+            "verb_hits": []
+          },
+          {
+            "kuhn_citation": "K. XII 226.7–229.7",
+            "chapter_ref": "9.3.21",
+            "greek": "καὶ τοίνυν καὶ λαβὼν ἐξ αὐτοῦ πάμπολυ πρῶτον μὲν εἰς τὴν Ἀσίαν, ἐκεῖθεν δ’ εἰς τὴν Ῥώμην ἐκόμισα καὶ μέχρι νῦν ἔσχον ἐτῶν μεταξὺ γενομένων ὡς λ΄.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Ἀσίαν",
+                "lemma": "Ἀσία",
+                "pleiades_ids": [
+                  "asia_province"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Ῥώμην",
+                "lemma": "Ῥώμη",
+                "pleiades_ids": [
+                  "rome"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "εκομισα",
+                "category": "acquisition"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 226.7–229.7",
+            "chapter_ref": "9.3.21",
+            "greek": "καὶ κατά τινα τύχην ἡ προκειμένη πραγματεία μέχρι μὲν τῆς ὀγδόης βίβλου προῆλθεν, ὡς πρὸ ἐτῶν εἴκοσιν, οὐ προστεθέντος αὐτῇ τοῦ ἐννάτου τούτου, διὰ τὸ τινὰς μὲν τῶν λίθων μηδέπω τεθεᾶσθαι.",
+            "is_hit": false,
+            "place_mentions": [],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "SMT",
+        "book": "9",
+        "chapter": "3",
+        "chapter_ref": "9.3",
+        "kuhn_citation_start": "K. XII 229.7–230.4",
+        "kuhn_citation_end": "K. XII 229.7–230.4",
+        "places_in_order": [
+          {
+            "surface": "Κύπρῳ",
+            "lemma": "Κύπρος",
+            "pleiades_ids": [
+              "cyprus_island"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ἐργαστήρια",
+            "lemma": "εργαστηρια",
+            "pleiades_ids": [
+              "ergasteria"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Περγάμου",
+            "lemma": "Πέργαμον",
+            "pleiades_ids": [
+              "pergamum"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Κυζίκου",
+            "lemma": "Κύζικος",
+            "pleiades_ids": [
+              "cyzicus"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "εθεασαμην",
+            "category": "autopsy"
+          },
+          {
+            "form": "ελαβον",
+            "category": "acquisition"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XII 229.7–230.4",
+            "chapter_ref": "9.3.22",
+            "greek": "ὥσπερ δ’ ἐν Κύπρῳ τὴν ἐν τοῖς ὄρεσιν καὶ ῥύαξι γεννωμένην καδμείαν ἔλαβον οὖσαν, ὡς ἔφην, εἶδός τι λίθου, κατὰ τὸν αὐτὸν τρόπον καὶ μολύβδαιναν, ἐῤῥιμμένην παμπόλλοις ἅμα τοῖς ἄλλοις λίθοις ἐθεασάμην κατὰ τὴν εἰς Ἐργαστήρια φέρουσαν ὁδὸν ἀπὸ Περγάμου.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Κύπρῳ",
+                "lemma": "Κύπρος",
+                "pleiades_ids": [
+                  "cyprus_island"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Ἐργαστήρια",
+                "lemma": "εργαστηρια",
+                "pleiades_ids": [
+                  "ergasteria"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Περγάμου",
+                "lemma": "Πέργαμον",
+                "pleiades_ids": [
+                  "pergamum"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "εθεασαμην",
+                "category": "autopsy"
+              },
+              {
+                "form": "ελαβον",
+                "category": "acquisition"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 229.7–230.4",
+            "chapter_ref": "9.3.22",
+            "greek": "καλεῖται δ’ Ἐργαστήρια κώμη τις, ἐν ᾗ καὶ μέταλλά ἐστι, μεταξὺ Περγάμου καὶ Κυζίκου, σταδίους ἀπέχουσα Περγάμου τετρακοσίους τεσσαράκοντα.",
+            "is_hit": false,
+            "place_mentions": [
+              {
+                "surface": "Ἐργαστήρια",
+                "lemma": "εργαστηρια",
+                "pleiades_ids": [
+                  "ergasteria"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Περγάμου",
+                "lemma": "Πέργαμον",
+                "pleiades_ids": [
+                  "pergamum"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Κυζίκου",
+                "lemma": "Κύζικος",
+                "pleiades_ids": [
+                  "cyzicus"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "SMT",
+        "book": "9",
+        "chapter": "3",
+        "chapter_ref": "9.3",
+        "kuhn_citation_start": "K. XII 238.1–241.10",
+        "kuhn_citation_end": "K. XII 238.1–241.10",
+        "places_in_order": [
+          {
+            "surface": "Κύπρου",
+            "lemma": "Κύπρος",
+            "pleiades_ids": [
+              "cyprus_island"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "εκομισα",
+            "category": "acquisition"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XII 238.1–241.10",
+            "chapter_ref": "9.3.34",
+            "greek": "ἐκόμισα γὰρ καὶ τοῦτο τὸ φάρμακον ἐκ τῆς Κύπρου πάμπολυ.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Κύπρου",
+                "lemma": "Κύπρος",
+                "pleiades_ids": [
+                  "cyprus_island"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "εκομισα",
+                "category": "acquisition"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 238.1–241.10",
+            "chapter_ref": "9.3.34",
+            "greek": "τὸ δ’ ἔξωθεν αὐτοῦ πᾶν, ὡς μετὰ ἔτη σχεδὸν κ΄ χαλκῖτις ἐγένετο, τοῦ ἔνδον ὄντος ἔτι χαλκάνθου.",
+            "is_hit": false,
+            "place_mentions": [],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "SMT",
+        "book": "9",
+        "chapter": "3",
+        "chapter_ref": "9.3",
+        "kuhn_citation_start": "K. XII 238.1–241.10",
+        "kuhn_citation_end": "K. XII 238.1–241.10",
+        "places_in_order": [
+          {
+            "surface": "Κύπρῳ",
+            "lemma": "Κύπρος",
+            "pleiades_ids": [
+              "cyprus_island"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "εθεασαμην",
+            "category": "autopsy"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XII 238.1–241.10",
+            "chapter_ref": "9.3.34",
+            "greek": "ἐν δ’ οὖν τῇ Κύπρῳ, καθ’ ὃν ἐγὼ καιρὸν ἐγενόμην ἐν αὐτῇ, τὸ φάρμακον τοῦτο τόνδε τὸν τρόπον ἐθεασάμην ἀθροιζόμενον.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Κύπρῳ",
+                "lemma": "Κύπρος",
+                "pleiades_ids": [
+                  "cyprus_island"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "εθεασαμην",
+                "category": "autopsy"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 238.1–241.10",
+            "chapter_ref": "9.3.34",
+            "greek": "οἶκος ἦν μέγας μὲν, οὐ μὴν ὑψηλός γε προκείμενος τῆς εἰς τὸ μέταλλον εἰσόδου.",
+            "is_hit": false,
+            "place_mentions": [],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "SMT",
+        "book": "10",
+        "chapter": "2",
+        "chapter_ref": "10.2",
+        "kuhn_citation_start": "K. XII 303.8–305.0",
+        "kuhn_citation_end": "K. XII 303.8–305.0",
+        "places_in_order": [
+          {
+            "surface": "Μυσίᾳ",
+            "lemma": "μυσια",
+            "pleiades_ids": [
+              "mysia"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "εχρησαμην",
+            "category": "acquisition"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XII 303.8–305.0",
+            "chapter_ref": "10.2.26",
+            "greek": "Περὶ ἀλεκτορίδος κόπρου.] Τῇ δὲ τῶν ἀλεκτορίδων ἑωρακὼς τὸν ἐν τῇ Μυσίᾳ χρώμενον ἐπὶ τῶν ὑπὸ τῆς μυκήτων ἐδωδῆς πνιγομένων ἐχρησάμην καὶ αὐτὸς ἐπί τινων ἐν τῇ πόλει προσενηνεγμένων αὐτὴν, ἐπὶ πάντων λειουμένην κυάθοις τρισὶν ἢ τέτρασιν ὀξυκράτου τε καὶ ὀξυμέλιτος, καὶ προφανῶς ὠφέλησεν διὰ ταχέων.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Μυσίᾳ",
+                "lemma": "μυσια",
+                "pleiades_ids": [
+                  "mysia"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "εχρησαμην",
+                "category": "acquisition"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XII 303.8–305.0",
+            "chapter_ref": "10.2.26",
+            "greek": "ἤμεσαν γὰρ ὀλίγον ὕστερον οἱ πνιγόμενοι φλεγματώδη παχύτατον χυμὸν, ἐφ’ ᾧ τελέως ἐπαύσαντο τοῦ συμπτώματος.",
+            "is_hit": false,
+            "place_mentions": [],
+            "verb_hits": []
+          }
+        ]
+      }
+    ],
+    "De_antidotis": [
+      {
+        "work": "De_antidotis",
+        "book": "1",
+        "chapter": "1",
+        "chapter_ref": "1.1",
+        "kuhn_citation_start": "K. XIV 1.0–5.10",
+        "kuhn_citation_end": "K. XIV 1.0–5.10",
+        "places_in_order": [
+          {
+            "surface": "Ῥώμην",
+            "lemma": "Ῥώμη",
+            "pleiades_ids": [
+              "rome"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "διηλθον",
+            "category": "movement"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XIV 1.0–5.10",
+            "chapter_ref": "1.1",
+            "greek": "ἀρεσθεὶς δὲ αὐτῇ μόνῃ, παραγενόμενος εἰς Ῥώμην, ἐπυνθάνετο κατὰ τίνα συμμετρίαν τῶν ἁπλῶν φαρμάκων σκευάζοιμι, κᾀγὼ τἀληθὲς αὐτῷ διῆλθον, ὡς οὐδὲν οὐδὲ τοὐλάχιστον, οὔτ' ἐνέλιπον, οὔτε προσέθηκα τῶν ἐμβαλλομένων ἐξ ἔθους παλαιοῦ τοῖς κατὰ τὴν αὐλὴν ἰατροῖς, ἐδήλωσά τε τὴν αἰτίαν, δι' ἣν ἀρέσκει μάλιστα αὐτῷ ἐμοὶ σκευασία, περὶ ἧς εἰπεῖν καὶ νῦν προθέμενος, ἐμνημόνευσα τῶν τότε πραχθέντων.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Ῥώμην",
+                "lemma": "Ῥώμη",
+                "pleiades_ids": [
+                  "rome"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "διηλθον",
+                "category": "movement"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XIV 1.0–5.10",
+            "chapter_ref": "1.1",
+            "greek": "ἅτε γὰρ ἑκάστης ἡμέρας λαμβάνων ὁ Ἀντωνῖνος ἅμα πολλῷ μέλιτι τοῦ φαρμάκου, ἀκριβέστατα διεγίνωσκε τήν τε κακίαν αὐτοῦ καὶ τὴν ἀρετήν.",
+            "is_hit": false,
+            "place_mentions": [],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "De_antidotis",
+        "book": "1",
+        "chapter": "2",
+        "chapter_ref": "1.2",
+        "kuhn_citation_start": "K. XIV 5.10–13.15",
+        "kuhn_citation_end": "K. XIV 5.10–13.15",
+        "places_in_order": [
+          {
+            "surface": "Κύπρον",
+            "lemma": "Κύπρος",
+            "pleiades_ids": [
+              "cyprus_island"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Παλαιστίνης",
+            "lemma": "παλαιστινης",
+            "pleiades_ids": [
+              "palestine"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Συρίας",
+            "lemma": "συρία",
+            "pleiades_ids": [
+              "coele_syria"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Λῆμνον",
+            "lemma": "Λῆμνος",
+            "pleiades_ids": [
+              "lemnos"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "εκομισα",
+            "category": "acquisition"
+          },
+          {
+            "form": "επλευσα",
+            "category": "movement"
+          }
+        ],
+        "sentence_count": 4,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XIV 5.10–13.15",
+            "chapter_ref": "1.2",
+            "greek": "Κύπρον γοῦν ἱστορῆσαι βουληθεὶς ἐγὼ διὰ ταῦτα, φίλον τε ἔχων τὸν ἐν αὐτῇ πολὺ δυνάμενον, ἑταῖρον ὄντα τοῦ προεστῶτος τῶν μετάλλων ἐπιτρόπου Καίσαρος, καδμείαν τε πολλὴν ἐκεῖθεν ἐκόμισα καὶ διφρυγὲς καὶ σπόδιον καὶ πομφόλυγα χαλκῖτίν τε καὶ μίσυ καὶ σῶρυ καὶ χάλκανθον, ὥσπερ γε πάλιν ἐκ τῆς Παλαιστίνης Συρίας ὀποβάλσαμον ἀκριβές.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Κύπρον",
+                "lemma": "Κύπρος",
+                "pleiades_ids": [
+                  "cyprus_island"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Παλαιστίνης",
+                "lemma": "παλαιστινης",
+                "pleiades_ids": [
+                  "palestine"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Συρίας",
+                "lemma": "συρία",
+                "pleiades_ids": [
+                  "coele_syria"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "εκομισα",
+                "category": "acquisition"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XIV 5.10–13.15",
+            "chapter_ref": "1.2",
+            "greek": "ἄσφαλτος μὲν γὰρ οὐδὲ δολωθῆναι δύναται πανούργως, ὥσπερ οὐδὲ ὁ τοῦ ὀποβαλσάμου καρπὸς ἢ τὸ ξυλοβάλσαμον.",
+            "is_hit": false,
+            "place_mentions": [],
+            "verb_hits": []
+          },
+          {
+            "kuhn_citation": "K. XIV 5.10–13.15",
+            "chapter_ref": "1.2",
+            "greek": "ἔπλευσα δὲ καὶ εἰς Λῆμνον, ἴσασι δὲ οἱ θεοὶ, δι' οὐδὲν ἄλλο ἢ διὰ τὴν Λημνίαν, εἴτε γῆν ἐθέλει τις ὀνομάζειν, εἴτε σφραγῖδα, λέλεκται δὲ περὶ αὐτῆς αὐτάρκως ἐν τῷ περὶ τῆς τῶν ἁπλῶν φαρμάκων δυνάμεως ἐνάτῳ.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Λῆμνον",
+                "lemma": "Λῆμνος",
+                "pleiades_ids": [
+                  "lemnos"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "επλευσα",
+                "category": "movement"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XIV 5.10–13.15",
+            "chapter_ref": "1.2",
+            "greek": "ταύτην οὖν εἴτε Λημνίαν γῆν, εἴτε σφραγῖδα καλεῖν ἐθέλεις, παραποιοῦσιν, ὡς μηδένα δυνάσθαι διαγνῶναι τὴν ἀληθινὴν ἀπὸ τῆς παραπεποιημένης.",
+            "is_hit": false,
+            "place_mentions": [],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "De_antidotis",
+        "book": "1",
+        "chapter": "3",
+        "chapter_ref": "1.3",
+        "kuhn_citation_start": "K. XIV 13.15–20.14",
+        "kuhn_citation_end": "K. XIV 13.15–20.14",
+        "places_in_order": [
+          {
+            "surface": "Ἰταλίαν",
+            "lemma": "Ἰταλία",
+            "pleiades_ids": [
+              "italia_peninsula"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Νεάπολιν",
+            "lemma": "νεαπολιν",
+            "pleiades_ids": [
+              "neapolis_campania"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "ειδον",
+            "category": "autopsy"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XIV 13.15–20.14",
+            "chapter_ref": "1.3",
+            "greek": "παραπλήσιον δ' οἷς εἴρηκα καὶ κατὰ τὴν Ἰταλίαν εἶδον ἐν τοῖς περὶ Νεάπολιν, καὶ τὸν γειτνιῶντα λόφον αὐτῇ τῇ χώρᾳ γενόμενον, ὃν ὀνομάζουσι Τριφύλλινον.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Ἰταλίαν",
+                "lemma": "Ἰταλία",
+                "pleiades_ids": [
+                  "italia_peninsula"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Νεάπολιν",
+                "lemma": "νεαπολιν",
+                "pleiades_ids": [
+                  "neapolis_campania"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "ειδον",
+                "category": "autopsy"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XIV 13.15–20.14",
+            "chapter_ref": "1.3",
+            "greek": "ἐπυθόμην δὲ καὶ κατ' ἄλλα πολλὰ χωρία τῆς Ἰταλίας οὕτω θερμαίνεσθαι τὸν οἶνον, ἄλλ' ὅ γε τοιοῦτος, ὥσπερ μόνιμος, οὕτω καὶ κεφαλαλγὴς γίνεται, διὰ τὴν ἐκ τοῦ καπνοῦ προσερχομένην αὐτῷ ποιότητα.",
+            "is_hit": false,
+            "place_mentions": [
+              {
+                "surface": "Ἰταλίας",
+                "lemma": "Ἰταλία",
+                "pleiades_ids": [
+                  "italia_peninsula"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "De_antidotis",
+        "book": "1",
+        "chapter": "5",
+        "chapter_ref": "1.5",
+        "kuhn_citation_start": "K. XIV 27.9–32.9",
+        "kuhn_citation_end": "K. XIV 27.9–32.9",
+        "places_in_order": [
+          {
+            "surface": "Ἰταλίαν",
+            "lemma": "Ἰταλία",
+            "pleiades_ids": [
+              "italia_peninsula"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Κρήτης",
+            "lemma": "Κρήτη",
+            "pleiades_ids": [
+              "crete"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ῥώμης",
+            "lemma": "ῥώμη",
+            "pleiades_ids": [
+              "rome"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "ευρον",
+            "category": "acquisition"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XIV 27.9–32.9",
+            "chapter_ref": "1.5",
+            "greek": "δυνάμενος γὰρ αὐτὰ γνωρίζειν ἀπ' ἀρχῆς εἰς τέλος, ἐν πολλοῖς τῆς γῆς εὑρήσεις τόποις, ὥσπερ κᾀγὼ κατὰ τὴν Ἰταλίαν εὗρον ἐν πολλοῖς χωρίοις, ὅσα μήτε φυόμενα μήτε αὐξανόμενα γνωρίζουσιν οἳ τὰ ξηρανθέντα μόνα διαγινώσκουσιν.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Ἰταλίαν",
+                "lemma": "Ἰταλία",
+                "pleiades_ids": [
+                  "italia_peninsula"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "ευρον",
+                "category": "acquisition"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XIV 27.9–32.9",
+            "chapter_ref": "1.5",
+            "greek": "οὐδεὶς γοῦν ἐστι τῶν μυροπωλῶν, ὃς οὐκ οἶδεν τὰς ἐκ Κρήτης κομιζομένας βοτάνας, ὥσπερ καὶ τοὺς καρποὺς αὐτῶν, ἀλλ' ἐν τοῖς προαστείοις Ῥώμης ἐξ αὐτῶν οὐκ ὀλίγας φυομένας παντάπασιν ἀγνοοῦσι, καὶ διὰ τοῦτο κατὰ τὸν καιρὸν, ἐν ᾧ τοὺς καρποὺς αὐτῶν ἐκφέρουσιν, ﻿ οὐκ ἐπιτηροῦσιν.",
+            "is_hit": false,
+            "place_mentions": [
+              {
+                "surface": "Κρήτης",
+                "lemma": "Κρήτη",
+                "pleiades_ids": [
+                  "crete"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Ῥώμης",
+                "lemma": "ῥώμη",
+                "pleiades_ids": [
+                  "rome"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "De_antidotis",
+        "book": "1",
+        "chapter": "10",
+        "chapter_ref": "1.10",
+        "kuhn_citation_start": "K. XIV 51.5–54.5",
+        "kuhn_citation_end": "K. XIV 51.5–54.5",
+        "places_in_order": [
+          {
+            "surface": "Ἀσίᾳ",
+            "lemma": "Ἀσία",
+            "pleiades_ids": [
+              "asia_province"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Κυζίκῳ",
+            "lemma": "Κύζικος",
+            "pleiades_ids": [
+              "cyzicus"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ἰταλίαν",
+            "lemma": "Ἰταλία",
+            "pleiades_ids": [
+              "italia_peninsula"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "ειδον",
+            "category": "autopsy"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XIV 51.5–54.5",
+            "chapter_ref": "1.10",
+            "greek": "ἐγὼ δὲ καὶ τὰς βοτάνας αὐτὰς ἠπιστάμην ἐν Ἀσίᾳ γεννωμένας, ἐν ἄλλοις μὲν χωρίοις ὀλίγας, ἐν Κυζίκῳ δὲ πλείστας, καὶ κατά γε τὴν Ἰταλίαν ὥσπερ ἄλλας τινὰς, οὕτω καὶ τὸ ἀμάρακον εἶδον γεννώμενον.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Ἀσίᾳ",
+                "lemma": "Ἀσία",
+                "pleiades_ids": [
+                  "asia_province"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Κυζίκῳ",
+                "lemma": "Κύζικος",
+                "pleiades_ids": [
+                  "cyzicus"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Ἰταλίαν",
+                "lemma": "Ἰταλία",
+                "pleiades_ids": [
+                  "italia_peninsula"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "ειδον",
+                "category": "autopsy"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XIV 51.5–54.5",
+            "chapter_ref": "1.10",
+            "greek": "ἀπολείπεται δὲ τὸ φυτὸν τοῦτο τοῦ μάρου πάμπολυ κατὰ τὴν εὐωδίαν.",
+            "is_hit": false,
+            "place_mentions": [],
+            "verb_hits": []
+          }
+        ]
+      },
+      {
+        "work": "De_antidotis",
+        "book": "1",
+        "chapter": "14",
+        "chapter_ref": "1.14",
+        "kuhn_citation_start": "K. XIV 67.7–82.7",
+        "kuhn_citation_end": "K. XIV 67.7–82.7",
+        "places_in_order": [
+          {
+            "surface": "Ῥώμην",
+            "lemma": "Ῥώμη",
+            "pleiades_ids": [
+              "rome"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Κρήτης",
+            "lemma": "Κρήτη",
+            "pleiades_ids": [
+              "crete"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          }
+        ],
+        "first_person_verbs": [
+          {
+            "form": "ευρον",
+            "category": "acquisition"
+          }
+        ],
+        "sentence_count": 2,
+        "sentences": [
+          {
+            "kuhn_citation": "K. XIV 67.7–82.7",
+            "chapter_ref": "1.14",
+            "greek": "φέρεται δ' ἡμῖν ἐκεῖθεν, ὡς καὶ τοὺς Καίσαρι σκευάζοντας ἀεὶ τῇ Κρητικῇ χρῆσθαι, καίτοι καὶ κατ' αὐτὴν τὴν Ῥώμην ἐν τοῖς προαστείοις καὶ τὴν χαμαιπίτυν καὶ τὴν χαμαίδρυν εὗρον εὐοσμοτέρας τῶν ἀπὸ τῆς Κρήτης ὅταν γε μὴ πολλῷ κατακλυσθῶσιν ὄμβρῳ.",
+            "is_hit": true,
+            "place_mentions": [
+              {
+                "surface": "Ῥώμην",
+                "lemma": "Ῥώμη",
+                "pleiades_ids": [
+                  "rome"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Κρήτης",
+                "lemma": "Κρήτη",
+                "pleiades_ids": [
+                  "crete"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": [
+              {
+                "form": "ευρον",
+                "category": "acquisition"
+              }
+            ]
+          },
+          {
+            "kuhn_citation": "K. XIV 67.7–82.7",
+            "chapter_ref": "1.14",
+            "greek": "ἔτι τε καὶ τοῦτο χρὴ γινώσκειν, ὡς φερομένων ἀπὸ Κρήτης τῶν βοτανῶν, ἐνειλιγμένων χαρτίοις, οἷς ἐπιγέγραπται τὸ τῆς ἑκάστης βοτάνης ὄνομα, τινὲς μὲν ἁπλῆν ἔχουσι τὴν ἐπιγραφὴν, τινὲς δὲ μετὰ προσθήκης τῆς πεδιάδος.",
+            "is_hit": false,
+            "place_mentions": [
+              {
+                "surface": "Κρήτης",
+                "lemma": "Κρήτη",
+                "pleiades_ids": [
+                  "crete"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": []
+          }
+        ]
+      }
+    ]
+  }
+}

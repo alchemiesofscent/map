@@ -5,3 +5,14 @@ node_modules/
 __pycache__/
 *.pyc
 *:Zone.Identifier
+.venv/
+
+# Galen ingest: reproducible large artifacts (~50MB+ each).
+# Regenerate with `scripts/galen/fetch_pleiades_dump.py` and
+# `scripts/galen/build_gazetteer.py`.
+data/pleiades/dumps/
+data/generated/galen/pleiades_gazetteer.json
+data/generated/galen/.lemma_cache.json
+
+# Annotated TEI is regenerated on every survey run.
+data/tei/annotated/

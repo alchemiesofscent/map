@@ -1,0 +1,141 @@
+{
+  "_comment": "Hand-authored translations + materia mentions for Galen route passages. Read by scripts/galen/extract_passages.py and merged into data/generated/galen/passages.json. Editable; never overwritten by the survey or extractor.",
+  "_authoring_notes": "Greek surface forms preserved exactly; English follows scholarly conventions (Cyprus, Lemnos, Alexandria Troas, Coele Syria, etc.). Materia mentions cover only substances Galen describes in this specific passage; broader pharmacological context is captured at Stage 5 in materia.json.",
+  "passages": {
+    "smt.9.1.a": {
+      "translation_en": "For just as I traveled to Cyprus on account of its mines, and to Coele Syria — a part of Palestine — on account of asphalt and certain other things in it worth investigating, so too I did not hesitate to sail to Lemnos, in order to observe how much blood is mixed with the earth. And on the second occasion when I was making my way from Asia to Rome on foot through Thrace and Macedonia, I had earlier sailed from Alexandria Troas to Lemnos: I had caught a ship putting out for Thessalonica, having arranged with the captain that he should put in at Lemnos first. He did so — but not at the city he should have. For at first I did not even know that there were two cities on the island; rather, I assumed that — just as Samos and Chios and Cos and Andros and Tenos and all the islands of the Aegean each have a single city of the same name as the whole island — Lemnos likewise had a single city of the same name as the whole island.",
+      "materia_mentions": [
+        {"surface": "ἀσφάλτου", "materia_key": "asphalt"},
+        {"surface": "αἵματος τῇ γῇ", "materia_key": "lemnian-earth"}
+      ],
+      "notes": "Primary anchor for both `lemnos-alexandria-troas-to-thessalonica-context` and the opening Cyprus + Coele Syria comparisons. The Cyprus mention here is gateway to `cyprus-soloi-mines`; Coele Syria seeds `coele-syria-dead-sea-materials`."
+    },
+    "smt.9.1.b": {
+      "translation_en": "For when I had crossed from Italy into Macedonia, traveled through nearly the whole of it, and arrived at Philippi — a city bordering Thrace — I went down from there to the nearby coast (a hundred and twenty stades distant) and sailed first to Thasos, about two hundred stades, then from there to Lemnos, seven hundred more, then again from Lemnos the same seven hundred to Alexandria Troas. It is precisely for this reason that I have written explicitly about the voyage and the distances: so that anyone wishing, as I did, to inspect Hephaistia and ascertain its position may equip himself for the voyage accordingly.",
+      "materia_mentions": [
+        {"surface": "Ἡφαιστιάδα", "materia_key": "lemnian-earth"}
+      ],
+      "notes": "Primary anchor for `lemnos-italy-to-troas-via-thasos`. Galen's explicit travel-itinerary instructions to future readers; the destination is Hephaistia on Lemnos, where the earth is collected."
+    },
+    "smt.9.2.a": {
+      "translation_en": "I myself did not see that river, although I sailed past the whole of Lycia in a small boat for the sake of investigating the things in it. But I did bring back many flat black stones — which, if laid on a fire, produce a feeble flame — from Coele Syria, generated in the hill that surrounds the so-called Dead Sea, in its eastern parts, where the asphalt is also produced. And the smell of the stones was very like that of the asphalt.",
+      "materia_mentions": [
+        {"surface": "πλακώδεις λίθους μελαίνας", "materia_key": "bituminous-stones"},
+        {"surface": "ἄσφαλτος", "materia_key": "asphalt"}
+      ],
+      "notes": "Primary anchor for `coele-syria-dead-sea-materials`. The explicit autopsy verb here is ἐκόμισα (\"I brought back\"), supplemented by εἶδον for the (negative) Lycian river observation. The Dead Sea reference is descriptive (νεκρὰ θάλασσα) rather than a fixed toponym."
+    },
+    "smt.9.3.a": {
+      "translation_en": "I also brought back a great quantity of this drug from the Soli on Cyprus, where the mine is, about thirty stades from the city; for it had been thrown out in the area between the building set above the mine and the village lying below it.",
+      "materia_mentions": [
+        {"surface": "τούτου τοῦ φαρμάκου", "materia_key": "diphryges"}
+      ],
+      "notes": "Context: SMT book 9 chapter on diphryges. The phrase \"this drug\" refers anaphorically to diphryges — a copper-mining residue. Soloi is the named mining village."
+    },
+    "smt.9.3.b": {
+      "translation_en": "In Soli, at any rate, of the cadmia produced in the kilns there was very little still left during the time when I was sojourning on the island. But, taking stones found by the man set in charge of the mines, both up in the mountains and along the watercourses, and bringing them to Asia and to Italy, my friends thought they were receiving the greatest gift — since this cadmia was better than the rest.",
+      "materia_mentions": [
+        {"surface": "καδμείας", "materia_key": "cadmia"}
+      ],
+      "notes": "Strongest single anchor for `cyprus-soloi-mines`: ἐπεδήμησα τῇ νήσῳ — \"I sojourned on the island\" — is the most explicit personal-presence claim in the corpus. Asia and Italy here are transport endpoints, not Galen's travel destinations."
+    },
+    "smt.9.3.c": {
+      "translation_en": "At the aforementioned mine on Cyprus, in the mountains of Soli, there was a large building. On its right-hand wall (left for us as we entered) there was an entrance into the mine itself, in which I observed three bands extending at length one upon another: the lowest being of sory, above it that of chalcitis, then of misy. The steward of the mine at that time, showing me these things, said: 'Just as you have come now in a time of poverty as regards the cadmia we kiln, so you see these three established in marvelous abundance.' And so, taking a great quantity from there, I conveyed it first to Asia and from there to Rome, and I have kept it until now, some thirty years having passed in between. And by chance the present treatise had advanced as far as the eighth book about twenty years ago, without this ninth being added to it, because I had not yet observed some of the stones.",
+      "materia_mentions": [
+        {"surface": "σώρεως", "materia_key": "sory"},
+        {"surface": "χαλκίτεως", "materia_key": "chalcitis"},
+        {"surface": "μίσυος", "materia_key": "misy"},
+        {"surface": "καμινευομένης καδμείας", "materia_key": "cadmia"}
+      ],
+      "notes": "Primary anchor with both autopsy (ἐθεασάμην, \"I observed\") and material acquisition (ἐκόμισα). Includes a verbatim quotation from the Imperial mine-steward — the closest Galen comes to ethnographic notation in the autobiographical material."
+    },
+    "smt.9.3.d": {
+      "translation_en": "Just as I obtained on Cyprus the cadmia generated in the mountains and watercourses (which is, as I said, a sort of stone), in the same way I also observed molybdaina, scattered along with very many other stones, on the road leading from Pergamum to Ergasteria. Ergasteria is the name of a village in which there are also mines, between Pergamum and Cyzicus, four hundred and forty stades distant from Pergamum.",
+      "materia_mentions": [
+        {"surface": "καδμείαν", "materia_key": "cadmia"},
+        {"surface": "μολύβδαιναν", "materia_key": "molybdaina"}
+      ],
+      "notes": "The lone anchor for `pergamum-ergasteria-mines`. Galen names both the destination (Ergasteria) and its road from Pergamum, and gives a precise stadia distance. Cyzicus is named only as a directional reference (\"between Pergamum and Cyzicus\"), so the route line is Pergamum → Ergasteria only."
+    },
+    "smt.9.3.e": {
+      "translation_en": "For I also brought back a great quantity of this drug from Cyprus. The whole of its outer part, after about twenty years, became chalcitis, while what was inside still remained chalcanthon.",
+      "materia_mentions": [
+        {"surface": "χαλκῖτις", "materia_key": "chalcitis"},
+        {"surface": "χαλκάνθου", "materia_key": "chalcanthon"}
+      ],
+      "notes": "Reports the long-term transformation of chalcanthon into chalcitis under storage — striking pharmacological observation that Galen could only have made by retaining mining samples for two decades."
+    },
+    "smt.9.3.f": {
+      "translation_en": "On Cyprus, at any rate, during the time when I was there in person, I observed this drug being collected in the following manner. There was a building, large but not tall, set before the entrance to the mine.",
+      "materia_mentions": [
+        {"surface": "τὸ φάρμακον τοῦτο", "materia_key": "chalcanthon"}
+      ],
+      "notes": "Continuation of the chalcanthon (blue vitriol) collection narrative; ἐθεασάμην + ἐγὼ καιρὸν ἐγενόμην are explicit personal-presence markers."
+    },
+    "smt.10.2.a": {
+      "translation_en": "On the dung of hens.] Having seen a [practitioner] in Mysia using that of hens for those choking on the consumption of mushrooms, I myself also used it on certain persons in the city to whom it had been brought, ground up — for all of them — in three or four cyathi of oxycrate and oxymel; and it manifestly gave benefit very quickly. For shortly afterward the choking patients vomited up a most thick phlegmatic humor, after which they completely ceased from the symptom.",
+      "materia_mentions": [
+        {"surface": "ἀλεκτορίδος κόπρος", "materia_key": "chicken-dung"},
+        {"surface": "ὀξυκράτου", "materia_key": "oxycrate"},
+        {"surface": "ὀξυμέλιτος", "materia_key": "oxymel"}
+      ],
+      "notes": "REJECTED as route per the curator decision (clinical 'I used' is medical practice, not travel). Retained for the materia layer — chicken dung as antidote for mushroom poisoning is a vivid Galenic clinical detail attached to Mysia."
+    },
+    "de_antidotis.1.1.a": {
+      "translation_en": "Pleased with this one alone, when he had come to Rome he asked according to what proportions of simple drugs I prepared it; and I went through the truth with him in detail — that I neither omitted nor added anything, not even the smallest thing, of those ingredients customarily added by the physicians at the court — and I declared the reason why my preparation pleases him most, about which, having proposed to speak now too, I made mention of what was done at that time. For Antoninus, taking the drug daily along with much honey, very accurately distinguished both its weakness and its excellence.",
+      "materia_mentions": [
+        {"surface": "τοῦ φαρμάκου", "materia_key": "theriac"}
+      ],
+      "notes": "REJECTED. διῆλθον here = 'I went through [the explanation],' not physical movement. Retained in passages.json with empty route_keys for completeness; Antoninus = Marcus Aurelius (taking daily theriac)."
+    },
+    "de_antidotis.1.2.a": {
+      "translation_en": "Wishing, then, to investigate Cyprus on these grounds — and having a friend there of much influence, a comrade of the man set in charge of Caesar's mines — I brought back from there a great quantity of cadmia and diphryges and spodium and pompholyx, and chalcitis and misy and sory and chalcanthon, just as again from Palestinian Syria pure opobalsam. For asphalt cannot be cunningly falsified, just as neither can the fruit of opobalsam nor xylobalsam. I sailed also to Lemnos, the gods know, for no other reason than the Lemnian — whether one wishes to call it 'earth' or 'seal' — and about it enough has been said in the ninth book of On the Powers of Simple Drugs. Whether you wish to call it Lemnian earth or seal, then, [some people] counterfeit it so that no one is able to distinguish the genuine from the counterfeit.",
+      "materia_mentions": [
+        {"surface": "καδμείαν", "materia_key": "cadmia"},
+        {"surface": "διφρυγὲς", "materia_key": "diphryges"},
+        {"surface": "σπόδιον", "materia_key": "spodium"},
+        {"surface": "πομφόλυγα", "materia_key": "pompholyx"},
+        {"surface": "χαλκῖτίν", "materia_key": "chalcitis"},
+        {"surface": "μίσυ", "materia_key": "misy"},
+        {"surface": "σῶρυ", "materia_key": "sory"},
+        {"surface": "χάλκανθον", "materia_key": "chalcanthon"},
+        {"surface": "ὀποβάλσαμον", "materia_key": "opobalsam"},
+        {"surface": "ξυλοβάλσαμον", "materia_key": "xylobalsam"},
+        {"surface": "ἄσφαλτος", "materia_key": "asphalt"},
+        {"surface": "Λημνίαν γῆν", "materia_key": "lemnian-earth"},
+        {"surface": "σφραγῖδα", "materia_key": "lemnian-seal"}
+      ],
+      "notes": "The retrospective summary passage in De antidotis: Cyprus mining haul (8 substances), Palestinian-Syrian opobalsam, Lemnian earth/seal. Per the curator decision, this MERGES into three routes — Cyprus contributes to `cyprus-soloi-mines`, Palestine/Syria to `coele-syria-dead-sea-materials`, Lemnos to `lemnos-alexandria-troas-to-thessalonica-context`. The richest single materia inventory in the corpus."
+    },
+    "de_antidotis.1.3.a": {
+      "translation_en": "I also saw something similar to what I have described in Italy, in the area around Naples and on the hill adjacent to that very district, which they call Trifolinus. I learned that the wine in many other places of Italy is heated in this way too — but such wine, just as it is durable, so it also becomes headache-inducing, on account of the smoky quality that has come to it.",
+      "materia_mentions": [
+        {"surface": "τὸν οἶνον", "materia_key": "trifolinus-wine"}
+      ],
+      "notes": "REJECTED as route per the curator decision; KEPT as materia observation — the Trifolinus wine of Campania, observed at Naples. Treated as a pin in the materia-medica observation layer, not connected by route lines."
+    },
+    "de_antidotis.1.5.a": {
+      "translation_en": "If you are able to recognize them from beginning to end, you will find them in many places of the earth — just as I myself in Italy found them in many districts — those plants which neither growing nor coming up are recognized by the men who recognize only the dried specimens. There is no perfumer who does not know the herbs imported from Crete, just as also their fruits; but they are completely ignorant of those (no few of them) growing in the suburbs of Rome from the very same plants — and for this reason during the season in which they put forth their fruits, they do not keep watch.",
+      "materia_mentions": [
+        {"surface": "βοτάνας", "materia_key": "cretan-herbs"}
+      ],
+      "notes": "REJECTED entirely. General botanical-knowledge discussion; Crete here is source-of-import, not Galen travel. Italy is named because Galen lived there."
+    },
+    "de_antidotis.1.10.a": {
+      "translation_en": "I myself also knew of the herbs themselves growing in Asia — few in some districts, but most in Cyzicus — and even in Italy, just as certain others, so too I saw the amaracon growing. But this plant falls far short of marum in fragrance.",
+      "materia_mentions": [
+        {"surface": "ἀμάρακον", "materia_key": "amaracon"},
+        {"surface": "μάρου", "materia_key": "maron"}
+      ],
+      "notes": "REJECTED entirely. Botanical observation across Asia / Cyzicus / Italy. εἶδον γεννώμενον (\"I saw it growing\") is autopsy of plants, not travel-narrative."
+    },
+    "de_antidotis.1.14.a": {
+      "translation_en": "It is brought to us from there [from Crete], so that those preparing [the antidote] for Caesar always use the Cretan variety, even though I found that even in Rome itself, in the suburbs, both the chamaepitys and the chamaedrys are more fragrant than those from Crete — provided they have not been deluged by much rain. Furthermore, it is necessary to know also this: that when the herbs come from Crete, wrapped in papers on which the name of each herb is written, some have a simple inscription, while others have an additional notation, 'of the plain.'",
+      "materia_mentions": [
+        {"surface": "χαμαιπίτυν", "materia_key": "chamaepitys"},
+        {"surface": "χαμαίδρυν", "materia_key": "chamaedrys"}
+      ],
+      "notes": "REJECTED entirely. Rome-suburbs vs. Cretan-import comparison; Crete is again a source label, not Galen travel."
+    }
+  }
+}

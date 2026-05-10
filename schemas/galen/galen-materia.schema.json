@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/galen/galen-materia.schema.json",
+  "title": "Galen materia medica file",
+  "type": "array",
+  "$defs": {
+    "materiaKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    },
+    "placeKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "relation": {
+      "type": "string",
+      "enum": ["acquired", "observed", "sourced_from", "tested", "prepared"]
+    }
+  },
+  "items": {
+    "type": "object",
+    "required": [
+      "materia_key",
+      "display_name",
+      "greek_name",
+      "category",
+      "place_links",
+      "description"
+    ],
+    "properties": {
+      "materia_key": { "$ref": "#/$defs/materiaKey" },
+      "display_name": { "type": "string" },
+      "greek_name": { "type": "string" },
+      "category": {
+        "type": "string",
+        "enum": ["mineral", "earth", "plant", "animal", "compound", "metal", "salt", "resin"]
+      },
+      "place_links": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["place_key", "relation", "passage_id", "evidence_phrase"],
+          "properties": {
+            "place_key": { "$ref": "#/$defs/placeKey" },
+            "relation": { "$ref": "#/$defs/relation" },
+            "passage_id": { "type": "string" },
+            "evidence_phrase": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "description": { "type": "string" }
+    },
+    "additionalProperties": false
+  }
+}

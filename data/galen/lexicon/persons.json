@@ -1,0 +1,149 @@
+[
+  {
+    "person_key": "andromachus_the_elder",
+    "display_name": "Andromachus the Elder",
+    "greek_names": ["Ἀνδρόμαχος"],
+    "role": "physician (Nero's archiater); composed the canonical theriac recipe",
+    "notes": "Author of the elegiac Theriac to Augustus quoted at length in De antidotis."
+  },
+  {
+    "person_key": "andromachus_the_younger",
+    "display_name": "Andromachus the Younger",
+    "greek_names": ["Ἀνδρόμαχος ὁ νεώτερος"],
+    "role": "son of Andromachus the Elder; physician at Rome",
+    "notes": "Cited in De antidotis as transmitter of his father's recipes."
+  },
+  {
+    "person_key": "damocrates",
+    "display_name": "Servilius Damocrates",
+    "greek_names": ["Δαμοκράτης"],
+    "role": "1st-century physician; composed iambic pharmacological poems",
+    "notes": "Heavily quoted in De antidotis."
+  },
+  {
+    "person_key": "hippocrates",
+    "display_name": "Hippocrates",
+    "greek_names": ["Ἱπποκράτης"],
+    "role": "5th-century BCE physician of Cos; canonical authority"
+  },
+  {
+    "person_key": "asclepius",
+    "display_name": "Asclepius",
+    "greek_names": ["Ἀσκληπιός"],
+    "role": "healing deity"
+  },
+  {
+    "person_key": "dioscorides",
+    "display_name": "Dioscorides Pedanius",
+    "greek_names": ["Διοσκουρίδης"],
+    "role": "1st-century CE pharmacological author; De materia medica"
+  },
+  {
+    "person_key": "asclepiades",
+    "display_name": "Asclepiades of Bithynia",
+    "greek_names": ["Ἀσκληπιάδης"],
+    "role": "1st-century BCE physician at Rome; doctrinal opponent in Galen"
+  },
+  {
+    "person_key": "erasistratus",
+    "display_name": "Erasistratus",
+    "greek_names": ["Ἐρασίστρατος"],
+    "role": "3rd-century BCE Alexandrian physician"
+  },
+  {
+    "person_key": "herophilus",
+    "display_name": "Herophilus",
+    "greek_names": ["Ἡρόφιλος"],
+    "role": "3rd-century BCE Alexandrian anatomist"
+  },
+  {
+    "person_key": "mithridates_vi",
+    "display_name": "Mithridates VI Eupator",
+    "greek_names": ["Μιθριδάτης"],
+    "role": "king of Pontus; legendary inventor of the mithridatium antidote"
+  },
+  {
+    "person_key": "nero",
+    "display_name": "Nero",
+    "greek_names": ["Νέρων"],
+    "role": "Roman emperor (54–68 CE); commissioned theriac via Andromachus"
+  },
+  {
+    "person_key": "marcus_aurelius",
+    "display_name": "Marcus Aurelius",
+    "greek_names": ["Μᾶρκος Ἀντωνῖνος", "Ἀντωνῖνος"],
+    "role": "Roman emperor (161–180 CE); patient and patron of Galen"
+  },
+  {
+    "person_key": "lucius_verus",
+    "display_name": "Lucius Verus",
+    "greek_names": ["Λούκιος"],
+    "role": "co-emperor with Marcus Aurelius (161–169 CE)"
+  },
+  {
+    "person_key": "commodus",
+    "display_name": "Commodus",
+    "greek_names": ["Κόμμοδος"],
+    "role": "Roman emperor (180–192 CE); patient of Galen as a youth"
+  },
+  {
+    "person_key": "philistion",
+    "display_name": "Philistion of Locri",
+    "greek_names": ["Φιλιστίων"],
+    "role": "4th-century BCE physician"
+  },
+  {
+    "person_key": "pamphilus",
+    "display_name": "Pamphilus",
+    "greek_names": ["Πάμφιλος"],
+    "role": "1st-century CE Alexandrian compiler of botanical lore (cited critically)"
+  },
+  {
+    "person_key": "empedocles",
+    "display_name": "Empedocles",
+    "greek_names": ["Ἐμπεδοκλῆς"],
+    "role": "5th-century BCE pre-Socratic; cited on elemental theory"
+  },
+  {
+    "person_key": "plato",
+    "display_name": "Plato",
+    "greek_names": ["Πλάτων"],
+    "role": "Athenian philosopher"
+  },
+  {
+    "person_key": "aristotle",
+    "display_name": "Aristotle",
+    "greek_names": ["Ἀριστοτέλης"],
+    "role": "Stagirite philosopher"
+  },
+  {
+    "person_key": "theophrastus",
+    "display_name": "Theophrastus",
+    "greek_names": ["Θεόφραστος"],
+    "role": "successor of Aristotle; botanical authority"
+  },
+  {
+    "person_key": "homer",
+    "display_name": "Homer",
+    "greek_names": ["Ὅμηρος"],
+    "role": "epic poet; cited for poetic colour and place mentions"
+  },
+  {
+    "person_key": "zeus",
+    "display_name": "Zeus",
+    "greek_names": ["Ζεύς", "Διός"],
+    "role": "deity"
+  },
+  {
+    "person_key": "hephaestus",
+    "display_name": "Hephaestus",
+    "greek_names": ["Ἥφαιστος"],
+    "role": "deity (Hephaestian / Hephaestiad referenced in the Lemnos passage)"
+  },
+  {
+    "person_key": "aphrodite",
+    "display_name": "Aphrodite (Cypris)",
+    "greek_names": ["Ἀφροδίτη", "Κύπρις"],
+    "role": "deity; vocative Κύπρι is a known false-positive trigger for the Cyprus place lookup"
+  }
+]

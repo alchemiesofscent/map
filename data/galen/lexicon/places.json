@@ -1,0 +1,467 @@
+[
+  {
+    "place_key": "alexandria_troas",
+    "display_name": "Alexandria Troas",
+    "ancient_names_in_galen": [
+      {"surface": "Ἀλεξανδρεία Τρῳάς", "passage_id": "smt.9.1"},
+      {"surface": "Ἀλεξανδρείας Τρῳάδος", "passage_id": "smt.9.1"},
+      {"surface": "Τρῳάδος Ἀλεξανδρείας", "passage_id": "smt.9.1"},
+      {"surface": "Ἀλεξανδρείαν Τρῳάδα", "passage_id": "smt.9.1"},
+      {"surface": "Τρῳὰς Ἀλεξάνδρεια", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "city",
+    "lat": 39.751699149,
+    "lon": 26.1575573013,
+    "certainty": "secure",
+    "pleiades_id": "550434",
+    "pleiades_uri": "https://pleiades.stoa.org/places/550434",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Multi-word toponym; the Galen surface forms always pair Alexandria with Troad. Override exists because the auto-detector resolves 'Ἀλεξάνδρεια' alone to 20 ambiguous Pleiades records and 'Τρῳάς' to the broader Troad region — neither is right for the embarkation port in SMT 1/2."
+  },
+  {
+    "place_key": "thessalonica",
+    "display_name": "Thessalonica",
+    "ancient_names_in_galen": [
+      {"surface": "Θεσσαλονίκη", "passage_id": "smt.9.1"},
+      {"surface": "Θεσσαλονίκην", "passage_id": "smt.9.1"},
+      {"surface": "Θεσσαλονίκης", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "city",
+    "lat": 40.628342,
+    "lon": 22.952885,
+    "certainty": "secure",
+    "pleiades_id": "491741",
+    "pleiades_uri": "https://pleiades.stoa.org/places/491741",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Embarkation harbor on the way to Lemnos in SMT 1; route context, not a primary stop."
+  },
+  {
+    "place_key": "philippi",
+    "display_name": "Philippi",
+    "ancient_names_in_galen": [
+      {"surface": "Φίλιπποι", "passage_id": "smt.9.1"},
+      {"surface": "Φιλίπποις", "passage_id": "smt.9.1"},
+      {"surface": "Φιλίππων", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "city",
+    "lat": 41.0126513396,
+    "lon": 24.2846372868,
+    "certainty": "secure",
+    "pleiades_id": "501482",
+    "pleiades_uri": "https://pleiades.stoa.org/places/501482",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "The auto-detector treats Φίλιππος as a person (king of Macedon) and filters it. This override forces the place mapping for the dative 'ἐν Φιλίπποις' in SMT 2."
+  },
+  {
+    "place_key": "hephaistia",
+    "display_name": "Hephaistia",
+    "ancient_names_in_galen": [
+      {"surface": "Ἡφαιστιάς", "passage_id": "smt.9.1"},
+      {"surface": "Ἡφαιστιάδα", "passage_id": "smt.9.1"},
+      {"surface": "Ἡφαιστιάδος", "passage_id": "smt.9.1"},
+      {"surface": "Ἡφαιστία", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "city",
+    "lat": 39.9645815,
+    "lon": 25.3182289,
+    "certainty": "secure",
+    "pleiades_id": "550569",
+    "pleiades_uri": "https://pleiades.stoa.org/places/550569",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "City on Lemnos; the actual collection point for Lemnian earth in SMT 1/2. Galen uses both 'Ἡφαιστιάς' and 'Ἡφαιστία' forms."
+  },
+  {
+    "place_key": "soloi_cyprus",
+    "display_name": "Soloi (Cyprus)",
+    "ancient_names_in_galen": [
+      {"surface": "Σόλοι", "passage_id": "smt.9.3"},
+      {"surface": "Σόλων", "passage_id": "smt.9.3"},
+      {"surface": "Σόλοις", "passage_id": "smt.9.3"},
+      {"surface": "Σόλους", "passage_id": "smt.9.3"}
+    ],
+    "place_type": "city",
+    "lat": 35.138224,
+    "lon": 32.813067,
+    "certainty": "secure",
+    "pleiades_id": "707624",
+    "pleiades_uri": "https://pleiades.stoa.org/places/707624",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Cyprus, not the Cilician Soli. Disambiguates against Pleiades's other 'Soloi' (Cilicia). The genitive Σόλων (also = 'of Solon') is the form Galen uses; CLTK can't lemmatize it correctly without context, hence the explicit override."
+  },
+  {
+    "place_key": "ergasteria",
+    "display_name": "Ergasteria",
+    "ancient_names_in_galen": [
+      {"surface": "Ἐργαστήρια", "passage_id": "smt.9.3"},
+      {"surface": "Ἐργαστηρίων", "passage_id": "smt.9.3"},
+      {"surface": "Ἐργαστηρίοις", "passage_id": "smt.9.3"}
+    ],
+    "place_type": "mine",
+    "lat": 39.727645,
+    "lon": 27.59645,
+    "certainty": "secure",
+    "pleiades_id": "550534",
+    "pleiades_uri": "https://pleiades.stoa.org/places/550534",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Mining settlement near Pergamum. Until this override 'Ἐργαστήρια' was being filtered as a generic noun ('workshops') by the survey stoplist; the override re-promotes it to a place because it is the actual destination of the Pergamum trip in SMT 6."
+  },
+  {
+    "place_key": "neapolis_campania",
+    "display_name": "Neapolis (Naples, Campania)",
+    "ancient_names_in_galen": [
+      {"surface": "Νεάπολις", "passage_id": "de_antidotis.1"},
+      {"surface": "Νεαπόλει", "passage_id": "de_antidotis.1"},
+      {"surface": "Νεαπόλεως", "passage_id": "de_antidotis.1"},
+      {"surface": "Νεάπολιν", "passage_id": "de_antidotis.1"}
+    ],
+    "place_type": "city",
+    "lat": 40.839995,
+    "lon": 14.25287,
+    "certainty": "secure",
+    "pleiades_id": "433014",
+    "pleiades_uri": "https://pleiades.stoa.org/places/433014",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Pleiades 'Parthenope/Neapolis'. Galen mentions the Trifolinus area near here in De antidotis 3 — used in the materia-medica observation layer, not as a route stop."
+  },
+  {
+    "place_key": "dead_sea",
+    "display_name": "Dead Sea (Asphaltitis Limne)",
+    "ancient_names_in_galen": [
+      {"surface": "νεκρὰ θάλασσα", "passage_id": "smt.9.2"},
+      {"surface": "νεκρὰν θάλασσαν", "passage_id": "smt.9.2"},
+      {"surface": "νεκρᾶς θαλάσσης", "passage_id": "smt.9.2"},
+      {"surface": "Ἀσφαλτῖτις", "passage_id": "smt.9.2"}
+    ],
+    "place_type": "sea",
+    "lat": 31.5113116065,
+    "lon": 35.4870544069,
+    "certainty": "probable",
+    "pleiades_id": "697709",
+    "pleiades_uri": "https://pleiades.stoa.org/places/697709",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Galen uses the descriptive phrase 'the so-called dead sea' (νεκρὰν ὀνομαζομένην θάλασσαν), not a single capitalized toponym, so the auto-detector misses it. Surface forms are lowercased multi-word; the override matches them via the curator_lemma_index."
+  },
+  {
+    "place_key": "coele_syria",
+    "display_name": "Coele Syria",
+    "ancient_names_in_galen": [
+      {"surface": "κοίλη Συρία", "passage_id": "smt.9.1"},
+      {"surface": "κοίλην Συρίαν", "passage_id": "smt.9.1"},
+      {"surface": "κοίλης Συρίας", "passage_id": "smt.9.1"},
+      {"surface": "κοίλῃ Συρίᾳ", "passage_id": "smt.9.1"},
+      {"surface": "Συρία", "passage_id": "smt.9.1"},
+      {"surface": "Συρίαν", "passage_id": "smt.9.1"},
+      {"surface": "Συρίας", "passage_id": "smt.9.1"},
+      {"surface": "Συρίᾳ", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "region",
+    "lat": 33.75,
+    "lon": 36.75,
+    "certainty": "secure",
+    "pleiades_id": "678096",
+    "pleiades_uri": "https://pleiades.stoa.org/places/678096",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Multi-word region label; the κοίλη qualifier is lowercased in the TEI so the auto-detector can't catch it as a single proper noun. The override prevents 'Συρία' alone from defaulting to one of the six ambiguous Pleiades 'Syria' records."
+  },
+  {
+    "place_key": "mysia",
+    "display_name": "Mysia",
+    "ancient_names_in_galen": [
+      {"surface": "Μυσία", "passage_id": "smt.10.2"},
+      {"surface": "Μυσίᾳ", "passage_id": "smt.10.2"},
+      {"surface": "Μυσίας", "passage_id": "smt.10.2"},
+      {"surface": "Μυσίαν", "passage_id": "smt.10.2"}
+    ],
+    "place_type": "region",
+    "lat": 39.5996880845,
+    "lon": 27.8340013218,
+    "certainty": "secure",
+    "pleiades_id": "550759",
+    "pleiades_uri": "https://pleiades.stoa.org/places/550759",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Region in NW Asia Minor. The auto-detector finds 'Μυσίᾳ' but had several Pleiades candidates; this override locks to the canonical region record. Mysia is materia/clinical context per the curator decision (SMT 10.2 rejected as a route)."
+  },
+  {
+    "place_key": "cyprus_island",
+    "display_name": "Cyprus (island)",
+    "ancient_names_in_galen": [
+      {"surface": "Κύπρος", "passage_id": "smt.9.1"},
+      {"surface": "Κύπρον", "passage_id": "smt.9.1"},
+      {"surface": "Κύπρου", "passage_id": "smt.9.3"},
+      {"surface": "Κύπρῳ", "passage_id": "smt.9.3"}
+    ],
+    "place_type": "island",
+    "lat": 35.0009840667,
+    "lon": 33.2188302483,
+    "certainty": "secure",
+    "pleiades_id": "707498",
+    "pleiades_uri": "https://pleiades.stoa.org/places/707498",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Lock the bare-Cyprus mention to the island record (707498), not the Roman province (981516) or other variants. Galen's phrasing — 'to Cyprus for the mines' — is geographical, not administrative."
+  },
+  {
+    "place_key": "asia_province",
+    "display_name": "Asia (Roman province)",
+    "ancient_names_in_galen": [
+      {"surface": "Ἀσία", "passage_id": "smt.9.1"},
+      {"surface": "Ἀσίαν", "passage_id": "smt.9.1"},
+      {"surface": "Ἀσίας", "passage_id": "smt.9.1"},
+      {"surface": "Ἀσίᾳ", "passage_id": "de_antidotis.1"}
+    ],
+    "place_type": "region",
+    "lat": 38.4607221567,
+    "lon": 27.7761048198,
+    "certainty": "secure",
+    "pleiades_id": "981509",
+    "pleiades_uri": "https://pleiades.stoa.org/places/981509",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "In Galen's autobiographical contexts, 'from Asia to Rome' refers to the Roman province of Asia / western Asia Minor, not the continent. Locks the otherwise-ambiguous Pleiades match (5 candidates) to 981509."
+  },
+  {
+    "place_key": "thracia_region",
+    "display_name": "Thracia (region)",
+    "ancient_names_in_galen": [
+      {"surface": "Θρᾴκη", "passage_id": "smt.9.1"},
+      {"surface": "Θρᾴκην", "passage_id": "smt.9.1"},
+      {"surface": "Θρᾴκης", "passage_id": "smt.9.1"},
+      {"surface": "Θρᾴκῃ", "passage_id": "smt.9.1"},
+      {"surface": "Θρᾳκία", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "region",
+    "lat": 41.5178303653,
+    "lon": 26.9624137954,
+    "certainty": "secure",
+    "pleiades_id": "501638",
+    "pleiades_uri": "https://pleiades.stoa.org/places/501638",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "'Through Thrace and Macedonia' is geographical route language, not an administrative claim — use the region record (501638), not the Roman province."
+  },
+  {
+    "place_key": "macedonia_region",
+    "display_name": "Macedonia (region)",
+    "ancient_names_in_galen": [
+      {"surface": "Μακεδονία", "passage_id": "smt.9.1"},
+      {"surface": "Μακεδονίαν", "passage_id": "smt.9.1"},
+      {"surface": "Μακεδονίας", "passage_id": "smt.9.1"},
+      {"surface": "Μακεδονίᾳ", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "region",
+    "lat": 40.9691152478,
+    "lon": 22.4920786436,
+    "certainty": "secure",
+    "pleiades_id": "491656",
+    "pleiades_uri": "https://pleiades.stoa.org/places/491656",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Same rationale as Thracia: route-narrative geography, not Roman administration — use the region record (491656)."
+  },
+  {
+    "place_key": "italia_peninsula",
+    "display_name": "Italia",
+    "ancient_names_in_galen": [
+      {"surface": "Ἰταλία", "passage_id": "smt.9.1"},
+      {"surface": "Ἰταλίαν", "passage_id": "smt.9.1"},
+      {"surface": "Ἰταλίας", "passage_id": "smt.9.1"},
+      {"surface": "Ἰταλίᾳ", "passage_id": "de_antidotis.1"}
+    ],
+    "place_type": "region",
+    "lat": 43.6941505,
+    "lon": 11.0949512,
+    "certainty": "secure",
+    "pleiades_id": "1052",
+    "pleiades_uri": "https://pleiades.stoa.org/places/1052",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "The Italian peninsula as recognized by the Romans (Pleiades 1052). Do NOT use 452346 (the much narrower early-Greek 'toe of Italy' region)."
+  },
+  {
+    "place_key": "lemnos",
+    "display_name": "Lemnos",
+    "ancient_names_in_galen": [
+      {"surface": "Λῆμνος", "passage_id": "smt.9.1"},
+      {"surface": "Λῆμνον", "passage_id": "smt.9.1"},
+      {"surface": "Λήμνου", "passage_id": "smt.9.1"},
+      {"surface": "Λήμνῳ", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "island",
+    "lat": 39.9050198225,
+    "lon": 25.229093534,
+    "certainty": "secure",
+    "pleiades_id": "550693",
+    "pleiades_uri": "https://pleiades.stoa.org/places/550693",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "The destination of Galen's main Lemnian-earth voyage. Pleiades 550693 is the island record."
+  },
+  {
+    "place_key": "rome",
+    "display_name": "Rome",
+    "ancient_names_in_galen": [
+      {"surface": "Ῥώμη", "passage_id": "smt.9.1"},
+      {"surface": "Ῥώμην", "passage_id": "smt.9.1"},
+      {"surface": "Ῥώμης", "passage_id": "smt.9.1"},
+      {"surface": "Ῥώμῃ", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "city",
+    "lat": 41.8899450102,
+    "lon": 12.4914322095,
+    "certainty": "secure",
+    "pleiades_id": "423025",
+    "pleiades_uri": "https://pleiades.stoa.org/places/423025",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Galen's adoptive home; appears as both destination (Cyprus → Rome material transport) and route context."
+  },
+  {
+    "place_key": "thasos",
+    "display_name": "Thasos",
+    "ancient_names_in_galen": [
+      {"surface": "Θάσος", "passage_id": "smt.9.1"},
+      {"surface": "Θάσον", "passage_id": "smt.9.1"},
+      {"surface": "Θάσου", "passage_id": "smt.9.1"},
+      {"surface": "Θάσῳ", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "island",
+    "lat": 40.6764946876,
+    "lon": 24.6650352149,
+    "certainty": "secure",
+    "pleiades_id": "501635",
+    "pleiades_uri": "https://pleiades.stoa.org/places/501635",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Stop on the Italy → Lemnos voyage in SMT 9.1 (b)."
+  },
+  {
+    "place_key": "pergamum",
+    "display_name": "Pergamum",
+    "ancient_names_in_galen": [
+      {"surface": "Πέργαμον", "passage_id": "smt.9.3"},
+      {"surface": "Περγάμου", "passage_id": "smt.9.3"},
+      {"surface": "Περγάμῳ", "passage_id": "smt.9.3"}
+    ],
+    "place_type": "city",
+    "lat": 39.1325,
+    "lon": 27.184167,
+    "certainty": "secure",
+    "pleiades_id": "550812",
+    "pleiades_uri": "https://pleiades.stoa.org/places/550812",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Galen's birthplace; departure point for the Pergamum → Ergasteria mining trip (SMT 9.3 K. XII 229.7)."
+  },
+  {
+    "place_key": "cyzicus",
+    "display_name": "Cyzicus",
+    "ancient_names_in_galen": [
+      {"surface": "Κύζικος", "passage_id": "smt.9.3"},
+      {"surface": "Κυζίκου", "passage_id": "smt.9.3"},
+      {"surface": "Κυζίκῳ", "passage_id": "smt.9.3"},
+      {"surface": "Κύζικον", "passage_id": "smt.9.3"}
+    ],
+    "place_type": "city",
+    "lat": 40.3855645,
+    "lon": 27.883191,
+    "certainty": "secure",
+    "pleiades_id": "511218",
+    "pleiades_uri": "https://pleiades.stoa.org/places/511218",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "City on the Propontis; appears as context in the Pergamum → Ergasteria passage (SMT 9.3) and as a place Galen comments on minerals (De antidotis 1.10)."
+  },
+  {
+    "place_key": "palestine",
+    "display_name": "Palaestina",
+    "ancient_names_in_galen": [
+      {"surface": "Παλαιστίνη", "passage_id": "smt.9.1"},
+      {"surface": "Παλαιστίνην", "passage_id": "smt.9.1"},
+      {"surface": "Παλαιστίνης", "passage_id": "smt.9.1"},
+      {"surface": "Παλαιστίνῃ", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "region",
+    "lat": 31.614254,
+    "lon": 34.8910485,
+    "certainty": "probable",
+    "pleiades_id": "1001939",
+    "pleiades_uri": "https://pleiades.stoa.org/places/1001939",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Pleiades has 3 separate Palaestina province records (I/II/III); using Palaestina I as the canonical pin since Galen's mention is general. Treated as context within the coele-syria-dead-sea-materials route."
+  },
+  {
+    "place_key": "lycia",
+    "display_name": "Lycia",
+    "ancient_names_in_galen": [
+      {"surface": "Λυκία", "passage_id": "smt.9.2"},
+      {"surface": "Λυκίαν", "passage_id": "smt.9.2"},
+      {"surface": "Λυκίας", "passage_id": "smt.9.2"},
+      {"surface": "Λυκίᾳ", "passage_id": "smt.9.2"}
+    ],
+    "place_type": "region",
+    "lat": 36.6341205843,
+    "lon": 29.5751352564,
+    "certainty": "secure",
+    "pleiades_id": "638965",
+    "pleiades_uri": "https://pleiades.stoa.org/places/638965",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Region (Pleiades 638965, not the Roman province 1001914). Galen says he 'sailed past all of Lycia in a small boat' (SMT 9.2) — coastal sailing notice; per the curator decision, mapped only as a do_not_map context (not a route stop)."
+  },
+  {
+    "place_key": "samos",
+    "display_name": "Samos",
+    "ancient_names_in_galen": [
+      {"surface": "Σάμος", "passage_id": "smt.9.1"},
+      {"surface": "Σάμον", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "island",
+    "lat": 37.7547215,
+    "lon": 26.7741455,
+    "certainty": "secure",
+    "pleiades_id": "599926",
+    "pleiades_uri": "https://pleiades.stoa.org/places/599926",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Mentioned only as a comparison in SMT 9.1 ('like Samos and Chios sharing names with their islands'); category C (do not map as a route stop)."
+  },
+  {
+    "place_key": "chios",
+    "display_name": "Chios",
+    "ancient_names_in_galen": [
+      {"surface": "Χίος", "passage_id": "smt.9.1"},
+      {"surface": "Χίον", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "island",
+    "lat": 38.4214085,
+    "lon": 26.087502,
+    "certainty": "secure",
+    "pleiades_id": "550497",
+    "pleiades_uri": "https://pleiades.stoa.org/places/550497",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Same comparison context as Samos; category C."
+  },
+  {
+    "place_key": "aegean_sea",
+    "display_name": "Aegean Sea",
+    "ancient_names_in_galen": [
+      {"surface": "Αἰγαῖον", "passage_id": "smt.9.1"},
+      {"surface": "Αἰγαίου", "passage_id": "smt.9.1"},
+      {"surface": "Αἰγαῖος", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "sea",
+    "lat": 38.5,
+    "lon": 25.0,
+    "certainty": "secure",
+    "pleiades_id": "560221",
+    "pleiades_uri": "https://pleiades.stoa.org/places/560221",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Comparison context; category C in the Lemnos route per the do_not_map list."
+  },
+  {
+    "place_key": "crete",
+    "display_name": "Crete",
+    "ancient_names_in_galen": [
+      {"surface": "Κρήτη", "passage_id": "de_antidotis.1"},
+      {"surface": "Κρήτην", "passage_id": "de_antidotis.1"},
+      {"surface": "Κρήτης", "passage_id": "de_antidotis.1"},
+      {"surface": "Κρήτῃ", "passage_id": "de_antidotis.1"}
+    ],
+    "place_type": "island",
+    "lat": 35.2,
+    "lon": 25.0,
+    "certainty": "probable",
+    "pleiades_id": "589961",
+    "pleiades_uri": "https://pleiades.stoa.org/places/589961",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "Mentioned in De antidotis 1.5 / 1.14 as the source of botanical materia (Cretan dittany etc.). Per the curator decision these passages are REJECTED as route evidence — Crete is source geography, not Galen travel. Kept here for the materia layer."
+  }
+]

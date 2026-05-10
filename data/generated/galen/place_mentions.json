@@ -1,0 +1,6604 @@
+{
+  "schema_version": "0.2",
+  "mentions": [
+    {
+      "work": "SMT",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XI 382.0–384.7",
+      "surface": "Σελινουσία",
+      "lemma": "σελινουσια",
+      "pleiades_ids": [
+        "599932"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XI 385.14–390.4",
+      "surface": "Νείλου",
+      "lemma": "Νεῖλος",
+      "pleiades_ids": [
+        "727172"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XI 385.14–390.4",
+      "surface": "Αἴγυπτον",
+      "lemma": "Αἴγυπτος",
+      "pleiades_ids": [
+        "766",
+        "981503"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "1",
+      "chapter": "7",
+      "section": null,
+      "kuhn_citation": "K. XI 392.12–394.3",
+      "surface": "Ἰταλίαν",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "1",
+      "chapter": "7",
+      "section": null,
+      "kuhn_citation": "K. XI 392.12–394.3",
+      "surface": "Ἄλβουλα",
+      "lemma": "αλβουλα",
+      "pleiades_ids": [
+        "422840"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "1",
+      "chapter": "20",
+      "section": null,
+      "kuhn_citation": "K. XI 415.3–416.12",
+      "surface": "Ἕλλησιν",
+      "lemma": "Ἕλλην",
+      "pleiades_ids": [
+        "589801"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "1",
+      "chapter": "37",
+      "section": null,
+      "kuhn_citation": "K. XI 445.3–449.10",
+      "surface": "Ἕλλησιν",
+      "lemma": "Ἕλλην",
+      "pleiades_ids": [
+        "589801"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "1",
+      "chapter": "37",
+      "section": null,
+      "kuhn_citation": "K. XI 445.3–449.10",
+      "surface": "Ἕλλησιν",
+      "lemma": "Ἕλλην",
+      "pleiades_ids": [
+        "589801"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "1",
+      "chapter": "38",
+      "section": null,
+      "kuhn_citation": "K. XI 449.10–452.1",
+      "surface": "Ἴωσιν",
+      "lemma": "Ἴωνες",
+      "pleiades_ids": [
+        "315043"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "2",
+      "chapter": "1",
+      "section": null,
+      "kuhn_citation": "K. XI 459.0–462.11",
+      "surface": "Ἠέλιον",
+      "lemma": "Ἥλιος",
+      "pleiades_ids": [
+        "573241"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "3",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XI 542.9–544.5",
+      "surface": "Δίων",
+      "lemma": "διων",
+      "pleiades_ids": [
+        "491572",
+        "501400",
+        "540734",
+        "543684",
+        "682543"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "3",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XI 575.4–583.13",
+      "surface": "Χίας",
+      "lemma": "Χῖος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "4",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XI 662.10–665.11",
+      "surface": "Ἀσίαν",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "4",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XI 665.11–673.2",
+      "surface": "Αἴγυπτον",
+      "lemma": "Αἴγυπτος",
+      "pleiades_ids": [
+        "766",
+        "981503"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "4",
+      "chapter": "18",
+      "section": null,
+      "kuhn_citation": "K. XI 679.7–684.2",
+      "surface": "Αἴγυπτον",
+      "lemma": "Αἴγυπτος",
+      "pleiades_ids": [
+        "766",
+        "981503"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "4",
+      "chapter": "20",
+      "section": null,
+      "kuhn_citation": "K. XI 689.9–695.6",
+      "surface": "Παλαιστίνῃ",
+      "lemma": "παλαιστινη",
+      "pleiades_ids": [
+        "palestine"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "4",
+      "chapter": "20",
+      "section": null,
+      "kuhn_citation": "K. XI 689.9–695.6",
+      "surface": "Συρίᾳ",
+      "lemma": "Συρία",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "4",
+      "chapter": "20",
+      "section": null,
+      "kuhn_citation": "K. XI 689.9–695.6",
+      "surface": "Ἰταλίαν",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "4",
+      "chapter": "21",
+      "section": null,
+      "kuhn_citation": "K. XI 695.6–696.15",
+      "surface": "Ἀσίας",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "5",
+      "chapter": "8",
+      "section": null,
+      "kuhn_citation": "K. XI 727.11–729.7",
+      "surface": "Θερμὰ",
+      "lemma": "θερμα",
+      "pleiades_ids": [
+        "222206",
+        "550922",
+        "599976",
+        "619216",
+        "619271"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "5",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XI 754.3–757.2",
+      "surface": "Ὅσα",
+      "lemma": "οσα",
+      "pleiades_ids": [
+        "413235"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "5",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XI 754.3–757.2",
+      "surface": "Ἀσίας",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "prooemium",
+      "section": null,
+      "kuhn_citation": "K. XII 789.0–798.15",
+      "surface": "Ἑρμῆν",
+      "lemma": "Ἑρμῆς",
+      "pleiades_ids": [
+        "727122",
+        "727123",
+        "756574"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "1",
+      "kuhn_citation": "K. XII 798.15–807.4",
+      "surface": "Ἀβροτόνου",
+      "lemma": "Ἀβρότονον",
+      "pleiades_ids": [
+        "344282"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "3",
+      "kuhn_citation": "K. XII 810.7–811.8",
+      "surface": "Παρνασσῷ",
+      "lemma": "Παρνασσός",
+      "pleiades_ids": [
+        "619235"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "3",
+      "kuhn_citation": "K. XII 810.7–811.8",
+      "surface": "Παρνασσῷ",
+      "lemma": "Παρνασσός",
+      "pleiades_ids": [
+        "619235"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "14",
+      "kuhn_citation": "K. XII 818.10–13",
+      "surface": "Ἄκανθος",
+      "lemma": "ακανθος",
+      "pleiades_ids": [
+        "501339"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "15",
+      "kuhn_citation": "K. XII 818.13–819.0",
+      "surface": "Ἀκάνθιον",
+      "lemma": "ακανθιον",
+      "pleiades_ids": [
+        "767839"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "16",
+      "kuhn_citation": "K. XII 819.0–7",
+      "surface": "Ἄκανθος",
+      "lemma": "ακανθος",
+      "pleiades_ids": [
+        "501339"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "17",
+      "kuhn_citation": "K. XII 819.7–14",
+      "surface": "Ἄκανθος",
+      "lemma": "ακανθος",
+      "pleiades_ids": [
+        "501339"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "21",
+      "kuhn_citation": "K. XII 820.13–821.1",
+      "surface": "Ἀκτὴ",
+      "lemma": "ακτη",
+      "pleiades_ids": [
+        "501365",
+        "573068"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "22",
+      "kuhn_citation": "K. XII 821.1–9",
+      "surface": "Ἄλιμον",
+      "lemma": "αλιμον",
+      "pleiades_ids": [
+        "543622"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "22",
+      "kuhn_citation": "K. XII 821.1–9",
+      "surface": "Κιλικίᾳ",
+      "lemma": "κιλικια",
+      "pleiades_ids": [
+        "628957",
+        "658440",
+        "981514",
+        "991403"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "23",
+      "kuhn_citation": "K. XII 821.9–823.0",
+      "surface": "Ἀλόη",
+      "lemma": "αλοη",
+      "pleiades_ids": [
+        "49853"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "23",
+      "kuhn_citation": "K. XII 821.9–823.0",
+      "surface": "Συρίαν",
+      "lemma": "συρία",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "23",
+      "kuhn_citation": "K. XII 821.9–823.0",
+      "surface": "κοίλη Συρία",
+      "lemma": "κοιλη συρια",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "23",
+      "kuhn_citation": "K. XII 821.9–823.0",
+      "surface": "Ἀραβία",
+      "lemma": "αραβια",
+      "pleiades_ids": [
+        "746710",
+        "981506"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "28",
+      "kuhn_citation": "K. XII 824.1–6",
+      "surface": "Ἄμι",
+      "lemma": "αμι",
+      "pleiades_ids": [
+        "456028"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "35",
+      "kuhn_citation": "K. XII 827.1–3",
+      "surface": "Ἄμπελος",
+      "lemma": "αμπελος",
+      "pleiades_ids": [
+        "599487"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "57",
+      "kuhn_citation": "K. XII 836.16–837.2",
+      "surface": "Ἄρκευθος",
+      "lemma": "αρκευθος",
+      "pleiades_ids": [
+        "658390"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "61",
+      "kuhn_citation": "K. XII 839.7–14",
+      "surface": "Ἄρον",
+      "lemma": "αρον",
+      "pleiades_ids": [
+        "138193"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "62",
+      "kuhn_citation": "K. XII 839.14–840.4",
+      "surface": "Ἀρτεμισία",
+      "lemma": "αρτεμισια",
+      "pleiades_ids": [
+        "403182"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "68",
+      "kuhn_citation": "K. XII 841.8–12",
+      "surface": "Ἀρκαδίας",
+      "lemma": "Ἀρκαδία",
+      "pleiades_ids": [
+        "570102"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "1",
+      "section": "74",
+      "kuhn_citation": "K. XII 843.14–844.1",
+      "surface": "Ἀφάκη",
+      "lemma": "αφακη",
+      "pleiades_ids": [
+        "668195"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "3",
+      "section": "3",
+      "kuhn_citation": "K. XII 856.5–9",
+      "surface": "Γίγαρτα",
+      "lemma": "γιγαρτα",
+      "pleiades_ids": [
+        "668252"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "4",
+      "section": "5",
+      "kuhn_citation": "K. XII 863.6–12",
+      "surface": "Ἀλεξανδρείᾳ",
+      "lemma": "αλεξανδρεια",
+      "pleiades_ids": [
+        "59668",
+        "59750"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "4",
+      "section": "11",
+      "kuhn_citation": "K. XII 865.11–867.2",
+      "surface": "Δρυὸς",
+      "lemma": "δρυος",
+      "pleiades_ids": [
+        "599602"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "5",
+      "section": "3",
+      "kuhn_citation": "K. XII 868.1–4",
+      "surface": "Ἐλαίας",
+      "lemma": "ελαιας",
+      "pleiades_ids": [
+        "530879"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "5",
+      "section": "4",
+      "kuhn_citation": "K. XII 868.4–873.0",
+      "surface": "Ἔλαιον",
+      "lemma": "ελαιον",
+      "pleiades_ids": [
+        "573197"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "5",
+      "section": "4",
+      "kuhn_citation": "K. XII 868.4–873.0",
+      "surface": "Ἰβηρίας",
+      "lemma": "Ἰβηρία",
+      "pleiades_ids": [
+        "863807"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "5",
+      "section": "4",
+      "kuhn_citation": "K. XII 868.4–873.0",
+      "surface": "Σικυωνίου",
+      "lemma": "Σικυών",
+      "pleiades_ids": [
+        "570668"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "5",
+      "section": "4",
+      "kuhn_citation": "K. XII 868.4–873.0",
+      "surface": "Αἰγύπτῳ",
+      "lemma": "Αἴγυπτος",
+      "pleiades_ids": [
+        "766",
+        "981503"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "5",
+      "section": "4",
+      "kuhn_citation": "K. XII 868.4–873.0",
+      "surface": "Λιβυκόν",
+      "lemma": "λιβυκον",
+      "pleiades_ids": [
+        "736954"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "5",
+      "section": "4",
+      "kuhn_citation": "K. XII 868.4–873.0",
+      "surface": "Ἑλλάδα",
+      "lemma": "Ἑλλάς",
+      "pleiades_ids": [
+        "1001896",
+        "541112"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "5",
+      "section": "4",
+      "kuhn_citation": "K. XII 868.4–873.0",
+      "surface": "Ἀσίαν",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "5",
+      "section": "16",
+      "kuhn_citation": "K. XII 876.4–9",
+      "surface": "Ἰταλίαν",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "5",
+      "section": "16",
+      "kuhn_citation": "K. XII 876.4–9",
+      "surface": "Καλαβρίᾳ",
+      "lemma": "καλαβρια",
+      "pleiades_ids": [
+        "236397",
+        "442518"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "5",
+      "section": "24",
+      "kuhn_citation": "K. XII 879.4–5",
+      "surface": "Εὐφόρβιον",
+      "lemma": "ευφορβιον",
+      "pleiades_ids": [
+        "614656"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "6",
+      "section": "1",
+      "kuhn_citation": "K. XII 880.3–5",
+      "surface": "Ζειὰ",
+      "lemma": "ζεια",
+      "pleiades_ids": [
+        "324853"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "8",
+      "section": "3",
+      "kuhn_citation": "K. XII 885.5–886.12",
+      "surface": "Θέρμος",
+      "lemma": "θερμος",
+      "pleiades_ids": [
+        "462515"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "6",
+      "chapter": "8",
+      "section": "4",
+      "kuhn_citation": "K. XII 886.12–14",
+      "surface": "Θέρμος",
+      "lemma": "θερμος",
+      "pleiades_ids": [
+        "462515"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "2",
+      "kuhn_citation": "K. XII 6.13–7.8",
+      "surface": "Κάλαμος",
+      "lemma": "καλαμος",
+      "pleiades_ids": [
+        "668277"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "7",
+      "kuhn_citation": "K. XII 9.8–11.16",
+      "surface": "Ἀραβίᾳ",
+      "lemma": "αραβια",
+      "pleiades_ids": [
+        "746710",
+        "981506"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "12",
+      "kuhn_citation": "K. XII 13.11–15.2",
+      "surface": "Κάρυα",
+      "lemma": "καρυα",
+      "pleiades_ids": [
+        "570334"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "12",
+      "kuhn_citation": "K. XII 13.11–15.2",
+      "surface": "Ποντικὰ",
+      "lemma": "ποντικα",
+      "pleiades_ids": [
+        "992081"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "14",
+      "kuhn_citation": "K. XII 15.6–16.1",
+      "surface": "Συρίῃ",
+      "lemma": "συριη",
+      "pleiades_ids": [
+        "1306",
+        "29492",
+        "531109",
+        "531110",
+        "569131178",
+        "981550"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "16",
+      "kuhn_citation": "K. XII 16.11–19.7",
+      "surface": "Κέδρος",
+      "lemma": "κεδρος",
+      "pleiades_ids": [
+        "246320"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "29",
+      "kuhn_citation": "K. XII 29.11–30.14",
+      "surface": "Κισσὸς",
+      "lemma": "κισσος",
+      "pleiades_ids": [
+        "711224"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "35",
+      "kuhn_citation": "K. XII 32.9–33.12",
+      "surface": "Ἰβηρίας",
+      "lemma": "Ἰβηρία",
+      "pleiades_ids": [
+        "863807"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "35",
+      "kuhn_citation": "K. XII 32.9–33.12",
+      "surface": "Ἰβηρίας",
+      "lemma": "Ἰβηρία",
+      "pleiades_ids": [
+        "863807"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "35",
+      "kuhn_citation": "K. XII 32.9–33.12",
+      "surface": "Ἰβηρίαν",
+      "lemma": "Ἰβηρία",
+      "pleiades_ids": [
+        "863807"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "35",
+      "kuhn_citation": "K. XII 32.9–33.12",
+      "surface": "Ἀσίαν",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "36",
+      "kuhn_citation": "K. XII 33.12–14",
+      "surface": "Κόλλα",
+      "lemma": "κολλα",
+      "pleiades_ids": [
+        "501388"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "43",
+      "kuhn_citation": "K. XII 36.2–40.6",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "43",
+      "kuhn_citation": "K. XII 36.2–40.6",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "43",
+      "kuhn_citation": "K. XII 36.2–40.6",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "43",
+      "kuhn_citation": "K. XII 36.2–40.6",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "43",
+      "kuhn_citation": "K. XII 36.2–40.6",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "58",
+      "kuhn_citation": "K. XII 48.10–49.5",
+      "surface": "Κρόμμυον",
+      "lemma": "κρομμυον",
+      "pleiades_ids": [
+        "570386"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "10",
+      "section": "65",
+      "kuhn_citation": "K. XII 54.6–55.0",
+      "surface": "Κύπρος",
+      "lemma": "κυπρος",
+      "pleiades_ids": [
+        "cyprus_island"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "11",
+      "section": "6",
+      "kuhn_citation": "K. XII 57.3–12",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "11",
+      "section": "9",
+      "kuhn_citation": "K. XII 58.3–5",
+      "surface": "Λευκὰς",
+      "lemma": "λευκας",
+      "pleiades_ids": [
+        "530974",
+        "530975"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "11",
+      "section": "12",
+      "kuhn_citation": "K. XII 59.14–60.0",
+      "surface": "Λεύκη",
+      "lemma": "λευκη",
+      "pleiades_ids": [
+        "226677",
+        "570429",
+        "589910"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "11",
+      "section": "20",
+      "kuhn_citation": "K. XII 63.9–64.10",
+      "surface": "Λυκίᾳ",
+      "lemma": "Λυκία",
+      "pleiades_ids": [
+        "lycia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "11",
+      "section": "20",
+      "kuhn_citation": "K. XII 63.9–64.10",
+      "surface": "Καππαδοκίᾳ",
+      "lemma": "καππαδοκια",
+      "pleiades_ids": [
+        "628949",
+        "991402"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "11",
+      "section": "22",
+      "kuhn_citation": "K. XII 65.0–3",
+      "surface": "Λυχνίδος",
+      "lemma": "λυχνιδος",
+      "pleiades_ids": [
+        "481900"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "11",
+      "section": "23",
+      "kuhn_citation": "K. XII 65.3–9",
+      "surface": "Λιβύῃ",
+      "lemma": "Λιβύη",
+      "pleiades_ids": [
+        "716588"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "3",
+      "kuhn_citation": "K. XII 66.13–67.5",
+      "surface": "Μαλάχη",
+      "lemma": "μαλαχη",
+      "pleiades_ids": [
+        "271058"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "6",
+      "kuhn_citation": "K. XII 68.12–69.6",
+      "surface": "Χίας",
+      "lemma": "Χῖος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "7",
+      "kuhn_citation": "K. XII 69.6–70.7",
+      "surface": "Μελάνθιον",
+      "lemma": "Μελάνθιος",
+      "pleiades_ids": [
+        "857232"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "9",
+      "kuhn_citation": "K. XII 70.10–71.8",
+      "surface": "Σαρδόνι",
+      "lemma": "Σαρδώ",
+      "pleiades_ids": [
+        "472014"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "9",
+      "kuhn_citation": "K. XII 70.10–71.8",
+      "surface": "Ἀραβίας",
+      "lemma": "Ἀραβία",
+      "pleiades_ids": [
+        "746710",
+        "981506"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "16",
+      "kuhn_citation": "K. XII 75.1–76.5",
+      "surface": "Μηλέα",
+      "lemma": "μηλεα",
+      "pleiades_ids": [
+        "573365"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "17",
+      "kuhn_citation": "K. XII 76.5–13",
+      "surface": "Περσικῆς",
+      "lemma": "Περσικός",
+      "pleiades_ids": [
+        "29713"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "17",
+      "kuhn_citation": "K. XII 76.5–13",
+      "surface": "Μηλέα",
+      "lemma": "μηλεα",
+      "pleiades_ids": [
+        "573365"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "18",
+      "kuhn_citation": "K. XII 76.13–77.1",
+      "surface": "Μηλέα",
+      "lemma": "μηλεα",
+      "pleiades_ids": [
+        "573365"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "19",
+      "kuhn_citation": "K. XII 77.1–78.0",
+      "surface": "Μηλέα",
+      "lemma": "μηλεα",
+      "pleiades_ids": [
+        "573365"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "26",
+      "kuhn_citation": "K. XII 80.1–4",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "27",
+      "kuhn_citation": "K. XII 80.4–6",
+      "surface": "Μυὸς",
+      "lemma": "μυος",
+      "pleiades_ids": [
+        "786069"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "7",
+      "chapter": "12",
+      "section": "28",
+      "kuhn_citation": "K. XII 80.6–81.6",
+      "surface": "Μυρίκη",
+      "lemma": "μυρικη",
+      "pleiades_ids": [
+        "40229"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "13",
+      "section": "3",
+      "kuhn_citation": "K. XII 85.5–7",
+      "surface": "Κιλικίᾳ",
+      "lemma": "κιλικια",
+      "pleiades_ids": [
+        "628957",
+        "658440",
+        "981514",
+        "991403"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "13",
+      "section": "8",
+      "kuhn_citation": "K. XII 86.5–9",
+      "surface": "Νήριον",
+      "lemma": "νηριον",
+      "pleiades_ids": [
+        "236567"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "15",
+      "section": "10",
+      "kuhn_citation": "K. XII 90.1–5",
+      "surface": "Ὄξος",
+      "lemma": "οξος",
+      "pleiades_ids": [
+        "59969"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "15",
+      "section": "13",
+      "kuhn_citation": "K. XII 91.7–12",
+      "surface": "Ἡράκλειον",
+      "lemma": "Ἡράκλειος",
+      "pleiades_ids": [
+        "256197",
+        "432873",
+        "589802",
+        "727120"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "16",
+      "section": "5",
+      "kuhn_citation": "K. XII 95.11–14",
+      "surface": "Ἀσκλήπειον",
+      "lemma": "ασκληπειον",
+      "pleiades_ids": [
+        "954340915"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "16",
+      "section": "7",
+      "kuhn_citation": "K. XII 96.0–8",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "16",
+      "section": "13",
+      "kuhn_citation": "K. XII 98.0–12",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "16",
+      "section": "16",
+      "kuhn_citation": "K. XII 99.1–11",
+      "surface": "Κιλικίᾳ",
+      "lemma": "κιλικια",
+      "pleiades_ids": [
+        "628957",
+        "658440",
+        "981514",
+        "991403"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "16",
+      "section": "21",
+      "kuhn_citation": "K. XII 102.7–12",
+      "surface": "Συρίᾳ",
+      "lemma": "Συρία",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "16",
+      "section": "25",
+      "kuhn_citation": "K. XII 104.1–15",
+      "surface": "Πλάτανος",
+      "lemma": "πλατανος",
+      "pleiades_ids": [
+        "678336"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "16",
+      "section": "26",
+      "kuhn_citation": "K. XII 104.15–105.16",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "16",
+      "section": "29",
+      "kuhn_citation": "K. XII 106.6–10",
+      "surface": "Πολεμώνιον",
+      "lemma": "πολεμωνιον",
+      "pleiades_ids": [
+        "857285"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "16",
+      "section": "30",
+      "kuhn_citation": "K. XII 106.10–107.1",
+      "surface": "Πόλιον",
+      "lemma": "πολιον",
+      "pleiades_ids": [
+        "554315"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "16",
+      "section": "31",
+      "kuhn_citation": "K. XII 107.1–5",
+      "surface": "Πόλιον",
+      "lemma": "πολιον",
+      "pleiades_ids": [
+        "554315"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "16",
+      "section": "42",
+      "kuhn_citation": "K. XII 111.0–10",
+      "surface": "Πυρὸς",
+      "lemma": "πυρος",
+      "pleiades_ids": [
+        "639075"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "17",
+      "section": "6",
+      "kuhn_citation": "K. XII 114.13–115.0",
+      "surface": "Μακεδονίᾳ",
+      "lemma": "μακεδονια",
+      "pleiades_ids": [
+        "macedonia_region"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "18",
+      "section": "5",
+      "kuhn_citation": "K. XII 118.7–12",
+      "surface": "Σατύριον",
+      "lemma": "σατυριον",
+      "pleiades_ids": [
+        "442789"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "18",
+      "section": "10",
+      "kuhn_citation": "K. XII 120.6–10",
+      "surface": "Σήσαμον",
+      "lemma": "Σήσαμος",
+      "pleiades_ids": [
+        "798101",
+        "844856"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "18",
+      "section": "13",
+      "kuhn_citation": "K. XII 121.3–10",
+      "surface": "Ἀχίλλειον",
+      "lemma": "αχιλλειον",
+      "pleiades_ids": [
+        "200503614",
+        "465840",
+        "543604",
+        "550401"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "18",
+      "section": "18",
+      "kuhn_citation": "K. XII 123.14–124.1",
+      "surface": "Σίον",
+      "lemma": "σιον",
+      "pleiades_ids": [
+        "109347"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "18",
+      "section": "23",
+      "kuhn_citation": "K. XII 125.2–6",
+      "surface": "Σκίλλα",
+      "lemma": "σκιλλα",
+      "pleiades_ids": [
+        "452436"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "18",
+      "section": "30",
+      "kuhn_citation": "K. XII 127.1–14",
+      "surface": "Σμύρνα",
+      "lemma": "σμυρνα",
+      "pleiades_ids": [
+        "550771",
+        "550893"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "18",
+      "section": "31",
+      "kuhn_citation": "K. XII 127.14–128.0",
+      "surface": "Σμύρνα",
+      "lemma": "σμυρνα",
+      "pleiades_ids": [
+        "550771",
+        "550893"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "18",
+      "section": "32",
+      "kuhn_citation": "K. XII 128.0–12",
+      "surface": "Κιλικίᾳ",
+      "lemma": "κιλικια",
+      "pleiades_ids": [
+        "628957",
+        "658440",
+        "981514",
+        "991403"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "18",
+      "section": "35",
+      "kuhn_citation": "K. XII 129.2–4",
+      "surface": "Σπάρτη",
+      "lemma": "σπάρτη",
+      "pleiades_ids": [
+        "570685"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "18",
+      "section": "44",
+      "kuhn_citation": "K. XII 133.5–14",
+      "surface": "Συκῆ",
+      "lemma": "συκη",
+      "pleiades_ids": [
+        "465998",
+        "648784"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "19",
+      "section": "4",
+      "kuhn_citation": "K. XII 138.12–140.12",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "19",
+      "section": "6",
+      "kuhn_citation": "K. XII 141.1–4",
+      "surface": "Τῆλις",
+      "lemma": "τηλις",
+      "pleiades_ids": [
+        "246590"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "19",
+      "section": "9",
+      "kuhn_citation": "K. XII 143.6–144.0",
+      "surface": "Κρήτῃ",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "21",
+      "section": "2",
+      "kuhn_citation": "K. XII 149.7–9",
+      "surface": "Φακὸς",
+      "lemma": "φακος",
+      "pleiades_ids": [
+        "491694"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "8",
+      "chapter": "21",
+      "section": "6",
+      "kuhn_citation": "K. XII 151.0–152.2",
+      "surface": "Φοῖνιξ",
+      "lemma": "φοινιξ",
+      "pleiades_ids": [
+        "462427",
+        "541049",
+        "570606",
+        "589993",
+        "589994",
+        "599883",
+        "599884",
+        "639056"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "prooemium",
+      "section": null,
+      "kuhn_citation": "K. XII 159.0–165.1",
+      "surface": "Ὅσα",
+      "lemma": "οσα",
+      "pleiades_ids": [
+        "413235"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "1",
+      "kuhn_citation": "K. XII 165.1–168.7",
+      "surface": "Ἕλλησιν",
+      "lemma": "Ἕλλην",
+      "pleiades_ids": [
+        "589801"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἕλλησιν",
+      "lemma": "Ἕλλην",
+      "pleiades_ids": [
+        "589801"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἀρτέμιδος",
+      "lemma": "Ἄρτεμις",
+      "pleiades_ids": [
+        "573299847"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἀρτέμιδος",
+      "lemma": "Ἄρτεμις",
+      "pleiades_ids": [
+        "573299847"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Λήμνῳ",
+      "lemma": "Λῆμνος",
+      "pleiades_ids": [
+        "lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Κύπρον",
+      "lemma": "Κύπρος",
+      "pleiades_ids": [
+        "cyprus_island"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "κοίλην Συρίαν",
+      "lemma": "κοιλην συριαν",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Παλαιστίνης",
+      "lemma": "παλαιστινης",
+      "pleiades_ids": [
+        "palestine"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Λῆμνον",
+      "lemma": "Λῆμνος",
+      "pleiades_ids": [
+        "lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἀσίας",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ῥώμην",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Θρᾴκης",
+      "lemma": "Θρᾳκία",
+      "pleiades_ids": [
+        "thracia_region"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Μακεδονίας",
+      "lemma": "Μακεδονία",
+      "pleiades_ids": [
+        "macedonia_region"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Τρῳάδος Ἀλεξανδρείας",
+      "lemma": "τρωαδος αλεξανδρειας",
+      "pleiades_ids": [
+        "alexandria_troas"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Λῆμνον",
+      "lemma": "Λῆμνος",
+      "pleiades_ids": [
+        "lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Θεσσαλονίκην",
+      "lemma": "θεσσαλονικην",
+      "pleiades_ids": [
+        "thessalonica"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Σάμον",
+      "lemma": "Σάμος",
+      "pleiades_ids": [
+        "samos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Χίον",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Αἰγαῖον",
+      "lemma": "Αἰγαῖος",
+      "pleiades_ids": [
+        "aegean_sea"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Λῆμνον",
+      "lemma": "Λῆμνος",
+      "pleiades_ids": [
+        "lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Μυρίνης",
+      "lemma": "Μυρίνη",
+      "pleiades_ids": [
+        "550755",
+        "550756",
+        "594984"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ῥώμης",
+      "lemma": "ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἀσίαν",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἡφαιστιάδα",
+      "lemma": "ηφαιστιαδα",
+      "pleiades_ids": [
+        "hephaistia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἰταλίας",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Μακεδονίαν",
+      "lemma": "Μακεδονία",
+      "pleiades_ids": [
+        "macedonia_region"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Φιλίπποις",
+      "lemma": "φιλιπποις",
+      "pleiades_ids": [
+        "philippi"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Θρᾴκῃ",
+      "lemma": "Θρᾳκία",
+      "pleiades_ids": [
+        "thracia_region"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Θάσον",
+      "lemma": "Θάσος",
+      "pleiades_ids": [
+        "thasos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Λῆμνον",
+      "lemma": "Λῆμνος",
+      "pleiades_ids": [
+        "lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἀλεξανδρείαν Τρῳάδα",
+      "lemma": "αλεξανδρειαν τρωαδα",
+      "pleiades_ids": [
+        "alexandria_troas"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἡφαιστιάδα",
+      "lemma": "ηφαιστιαδα",
+      "pleiades_ids": [
+        "hephaistia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Λήμνῳ",
+      "lemma": "Λῆμνος",
+      "pleiades_ids": [
+        "lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἡφαιστιὰς",
+      "lemma": "ηφαιστιας",
+      "pleiades_ids": [
+        "hephaistia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Μυρίνα",
+      "lemma": "μυρινα",
+      "pleiades_ids": [
+        "550756"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Λήμνῳ",
+      "lemma": "Λῆμνος",
+      "pleiades_ids": [
+        "lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἡφαιστιάδος",
+      "lemma": "ηφαιστιαδος",
+      "pleiades_ids": [
+        "hephaistia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Ἡφαιστιάδος",
+      "lemma": "ηφαιστιαδος",
+      "pleiades_ids": [
+        "hephaistia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Αἴγυπτον",
+      "lemma": "Αἴγυπτος",
+      "pleiades_ids": [
+        "766",
+        "981503"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σαμίας",
+      "lemma": "Σάμος",
+      "pleiades_ids": [
+        "samos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σαμία",
+      "lemma": "σαμια",
+      "pleiades_ids": [
+        "570653"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σαμίας",
+      "lemma": "Σάμος",
+      "pleiades_ids": [
+        "samos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σαμίας",
+      "lemma": "Σάμος",
+      "pleiades_ids": [
+        "samos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σαμίας",
+      "lemma": "Σάμος",
+      "pleiades_ids": [
+        "samos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σελινουσία",
+      "lemma": "σελινουσια",
+      "pleiades_ids": [
+        "599932"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σελινουσία",
+      "lemma": "σελινουσια",
+      "pleiades_ids": [
+        "599932"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σαμίᾳ",
+      "lemma": "σαμια",
+      "pleiades_ids": [
+        "570653"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σελινουσία",
+      "lemma": "σελινουσια",
+      "pleiades_ids": [
+        "599932"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σαμίας",
+      "lemma": "Σάμος",
+      "pleiades_ids": [
+        "samos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Ἕλλησιν",
+      "lemma": "Ἕλλην",
+      "pleiades_ids": [
+        "589801"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σαμία",
+      "lemma": "σαμια",
+      "pleiades_ids": [
+        "570653"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σελινουσία",
+      "lemma": "σελινουσια",
+      "pleiades_ids": [
+        "599932"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Σαμίας",
+      "lemma": "Σάμος",
+      "pleiades_ids": [
+        "samos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Λιβύην",
+      "lemma": "Λιβύη",
+      "pleiades_ids": [
+        "716588"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Ῥώμης",
+      "lemma": "ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "4",
+      "kuhn_citation": "K. XII 178.12–192.2",
+      "surface": "Ῥώμῃ",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "1",
+      "kuhn_citation": "K. XII 192.2–195.1",
+      "surface": "Ἀσίαν",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "1",
+      "kuhn_citation": "K. XII 192.2–195.1",
+      "surface": "Ἀσίας",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "3",
+      "kuhn_citation": "K. XII 196.15–198.12",
+      "surface": "Αἴγυπτον",
+      "lemma": "Αἴγυπτος",
+      "pleiades_ids": [
+        "766",
+        "981503"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "5",
+      "kuhn_citation": "K. XII 199.4–13",
+      "surface": "Παλαιστίνῃ",
+      "lemma": "παλαιστινη",
+      "pleiades_ids": [
+        "palestine"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "5",
+      "kuhn_citation": "K. XII 199.4–13",
+      "surface": "Συρίᾳ",
+      "lemma": "Συρία",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "9",
+      "kuhn_citation": "K. XII 202.1–203.0",
+      "surface": "Ἀσσῷ",
+      "lemma": "ασσω",
+      "pleiades_ids": [
+        "265807"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "9",
+      "kuhn_citation": "K. XII 202.1–203.0",
+      "surface": "Ἀσίας",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "9",
+      "kuhn_citation": "K. XII 202.1–203.0",
+      "surface": "Ἀσίας",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "10",
+      "kuhn_citation": "K. XII 203.0–204.2",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "10",
+      "kuhn_citation": "K. XII 203.0–204.2",
+      "surface": "Λυκίᾳ",
+      "lemma": "Λυκία",
+      "pleiades_ids": [
+        "lycia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "10",
+      "kuhn_citation": "K. XII 203.0–204.2",
+      "surface": "Λυκίαν",
+      "lemma": "Λυκία",
+      "pleiades_ids": [
+        "lycia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "10",
+      "kuhn_citation": "K. XII 203.0–204.2",
+      "surface": "κοίλης Συρίας",
+      "lemma": "κοιλης συριας",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "10",
+      "kuhn_citation": "K. XII 203.0–204.2",
+      "surface": "Πόντον",
+      "lemma": "πόντος",
+      "pleiades_ids": [
+        "344460"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "2",
+      "section": "11",
+      "kuhn_citation": "K. XII 204.2–4",
+      "surface": "Ἡρακλεία",
+      "lemma": "ηρακλεια",
+      "pleiades_ids": [
+        "452333",
+        "481861",
+        "550571",
+        "599640",
+        "599642"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "5",
+      "kuhn_citation": "K. XII 212.7–213.7",
+      "surface": "Ἀσίας",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "8",
+      "kuhn_citation": "K. XII 214.5–217.3",
+      "surface": "Κύπρῳ",
+      "lemma": "Κύπρος",
+      "pleiades_ids": [
+        "cyprus_island"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "8",
+      "kuhn_citation": "K. XII 214.5–217.3",
+      "surface": "Σόλων",
+      "lemma": "σολων",
+      "pleiades_ids": [
+        "soloi_cyprus"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "8",
+      "kuhn_citation": "K. XII 214.5–217.3",
+      "surface": "Λῆμνον",
+      "lemma": "Λῆμνος",
+      "pleiades_ids": [
+        "lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "8",
+      "kuhn_citation": "K. XII 214.5–217.3",
+      "surface": "Κύπρον",
+      "lemma": "Κύπρος",
+      "pleiades_ids": [
+        "cyprus_island"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "8",
+      "kuhn_citation": "K. XII 214.5–217.3",
+      "surface": "Παλαιστίνην",
+      "lemma": "παλαιστινην",
+      "pleiades_ids": [
+        "palestine"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "8",
+      "kuhn_citation": "K. XII 214.5–217.3",
+      "surface": "Συρίαν",
+      "lemma": "συρία",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "8",
+      "kuhn_citation": "K. XII 214.5–217.3",
+      "surface": "Φοινίκην",
+      "lemma": "Φοινίκη",
+      "pleiades_ids": [
+        "678334"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "8",
+      "kuhn_citation": "K. XII 214.5–217.3",
+      "surface": "Παλαιστίνης",
+      "lemma": "παλαιστινης",
+      "pleiades_ids": [
+        "palestine"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "11",
+      "kuhn_citation": "K. XII 219.5–221.13",
+      "surface": "Κύπρον",
+      "lemma": "Κύπρος",
+      "pleiades_ids": [
+        "cyprus_island"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "11",
+      "kuhn_citation": "K. XII 219.5–221.13",
+      "surface": "Σόλοις",
+      "lemma": "σολοις",
+      "pleiades_ids": [
+        "soloi_cyprus"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "11",
+      "kuhn_citation": "K. XII 219.5–221.13",
+      "surface": "Ἀσίαν",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "11",
+      "kuhn_citation": "K. XII 219.5–221.13",
+      "surface": "Ἰταλίαν",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "20",
+      "kuhn_citation": "K. XII 226.4–7",
+      "surface": "Μέλαν",
+      "lemma": "μελαν",
+      "pleiades_ids": [
+        "39384"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "21",
+      "kuhn_citation": "K. XII 226.7–229.7",
+      "surface": "Κύπρῳ",
+      "lemma": "Κύπρος",
+      "pleiades_ids": [
+        "cyprus_island"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "21",
+      "kuhn_citation": "K. XII 226.7–229.7",
+      "surface": "Σόλων",
+      "lemma": "σολων",
+      "pleiades_ids": [
+        "soloi_cyprus"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "21",
+      "kuhn_citation": "K. XII 226.7–229.7",
+      "surface": "Ἀσίαν",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "21",
+      "kuhn_citation": "K. XII 226.7–229.7",
+      "surface": "Ῥώμην",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "22",
+      "kuhn_citation": "K. XII 229.7–230.4",
+      "surface": "Κύπρῳ",
+      "lemma": "Κύπρος",
+      "pleiades_ids": [
+        "cyprus_island"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "22",
+      "kuhn_citation": "K. XII 229.7–230.4",
+      "surface": "Ἐργαστήρια",
+      "lemma": "εργαστηρια",
+      "pleiades_ids": [
+        "ergasteria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "22",
+      "kuhn_citation": "K. XII 229.7–230.4",
+      "surface": "Περγάμου",
+      "lemma": "Πέργαμον",
+      "pleiades_ids": [
+        "pergamum"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "22",
+      "kuhn_citation": "K. XII 229.7–230.4",
+      "surface": "Ἐργαστήρια",
+      "lemma": "εργαστηρια",
+      "pleiades_ids": [
+        "ergasteria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "22",
+      "kuhn_citation": "K. XII 229.7–230.4",
+      "surface": "Περγάμου",
+      "lemma": "Πέργαμον",
+      "pleiades_ids": [
+        "pergamum"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "22",
+      "kuhn_citation": "K. XII 229.7–230.4",
+      "surface": "Κυζίκου",
+      "lemma": "Κύζικος",
+      "pleiades_ids": [
+        "cyzicus"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "25",
+      "kuhn_citation": "K. XII 234.1–235.9",
+      "surface": "Κύπρον",
+      "lemma": "Κύπρος",
+      "pleiades_ids": [
+        "cyprus_island"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "34",
+      "kuhn_citation": "K. XII 238.1–241.10",
+      "surface": "Κύπρου",
+      "lemma": "Κύπρος",
+      "pleiades_ids": [
+        "cyprus_island"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "3",
+      "section": "34",
+      "kuhn_citation": "K. XII 238.1–241.10",
+      "surface": "Κύπρῳ",
+      "lemma": "Κύπρος",
+      "pleiades_ids": [
+        "cyprus_island"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "2",
+      "kuhn_citation": "K. XII 254.0–256.0",
+      "surface": "Περγάμῳ",
+      "lemma": "Πέργαμος",
+      "pleiades_ids": [
+        "550812"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "2",
+      "kuhn_citation": "K. XII 254.0–256.0",
+      "surface": "Ἀσίαν",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "3",
+      "kuhn_citation": "K. XII 256.0–258.4",
+      "surface": "Ῥώμῃ",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "9",
+      "kuhn_citation": "K. XII 269.14–272.7",
+      "surface": "Τυρός",
+      "lemma": "τυρος",
+      "pleiades_ids": [
+        "570759",
+        "678437",
+        "932485"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "9",
+      "kuhn_citation": "K. XII 269.14–272.7",
+      "surface": "Περγάμῳ",
+      "lemma": "Πέργαμος",
+      "pleiades_ids": [
+        "550812"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "9",
+      "kuhn_citation": "K. XII 269.14–272.7",
+      "surface": "Ἀσίαν",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "10",
+      "kuhn_citation": "K. XII 272.7–274.0",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "13",
+      "kuhn_citation": "K. XII 275.2–281.4",
+      "surface": "Ἕλλησιν",
+      "lemma": "Ἕλλην",
+      "pleiades_ids": [
+        "589801"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "15",
+      "kuhn_citation": "K. XII 284.8–288.5",
+      "surface": "Συρίᾳ",
+      "lemma": "Συρία",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "18",
+      "kuhn_citation": "K. XII 290.13–291.8",
+      "surface": "Κόπρος",
+      "lemma": "κοπρος",
+      "pleiades_ids": [
+        "579989"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "23",
+      "kuhn_citation": "K. XII 300.12–301.15",
+      "surface": "Μυσίᾳ",
+      "lemma": "μυσια",
+      "pleiades_ids": [
+        "mysia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "23",
+      "kuhn_citation": "K. XII 300.12–301.15",
+      "surface": "Ἑλλησπόντῳ",
+      "lemma": "Ἑλλήσποντος",
+      "pleiades_ids": [
+        "501434"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "23",
+      "kuhn_citation": "K. XII 300.12–301.15",
+      "surface": "Μυσίαν",
+      "lemma": "Μυσία",
+      "pleiades_ids": [
+        "mysia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "26",
+      "kuhn_citation": "K. XII 303.8–305.0",
+      "surface": "Μυσίᾳ",
+      "lemma": "μυσια",
+      "pleiades_ids": [
+        "mysia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "10",
+      "chapter": "2",
+      "section": "26",
+      "kuhn_citation": "K. XII 303.8–305.0",
+      "surface": "Μυσίας",
+      "lemma": "μυσιας",
+      "pleiades_ids": [
+        "mysia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "1",
+      "kuhn_citation": "K. XII 311.12–323.14",
+      "surface": "Ἀσίας",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "1",
+      "kuhn_citation": "K. XII 311.12–323.14",
+      "surface": "Ἀσίᾳ",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "1",
+      "kuhn_citation": "K. XII 311.12–323.14",
+      "surface": "Μυσίαν",
+      "lemma": "Μυσία",
+      "pleiades_ids": [
+        "mysia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "1",
+      "kuhn_citation": "K. XII 311.12–323.14",
+      "surface": "Θρᾴκης",
+      "lemma": "Θρᾳκία",
+      "pleiades_ids": [
+        "thracia_region"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "1",
+      "kuhn_citation": "K. XII 311.12–323.14",
+      "surface": "Πέργαμον",
+      "lemma": "Πέργαμος",
+      "pleiades_ids": [
+        "550812"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "1",
+      "kuhn_citation": "K. XII 311.12–323.14",
+      "surface": "Ῥώμῃ",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "1",
+      "kuhn_citation": "K. XII 311.12–323.14",
+      "surface": "Λιβύην",
+      "lemma": "Λιβύη",
+      "pleiades_ids": [
+        "716588"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "1",
+      "kuhn_citation": "K. XII 311.12–323.14",
+      "surface": "Ἰταλίᾳ",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 323.14–331.15",
+      "surface": "Ἑλλάδος",
+      "lemma": "Ἑλλάς",
+      "pleiades_ids": [
+        "1001896",
+        "541112"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 323.14–331.15",
+      "surface": "Διοσκορίδης",
+      "lemma": "διοσκοριδης",
+      "pleiades_ids": [
+        "39338"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "19",
+      "kuhn_citation": "K. XII 342.7–8",
+      "surface": "Γῆρας",
+      "lemma": "γηρας",
+      "pleiades_ids": [
+        "718026"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "26",
+      "kuhn_citation": "K. XII 345.0–347.8",
+      "surface": "Αἴαντα",
+      "lemma": "Αἴας",
+      "pleiades_ids": [
+        "481726"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "26",
+      "kuhn_citation": "K. XII 345.0–347.8",
+      "surface": "Ἀχιλλέως",
+      "lemma": "Ἀχιλλεύς",
+      "pleiades_ids": [
+        "226506",
+        "226677"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "34",
+      "kuhn_citation": "K. XII 356.7–359.12",
+      "surface": "Ἰταλικὸν",
+      "lemma": "ιταλικον",
+      "pleiades_ids": [
+        "465924"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "1",
+      "section": "49",
+      "kuhn_citation": "K. XII 365.10–367.14",
+      "surface": "Αἴγυπτον",
+      "lemma": "Αἴγυπτος",
+      "pleiades_ids": [
+        "766",
+        "981503"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "2",
+      "section": "1",
+      "kuhn_citation": "K. XII 369.10–370.0",
+      "surface": "Μόνα",
+      "lemma": "μονα",
+      "pleiades_ids": [
+        "79601",
+        "89242"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "2",
+      "section": "7",
+      "kuhn_citation": "K. XII 374.8–12",
+      "surface": "Ἁλὸς",
+      "lemma": "αλος",
+      "pleiades_ids": [
+        "573077"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "2",
+      "section": "8",
+      "kuhn_citation": "K. XII 374.12–375.2",
+      "surface": "Ἁλὸς",
+      "lemma": "αλος",
+      "pleiades_ids": [
+        "573077"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "2",
+      "section": "9",
+      "kuhn_citation": "K. XII 375.2–8",
+      "surface": "Ἀπολλωνίᾳ",
+      "lemma": "απολλωνια",
+      "pleiades_ids": [
+        "481728",
+        "511151"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "2",
+      "section": "10",
+      "kuhn_citation": "K. XII 375.8–376.0",
+      "surface": "Καλλίστη",
+      "lemma": "καλλιστη",
+      "pleiades_ids": [
+        "808255902"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "2",
+      "section": "10",
+      "kuhn_citation": "K. XII 375.8–376.0",
+      "surface": "κοίλην Συρίαν",
+      "lemma": "κοιλην συριαν",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "11",
+      "chapter": "2",
+      "section": "13",
+      "kuhn_citation": "K. XII 377.7–15",
+      "surface": "Ἅλμη",
+      "lemma": "αλμη",
+      "pleiades_ids": [
+        "314877",
+        "403175"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "1",
+      "section": null,
+      "kuhn_citation": "K. XIV 1.0–5.10",
+      "surface": "Γερμανικὸν",
+      "lemma": "γερμανικον",
+      "pleiades_ids": [
+        "118697"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "1",
+      "section": null,
+      "kuhn_citation": "K. XIV 1.0–5.10",
+      "surface": "Ἴστρον",
+      "lemma": "Ἴστρος",
+      "pleiades_ids": [
+        "216839",
+        "226577",
+        "446253",
+        "599675"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "1",
+      "section": null,
+      "kuhn_citation": "K. XIV 1.0–5.10",
+      "surface": "Ῥώμην",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Πῶς",
+      "lemma": "πως",
+      "pleiades_ids": [
+        "599581"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Θηβῶν",
+      "lemma": "Θῆβαι",
+      "pleiades_ids": [
+        "541138"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Ἰόλλα",
+      "lemma": "ιολλα",
+      "pleiades_ids": [
+        "554240"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Κύπρον",
+      "lemma": "Κύπρος",
+      "pleiades_ids": [
+        "cyprus_island"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Παλαιστίνης",
+      "lemma": "παλαιστινης",
+      "pleiades_ids": [
+        "palestine"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Συρίας",
+      "lemma": "συρία",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Λῆμνον",
+      "lemma": "Λῆμνος",
+      "pleiades_ids": [
+        "lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Συρίας",
+      "lemma": "συρία",
+      "pleiades_ids": [
+        "coele_syria"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Παλαιστίνης",
+      "lemma": "παλαιστινης",
+      "pleiades_ids": [
+        "palestine"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Αἰγύπτου",
+      "lemma": "Αἴγυπτος",
+      "pleiades_ids": [
+        "766",
+        "981503"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Πόντου",
+      "lemma": "Πόντος",
+      "pleiades_ids": [
+        "344460"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Μακεδονίας",
+      "lemma": "Μακεδονία",
+      "pleiades_ids": [
+        "macedonia_region"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Μαυρούσιοι",
+      "lemma": "μαυρουσιοι",
+      "pleiades_ids": [
+        "471970"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Ῥώμῃ",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Ἰταλίαν",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Ῥώμην",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Σικελίας",
+      "lemma": "Σικελία",
+      "pleiades_ids": [
+        "462492",
+        "585959"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Λιβύης",
+      "lemma": "Λιβύη",
+      "pleiades_ids": [
+        "716588"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Ῥώμῃ",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "2",
+      "section": null,
+      "kuhn_citation": "K. XIV 5.10–13.15",
+      "surface": "Ῥόδιον",
+      "lemma": "Ῥόδιος",
+      "pleiades_ids": [
+        "501590"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 13.15–20.14",
+      "surface": "Ἰταλίαν",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 13.15–20.14",
+      "surface": "Ἀλβανὸς",
+      "lemma": "αλβανος",
+      "pleiades_ids": [
+        "863735"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 13.15–20.14",
+      "surface": "Νεαπόλει",
+      "lemma": "νεαπολει",
+      "pleiades_ids": [
+        "neapolis_campania"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 13.15–20.14",
+      "surface": "Σικελίαν",
+      "lemma": "Σικελία",
+      "pleiades_ids": [
+        "462492",
+        "585959"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 13.15–20.14",
+      "surface": "Βιθυνίαν",
+      "lemma": "Βιθυνία",
+      "pleiades_ids": [
+        "1001917",
+        "511189",
+        "991389"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 13.15–20.14",
+      "surface": "Ἰταλίαν",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 13.15–20.14",
+      "surface": "Ἀσίαν",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 13.15–20.14",
+      "surface": "Ἰταλίαν",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 13.15–20.14",
+      "surface": "Νεάπολιν",
+      "lemma": "νεαπολιν",
+      "pleiades_ids": [
+        "neapolis_campania"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 13.15–20.14",
+      "surface": "Ἰταλίας",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XIV 20.14–27.9",
+      "surface": "Ἰσθμὸν",
+      "lemma": "ἰσθμός",
+      "pleiades_ids": [
+        "570317",
+        "599539"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XIV 20.14–27.9",
+      "surface": "Περγάμου",
+      "lemma": "Πέργαμον",
+      "pleiades_ids": [
+        "pergamum"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XIV 20.14–27.9",
+      "surface": "Ἐλαίας",
+      "lemma": "ελαιας",
+      "pleiades_ids": [
+        "530879"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XIV 20.14–27.9",
+      "surface": "Περγάμου",
+      "lemma": "Πέργαμον",
+      "pleiades_ids": [
+        "pergamum"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XIV 20.14–27.9",
+      "surface": "Μυσίαν",
+      "lemma": "Μυσία",
+      "pleiades_ids": [
+        "mysia"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XIV 20.14–27.9",
+      "surface": "Ῥώμῃ",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XIV 20.14–27.9",
+      "surface": "Ῥώμῃ",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XIV 20.14–27.9",
+      "surface": "Ῥώμῃ",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XIV 20.14–27.9",
+      "surface": "Παλαιστίνης",
+      "lemma": "παλαιστινης",
+      "pleiades_ids": [
+        "palestine"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XIV 20.14–27.9",
+      "surface": "Αἴγυπτον",
+      "lemma": "Αἴγυπτος",
+      "pleiades_ids": [
+        "766",
+        "981503"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "4",
+      "section": null,
+      "kuhn_citation": "K. XIV 20.14–27.9",
+      "surface": "Ῥώμῃ",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 27.9–32.9",
+      "surface": "Ἀσίᾳ",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 27.9–32.9",
+      "surface": "Ἀσίαν",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 27.9–32.9",
+      "surface": "Ἀσίᾳ",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 27.9–32.9",
+      "surface": "Χίῳ",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 27.9–32.9",
+      "surface": "Τμῶλος",
+      "lemma": "τμωλος",
+      "pleiades_ids": [
+        "550937"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 27.9–32.9",
+      "surface": "Λέσβῳ",
+      "lemma": "Λέσβος",
+      "pleiades_ids": [
+        "550696"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 27.9–32.9",
+      "surface": "Μηθύμνῃ",
+      "lemma": "μηθυμνη",
+      "pleiades_ids": [
+        "550738"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 27.9–32.9",
+      "surface": "Μιτυλήνῃ",
+      "lemma": "μιτυληνη",
+      "pleiades_ids": [
+        "550763"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 27.9–32.9",
+      "surface": "Ἰταλίαν",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 27.9–32.9",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 27.9–32.9",
+      "surface": "Ῥώμης",
+      "lemma": "ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Καῖσαρ",
+      "lemma": "καισαρ",
+      "pleiades_ids": [
+        "638908"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Ἀσπὶς",
+      "lemma": "ασπις",
+      "pleiades_ids": [
+        "265917",
+        "314892",
+        "363926",
+        "494539",
+        "570132",
+        "599532",
+        "638777"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Καῖσαρ",
+      "lemma": "καισαρ",
+      "pleiades_ids": [
+        "638908"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Θερμὸν",
+      "lemma": "θερμον",
+      "pleiades_ids": [
+        "541139"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Καῖσαρ",
+      "lemma": "καισαρ",
+      "pleiades_ids": [
+        "638908"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Πρῶτα",
+      "lemma": "πρωτα",
+      "pleiades_ids": [
+        "521131"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Οὖλα",
+      "lemma": "ουλα",
+      "pleiades_ids": [
+        "599841"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Κωρύκιον",
+      "lemma": "κωρυκιον",
+      "pleiades_ids": [
+        "44420465"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Ἀράβων",
+      "lemma": "αραβων",
+      "pleiades_ids": [
+        "884866"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Ὅσσα",
+      "lemma": "οσσα",
+      "pleiades_ids": [
+        "540993"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Παίων",
+      "lemma": "παιων",
+      "pleiades_ids": [
+        "501543",
+        "570558"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Ῥόδος",
+      "lemma": "ροδος",
+      "pleiades_ids": [
+        "590031"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "6",
+      "section": null,
+      "kuhn_citation": "K. XIV 32.9–42.0",
+      "surface": "Ἐπίδαυρος",
+      "lemma": "επιδαυρος",
+      "pleiades_ids": [
+        "570228"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "8",
+      "section": null,
+      "kuhn_citation": "K. XIV 45.2–49.12",
+      "surface": "Διονύσῳ",
+      "lemma": "Διονύσος",
+      "pleiades_ids": [
+        "373781"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "10",
+      "section": null,
+      "kuhn_citation": "K. XIV 51.5–54.5",
+      "surface": "Ῥώμῃ",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "10",
+      "section": null,
+      "kuhn_citation": "K. XIV 51.5–54.5",
+      "surface": "Χίου",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "10",
+      "section": null,
+      "kuhn_citation": "K. XIV 51.5–54.5",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "10",
+      "section": null,
+      "kuhn_citation": "K. XIV 51.5–54.5",
+      "surface": "Ἀσίᾳ",
+      "lemma": "Ἀσία",
+      "pleiades_ids": [
+        "asia_province"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "10",
+      "section": null,
+      "kuhn_citation": "K. XIV 51.5–54.5",
+      "surface": "Κυζίκῳ",
+      "lemma": "Κύζικος",
+      "pleiades_ids": [
+        "cyzicus"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "10",
+      "section": null,
+      "kuhn_citation": "K. XIV 51.5–54.5",
+      "surface": "Ἰταλίαν",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "10",
+      "section": null,
+      "kuhn_citation": "K. XIV 51.5–54.5",
+      "surface": "Κυζίκῳ",
+      "lemma": "Κύζικος",
+      "pleiades_ids": [
+        "cyzicus"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 58.8–62.4",
+      "surface": "Ῥώμην",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 58.8–62.4",
+      "surface": "Ἰταλίᾳ",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 58.8–62.4",
+      "surface": "Ἰταλικῶν",
+      "lemma": "ιταλικων",
+      "pleiades_ids": [
+        "465924"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 58.8–62.4",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 58.8–62.4",
+      "surface": "Ἰταλίαν",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 58.8–62.4",
+      "surface": "Λιβύης",
+      "lemma": "Λιβύη",
+      "pleiades_ids": [
+        "716588"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 58.8–62.4",
+      "surface": "Ῥώμην",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 58.8–62.4",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 58.8–62.4",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "13",
+      "section": null,
+      "kuhn_citation": "K. XIV 62.4–67.7",
+      "surface": "Εἰρήνης",
+      "lemma": "ειρηνης",
+      "pleiades_ids": [
+        "152567558"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "13",
+      "section": null,
+      "kuhn_citation": "K. XIV 62.4–67.7",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Σάτυρος",
+      "lemma": "σατυρος",
+      "pleiades_ids": [
+        "526241"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Σατύρου",
+      "lemma": "σατυρου",
+      "pleiades_ids": [
+        "854731"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Σίδῃ",
+      "lemma": "σιδη",
+      "pleiades_ids": [
+        "570669",
+        "639105",
+        "857285"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Ἀραβίας",
+      "lemma": "Ἀραβία",
+      "pleiades_ids": [
+        "746710",
+        "981506"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Κρήτῃ",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Ἀθήναζε",
+      "lemma": "Ἀθῆναι",
+      "pleiades_ids": [
+        "540681",
+        "579885"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Μακεδονίαν",
+      "lemma": "Μακεδονία",
+      "pleiades_ids": [
+        "macedonia_region"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Θεσσαλονίκην",
+      "lemma": "θεσσαλονικην",
+      "pleiades_ids": [
+        "thessalonica"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Ἰταλίας",
+      "lemma": "Ἰταλία",
+      "pleiades_ids": [
+        "italia_peninsula"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Λιβύης",
+      "lemma": "Λιβύη",
+      "pleiades_ids": [
+        "716588"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Χίου",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Λιβύης",
+      "lemma": "Λιβύη",
+      "pleiades_ids": [
+        "716588"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Χίου",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Κρήτῃ",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Ῥώμην",
+      "lemma": "Ῥώμη",
+      "pleiades_ids": [
+        "rome"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Γαλατείας",
+      "lemma": "Γαλάτεια",
+      "pleiades_ids": [
+        "619161",
+        "991393"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 67.7–82.7",
+      "surface": "Καππαδοκίᾳ",
+      "lemma": "καππαδοκια",
+      "pleiades_ids": [
+        "628949",
+        "991402"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XIV 82.7–99.0",
+      "surface": "Ὕδατος",
+      "lemma": "υδατος",
+      "pleiades_ids": [
+        "658483"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XIV 82.7–99.0",
+      "surface": "Ὕδατος",
+      "lemma": "υδατος",
+      "pleiades_ids": [
+        "658483"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XIV 82.7–99.0",
+      "surface": "Τότε",
+      "lemma": "τοτε",
+      "pleiades_ids": [
+        "39407"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XIV 82.7–99.0",
+      "surface": "Ξηρά",
+      "lemma": "ξηρα",
+      "pleiades_ids": [
+        "260664"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 99.0–102.3",
+      "surface": "Λεπτὴ",
+      "lemma": "λεπτη",
+      "pleiades_ids": [
+        "845004"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 99.0–102.3",
+      "surface": "Λήμνου",
+      "lemma": "Λῆμνος",
+      "pleiades_ids": [
+        "lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 99.0–102.3",
+      "surface": "Κρήτης",
+      "lemma": "Κρήτη",
+      "pleiades_ids": [
+        "crete"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 99.0–102.3",
+      "surface": "Ξηρὰ",
+      "lemma": "ξηρα",
+      "pleiades_ids": [
+        "260664"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "1",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 99.0–102.3",
+      "surface": "Χίου",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "1",
+      "section": null,
+      "kuhn_citation": "K. XIV 106.0–115.3",
+      "surface": "Χίου",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "1",
+      "section": null,
+      "kuhn_citation": "K. XIV 106.0–115.3",
+      "surface": "Ἰνδοῦ",
+      "lemma": "Ἰνδός",
+      "pleiades_ids": [
+        "59851",
+        "638870"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "1",
+      "section": null,
+      "kuhn_citation": "K. XIV 106.0–115.3",
+      "surface": "Χίου",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "1",
+      "section": null,
+      "kuhn_citation": "K. XIV 106.0–115.3",
+      "surface": "Καῖσαρ",
+      "lemma": "καισαρ",
+      "pleiades_ids": [
+        "638908"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 119.0–126.0",
+      "surface": "Καλοῦ",
+      "lemma": "καλός",
+      "pleiades_ids": [
+        "857180"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 119.0–126.0",
+      "surface": "Ξηρῶν",
+      "lemma": "ξηρων",
+      "pleiades_ids": [
+        "785977"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "3",
+      "section": null,
+      "kuhn_citation": "K. XIV 119.0–126.0",
+      "surface": "Χίου",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "5",
+      "section": null,
+      "kuhn_citation": "K. XIV 129.0–135.0",
+      "surface": "Ἔλαιον",
+      "lemma": "ελαιον",
+      "pleiades_ids": [
+        "573197"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "7",
+      "section": null,
+      "kuhn_citation": "K. XIV 138.4–146.15",
+      "surface": "Ὦρος",
+      "lemma": "ωρος",
+      "pleiades_ids": [
+        "580055"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "7",
+      "section": null,
+      "kuhn_citation": "K. XIV 138.4–146.15",
+      "surface": "Μενδήσιος",
+      "lemma": "μενδησιος",
+      "pleiades_ids": [
+        "727158"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "7",
+      "section": null,
+      "kuhn_citation": "K. XIV 138.4–146.15",
+      "surface": "Τρίκκῃ",
+      "lemma": "τρικκη",
+      "pleiades_ids": [
+        "541163",
+        "573568"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "7",
+      "section": null,
+      "kuhn_citation": "K. XIV 138.4–146.15",
+      "surface": "Ἠέλιον",
+      "lemma": "Ἥλιος",
+      "pleiades_ids": [
+        "573241"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "7",
+      "section": null,
+      "kuhn_citation": "K. XIV 138.4–146.15",
+      "surface": "Κρονίωνα",
+      "lemma": "Κρονίων",
+      "pleiades_ids": [
+        "465937",
+        "573311",
+        "573312"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "8",
+      "section": null,
+      "kuhn_citation": "K. XIV 146.15–152.2",
+      "surface": "Μυός",
+      "lemma": "μυος",
+      "pleiades_ids": [
+        "786069"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "9",
+      "section": null,
+      "kuhn_citation": "K. XIV 152.2–158.2",
+      "surface": "Χίῳ",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "9",
+      "section": null,
+      "kuhn_citation": "K. XIV 152.2–158.2",
+      "surface": "Ἀβροτόνου",
+      "lemma": "Ἀβρότονον",
+      "pleiades_ids": [
+        "344282"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "9",
+      "section": null,
+      "kuhn_citation": "K. XIV 152.2–158.2",
+      "surface": "Σαμίας",
+      "lemma": "Σάμος",
+      "pleiades_ids": [
+        "samos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "10",
+      "section": null,
+      "kuhn_citation": "K. XIV 158.2–167.16",
+      "surface": "Χίῳ",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "10",
+      "section": null,
+      "kuhn_citation": "K. XIV 158.2–167.16",
+      "surface": "Νεῖλος",
+      "lemma": "νειλος",
+      "pleiades_ids": [
+        "727172"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "11",
+      "section": null,
+      "kuhn_citation": "K. XIV 168.0–175.11",
+      "surface": "Ἥρας",
+      "lemma": "Ἥρα",
+      "pleiades_ids": [
+        "275639",
+        "275640",
+        "442610"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "11",
+      "section": null,
+      "kuhn_citation": "K. XIV 168.0–175.11",
+      "surface": "Διόνυσον",
+      "lemma": "Διόνυσος",
+      "pleiades_ids": [
+        "373781"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "11",
+      "section": null,
+      "kuhn_citation": "K. XIV 168.0–175.11",
+      "surface": "Μενελάου",
+      "lemma": "Μενέλαος",
+      "pleiades_ids": [
+        "716599"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "11",
+      "section": null,
+      "kuhn_citation": "K. XIV 168.0–175.11",
+      "surface": "Λευκὴ",
+      "lemma": "λευκη",
+      "pleiades_ids": [
+        "226677",
+        "570429",
+        "589910"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "11",
+      "section": null,
+      "kuhn_citation": "K. XIV 168.0–175.11",
+      "surface": "Ἥρα",
+      "lemma": "ηρα",
+      "pleiades_ids": [
+        "275639",
+        "275640",
+        "442610"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "11",
+      "section": null,
+      "kuhn_citation": "K. XIV 168.0–175.11",
+      "surface": "Βασιλικὴ",
+      "lemma": "βασιλικη",
+      "pleiades_ids": [
+        "291344339"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "11",
+      "section": null,
+      "kuhn_citation": "K. XIV 168.0–175.11",
+      "surface": "Σεβαστὴ",
+      "lemma": "σεβαστη",
+      "pleiades_ids": [
+        "678370"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "11",
+      "section": null,
+      "kuhn_citation": "K. XIV 168.0–175.11",
+      "surface": "Ἁλὸς",
+      "lemma": "αλος",
+      "pleiades_ids": [
+        "573077"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 175.11–180.2",
+      "surface": "Καλλίστη",
+      "lemma": "καλλιστη",
+      "pleiades_ids": [
+        "808255902"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 175.11–180.2",
+      "surface": "Λιβύην",
+      "lemma": "Λιβύη",
+      "pleiades_ids": [
+        "716588"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "12",
+      "section": null,
+      "kuhn_citation": "K. XIV 175.11–180.2",
+      "surface": "Ἀραβᾶ",
+      "lemma": "αραβα",
+      "pleiades_ids": [
+        "805591"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "13",
+      "section": null,
+      "kuhn_citation": "K. XIV 180.2–183.4",
+      "surface": "Χαρίτωνος",
+      "lemma": "Χαρίτων",
+      "pleiades_ids": [
+        "687874"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 183.4–190.14",
+      "surface": "Ἡλίου",
+      "lemma": "ἥλιος",
+      "pleiades_ids": [
+        "573241"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 183.4–190.14",
+      "surface": "Χίῳ",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 183.4–190.14",
+      "surface": "Χίῳ",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 183.4–190.14",
+      "surface": "Γάλλος",
+      "lemma": "γαλλος",
+      "pleiades_ids": [
+        "609384",
+        "609385",
+        "844925"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "14",
+      "section": null,
+      "kuhn_citation": "K. XIV 183.4–190.14",
+      "surface": "Ἀραβίας",
+      "lemma": "Ἀραβία",
+      "pleiades_ids": [
+        "746710",
+        "981506"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XIV 191.0–201.0",
+      "surface": "Ξηρὸν",
+      "lemma": "ξηρον",
+      "pleiades_ids": [
+        "785977"
+      ],
+      "match_type": "latin",
+      "cert": "probable",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XIV 191.0–201.0",
+      "surface": "Ἱερὰν",
+      "lemma": "ἱερά",
+      "pleiades_ids": [
+        "573252",
+        "717754998",
+        "795815"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XIV 191.0–201.0",
+      "surface": "Ὕδατος",
+      "lemma": "υδατος",
+      "pleiades_ids": [
+        "658483"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XIV 191.0–201.0",
+      "surface": "Ἀκίδων",
+      "lemma": "ακιδων",
+      "pleiades_ids": [
+        "573065"
+      ],
+      "match_type": "greek",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "15",
+      "section": null,
+      "kuhn_citation": "K. XIV 191.0–201.0",
+      "surface": "Ἄρας",
+      "lemma": "αρας",
+      "pleiades_ids": [
+        "334493",
+        "441249848"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 201.0–209.11",
+      "surface": "Ἤρα",
+      "lemma": "ηρα",
+      "pleiades_ids": [
+        "275639",
+        "275640",
+        "442610"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 201.0–209.11",
+      "surface": "Χίῳ",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 201.0–209.11",
+      "surface": "Χίῳ",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 201.0–209.11",
+      "surface": "Χίῳ",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 201.0–209.11",
+      "surface": "Γάλλος",
+      "lemma": "γαλλος",
+      "pleiades_ids": [
+        "609384",
+        "609385",
+        "844925"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 201.0–209.11",
+      "surface": "Ἀραβίας",
+      "lemma": "Ἀραβία",
+      "pleiades_ids": [
+        "746710",
+        "981506"
+      ],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "De_antidotis",
+      "book": "2",
+      "chapter": "16",
+      "section": null,
+      "kuhn_citation": "K. XIV 201.0–209.11",
+      "surface": "Χίου",
+      "lemma": "Χίος",
+      "pleiades_ids": [
+        "chios"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    }
+  ]
+}

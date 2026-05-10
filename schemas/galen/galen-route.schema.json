@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/galen/galen-route.schema.json",
+  "title": "Galen route file",
+  "type": "array",
+  "$defs": {
+    "certainty": {
+      "type": "string",
+      "enum": ["secure", "probable", "uncertain"]
+    },
+    "orderBasis": {
+      "type": "string",
+      "enum": ["explicit", "strongly_implied", "uncertain"]
+    },
+    "placeKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "routeKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "materiaKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    }
+  },
+  "items": {
+    "type": "object",
+    "required": [
+      "route_key",
+      "label",
+      "synopsis",
+      "start_place_key",
+      "stops",
+      "edges"
+    ],
+    "properties": {
+      "route_key": { "$ref": "#/$defs/routeKey" },
+      "label": { "type": "string" },
+      "synopsis": { "type": "string" },
+      "start_place_key": { "$ref": "#/$defs/placeKey" },
+      "stops": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "route_order",
+            "place_key",
+            "order_basis",
+            "evidence_phrase",
+            "kuhn_citations",
+            "materia_keys",
+            "narrative_note"
+          ],
+          "properties": {
+            "route_order": { "type": "integer", "minimum": 1 },
+            "place_key": { "$ref": "#/$defs/placeKey" },
+            "order_basis": { "$ref": "#/$defs/orderBasis" },
+            "evidence_phrase": { "type": "string" },
+            "kuhn_citations": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "materia_keys": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/materiaKey" }
+            },
+            "narrative_note": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "edges": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "from_place_key",
+            "to_place_key",
+            "kuhn_citation",
+            "textual_basis",
+            "certainty"
+          ],
+          "properties": {
+            "from_place_key": { "$ref": "#/$defs/placeKey" },
+            "to_place_key": { "$ref": "#/$defs/placeKey" },
+            "kuhn_citation": { "type": "string" },
+            "textual_basis": { "type": "string" },
+            "certainty": { "$ref": "#/$defs/certainty" }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

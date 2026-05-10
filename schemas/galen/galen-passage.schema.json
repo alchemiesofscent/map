@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/galen/galen-passage.schema.json",
+  "title": "Galen passage file",
+  "type": "array",
+  "$defs": {
+    "evidenceCategory": {
+      "type": "string",
+      "enum": ["A", "B", "C"]
+    },
+    "placeKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "routeKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "materiaKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    },
+    "nullableInteger": {
+      "type": ["integer", "null"]
+    }
+  },
+  "items": {
+    "type": "object",
+    "required": [
+      "passage_id",
+      "work",
+      "kuhn_volume",
+      "kuhn_page_start",
+      "kuhn_line_start",
+      "kuhn_page_end",
+      "kuhn_line_end",
+      "tei_div_path",
+      "greek",
+      "translation_en",
+      "route_keys",
+      "place_mentions",
+      "materia_mentions",
+      "is_route_anchor"
+    ],
+    "properties": {
+      "passage_id": { "type": "string" },
+      "work": {
+        "type": "string",
+        "enum": ["SMT", "De_antidotis"]
+      },
+      "kuhn_volume": {
+        "type": "string",
+        "enum": ["XI", "XII", "XIII", "XIV"]
+      },
+      "kuhn_page_start": { "type": "integer", "minimum": 1 },
+      "kuhn_line_start": { "$ref": "#/$defs/nullableInteger" },
+      "kuhn_page_end": { "type": "integer", "minimum": 1 },
+      "kuhn_line_end": { "$ref": "#/$defs/nullableInteger" },
+      "tei_div_path": { "type": "string" },
+      "greek": { "type": "string" },
+      "translation_en": { "type": "string" },
+      "route_keys": {
+        "type": "array",
+        "items": { "$ref": "#/$defs/routeKey" }
+      },
+      "place_mentions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["surface", "place_key", "evidence_category"],
+          "properties": {
+            "surface": { "type": "string" },
+            "place_key": { "$ref": "#/$defs/placeKey" },
+            "evidence_category": { "$ref": "#/$defs/evidenceCategory" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "materia_mentions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["surface", "materia_key"],
+          "properties": {
+            "surface": { "type": "string" },
+            "materia_key": { "$ref": "#/$defs/materiaKey" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "is_route_anchor": { "type": "boolean" }
+    },
+    "additionalProperties": false
+  }
+}

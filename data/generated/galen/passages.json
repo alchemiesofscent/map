@@ -1,0 +1,745 @@
+[
+  {
+    "passage_id": "smt.9.1.a",
+    "work": "SMT",
+    "kuhn_volume": "XII",
+    "kuhn_page_start": 168,
+    "kuhn_line_start": 7,
+    "kuhn_page_end": 178,
+    "kuhn_line_end": 1,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1:9.1",
+    "greek": "ὥσπερ οὖν εἰς Κύπρον ἕνεκα τῶν ἐν αὐτῇ μετάλλων, εἴς τε τὴν κοίλην Συρίαν, μόριον οὖσαν τῆς Παλαιστίνης, ἕνεκεν ἀσφάλτου καί τινων ἄλλων κατ’ αὐτὴν ἀξίων ἱστορίας ἐπορεύθην, οὕτως καὶ εἰς Λῆμνον οὐκ ὤκνησα πλεῦσαι, θεασόμενος ὁπόσον μίγνυται τοῦ αἵματος τῇ γῇ. καὶ τό γε δεύτερον ἐξ Ἀσίας εἰς Ῥώμην ἀφικέσθαι πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας, ἔπλευσα πρότερον ἀπὸ Τρῳάδος Ἀλεξανδρείας εἰς Λῆμνον, ἐπιτυχὼν εἰς Θεσσαλονίκην ἀναγομένου πλοίου, συνθεμένῳ τῷ ναυκλήρῳ παραβάλλειν πρότερον τῇ Λήμνῳ· ὁ δὲ προσέσχε μὲν, οὐ μὴν ᾗ γ’ ἐχρῆν πόλει. τὴν ἀρχὴν γὰρ οὐδ’ ἠπιστάμην δύο πόλεις εἶναι κατὰ τὴν νῆσον, ἀλλὰ ᾤμην, ὡς Σάμον καὶ Χίον καὶ Κῶ Ἄνδρον τε καὶ Τῆνον καὶ πάσας τὰς κατὰ τὸ Αἰγαῖον, οὕτω καὶ τὴν Λῆμνον ὁμώνυμον ἔχειν πόλιν ὅλῃ τῇ νήσῳ μίαν.",
+    "translation_en": "For just as I traveled to Cyprus on account of its mines, and to Coele Syria — a part of Palestine — on account of asphalt and certain other things in it worth investigating, so too I did not hesitate to sail to Lemnos, in order to observe how much blood is mixed with the earth. And on the second occasion when I was making my way from Asia to Rome on foot through Thrace and Macedonia, I had earlier sailed from Alexandria Troas to Lemnos: I had caught a ship putting out for Thessalonica, having arranged with the captain that he should put in at Lemnos first. He did so — but not at the city he should have. For at first I did not even know that there were two cities on the island; rather, I assumed that — just as Samos and Chios and Cos and Andros and Tenos and all the islands of the Aegean each have a single city of the same name as the whole island — Lemnos likewise had a single city of the same name as the whole island.",
+    "route_keys": [
+      "lemnos-alexandria-troas-to-thessalonica-context",
+      "cyprus-soloi-mines",
+      "coele-syria-dead-sea-materials"
+    ],
+    "place_mentions": [
+      {
+        "surface": "Κύπρον",
+        "place_key": "cyprus_island",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "κοίλην Συρίαν",
+        "place_key": "coele_syria",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Παλαιστίνης",
+        "place_key": "palestine",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Λῆμνον",
+        "place_key": "lemnos",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Ἀσίας",
+        "place_key": "asia_province",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Ῥώμην",
+        "place_key": "rome",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Θρᾴκης",
+        "place_key": "thracia_region",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Μακεδονίας",
+        "place_key": "macedonia_region",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Τρῳάδος Ἀλεξανδρείας",
+        "place_key": "alexandria_troas",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Θεσσαλονίκην",
+        "place_key": "thessalonica",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Σάμον",
+        "place_key": "samos",
+        "evidence_category": "C"
+      },
+      {
+        "surface": "Χίον",
+        "place_key": "chios",
+        "evidence_category": "C"
+      },
+      {
+        "surface": "Αἰγαῖον",
+        "place_key": "aegean_sea",
+        "evidence_category": "C"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "ἀσφάλτου",
+        "materia_key": "asphalt"
+      },
+      {
+        "surface": "αἵματος τῇ γῇ",
+        "materia_key": "lemnian-earth"
+      }
+    ],
+    "is_route_anchor": true
+  },
+  {
+    "passage_id": "smt.9.1.b",
+    "work": "SMT",
+    "kuhn_volume": "XII",
+    "kuhn_page_start": 168,
+    "kuhn_line_start": 7,
+    "kuhn_page_end": 178,
+    "kuhn_line_end": 1,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1:9.1",
+    "greek": "ὡς γὰρ ἀπὸ τῆς Ἰταλίας διαβαλὼν εἰς τὴν Μακεδονίαν καὶ σχεδὸν ὅλην αὐτὴν ὁδοιπορήσας ἐν Φιλίπποις ἐγενόμην, ἥπερ ἐστὶν ὅμορος τῇ Θρᾴκῃ πόλις, ἐντεῦθεν ἐπὶ τὴν πλησίον θάλατταν εἴκοσιν ἐπὶ τοῖς ἑκατὸν ἀπέχουσαν στάδια κατελθὼν, ἔπλευσα πρότερον μὲν εἰς Θάσον ἐγγύς που διακοσίους σταδίους, ἐκεῖθεν δὲ εἰς Λῆμνον ἑπτακοσίους, εἶτ’ αὖθις ἀπὸ Λήμνου τοὺς ἴσους ἑπτακοσίους εἰς Ἀλεξανδρείαν Τρῳάδα. καὶ διὰ τοῦτ’ ἐξεπίτηδες ἔγραψα περί τε τοῦ πλοῦ καὶ τῶν σταδίων, ὅπως εἴ τις ἐθέλῃ θεάσασθαι καὶ αὐτὸς ὁμοίως ἐμοὶ τὴν Ἡφαιστιάδα διαγινώσκων τὴν θέσιν αὐτῆς, οὕτως παρασκευάζοιτο πρὸς τὸν πλοῦν.",
+    "translation_en": "For when I had crossed from Italy into Macedonia, traveled through nearly the whole of it, and arrived at Philippi — a city bordering Thrace — I went down from there to the nearby coast (a hundred and twenty stades distant) and sailed first to Thasos, about two hundred stades, then from there to Lemnos, seven hundred more, then again from Lemnos the same seven hundred to Alexandria Troas. It is precisely for this reason that I have written explicitly about the voyage and the distances: so that anyone wishing, as I did, to inspect Hephaistia and ascertain its position may equip himself for the voyage accordingly.",
+    "route_keys": [
+      "lemnos-italy-to-troas-via-thasos"
+    ],
+    "place_mentions": [
+      {
+        "surface": "Ἰταλίας",
+        "place_key": "italia_peninsula",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Μακεδονίαν",
+        "place_key": "macedonia_region",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Φιλίπποις",
+        "place_key": "philippi",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Θρᾴκῃ",
+        "place_key": "thracia_region",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Θάσον",
+        "place_key": "thasos",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Λῆμνον",
+        "place_key": "lemnos",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Ἀλεξανδρείαν Τρῳάδα",
+        "place_key": "alexandria_troas",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Ἡφαιστιάδα",
+        "place_key": "hephaistia",
+        "evidence_category": "A"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "Ἡφαιστιάδα",
+        "materia_key": "lemnian-earth"
+      }
+    ],
+    "is_route_anchor": true
+  },
+  {
+    "passage_id": "smt.9.2.a",
+    "work": "SMT",
+    "kuhn_volume": "XII",
+    "kuhn_page_start": 203,
+    "kuhn_line_start": 0,
+    "kuhn_page_end": 204,
+    "kuhn_line_end": 2,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1:9.2",
+    "greek": "οὐ μὴν ἐγὼ εἶδον ἐκεῖνον τὸν ποταμὸν, καίτοι παραπλεύσας ὅλην Λυκίαν μικρῷ πλοίῳ τῆς ἱστορίας ἕνεκα τῶν ἐν αὐτῇ. πλακώδεις δὲ λίθους μελαίνας, εἰ κατὰ πυρὸς ἐπιτεθεῖεν, ἀσθενῆ φλόγα γεννῶντας ἐκόμισα πολλὰς ἐκ τῆς κοίλης Συρίας, ἐν τῷ λόφῳ γεννωμένας τῷ περιέχοντι τὴν νεκρὰν ὀνομαζομένην θάλασσαν, ἐν τοῖς ἀνατολικοῖς αὐτῆς μέρεσιν, ἔνθα καὶ ἡ ἄσφαλτος γίνεται. καὶ ἦν ἡ ὀσμὴ τῶν λίθων τῇ ἀσφάλτῳ παραπλησία.",
+    "translation_en": "I myself did not see that river, although I sailed past the whole of Lycia in a small boat for the sake of investigating the things in it. But I did bring back many flat black stones — which, if laid on a fire, produce a feeble flame — from Coele Syria, generated in the hill that surrounds the so-called Dead Sea, in its eastern parts, where the asphalt is also produced. And the smell of the stones was very like that of the asphalt.",
+    "route_keys": [
+      "coele-syria-dead-sea-materials"
+    ],
+    "place_mentions": [
+      {
+        "surface": "Λυκίαν",
+        "place_key": "lycia",
+        "evidence_category": "C"
+      },
+      {
+        "surface": "κοίλης Συρίας",
+        "place_key": "coele_syria",
+        "evidence_category": "A"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "πλακώδεις λίθους μελαίνας",
+        "materia_key": "bituminous-stones"
+      },
+      {
+        "surface": "ἄσφαλτος",
+        "materia_key": "asphalt"
+      }
+    ],
+    "is_route_anchor": true
+  },
+  {
+    "passage_id": "smt.9.3.a",
+    "work": "SMT",
+    "kuhn_volume": "XII",
+    "kuhn_page_start": 214,
+    "kuhn_line_start": 5,
+    "kuhn_page_end": 217,
+    "kuhn_line_end": 3,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1:9.3",
+    "greek": "ἐκόμισα δὲ καὶ τούτου τοῦ φαρμάκου πολύ τι πλῆθος ἐκ τῶν ἐν Κύπρῳ Σόλων, ἔνθα τὸ μέταλλόν ἐστιν, ὡς ἀπὸ σταδίων τῆς πόλεως τριάκοντα. ἔῤῥιπτο γὰρ ἐν τῷ μεταξὺ τόπῳ τοῦ τε προκειμένου κατὰ τὸ μέταλλον οἴκου καὶ τῆς ὑποκειμένης αὐτῷ κώμης.",
+    "translation_en": "I also brought back a great quantity of this drug from the Soli on Cyprus, where the mine is, about thirty stades from the city; for it had been thrown out in the area between the building set above the mine and the village lying below it.",
+    "route_keys": [
+      "cyprus-soloi-mines"
+    ],
+    "place_mentions": [
+      {
+        "surface": "Κύπρῳ",
+        "place_key": "cyprus_island",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Σόλων",
+        "place_key": "soloi_cyprus",
+        "evidence_category": "A"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "τούτου τοῦ φαρμάκου",
+        "materia_key": "diphryges"
+      }
+    ],
+    "is_route_anchor": false
+  },
+  {
+    "passage_id": "smt.9.3.b",
+    "work": "SMT",
+    "kuhn_volume": "XII",
+    "kuhn_page_start": 219,
+    "kuhn_line_start": 5,
+    "kuhn_page_end": 221,
+    "kuhn_line_end": 13,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1:9.3",
+    "greek": "ἐν γοῦν τοῖς Σόλοις τῆς ἐν ταῖς καμινείαις γεννωμένης καδμείας ὀλίγιστον ἦν ἔτι καθ’ ὃν ἐγὼ χρόνον ἐπεδήμησα τῇ νήσῳ. λίθους δὲ λαβὼν παρὰ τοῦ τοῖς μετάλλοις ἐπιτεταγμένου κατά τε τὰ ὄρη καὶ τοὺς ῥύακας εὑρισκομένους, οὓς εἰς Ἀσίαν τε καὶ Ἰταλίαν κομίσαντός μου, μέγιστον δῶρον ἐδόκουν οἱ φίλοι λαμβάνειν, ὡς τῆς ἄλλης καδμείας ἐκείνην οὖσαν ἀμείνονα.",
+    "translation_en": "In Soli, at any rate, of the cadmia produced in the kilns there was very little still left during the time when I was sojourning on the island. But, taking stones found by the man set in charge of the mines, both up in the mountains and along the watercourses, and bringing them to Asia and to Italy, my friends thought they were receiving the greatest gift — since this cadmia was better than the rest.",
+    "route_keys": [
+      "cyprus-soloi-mines"
+    ],
+    "place_mentions": [
+      {
+        "surface": "Σόλοις",
+        "place_key": "soloi_cyprus",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Ἀσίαν",
+        "place_key": "asia_province",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Ἰταλίαν",
+        "place_key": "italia_peninsula",
+        "evidence_category": "B"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "καδμείας",
+        "materia_key": "cadmia"
+      }
+    ],
+    "is_route_anchor": true
+  },
+  {
+    "passage_id": "smt.9.3.c",
+    "work": "SMT",
+    "kuhn_volume": "XII",
+    "kuhn_page_start": 226,
+    "kuhn_line_start": 7,
+    "kuhn_page_end": 229,
+    "kuhn_line_end": 7,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1:9.3",
+    "greek": "κατὰ τὸ μέταλλον ἐν Κύπρῳ τὸ προειρημένον ἐν τοῖς τῶν Σόλων ὄρεσι μέγας τις ἦν οἶκος, οὗ κατὰ τὸν δεξιὸν τοῖχον, ὡς πρὸς ἡμᾶς δὲ τοὺς εἰσιόντας ἀριστερὸν, εἴσοδος ἦν εἰς αὐτὸ τὸ μέταλλον, ἐν ᾧ τινας ἐθεασάμην ἐπὶ πλεῖστον ἐκτεταμένας οἷον ζώνας ἐπ’ ἀλλήλαις τρεῖς, ταπεινοτάτην μὲν τὴν τοῦ σώρεως, ἐπ’ αὐτῇ δὲ τὴν τῆς χαλκίτεως, εἶτα τοῦ μίσυος. ὁ δὲ κατ’ ἐκεῖνον τὸν καιρὸν ἐπίτροπος τοῦ μετάλλου, δεικνύς μοι ταῦτα, καθάπερ, ἔφη, νῦν ἥκεις ἐν πενίᾳ τῆς καμινευομένης καδμείας ὄντων ἡμῶν, οὕτω ἐν πλούτῳ θαυμαστῷ τὰ τρία ταῦτα ὁρᾷς καθεστηκότα. καὶ τοίνυν καὶ λαβὼν ἐξ αὐτοῦ πάμπολυ πρῶτον μὲν εἰς τὴν Ἀσίαν, ἐκεῖθεν δ’ εἰς τὴν Ῥώμην ἐκόμισα καὶ μέχρι νῦν ἔσχον ἐτῶν μεταξὺ γενομένων ὡς λ΄. καὶ κατά τινα τύχην ἡ προκειμένη πραγματεία μέχρι μὲν τῆς ὀγδόης βίβλου προῆλθεν, ὡς πρὸ ἐτῶν εἴκοσιν, οὐ προστεθέντος αὐτῇ τοῦ ἐννάτου τούτου, διὰ τὸ τινὰς μὲν τῶν λίθων μηδέπω τεθεᾶσθαι.",
+    "translation_en": "At the aforementioned mine on Cyprus, in the mountains of Soli, there was a large building. On its right-hand wall (left for us as we entered) there was an entrance into the mine itself, in which I observed three bands extending at length one upon another: the lowest being of sory, above it that of chalcitis, then of misy. The steward of the mine at that time, showing me these things, said: 'Just as you have come now in a time of poverty as regards the cadmia we kiln, so you see these three established in marvelous abundance.' And so, taking a great quantity from there, I conveyed it first to Asia and from there to Rome, and I have kept it until now, some thirty years having passed in between. And by chance the present treatise had advanced as far as the eighth book about twenty years ago, without this ninth being added to it, because I had not yet observed some of the stones.",
+    "route_keys": [
+      "cyprus-soloi-mines"
+    ],
+    "place_mentions": [
+      {
+        "surface": "Κύπρῳ",
+        "place_key": "cyprus_island",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Σόλων",
+        "place_key": "soloi_cyprus",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Ἀσίαν",
+        "place_key": "asia_province",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Ῥώμην",
+        "place_key": "rome",
+        "evidence_category": "B"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "σώρεως",
+        "materia_key": "sory"
+      },
+      {
+        "surface": "χαλκίτεως",
+        "materia_key": "chalcitis"
+      },
+      {
+        "surface": "μίσυος",
+        "materia_key": "misy"
+      },
+      {
+        "surface": "καμινευομένης καδμείας",
+        "materia_key": "cadmia"
+      }
+    ],
+    "is_route_anchor": true
+  },
+  {
+    "passage_id": "smt.9.3.d",
+    "work": "SMT",
+    "kuhn_volume": "XII",
+    "kuhn_page_start": 229,
+    "kuhn_line_start": 7,
+    "kuhn_page_end": 230,
+    "kuhn_line_end": 4,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1:9.3",
+    "greek": "ὥσπερ δ’ ἐν Κύπρῳ τὴν ἐν τοῖς ὄρεσιν καὶ ῥύαξι γεννωμένην καδμείαν ἔλαβον οὖσαν, ὡς ἔφην, εἶδός τι λίθου, κατὰ τὸν αὐτὸν τρόπον καὶ μολύβδαιναν, ἐῤῥιμμένην παμπόλλοις ἅμα τοῖς ἄλλοις λίθοις ἐθεασάμην κατὰ τὴν εἰς Ἐργαστήρια φέρουσαν ὁδὸν ἀπὸ Περγάμου. καλεῖται δ’ Ἐργαστήρια κώμη τις, ἐν ᾗ καὶ μέταλλά ἐστι, μεταξὺ Περγάμου καὶ Κυζίκου, σταδίους ἀπέχουσα Περγάμου τετρακοσίους τεσσαράκοντα.",
+    "translation_en": "Just as I obtained on Cyprus the cadmia generated in the mountains and watercourses (which is, as I said, a sort of stone), in the same way I also observed molybdaina, scattered along with very many other stones, on the road leading from Pergamum to Ergasteria. Ergasteria is the name of a village in which there are also mines, between Pergamum and Cyzicus, four hundred and forty stades distant from Pergamum.",
+    "route_keys": [
+      "pergamum-ergasteria-mines"
+    ],
+    "place_mentions": [
+      {
+        "surface": "Κύπρῳ",
+        "place_key": "cyprus_island",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Ἐργαστήρια",
+        "place_key": "ergasteria",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Περγάμου",
+        "place_key": "pergamum",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Κυζίκου",
+        "place_key": "cyzicus",
+        "evidence_category": "B"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "καδμείαν",
+        "materia_key": "cadmia"
+      },
+      {
+        "surface": "μολύβδαιναν",
+        "materia_key": "molybdaina"
+      }
+    ],
+    "is_route_anchor": true
+  },
+  {
+    "passage_id": "smt.9.3.e",
+    "work": "SMT",
+    "kuhn_volume": "XII",
+    "kuhn_page_start": 238,
+    "kuhn_line_start": 1,
+    "kuhn_page_end": 241,
+    "kuhn_line_end": 10,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1:9.3",
+    "greek": "ἐκόμισα γὰρ καὶ τοῦτο τὸ φάρμακον ἐκ τῆς Κύπρου πάμπολυ. τὸ δ’ ἔξωθεν αὐτοῦ πᾶν, ὡς μετὰ ἔτη σχεδὸν κ΄ χαλκῖτις ἐγένετο, τοῦ ἔνδον ὄντος ἔτι χαλκάνθου.",
+    "translation_en": "For I also brought back a great quantity of this drug from Cyprus. The whole of its outer part, after about twenty years, became chalcitis, while what was inside still remained chalcanthon.",
+    "route_keys": [
+      "cyprus-soloi-mines"
+    ],
+    "place_mentions": [
+      {
+        "surface": "Κύπρου",
+        "place_key": "cyprus_island",
+        "evidence_category": "B"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "χαλκῖτις",
+        "materia_key": "chalcitis"
+      },
+      {
+        "surface": "χαλκάνθου",
+        "materia_key": "chalcanthon"
+      }
+    ],
+    "is_route_anchor": false
+  },
+  {
+    "passage_id": "smt.9.3.f",
+    "work": "SMT",
+    "kuhn_volume": "XII",
+    "kuhn_page_start": 238,
+    "kuhn_line_start": 1,
+    "kuhn_page_end": 241,
+    "kuhn_line_end": 10,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1:9.3",
+    "greek": "ἐν δ’ οὖν τῇ Κύπρῳ, καθ’ ὃν ἐγὼ καιρὸν ἐγενόμην ἐν αὐτῇ, τὸ φάρμακον τοῦτο τόνδε τὸν τρόπον ἐθεασάμην ἀθροιζόμενον. οἶκος ἦν μέγας μὲν, οὐ μὴν ὑψηλός γε προκείμενος τῆς εἰς τὸ μέταλλον εἰσόδου.",
+    "translation_en": "On Cyprus, at any rate, during the time when I was there in person, I observed this drug being collected in the following manner. There was a building, large but not tall, set before the entrance to the mine.",
+    "route_keys": [
+      "cyprus-soloi-mines"
+    ],
+    "place_mentions": [
+      {
+        "surface": "Κύπρῳ",
+        "place_key": "cyprus_island",
+        "evidence_category": "B"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "τὸ φάρμακον τοῦτο",
+        "materia_key": "chalcanthon"
+      }
+    ],
+    "is_route_anchor": true
+  },
+  {
+    "passage_id": "smt.10.2.a",
+    "work": "SMT",
+    "kuhn_volume": "XII",
+    "kuhn_page_start": 303,
+    "kuhn_line_start": 8,
+    "kuhn_page_end": 305,
+    "kuhn_line_end": 0,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1:10.2",
+    "greek": "Περὶ ἀλεκτορίδος κόπρου.] Τῇ δὲ τῶν ἀλεκτορίδων ἑωρακὼς τὸν ἐν τῇ Μυσίᾳ χρώμενον ἐπὶ τῶν ὑπὸ τῆς μυκήτων ἐδωδῆς πνιγομένων ἐχρησάμην καὶ αὐτὸς ἐπί τινων ἐν τῇ πόλει προσενηνεγμένων αὐτὴν, ἐπὶ πάντων λειουμένην κυάθοις τρισὶν ἢ τέτρασιν ὀξυκράτου τε καὶ ὀξυμέλιτος, καὶ προφανῶς ὠφέλησεν διὰ ταχέων. ἤμεσαν γὰρ ὀλίγον ὕστερον οἱ πνιγόμενοι φλεγματώδη παχύτατον χυμὸν, ἐφ’ ᾧ τελέως ἐπαύσαντο τοῦ συμπτώματος.",
+    "translation_en": "On the dung of hens.] Having seen a [practitioner] in Mysia using that of hens for those choking on the consumption of mushrooms, I myself also used it on certain persons in the city to whom it had been brought, ground up — for all of them — in three or four cyathi of oxycrate and oxymel; and it manifestly gave benefit very quickly. For shortly afterward the choking patients vomited up a most thick phlegmatic humor, after which they completely ceased from the symptom.",
+    "route_keys": [],
+    "place_mentions": [
+      {
+        "surface": "Μυσίᾳ",
+        "place_key": "mysia",
+        "evidence_category": "C"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "ἀλεκτορίδος κόπρος",
+        "materia_key": "chicken-dung"
+      },
+      {
+        "surface": "ὀξυκράτου",
+        "materia_key": "oxycrate"
+      },
+      {
+        "surface": "ὀξυμέλιτος",
+        "materia_key": "oxymel"
+      }
+    ],
+    "is_route_anchor": false
+  },
+  {
+    "passage_id": "de_antidotis.1.1.a",
+    "work": "De_antidotis",
+    "kuhn_volume": "XIV",
+    "kuhn_page_start": 1,
+    "kuhn_line_start": 0,
+    "kuhn_page_end": 5,
+    "kuhn_line_end": 10,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg078.1st1K-grc1:1.1",
+    "greek": "ἀρεσθεὶς δὲ αὐτῇ μόνῃ, παραγενόμενος εἰς Ῥώμην, ἐπυνθάνετο κατὰ τίνα συμμετρίαν τῶν ἁπλῶν φαρμάκων σκευάζοιμι, κᾀγὼ τἀληθὲς αὐτῷ διῆλθον, ὡς οὐδὲν οὐδὲ τοὐλάχιστον, οὔτ' ἐνέλιπον, οὔτε προσέθηκα τῶν ἐμβαλλομένων ἐξ ἔθους παλαιοῦ τοῖς κατὰ τὴν αὐλὴν ἰατροῖς, ἐδήλωσά τε τὴν αἰτίαν, δι' ἣν ἀρέσκει μάλιστα αὐτῷ ἐμοὶ σκευασία, περὶ ἧς εἰπεῖν καὶ νῦν προθέμενος, ἐμνημόνευσα τῶν τότε πραχθέντων. ἅτε γὰρ ἑκάστης ἡμέρας λαμβάνων ὁ Ἀντωνῖνος ἅμα πολλῷ μέλιτι τοῦ φαρμάκου, ἀκριβέστατα διεγίνωσκε τήν τε κακίαν αὐτοῦ καὶ τὴν ἀρετήν.",
+    "translation_en": "Pleased with this one alone, when he had come to Rome he asked according to what proportions of simple drugs I prepared it; and I went through the truth with him in detail — that I neither omitted nor added anything, not even the smallest thing, of those ingredients customarily added by the physicians at the court — and I declared the reason why my preparation pleases him most, about which, having proposed to speak now too, I made mention of what was done at that time. For Antoninus, taking the drug daily along with much honey, very accurately distinguished both its weakness and its excellence.",
+    "route_keys": [],
+    "place_mentions": [
+      {
+        "surface": "Ῥώμην",
+        "place_key": "rome",
+        "evidence_category": "C"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "τοῦ φαρμάκου",
+        "materia_key": "theriac"
+      }
+    ],
+    "is_route_anchor": false
+  },
+  {
+    "passage_id": "de_antidotis.1.2.a",
+    "work": "De_antidotis",
+    "kuhn_volume": "XIV",
+    "kuhn_page_start": 5,
+    "kuhn_line_start": 10,
+    "kuhn_page_end": 13,
+    "kuhn_line_end": 15,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg078.1st1K-grc1:1.2",
+    "greek": "Κύπρον γοῦν ἱστορῆσαι βουληθεὶς ἐγὼ διὰ ταῦτα, φίλον τε ἔχων τὸν ἐν αὐτῇ πολὺ δυνάμενον, ἑταῖρον ὄντα τοῦ προεστῶτος τῶν μετάλλων ἐπιτρόπου Καίσαρος, καδμείαν τε πολλὴν ἐκεῖθεν ἐκόμισα καὶ διφρυγὲς καὶ σπόδιον καὶ πομφόλυγα χαλκῖτίν τε καὶ μίσυ καὶ σῶρυ καὶ χάλκανθον, ὥσπερ γε πάλιν ἐκ τῆς Παλαιστίνης Συρίας ὀποβάλσαμον ἀκριβές. ἄσφαλτος μὲν γὰρ οὐδὲ δολωθῆναι δύναται πανούργως, ὥσπερ οὐδὲ ὁ τοῦ ὀποβαλσάμου καρπὸς ἢ τὸ ξυλοβάλσαμον. ἔπλευσα δὲ καὶ εἰς Λῆμνον, ἴσασι δὲ οἱ θεοὶ, δι' οὐδὲν ἄλλο ἢ διὰ τὴν Λημνίαν, εἴτε γῆν ἐθέλει τις ὀνομάζειν, εἴτε σφραγῖδα, λέλεκται δὲ περὶ αὐτῆς αὐτάρκως ἐν τῷ περὶ τῆς τῶν ἁπλῶν φαρμάκων δυνάμεως ἐνάτῳ. ταύτην οὖν εἴτε Λημνίαν γῆν, εἴτε σφραγῖδα καλεῖν ἐθέλεις, παραποιοῦσιν, ὡς μηδένα δυνάσθαι διαγνῶναι τὴν ἀληθινὴν ἀπὸ τῆς παραπεποιημένης.",
+    "translation_en": "Wishing, then, to investigate Cyprus on these grounds — and having a friend there of much influence, a comrade of the man set in charge of Caesar's mines — I brought back from there a great quantity of cadmia and diphryges and spodium and pompholyx, and chalcitis and misy and sory and chalcanthon, just as again from Palestinian Syria pure opobalsam. For asphalt cannot be cunningly falsified, just as neither can the fruit of opobalsam nor xylobalsam. I sailed also to Lemnos, the gods know, for no other reason than the Lemnian — whether one wishes to call it 'earth' or 'seal' — and about it enough has been said in the ninth book of On the Powers of Simple Drugs. Whether you wish to call it Lemnian earth or seal, then, [some people] counterfeit it so that no one is able to distinguish the genuine from the counterfeit.",
+    "route_keys": [
+      "cyprus-soloi-mines",
+      "coele-syria-dead-sea-materials",
+      "lemnos-alexandria-troas-to-thessalonica-context"
+    ],
+    "place_mentions": [
+      {
+        "surface": "Κύπρον",
+        "place_key": "cyprus_island",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Παλαιστίνης",
+        "place_key": "palestine",
+        "evidence_category": "B"
+      },
+      {
+        "surface": "Συρίας",
+        "place_key": "coele_syria",
+        "evidence_category": "A"
+      },
+      {
+        "surface": "Λῆμνον",
+        "place_key": "lemnos",
+        "evidence_category": "A"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "καδμείαν",
+        "materia_key": "cadmia"
+      },
+      {
+        "surface": "διφρυγὲς",
+        "materia_key": "diphryges"
+      },
+      {
+        "surface": "σπόδιον",
+        "materia_key": "spodium"
+      },
+      {
+        "surface": "πομφόλυγα",
+        "materia_key": "pompholyx"
+      },
+      {
+        "surface": "χαλκῖτίν",
+        "materia_key": "chalcitis"
+      },
+      {
+        "surface": "μίσυ",
+        "materia_key": "misy"
+      },
+      {
+        "surface": "σῶρυ",
+        "materia_key": "sory"
+      },
+      {
+        "surface": "χάλκανθον",
+        "materia_key": "chalcanthon"
+      },
+      {
+        "surface": "ὀποβάλσαμον",
+        "materia_key": "opobalsam"
+      },
+      {
+        "surface": "ξυλοβάλσαμον",
+        "materia_key": "xylobalsam"
+      },
+      {
+        "surface": "ἄσφαλτος",
+        "materia_key": "asphalt"
+      },
+      {
+        "surface": "Λημνίαν γῆν",
+        "materia_key": "lemnian-earth"
+      },
+      {
+        "surface": "σφραγῖδα",
+        "materia_key": "lemnian-seal"
+      }
+    ],
+    "is_route_anchor": true
+  },
+  {
+    "passage_id": "de_antidotis.1.3.a",
+    "work": "De_antidotis",
+    "kuhn_volume": "XIV",
+    "kuhn_page_start": 13,
+    "kuhn_line_start": 15,
+    "kuhn_page_end": 20,
+    "kuhn_line_end": 14,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg078.1st1K-grc1:1.3",
+    "greek": "παραπλήσιον δ' οἷς εἴρηκα καὶ κατὰ τὴν Ἰταλίαν εἶδον ἐν τοῖς περὶ Νεάπολιν, καὶ τὸν γειτνιῶντα λόφον αὐτῇ τῇ χώρᾳ γενόμενον, ὃν ὀνομάζουσι Τριφύλλινον. ἐπυθόμην δὲ καὶ κατ' ἄλλα πολλὰ χωρία τῆς Ἰταλίας οὕτω θερμαίνεσθαι τὸν οἶνον, ἄλλ' ὅ γε τοιοῦτος, ὥσπερ μόνιμος, οὕτω καὶ κεφαλαλγὴς γίνεται, διὰ τὴν ἐκ τοῦ καπνοῦ προσερχομένην αὐτῷ ποιότητα.",
+    "translation_en": "I also saw something similar to what I have described in Italy, in the area around Naples and on the hill adjacent to that very district, which they call Trifolinus. I learned that the wine in many other places of Italy is heated in this way too — but such wine, just as it is durable, so it also becomes headache-inducing, on account of the smoky quality that has come to it.",
+    "route_keys": [],
+    "place_mentions": [
+      {
+        "surface": "Ἰταλίαν",
+        "place_key": "italia_peninsula",
+        "evidence_category": "C"
+      },
+      {
+        "surface": "Νεάπολιν",
+        "place_key": "neapolis_campania",
+        "evidence_category": "C"
+      },
+      {
+        "surface": "Ἰταλίας",
+        "place_key": "italia_peninsula",
+        "evidence_category": "C"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "τὸν οἶνον",
+        "materia_key": "trifolinus-wine"
+      }
+    ],
+    "is_route_anchor": false
+  },
+  {
+    "passage_id": "de_antidotis.1.5.a",
+    "work": "De_antidotis",
+    "kuhn_volume": "XIV",
+    "kuhn_page_start": 27,
+    "kuhn_line_start": 9,
+    "kuhn_page_end": 32,
+    "kuhn_line_end": 9,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg078.1st1K-grc1:1.5",
+    "greek": "δυνάμενος γὰρ αὐτὰ γνωρίζειν ἀπ' ἀρχῆς εἰς τέλος, ἐν πολλοῖς τῆς γῆς εὑρήσεις τόποις, ὥσπερ κᾀγὼ κατὰ τὴν Ἰταλίαν εὗρον ἐν πολλοῖς χωρίοις, ὅσα μήτε φυόμενα μήτε αὐξανόμενα γνωρίζουσιν οἳ τὰ ξηρανθέντα μόνα διαγινώσκουσιν. οὐδεὶς γοῦν ἐστι τῶν μυροπωλῶν, ὃς οὐκ οἶδεν τὰς ἐκ Κρήτης κομιζομένας βοτάνας, ὥσπερ καὶ τοὺς καρποὺς αὐτῶν, ἀλλ' ἐν τοῖς προαστείοις Ῥώμης ἐξ αὐτῶν οὐκ ὀλίγας φυομένας παντάπασιν ἀγνοοῦσι, καὶ διὰ τοῦτο κατὰ τὸν καιρὸν, ἐν ᾧ τοὺς καρποὺς αὐτῶν ἐκφέρουσιν, ﻿ οὐκ ἐπιτηροῦσιν.",
+    "translation_en": "If you are able to recognize them from beginning to end, you will find them in many places of the earth — just as I myself in Italy found them in many districts — those plants which neither growing nor coming up are recognized by the men who recognize only the dried specimens. There is no perfumer who does not know the herbs imported from Crete, just as also their fruits; but they are completely ignorant of those (no few of them) growing in the suburbs of Rome from the very same plants — and for this reason during the season in which they put forth their fruits, they do not keep watch.",
+    "route_keys": [],
+    "place_mentions": [
+      {
+        "surface": "Ἰταλίαν",
+        "place_key": "italia_peninsula",
+        "evidence_category": "C"
+      },
+      {
+        "surface": "Κρήτης",
+        "place_key": "crete",
+        "evidence_category": "C"
+      },
+      {
+        "surface": "Ῥώμης",
+        "place_key": "rome",
+        "evidence_category": "C"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "βοτάνας",
+        "materia_key": "cretan-herbs"
+      }
+    ],
+    "is_route_anchor": false
+  },
+  {
+    "passage_id": "de_antidotis.1.10.a",
+    "work": "De_antidotis",
+    "kuhn_volume": "XIV",
+    "kuhn_page_start": 51,
+    "kuhn_line_start": 5,
+    "kuhn_page_end": 54,
+    "kuhn_line_end": 5,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg078.1st1K-grc1:1.10",
+    "greek": "ἐγὼ δὲ καὶ τὰς βοτάνας αὐτὰς ἠπιστάμην ἐν Ἀσίᾳ γεννωμένας, ἐν ἄλλοις μὲν χωρίοις ὀλίγας, ἐν Κυζίκῳ δὲ πλείστας, καὶ κατά γε τὴν Ἰταλίαν ὥσπερ ἄλλας τινὰς, οὕτω καὶ τὸ ἀμάρακον εἶδον γεννώμενον. ἀπολείπεται δὲ τὸ φυτὸν τοῦτο τοῦ μάρου πάμπολυ κατὰ τὴν εὐωδίαν.",
+    "translation_en": "I myself also knew of the herbs themselves growing in Asia — few in some districts, but most in Cyzicus — and even in Italy, just as certain others, so too I saw the amaracon growing. But this plant falls far short of marum in fragrance.",
+    "route_keys": [],
+    "place_mentions": [
+      {
+        "surface": "Ἀσίᾳ",
+        "place_key": "asia_province",
+        "evidence_category": "C"
+      },
+      {
+        "surface": "Κυζίκῳ",
+        "place_key": "cyzicus",
+        "evidence_category": "C"
+      },
+      {
+        "surface": "Ἰταλίαν",
+        "place_key": "italia_peninsula",
+        "evidence_category": "C"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "ἀμάρακον",
+        "materia_key": "amaracon"
+      },
+      {
+        "surface": "μάρου",
+        "materia_key": "maron"
+      }
+    ],
+    "is_route_anchor": false
+  },
+  {
+    "passage_id": "de_antidotis.1.14.a",
+    "work": "De_antidotis",
+    "kuhn_volume": "XIV",
+    "kuhn_page_start": 67,
+    "kuhn_line_start": 7,
+    "kuhn_page_end": 82,
+    "kuhn_line_end": 7,
+    "tei_div_path": "urn:cts:greekLit:tlg0057.tlg078.1st1K-grc1:1.14",
+    "greek": "φέρεται δ' ἡμῖν ἐκεῖθεν, ὡς καὶ τοὺς Καίσαρι σκευάζοντας ἀεὶ τῇ Κρητικῇ χρῆσθαι, καίτοι καὶ κατ' αὐτὴν τὴν Ῥώμην ἐν τοῖς προαστείοις καὶ τὴν χαμαιπίτυν καὶ τὴν χαμαίδρυν εὗρον εὐοσμοτέρας τῶν ἀπὸ τῆς Κρήτης ὅταν γε μὴ πολλῷ κατακλυσθῶσιν ὄμβρῳ. ἔτι τε καὶ τοῦτο χρὴ γινώσκειν, ὡς φερομένων ἀπὸ Κρήτης τῶν βοτανῶν, ἐνειλιγμένων χαρτίοις, οἷς ἐπιγέγραπται τὸ τῆς ἑκάστης βοτάνης ὄνομα, τινὲς μὲν ἁπλῆν ἔχουσι τὴν ἐπιγραφὴν, τινὲς δὲ μετὰ προσθήκης τῆς πεδιάδος.",
+    "translation_en": "It is brought to us from there [from Crete], so that those preparing [the antidote] for Caesar always use the Cretan variety, even though I found that even in Rome itself, in the suburbs, both the chamaepitys and the chamaedrys are more fragrant than those from Crete — provided they have not been deluged by much rain. Furthermore, it is necessary to know also this: that when the herbs come from Crete, wrapped in papers on which the name of each herb is written, some have a simple inscription, while others have an additional notation, 'of the plain.'",
+    "route_keys": [],
+    "place_mentions": [
+      {
+        "surface": "Ῥώμην",
+        "place_key": "rome",
+        "evidence_category": "C"
+      },
+      {
+        "surface": "Κρήτης",
+        "place_key": "crete",
+        "evidence_category": "C"
+      }
+    ],
+    "materia_mentions": [
+      {
+        "surface": "χαμαιπίτυν",
+        "materia_key": "chamaepitys"
+      },
+      {
+        "surface": "χαμαίδρυν",
+        "materia_key": "chamaedrys"
+      }
+    ],
+    "is_route_anchor": false
+  }
+]
