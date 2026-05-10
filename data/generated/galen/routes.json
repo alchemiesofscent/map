@@ -1,0 +1,273 @@
+[
+  {
+    "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
+    "label": "Lemnos via Alexandria Troas",
+    "synopsis": "Galen's first Lemnian-earth voyage (SMT 9.1). En route from Asia to Rome, he sails from Alexandria Troas to Lemnos aboard a Thessalonica-bound ship, arriving at the wrong city before walking to Hephaistia for the earth itself.",
+    "start_place_key": "alexandria_troas",
+    "stops": [
+      {
+        "route_order": 1,
+        "place_key": "alexandria_troas",
+        "order_basis": "explicit",
+        "evidence_phrase": "ἔπλευσα πρότερον ἀπὸ Τρῳάδος Ἀλεξανδρείας εἰς Λῆμνον",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [],
+        "narrative_note": "The named departure port for the Lemnos crossing."
+      },
+      {
+        "route_order": 2,
+        "place_key": "lemnos",
+        "order_basis": "explicit",
+        "evidence_phrase": "οὐκ ὤκνησα πλεῦσαι, θεασόμενος ὁπόσον μίγνυται τοῦ αἵματος τῇ γῇ",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [
+          "lemnian-earth"
+        ],
+        "narrative_note": "Galen lands on Lemnos at the wrong city; he intended Hephaistia but the captain put in elsewhere."
+      },
+      {
+        "route_order": 3,
+        "place_key": "hephaistia",
+        "order_basis": "strongly_implied",
+        "evidence_phrase": "τὴν Ἡφαιστιάδα διαγινώσκων τὴν θέσιν αὐτῆς",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [
+          "lemnian-earth",
+          "lemnian-seal"
+        ],
+        "narrative_note": "The actual collection city for Lemnian earth — only learned by Galen on this trip that the island has two cities."
+      }
+    ],
+    "edges": [
+      {
+        "from_place_key": "alexandria_troas",
+        "to_place_key": "lemnos",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "ἔπλευσα πρότερον ἀπὸ Τρῳάδος Ἀλεξανδρείας εἰς Λῆμνον",
+        "certainty": "secure"
+      },
+      {
+        "from_place_key": "lemnos",
+        "to_place_key": "hephaistia",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "Implied: Galen describes intending Hephaistia and walking there after the captain's misdrop.",
+        "certainty": "probable"
+      }
+    ]
+  },
+  {
+    "route_key": "lemnos-italy-to-troas-via-thasos",
+    "label": "Lemnos via Italy → Thasos → Troas",
+    "synopsis": "Galen's second, methodically-documented Lemnos voyage (SMT 9.1, b). He records the precise itinerary — Italy, Macedonia, Philippi, the neighboring coast, Thasos, Lemnos, Hephaistia, back to Alexandria Troas — explicitly so that future readers can replicate the trip.",
+    "start_place_key": "philippi",
+    "stops": [
+      {
+        "route_order": 1,
+        "place_key": "philippi",
+        "order_basis": "explicit",
+        "evidence_phrase": "ἐν Φιλίπποις ἐγενόμην, ἥπερ ἐστὶν ὅμορος τῇ Θρᾴκῃ πόλις",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [],
+        "narrative_note": "Embarkation city after walking through Macedonia. Galen explicitly records the 120-stade descent to the nearby coast."
+      },
+      {
+        "route_order": 2,
+        "place_key": "thasos",
+        "order_basis": "explicit",
+        "evidence_phrase": "ἔπλευσα πρότερον μὲν εἰς Θάσον ἐγγύς που διακοσίους σταδίους",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [],
+        "narrative_note": "First stop on the sea voyage — 200 stades from the Philippi coast."
+      },
+      {
+        "route_order": 3,
+        "place_key": "lemnos",
+        "order_basis": "explicit",
+        "evidence_phrase": "ἐκεῖθεν δὲ εἰς Λῆμνον ἑπτακοσίους",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [
+          "lemnian-earth"
+        ],
+        "narrative_note": "Second leg — 700 stades from Thasos to Lemnos."
+      },
+      {
+        "route_order": 4,
+        "place_key": "hephaistia",
+        "order_basis": "strongly_implied",
+        "evidence_phrase": "ὅπως εἴ τις ἐθέλῃ θεάσασθαι … τὴν Ἡφαιστιάδα διαγινώσκων τὴν θέσιν αὐτῆς",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [
+          "lemnian-earth",
+          "lemnian-seal"
+        ],
+        "narrative_note": "The collection city on Lemnos — Galen's named destination."
+      },
+      {
+        "route_order": 5,
+        "place_key": "alexandria_troas",
+        "order_basis": "explicit",
+        "evidence_phrase": "ἀπὸ Λήμνου τοὺς ἴσους ἑπτακοσίους εἰς Ἀλεξανδρείαν Τρῳάδα",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [],
+        "narrative_note": "Return leg — another 700 stades from Lemnos back to Alexandria Troas, completing the circuit."
+      }
+    ],
+    "edges": [
+      {
+        "from_place_key": "philippi",
+        "to_place_key": "thasos",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "ἔπλευσα πρότερον μὲν εἰς Θάσον ἐγγύς που διακοσίους σταδίους",
+        "certainty": "secure"
+      },
+      {
+        "from_place_key": "thasos",
+        "to_place_key": "lemnos",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "ἐκεῖθεν δὲ εἰς Λῆμνον ἑπτακοσίους",
+        "certainty": "secure"
+      },
+      {
+        "from_place_key": "lemnos",
+        "to_place_key": "hephaistia",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "Same implicit walk-to-Hephaistia leg as in the first Lemnos route.",
+        "certainty": "probable"
+      },
+      {
+        "from_place_key": "hephaistia",
+        "to_place_key": "alexandria_troas",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "ἀπὸ Λήμνου τοὺς ἴσους ἑπτακοσίους εἰς Ἀλεξανδρείαν Τρῳάδα (Galen specifies Lemnos→Troas; Hephaistia is the implicit city of departure)",
+        "certainty": "probable"
+      }
+    ]
+  },
+  {
+    "route_key": "cyprus-soloi-mines",
+    "label": "Cyprus / Soloi mines",
+    "synopsis": "Galen's autoptic visit to the imperial copper mines at Soloi on Cyprus (SMT 9.3, with retrospective summary in De antidotis 1.2). The passages document a single in-situ stay: he speaks with the mine steward, observes the three concentric mineral bands (sory, chalcitis, misy), collects cadmia and chalcanthon for transport back to Asia and Rome, and revisits the chalcanthon → chalcitis transformation in his samples thirty years later.",
+    "start_place_key": "soloi_cyprus",
+    "stops": [
+      {
+        "route_order": 1,
+        "place_key": "soloi_cyprus",
+        "order_basis": "explicit",
+        "evidence_phrase": "ἐν γοῦν τοῖς Σόλοις … καθ' ὃν ἐγὼ χρόνον ἐπεδήμησα τῇ νήσῳ",
+        "kuhn_citations": [
+          "K. XII 219.5–221.13"
+        ],
+        "materia_keys": [
+          "cadmia",
+          "diphryges",
+          "chalcitis",
+          "misy",
+          "sory"
+        ],
+        "narrative_note": "The single primary stop. Multiple anchors document the same stay: SMT 9.3 (K. XII 214.5, 219.5, 226.7, 238.1×2) and De antidotis 1.2."
+      }
+    ],
+    "edges": []
+  },
+  {
+    "route_key": "coele-syria-dead-sea-materials",
+    "label": "Coele Syria / Dead Sea materials",
+    "synopsis": "Galen's investigation of the asphalt-bearing zone of Coele Syria — the eastern hill ringing the Dead Sea — for both ἄσφαλτος and the bituminous black stones that smell like asphalt. Anchored by SMT 9.1 (Coele Syria mention as motivation) and SMT 9.2 (the stones brought back). De antidotis 1.2 supplies the related Palestinian-Syrian opobalsam acquisition.",
+    "start_place_key": "coele_syria",
+    "stops": [
+      {
+        "route_order": 1,
+        "place_key": "coele_syria",
+        "order_basis": "explicit",
+        "evidence_phrase": "εἴς τε τὴν κοίλην Συρίαν, μόριον οὖσαν τῆς Παλαιστίνης, ἕνεκεν ἀσφάλτου … ἐπορεύθην",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [
+          "asphalt",
+          "bituminous-stones"
+        ],
+        "narrative_note": "Galen names Coele Syria as one of his three primary materia-medica destinations alongside Cyprus and Lemnos."
+      },
+      {
+        "route_order": 2,
+        "place_key": "dead_sea",
+        "order_basis": "strongly_implied",
+        "evidence_phrase": "ἐν τῷ λόφῳ γεννωμένας τῷ περιέχοντι τὴν νεκρὰν ὀνομαζομένην θάλασσαν",
+        "kuhn_citations": [
+          "K. XII 203.0–204.2"
+        ],
+        "materia_keys": [],
+        "narrative_note": "The 'so-called Dead Sea' — Galen's term, in the eastern part of Coele Syria, where both asphalt and the bituminous stones come from."
+      }
+    ],
+    "edges": [
+      {
+        "from_place_key": "coele_syria",
+        "to_place_key": "dead_sea",
+        "kuhn_citation": "K. XII 203.0–204.2",
+        "textual_basis": "Galen places the Dead Sea / asphalt zone within Coele Syria; the route 'edge' here is the inland traverse from the broader region to the named lake.",
+        "certainty": "probable"
+      }
+    ]
+  },
+  {
+    "route_key": "pergamum-ergasteria-mines",
+    "label": "Pergamum → Ergasteria mines",
+    "synopsis": "A short overland trip on Galen's home turf: from Pergamum east-northeast to the mining village of Ergasteria, 440 stades distant, where he observed scattered molybdaina (galena) on the road. The lone passage anchoring this route (SMT 9.3 K. XII 229.7–230.4) supplies the named departure point, the named destination, and an explicit stadia distance.",
+    "start_place_key": "pergamum",
+    "stops": [
+      {
+        "route_order": 1,
+        "place_key": "pergamum",
+        "order_basis": "explicit",
+        "evidence_phrase": "κατὰ τὴν εἰς Ἐργαστήρια φέρουσαν ὁδὸν ἀπὸ Περγάμου",
+        "kuhn_citations": [
+          "K. XII 229.7–230.4"
+        ],
+        "materia_keys": [
+          "molybdaina"
+        ],
+        "narrative_note": "Galen's home city; the named departure point."
+      },
+      {
+        "route_order": 2,
+        "place_key": "ergasteria",
+        "order_basis": "explicit",
+        "evidence_phrase": "καλεῖται δ' Ἐργαστήρια κώμη τις, ἐν ᾗ καὶ μέταλλά ἐστι, μεταξὺ Περγάμου καὶ Κυζίκου, σταδίους ἀπέχουσα Περγάμου τετρακοσίους τεσσαράκοντα",
+        "kuhn_citations": [
+          "K. XII 229.7–230.4"
+        ],
+        "materia_keys": [
+          "molybdaina"
+        ],
+        "narrative_note": "Mining village 440 stades from Pergamum, between Pergamum and Cyzicus; Galen observed molybdaina on the approach road."
+      }
+    ],
+    "edges": [
+      {
+        "from_place_key": "pergamum",
+        "to_place_key": "ergasteria",
+        "kuhn_citation": "K. XII 229.7–230.4",
+        "textual_basis": "κατὰ τὴν εἰς Ἐργαστήρια φέρουσαν ὁδὸν ἀπὸ Περγάμου … σταδίους ἀπέχουσα Περγάμου τετρακοσίους τεσσαράκοντα",
+        "certainty": "secure"
+      }
+    ]
+  }
+]
