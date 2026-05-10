@@ -83,6 +83,34 @@ ROUTES: list[dict] = [
                 "evidence_phrase": "τὴν Ἡφαιστιάδα διαγινώσκων τὴν θέσιν αὐτῆς",
                 "narrative_note": "The actual collection city for Lemnian earth — only learned by Galen on this trip that the island has two cities.",
             },
+            {
+                "place_key": "thessalonica",
+                "order_basis": "strongly_implied",
+                "passage_id": "smt.9.1.a",
+                "evidence_phrase": "ἐπιτυχὼν εἰς Θεσσαλονίκην ἀναγομένου πλοίου",
+                "narrative_note": "Boat's named destination after the Lemnos detour — Galen continued aboard once the materia stop was complete.",
+            },
+            {
+                "place_key": "thracia_region",
+                "order_basis": "explicit",
+                "passage_id": "smt.9.1.a",
+                "evidence_phrase": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας",
+                "narrative_note": "Galen's own statement that the Asia→Rome leg of this trip was on foot, listing Thrace first then Macedonia.",
+            },
+            {
+                "place_key": "macedonia_region",
+                "order_basis": "explicit",
+                "passage_id": "smt.9.1.a",
+                "evidence_phrase": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας",
+                "narrative_note": "The second walked region en route to Rome (continuing 'and Macedonia').",
+            },
+            {
+                "place_key": "rome",
+                "order_basis": "explicit",
+                "passage_id": "smt.9.1.a",
+                "evidence_phrase": "ἐξ Ἀσίας εἰς Ῥώμην ἀφικέσθαι",
+                "narrative_note": "The trip's stated destination: Galen was traveling from Asia to arrive at Rome.",
+            },
         ],
         "edges": [
             {
@@ -99,8 +127,36 @@ ROUTES: list[dict] = [
                 "textual_basis": "Implied: Galen describes intending Hephaistia and walking there after the captain's misdrop.",
                 "certainty": "probable",
             },
+            {
+                "from_place_key": "hephaistia",
+                "to_place_key": "thessalonica",
+                "kuhn_citation": "K. XII 168.7–178.1",
+                "textual_basis": "Implied continuation aboard the Thessalonica-bound ship after the Lemnian-earth stop.",
+                "certainty": "probable",
+            },
+            {
+                "from_place_key": "thessalonica",
+                "to_place_key": "thracia_region",
+                "kuhn_citation": "K. XII 168.7–178.1",
+                "textual_basis": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας — start of the overland walk; ordered Thrace-first per Galen's own phrasing.",
+                "certainty": "probable",
+            },
+            {
+                "from_place_key": "thracia_region",
+                "to_place_key": "macedonia_region",
+                "kuhn_citation": "K. XII 168.7–178.1",
+                "textual_basis": "Continuation through Macedonia (διὰ Θρᾴκης τε καὶ Μακεδονίας).",
+                "certainty": "probable",
+            },
+            {
+                "from_place_key": "macedonia_region",
+                "to_place_key": "rome",
+                "kuhn_citation": "K. XII 168.7–178.1",
+                "textual_basis": "Final overland-then-Adriatic leg to Rome — the trip's stated destination.",
+                "certainty": "probable",
+            },
         ],
-        "context_keys": ["thessalonica", "macedonia_region", "thracia_region", "rome"],
+        "context_keys": [],
     },
     {
         "route_key": "lemnos-italy-to-troas-via-thasos",
@@ -111,8 +167,22 @@ ROUTES: list[dict] = [
             "neighboring coast, Thasos, Lemnos, Hephaistia, back to Alexandria "
             "Troas — explicitly so that future readers can replicate the trip."
         ),
-        "start_place_key": "philippi",
+        "start_place_key": "italia_peninsula",
         "stops": [
+            {
+                "place_key": "italia_peninsula",
+                "order_basis": "explicit",
+                "passage_id": "smt.9.1.b",
+                "evidence_phrase": "ἐξ Ἰταλίας ἀφορμηθείς",
+                "narrative_note": "Italy is the trip's stated point of departure for the second Lemnos voyage.",
+            },
+            {
+                "place_key": "macedonia_region",
+                "order_basis": "explicit",
+                "passage_id": "smt.9.1.b",
+                "evidence_phrase": "διὰ Μακεδονίας πορευόμενος εἰς Φιλίππους",
+                "narrative_note": "The walked region between Italy (via Adriatic crossing) and Philippi.",
+            },
             {
                 "place_key": "philippi",
                 "order_basis": "explicit",
@@ -151,6 +221,20 @@ ROUTES: list[dict] = [
         ],
         "edges": [
             {
+                "from_place_key": "italia_peninsula",
+                "to_place_key": "macedonia_region",
+                "kuhn_citation": "K. XII 168.7–178.1",
+                "textual_basis": "Implied Adriatic crossing: Galen sets out from Italy and walks through Macedonia toward Philippi.",
+                "certainty": "probable",
+            },
+            {
+                "from_place_key": "macedonia_region",
+                "to_place_key": "philippi",
+                "kuhn_citation": "K. XII 168.7–178.1",
+                "textual_basis": "διὰ Μακεδονίας πορευόμενος εἰς Φιλίππους — explicit overland leg to Philippi.",
+                "certainty": "secure",
+            },
+            {
                 "from_place_key": "philippi",
                 "to_place_key": "thasos",
                 "kuhn_citation": "K. XII 168.7–178.1",
@@ -179,7 +263,7 @@ ROUTES: list[dict] = [
                 "certainty": "probable",
             },
         ],
-        "context_keys": ["italia_peninsula", "macedonia_region", "thracia_region"],
+        "context_keys": ["thracia_region"],
     },
     {
         "route_key": "cyprus-soloi-mines",

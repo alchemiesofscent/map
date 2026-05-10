@@ -42,6 +42,56 @@
           "lemnian-seal"
         ],
         "narrative_note": "The actual collection city for Lemnian earth — only learned by Galen on this trip that the island has two cities."
+      },
+      {
+        "route_order": 4,
+        "place_key": "thessalonica",
+        "order_basis": "strongly_implied",
+        "evidence_phrase": "ἐπιτυχὼν εἰς Θεσσαλονίκην ἀναγομένου πλοίου",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [],
+        "narrative_note": "Boat's named destination after the Lemnos detour — Galen continued aboard once the materia stop was complete."
+      },
+      {
+        "route_order": 5,
+        "place_key": "thracia_region",
+        "order_basis": "explicit",
+        "evidence_phrase": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [],
+        "narrative_note": "Galen's own statement that the Asia→Rome leg of this trip was on foot, listing Thrace first then Macedonia."
+      },
+      {
+        "route_order": 6,
+        "place_key": "macedonia_region",
+        "order_basis": "explicit",
+        "evidence_phrase": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [],
+        "narrative_note": "The second walked region en route to Rome (continuing 'and Macedonia')."
+      },
+      {
+        "route_order": 7,
+        "place_key": "rome",
+        "order_basis": "explicit",
+        "evidence_phrase": "ἐξ Ἀσίας εἰς Ῥώμην ἀφικέσθαι",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [
+          "chamaepitys",
+          "chamaedrys",
+          "cretan-herbs",
+          "chicken-dung",
+          "theriac"
+        ],
+        "narrative_note": "The trip's stated destination: Galen was traveling from Asia to arrive at Rome."
       }
     ],
     "edges": [
@@ -58,6 +108,34 @@
         "kuhn_citation": "K. XII 168.7–178.1",
         "textual_basis": "Implied: Galen describes intending Hephaistia and walking there after the captain's misdrop.",
         "certainty": "probable"
+      },
+      {
+        "from_place_key": "hephaistia",
+        "to_place_key": "thessalonica",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "Implied continuation aboard the Thessalonica-bound ship after the Lemnian-earth stop.",
+        "certainty": "probable"
+      },
+      {
+        "from_place_key": "thessalonica",
+        "to_place_key": "thracia_region",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας — start of the overland walk; ordered Thrace-first per Galen's own phrasing.",
+        "certainty": "probable"
+      },
+      {
+        "from_place_key": "thracia_region",
+        "to_place_key": "macedonia_region",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "Continuation through Macedonia (διὰ Θρᾴκης τε καὶ Μακεδονίας).",
+        "certainty": "probable"
+      },
+      {
+        "from_place_key": "macedonia_region",
+        "to_place_key": "rome",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "Final overland-then-Adriatic leg to Rome — the trip's stated destination.",
+        "certainty": "probable"
       }
     ]
   },
@@ -65,10 +143,35 @@
     "route_key": "lemnos-italy-to-troas-via-thasos",
     "label": "Lemnos via Italy → Thasos → Troas",
     "synopsis": "Galen's second, methodically-documented Lemnos voyage (SMT 9.1, b). He records the precise itinerary — Italy, Macedonia, Philippi, the neighboring coast, Thasos, Lemnos, Hephaistia, back to Alexandria Troas — explicitly so that future readers can replicate the trip.",
-    "start_place_key": "philippi",
+    "start_place_key": "italia_peninsula",
     "stops": [
       {
         "route_order": 1,
+        "place_key": "italia_peninsula",
+        "order_basis": "explicit",
+        "evidence_phrase": "ἐξ Ἰταλίας ἀφορμηθείς",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [
+          "amaracon",
+          "trifolinus-wine"
+        ],
+        "narrative_note": "Italy is the trip's stated point of departure for the second Lemnos voyage."
+      },
+      {
+        "route_order": 2,
+        "place_key": "macedonia_region",
+        "order_basis": "explicit",
+        "evidence_phrase": "διὰ Μακεδονίας πορευόμενος εἰς Φιλίππους",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [],
+        "narrative_note": "The walked region between Italy (via Adriatic crossing) and Philippi."
+      },
+      {
+        "route_order": 3,
         "place_key": "philippi",
         "order_basis": "explicit",
         "evidence_phrase": "ἐν Φιλίπποις ἐγενόμην, ἥπερ ἐστὶν ὅμορος τῇ Θρᾴκῃ πόλις",
@@ -79,7 +182,7 @@
         "narrative_note": "Embarkation city after walking through Macedonia. Galen explicitly records the 120-stade descent to the nearby coast."
       },
       {
-        "route_order": 2,
+        "route_order": 4,
         "place_key": "thasos",
         "order_basis": "explicit",
         "evidence_phrase": "ἔπλευσα πρότερον μὲν εἰς Θάσον ἐγγύς που διακοσίους σταδίους",
@@ -90,7 +193,7 @@
         "narrative_note": "First stop on the sea voyage — 200 stades from the Philippi coast."
       },
       {
-        "route_order": 3,
+        "route_order": 5,
         "place_key": "lemnos",
         "order_basis": "explicit",
         "evidence_phrase": "ἐκεῖθεν δὲ εἰς Λῆμνον ἑπτακοσίους",
@@ -103,7 +206,7 @@
         "narrative_note": "Second leg — 700 stades from Thasos to Lemnos."
       },
       {
-        "route_order": 4,
+        "route_order": 6,
         "place_key": "hephaistia",
         "order_basis": "strongly_implied",
         "evidence_phrase": "ὅπως εἴ τις ἐθέλῃ θεάσασθαι … τὴν Ἡφαιστιάδα διαγινώσκων τὴν θέσιν αὐτῆς",
@@ -117,7 +220,7 @@
         "narrative_note": "The collection city on Lemnos — Galen's named destination."
       },
       {
-        "route_order": 5,
+        "route_order": 7,
         "place_key": "alexandria_troas",
         "order_basis": "explicit",
         "evidence_phrase": "ἀπὸ Λήμνου τοὺς ἴσους ἑπτακοσίους εἰς Ἀλεξανδρείαν Τρῳάδα",
@@ -129,6 +232,20 @@
       }
     ],
     "edges": [
+      {
+        "from_place_key": "italia_peninsula",
+        "to_place_key": "macedonia_region",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "Implied Adriatic crossing: Galen sets out from Italy and walks through Macedonia toward Philippi.",
+        "certainty": "probable"
+      },
+      {
+        "from_place_key": "macedonia_region",
+        "to_place_key": "philippi",
+        "kuhn_citation": "K. XII 168.7–178.1",
+        "textual_basis": "διὰ Μακεδονίας πορευόμενος εἰς Φιλίππους — explicit overland leg to Philippi.",
+        "certainty": "secure"
+      },
       {
         "from_place_key": "philippi",
         "to_place_key": "thasos",

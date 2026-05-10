@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-10T08:42:47+00:00",
+  "generated_at": "2026-05-10T15:06:43+00:00",
   "source": "data/galen/lexicon/places.json + data/galen/materia/materia.json + scripts/galen/build_galen_routes.py",
   "views": {
     "lemnos-alexandria-troas-to-thessalonica-context": {
@@ -148,8 +148,8 @@
           "place_key": "thessalonica",
           "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
           "route_label": "Lemnos via Alexandria Troas",
-          "route_order": null,
-          "kind": "context",
+          "route_order": 4,
+          "kind": "primary",
           "display_name": "Thessalonica",
           "place_type": "city",
           "lat": 40.628342,
@@ -173,51 +173,20 @@
             }
           ],
           "materia_keys": [],
-          "notes": "Embarkation harbor on the way to Lemnos in SMT 1; route context, not a primary stop."
-        },
-        {
-          "site_key": "macedonia_region",
-          "place_key": "macedonia_region",
-          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
-          "route_label": "Lemnos via Alexandria Troas",
-          "route_order": null,
-          "kind": "context",
-          "display_name": "Macedonia (region)",
-          "place_type": "region",
-          "lat": 40.9691152478,
-          "lon": 22.4920786436,
-          "has_geometry": true,
-          "certainty": "secure",
-          "pleiades_id": "491656",
-          "pleiades_uri": "https://pleiades.stoa.org/places/491656",
-          "ancient_names_in_galen": [
-            {
-              "surface": "Μακεδονία",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίαν",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίας",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίᾳ",
-              "passage_id": "smt.9.1"
-            }
-          ],
-          "materia_keys": [],
-          "notes": "Same rationale as Thracia: route-narrative geography, not Roman administration — use the region record (491656)."
+          "notes": "Embarkation harbor on the way to Lemnos in SMT 1; route context, not a primary stop.",
+          "order_basis": "strongly_implied",
+          "evidence_phrase": "ἐπιτυχὼν εἰς Θεσσαλονίκην ἀναγομένου πλοίου",
+          "narrative_note": "Boat's named destination after the Lemnos detour — Galen continued aboard once the materia stop was complete.",
+          "passage_id": "smt.9.1.a",
+          "kuhn_citation": "K. XII 168.7–178.1"
         },
         {
           "site_key": "thracia_region",
           "place_key": "thracia_region",
           "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
           "route_label": "Lemnos via Alexandria Troas",
-          "route_order": null,
-          "kind": "context",
+          "route_order": 5,
+          "kind": "primary",
           "display_name": "Thracia (region)",
           "place_type": "region",
           "lat": 41.5178303653,
@@ -249,15 +218,61 @@
             }
           ],
           "materia_keys": [],
-          "notes": "'Through Thrace and Macedonia' is geographical route language, not an administrative claim — use the region record (501638), not the Roman province."
+          "notes": "'Through Thrace and Macedonia' is geographical route language, not an administrative claim — use the region record (501638), not the Roman province.",
+          "order_basis": "explicit",
+          "evidence_phrase": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας",
+          "narrative_note": "Galen's own statement that the Asia→Rome leg of this trip was on foot, listing Thrace first then Macedonia.",
+          "passage_id": "smt.9.1.a",
+          "kuhn_citation": "K. XII 168.7–178.1"
+        },
+        {
+          "site_key": "macedonia_region",
+          "place_key": "macedonia_region",
+          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
+          "route_label": "Lemnos via Alexandria Troas",
+          "route_order": 6,
+          "kind": "primary",
+          "display_name": "Macedonia (region)",
+          "place_type": "region",
+          "lat": 40.9691152478,
+          "lon": 22.4920786436,
+          "has_geometry": true,
+          "certainty": "secure",
+          "pleiades_id": "491656",
+          "pleiades_uri": "https://pleiades.stoa.org/places/491656",
+          "ancient_names_in_galen": [
+            {
+              "surface": "Μακεδονία",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίαν",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίας",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίᾳ",
+              "passage_id": "smt.9.1"
+            }
+          ],
+          "materia_keys": [],
+          "notes": "Same rationale as Thracia: route-narrative geography, not Roman administration — use the region record (491656).",
+          "order_basis": "explicit",
+          "evidence_phrase": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας",
+          "narrative_note": "The second walked region en route to Rome (continuing 'and Macedonia').",
+          "passage_id": "smt.9.1.a",
+          "kuhn_citation": "K. XII 168.7–178.1"
         },
         {
           "site_key": "rome",
           "place_key": "rome",
           "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
           "route_label": "Lemnos via Alexandria Troas",
-          "route_order": null,
-          "kind": "context",
+          "route_order": 7,
+          "kind": "primary",
           "display_name": "Rome",
           "place_type": "city",
           "lat": 41.8899450102,
@@ -291,7 +306,12 @@
             "chicken-dung",
             "theriac"
           ],
-          "notes": "Galen's adoptive home; appears as both destination (Cyprus → Rome material transport) and route context."
+          "notes": "Galen's adoptive home; appears as both destination (Cyprus → Rome material transport) and route context.",
+          "order_basis": "explicit",
+          "evidence_phrase": "ἐξ Ἀσίας εἰς Ῥώμην ἀφικέσθαι",
+          "narrative_note": "The trip's stated destination: Galen was traveling from Asia to arrive at Rome.",
+          "passage_id": "smt.9.1.a",
+          "kuhn_citation": "K. XII 168.7–178.1"
         }
       ],
       "drawable_line_points": [
@@ -315,6 +335,34 @@
           "route_order": 3,
           "lat": 39.9645815,
           "lon": 25.3182289
+        },
+        {
+          "site_key": "thessalonica",
+          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
+          "route_order": 4,
+          "lat": 40.628342,
+          "lon": 22.952885
+        },
+        {
+          "site_key": "thracia_region",
+          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
+          "route_order": 5,
+          "lat": 41.5178303653,
+          "lon": 26.9624137954
+        },
+        {
+          "site_key": "macedonia_region",
+          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
+          "route_order": 6,
+          "lat": 40.9691152478,
+          "lon": 22.4920786436
+        },
+        {
+          "site_key": "rome",
+          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
+          "route_order": 7,
+          "lat": 41.8899450102,
+          "lon": 12.4914322095
         }
       ],
       "unmapped_site_keys": []
@@ -328,11 +376,96 @@
       ],
       "sites": [
         {
+          "site_key": "italia_peninsula",
+          "place_key": "italia_peninsula",
+          "route_key": "lemnos-italy-to-troas-via-thasos",
+          "route_label": "Lemnos via Italy → Thasos → Troas",
+          "route_order": 1,
+          "kind": "primary",
+          "display_name": "Italia",
+          "place_type": "region",
+          "lat": 43.6941505,
+          "lon": 11.0949512,
+          "has_geometry": true,
+          "certainty": "secure",
+          "pleiades_id": "1052",
+          "pleiades_uri": "https://pleiades.stoa.org/places/1052",
+          "ancient_names_in_galen": [
+            {
+              "surface": "Ἰταλία",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Ἰταλίαν",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Ἰταλίας",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Ἰταλίᾳ",
+              "passage_id": "de_antidotis.1"
+            }
+          ],
+          "materia_keys": [
+            "amaracon",
+            "trifolinus-wine"
+          ],
+          "notes": "The Italian peninsula as recognized by the Romans (Pleiades 1052). Do NOT use 452346 (the much narrower early-Greek 'toe of Italy' region).",
+          "order_basis": "explicit",
+          "evidence_phrase": "ἐξ Ἰταλίας ἀφορμηθείς",
+          "narrative_note": "Italy is the trip's stated point of departure for the second Lemnos voyage.",
+          "passage_id": "smt.9.1.b",
+          "kuhn_citation": "K. XII 168.7–178.1"
+        },
+        {
+          "site_key": "macedonia_region",
+          "place_key": "macedonia_region",
+          "route_key": "lemnos-italy-to-troas-via-thasos",
+          "route_label": "Lemnos via Italy → Thasos → Troas",
+          "route_order": 2,
+          "kind": "primary",
+          "display_name": "Macedonia (region)",
+          "place_type": "region",
+          "lat": 40.9691152478,
+          "lon": 22.4920786436,
+          "has_geometry": true,
+          "certainty": "secure",
+          "pleiades_id": "491656",
+          "pleiades_uri": "https://pleiades.stoa.org/places/491656",
+          "ancient_names_in_galen": [
+            {
+              "surface": "Μακεδονία",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίαν",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίας",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίᾳ",
+              "passage_id": "smt.9.1"
+            }
+          ],
+          "materia_keys": [],
+          "notes": "Same rationale as Thracia: route-narrative geography, not Roman administration — use the region record (491656).",
+          "order_basis": "explicit",
+          "evidence_phrase": "διὰ Μακεδονίας πορευόμενος εἰς Φιλίππους",
+          "narrative_note": "The walked region between Italy (via Adriatic crossing) and Philippi.",
+          "passage_id": "smt.9.1.b",
+          "kuhn_citation": "K. XII 168.7–178.1"
+        },
+        {
           "site_key": "philippi",
           "place_key": "philippi",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": 1,
+          "route_order": 3,
           "kind": "primary",
           "display_name": "Philippi",
           "place_type": "city",
@@ -369,7 +502,7 @@
           "place_key": "thasos",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": 2,
+          "route_order": 4,
           "kind": "primary",
           "display_name": "Thasos",
           "place_type": "island",
@@ -410,7 +543,7 @@
           "place_key": "lemnos",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": 3,
+          "route_order": 5,
           "kind": "primary",
           "display_name": "Lemnos",
           "place_type": "island",
@@ -453,7 +586,7 @@
           "place_key": "hephaistia",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": 4,
+          "route_order": 6,
           "kind": "primary",
           "display_name": "Hephaistia",
           "place_type": "city",
@@ -497,7 +630,7 @@
           "place_key": "alexandria_troas",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": 5,
+          "route_order": 7,
           "kind": "primary",
           "display_name": "Alexandria Troas",
           "place_type": "city",
@@ -536,81 +669,6 @@
           "narrative_note": "Return leg — another 700 stades from Lemnos back to Alexandria Troas, completing the circuit.",
           "passage_id": "smt.9.1.b",
           "kuhn_citation": "K. XII 168.7–178.1"
-        },
-        {
-          "site_key": "italia_peninsula",
-          "place_key": "italia_peninsula",
-          "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": null,
-          "kind": "context",
-          "display_name": "Italia",
-          "place_type": "region",
-          "lat": 43.6941505,
-          "lon": 11.0949512,
-          "has_geometry": true,
-          "certainty": "secure",
-          "pleiades_id": "1052",
-          "pleiades_uri": "https://pleiades.stoa.org/places/1052",
-          "ancient_names_in_galen": [
-            {
-              "surface": "Ἰταλία",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Ἰταλίαν",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Ἰταλίας",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Ἰταλίᾳ",
-              "passage_id": "de_antidotis.1"
-            }
-          ],
-          "materia_keys": [
-            "amaracon",
-            "trifolinus-wine"
-          ],
-          "notes": "The Italian peninsula as recognized by the Romans (Pleiades 1052). Do NOT use 452346 (the much narrower early-Greek 'toe of Italy' region)."
-        },
-        {
-          "site_key": "macedonia_region",
-          "place_key": "macedonia_region",
-          "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": null,
-          "kind": "context",
-          "display_name": "Macedonia (region)",
-          "place_type": "region",
-          "lat": 40.9691152478,
-          "lon": 22.4920786436,
-          "has_geometry": true,
-          "certainty": "secure",
-          "pleiades_id": "491656",
-          "pleiades_uri": "https://pleiades.stoa.org/places/491656",
-          "ancient_names_in_galen": [
-            {
-              "surface": "Μακεδονία",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίαν",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίας",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίᾳ",
-              "passage_id": "smt.9.1"
-            }
-          ],
-          "materia_keys": [],
-          "notes": "Same rationale as Thracia: route-narrative geography, not Roman administration — use the region record (491656)."
         },
         {
           "site_key": "thracia_region",
@@ -655,37 +713,51 @@
       ],
       "drawable_line_points": [
         {
-          "site_key": "philippi",
+          "site_key": "italia_peninsula",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_order": 1,
+          "lat": 43.6941505,
+          "lon": 11.0949512
+        },
+        {
+          "site_key": "macedonia_region",
+          "route_key": "lemnos-italy-to-troas-via-thasos",
+          "route_order": 2,
+          "lat": 40.9691152478,
+          "lon": 22.4920786436
+        },
+        {
+          "site_key": "philippi",
+          "route_key": "lemnos-italy-to-troas-via-thasos",
+          "route_order": 3,
           "lat": 41.0126513396,
           "lon": 24.2846372868
         },
         {
           "site_key": "thasos",
           "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_order": 2,
+          "route_order": 4,
           "lat": 40.6764946876,
           "lon": 24.6650352149
         },
         {
           "site_key": "lemnos",
           "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_order": 3,
+          "route_order": 5,
           "lat": 39.9050198225,
           "lon": 25.229093534
         },
         {
           "site_key": "hephaistia",
           "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_order": 4,
+          "route_order": 6,
           "lat": 39.9645815,
           "lon": 25.3182289
         },
         {
           "site_key": "alexandria_troas",
           "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_order": 5,
+          "route_order": 7,
           "lat": 39.751699149,
           "lon": 26.1575573013
         }
@@ -1592,8 +1664,8 @@
           "place_key": "thessalonica",
           "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
           "route_label": "Lemnos via Alexandria Troas",
-          "route_order": null,
-          "kind": "context",
+          "route_order": 4,
+          "kind": "primary",
           "display_name": "Thessalonica",
           "place_type": "city",
           "lat": 40.628342,
@@ -1617,51 +1689,20 @@
             }
           ],
           "materia_keys": [],
-          "notes": "Embarkation harbor on the way to Lemnos in SMT 1; route context, not a primary stop."
-        },
-        {
-          "site_key": "macedonia_region",
-          "place_key": "macedonia_region",
-          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
-          "route_label": "Lemnos via Alexandria Troas",
-          "route_order": null,
-          "kind": "context",
-          "display_name": "Macedonia (region)",
-          "place_type": "region",
-          "lat": 40.9691152478,
-          "lon": 22.4920786436,
-          "has_geometry": true,
-          "certainty": "secure",
-          "pleiades_id": "491656",
-          "pleiades_uri": "https://pleiades.stoa.org/places/491656",
-          "ancient_names_in_galen": [
-            {
-              "surface": "Μακεδονία",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίαν",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίας",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίᾳ",
-              "passage_id": "smt.9.1"
-            }
-          ],
-          "materia_keys": [],
-          "notes": "Same rationale as Thracia: route-narrative geography, not Roman administration — use the region record (491656)."
+          "notes": "Embarkation harbor on the way to Lemnos in SMT 1; route context, not a primary stop.",
+          "order_basis": "strongly_implied",
+          "evidence_phrase": "ἐπιτυχὼν εἰς Θεσσαλονίκην ἀναγομένου πλοίου",
+          "narrative_note": "Boat's named destination after the Lemnos detour — Galen continued aboard once the materia stop was complete.",
+          "passage_id": "smt.9.1.a",
+          "kuhn_citation": "K. XII 168.7–178.1"
         },
         {
           "site_key": "thracia_region",
           "place_key": "thracia_region",
           "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
           "route_label": "Lemnos via Alexandria Troas",
-          "route_order": null,
-          "kind": "context",
+          "route_order": 5,
+          "kind": "primary",
           "display_name": "Thracia (region)",
           "place_type": "region",
           "lat": 41.5178303653,
@@ -1693,15 +1734,61 @@
             }
           ],
           "materia_keys": [],
-          "notes": "'Through Thrace and Macedonia' is geographical route language, not an administrative claim — use the region record (501638), not the Roman province."
+          "notes": "'Through Thrace and Macedonia' is geographical route language, not an administrative claim — use the region record (501638), not the Roman province.",
+          "order_basis": "explicit",
+          "evidence_phrase": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας",
+          "narrative_note": "Galen's own statement that the Asia→Rome leg of this trip was on foot, listing Thrace first then Macedonia.",
+          "passage_id": "smt.9.1.a",
+          "kuhn_citation": "K. XII 168.7–178.1"
+        },
+        {
+          "site_key": "macedonia_region",
+          "place_key": "macedonia_region",
+          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
+          "route_label": "Lemnos via Alexandria Troas",
+          "route_order": 6,
+          "kind": "primary",
+          "display_name": "Macedonia (region)",
+          "place_type": "region",
+          "lat": 40.9691152478,
+          "lon": 22.4920786436,
+          "has_geometry": true,
+          "certainty": "secure",
+          "pleiades_id": "491656",
+          "pleiades_uri": "https://pleiades.stoa.org/places/491656",
+          "ancient_names_in_galen": [
+            {
+              "surface": "Μακεδονία",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίαν",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίας",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίᾳ",
+              "passage_id": "smt.9.1"
+            }
+          ],
+          "materia_keys": [],
+          "notes": "Same rationale as Thracia: route-narrative geography, not Roman administration — use the region record (491656).",
+          "order_basis": "explicit",
+          "evidence_phrase": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας",
+          "narrative_note": "The second walked region en route to Rome (continuing 'and Macedonia').",
+          "passage_id": "smt.9.1.a",
+          "kuhn_citation": "K. XII 168.7–178.1"
         },
         {
           "site_key": "rome",
           "place_key": "rome",
           "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
           "route_label": "Lemnos via Alexandria Troas",
-          "route_order": null,
-          "kind": "context",
+          "route_order": 7,
+          "kind": "primary",
           "display_name": "Rome",
           "place_type": "city",
           "lat": 41.8899450102,
@@ -1735,14 +1822,104 @@
             "chicken-dung",
             "theriac"
           ],
-          "notes": "Galen's adoptive home; appears as both destination (Cyprus → Rome material transport) and route context."
+          "notes": "Galen's adoptive home; appears as both destination (Cyprus → Rome material transport) and route context.",
+          "order_basis": "explicit",
+          "evidence_phrase": "ἐξ Ἀσίας εἰς Ῥώμην ἀφικέσθαι",
+          "narrative_note": "The trip's stated destination: Galen was traveling from Asia to arrive at Rome.",
+          "passage_id": "smt.9.1.a",
+          "kuhn_citation": "K. XII 168.7–178.1"
+        },
+        {
+          "site_key": "italia_peninsula",
+          "place_key": "italia_peninsula",
+          "route_key": "lemnos-italy-to-troas-via-thasos",
+          "route_label": "Lemnos via Italy → Thasos → Troas",
+          "route_order": 1,
+          "kind": "primary",
+          "display_name": "Italia",
+          "place_type": "region",
+          "lat": 43.6941505,
+          "lon": 11.0949512,
+          "has_geometry": true,
+          "certainty": "secure",
+          "pleiades_id": "1052",
+          "pleiades_uri": "https://pleiades.stoa.org/places/1052",
+          "ancient_names_in_galen": [
+            {
+              "surface": "Ἰταλία",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Ἰταλίαν",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Ἰταλίας",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Ἰταλίᾳ",
+              "passage_id": "de_antidotis.1"
+            }
+          ],
+          "materia_keys": [
+            "amaracon",
+            "trifolinus-wine"
+          ],
+          "notes": "The Italian peninsula as recognized by the Romans (Pleiades 1052). Do NOT use 452346 (the much narrower early-Greek 'toe of Italy' region).",
+          "order_basis": "explicit",
+          "evidence_phrase": "ἐξ Ἰταλίας ἀφορμηθείς",
+          "narrative_note": "Italy is the trip's stated point of departure for the second Lemnos voyage.",
+          "passage_id": "smt.9.1.b",
+          "kuhn_citation": "K. XII 168.7–178.1"
+        },
+        {
+          "site_key": "macedonia_region",
+          "place_key": "macedonia_region",
+          "route_key": "lemnos-italy-to-troas-via-thasos",
+          "route_label": "Lemnos via Italy → Thasos → Troas",
+          "route_order": 2,
+          "kind": "primary",
+          "display_name": "Macedonia (region)",
+          "place_type": "region",
+          "lat": 40.9691152478,
+          "lon": 22.4920786436,
+          "has_geometry": true,
+          "certainty": "secure",
+          "pleiades_id": "491656",
+          "pleiades_uri": "https://pleiades.stoa.org/places/491656",
+          "ancient_names_in_galen": [
+            {
+              "surface": "Μακεδονία",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίαν",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίας",
+              "passage_id": "smt.9.1"
+            },
+            {
+              "surface": "Μακεδονίᾳ",
+              "passage_id": "smt.9.1"
+            }
+          ],
+          "materia_keys": [],
+          "notes": "Same rationale as Thracia: route-narrative geography, not Roman administration — use the region record (491656).",
+          "order_basis": "explicit",
+          "evidence_phrase": "διὰ Μακεδονίας πορευόμενος εἰς Φιλίππους",
+          "narrative_note": "The walked region between Italy (via Adriatic crossing) and Philippi.",
+          "passage_id": "smt.9.1.b",
+          "kuhn_citation": "K. XII 168.7–178.1"
         },
         {
           "site_key": "philippi",
           "place_key": "philippi",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": 1,
+          "route_order": 3,
           "kind": "primary",
           "display_name": "Philippi",
           "place_type": "city",
@@ -1779,7 +1956,7 @@
           "place_key": "thasos",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": 2,
+          "route_order": 4,
           "kind": "primary",
           "display_name": "Thasos",
           "place_type": "island",
@@ -1820,7 +1997,7 @@
           "place_key": "lemnos",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": 3,
+          "route_order": 5,
           "kind": "primary",
           "display_name": "Lemnos",
           "place_type": "island",
@@ -1863,7 +2040,7 @@
           "place_key": "hephaistia",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": 4,
+          "route_order": 6,
           "kind": "primary",
           "display_name": "Hephaistia",
           "place_type": "city",
@@ -1907,7 +2084,7 @@
           "place_key": "alexandria_troas",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": 5,
+          "route_order": 7,
           "kind": "primary",
           "display_name": "Alexandria Troas",
           "place_type": "city",
@@ -1946,81 +2123,6 @@
           "narrative_note": "Return leg — another 700 stades from Lemnos back to Alexandria Troas, completing the circuit.",
           "passage_id": "smt.9.1.b",
           "kuhn_citation": "K. XII 168.7–178.1"
-        },
-        {
-          "site_key": "italia_peninsula",
-          "place_key": "italia_peninsula",
-          "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": null,
-          "kind": "context",
-          "display_name": "Italia",
-          "place_type": "region",
-          "lat": 43.6941505,
-          "lon": 11.0949512,
-          "has_geometry": true,
-          "certainty": "secure",
-          "pleiades_id": "1052",
-          "pleiades_uri": "https://pleiades.stoa.org/places/1052",
-          "ancient_names_in_galen": [
-            {
-              "surface": "Ἰταλία",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Ἰταλίαν",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Ἰταλίας",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Ἰταλίᾳ",
-              "passage_id": "de_antidotis.1"
-            }
-          ],
-          "materia_keys": [
-            "amaracon",
-            "trifolinus-wine"
-          ],
-          "notes": "The Italian peninsula as recognized by the Romans (Pleiades 1052). Do NOT use 452346 (the much narrower early-Greek 'toe of Italy' region)."
-        },
-        {
-          "site_key": "macedonia_region",
-          "place_key": "macedonia_region",
-          "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_label": "Lemnos via Italy → Thasos → Troas",
-          "route_order": null,
-          "kind": "context",
-          "display_name": "Macedonia (region)",
-          "place_type": "region",
-          "lat": 40.9691152478,
-          "lon": 22.4920786436,
-          "has_geometry": true,
-          "certainty": "secure",
-          "pleiades_id": "491656",
-          "pleiades_uri": "https://pleiades.stoa.org/places/491656",
-          "ancient_names_in_galen": [
-            {
-              "surface": "Μακεδονία",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίαν",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίας",
-              "passage_id": "smt.9.1"
-            },
-            {
-              "surface": "Μακεδονίᾳ",
-              "passage_id": "smt.9.1"
-            }
-          ],
-          "materia_keys": [],
-          "notes": "Same rationale as Thracia: route-narrative geography, not Roman administration — use the region record (491656)."
         },
         {
           "site_key": "thracia_region",
@@ -2753,37 +2855,79 @@
           "lon": 25.3182289
         },
         {
-          "site_key": "philippi",
+          "site_key": "thessalonica",
+          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
+          "route_order": 4,
+          "lat": 40.628342,
+          "lon": 22.952885
+        },
+        {
+          "site_key": "thracia_region",
+          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
+          "route_order": 5,
+          "lat": 41.5178303653,
+          "lon": 26.9624137954
+        },
+        {
+          "site_key": "macedonia_region",
+          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
+          "route_order": 6,
+          "lat": 40.9691152478,
+          "lon": 22.4920786436
+        },
+        {
+          "site_key": "rome",
+          "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
+          "route_order": 7,
+          "lat": 41.8899450102,
+          "lon": 12.4914322095
+        },
+        {
+          "site_key": "italia_peninsula",
           "route_key": "lemnos-italy-to-troas-via-thasos",
           "route_order": 1,
+          "lat": 43.6941505,
+          "lon": 11.0949512
+        },
+        {
+          "site_key": "macedonia_region",
+          "route_key": "lemnos-italy-to-troas-via-thasos",
+          "route_order": 2,
+          "lat": 40.9691152478,
+          "lon": 22.4920786436
+        },
+        {
+          "site_key": "philippi",
+          "route_key": "lemnos-italy-to-troas-via-thasos",
+          "route_order": 3,
           "lat": 41.0126513396,
           "lon": 24.2846372868
         },
         {
           "site_key": "thasos",
           "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_order": 2,
+          "route_order": 4,
           "lat": 40.6764946876,
           "lon": 24.6650352149
         },
         {
           "site_key": "lemnos",
           "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_order": 3,
+          "route_order": 5,
           "lat": 39.9050198225,
           "lon": 25.229093534
         },
         {
           "site_key": "hephaistia",
           "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_order": 4,
+          "route_order": 6,
           "lat": 39.9645815,
           "lon": 25.3182289
         },
         {
           "site_key": "alexandria_troas",
           "route_key": "lemnos-italy-to-troas-via-thasos",
-          "route_order": 5,
+          "route_order": 7,
           "lat": 39.751699149,
           "lon": 26.1575573013
         },
