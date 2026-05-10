@@ -26,8 +26,8 @@
 
     <header class="masthead" aria-label="Title">
       <div class="masthead__rule"></div>
-      <p class="masthead__series">Periplus Tour · Red Sea Atlas</p>
-      <h1 class="masthead__title">
+      <p class="masthead__series" id="masthead-series">Periplus Tour · Red Sea Atlas</p>
+      <h1 class="masthead__title" id="masthead-title">
         <span>Periplvs</span>
         <span class="masthead__title-sep">·</span>
         <span>Maris Erythraei</span>
@@ -39,10 +39,13 @@
       </p>
     </header>
 
-    <div class="view-control" role="group" aria-label="Route view">
-      <button type="button" data-view="all" aria-pressed="true">All</button>
-      <button type="button" data-view="western" aria-pressed="false">Occidens</button>
-      <button type="button" data-view="eastern" aria-pressed="false">Oriens</button>
+    <div class="corpus-control" role="group" aria-label="Corpus">
+      <button type="button" data-corpus="periplus" aria-pressed="true">Periplus</button>
+      <button type="button" data-corpus="galen" aria-pressed="false">Galen</button>
+    </div>
+
+    <div class="view-control" role="group" aria-label="Route view" id="view-control">
+      <div class="view-control__routes" id="view-control-routes"></div>
       <span class="view-control__divider" aria-hidden="true"></span>
       <label class="view-control__explore">
         <input type="checkbox" id="toggle-explore" />
@@ -76,6 +79,10 @@
 
         <div class="dossier__body">
           <p class="dossier__translation" id="dossier-translation"></p>
+          <div class="dossier__materia" id="dossier-materia" hidden>
+            <p class="dossier__eyebrow dossier__eyebrow--inline">Materia medica</p>
+            <ul class="dossier__materia-list" id="dossier-materia-list"></ul>
+          </div>
           <details class="dossier__greek" id="dossier-greek-block">
             <summary>
               <span class="dossier__eyebrow dossier__eyebrow--inline">Greek source</span>

@@ -1,26 +1,67 @@
 /* Periplus · Atlas viewer
  *
- * Full-bleed map, no scrollytelling sidebar. Inputs: scroll wheel (debounced
- * step advance), arrow keys, marker clicks, site-strip clicks, dossier nav
- * arrows. Smooth flyTo transitions between sites. Sea legs and land/caravan
- * legs are visually distinguished.
+ * Multi-corpus map viewer. Inputs: scroll wheel (debounced step advance),
+ * arrow keys, marker clicks, site-strip clicks, dossier nav arrows. Smooth
+ * flyTo transitions between sites. Sea legs and land/caravan legs are
+ * visually distinguished. Galen corpus adds a route selector and a reader
+ * pane joining passages + materia per stop.
  */
 
-const DATA = {
-  places: "../data/generated/periplus/places_authority.json",
-  sections: "../data/generated/periplus/raw_sections.json",
-  journey: "../data/generated/periplus/journey_route.json",
-  routeViews: "../data/generated/periplus/route_views.json",
+const CORPORA = {
+  periplus: {
+    title: ["Periplvs", "Maris Erythraei"],
+    series: "Periplus Tour · Red Sea Atlas",
+    paths: {
+      places: "../data/generated/periplus/places_authority.json",
+      sections: "../data/generated/periplus/raw_sections.json",
+      journey: "../data/generated/periplus/journey_route.json",
+      routeViews: "../data/generated/periplus/route_views.json",
+    },
+    defaultView: "all",
+    viewLabels: {
+      all: "All",
+      western: "Occidens",
+      eastern: "Oriens",
+    },
+  },
+  galen: {
+    title: ["Galenvs", "Itinera Medicinalia"],
+    series: "Galen · Pharmacological Itineraries",
+    paths: {
+      places: "../data/generated/galen/places_authority.json",
+      passages: "../data/generated/galen/passages.json",
+      materia: "../data/generated/galen/materia.json",
+      routeViews: "../data/generated/galen/route_views.json",
+    },
+    defaultView: "all",
+    viewLabels: {
+      all: "All",
+      "lemnos-alexandria-troas-to-thessalonica-context": "Lemnos via Troas",
+      "lemnos-italy-to-troas-via-thasos": "Lemnos via Thasos",
+      "cyprus-soloi-mines": "Cyprus / Soloi",
+      "coele-syria-dead-sea-materials": "Coele Syria",
+      "pergamum-ergasteria-mines": "Pergamum",
+      materia_observations: "Materia",
+    },
+    viewOrder: [
+      "all",
+      "lemnos-alexandria-troas-to-thessalonica-context",
+      "lemnos-italy-to-troas-via-thasos",
+      "cyprus-soloi-mines",
+      "coele-syria-dead-sea-materials",
+      "pergamum-ergasteria-mines",
+      "materia_observations",
+    ],
+  },
 };
 
-// Sites that should display as a "land" pin (diamond, terracotta) instead of
-// the default sea harbour circle. Includes regions so they get the same
-// distinct silhouette on the map.
+// Periplus pin classification
 const INLAND_RX = /(Inland|Metropolis|Frontier|Region)/i;
-// Regions cover broad areas, not single harbours. We render them as pins so
-// the curator can click them, but the route polyline skips through them so
-// the sailing line doesn't lurch inland and back.
 const REGION_RX = /Region/i;
+
+// Galen place_type → land/sea pin shape
+const GALEN_LAND_TYPES = new Set(["city", "mine", "sanctuary", "mountain"]);
+const GALEN_SEA_TYPES = new Set(["port", "island", "sea"]);
 
 const ROMAN = [
   [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"],
@@ -28,18 +69,11 @@ const ROMAN = [
   [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"],
 ];
 
-const VIEW_LABEL = {
-  all: "All routes",
-  western: "Western route",
-  eastern: "Eastern route",
-};
-
 const state = {
+  corpusId: "periplus",
+  corpusCache: new Map(), // corpusId → loaded data bundle
   data: null,
-  byPlace: new Map(),
-  bySection: new Map(),
   selectedView: "all",
-  sites: [],
   focusList: [],
   currentIndex: -1,
   map: null,
@@ -48,6 +82,8 @@ const state = {
   legs: [],
   legPolys: new Map(),
   legGlowPolys: new Map(),
+  highlightedPlaceKeys: new Set(),
+  activeMateriaKey: null,
   reduceMotion: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
   wheelLast: 0,
   wheelAccum: 0,
@@ -86,15 +122,43 @@ function loadJson(path) {
   });
 }
 
+function isPeriplus() { return state.corpusId === "periplus"; }
+function isGalen() { return state.corpusId === "galen"; }
+
+function siteDisplayName(site) {
+  return site?.source_name ?? site?.display_name ?? "";
+}
+
+function sitePlaceType(site) {
+  return site?.periplus_place_type ?? site?.place_type ?? "";
+}
+
 function isInland(site) {
-  return INLAND_RX.test(site?.periplus_place_type ?? "");
+  if (isPeriplus()) return INLAND_RX.test(sitePlaceType(site));
+  // Galen
+  const t = sitePlaceType(site).toLowerCase();
+  if (GALEN_SEA_TYPES.has(t)) return false;
+  return GALEN_LAND_TYPES.has(t) || t === "region";
 }
 
 function isRegion(site) {
   if (!site) return false;
-  if (REGION_RX.test(site.periplus_place_type ?? "")) return true;
-  if ((site.location_precision ?? "").toLowerCase() === "region") return true;
-  return false;
+  if (isPeriplus()) {
+    if (REGION_RX.test(sitePlaceType(site))) return true;
+    if ((site.location_precision ?? "").toLowerCase() === "region") return true;
+    return false;
+  }
+  // Galen: regions and seas are pin-only.
+  const t = sitePlaceType(site).toLowerCase();
+  return t === "region" || t === "sea";
+}
+
+/** Galen: route lines connect only `primary` stops. Context and materia
+ *  pins still render but no leg passes through them. For Periplus we fall
+ *  back to the existing region filter. */
+function isLineEndpoint(site) {
+  if (isGalen()) return site?.kind === "primary";
+  return !isRegion(site);
 }
 
 function siteLatLng(site) {
@@ -103,75 +167,178 @@ function siteLatLng(site) {
     : null;
 }
 
-// ───────────────────────── data shaping ─────────────────────────
+// ───────────────────────── data loading ─────────────────────────
 
-async function loadAll() {
-  const [places, sections, journey, routeViews] = await Promise.all([
-    loadJson(DATA.places),
-    loadJson(DATA.sections),
-    loadJson(DATA.journey),
-    loadJson(DATA.routeViews),
-  ]);
-
-  state.data = { places, sections, journey, routeViews };
-  state.byPlace = new Map(places.map((p) => [p.place_key, p]));
-  state.bySection = new Map(sections.map((s) => [s.chunk_id, s]));
+async function loadCorpus(corpusId) {
+  if (state.corpusCache.has(corpusId)) return state.corpusCache.get(corpusId);
+  const cfg = CORPORA[corpusId];
+  if (!cfg) throw new Error(`Unknown corpus: ${corpusId}`);
+  const entries = await Promise.all(
+    Object.entries(cfg.paths).map(async ([k, p]) => [k, await loadJson(p)]),
+  );
+  const bundle = Object.fromEntries(entries);
+  bundle.placesByKey = new Map(bundle.places.map((p) => [p.place_key, p]));
+  if (bundle.sections) {
+    bundle.sectionsByChunkId = new Map(bundle.sections.map((s) => [s.chunk_id, s]));
+  }
+  if (bundle.passages) {
+    bundle.passagesById = new Map(bundle.passages.map((p) => [p.passage_id, p]));
+  }
+  if (bundle.materia) {
+    bundle.materiaByKey = new Map(bundle.materia.map((m) => [m.materia_key, m]));
+    // Index: place_key → array of {materia, link}
+    bundle.materiaByPlace = new Map();
+    for (const m of bundle.materia) {
+      for (const link of m.place_links ?? []) {
+        if (!bundle.materiaByPlace.has(link.place_key)) {
+          bundle.materiaByPlace.set(link.place_key, []);
+        }
+        bundle.materiaByPlace.get(link.place_key).push({ materia: m, link });
+      }
+    }
+  }
+  state.corpusCache.set(corpusId, bundle);
+  return bundle;
 }
 
 function currentView() {
   return state.data?.routeViews?.views?.[state.selectedView] ?? null;
 }
 
-/** Return a focus-list — one entry per place visited in route_views order,
- *  enriched with the section's translation and Greek text where available. */
+function viewIdsForCorpus() {
+  const cfg = CORPORA[state.corpusId];
+  const fromData = Object.keys(state.data?.routeViews?.views ?? {});
+  if (cfg.viewOrder) {
+    return cfg.viewOrder.filter((id) => fromData.includes(id));
+  }
+  // Default: put `all` first.
+  const ordered = [];
+  if (fromData.includes("all")) ordered.push("all");
+  for (const id of fromData) if (id !== "all" && !ordered.includes(id)) ordered.push(id);
+  return ordered;
+}
+
+function viewLabel(viewId) {
+  const cfg = CORPORA[state.corpusId];
+  return cfg.viewLabels?.[viewId]
+    ?? state.data?.routeViews?.views?.[viewId]?.label
+    ?? viewId;
+}
+
+/** Return a focus list — one entry per place visited in route_views order,
+ *  enriched with corpus-specific reader content. */
 function buildFocusList() {
   const view = currentView();
   if (!view) return [];
 
-  // Map section_order → focus sequence (reviewed) for richer titles when present.
-  const sectionFocusByOrder = new Map();
-  for (const sf of view.section_focus ?? []) {
-    sectionFocusByOrder.set(sf.section_order, sf);
-  }
-
   const list = [];
-  view.sites.forEach((site, idx) => {
-    const sectionOrder = (site.section_numbers ?? [])[0] ?? null;
-    const reviewed = sectionFocusByOrder.get(sectionOrder);
-    const section = Number.isInteger(sectionOrder)
-      ? state.data.sections.find((s) => s.section_order === sectionOrder)
-      : null;
-
-    list.push({
-      index: idx,
-      site,
-      siteKey: site.site_key,
-      sectionOrder,
-      kind: isInland(site) ? "land" : "sea",
-      displayName: site.source_name,
-      greekName: site.page_metadata?.page_ancient_toponym ?? null,
-      placeType: site.periplus_place_type ?? "",
-      routeLabel: site.route_label ?? "",
-      chapter: site.periplus_chapter ?? "",
-      pleiadesUri: site.pleiades_uri ?? null,
-      pleiadesId: site.pleiades_id ?? null,
-      modernId: [site.modern_identification, site.modern_country].filter(Boolean).join(", "),
-      translation: section?.draft_translation ?? "",
-      greekText: section?.greek_text ?? "",
-      reviewedNote: reviewed?.context_places?.length
-        ? `${reviewed.context_places.length} context place${reviewed.context_places.length === 1 ? "" : "s"}`
-        : "",
-      latLng: siteLatLng(site),
+  if (isPeriplus()) {
+    const sectionFocusByOrder = new Map();
+    for (const sf of view.section_focus ?? []) {
+      sectionFocusByOrder.set(sf.section_order, sf);
+    }
+    view.sites.forEach((site, idx) => {
+      const sectionOrder = (site.section_numbers ?? [])[0] ?? null;
+      const reviewed = sectionFocusByOrder.get(sectionOrder);
+      const section = Number.isInteger(sectionOrder)
+        ? state.data.sections.find((s) => s.section_order === sectionOrder)
+        : null;
+      list.push({
+        index: idx,
+        corpus: "periplus",
+        site,
+        siteKey: site.site_key,
+        placeKey: site.place_key ?? site.site_key,
+        sectionOrder,
+        kind: isInland(site) ? "land" : "sea",
+        displayName: siteDisplayName(site),
+        greekName: site.page_metadata?.page_ancient_toponym ?? null,
+        placeType: sitePlaceType(site),
+        routeLabel: site.route_label ?? "",
+        chapter: site.periplus_chapter ?? "",
+        pleiadesUri: site.pleiades_uri ?? null,
+        pleiadesId: site.pleiades_id ?? null,
+        modernId: [site.modern_identification, site.modern_country].filter(Boolean).join(", "),
+        translation: section?.draft_translation ?? "",
+        greekText: section?.greek_text ?? "",
+        reviewedNote: reviewed?.context_places?.length
+          ? `${reviewed.context_places.length} context place${reviewed.context_places.length === 1 ? "" : "s"}`
+          : "",
+        latLng: siteLatLng(site),
+        materia: [],
+      });
     });
-  });
-
+  } else if (isGalen()) {
+    view.sites.forEach((site, idx) => {
+      const passage = site.passage_id
+        ? state.data.passagesById?.get(site.passage_id)
+        : null;
+      const greekName = (site.ancient_names_in_galen ?? [])[0]?.surface ?? null;
+      // Materia at this place, filtered to those evidenced by *this* passage
+      // when one exists; otherwise show all links to the place.
+      const placeMateria = state.data.materiaByPlace?.get(site.place_key) ?? [];
+      const filtered = site.passage_id
+        ? placeMateria.filter((row) => row.link.passage_id === site.passage_id)
+        : placeMateria;
+      const candidates = filtered.length > 0 ? filtered : placeMateria;
+      // Dedupe by materia_key. A single substance can link to the same place
+      // from multiple passages or with different relations (e.g. cadmia is
+      // both `acquired` and `observed` at Cyprus across SMT 9.3.b/c/d). Show
+      // one chip per materia and union the relations.
+      const byKey = new Map();
+      for (const row of candidates) {
+        const k = row.materia.materia_key;
+        if (!byKey.has(k)) {
+          byKey.set(k, {
+            materiaKey: k,
+            displayName: row.materia.display_name,
+            greekName: row.materia.greek_name,
+            relations: new Set(),
+            evidencePhrases: [],
+          });
+        }
+        const entry = byKey.get(k);
+        if (row.link.relation) entry.relations.add(row.link.relation);
+        if (row.link.evidence_phrase) entry.evidencePhrases.push(row.link.evidence_phrase);
+      }
+      const materia = [...byKey.values()].map((x) => ({
+        materiaKey: x.materiaKey,
+        displayName: x.displayName,
+        greekName: x.greekName,
+        relation: [...x.relations].join(" / "),
+        evidencePhrase: x.evidencePhrases.join(" — "),
+      }));
+      list.push({
+        index: idx,
+        corpus: "galen",
+        site,
+        siteKey: site.site_key,
+        placeKey: site.place_key,
+        kind: isInland(site) ? "land" : "sea",
+        displayName: siteDisplayName(site),
+        greekName,
+        placeType: sitePlaceType(site),
+        routeLabel: site.route_label ?? "",
+        kuhnCitation: site.kuhn_citation ?? "",
+        passageId: site.passage_id ?? null,
+        evidencePhrase: site.evidence_phrase ?? "",
+        narrativeNote: site.narrative_note ?? "",
+        orderBasis: site.order_basis ?? "",
+        siteKind: site.kind ?? "",
+        pleiadesUri: site.pleiades_uri ?? null,
+        pleiadesId: site.pleiades_id ?? null,
+        translation: passage?.translation_en ?? "",
+        greekText: passage?.greek ?? "",
+        latLng: siteLatLng(site),
+        materia,
+      });
+    });
+  }
   return list;
 }
 
 function buildLegs(sites) {
-  // Regions get a pin but no leg lines into or out of them: the route line
-  // jumps over a stretch of regions to the next non-region site.
-  const eligible = sites.filter((s) => !isRegion(s));
+  const eligible = sites.filter((s) => isLineEndpoint(s));
   const legs = [];
   for (let i = 1; i < eligible.length; i += 1) {
     const a = eligible[i - 1];
@@ -179,7 +346,8 @@ function buildLegs(sites) {
     const aLL = siteLatLng(a);
     const bLL = siteLatLng(b);
     if (!aLL || !bLL) continue;
-    // Cross-route boundary (western → eastern): skip; the two legs aren't actually contiguous.
+    // Cross-route boundary in the `all` view: skip — the trips aren't
+    // contiguous and Galen explicitly forbids synthetic edges between trips.
     if (a.route_key !== b.route_key && state.selectedView === "all") continue;
     const category = isInland(a) || isInland(b) ? "land" : "sea";
     legs.push({ from: a, to: b, fromLL: aLL, toLL: bLL, category });
@@ -294,14 +462,15 @@ function drawRoute() {
     const ll = siteLatLng(site);
     if (!ll) continue;
     const kind = isInland(site) ? "land" : "sea";
+    const name = siteDisplayName(site);
     const marker = L.marker(ll, {
       icon: pinIcon(kind),
       keyboard: true,
-      title: site.source_name,
-      alt: site.source_name,
+      title: name,
+      alt: name,
       riseOnHover: true,
     });
-    marker.bindTooltip(site.source_name, {
+    marker.bindTooltip(name, {
       direction: "right",
       offset: [12, 0],
       className: "site-tip",
@@ -311,7 +480,7 @@ function drawRoute() {
       if (idx >= 0) goTo(idx);
     });
     marker.addTo(state.layers.markers);
-    state.markers.set(site.site_key, { marker, kind });
+    state.markers.set(site.site_key, { marker, kind, placeKey: site.place_key ?? site.site_key });
   }
 }
 
@@ -320,29 +489,71 @@ function fitToView() {
   const points = (view?.drawable_line_points ?? []).map((p) => [p.lat, p.lon]);
   if (points.length >= 2) {
     state.map.fitBounds(L.latLngBounds(points).pad(0.32), { maxZoom: 6, animate: false });
+    return;
+  }
+  // Fallback: fit to all pinned sites (e.g. materia_observations view).
+  const sitePoints = (view?.sites ?? [])
+    .map((s) => siteLatLng(s))
+    .filter(Boolean);
+  if (sitePoints.length >= 2) {
+    state.map.fitBounds(L.latLngBounds(sitePoints).pad(0.32), { maxZoom: 6, animate: false });
+  } else if (sitePoints.length === 1) {
+    state.map.setView(sitePoints[0], 6, { animate: false });
   }
 }
 
 // ───────────────────────── DOM render ─────────────────────────
 
+function renderMasthead() {
+  const cfg = CORPORA[state.corpusId];
+  document.getElementById("masthead-series").textContent = cfg.series;
+  const titleEl = document.getElementById("masthead-title");
+  const [a, b] = cfg.title;
+  titleEl.innerHTML = `
+    <span>${escapeHtml(a)}</span>
+    <span class="masthead__title-sep">·</span>
+    <span>${escapeHtml(b)}</span>
+  `;
+}
+
+function renderRouteButtons() {
+  const wrap = document.getElementById("view-control-routes");
+  const ids = viewIdsForCorpus();
+  wrap.innerHTML = ids
+    .map((id) => {
+      const active = id === state.selectedView;
+      return `<button type="button" data-view="${escapeHtml(id)}" aria-pressed="${active ? "true" : "false"}">${escapeHtml(viewLabel(id))}</button>`;
+    })
+    .join("");
+}
+
+function renderCorpusButtons() {
+  document.querySelectorAll("[data-corpus]").forEach((btn) => {
+    btn.setAttribute("aria-pressed", btn.dataset.corpus === state.corpusId ? "true" : "false");
+  });
+}
+
 function renderStrip() {
   const rail = document.getElementById("strip-rail");
   rail.innerHTML = state.focusList
     .map((f, idx) => {
+      const label = f.corpus === "galen" && Number.isFinite(f.site.route_order)
+        ? `${f.site.route_order} · ${f.displayName}`
+        : f.corpus === "periplus" && Number.isInteger(f.sectionOrder)
+          ? `${f.sectionOrder} · ${f.displayName}`
+          : f.displayName;
       return `
         <button
           type="button"
           class="strip__dot"
           data-index="${idx}"
-          data-route="${escapeHtml(f.site.route_key)}"
+          data-route="${escapeHtml(f.site.route_key ?? "")}"
           data-kind="${f.kind}"
           role="option"
           aria-selected="false"
           aria-label="${escapeHtml(f.displayName)}"
         >
-          <span class="strip__dot__label">
-            ${escapeHtml(String(f.sectionOrder ?? ""))} · ${escapeHtml(f.displayName)}
-          </span>
+          <span class="strip__dot__label">${escapeHtml(label)}</span>
         </button>
       `;
     })
@@ -376,17 +587,58 @@ function applyHtmlTransition(el, html) {
   }, 180);
 }
 
+function eyebrowParts(focus) {
+  if (focus.corpus === "periplus") {
+    const route = focus.routeLabel ? `${focus.routeLabel} route` : viewLabel(state.selectedView);
+    const type = focus.placeType || (focus.kind === "land" ? "Inland" : "Coastal");
+    const section = Number.isInteger(focus.sectionOrder) ? `Section ${focus.sectionOrder}` : (focus.chapter || "");
+    return { route, type, section };
+  }
+  // Galen
+  const route = focus.routeLabel || viewLabel(state.selectedView);
+  const typeBits = [focus.placeType];
+  if (focus.siteKind && focus.siteKind !== "primary") typeBits.push(focus.siteKind);
+  const type = typeBits.filter(Boolean).join(" · ");
+  return {
+    route,
+    type: type || (focus.kind === "land" ? "Inland" : "Coastal"),
+    section: focus.kuhnCitation ? `K. ${focus.kuhnCitation}` : "",
+  };
+}
+
+function renderMateriaList(focus) {
+  const wrap = document.getElementById("dossier-materia");
+  const list = document.getElementById("dossier-materia-list");
+  if (focus.corpus !== "galen" || !focus.materia || focus.materia.length === 0) {
+    wrap.hidden = true;
+    list.innerHTML = "";
+    return;
+  }
+  wrap.hidden = false;
+  list.innerHTML = focus.materia
+    .map((m) => {
+      const greek = m.greekName ? `<span class="dossier__materia-chip__greek" lang="grc">${escapeHtml(m.greekName)}</span>` : "";
+      const rel = m.relation ? `<span class="dossier__materia-chip__relation">${escapeHtml(m.relation)}</span>` : "";
+      return `<li><button type="button" class="dossier__materia-chip" data-materia="${escapeHtml(m.materiaKey)}" aria-pressed="false" title="${escapeHtml(m.evidencePhrase ?? "")}">${escapeHtml(m.displayName)}${greek}${rel}</button></li>`;
+    })
+    .join("");
+  list.querySelectorAll(".dossier__materia-chip").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      toggleMateriaHighlight(btn.dataset.materia);
+    });
+    if (state.activeMateriaKey === btn.dataset.materia) {
+      btn.setAttribute("aria-pressed", "true");
+    }
+  });
+}
+
 function renderDossier(focus) {
   if (!focus) return;
-  const route = focus.routeLabel ? `${focus.routeLabel} route` : VIEW_LABEL[state.selectedView];
-  const type = focus.placeType || (focus.kind === "land" ? "Inland" : "Coastal");
-  const sectionTxt = Number.isInteger(focus.sectionOrder)
-    ? `Section ${focus.sectionOrder}`
-    : (focus.chapter || "");
+  const { route, type, section } = eyebrowParts(focus);
 
   document.getElementById("dossier-route").textContent = route;
   document.getElementById("dossier-type").textContent = type;
-  document.getElementById("dossier-section").textContent = sectionTxt;
+  document.getElementById("dossier-section").textContent = section;
 
   applyTextTransition(document.getElementById("dossier-title"), focus.displayName);
   applyTextTransition(document.getElementById("dossier-greek-name"), focus.greekName ?? "");
@@ -398,8 +650,15 @@ function renderDossier(focus) {
   greekEl.textContent = focus.greekText || "";
   document.getElementById("dossier-greek-block").hidden = !focus.greekText;
 
+  renderMateriaList(focus);
+
   const sourceEl = document.getElementById("dossier-source");
-  const sourceBits = [focus.modernId, focus.chapter].filter(Boolean);
+  let sourceBits;
+  if (focus.corpus === "galen") {
+    sourceBits = [focus.kuhnCitation && `K. ${focus.kuhnCitation}`, focus.orderBasis].filter(Boolean);
+  } else {
+    sourceBits = [focus.modernId, focus.chapter].filter(Boolean);
+  }
   sourceEl.textContent = sourceBits.join(" · ");
 
   const link = document.getElementById("dossier-pleiades");
@@ -435,7 +694,6 @@ function highlightActive(focus) {
     pin.classList.toggle("site-pin--inactive", key !== focus.siteKey);
   }
 
-  // Active leg: the segment leading INTO the active site.
   for (const [key, { poly, leg }] of state.legPolys.entries()) {
     const isActive = leg.to.site_key === focus.siteKey;
     poly.setStyle(legStyle(leg.category, isActive));
@@ -445,12 +703,34 @@ function highlightActive(focus) {
   }
 }
 
+function applyMateriaHighlightDecoration() {
+  for (const [, entry] of state.markers.entries()) {
+    const pin = entry.marker.getElement()?.querySelector(".site-pin");
+    if (!pin) continue;
+    pin.classList.toggle(
+      "site-pin--materia-linked",
+      state.highlightedPlaceKeys.has(entry.placeKey),
+    );
+  }
+}
+
+function toggleMateriaHighlight(materiaKey) {
+  if (state.activeMateriaKey === materiaKey) {
+    state.activeMateriaKey = null;
+    state.highlightedPlaceKeys = new Set();
+  } else {
+    state.activeMateriaKey = materiaKey;
+    const m = state.data.materiaByKey?.get(materiaKey);
+    state.highlightedPlaceKeys = new Set((m?.place_links ?? []).map((l) => l.place_key));
+  }
+  applyMateriaHighlightDecoration();
+  document.querySelectorAll(".dossier__materia-chip").forEach((btn) => {
+    btn.setAttribute("aria-pressed", btn.dataset.materia === state.activeMateriaKey ? "true" : "false");
+  });
+}
+
 // ───────────────────────── navigation ─────────────────────────
 
-/** Compute a map-center latlng such that the given target appears in the
- *  visual centre of whatever region the dossier doesn't cover. On wide
- *  viewports the dossier is left-anchored (offset horizontally); on phones
- *  it's bottom-anchored (offset vertically). */
 function dossierOffsetCenter(targetLatLng, zoom) {
   const target = L.latLng(targetLatLng[0], targetLatLng[1]);
   const dossierEl = document.querySelector(".dossier");
@@ -459,15 +739,9 @@ function dossierOffsetCenter(targetLatLng, zoom) {
   const point = state.map.project(target, zoom);
 
   if (window.innerWidth < 720) {
-    // Mobile: visual centre of unblocked area is at y = rect.top / 2.
-    // Geo centre is at y = vh / 2. Target should appear above geo centre
-    // by (vh - rect.top) / 2; in projected pixels (y grows southward) that
-    // means the map centre sits south of the target by the same amount.
     const offsetY = (window.innerHeight - rect.top) / 2;
     return state.map.unproject(L.point(point.x, point.y + offsetY), zoom);
   }
-
-  // Desktop: visual centre of unblocked area is at x = (rect.right + vw) / 2.
   const offsetX = (rect.right + window.innerWidth) / 2 - window.innerWidth / 2;
   return state.map.unproject(L.point(point.x - offsetX, point.y), zoom);
 }
@@ -479,6 +753,7 @@ function goTo(index, options = {}) {
   const focus = state.focusList[index];
   renderDossier(focus);
   highlightActive(focus);
+  applyMateriaHighlightDecoration(); // markers were just re-classed; re-apply
 
   if (focus.latLng && !state.exploreMode) {
     const targetZoom = focus.kind === "land" ? 6.4 : 6.2;
@@ -517,12 +792,6 @@ function setExploreMode(on) {
 }
 
 function bindInputs() {
-  // Wheel: deliberate step advance. The handler:
-  //   1. Lets wheel events inside the dossier scroll its body natively.
-  //   2. Requires a "fresh" gesture (>= QUIET_MS of silence) before counting.
-  //   3. Accumulates delta until THRESHOLD is crossed, then fires once and
-  //      locks. Inertial trail keeps `lastWheel` updated, so the lock holds
-  //      until the user actually stops scrolling.
   const QUIET_MS = 280;
   const COOLDOWN_MS = 850;
   const THRESHOLD = 90;
@@ -532,10 +801,7 @@ function bindInputs() {
     (e) => {
       if (state.exploreMode) return;
       const target = e.target;
-      if (target && target.closest && target.closest(".dossier")) {
-        // Native scroll inside the reading panel; do not navigate.
-        return;
-      }
+      if (target && target.closest && target.closest(".dossier")) return;
       e.preventDefault();
       const now = performance.now();
       const sincePrev = now - state.wheelLast;
@@ -561,7 +827,6 @@ function bindInputs() {
     { passive: false },
   );
 
-  // Keyboard.
   window.addEventListener("keydown", (e) => {
     if (e.altKey || e.ctrlKey || e.metaKey) return;
     const tag = document.activeElement?.tagName;
@@ -589,7 +854,9 @@ function bindInputs() {
         goTo(state.focusList.length - 1);
         break;
       case "Escape":
-        if (state.exploreMode) {
+        if (state.activeMateriaKey) {
+          toggleMateriaHighlight(state.activeMateriaKey);
+        } else if (state.exploreMode) {
           document.getElementById("toggle-explore").checked = false;
           setExploreMode(false);
         }
@@ -597,8 +864,6 @@ function bindInputs() {
     }
   });
 
-  // Touch swipes — but never on the dossier itself, where scrolling the
-  // reading panel must remain native.
   window.addEventListener("touchstart", (e) => {
     if (state.exploreMode) return;
     const target = e.target;
@@ -630,27 +895,30 @@ function bindInputs() {
     }
   }, { passive: true });
 
-  // Dossier nav.
   document.getElementById("prev-step").addEventListener("click", prev);
   document.getElementById("next-step").addEventListener("click", next);
 
-  // View selector.
-  document.querySelectorAll("[data-view]").forEach((btn) => {
-    btn.addEventListener("click", () => setView(btn.dataset.view));
+  // Delegated route-view selector — buttons re-render per corpus.
+  document.getElementById("view-control-routes").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-view]");
+    if (btn) setView(btn.dataset.view);
   });
 
-  // Explore toggle.
+  // Delegated corpus selector.
+  document.querySelector(".corpus-control").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-corpus]");
+    if (btn) setCorpus(btn.dataset.corpus);
+  });
+
   document.getElementById("toggle-explore").addEventListener("change", (e) => {
     setExploreMode(e.target.checked);
   });
 
-  // Hint banner.
   const hint = document.getElementById("hint-banner");
   hint.addEventListener("click", () => {
     hint.classList.remove("hint--shown");
   });
 
-  // Resize: re-anchor active pin in the visual centre of the unblocked area.
   let resizeTimer = null;
   window.addEventListener("resize", () => {
     if (state.map) state.map.invalidateSize();
@@ -670,16 +938,17 @@ function showHintBriefly() {
   state.hintTimer = setTimeout(() => hint.classList.remove("hint--shown"), 5200);
 }
 
-// ───────────────────────── view switching ─────────────────────────
+// ───────────────────────── view + corpus switching ─────────────────────────
 
 function setView(viewId, options = {}) {
   if (!state.data?.routeViews?.views?.[viewId]) return;
   const previousFocus = state.focusList[state.currentIndex];
   state.selectedView = viewId;
+  state.activeMateriaKey = null;
+  state.highlightedPlaceKeys = new Set();
 
   document.querySelectorAll("[data-view]").forEach((btn) => {
-    const active = btn.dataset.view === viewId;
-    btn.setAttribute("aria-pressed", active ? "true" : "false");
+    btn.setAttribute("aria-pressed", btn.dataset.view === viewId ? "true" : "false");
   });
 
   state.focusList = buildFocusList();
@@ -697,14 +966,35 @@ function setView(viewId, options = {}) {
   goTo(nextIndex, { instant: options.instant });
 }
 
+async function setCorpus(corpusId, options = {}) {
+  if (!CORPORA[corpusId]) return;
+  if (corpusId === state.corpusId && state.data) return;
+  state.corpusId = corpusId;
+  state.activeMateriaKey = null;
+  state.highlightedPlaceKeys = new Set();
+
+  state.data = await loadCorpus(corpusId);
+  const cfg = CORPORA[corpusId];
+
+  // Choose initial view: prefer a stored default, else the configured default.
+  const ids = Object.keys(state.data.routeViews?.views ?? {});
+  const wantedView = ids.includes(cfg.defaultView) ? cfg.defaultView : ids[0];
+  state.selectedView = wantedView;
+
+  renderMasthead();
+  renderCorpusButtons();
+  renderRouteButtons();
+
+  setView(wantedView, { instant: options.instant ?? true });
+}
+
 // ───────────────────────── boot ─────────────────────────
 
 async function main() {
   try {
-    await loadAll();
     initMap();
     bindInputs();
-    setView("all", { instant: true });
+    await setCorpus("periplus", { instant: true });
     showHintBriefly();
   } catch (err) {
     console.error(err);

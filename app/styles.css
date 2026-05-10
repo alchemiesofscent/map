@@ -148,22 +148,69 @@ body::after {
   color: var(--vellum-muted);
 }
 
+/* ───────────────────────── corpus control ──────────────────────── */
+.corpus-control {
+  position: fixed;
+  top: 28px;
+  right: 28px;
+  z-index: 6;
+  display: flex;
+  gap: 2px;
+  padding: 4px 5px;
+  background: rgba(15, 23, 28, 0.78);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  border: 1px solid var(--rule);
+  border-radius: var(--panel-radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.corpus-control button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--vellum-dim);
+  font-family: var(--display);
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.corpus-control button:hover { color: var(--vellum); }
+
+.corpus-control button[aria-pressed="true"] {
+  color: var(--ink);
+  background: var(--gold);
+}
+
 /* ───────────────────────── view control ────────────────────────── */
 .view-control {
   position: fixed;
-  top: 28px;
+  top: 76px;
   right: 28px;
   z-index: 5;
   display: flex;
   align-items: center;
   gap: 4px;
   padding: 6px 8px;
+  max-width: calc(100vw - 56px);
   background: rgba(15, 23, 28, 0.74);
   backdrop-filter: blur(14px) saturate(1.4);
   -webkit-backdrop-filter: blur(14px) saturate(1.4);
   border: 1px solid var(--rule);
   border-radius: var(--panel-radius);
   box-shadow: var(--shadow-strong);
+}
+
+.view-control__routes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  max-width: 60vw;
 }
 
 .view-control button {
@@ -457,6 +504,76 @@ body::after {
   line-height: 1.7;
   color: var(--vellum-muted);
   letter-spacing: 0.01em;
+}
+
+.dossier__materia {
+  margin: 14px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+}
+
+.dossier__materia-list {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.dossier__materia-chip {
+  appearance: none;
+  border: 1px solid var(--rule);
+  background: rgba(217, 166, 73, 0.08);
+  color: var(--vellum);
+  font-family: var(--serif);
+  font-size: 13.5px;
+  letter-spacing: 0.01em;
+  padding: 4px 9px 5px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.dossier__materia-chip:hover {
+  background: rgba(217, 166, 73, 0.22);
+  border-color: var(--gold);
+}
+
+.dossier__materia-chip[aria-pressed="true"] {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+}
+
+.dossier__materia-chip__greek {
+  font-family: var(--display);
+  font-style: italic;
+  margin-left: 6px;
+  color: var(--vellum-dim);
+}
+
+.dossier__materia-chip[aria-pressed="true"] .dossier__materia-chip__greek {
+  color: rgba(19, 21, 23, 0.7);
+}
+
+.dossier__materia-chip__relation {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-left: 6px;
+  color: var(--vellum-dim);
+}
+
+.dossier__materia-chip[aria-pressed="true"] .dossier__materia-chip__relation {
+  color: rgba(19, 21, 23, 0.65);
+}
+
+.site-pin--materia-linked {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 50%;
 }
 
 .dossier__foot {
@@ -814,11 +931,24 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
   }
   #counter-roman { font-size: 11px; }
 
-  .view-control {
+  .corpus-control {
     top: 10px;
     right: 10px;
-    padding: 3px 4px;
+    padding: 2px 3px;
   }
+  .corpus-control button {
+    padding: 4px 8px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .view-control {
+    top: 46px;
+    right: 10px;
+    padding: 3px 4px;
+    max-width: calc(100vw - 20px);
+  }
+  .view-control__routes { max-width: calc(100vw - 32px); }
   .view-control button {
     padding: 5px 8px;
     font-size: 9.5px;
