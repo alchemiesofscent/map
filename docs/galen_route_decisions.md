@@ -117,6 +117,53 @@ selectors in the viewer.
 ### Discarded entirely
 SMT 10.2; De antidotis 1.1, 1.5, 1.10, 1.14.
 
+## Complex designators (curator note, 2026-05-10)
+
+A real toponym in Galen's text is not always a single capitalized noun. The
+auto-detector in `scripts/galen/survey_routes.py` works by tokenizing on
+Greek-letter runs and requiring the first character to be uppercase, so it
+catches `Λῆμνος`, `Κύπρῳ`, `Πέργαμον` reliably but misses places that
+appear as **descriptive multi-word phrases**, **lowercased adjective + noun
+constructions**, or **parenthetical glosses**. Some are real route stops we
+must map; others are scholarly comparisons that should stay unmapped.
+
+Worked examples in the current corpus:
+
+| Surface in text                       | Pleiades                | Status                |
+| ------------------------------------- | ----------------------- | --------------------- |
+| `νεκρὰν ὀνομαζομένην θάλασσαν`        | 697709 (Asphaltitis Limne) | Real route stop — asphalt source |
+| `κοίλη Συρία` / `κοίλην Συρίαν`       | 678096 (Coele Syria)    | Real route stop — adjective + noun |
+| `Τρῳάδος Ἀλεξανδρείας` / `Ἀλεξανδρείαν Τρῳάδα` | 550434 (Alexandria Troas) | Real route stop — qualified Alexandria |
+| `Παλαιστίνης Συρίας`                  | 1001939 (Palaestina I)  | Real region context — qualified Syria |
+
+**Pattern**: when the curator confirms a mention like this is a real place
+referenced in Galen, the fix is to add the **exact textual surface(s)** as
+`ancient_names_in_galen` entries on the place's lexicon record at
+`data/galen/lexicon/places.json`. The survey's multi-word matcher
+(`detect_token_spans_in_text` phase 1) keys on those surfaces directly and
+will pick the place up on the next survey run; downstream stages (passages,
+materia, routes) inherit it automatically.
+
+Things to watch for in future ingest work:
+
+- **Descriptive periphrases** (`νεκρὰν ὀνομαζομένην θάλασσαν`, `τὴν ὑπὸ
+  Καίσαρι θάλασσαν`, etc.) — Galen and other technical writers often gloss
+  toponyms instead of naming them.
+- **Lowercased qualifier + capitalized core** (`κοίλη Συρία`,
+  `μεγάλη Φρυγία`, `μικρὰ Ἀσία`) — the qualifier is the diagnostic part;
+  the core noun alone is ambiguous.
+- **Reversed-order qualifications** (`Τρῳάδος Ἀλεξανδρείας` =
+  "Alexandria of the Troad"). Adding both word orders to the lexicon is
+  cheap and avoids accidental misses.
+- **Genitive/dative-only attestations**, where the nominative form Galen
+  never uses. Add the inflected forms he actually writes.
+
+A periodic curator pass should compare unmatched-capital lists
+(`docs/galen_unmatched_capitals.md`) AND the *English translations* in
+`data/galen/translations/passages.json` against the lexicon, watching for
+descriptive phrasing that didn't survive normalization. Better to register
+one extra surface in the lexicon than to lose a real route stop.
+
 [cyprus]: https://pleiades.stoa.org/places/707498 "Cyprus (island): a Pleiades place resource"
 [coele]: https://pleiades.stoa.org/places/678096 "Coele Syria: a Pleiades place resource"
 [asia]: https://pleiades.stoa.org/places/981509 "Asia (Roman province): a Pleiades place resource"

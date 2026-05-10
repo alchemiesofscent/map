@@ -281,6 +281,9 @@ class Gazetteer:
     person_surface: set[str]
     curator_overrides: list[dict]
     curator_lemma_index: dict[str, list[str]] = field(default_factory=dict)
+    # place_key -> pleiades_id (from curator lexicon) so curator matches can
+    # resolve back to a real Pleiades URI, not the slug.
+    curator_pleiades_id: dict[str, str] = field(default_factory=dict)
 
     @classmethod
     def load(cls) -> "Gazetteer":
@@ -298,7 +301,12 @@ class Gazetteer:
                 person_surface.add(normalize_key(n))
 
         curator_lemma_index: dict[str, list[str]] = {}
+        curator_pleiades_id: dict[str, str] = {}
         for entry in places_overrides:
+            pk = entry["place_key"]
+            pid = entry.get("pleiades_id")
+            if pid:
+                curator_pleiades_id[pk] = pid
             keys: set[str] = set()
             for n in entry.get("ancient_names_in_galen", []):
                 if isinstance(n, dict):
@@ -307,7 +315,7 @@ class Gazetteer:
                     keys.add(normalize_key(n))
             for k in keys:
                 if k:
-                    curator_lemma_index.setdefault(k, []).append(entry["place_key"])
+                    curator_lemma_index.setdefault(k, []).append(pk)
 
         return cls(
             places=gaz["places"],
@@ -317,7 +325,17 @@ class Gazetteer:
             person_surface=person_surface,
             curator_overrides=places_overrides,
             curator_lemma_index=curator_lemma_index,
+            curator_pleiades_id=curator_pleiades_id,
         )
+
+    def pleiades_ids_for_place_keys(self, place_keys: list[str]) -> list[str]:
+        """Resolve curator place_keys to Pleiades numeric IDs from the lexicon."""
+        out: list[str] = []
+        for pk in place_keys:
+            pid = self.curator_pleiades_id.get(pk)
+            if pid and pid not in out:
+                out.append(pid)
+        return out
 
     def is_person(self, lemma: str, surface: str) -> bool:
         if normalize_key(lemma) in self.person_lemmata:
@@ -368,7 +386,8 @@ class Gazetteer:
 class Mention:
     surface: str
     lemma: str
-    pleiades_ids: list[str]
+    pleiades_ids: list[str]   # Pleiades NUMERIC IDs (always; curator slugs are resolved via lexicon)
+    place_keys: list[str]     # Curator place_keys when available; else synthesized from Pleiades title downstream
     match_type: str  # 'greek' | 'latin' | 'curator' | 'ambiguous'
     cert: str        # 'secure' | 'probable' | 'ambiguous'
 
@@ -465,13 +484,15 @@ def detect_token_spans_in_text(
             if orig_start is None or orig_end is None:
                 idx = pos + 1
                 continue
-            ids = list(place_keys)  # curator place_keys, not Pleiades ids
+            place_key_list = list(place_keys)
+            pleiades_id_list = gaz.pleiades_ids_for_place_keys(place_key_list)
             mention = Mention(
                 surface=text[orig_start:orig_end],
                 lemma=key,
-                pleiades_ids=ids,
+                pleiades_ids=pleiades_id_list,
+                place_keys=place_key_list,
                 match_type="curator",
-                cert="secure" if len(ids) == 1 else "ambiguous",
+                cert="secure" if len(place_key_list) == 1 else "ambiguous",
             )
             spans.append((orig_start, orig_end, mention))
             consumed.append((orig_start, orig_end))
@@ -496,10 +517,14 @@ def detect_token_spans_in_text(
         # Phase 2: curator override first (bypasses stoplist + person filter)
         match_type, ids = gaz.lookup(lemma)
         if match_type == "curator":
-            cert = "secure" if len(ids) == 1 else "ambiguous"
+            place_key_list = list(ids)  # ids are place_keys for curator matches
+            pleiades_id_list = gaz.pleiades_ids_for_place_keys(place_key_list)
+            cert = "secure" if len(place_key_list) == 1 else "ambiguous"
             spans.append(
                 (m.start(), m.end(), Mention(
-                    surface=token, lemma=lemma, pleiades_ids=ids,
+                    surface=token, lemma=lemma,
+                    pleiades_ids=pleiades_id_list,
+                    place_keys=place_key_list,
                     match_type="curator", cert=cert,
                 ))
             )
@@ -519,7 +544,9 @@ def detect_token_spans_in_text(
         )
         spans.append(
             (m.start(), m.end(), Mention(
-                surface=token, lemma=lemma, pleiades_ids=ids,
+                surface=token, lemma=lemma,
+                pleiades_ids=list(ids),
+                place_keys=[],  # populated downstream from Pleiades title
                 match_type=match_type if cert != "ambiguous" else "ambiguous",
                 cert=cert,
             ))
@@ -842,7 +869,7 @@ def candidate_to_dict(c: Candidate) -> dict:
     places_in_order: list[dict] = []
     for s in c.sentences:
         for m in s.place_mentions:
-            tag = "+".join(m.pleiades_ids)
+            tag = "+".join(m.place_keys or m.pleiades_ids)
             if tag in seen_ids:
                 continue
             seen_ids.add(tag)
@@ -851,6 +878,7 @@ def candidate_to_dict(c: Candidate) -> dict:
                     "surface": m.surface,
                     "lemma": m.lemma,
                     "pleiades_ids": m.pleiades_ids,
+                    "place_keys": m.place_keys,
                     "match_type": m.match_type,
                     "cert": m.cert,
                 }
@@ -878,6 +906,7 @@ def candidate_to_dict(c: Candidate) -> dict:
                         "surface": m.surface,
                         "lemma": m.lemma,
                         "pleiades_ids": m.pleiades_ids,
+                        "place_keys": m.place_keys,
                         "match_type": m.match_type,
                         "cert": m.cert,
                     }
@@ -1085,6 +1114,7 @@ def main() -> int:
                     "surface": m.surface,
                     "lemma": m.lemma,
                     "pleiades_ids": m.pleiades_ids,
+                    "place_keys": m.place_keys,
                     "match_type": m.match_type,
                     "cert": m.cert,
                     "in_route_hit_sentence": s.is_hit,

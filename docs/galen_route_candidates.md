@@ -30,7 +30,7 @@ Also review:
 
 ### SMT candidate 1: 9.1 (K. XII 168.7–178.1 – K. XII 168.7–178.1)
 
-- **Places**: Κύπρον → cyprus_island; κοίλην Συρίαν → coele_syria; Παλαιστίνης → palestine; Λῆμνον → lemnos; Ἀσίας → asia_province; Ῥώμην → rome; Θρᾴκης → thracia_region; Μακεδονίας → macedonia_region; Τρῳάδος Ἀλεξανδρείας → alexandria_troas; Θεσσαλονίκην → thessalonica; Σάμον → samos; Χίον → chios; Αἰγαῖον → aegean_sea
+- **Places**: Κύπρον → Cyprus (island); κοίλην Συρίαν → Coele Syria; Παλαιστίνης → Palaestina I (late Roman province); Λῆμνον → Lemnos (island); Ἀσίας → Asia (Roman province); Ῥώμην → Roma; Θρᾴκης → Thracia; Μακεδονίας → Macedonia (region); Τρῳάδος Ἀλεξανδρείας → Antigoneia/(Col. Augusta) Alexandria Troas; Θεσσαλονίκην → Thessalonica; Σάμον → Samos (island); Χίον → Chios (island); Αἰγαῖον → Aegaeum Mare
 - **First-person verbs**: επλευσα (movement), επορευθην (movement)
 - **Sentence count**: 3
 
@@ -44,7 +44,7 @@ Also review:
 
 ### SMT candidate 2: 9.1 (K. XII 168.7–178.1 – K. XII 168.7–178.1)
 
-- **Places**: Ἰταλίας → italia_peninsula; Μακεδονίαν → macedonia_region; Φιλίπποις → philippi; Θρᾴκῃ → thracia_region; Θάσον → thasos; Λῆμνον → lemnos; Ἀλεξανδρείαν Τρῳάδα → alexandria_troas; Ἡφαιστιάδα → hephaistia
+- **Places**: Ἰταλίας → Italia; Μακεδονίαν → Macedonia (region); Φιλίπποις → Krenides/Philippi/Col. Augusta Iulia Philippensis; Θρᾴκῃ → Thracia; Θάσον → Thasos (island); Λῆμνον → Lemnos (island); Ἀλεξανδρείαν Τρῳάδα → Antigoneia/(Col. Augusta) Alexandria Troas; Ἡφαιστιάδα → Hephaistia
 - **First-person verbs**: επλευσα (movement)
 - **Sentence count**: 2
 
@@ -57,7 +57,7 @@ Also review:
 
 ### SMT candidate 3: 9.2 (K. XII 203.0–204.2 – K. XII 203.0–204.2)
 
-- **Places**: Λυκίαν → lycia; κοίλης Συρίας → coele_syria
+- **Places**: Λυκίαν → Lycia; κοίλης Συρίας → Coele Syria; νεκρὰν ὀνομαζομένην θάλασσαν → Mortuum Mare/Asphaltitis Limne
 - **First-person verbs**: ειδον (autopsy), εκομισα (acquisition)
 - **Sentence count**: 3
 
@@ -71,7 +71,7 @@ Also review:
 
 ### SMT candidate 4: 9.3 (K. XII 214.5–217.3 – K. XII 214.5–217.3)
 
-- **Places**: Κύπρῳ → cyprus_island; Σόλων → soloi_cyprus
+- **Places**: Κύπρῳ → Cyprus (island); Σόλων → Soloi/Aipeia?
 - **First-person verbs**: εκομισα (acquisition)
 - **Sentence count**: 2
 
@@ -84,7 +84,7 @@ Also review:
 
 ### SMT candidate 5: 9.3 (K. XII 219.5–221.13 – K. XII 219.5–221.13)
 
-- **Places**: Σόλοις → soloi_cyprus; Ἀσίαν → asia_province; Ἰταλίαν → italia_peninsula
+- **Places**: Σόλοις → Soloi/Aipeia?; Ἀσίαν → Asia (Roman province); Ἰταλίαν → Italia
 - **First-person verbs**: επεδημησα (movement)
 - **Sentence count**: 2
 
@@ -97,7 +97,7 @@ Also review:
 
 ### SMT candidate 6: 9.3 (K. XII 226.7–229.7 – K. XII 226.7–229.7)
 
-- **Places**: Κύπρῳ → cyprus_island; Σόλων → soloi_cyprus; Ἀσίαν → asia_province; Ῥώμην → rome
+- **Places**: Κύπρῳ → Cyprus (island); Σόλων → Soloi/Aipeia?; Ἀσίαν → Asia (Roman province); Ῥώμην → Roma
 - **First-person verbs**: εθεασαμην (autopsy), εκομισα (acquisition)
 - **Sentence count**: 4
 
@@ -112,7 +112,7 @@ Also review:
 
 ### SMT candidate 7: 9.3 (K. XII 229.7–230.4 – K. XII 229.7–230.4)
 
-- **Places**: Κύπρῳ → cyprus_island; Ἐργαστήρια → ergasteria; Περγάμου → pergamum; Κυζίκου → cyzicus
+- **Places**: Κύπρῳ → Cyprus (island); Ἐργαστήρια → Ergasteria; Περγάμου → Pergamum; Κυζίκου → Cyzicus
 - **First-person verbs**: εθεασαμην (autopsy), ελαβον (acquisition)
 - **Sentence count**: 2
 
@@ -125,7 +125,7 @@ Also review:
 
 ### SMT candidate 8: 9.3 (K. XII 238.1–241.10 – K. XII 238.1–241.10)
 
-- **Places**: Κύπρου → cyprus_island
+- **Places**: Κύπρου → Cyprus (island)
 - **First-person verbs**: εκομισα (acquisition)
 - **Sentence count**: 2
 
@@ -138,7 +138,7 @@ Also review:
 
 ### SMT candidate 9: 9.3 (K. XII 238.1–241.10 – K. XII 238.1–241.10)
 
-- **Places**: Κύπρῳ → cyprus_island
+- **Places**: Κύπρῳ → Cyprus (island)
 - **First-person verbs**: εθεασαμην (autopsy)
 - **Sentence count**: 2
 
@@ -151,7 +151,7 @@ Also review:
 
 ### SMT candidate 10: 10.2 (K. XII 303.8–305.0 – K. XII 303.8–305.0)
 
-- **Places**: Μυσίᾳ → mysia
+- **Places**: Μυσίᾳ → Mysia (region)
 - **First-person verbs**: εχρησαμην (acquisition)
 - **Sentence count**: 2
 
@@ -166,7 +166,7 @@ Also review:
 
 ### De_antidotis candidate 1: 1.1 (K. XIV 1.0–5.10 – K. XIV 1.0–5.10)
 
-- **Places**: Ῥώμην → rome
+- **Places**: Ῥώμην → Roma
 - **First-person verbs**: διηλθον (movement)
 - **Sentence count**: 2
 
@@ -179,7 +179,7 @@ Also review:
 
 ### De_antidotis candidate 2: 1.2 (K. XIV 5.10–13.15 – K. XIV 5.10–13.15)
 
-- **Places**: Κύπρον → cyprus_island; Παλαιστίνης → palestine; Συρίας → coele_syria; Λῆμνον → lemnos
+- **Places**: Κύπρον → Cyprus (island); Παλαιστίνης → Palaestina I (late Roman province); Συρίας → Coele Syria; Λῆμνον → Lemnos (island)
 - **First-person verbs**: εκομισα (acquisition), επλευσα (movement)
 - **Sentence count**: 4
 
@@ -194,7 +194,7 @@ Also review:
 
 ### De_antidotis candidate 3: 1.3 (K. XIV 13.15–20.14 – K. XIV 13.15–20.14)
 
-- **Places**: Ἰταλίαν → italia_peninsula; Νεάπολιν → neapolis_campania
+- **Places**: Ἰταλίαν → Italia; Νεάπολιν → Parthenope/Neapolis
 - **First-person verbs**: ειδον (autopsy)
 - **Sentence count**: 2
 
@@ -207,7 +207,7 @@ Also review:
 
 ### De_antidotis candidate 4: 1.5 (K. XIV 27.9–32.9 – K. XIV 27.9–32.9)
 
-- **Places**: Ἰταλίαν → italia_peninsula; Κρήτης → crete; Ῥώμης → rome
+- **Places**: Ἰταλίαν → Italia; Κρήτης → Creta (island); Ῥώμης → Roma
 - **First-person verbs**: ευρον (acquisition)
 - **Sentence count**: 2
 
@@ -220,7 +220,7 @@ Also review:
 
 ### De_antidotis candidate 5: 1.10 (K. XIV 51.5–54.5 – K. XIV 51.5–54.5)
 
-- **Places**: Ἀσίᾳ → asia_province; Κυζίκῳ → cyzicus; Ἰταλίαν → italia_peninsula
+- **Places**: Ἀσίᾳ → Asia (Roman province); Κυζίκῳ → Cyzicus; Ἰταλίαν → Italia
 - **First-person verbs**: ειδον (autopsy)
 - **Sentence count**: 2
 
@@ -233,7 +233,7 @@ Also review:
 
 ### De_antidotis candidate 6: 1.14 (K. XIV 67.7–82.7 – K. XIV 67.7–82.7)
 
-- **Places**: Ῥώμην → rome; Κρήτης → crete
+- **Places**: Ῥώμην → Roma; Κρήτης → Creta (island)
 - **First-person verbs**: ευρον (acquisition)
 - **Sentence count**: 2
 

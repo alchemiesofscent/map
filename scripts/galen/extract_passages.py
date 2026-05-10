@@ -276,22 +276,28 @@ def build_passage(
     route_keys = CANDIDATE_ROUTES.get((work, chapter_ref, ordinal_in_chapter), [])
     routes_for_categorization = [k for k in route_keys if k != MATERIA_LAYER_KEY]
 
-    # Place mentions: collapse per-sentence mentions into per-passage list
+    # Place mentions: collapse per-sentence mentions into per-passage list.
+    # Prefer the explicit `place_keys` (curator-resolved slug) when the survey
+    # produced it; otherwise fall back to slugifying the Pleiades title.
     seen: set[tuple[str, str]] = set()
     place_mentions: list[dict] = []
     for sent in candidate["sentences"]:
         for m in sent["place_mentions"]:
-            ids = m.get("pleiades_ids", [])
-            if not ids:
-                continue
-            primary = ids[0]
-            # If pleiades_ids[0] is a curator slug, use it as place_key.
-            # If it's a Pleiades numeric ID, look up the title and slugify.
-            if primary.isdigit():
-                title = titles.get(primary, primary)
-                place_key = slugify_pleiades_title(title)
+            place_keys = m.get("place_keys") or []
+            ids = m.get("pleiades_ids", []) or []
+            if place_keys:
+                place_key = place_keys[0]
+            elif ids:
+                primary = ids[0]
+                if primary.isdigit():
+                    title = titles.get(primary, primary)
+                    place_key = slugify_pleiades_title(title)
+                else:
+                    # Backward-compat path: an older route_candidates.json
+                    # might still encode curator slugs as pleiades_ids.
+                    place_key = primary
             else:
-                place_key = primary
+                continue
             key = (m["surface"], place_key)
             if key in seen:
                 continue

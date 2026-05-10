@@ -31,6 +31,9 @@
             "surface": "Κύπρον",
             "lemma": "Κύπρος",
             "pleiades_ids": [
+              "707498"
+            ],
+            "place_keys": [
               "cyprus_island"
             ],
             "match_type": "curator",
@@ -40,6 +43,9 @@
             "surface": "κοίλην Συρίαν",
             "lemma": "κοιλην συριαν",
             "pleiades_ids": [
+              "678096"
+            ],
+            "place_keys": [
               "coele_syria"
             ],
             "match_type": "curator",
@@ -49,6 +55,9 @@
             "surface": "Παλαιστίνης",
             "lemma": "παλαιστινης",
             "pleiades_ids": [
+              "1001939"
+            ],
+            "place_keys": [
               "palestine"
             ],
             "match_type": "curator",
@@ -58,6 +67,9 @@
             "surface": "Λῆμνον",
             "lemma": "Λῆμνος",
             "pleiades_ids": [
+              "550693"
+            ],
+            "place_keys": [
               "lemnos"
             ],
             "match_type": "curator",
@@ -67,6 +79,9 @@
             "surface": "Ἀσίας",
             "lemma": "Ἀσία",
             "pleiades_ids": [
+              "981509"
+            ],
+            "place_keys": [
               "asia_province"
             ],
             "match_type": "curator",
@@ -76,6 +91,9 @@
             "surface": "Ῥώμην",
             "lemma": "Ῥώμη",
             "pleiades_ids": [
+              "423025"
+            ],
+            "place_keys": [
               "rome"
             ],
             "match_type": "curator",
@@ -85,6 +103,9 @@
             "surface": "Θρᾴκης",
             "lemma": "Θρᾳκία",
             "pleiades_ids": [
+              "501638"
+            ],
+            "place_keys": [
               "thracia_region"
             ],
             "match_type": "curator",
@@ -94,6 +115,9 @@
             "surface": "Μακεδονίας",
             "lemma": "Μακεδονία",
             "pleiades_ids": [
+              "491656"
+            ],
+            "place_keys": [
               "macedonia_region"
             ],
             "match_type": "curator",
@@ -103,6 +127,9 @@
             "surface": "Τρῳάδος Ἀλεξανδρείας",
             "lemma": "τρωαδος αλεξανδρειας",
             "pleiades_ids": [
+              "550434"
+            ],
+            "place_keys": [
               "alexandria_troas"
             ],
             "match_type": "curator",
@@ -112,6 +139,9 @@
             "surface": "Θεσσαλονίκην",
             "lemma": "θεσσαλονικην",
             "pleiades_ids": [
+              "491741"
+            ],
+            "place_keys": [
               "thessalonica"
             ],
             "match_type": "curator",
@@ -121,6 +151,9 @@
             "surface": "Σάμον",
             "lemma": "Σάμος",
             "pleiades_ids": [
+              "599926"
+            ],
+            "place_keys": [
               "samos"
             ],
             "match_type": "curator",
@@ -130,6 +163,9 @@
             "surface": "Χίον",
             "lemma": "Χίος",
             "pleiades_ids": [
+              "550497"
+            ],
+            "place_keys": [
               "chios"
             ],
             "match_type": "curator",
@@ -139,6 +175,9 @@
             "surface": "Αἰγαῖον",
             "lemma": "Αἰγαῖος",
             "pleiades_ids": [
+              "560221"
+            ],
+            "place_keys": [
               "aegean_sea"
             ],
             "match_type": "curator",
@@ -167,6 +206,9 @@
                 "surface": "Κύπρον",
                 "lemma": "Κύπρος",
                 "pleiades_ids": [
+                  "707498"
+                ],
+                "place_keys": [
                   "cyprus_island"
                 ],
                 "match_type": "curator",
@@ -176,6 +218,9 @@
                 "surface": "κοίλην Συρίαν",
                 "lemma": "κοιλην συριαν",
                 "pleiades_ids": [
+                  "678096"
+                ],
+                "place_keys": [
                   "coele_syria"
                 ],
                 "match_type": "curator",
@@ -185,6 +230,9 @@
                 "surface": "Παλαιστίνης",
                 "lemma": "παλαιστινης",
                 "pleiades_ids": [
+                  "1001939"
+                ],
+                "place_keys": [
                   "palestine"
                 ],
                 "match_type": "curator",
@@ -194,6 +242,9 @@
                 "surface": "Λῆμνον",
                 "lemma": "Λῆμνος",
                 "pleiades_ids": [
+                  "550693"
+                ],
+                "place_keys": [
                   "lemnos"
                 ],
                 "match_type": "curator",
@@ -217,6 +268,9 @@
                 "surface": "Ἀσίας",
                 "lemma": "Ἀσία",
                 "pleiades_ids": [
+                  "981509"
+                ],
+                "place_keys": [
                   "asia_province"
                 ],
                 "match_type": "curator",
@@ -226,6 +280,9 @@
                 "surface": "Ῥώμην",
                 "lemma": "Ῥώμη",
                 "pleiades_ids": [
+                  "423025"
+                ],
+                "place_keys": [
                   "rome"
                 ],
                 "match_type": "curator",
@@ -235,6 +292,9 @@
                 "surface": "Θρᾴκης",
                 "lemma": "Θρᾳκία",
                 "pleiades_ids": [
+                  "501638"
+                ],
+                "place_keys": [
                   "thracia_region"
                 ],
                 "match_type": "curator",
@@ -244,6 +304,9 @@
                 "surface": "Μακεδονίας",
                 "lemma": "Μακεδονία",
                 "pleiades_ids": [
+                  "491656"
+                ],
+                "place_keys": [
                   "macedonia_region"
                 ],
                 "match_type": "curator",
@@ -253,6 +316,9 @@
                 "surface": "Τρῳάδος Ἀλεξανδρείας",
                 "lemma": "τρωαδος αλεξανδρειας",
                 "pleiades_ids": [
+                  "550434"
+                ],
+                "place_keys": [
                   "alexandria_troas"
                 ],
                 "match_type": "curator",
@@ -262,6 +328,9 @@
                 "surface": "Λῆμνον",
                 "lemma": "Λῆμνος",
                 "pleiades_ids": [
+                  "550693"
+                ],
+                "place_keys": [
                   "lemnos"
                 ],
                 "match_type": "curator",
@@ -271,6 +340,9 @@
                 "surface": "Θεσσαλονίκην",
                 "lemma": "θεσσαλονικην",
                 "pleiades_ids": [
+                  "491741"
+                ],
+                "place_keys": [
                   "thessalonica"
                 ],
                 "match_type": "curator",
@@ -294,6 +366,9 @@
                 "surface": "Σάμον",
                 "lemma": "Σάμος",
                 "pleiades_ids": [
+                  "599926"
+                ],
+                "place_keys": [
                   "samos"
                 ],
                 "match_type": "curator",
@@ -303,6 +378,9 @@
                 "surface": "Χίον",
                 "lemma": "Χίος",
                 "pleiades_ids": [
+                  "550497"
+                ],
+                "place_keys": [
                   "chios"
                 ],
                 "match_type": "curator",
@@ -312,6 +390,9 @@
                 "surface": "Αἰγαῖον",
                 "lemma": "Αἰγαῖος",
                 "pleiades_ids": [
+                  "560221"
+                ],
+                "place_keys": [
                   "aegean_sea"
                 ],
                 "match_type": "curator",
@@ -321,6 +402,9 @@
                 "surface": "Λῆμνον",
                 "lemma": "Λῆμνος",
                 "pleiades_ids": [
+                  "550693"
+                ],
+                "place_keys": [
                   "lemnos"
                 ],
                 "match_type": "curator",
@@ -343,6 +427,9 @@
             "surface": "Ἰταλίας",
             "lemma": "Ἰταλία",
             "pleiades_ids": [
+              "1052"
+            ],
+            "place_keys": [
               "italia_peninsula"
             ],
             "match_type": "curator",
@@ -352,6 +439,9 @@
             "surface": "Μακεδονίαν",
             "lemma": "Μακεδονία",
             "pleiades_ids": [
+              "491656"
+            ],
+            "place_keys": [
               "macedonia_region"
             ],
             "match_type": "curator",
@@ -361,6 +451,9 @@
             "surface": "Φιλίπποις",
             "lemma": "φιλιπποις",
             "pleiades_ids": [
+              "501482"
+            ],
+            "place_keys": [
               "philippi"
             ],
             "match_type": "curator",
@@ -370,6 +463,9 @@
             "surface": "Θρᾴκῃ",
             "lemma": "Θρᾳκία",
             "pleiades_ids": [
+              "501638"
+            ],
+            "place_keys": [
               "thracia_region"
             ],
             "match_type": "curator",
@@ -379,6 +475,9 @@
             "surface": "Θάσον",
             "lemma": "Θάσος",
             "pleiades_ids": [
+              "501635"
+            ],
+            "place_keys": [
               "thasos"
             ],
             "match_type": "curator",
@@ -388,6 +487,9 @@
             "surface": "Λῆμνον",
             "lemma": "Λῆμνος",
             "pleiades_ids": [
+              "550693"
+            ],
+            "place_keys": [
               "lemnos"
             ],
             "match_type": "curator",
@@ -397,6 +499,9 @@
             "surface": "Ἀλεξανδρείαν Τρῳάδα",
             "lemma": "αλεξανδρειαν τρωαδα",
             "pleiades_ids": [
+              "550434"
+            ],
+            "place_keys": [
               "alexandria_troas"
             ],
             "match_type": "curator",
@@ -406,6 +511,9 @@
             "surface": "Ἡφαιστιάδα",
             "lemma": "ηφαιστιαδα",
             "pleiades_ids": [
+              "550569"
+            ],
+            "place_keys": [
               "hephaistia"
             ],
             "match_type": "curator",
@@ -430,6 +538,9 @@
                 "surface": "Ἰταλίας",
                 "lemma": "Ἰταλία",
                 "pleiades_ids": [
+                  "1052"
+                ],
+                "place_keys": [
                   "italia_peninsula"
                 ],
                 "match_type": "curator",
@@ -439,6 +550,9 @@
                 "surface": "Μακεδονίαν",
                 "lemma": "Μακεδονία",
                 "pleiades_ids": [
+                  "491656"
+                ],
+                "place_keys": [
                   "macedonia_region"
                 ],
                 "match_type": "curator",
@@ -448,6 +562,9 @@
                 "surface": "Φιλίπποις",
                 "lemma": "φιλιπποις",
                 "pleiades_ids": [
+                  "501482"
+                ],
+                "place_keys": [
                   "philippi"
                 ],
                 "match_type": "curator",
@@ -457,6 +574,9 @@
                 "surface": "Θρᾴκῃ",
                 "lemma": "Θρᾳκία",
                 "pleiades_ids": [
+                  "501638"
+                ],
+                "place_keys": [
                   "thracia_region"
                 ],
                 "match_type": "curator",
@@ -466,6 +586,9 @@
                 "surface": "Θάσον",
                 "lemma": "Θάσος",
                 "pleiades_ids": [
+                  "501635"
+                ],
+                "place_keys": [
                   "thasos"
                 ],
                 "match_type": "curator",
@@ -475,6 +598,9 @@
                 "surface": "Λῆμνον",
                 "lemma": "Λῆμνος",
                 "pleiades_ids": [
+                  "550693"
+                ],
+                "place_keys": [
                   "lemnos"
                 ],
                 "match_type": "curator",
@@ -484,6 +610,9 @@
                 "surface": "Ἀλεξανδρείαν Τρῳάδα",
                 "lemma": "αλεξανδρειαν τρωαδα",
                 "pleiades_ids": [
+                  "550434"
+                ],
+                "place_keys": [
                   "alexandria_troas"
                 ],
                 "match_type": "curator",
@@ -507,6 +636,9 @@
                 "surface": "Ἡφαιστιάδα",
                 "lemma": "ηφαιστιαδα",
                 "pleiades_ids": [
+                  "550569"
+                ],
+                "place_keys": [
                   "hephaistia"
                 ],
                 "match_type": "curator",
@@ -529,6 +661,9 @@
             "surface": "Λυκίαν",
             "lemma": "Λυκία",
             "pleiades_ids": [
+              "638965"
+            ],
+            "place_keys": [
               "lycia"
             ],
             "match_type": "curator",
@@ -538,7 +673,22 @@
             "surface": "κοίλης Συρίας",
             "lemma": "κοιλης συριας",
             "pleiades_ids": [
+              "678096"
+            ],
+            "place_keys": [
               "coele_syria"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "νεκρὰν ὀνομαζομένην θάλασσαν",
+            "lemma": "νεκραν ονομαζομενην θαλασσαν",
+            "pleiades_ids": [
+              "697709"
+            ],
+            "place_keys": [
+              "dead_sea"
             ],
             "match_type": "curator",
             "cert": "secure"
@@ -566,6 +716,9 @@
                 "surface": "Λυκίαν",
                 "lemma": "Λυκία",
                 "pleiades_ids": [
+                  "638965"
+                ],
+                "place_keys": [
                   "lycia"
                 ],
                 "match_type": "curator",
@@ -589,7 +742,22 @@
                 "surface": "κοίλης Συρίας",
                 "lemma": "κοιλης συριας",
                 "pleiades_ids": [
+                  "678096"
+                ],
+                "place_keys": [
                   "coele_syria"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "νεκρὰν ὀνομαζομένην θάλασσαν",
+                "lemma": "νεκραν ονομαζομενην θαλασσαν",
+                "pleiades_ids": [
+                  "697709"
+                ],
+                "place_keys": [
+                  "dead_sea"
                 ],
                 "match_type": "curator",
                 "cert": "secure"
@@ -624,6 +792,9 @@
             "surface": "Κύπρῳ",
             "lemma": "Κύπρος",
             "pleiades_ids": [
+              "707498"
+            ],
+            "place_keys": [
               "cyprus_island"
             ],
             "match_type": "curator",
@@ -633,6 +804,9 @@
             "surface": "Σόλων",
             "lemma": "σολων",
             "pleiades_ids": [
+              "707624"
+            ],
+            "place_keys": [
               "soloi_cyprus"
             ],
             "match_type": "curator",
@@ -657,6 +831,9 @@
                 "surface": "Κύπρῳ",
                 "lemma": "Κύπρος",
                 "pleiades_ids": [
+                  "707498"
+                ],
+                "place_keys": [
                   "cyprus_island"
                 ],
                 "match_type": "curator",
@@ -666,6 +843,9 @@
                 "surface": "Σόλων",
                 "lemma": "σολων",
                 "pleiades_ids": [
+                  "707624"
+                ],
+                "place_keys": [
                   "soloi_cyprus"
                 ],
                 "match_type": "curator",
@@ -701,6 +881,9 @@
             "surface": "Σόλοις",
             "lemma": "σολοις",
             "pleiades_ids": [
+              "707624"
+            ],
+            "place_keys": [
               "soloi_cyprus"
             ],
             "match_type": "curator",
@@ -710,6 +893,9 @@
             "surface": "Ἀσίαν",
             "lemma": "Ἀσία",
             "pleiades_ids": [
+              "981509"
+            ],
+            "place_keys": [
               "asia_province"
             ],
             "match_type": "curator",
@@ -719,6 +905,9 @@
             "surface": "Ἰταλίαν",
             "lemma": "Ἰταλία",
             "pleiades_ids": [
+              "1052"
+            ],
+            "place_keys": [
               "italia_peninsula"
             ],
             "match_type": "curator",
@@ -743,6 +932,9 @@
                 "surface": "Σόλοις",
                 "lemma": "σολοις",
                 "pleiades_ids": [
+                  "707624"
+                ],
+                "place_keys": [
                   "soloi_cyprus"
                 ],
                 "match_type": "curator",
@@ -766,6 +958,9 @@
                 "surface": "Ἀσίαν",
                 "lemma": "Ἀσία",
                 "pleiades_ids": [
+                  "981509"
+                ],
+                "place_keys": [
                   "asia_province"
                 ],
                 "match_type": "curator",
@@ -775,6 +970,9 @@
                 "surface": "Ἰταλίαν",
                 "lemma": "Ἰταλία",
                 "pleiades_ids": [
+                  "1052"
+                ],
+                "place_keys": [
                   "italia_peninsula"
                 ],
                 "match_type": "curator",
@@ -797,6 +995,9 @@
             "surface": "Κύπρῳ",
             "lemma": "Κύπρος",
             "pleiades_ids": [
+              "707498"
+            ],
+            "place_keys": [
               "cyprus_island"
             ],
             "match_type": "curator",
@@ -806,6 +1007,9 @@
             "surface": "Σόλων",
             "lemma": "σολων",
             "pleiades_ids": [
+              "707624"
+            ],
+            "place_keys": [
               "soloi_cyprus"
             ],
             "match_type": "curator",
@@ -815,6 +1019,9 @@
             "surface": "Ἀσίαν",
             "lemma": "Ἀσία",
             "pleiades_ids": [
+              "981509"
+            ],
+            "place_keys": [
               "asia_province"
             ],
             "match_type": "curator",
@@ -824,6 +1031,9 @@
             "surface": "Ῥώμην",
             "lemma": "Ῥώμη",
             "pleiades_ids": [
+              "423025"
+            ],
+            "place_keys": [
               "rome"
             ],
             "match_type": "curator",
@@ -852,6 +1062,9 @@
                 "surface": "Κύπρῳ",
                 "lemma": "Κύπρος",
                 "pleiades_ids": [
+                  "707498"
+                ],
+                "place_keys": [
                   "cyprus_island"
                 ],
                 "match_type": "curator",
@@ -861,6 +1074,9 @@
                 "surface": "Σόλων",
                 "lemma": "σολων",
                 "pleiades_ids": [
+                  "707624"
+                ],
+                "place_keys": [
                   "soloi_cyprus"
                 ],
                 "match_type": "curator",
@@ -892,6 +1108,9 @@
                 "surface": "Ἀσίαν",
                 "lemma": "Ἀσία",
                 "pleiades_ids": [
+                  "981509"
+                ],
+                "place_keys": [
                   "asia_province"
                 ],
                 "match_type": "curator",
@@ -901,6 +1120,9 @@
                 "surface": "Ῥώμην",
                 "lemma": "Ῥώμη",
                 "pleiades_ids": [
+                  "423025"
+                ],
+                "place_keys": [
                   "rome"
                 ],
                 "match_type": "curator",
@@ -936,6 +1158,9 @@
             "surface": "Κύπρῳ",
             "lemma": "Κύπρος",
             "pleiades_ids": [
+              "707498"
+            ],
+            "place_keys": [
               "cyprus_island"
             ],
             "match_type": "curator",
@@ -945,6 +1170,9 @@
             "surface": "Ἐργαστήρια",
             "lemma": "εργαστηρια",
             "pleiades_ids": [
+              "550534"
+            ],
+            "place_keys": [
               "ergasteria"
             ],
             "match_type": "curator",
@@ -954,6 +1182,9 @@
             "surface": "Περγάμου",
             "lemma": "Πέργαμον",
             "pleiades_ids": [
+              "550812"
+            ],
+            "place_keys": [
               "pergamum"
             ],
             "match_type": "curator",
@@ -963,6 +1194,9 @@
             "surface": "Κυζίκου",
             "lemma": "Κύζικος",
             "pleiades_ids": [
+              "511218"
+            ],
+            "place_keys": [
               "cyzicus"
             ],
             "match_type": "curator",
@@ -991,6 +1225,9 @@
                 "surface": "Κύπρῳ",
                 "lemma": "Κύπρος",
                 "pleiades_ids": [
+                  "707498"
+                ],
+                "place_keys": [
                   "cyprus_island"
                 ],
                 "match_type": "curator",
@@ -1000,6 +1237,9 @@
                 "surface": "Ἐργαστήρια",
                 "lemma": "εργαστηρια",
                 "pleiades_ids": [
+                  "550534"
+                ],
+                "place_keys": [
                   "ergasteria"
                 ],
                 "match_type": "curator",
@@ -1009,6 +1249,9 @@
                 "surface": "Περγάμου",
                 "lemma": "Πέργαμον",
                 "pleiades_ids": [
+                  "550812"
+                ],
+                "place_keys": [
                   "pergamum"
                 ],
                 "match_type": "curator",
@@ -1036,6 +1279,9 @@
                 "surface": "Ἐργαστήρια",
                 "lemma": "εργαστηρια",
                 "pleiades_ids": [
+                  "550534"
+                ],
+                "place_keys": [
                   "ergasteria"
                 ],
                 "match_type": "curator",
@@ -1045,6 +1291,9 @@
                 "surface": "Περγάμου",
                 "lemma": "Πέργαμον",
                 "pleiades_ids": [
+                  "550812"
+                ],
+                "place_keys": [
                   "pergamum"
                 ],
                 "match_type": "curator",
@@ -1054,6 +1303,9 @@
                 "surface": "Κυζίκου",
                 "lemma": "Κύζικος",
                 "pleiades_ids": [
+                  "511218"
+                ],
+                "place_keys": [
                   "cyzicus"
                 ],
                 "match_type": "curator",
@@ -1076,6 +1328,9 @@
             "surface": "Κύπρου",
             "lemma": "Κύπρος",
             "pleiades_ids": [
+              "707498"
+            ],
+            "place_keys": [
               "cyprus_island"
             ],
             "match_type": "curator",
@@ -1100,6 +1355,9 @@
                 "surface": "Κύπρου",
                 "lemma": "Κύπρος",
                 "pleiades_ids": [
+                  "707498"
+                ],
+                "place_keys": [
                   "cyprus_island"
                 ],
                 "match_type": "curator",
@@ -1135,6 +1393,9 @@
             "surface": "Κύπρῳ",
             "lemma": "Κύπρος",
             "pleiades_ids": [
+              "707498"
+            ],
+            "place_keys": [
               "cyprus_island"
             ],
             "match_type": "curator",
@@ -1159,6 +1420,9 @@
                 "surface": "Κύπρῳ",
                 "lemma": "Κύπρος",
                 "pleiades_ids": [
+                  "707498"
+                ],
+                "place_keys": [
                   "cyprus_island"
                 ],
                 "match_type": "curator",
@@ -1194,6 +1458,9 @@
             "surface": "Μυσίᾳ",
             "lemma": "μυσια",
             "pleiades_ids": [
+              "550759"
+            ],
+            "place_keys": [
               "mysia"
             ],
             "match_type": "curator",
@@ -1218,6 +1485,9 @@
                 "surface": "Μυσίᾳ",
                 "lemma": "μυσια",
                 "pleiades_ids": [
+                  "550759"
+                ],
+                "place_keys": [
                   "mysia"
                 ],
                 "match_type": "curator",
@@ -1255,6 +1525,9 @@
             "surface": "Ῥώμην",
             "lemma": "Ῥώμη",
             "pleiades_ids": [
+              "423025"
+            ],
+            "place_keys": [
               "rome"
             ],
             "match_type": "curator",
@@ -1279,6 +1552,9 @@
                 "surface": "Ῥώμην",
                 "lemma": "Ῥώμη",
                 "pleiades_ids": [
+                  "423025"
+                ],
+                "place_keys": [
                   "rome"
                 ],
                 "match_type": "curator",
@@ -1314,6 +1590,9 @@
             "surface": "Κύπρον",
             "lemma": "Κύπρος",
             "pleiades_ids": [
+              "707498"
+            ],
+            "place_keys": [
               "cyprus_island"
             ],
             "match_type": "curator",
@@ -1323,6 +1602,9 @@
             "surface": "Παλαιστίνης",
             "lemma": "παλαιστινης",
             "pleiades_ids": [
+              "1001939"
+            ],
+            "place_keys": [
               "palestine"
             ],
             "match_type": "curator",
@@ -1332,6 +1614,9 @@
             "surface": "Συρίας",
             "lemma": "συρία",
             "pleiades_ids": [
+              "678096"
+            ],
+            "place_keys": [
               "coele_syria"
             ],
             "match_type": "curator",
@@ -1341,6 +1626,9 @@
             "surface": "Λῆμνον",
             "lemma": "Λῆμνος",
             "pleiades_ids": [
+              "550693"
+            ],
+            "place_keys": [
               "lemnos"
             ],
             "match_type": "curator",
@@ -1369,6 +1657,9 @@
                 "surface": "Κύπρον",
                 "lemma": "Κύπρος",
                 "pleiades_ids": [
+                  "707498"
+                ],
+                "place_keys": [
                   "cyprus_island"
                 ],
                 "match_type": "curator",
@@ -1378,6 +1669,9 @@
                 "surface": "Παλαιστίνης",
                 "lemma": "παλαιστινης",
                 "pleiades_ids": [
+                  "1001939"
+                ],
+                "place_keys": [
                   "palestine"
                 ],
                 "match_type": "curator",
@@ -1387,6 +1681,9 @@
                 "surface": "Συρίας",
                 "lemma": "συρία",
                 "pleiades_ids": [
+                  "678096"
+                ],
+                "place_keys": [
                   "coele_syria"
                 ],
                 "match_type": "curator",
@@ -1418,6 +1715,9 @@
                 "surface": "Λῆμνον",
                 "lemma": "Λῆμνος",
                 "pleiades_ids": [
+                  "550693"
+                ],
+                "place_keys": [
                   "lemnos"
                 ],
                 "match_type": "curator",
@@ -1453,6 +1753,9 @@
             "surface": "Ἰταλίαν",
             "lemma": "Ἰταλία",
             "pleiades_ids": [
+              "1052"
+            ],
+            "place_keys": [
               "italia_peninsula"
             ],
             "match_type": "curator",
@@ -1462,6 +1765,9 @@
             "surface": "Νεάπολιν",
             "lemma": "νεαπολιν",
             "pleiades_ids": [
+              "433014"
+            ],
+            "place_keys": [
               "neapolis_campania"
             ],
             "match_type": "curator",
@@ -1486,6 +1792,9 @@
                 "surface": "Ἰταλίαν",
                 "lemma": "Ἰταλία",
                 "pleiades_ids": [
+                  "1052"
+                ],
+                "place_keys": [
                   "italia_peninsula"
                 ],
                 "match_type": "curator",
@@ -1495,6 +1804,9 @@
                 "surface": "Νεάπολιν",
                 "lemma": "νεαπολιν",
                 "pleiades_ids": [
+                  "433014"
+                ],
+                "place_keys": [
                   "neapolis_campania"
                 ],
                 "match_type": "curator",
@@ -1518,6 +1830,9 @@
                 "surface": "Ἰταλίας",
                 "lemma": "Ἰταλία",
                 "pleiades_ids": [
+                  "1052"
+                ],
+                "place_keys": [
                   "italia_peninsula"
                 ],
                 "match_type": "curator",
@@ -1540,6 +1855,9 @@
             "surface": "Ἰταλίαν",
             "lemma": "Ἰταλία",
             "pleiades_ids": [
+              "1052"
+            ],
+            "place_keys": [
               "italia_peninsula"
             ],
             "match_type": "curator",
@@ -1549,6 +1867,9 @@
             "surface": "Κρήτης",
             "lemma": "Κρήτη",
             "pleiades_ids": [
+              "589748"
+            ],
+            "place_keys": [
               "crete"
             ],
             "match_type": "curator",
@@ -1558,6 +1879,9 @@
             "surface": "Ῥώμης",
             "lemma": "ῥώμη",
             "pleiades_ids": [
+              "423025"
+            ],
+            "place_keys": [
               "rome"
             ],
             "match_type": "curator",
@@ -1582,6 +1906,9 @@
                 "surface": "Ἰταλίαν",
                 "lemma": "Ἰταλία",
                 "pleiades_ids": [
+                  "1052"
+                ],
+                "place_keys": [
                   "italia_peninsula"
                 ],
                 "match_type": "curator",
@@ -1605,6 +1932,9 @@
                 "surface": "Κρήτης",
                 "lemma": "Κρήτη",
                 "pleiades_ids": [
+                  "589748"
+                ],
+                "place_keys": [
                   "crete"
                 ],
                 "match_type": "curator",
@@ -1614,6 +1944,9 @@
                 "surface": "Ῥώμης",
                 "lemma": "ῥώμη",
                 "pleiades_ids": [
+                  "423025"
+                ],
+                "place_keys": [
                   "rome"
                 ],
                 "match_type": "curator",
@@ -1636,6 +1969,9 @@
             "surface": "Ἀσίᾳ",
             "lemma": "Ἀσία",
             "pleiades_ids": [
+              "981509"
+            ],
+            "place_keys": [
               "asia_province"
             ],
             "match_type": "curator",
@@ -1645,6 +1981,9 @@
             "surface": "Κυζίκῳ",
             "lemma": "Κύζικος",
             "pleiades_ids": [
+              "511218"
+            ],
+            "place_keys": [
               "cyzicus"
             ],
             "match_type": "curator",
@@ -1654,6 +1993,9 @@
             "surface": "Ἰταλίαν",
             "lemma": "Ἰταλία",
             "pleiades_ids": [
+              "1052"
+            ],
+            "place_keys": [
               "italia_peninsula"
             ],
             "match_type": "curator",
@@ -1678,6 +2020,9 @@
                 "surface": "Ἀσίᾳ",
                 "lemma": "Ἀσία",
                 "pleiades_ids": [
+                  "981509"
+                ],
+                "place_keys": [
                   "asia_province"
                 ],
                 "match_type": "curator",
@@ -1687,6 +2032,9 @@
                 "surface": "Κυζίκῳ",
                 "lemma": "Κύζικος",
                 "pleiades_ids": [
+                  "511218"
+                ],
+                "place_keys": [
                   "cyzicus"
                 ],
                 "match_type": "curator",
@@ -1696,6 +2044,9 @@
                 "surface": "Ἰταλίαν",
                 "lemma": "Ἰταλία",
                 "pleiades_ids": [
+                  "1052"
+                ],
+                "place_keys": [
                   "italia_peninsula"
                 ],
                 "match_type": "curator",
@@ -1731,6 +2082,9 @@
             "surface": "Ῥώμην",
             "lemma": "Ῥώμη",
             "pleiades_ids": [
+              "423025"
+            ],
+            "place_keys": [
               "rome"
             ],
             "match_type": "curator",
@@ -1740,6 +2094,9 @@
             "surface": "Κρήτης",
             "lemma": "Κρήτη",
             "pleiades_ids": [
+              "589748"
+            ],
+            "place_keys": [
               "crete"
             ],
             "match_type": "curator",
@@ -1764,6 +2121,9 @@
                 "surface": "Ῥώμην",
                 "lemma": "Ῥώμη",
                 "pleiades_ids": [
+                  "423025"
+                ],
+                "place_keys": [
                   "rome"
                 ],
                 "match_type": "curator",
@@ -1773,6 +2133,9 @@
                 "surface": "Κρήτης",
                 "lemma": "Κρήτη",
                 "pleiades_ids": [
+                  "589748"
+                ],
+                "place_keys": [
                   "crete"
                 ],
                 "match_type": "curator",
@@ -1796,6 +2159,9 @@
                 "surface": "Κρήτης",
                 "lemma": "Κρήτη",
                 "pleiades_ids": [
+                  "589748"
+                ],
+                "place_keys": [
                   "crete"
                 ],
                 "match_type": "curator",

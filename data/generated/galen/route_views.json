@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-10T08:30:40+00:00",
+  "generated_at": "2026-05-10T08:42:47+00:00",
   "source": "data/galen/lexicon/places.json + data/galen/materia/materia.json + scripts/galen/build_galen_routes.py",
   "views": {
     "lemnos-alexandria-troas-to-thessalonica-context": {
@@ -1092,12 +1092,19 @@
               "passage_id": "smt.9.2"
             },
             {
+              "surface": "νεκρὰν ὀνομαζομένην θάλασσαν",
+              "passage_id": "smt.9.2"
+            },
+            {
               "surface": "Ἀσφαλτῖτις",
               "passage_id": "smt.9.2"
             }
           ],
-          "materia_keys": [],
-          "notes": "Galen uses the descriptive phrase 'the so-called dead sea' (νεκρὰν ὀνομαζομένην θάλασσαν), not a single capitalized toponym, so the auto-detector misses it. Surface forms are lowercased multi-word; the override matches them via the curator_lemma_index.",
+          "materia_keys": [
+            "asphalt",
+            "bituminous-stones"
+          ],
+          "notes": "A 'complex-designator' toponym: Galen names the Dead Sea via the descriptive phrase 'the so-called dead sea' (νεκρὰν ὀνομαζομένην θάλασσαν), not a single capitalized noun, so the survey's standard tokenizer misses it. The full phrase is registered as an `ancient_names_in_galen` surface so the multi-word lookup in scripts/galen/survey_routes.py picks it up. See docs/galen_route_decisions.md § 'Complex designators' for the broader pattern.",
           "order_basis": "strongly_implied",
           "evidence_phrase": "ἐν τῷ λόφῳ γεννωμένας τῷ περιέχοντι τὴν νεκρὰν ὀνομαζομένην θάλασσαν",
           "narrative_note": "The 'so-called Dead Sea' — Galen's term, in the eastern part of Coele Syria, where both asphalt and the bituminous stones come from.",
@@ -2427,12 +2434,19 @@
               "passage_id": "smt.9.2"
             },
             {
+              "surface": "νεκρὰν ὀνομαζομένην θάλασσαν",
+              "passage_id": "smt.9.2"
+            },
+            {
               "surface": "Ἀσφαλτῖτις",
               "passage_id": "smt.9.2"
             }
           ],
-          "materia_keys": [],
-          "notes": "Galen uses the descriptive phrase 'the so-called dead sea' (νεκρὰν ὀνομαζομένην θάλασσαν), not a single capitalized toponym, so the auto-detector misses it. Surface forms are lowercased multi-word; the override matches them via the curator_lemma_index.",
+          "materia_keys": [
+            "asphalt",
+            "bituminous-stones"
+          ],
+          "notes": "A 'complex-designator' toponym: Galen names the Dead Sea via the descriptive phrase 'the so-called dead sea' (νεκρὰν ὀνομαζομένην θάλασσαν), not a single capitalized noun, so the survey's standard tokenizer misses it. The full phrase is registered as an `ancient_names_in_galen` surface so the multi-word lookup in scripts/galen/survey_routes.py picks it up. See docs/galen_route_decisions.md § 'Complex designators' for the broader pattern.",
           "order_basis": "strongly_implied",
           "evidence_phrase": "ἐν τῷ λόφῳ γεννωμένας τῷ περιέχοντι τὴν νεκρὰν ὀνομαζομένην θάλασσαν",
           "narrative_note": "The 'so-called Dead Sea' — Galen's term, in the eastern part of Coele Syria, where both asphalt and the bituminous stones come from.",

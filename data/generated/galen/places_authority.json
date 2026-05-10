@@ -248,6 +248,40 @@
     "notes": "City on the Propontis; appears as context in the Pergamum → Ergasteria passage (SMT 9.3) and as a place Galen comments on minerals (De antidotis 1.10)."
   },
   {
+    "place_key": "dead_sea",
+    "display_name": "Dead Sea (Asphaltitis Limne)",
+    "ancient_names_in_galen": [
+      {
+        "surface": "νεκρὰ θάλασσα",
+        "passage_id": "smt.9.2"
+      },
+      {
+        "surface": "νεκρὰν θάλασσαν",
+        "passage_id": "smt.9.2"
+      },
+      {
+        "surface": "νεκρᾶς θαλάσσης",
+        "passage_id": "smt.9.2"
+      },
+      {
+        "surface": "νεκρὰν ὀνομαζομένην θάλασσαν",
+        "passage_id": "smt.9.2"
+      },
+      {
+        "surface": "Ἀσφαλτῖτις",
+        "passage_id": "smt.9.2"
+      }
+    ],
+    "place_type": "sea",
+    "lat": 31.5113116065,
+    "lon": 35.4870544069,
+    "certainty": "probable",
+    "pleiades_id": "697709",
+    "pleiades_uri": "https://pleiades.stoa.org/places/697709",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "notes": "A 'complex-designator' toponym: Galen names the Dead Sea via the descriptive phrase 'the so-called dead sea' (νεκρὰν ὀνομαζομένην θάλασσαν), not a single capitalized noun, so the survey's standard tokenizer misses it. The full phrase is registered as an `ancient_names_in_galen` surface so the multi-word lookup in scripts/galen/survey_routes.py picks it up. See docs/galen_route_decisions.md § 'Complex designators' for the broader pattern."
+  },
+  {
     "place_key": "ergasteria",
     "display_name": "Ergasteria",
     "ancient_names_in_galen": [

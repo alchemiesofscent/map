@@ -182,6 +182,11 @@
         "surface": "κοίλης Συρίας",
         "place_key": "coele_syria",
         "evidence_category": "A"
+      },
+      {
+        "surface": "νεκρὰν ὀνομαζομένην θάλασσαν",
+        "place_key": "dead_sea",
+        "evidence_category": "A"
       }
     ],
     "materia_mentions": [

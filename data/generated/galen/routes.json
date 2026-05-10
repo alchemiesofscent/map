@@ -213,7 +213,10 @@
         "kuhn_citations": [
           "K. XII 203.0–204.2"
         ],
-        "materia_keys": [],
+        "materia_keys": [
+          "asphalt",
+          "bituminous-stones"
+        ],
         "narrative_note": "The 'so-called Dead Sea' — Galen's term, in the eastern part of Coele Syria, where both asphalt and the bituminous stones come from."
       }
     ],

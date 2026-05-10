@@ -54,10 +54,10 @@
         "evidence_phrase": "εἴς τε τὴν κοίλην Συρίαν … ἕνεκεν ἀσφάλτου … ἐπορεύθην"
       },
       {
-        "place_key": "coele_syria",
+        "place_key": "dead_sea",
         "relation": "sourced_from",
         "passage_id": "smt.9.2.a",
-        "evidence_phrase": "ἔνθα καὶ ἡ ἄσφαλτος γίνεται"
+        "evidence_phrase": "ἐν τῷ λόφῳ … τῷ περιέχοντι τὴν νεκρὰν ὀνομαζομένην θάλασσαν … ἔνθα καὶ ἡ ἄσφαλτος γίνεται"
       },
       {
         "place_key": "coele_syria",
@@ -66,7 +66,7 @@
         "evidence_phrase": "ἄσφαλτος μὲν γὰρ οὐδὲ δολωθῆναι δύναται πανούργως"
       }
     ],
-    "description": "Bituminous tar produced in the Dead Sea region of Coele Syria. Galen lists asphalt as the principal motivation for his Coele-Syria trip and remarks that — uniquely among the substances he investigated — it cannot be cunningly falsified."
+    "description": "Bituminous tar produced in the Dead Sea region of Coele Syria. Galen lists asphalt as the principal motivation for his Coele-Syria trip and remarks that — uniquely among the substances he investigated — it cannot be cunningly falsified. SMT 9.2 anchors the source specifically to the eastern hill of the Dead Sea (νεκρὰν ὀνομαζομένην θάλασσαν), 'where the asphalt is also produced.'"
   },
   {
     "materia_key": "bituminous-stones",
@@ -78,10 +78,16 @@
         "place_key": "coele_syria",
         "relation": "acquired",
         "passage_id": "smt.9.2.a",
-        "evidence_phrase": "ἐκόμισα πολλὰς ἐκ τῆς κοίλης Συρίας, ἐν τῷ λόφῳ … τὴν νεκρὰν … θάλασσαν"
+        "evidence_phrase": "ἐκόμισα πολλὰς ἐκ τῆς κοίλης Συρίας"
+      },
+      {
+        "place_key": "dead_sea",
+        "relation": "sourced_from",
+        "passage_id": "smt.9.2.a",
+        "evidence_phrase": "ἐν τῷ λόφῳ γεννωμένας τῷ περιέχοντι τὴν νεκρὰν ὀνομαζομένην θάλασσαν, ἐν τοῖς ἀνατολικοῖς αὐτῆς μέρεσιν"
       }
     ],
-    "description": "Flat black stones from the hill ringing the eastern Dead Sea that smell like asphalt and produce a faint flame when laid on a fire. Galen brought back many specimens (ἐκόμισα πολλάς). In the project's mapping these are kept distinct from `asphalt` itself: the stones are a portable mineral, the asphalt is the surface tar."
+    "description": "Flat black stones from the hill ringing the eastern Dead Sea that smell like asphalt and produce a faint flame when laid on a fire. Galen brought back many specimens (ἐκόμισα πολλάς). In the project's mapping these are kept distinct from `asphalt` itself: the stones are a portable mineral, the asphalt is the surface tar. The precise source — the eastern hill ringing the Dead Sea — is captured by the dead_sea place_link; the broader region is captured by the coele_syria link."
   },
   {
     "materia_key": "opobalsam",
