@@ -1,0 +1,488 @@
+[
+  {
+    "materia_key": "lemnian-earth",
+    "display_name": "Lemnian earth",
+    "greek_name": "Λημνία γῆ",
+    "category": "earth",
+    "place_links": [
+      {
+        "place_key": "lemnos",
+        "relation": "observed",
+        "passage_id": "smt.9.1.a",
+        "evidence_phrase": "εἰς Λῆμνον οὐκ ὤκνησα πλεῦσαι, θεασόμενος ὁπόσον μίγνυται τοῦ αἵματος τῇ γῇ"
+      },
+      {
+        "place_key": "hephaistia",
+        "relation": "acquired",
+        "passage_id": "smt.9.1.b",
+        "evidence_phrase": "τὴν Ἡφαιστιάδα διαγινώσκων τὴν θέσιν αὐτῆς (the Lemnian-earth collection city)"
+      },
+      {
+        "place_key": "lemnos",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "ἔπλευσα δὲ καὶ εἰς Λῆμνον … δι' οὐδὲν ἄλλο ἢ διὰ τὴν Λημνίαν"
+      }
+    ],
+    "description": "The famous red iron-rich clay (γῆ Λημνία) collected on Lemnos and pressed into stamped tablets (whence the variant name 'Lemnian seal'). Galen sailed twice from Asia Minor to investigate it personally — first via Thessalonica, second from Italy via Thasos — and later wrote the canonical description in SMT 9. The actual collection point is the city of Hephaistia on the island."
+  },
+  {
+    "materia_key": "lemnian-seal",
+    "display_name": "Lemnian seal",
+    "greek_name": "Λημνία σφραγίς",
+    "category": "earth",
+    "place_links": [
+      {
+        "place_key": "hephaistia",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "εἴτε γῆν ἐθέλει τις ὀνομάζειν, εἴτε σφραγῖδα"
+      }
+    ],
+    "description": "The same Lemnian clay as `lemnian-earth`, but in its prepared form: pressed into tablets bearing a stamp (σφραγίς). Galen complains of widespread counterfeiting and notes that 'whether you wish to call it Lemnian earth or seal' the genuine cannot be distinguished from the fake — hence the importance of his personal collection trip."
+  },
+  {
+    "materia_key": "asphalt",
+    "display_name": "Asphalt",
+    "greek_name": "ἄσφαλτος",
+    "category": "resin",
+    "place_links": [
+      {
+        "place_key": "coele_syria",
+        "relation": "sourced_from",
+        "passage_id": "smt.9.1.a",
+        "evidence_phrase": "εἴς τε τὴν κοίλην Συρίαν … ἕνεκεν ἀσφάλτου … ἐπορεύθην"
+      },
+      {
+        "place_key": "coele_syria",
+        "relation": "sourced_from",
+        "passage_id": "smt.9.2.a",
+        "evidence_phrase": "ἔνθα καὶ ἡ ἄσφαλτος γίνεται"
+      },
+      {
+        "place_key": "coele_syria",
+        "relation": "sourced_from",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "ἄσφαλτος μὲν γὰρ οὐδὲ δολωθῆναι δύναται πανούργως"
+      }
+    ],
+    "description": "Bituminous tar produced in the Dead Sea region of Coele Syria. Galen lists asphalt as the principal motivation for his Coele-Syria trip and remarks that — uniquely among the substances he investigated — it cannot be cunningly falsified."
+  },
+  {
+    "materia_key": "bituminous-stones",
+    "display_name": "Bituminous stones (Dead Sea pyrobitumen)",
+    "greek_name": "πλακώδεις λίθοι μέλαινοι",
+    "category": "mineral",
+    "place_links": [
+      {
+        "place_key": "coele_syria",
+        "relation": "acquired",
+        "passage_id": "smt.9.2.a",
+        "evidence_phrase": "ἐκόμισα πολλὰς ἐκ τῆς κοίλης Συρίας, ἐν τῷ λόφῳ … τὴν νεκρὰν … θάλασσαν"
+      }
+    ],
+    "description": "Flat black stones from the hill ringing the eastern Dead Sea that smell like asphalt and produce a faint flame when laid on a fire. Galen brought back many specimens (ἐκόμισα πολλάς). In the project's mapping these are kept distinct from `asphalt` itself: the stones are a portable mineral, the asphalt is the surface tar."
+  },
+  {
+    "materia_key": "opobalsam",
+    "display_name": "Opobalsam (balsam sap)",
+    "greek_name": "ὀποβάλσαμον",
+    "category": "resin",
+    "place_links": [
+      {
+        "place_key": "palestine",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "ἐκ τῆς Παλαιστίνης Συρίας ὀποβάλσαμον ἀκριβές"
+      }
+    ],
+    "description": "The aromatic sap of Commiphora opobalsamum, prized from antiquity. Galen specifies that he brought back genuine opobalsam from Palestinian Syria, and lists it (alongside asphalt and xylobalsam) as one of the three substances 'cunning falsifiers cannot fake.'"
+  },
+  {
+    "materia_key": "xylobalsam",
+    "display_name": "Xylobalsam (balsam wood)",
+    "greek_name": "ξυλοβάλσαμον",
+    "category": "resin",
+    "place_links": [
+      {
+        "place_key": "palestine",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "οὐδὲ ὁ τοῦ ὀποβαλσάμου καρπὸς ἢ τὸ ξυλοβάλσαμον"
+      }
+    ],
+    "description": "The wood / twigs of the balsam tree, used pharmacologically alongside opobalsam. Same Palestinian-Syrian source; same protective remark about non-falsifiability."
+  },
+  {
+    "materia_key": "cadmia",
+    "display_name": "Cadmia (calamine / zinc oxide)",
+    "greek_name": "καδμεία",
+    "category": "mineral",
+    "place_links": [
+      {
+        "place_key": "soloi_cyprus",
+        "relation": "acquired",
+        "passage_id": "smt.9.3.b",
+        "evidence_phrase": "ἐν γοῦν τοῖς Σόλοις … καθ' ὃν ἐγὼ χρόνον ἐπεδήμησα τῇ νήσῳ"
+      },
+      {
+        "place_key": "soloi_cyprus",
+        "relation": "observed",
+        "passage_id": "smt.9.3.c",
+        "evidence_phrase": "κατὰ τὸ μέταλλον ἐν Κύπρῳ … ἐν τοῖς τῶν Σόλων ὄρεσι"
+      },
+      {
+        "place_key": "cyprus_island",
+        "relation": "acquired",
+        "passage_id": "smt.9.3.d",
+        "evidence_phrase": "ἐν Κύπρῳ τὴν ἐν τοῖς ὄρεσιν καὶ ῥύαξι γεννωμένην καδμείαν ἔλαβον"
+      },
+      {
+        "place_key": "cyprus_island",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "καδμείαν τε πολλὴν ἐκεῖθεν ἐκόμισα (sc. ἐκ Κύπρου)"
+      }
+    ],
+    "description": "Zinc-bearing mineral generated in copper-smelting kilns and as a natural deposit in the Soli mining district of Cyprus. Galen makes much of two distinct varieties: kiln-produced cadmia (καμινευομένη) and 'mountain' cadmia (in the streams and ridges around Soli). Among his most-quoted Cyprus acquisitions; he kept his samples for thirty years."
+  },
+  {
+    "materia_key": "diphryges",
+    "display_name": "Diphryges",
+    "greek_name": "διφρυγές",
+    "category": "compound",
+    "place_links": [
+      {
+        "place_key": "soloi_cyprus",
+        "relation": "acquired",
+        "passage_id": "smt.9.3.a",
+        "evidence_phrase": "ἐκόμισα δὲ καὶ τούτου τοῦ φαρμάκου πολύ τι πλῆθος ἐκ τῶν ἐν Κύπρῳ Σόλων"
+      },
+      {
+        "place_key": "cyprus_island",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "καδμείαν τε πολλὴν … καὶ διφρυγὲς …"
+      }
+    ],
+    "description": "A copper-mining residue used as an astringent. The name (literally 'thrice-roasted') reflects its production via repeated smelting. Galen procured it at the Soli mine — thrown out, he notes, in the open ground between the smelting building and the village below it."
+  },
+  {
+    "materia_key": "spodium",
+    "display_name": "Spodium (copper-furnace ash)",
+    "greek_name": "σπόδιον",
+    "category": "mineral",
+    "place_links": [
+      {
+        "place_key": "cyprus_island",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "διφρυγὲς καὶ σπόδιον καὶ πομφόλυγα …"
+      }
+    ],
+    "description": "Furnace ash residue from copper smelting; a fine mineral powder used as an ophthalmic. Galen names it among the eight Cyprus mineral souvenirs in De antidotis 1.2."
+  },
+  {
+    "materia_key": "pompholyx",
+    "display_name": "Pompholyx (zinc oxide flue dust)",
+    "greek_name": "πομφόλυξ",
+    "category": "mineral",
+    "place_links": [
+      {
+        "place_key": "cyprus_island",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "καὶ σπόδιον καὶ πομφόλυγα χαλκῖτίν τε καὶ μίσυ καὶ σῶρυ καὶ χάλκανθον"
+      }
+    ],
+    "description": "The light, fluffy zinc-oxide deposit that condenses on the upper walls of copper-smelting furnaces (literally 'bubble' or 'puff'). Sister-substance to cadmia and spodium; likewise procured by Galen on Cyprus."
+  },
+  {
+    "materia_key": "chalcitis",
+    "display_name": "Chalcitis",
+    "greek_name": "χαλκῖτις",
+    "category": "mineral",
+    "place_links": [
+      {
+        "place_key": "soloi_cyprus",
+        "relation": "observed",
+        "passage_id": "smt.9.3.c",
+        "evidence_phrase": "ἐπ' αὐτῇ δὲ τὴν τῆς χαλκίτεως (the middle layer of the three-mineral sequence)"
+      },
+      {
+        "place_key": "cyprus_island",
+        "relation": "acquired",
+        "passage_id": "smt.9.3.e",
+        "evidence_phrase": "ὡς μετὰ ἔτη σχεδὸν κ΄ χαλκῖτις ἐγένετο, τοῦ ἔνδον ὄντος ἔτι χαλκάνθου"
+      },
+      {
+        "place_key": "cyprus_island",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "πομφόλυγα χαλκῖτίν τε καὶ μίσυ καὶ σῶρυ"
+      }
+    ],
+    "description": "Copper-iron sulfate mineral, the middle of the three concentric bands Galen observed in the Soli mine. The most striking pharmacological observation he makes about it: that pure chalcanthon, kept in a sample box, gradually transforms over twenty years into chalcitis from the outside in — a long-term mineral diagenesis only an autoptic collector with sample retention could record."
+  },
+  {
+    "materia_key": "misy",
+    "display_name": "Misy",
+    "greek_name": "μίσυ",
+    "category": "mineral",
+    "place_links": [
+      {
+        "place_key": "soloi_cyprus",
+        "relation": "observed",
+        "passage_id": "smt.9.3.c",
+        "evidence_phrase": "εἶτα τοῦ μίσυος (the topmost of the three layers)"
+      },
+      {
+        "place_key": "cyprus_island",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "καὶ μίσυ καὶ σῶρυ καὶ χάλκανθον"
+      }
+    ],
+    "description": "A yellowish pyrite-derivative mineral; the upper of the three concentric layers Galen describes in the Soli mine wall."
+  },
+  {
+    "materia_key": "sory",
+    "display_name": "Sory",
+    "greek_name": "σῶρυ",
+    "category": "mineral",
+    "place_links": [
+      {
+        "place_key": "soloi_cyprus",
+        "relation": "observed",
+        "passage_id": "smt.9.3.c",
+        "evidence_phrase": "ταπεινοτάτην μὲν τὴν τοῦ σώρεως (the lowest of the three layers)"
+      },
+      {
+        "place_key": "cyprus_island",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "καὶ μίσυ καὶ σῶρυ καὶ χάλκανθον"
+      }
+    ],
+    "description": "Iron-sulfate mineral; the lowest of the three concentric layers in the Soli mine sequence. The bottom band of Galen's autoptic stratigraphy."
+  },
+  {
+    "materia_key": "chalcanthon",
+    "display_name": "Chalcanthon (blue vitriol / copper sulfate)",
+    "greek_name": "χάλκανθον",
+    "category": "compound",
+    "place_links": [
+      {
+        "place_key": "cyprus_island",
+        "relation": "observed",
+        "passage_id": "smt.9.3.f",
+        "evidence_phrase": "ἐν δ' οὖν τῇ Κύπρῳ … τὸ φάρμακον τοῦτο τόνδε τὸν τρόπον ἐθεασάμην ἀθροιζόμενον"
+      },
+      {
+        "place_key": "cyprus_island",
+        "relation": "acquired",
+        "passage_id": "smt.9.3.e",
+        "evidence_phrase": "ἐκόμισα γὰρ καὶ τοῦτο τὸ φάρμακον ἐκ τῆς Κύπρου πάμπολυ"
+      },
+      {
+        "place_key": "cyprus_island",
+        "relation": "acquired",
+        "passage_id": "de_antidotis.1.2.a",
+        "evidence_phrase": "καὶ σῶρυ καὶ χάλκανθον"
+      }
+    ],
+    "description": "Crystalline copper sulfate. Galen describes its collection method on Cyprus in some detail (large but low building set before the mine entrance) and observed first-hand the long transformation of stored chalcanthon into chalcitis from the outside in over two decades."
+  },
+  {
+    "materia_key": "molybdaina",
+    "display_name": "Molybdaina (galena / lead sulfide)",
+    "greek_name": "μολύβδαινα",
+    "category": "mineral",
+    "place_links": [
+      {
+        "place_key": "ergasteria",
+        "relation": "observed",
+        "passage_id": "smt.9.3.d",
+        "evidence_phrase": "μολύβδαιναν, ἐῤῥιμμένην παμπόλλοις … κατὰ τὴν εἰς Ἐργαστήρια φέρουσαν ὁδὸν"
+      },
+      {
+        "place_key": "pergamum",
+        "relation": "observed",
+        "passage_id": "smt.9.3.d",
+        "evidence_phrase": "κατὰ τὴν εἰς Ἐργαστήρια φέρουσαν ὁδὸν ἀπὸ Περγάμου"
+      }
+    ],
+    "description": "Lead-bearing mineral (galena, PbS) — strewn alongside other stones along the road from Pergamum to the mining village of Ergasteria, four hundred and forty stades away. The lone passage anchoring the `pergamum-ergasteria-mines` route."
+  },
+  {
+    "materia_key": "amaracon",
+    "display_name": "Amaracon (sweet marjoram)",
+    "greek_name": "ἀμάρακον",
+    "category": "plant",
+    "place_links": [
+      {
+        "place_key": "asia_province",
+        "relation": "observed",
+        "passage_id": "de_antidotis.1.10.a",
+        "evidence_phrase": "ἐγὼ … τὰς βοτάνας αὐτὰς ἠπιστάμην ἐν Ἀσίᾳ γεννωμένας"
+      },
+      {
+        "place_key": "cyzicus",
+        "relation": "sourced_from",
+        "passage_id": "de_antidotis.1.10.a",
+        "evidence_phrase": "ἐν Κυζίκῳ δὲ πλείστας"
+      },
+      {
+        "place_key": "italia_peninsula",
+        "relation": "observed",
+        "passage_id": "de_antidotis.1.10.a",
+        "evidence_phrase": "καὶ κατά γε τὴν Ἰταλίαν … οὕτω καὶ τὸ ἀμάρακον εἶδον γεννώμενον"
+      }
+    ],
+    "description": "Sweet marjoram (Origanum majorana). Galen records its growth across Asia (most abundantly at Cyzicus) and in Italy. He notes its inferiority in fragrance to the Syrian marum."
+  },
+  {
+    "materia_key": "maron",
+    "display_name": "Maron (Syrian marum)",
+    "greek_name": "μάρον",
+    "category": "plant",
+    "place_links": [],
+    "description": "An aromatic herb (probably Teucrium marum or related labiate). Mentioned only as the fragrance benchmark against which Galen judges amaracon — no specific place link in our route corpus, though traditionally associated with Syria."
+  },
+  {
+    "materia_key": "chamaepitys",
+    "display_name": "Chamaepitys (ground-pine)",
+    "greek_name": "χαμαίπιτυς",
+    "category": "plant",
+    "place_links": [
+      {
+        "place_key": "crete",
+        "relation": "sourced_from",
+        "passage_id": "de_antidotis.1.14.a",
+        "evidence_phrase": "φερομένων ἀπὸ Κρήτης τῶν βοτανῶν, ἐνειλιγμένων χαρτίοις"
+      },
+      {
+        "place_key": "rome",
+        "relation": "observed",
+        "passage_id": "de_antidotis.1.14.a",
+        "evidence_phrase": "κατ' αὐτὴν τὴν Ῥώμην ἐν τοῖς προαστείοις … τὴν χαμαιπίτυν … εὗρον εὐοσμοτέρας τῶν ἀπὸ τῆς Κρήτης"
+      }
+    ],
+    "description": "Ground-pine (Ajuga chamaepitys), an aromatic medicinal herb. Galen reports that the imported Cretan supply is preferred at the imperial court, but that he found the wild plants in the Roman suburbs more fragrant when not waterlogged."
+  },
+  {
+    "materia_key": "chamaedrys",
+    "display_name": "Chamaedrys (wall germander)",
+    "greek_name": "χαμαίδρυς",
+    "category": "plant",
+    "place_links": [
+      {
+        "place_key": "crete",
+        "relation": "sourced_from",
+        "passage_id": "de_antidotis.1.14.a",
+        "evidence_phrase": "τοὺς Καίσαρι σκευάζοντας ἀεὶ τῇ Κρητικῇ χρῆσθαι"
+      },
+      {
+        "place_key": "rome",
+        "relation": "observed",
+        "passage_id": "de_antidotis.1.14.a",
+        "evidence_phrase": "καὶ τὴν χαμαίδρυν εὗρον εὐοσμοτέρας τῶν ἀπὸ τῆς Κρήτης"
+      }
+    ],
+    "description": "Wall germander (Teucrium chamaedrys). Same Cretan-import / Roman-suburb story as chamaepitys: Galen observes that the wild local supply rivals or surpasses the prestigious Cretan one."
+  },
+  {
+    "materia_key": "cretan-herbs",
+    "display_name": "Cretan herbs (general)",
+    "greek_name": "βοτάναι αἱ ἐκ Κρήτης",
+    "category": "plant",
+    "place_links": [
+      {
+        "place_key": "crete",
+        "relation": "sourced_from",
+        "passage_id": "de_antidotis.1.5.a",
+        "evidence_phrase": "τὰς ἐκ Κρήτης κομιζομένας βοτάνας"
+      },
+      {
+        "place_key": "rome",
+        "relation": "observed",
+        "passage_id": "de_antidotis.1.5.a",
+        "evidence_phrase": "ἐν τοῖς προαστείοις Ῥώμης ἐξ αὐτῶν οὐκ ὀλίγας φυομένας"
+      }
+    ],
+    "description": "The general category of imported Cretan medicinal botanicals supplied to Roman perfumers and pharmacists. Galen notes that the same plants grow in the Roman suburbs but are unrecognized there because Italian perfumers know only the dried imports, not the live plants."
+  },
+  {
+    "materia_key": "trifolinus-wine",
+    "display_name": "Trifolinus wine (smoke-cured)",
+    "greek_name": "Τριφύλλινος οἶνος",
+    "category": "compound",
+    "place_links": [
+      {
+        "place_key": "neapolis_campania",
+        "relation": "observed",
+        "passage_id": "de_antidotis.1.3.a",
+        "evidence_phrase": "κατὰ τὴν Ἰταλίαν εἶδον ἐν τοῖς περὶ Νεάπολιν, καὶ τὸν γειτνιῶντα λόφον … Τριφύλλινον"
+      },
+      {
+        "place_key": "italia_peninsula",
+        "relation": "sourced_from",
+        "passage_id": "de_antidotis.1.3.a",
+        "evidence_phrase": "κατ' ἄλλα πολλὰ χωρία τῆς Ἰταλίας οὕτω θερμαίνεσθαι τὸν οἶνον"
+      }
+    ],
+    "description": "A smoke-cured wine produced on the Trifolinus hill near Naples. Galen observes the production and warns it is durable but headache-inducing because of the smoky quality (καπνός) it acquires. The materia layer's primary Italian observation."
+  },
+  {
+    "materia_key": "chicken-dung",
+    "display_name": "Chicken dung (clinical antidote)",
+    "greek_name": "ἀλεκτορίδος κόπρος",
+    "category": "animal",
+    "place_links": [
+      {
+        "place_key": "mysia",
+        "relation": "observed",
+        "passage_id": "smt.10.2.a",
+        "evidence_phrase": "ἑωρακὼς τὸν ἐν τῇ Μυσίᾳ χρώμενον ἐπὶ τῶν ὑπὸ τῆς μυκήτων ἐδωδῆς πνιγομένων"
+      },
+      {
+        "place_key": "rome",
+        "relation": "tested",
+        "passage_id": "smt.10.2.a",
+        "evidence_phrase": "ἐχρησάμην καὶ αὐτὸς ἐπί τινων ἐν τῇ πόλει"
+      }
+    ],
+    "description": "Clinical antidote for mushroom poisoning, ground in oxycrate or oxymel. Galen learned of its use in Mysia (observing a local practitioner) and successfully replicated it in Rome on patients brought to him after consuming poisonous fungi. Not a route stop — the materia layer's purest 'observed-then-tested' chain."
+  },
+  {
+    "materia_key": "oxycrate",
+    "display_name": "Oxycrate (vinegar-water)",
+    "greek_name": "ὀξύκρατον",
+    "category": "compound",
+    "place_links": [],
+    "description": "A vinegar-and-water mixture used as a vehicle for grinding solid drugs. No place link — prepared at the bedside; included here because it appears in the smt.10.2.a chicken-dung clinical narrative."
+  },
+  {
+    "materia_key": "oxymel",
+    "display_name": "Oxymel (vinegar-honey)",
+    "greek_name": "ὀξύμελι",
+    "category": "compound",
+    "place_links": [],
+    "description": "A vinegar-and-honey mixture, like oxycrate used as a vehicle. No place link."
+  },
+  {
+    "materia_key": "theriac",
+    "display_name": "Theriac",
+    "greek_name": "θηριακή",
+    "category": "compound",
+    "place_links": [
+      {
+        "place_key": "rome",
+        "relation": "prepared",
+        "passage_id": "de_antidotis.1.1.a",
+        "evidence_phrase": "παραγενόμενος εἰς Ῥώμην, ἐπυνθάνετο κατὰ τίνα συμμετρίαν τῶν ἁπλῶν φαρμάκων σκευάζοιμι"
+      }
+    ],
+    "description": "The flagship multi-ingredient antidote attributed to Andromachus the Elder; Galen prepared it for Marcus Aurelius (Antoninus) at Rome. This entry anchors theriac to its preparation site only — its ingredients are mapped via the routes (Cyprus minerals, Lemnian earth, Coele-Syrian asphalt and balsam, etc.)."
+  }
+]
