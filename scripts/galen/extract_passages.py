@@ -21,6 +21,7 @@ For each candidate sentence:
 Translations file format (JSON):
 {
     "<passage_id>": {
+        "greek": "..."  # auto-mirrored from TEI; do not edit by hand
         "translation_en": "...",
         "materia_mentions": [{"surface": "...", "materia_key": "..."}],
         "is_route_anchor": true|false,
@@ -28,6 +29,11 @@ Translations file format (JSON):
     },
     ...
 }
+
+This script also writes back to `data/galen/translations/passages.json`
+on every run — refreshing only the `greek` field per passage so the
+curator can read Greek + English side-by-side. translation_en,
+materia_mentions, is_route_anchor, and notes are preserved exactly.
 
 Idempotent. Stable passage_ids across re-runs as long as candidate ordering
 within a chapter is stable.
@@ -211,6 +217,52 @@ def load_translations() -> dict[str, dict]:
     return raw.get("passages", raw) if isinstance(raw, dict) else {}
 
 
+def sync_greek_into_translations(passages: list[dict]) -> None:
+    """Mirror each passage's TEI-derived Greek into the curator translations
+    file so Greek + English sit side-by-side for review. translation_en,
+    materia_mentions, is_route_anchor, and notes are preserved exactly;
+    only the `greek` field is rewritten."""
+    if not TRANSLATIONS.exists():
+        return
+    raw = json.loads(TRANSLATIONS.read_text())
+    src = raw.get("passages", {}) if isinstance(raw, dict) else {}
+    by_id = {p["passage_id"]: p for p in passages}
+
+    rebuilt: dict[str, dict] = {}
+    # Preserve existing order; refresh `greek` for known passages.
+    for pid, existing in src.items():
+        if pid in by_id:
+            entry: dict = {"greek": by_id[pid]["greek"]}
+            for k in ("translation_en", "materia_mentions", "is_route_anchor", "notes"):
+                if k in existing:
+                    entry[k] = existing[k]
+            rebuilt[pid] = entry
+        else:
+            rebuilt[pid] = existing  # leave stale entries alone
+    # Append any newly-discovered passages with empty curator fields.
+    for pid, p in by_id.items():
+        if pid in rebuilt:
+            continue
+        rebuilt[pid] = {
+            "greek": p["greek"],
+            "translation_en": "",
+            "materia_mentions": [],
+            "notes": "",
+        }
+
+    raw["_authoring_notes"] = (
+        "Greek surface forms preserved exactly; English follows scholarly "
+        "conventions (Cyprus, Lemnos, Alexandria Troas, Coele Syria, etc.). "
+        "Materia mentions cover only substances Galen describes in this "
+        "specific passage; broader pharmacological context is captured at "
+        "Stage 5 in materia.json. The `greek` field is auto-mirrored from "
+        "the TEI by extract_passages.py — edits to it will be overwritten "
+        "on the next run."
+    )
+    raw["passages"] = rebuilt
+    TRANSLATIONS.write_text(json.dumps(raw, ensure_ascii=False, indent=2) + "\n")
+
+
 # ---------------------------------------------------------------------------
 # Build
 # ---------------------------------------------------------------------------
@@ -358,6 +410,8 @@ def main() -> int:
 
     OUT_PASSAGES.parent.mkdir(parents=True, exist_ok=True)
     OUT_PASSAGES.write_text(json.dumps(passages, ensure_ascii=False, indent=2))
+
+    sync_greek_into_translations(passages)
 
     # Console summary
     print(f"Wrote {len(passages)} passages to {OUT_PASSAGES.relative_to(ROOT)}")
