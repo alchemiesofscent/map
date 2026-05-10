@@ -1,0 +1,628 @@
+{
+  "@context": {
+    "created": "dcterms:created",
+    "dcterms": "http://purl.org/dc/terms/",
+    "description": "dcterms:description",
+    "rights": "dcterms:rights",
+    "snippet": "dcterms:abstract",
+    "subject": "dcterms:subject",
+    "title": "dcterms:title",
+    "uri": "@id"
+  },
+  "@type": "Place",
+  "bbox": [
+    21.459762668065448,
+    40.78857703216415,
+    23.53941158716112,
+    41.036040976770494
+  ],
+  "connections": [],
+  "connectsWith": [
+    "https://pleiades.stoa.org/places/991253193",
+    "https://pleiades.stoa.org/places/494631",
+    "https://pleiades.stoa.org/places/668537581"
+  ],
+  "contributors": [
+    {
+      "homepage": null,
+      "name": "Jeffrey Becker",
+      "uri": "https://pleiades.stoa.org/author/jbecker",
+      "username": "jbecker"
+    },
+    {
+      "homepage": null,
+      "name": "Tom Elliott",
+      "uri": "https://pleiades.stoa.org/author/thomase",
+      "username": "thomase"
+    },
+    {
+      "homepage": null,
+      "name": "Sean Gillies",
+      "uri": "https://pleiades.stoa.org/author/sgillies",
+      "username": "sgillies"
+    },
+    {
+      "homepage": null,
+      "name": "Greta Hawes",
+      "uri": "https://pleiades.stoa.org/author/ghawes",
+      "username": "ghawes"
+    },
+    {
+      "homepage": null,
+      "name": "Michael Heubel",
+      "uri": "https://pleiades.stoa.org/author/mheubel",
+      "username": "mheubel"
+    },
+    {
+      "homepage": null,
+      "name": "Ryan Horne",
+      "uri": "https://pleiades.stoa.org/author/rmhorne",
+      "username": "rmhorne"
+    },
+    {
+      "homepage": null,
+      "name": "Brady Kiesling",
+      "uri": "https://pleiades.stoa.org/author/bkiesling",
+      "username": "bkiesling"
+    },
+    {
+      "homepage": null,
+      "name": "R. Scott Smith",
+      "uri": "https://pleiades.stoa.org/author/rssmith",
+      "username": "rssmith"
+    },
+    {
+      "homepage": null,
+      "name": "Rosemary Selth",
+      "uri": "https://pleiades.stoa.org/author/rselth",
+      "username": "rselth"
+    },
+    {
+      "name": "R. Talbert",
+      "username": null
+    },
+    {
+      "name": "Richard Talbert",
+      "username": null
+    }
+  ],
+  "created": "2025-11-04T19:57:38Z",
+  "creators": [
+    {
+      "name": "E.N. Borza",
+      "username": null
+    }
+  ],
+  "description": "The region of ancient Macedonia in the Balkan peninsula. The boundaries of the region have shifted significantly over time, and remain controversial.",
+  "details": "<p>The Barrington Atlas Directory notes: GRE/MAC</p>",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              21.459762668065448,
+              40.78857703216415
+            ],
+            [
+              21.759574754800063,
+              40.886134933403184
+            ],
+            [
+              21.992761933371433,
+              40.95275984156643
+            ],
+            [
+              22.23308749496029,
+              40.99559013967138
+            ],
+            [
+              22.49720766660745,
+              41.03128205475883
+            ],
+            [
+              22.744671611213803,
+              41.036040976770494
+            ],
+            [
+              22.992135555820152,
+              41.02176421073551
+            ],
+            [
+              23.227702195397352,
+              40.99796960067721
+            ],
+            [
+              23.53941158716112,
+              40.94086253653728
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "batlas-map-label-location",
+      "properties": {
+        "description": "Centerline/arc of label location used on the Barrington Atlas map for this feature",
+        "link": "https://pleiades.stoa.org/places/491656/batlas-map-label-location",
+        "location_precision": "precise",
+        "snippet": "Label; 550 BC - AD 640",
+        "title": "BAtlas Map Label Location"
+      },
+      "type": "Feature"
+    }
+  ],
+  "history": [
+    {
+      "comment": "added references provided by bkiesling",
+      "modified": "2025-11-04T19:57:40Z",
+      "modifiedBy": "admin"
+    },
+    {
+      "comment": "cleaned up references; added Wikidata reference; added MANTO reference provided by MANTO team; added both New Pauly articles",
+      "modified": "2023-11-07T16:44:41Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "Baseline created",
+      "modified": "2023-11-07T16:36:13Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "Edited",
+      "modified": "2019-06-16T01:25:24Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "check in of working copy",
+      "modified": "2019-06-16T01:23:40Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "Global migration and reindexing of citations and provenance, February 2012",
+      "modified": "2012-02-15T05:35:40Z",
+      "modifiedBy": "admin"
+    },
+    {
+      "comment": "Detail text updated from former modernLocation. See http://atlantides.org/trac/pleiades/wiki/PlaceDetailsUpgrade",
+      "modified": "2011-01-14T20:02:57Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "action": "Publish externally",
+      "modified": "2010-06-24T13:25:47Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "action": "Submit for review",
+      "modified": "2010-06-24T10:32:06Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "action": "Create",
+      "modified": "2010-06-24T10:28:01Z",
+      "modifiedBy": "sgillies"
+    }
+  ],
+  "id": "491656",
+  "locations": [
+    {
+      "@type": "Location",
+      "accuracy": "https://pleiades.stoa.org/features/metadata/awmc-batlas-data-1-500-000-scale",
+      "accuracy_value": 930.0,
+      "archaeologicalRemains": "notapplicable",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "classical",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/classical"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "hellenistic-republican",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/hellenistic-republican"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "late-antique",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/late-antique"
+        }
+      ],
+      "contributors": [
+        {
+          "homepage": null,
+          "name": "Ryan Horne",
+          "uri": "https://pleiades.stoa.org/author/rmhorne",
+          "username": "rmhorne"
+        },
+        {
+          "name": "Richard Talbert",
+          "username": null
+        },
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        },
+        {
+          "homepage": null,
+          "name": "Michael Heubel",
+          "uri": "https://pleiades.stoa.org/author/mheubel",
+          "username": "mheubel"
+        }
+      ],
+      "created": "2022-08-30T11:17:59Z",
+      "creators": [
+        {
+          "name": "E.N. Borza",
+          "username": null
+        }
+      ],
+      "description": "Centerline/arc of label location used on the Barrington Atlas map for this feature",
+      "details": "",
+      "end": 640,
+      "featureType": [
+        "label"
+      ],
+      "featureTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/label"
+      ],
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              21.459762668065448,
+              40.78857703216415
+            ],
+            [
+              21.759574754800063,
+              40.886134933403184
+            ],
+            [
+              21.992761933371433,
+              40.95275984156643
+            ],
+            [
+              22.23308749496029,
+              40.99559013967138
+            ],
+            [
+              22.49720766660745,
+              41.03128205475883
+            ],
+            [
+              22.744671611213803,
+              41.036040976770494
+            ],
+            [
+              22.992135555820152,
+              41.02176421073551
+            ],
+            [
+              23.227702195397352,
+              40.99796960067721
+            ],
+            [
+              23.53941158716112,
+              40.94086253653728
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2023-11-07T16:35:53Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2023-11-07T16:35:51Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Create",
+          "modified": "2022-08-30T11:17:59Z",
+          "modifiedBy": "thomase"
+        }
+      ],
+      "id": "batlas-map-label-location",
+      "locationType": [
+        "representative"
+      ],
+      "locationTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/label"
+      ],
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "https://github.com/AWMC/geodata/blob/a289d378b75eba8c9b640f0248763e3cbf9d2583/Cultural-Data/regional_name_linework/regional_names_linework.geojson",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/2533/items/AKGKQTM5",
+          "citationDetail": "211614",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsDataSource",
+          "formattedCitation": "<div class=\"csl-entry\">AWMC Geodata: Regional Name Linework. Geojson. Chapel Hill: Ancient World Mapping Center, University of North Carolina at Chapel Hill, June 20, 2016. Github.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "AWMC Geodata: Regional Name Linework",
+          "type": "citesAsDataSource"
+        },
+        {
+          "accessURI": "",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/2533/items/MIAGQ5C6",
+          "citationDetail": "50 A2 Macedonia",
+          "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+          "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard J. A., ed. Barrington Atlas of the Greek and Roman World. Princeton, N.J.: Princeton University Press, 2000.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "BAtlas",
+          "type": "seeFurther"
+        }
+      ],
+      "review_state": "published",
+      "start": -550,
+      "title": "BAtlas Map Label Location",
+      "uri": "https://pleiades.stoa.org/places/491656/batlas-map-label-location"
+    }
+  ],
+  "names": [
+    {
+      "@type": "Name",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "classical",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/classical"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "hellenistic-republican",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/hellenistic-republican"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "late-antique",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/late-antique"
+        }
+      ],
+      "attested": "Macedonia",
+      "contributors": [
+        {
+          "name": "R. Talbert",
+          "username": null
+        },
+        {
+          "homepage": null,
+          "name": "Sean Gillies",
+          "uri": "https://pleiades.stoa.org/author/sgillies",
+          "username": "sgillies"
+        },
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        },
+        {
+          "homepage": null,
+          "name": "Jeffrey Becker",
+          "uri": "https://pleiades.stoa.org/author/jbecker",
+          "username": "jbecker"
+        }
+      ],
+      "created": "2010-06-24T10:28:01Z",
+      "creators": [
+        {
+          "name": "E.N. Borza",
+          "username": null
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 640,
+      "history": [
+        {
+          "comment": "TP reference",
+          "modified": "2019-06-16T01:24:29Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "Global migration and reindexing of citations and provenance, February 2012",
+          "modified": "2012-02-15T05:35:40Z",
+          "modifiedBy": "admin"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2010-06-24T13:25:47Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2010-06-24T10:32:06Z",
+          "modifiedBy": "sgillies"
+        },
+        {
+          "action": "Create",
+          "modified": "2010-06-24T10:28:01Z",
+          "modifiedBy": "sgillies"
+        }
+      ],
+      "id": "macedonia",
+      "language": "la",
+      "nameType": "geographic",
+      "provenance": "Barrington Atlas: BAtlas 50 A2 Macedonia",
+      "references": [
+        {
+          "accessURI": "http://www.cambridge.org/us/talbert/talbertdatabase/TPPlace3037.html",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/QT8GLGGI",
+          "citationDetail": "6A3-7B2 (Talbert 3037)",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+          "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard. “Database: Peutinger Map Names and Features, with Commentary and User’s Guide.” In <i>Explore the Peutinger Map</i>. Cambridge UP, 2010. http://www.cambridge.org/us/talbert/talbertdatabase/prm.html.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "TP (Talbert: CUP)",
+          "type": "citesAsEvidence"
+        }
+      ],
+      "review_state": "published",
+      "romanized": "Macedonia",
+      "start": -550,
+      "transcriptionAccuracy": "accurate",
+      "transcriptionCompleteness": "complete",
+      "uri": "https://pleiades.stoa.org/places/491656/macedonia"
+    }
+  ],
+  "placeTypeURIs": [
+    "https://pleiades.stoa.org/vocabularies/place-types/region",
+    "https://pleiades.stoa.org/vocabularies/place-types/label"
+  ],
+  "placeTypes": [
+    "region",
+    "label"
+  ],
+  "provenance": "Barrington Atlas: BAtlas 50 A2 Macedonia",
+  "references": [
+    {
+      "accessURI": "http://www.worldcat.org/oclc/43970336",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/MIAGQ5C6",
+      "citationDetail": "50 A2 Macedonia",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard J. A., ed. <i>Barrington Atlas of the Greek and Roman World</i>. Princeton, N.J.: Princeton University Press, 2000. http://www.worldcat.org/oclc/43970336.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "BAtlas",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/HX4ZW6M9",
+      "citationDetail": "3-18",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Hammond, N. G. L. <i>A History of Macedonia</i>. 3 vols. Oxford: Clarendon Press, 1972.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Hammond 1972; Hammond 1979; Hammond 1988",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://en.wikipedia.org/wiki/Macedonia_(region)",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/CI6F6W7W",
+      "citationDetail": "Macedonia (region)",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\"><i>Wikipedia: The Free Encyclopedia That Anyone Can Edit</i>. Wikimedia Foundation, 2001. https://en.wikipedia.org.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Wikipedia (English)",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://www.trismegistos.org/place/1279",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/TN3GJAU8",
+      "citationDetail": "Geo 1279: Macedonia",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Depauw, Mark, Tom Gheldof, Herbert Verreth, Nico Dogaer, Willy Clarysse, Yanne Broux, Gert Baetens, and Heinz-Josef Thissen. <i>Trismegistos: An Interdisciplinary Portal of the Ancient World</i>. Leuven, 2006. http://www.trismegistos.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "TM",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "http://www.cambridge.org/us/talbert/talbertdatabase/TPPlace3037.html",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/QT8GLGGI",
+      "citationDetail": "6A3-7B2 (Talbert 3037)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+      "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard. “Database: Peutinger Map Names and Features, with Commentary and User’s Guide.” In <i>Explore the Peutinger Map</i>. Cambridge UP, 2010. http://www.cambridge.org/us/talbert/talbertdatabase/prm.html.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "TP (Talbert: CUP)",
+      "type": "citesAsEvidence"
+    },
+    {
+      "accessURI": "https://www.wikidata.org/wiki/Q103251",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/BCQIKDKS",
+      "citationDetail": "Macedonia (Q103251)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\"><i>Wikidata: The Free Knowledge Base That Anyone Can Edit</i>. Wikimedia Foundation, 2014. https://www.wikidata.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Wikidata",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://resource.manto.unh.edu/10267703",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/SLCUI2TB",
+      "citationDetail": "10267703: Macedonia (N. Greece) region in Northern Greece",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Hawes, Greta, and Scott Smith. <i>MANTO</i>. Accessed February 17, 2023. https://www.manto-myth.org/manto.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "MANTO",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://referenceworks.brillonline.com/entries/brill-s-new-pauly/macedonia-macedones-e718840",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/DUTS58MJ",
+      "citationDetail": "Macedonia, Macedones",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Hubert Cancik, Helmuth Schneider, Manfred Landfester, Christine F. Salazar, and Francis G. Gentry, eds. <i>Brill’s New Pauly: Encyclopaedia of the Ancient World.</i> Brill, 2015. https://referenceworks.brillonline.com/browse/brill-s-new-pauly.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "New Pauly",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://referenceworks.brillonline.com/entries/brill-s-new-pauly/macedonmacedonia-ct-e1502400",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/DUTS58MJ",
+      "citationDetail": "Macedon/Macedonia",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Hubert Cancik, Helmuth Schneider, Manfred Landfester, Christine F. Salazar, and Francis G. Gentry, eds. <i>Brill’s New Pauly: Encyclopaedia of the Ancient World.</i> Brill, 2015. https://referenceworks.brillonline.com/browse/brill-s-new-pauly.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "New Pauly",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://topostext.org/place/408225RMak",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/2533/items/MC9RGDVB",
+      "citationDetail": "Macedonia region (Greece) 3610 Makedonia - Μακεδονία",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Kiesling, Brady. <i>ToposText – a Reference Tool for Greek Civilization</i>. Version 2.0. Aikaterini Laskaridis Foundation, 2016-. https://topostext.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "ToposText",
+      "type": "citesAsRelated"
+    }
+  ],
+  "reprPoint": [
+    22.4920786436148,
+    40.969115247784025
+  ],
+  "review_state": "published",
+  "rights": "Copyright © The Creators. Sharing and remixing permitted under terms of the Creative Commons Attribution 3.0 License (cc-by).",
+  "subject": [],
+  "title": "Macedonia (region)",
+  "type": "FeatureCollection",
+  "uri": "https://pleiades.stoa.org/places/491656"
+}

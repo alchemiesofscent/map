@@ -1,0 +1,776 @@
+{
+  "@context": {
+    "created": "dcterms:created",
+    "dcterms": "http://purl.org/dc/terms/",
+    "description": "dcterms:description",
+    "rights": "dcterms:rights",
+    "snippet": "dcterms:abstract",
+    "subject": "dcterms:subject",
+    "title": "dcterms:title",
+    "uri": "@id"
+  },
+  "@type": "Place",
+  "bbox": [
+    25.521910565524138,
+    41.23120590418415,
+    28.38114568527851,
+    41.65177444468213
+  ],
+  "connections": [],
+  "connectsWith": [
+    "https://pleiades.stoa.org/places/992078",
+    "https://pleiades.stoa.org/places/501628",
+    "https://pleiades.stoa.org/places/491556",
+    "https://pleiades.stoa.org/places/507461",
+    "https://pleiades.stoa.org/places/528109753"
+  ],
+  "contributors": [
+    {
+      "homepage": null,
+      "name": "Brady Kiesling",
+      "uri": "https://pleiades.stoa.org/author/bkiesling",
+      "username": "bkiesling"
+    },
+    {
+      "homepage": null,
+      "name": "Sean Gillies",
+      "uri": "https://pleiades.stoa.org/author/sgillies",
+      "username": "sgillies"
+    },
+    {
+      "homepage": null,
+      "name": "Jeffrey Becker",
+      "uri": "https://pleiades.stoa.org/author/jbecker",
+      "username": "jbecker"
+    },
+    {
+      "homepage": null,
+      "name": "Tom Elliott",
+      "uri": "https://pleiades.stoa.org/author/thomase",
+      "username": "thomase"
+    },
+    {
+      "name": "G. Reger",
+      "username": null
+    },
+    {
+      "homepage": null,
+      "name": "R. Scott Smith",
+      "uri": "https://pleiades.stoa.org/author/rssmith",
+      "username": "rssmith"
+    },
+    {
+      "name": "R. Talbert",
+      "username": null
+    },
+    {
+      "homepage": null,
+      "name": "Greta Hawes",
+      "uri": "https://pleiades.stoa.org/author/ghawes",
+      "username": "ghawes"
+    },
+    {
+      "name": "Richard Talbert",
+      "username": null
+    },
+    {
+      "homepage": null,
+      "name": "Ryan Horne",
+      "uri": "https://pleiades.stoa.org/author/rmhorne",
+      "username": "rmhorne"
+    }
+  ],
+  "created": "2018-01-19T12:49:30Z",
+  "creators": [
+    {
+      "name": "E.N. Borza",
+      "username": null
+    }
+  ],
+  "description": "Thracia refers to a territory occupied by the Thraci (or Thracians), a human population of the northern Balkan Peninsula whose reach stretched from the north Aegean Sea to the Danube river. Parts of Thracia would eventually become incorporated into the Roman provinces of Moesia and Thracia.",
+  "details": "<p>None</p>",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              25.521910565524138,
+              41.61965172110342
+            ],
+            [
+              25.721785290013884,
+              41.64463606166464
+            ],
+            [
+              25.918090822994884,
+              41.65177444468213
+            ],
+            [
+              26.103688781449648,
+              41.65177444468213
+            ],
+            [
+              26.292855931413158,
+              41.64463606166464
+            ],
+            [
+              26.474884698359176,
+              41.61965172110342
+            ],
+            [
+              26.642636699270213,
+              41.587528997524714
+            ],
+            [
+              27.372777700227687,
+              41.48676001621021
+            ],
+            [
+              27.548381922458077,
+              41.45963416074386
+            ],
+            [
+              27.723986144688354,
+              41.42108689244935
+            ],
+            [
+              27.90387339672901,
+              41.37682891774085
+            ],
+            [
+              28.079477618959288,
+              41.331143266429024
+            ],
+            [
+              28.22981196530776,
+              41.286885291720466
+            ],
+            [
+              28.38114568527851,
+              41.23120590418415
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "id": "batlas-map-label-location",
+      "properties": {
+        "description": "Centerline/arc of label location used on the Barrington Atlas map for this feature",
+        "link": "https://pleiades.stoa.org/places/501638/batlas-map-label-location",
+        "location_precision": "precise",
+        "snippet": "Label; 750 BC - AD 640",
+        "title": "BAtlas Map Label Location"
+      },
+      "type": "Feature"
+    }
+  ],
+  "history": [
+    {
+      "comment": "update references",
+      "modified": "2026-02-26T00:16:34Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "TM GEO ID 2414: Thracia",
+      "modified": "2025-10-04T18:50:20Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "add manto 8195613: Thrace (N. Greece) @ghawes @rssmith, add topostext @bkiesling",
+      "modified": "2025-10-04T18:46:38Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "Edited",
+      "modified": "2025-10-04T18:39:44Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "wikidata Q41741",
+      "modified": "2025-04-23T00:47:56Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "added Sayar 2023",
+      "modified": "2023-04-18T15:16:36Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "comment": "check in of working copy",
+      "modified": "2019-06-09T03:19:35Z",
+      "modifiedBy": "jbecker"
+    },
+    {
+      "comment": "Global migration and reindexing of citations and provenance, February 2012",
+      "modified": "2012-02-15T05:46:00Z",
+      "modifiedBy": "admin"
+    },
+    {
+      "action": "Publish externally",
+      "modified": "2010-06-24T13:30:18Z",
+      "modifiedBy": "thomase"
+    },
+    {
+      "action": "Submit for review",
+      "modified": "2010-06-24T10:55:44Z",
+      "modifiedBy": "sgillies"
+    },
+    {
+      "action": "Create",
+      "modified": "2010-06-24T10:45:07Z",
+      "modifiedBy": "sgillies"
+    }
+  ],
+  "id": "501638",
+  "locations": [
+    {
+      "@type": "Location",
+      "accuracy": "https://pleiades.stoa.org/features/metadata/awmc-batlas-data-1-500-000-scale",
+      "accuracy_value": 930.0,
+      "archaeologicalRemains": "notapplicable",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "archaic",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/archaic"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "classical",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/classical"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "hellenistic-republican",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/hellenistic-republican"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "late-antique",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/late-antique"
+        }
+      ],
+      "contributors": [
+        {
+          "homepage": null,
+          "name": "Ryan Horne",
+          "uri": "https://pleiades.stoa.org/author/rmhorne",
+          "username": "rmhorne"
+        },
+        {
+          "name": "Richard Talbert",
+          "username": null
+        },
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        }
+      ],
+      "created": "2022-08-30T11:18:43Z",
+      "creators": [
+        {
+          "name": "E.N. Borza",
+          "username": null
+        }
+      ],
+      "description": "Centerline/arc of label location used on the Barrington Atlas map for this feature",
+      "details": "",
+      "end": 640,
+      "featureType": [
+        "label"
+      ],
+      "featureTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/label"
+      ],
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              25.521910565524138,
+              41.61965172110342
+            ],
+            [
+              25.721785290013884,
+              41.64463606166464
+            ],
+            [
+              25.918090822994884,
+              41.65177444468213
+            ],
+            [
+              26.103688781449648,
+              41.65177444468213
+            ],
+            [
+              26.292855931413158,
+              41.64463606166464
+            ],
+            [
+              26.474884698359176,
+              41.61965172110342
+            ],
+            [
+              26.642636699270213,
+              41.587528997524714
+            ],
+            [
+              27.372777700227687,
+              41.48676001621021
+            ],
+            [
+              27.548381922458077,
+              41.45963416074386
+            ],
+            [
+              27.723986144688354,
+              41.42108689244935
+            ],
+            [
+              27.90387339672901,
+              41.37682891774085
+            ],
+            [
+              28.079477618959288,
+              41.331143266429024
+            ],
+            [
+              28.22981196530776,
+              41.286885291720466
+            ],
+            [
+              28.38114568527851,
+              41.23120590418415
+            ]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2022-09-23T19:00:42Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2022-08-30T15:30:39Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Create",
+          "modified": "2022-08-30T11:18:43Z",
+          "modifiedBy": "thomase"
+        }
+      ],
+      "id": "batlas-map-label-location",
+      "locationType": [
+        "representative"
+      ],
+      "locationTypeURI": [
+        "https://pleiades.stoa.org/vocabularies/place-types/label"
+      ],
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "https://github.com/AWMC/geodata/blob/a289d378b75eba8c9b640f0248763e3cbf9d2583/Cultural-Data/regional_name_linework/regional_names_linework.geojson",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/2533/items/AKGKQTM5",
+          "citationDetail": "211184",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsDataSource",
+          "formattedCitation": "<div class=\"csl-entry\">AWMC Geodata: Regional Name Linework. Geojson. Chapel Hill: Ancient World Mapping Center, University of North Carolina at Chapel Hill, June 20, 2016. Github.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "AWMC Geodata: Regional Name Linework",
+          "type": "citesAsDataSource"
+        },
+        {
+          "accessURI": "",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/2533/items/MIAGQ5C6",
+          "citationDetail": "51 F1 Thracia",
+          "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+          "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard J. A., ed. Barrington Atlas of the Greek and Roman World. Princeton, N.J.: Princeton University Press, 2000.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "BAtlas",
+          "type": "seeFurther"
+        }
+      ],
+      "review_state": "published",
+      "start": -750,
+      "title": "BAtlas Map Label Location",
+      "uri": "https://pleiades.stoa.org/places/501638/batlas-map-label-location"
+    }
+  ],
+  "names": [
+    {
+      "@type": "Name",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "archaic",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/archaic"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "classical",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/classical"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "hellenistic-republican",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/hellenistic-republican"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "roman",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/roman"
+        },
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "late-antique",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/late-antique"
+        }
+      ],
+      "attested": "TRHACIA",
+      "contributors": [
+        {
+          "name": "R. Talbert",
+          "username": null
+        },
+        {
+          "name": "G. Reger",
+          "username": null
+        },
+        {
+          "homepage": null,
+          "name": "Sean Gillies",
+          "uri": "https://pleiades.stoa.org/author/sgillies",
+          "username": "sgillies"
+        },
+        {
+          "homepage": null,
+          "name": "Tom Elliott",
+          "uri": "https://pleiades.stoa.org/author/thomase",
+          "username": "thomase"
+        },
+        {
+          "homepage": null,
+          "name": "Jeffrey Becker",
+          "uri": "https://pleiades.stoa.org/author/jbecker",
+          "username": "jbecker"
+        }
+      ],
+      "created": "2025-10-04T18:46:54Z",
+      "creators": [
+        {
+          "name": "E.N. Borza",
+          "username": null
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 640,
+      "history": [
+        {
+          "comment": "add Latin name as attested on TP, add TP reference by @jbecker",
+          "modified": "2025-10-05T15:19:23Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "comment": "Baseline created",
+          "modified": "2025-10-04T18:46:54Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "Global migration and reindexing of citations and provenance, February 2012",
+          "modified": "2012-02-15T05:46:00Z",
+          "modifiedBy": "admin"
+        },
+        {
+          "action": "Publish externally",
+          "modified": "2010-06-24T13:30:18Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2010-06-24T10:55:44Z",
+          "modifiedBy": "sgillies"
+        },
+        {
+          "action": "Create",
+          "modified": "2010-06-24T10:45:07Z",
+          "modifiedBy": "sgillies"
+        }
+      ],
+      "id": "thracia",
+      "language": "la",
+      "nameType": "geographic",
+      "provenance": "Barrington Atlas: BAtlas 51 F1 Thracia",
+      "references": [
+        {
+          "accessURI": "https://www.cambridge.org/us/talbert/talbertdatabase/TPPlace3067.html",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/QT8GLGGI",
+          "citationDetail": "7B2-8A1 (Talbert 3067)",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+          "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard. “Database: Peutinger Map Names and Features, with Commentary and User’s Guide.” In <i>Explore the Peutinger Map</i>. Cambridge UP, 2010. http://www.cambridge.org/us/talbert/talbertdatabase/prm.html.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "TP (Talbert: CUP)",
+          "type": "citesAsEvidence"
+        }
+      ],
+      "review_state": "published",
+      "romanized": "Thracia",
+      "start": -750,
+      "transcriptionAccuracy": "accurate",
+      "transcriptionCompleteness": "complete",
+      "uri": "https://pleiades.stoa.org/places/501638/thracia"
+    },
+    {
+      "@type": "Name",
+      "associationCertainty": "certain",
+      "associationCertaintyURI": "https://pleiades.stoa.org/vocabularies/association-certainty/certain",
+      "attestations": [
+        {
+          "confidence": "confident",
+          "confidenceURI": "https://pleiades.stoa.org/vocabularies/attestation-confidence/confident",
+          "timePeriod": "twentieth-ce",
+          "timePeriodURI": "https://pleiades.stoa.org/vocabularies/time-periods/twentieth-ce"
+        }
+      ],
+      "attested": "Thracia",
+      "contributors": [],
+      "created": "2025-10-04T18:48:52Z",
+      "creators": [
+        {
+          "homepage": null,
+          "name": "Jeffrey Becker",
+          "uri": "https://pleiades.stoa.org/author/jbecker",
+          "username": "jbecker"
+        }
+      ],
+      "description": "",
+      "details": "",
+      "end": 1999,
+      "history": [
+        {
+          "action": "Publish externally",
+          "modified": "2025-10-05T15:19:34Z",
+          "modifiedBy": "thomase"
+        },
+        {
+          "action": "Submit for review",
+          "modified": "2025-10-04T18:48:59Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "comment": "add batlas name",
+          "modified": "2025-10-04T18:48:54Z",
+          "modifiedBy": "jbecker"
+        },
+        {
+          "action": "Create",
+          "modified": "2025-10-04T18:48:53Z",
+          "modifiedBy": "jbecker"
+        }
+      ],
+      "id": "thracia-1",
+      "language": "la",
+      "nameType": "geographic",
+      "provenance": "Pleiades",
+      "references": [
+        {
+          "accessURI": "http://www.worldcat.org/oclc/43970336",
+          "alternateURI": "",
+          "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/MIAGQ5C6",
+          "citationDetail": "51 F1 Thracia",
+          "citationTypeURI": "http://purl.org/spar/cito/citesAsDataSource",
+          "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard J. A., ed. <i>Barrington Atlas of the Greek and Roman World</i>. Princeton, N.J.: Princeton University Press, 2000. http://www.worldcat.org/oclc/43970336.</div>",
+          "otherIdentifier": "",
+          "shortTitle": "BAtlas",
+          "type": "citesAsDataSource"
+        }
+      ],
+      "review_state": "published",
+      "romanized": "Thracia",
+      "start": 1900,
+      "transcriptionAccuracy": "accurate",
+      "transcriptionCompleteness": "complete",
+      "uri": "https://pleiades.stoa.org/places/501638/thracia-1"
+    }
+  ],
+  "placeTypeURIs": [
+    "https://pleiades.stoa.org/vocabularies/place-types/region",
+    "https://pleiades.stoa.org/vocabularies/place-types/label"
+  ],
+  "placeTypes": [
+    "region",
+    "label"
+  ],
+  "provenance": "Barrington Atlas: BAtlas 51 F1 Thracia",
+  "references": [
+    {
+      "accessURI": "http://www.worldcat.org/oclc/43970336",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/MIAGQ5C6",
+      "citationDetail": "51 F1 Thracia",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard J. A., ed. <i>Barrington Atlas of the Greek and Roman World</i>. Princeton, N.J.: Princeton University Press, 2000. http://www.worldcat.org/oclc/43970336.</div>",
+      "otherIdentifier": " ",
+      "shortTitle": "BAtlas",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://de.wikisource.org/wiki/Paulys_Realencyclop%C3%A4die_der_classischen_Altertumswissenschaft",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/HSGNAEBR",
+      "citationDetail": "Thrake",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Pauly, August Friedrich von, Georg Wissowa, Wilhelm Kroll, Kurt Witte, Karl Mittelhaus, and Konrat Ziegler, eds. <i>Real-Encyclopaedie der classischen Altertumswissenschaft</i>. 83 vols. Stuttgart: J. B. Metzler, 1894. https://de.wikisource.org/wiki/Paulys_Realencyclop%C3%A4die_der_classischen_Altertumswissenschaft.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "RE",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "http://www.cambridge.org/us/talbert/talbertdatabase/TPPlace3067.html",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/QT8GLGGI",
+      "citationDetail": "7B2-8A1 (Talbert 3067)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsEvidence",
+      "formattedCitation": "<div class=\"csl-entry\">Talbert, Richard. “Database: Peutinger Map Names and Features, with Commentary and User’s Guide.” In <i>Explore the Peutinger Map</i>. Cambridge UP, 2010. http://www.cambridge.org/us/talbert/talbertdatabase/prm.html.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "TP (Talbert: CUP)",
+      "type": "citesAsEvidence"
+    },
+    {
+      "accessURI": "https://doi.org/10.1163/1574-9347_bnp_e1211890",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/DUTS58MJ",
+      "citationDetail": "Thraci, Thracia (Iris von Bredow et al.)",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Hubert Cancik, Helmuth Schneider, Manfred Landfester, Christine F. Salazar, and Francis G. Gentry, eds. <i>Brill’s New Pauly: Encyclopaedia of the Ancient World</i>. Brill, 2015. https://referenceworks.brill.com/display/db/npoe.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "New Pauly",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://en.wikipedia.org/wiki/Thracia",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/CI6F6W7W",
+      "citationDetail": "Thracia",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\"><i>Wikipedia: The Free Encyclopedia That Anyone Can Edit</i>. Wikimedia Foundation, 2001. https://en.wikipedia.org.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Wikipedia (English)",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://books.ub.uni-heidelberg.de/index.php/propylaeum/catalog/book/1213/c16853",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/2WUFZTJ5",
+      "citationDetail": "",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Sayar, Mustafa H. “Ptolemäische Herrschaft in der Nordägäis und auf der thrakischen Chersones mit der Residenzstadt Lysimacheia.” In <i>Mare Thracium. Archaeology and History of Coastal Landscapes and Islands of the Thracian Sea during Antiquity and the Byzantine Era</i>, by Thomas Schmidts and Ioannis Triantafillidis. Mainz: Propylaeum, 2023. https://doi.org/10.11588/PROPYLAEUM.1213.C16853.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Sayar 2023",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://www.wikidata.org/wiki/Q41741",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/BCQIKDKS",
+      "citationDetail": "Thrace (Q41741)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\"><i>Wikidata: The Free Knowledge Base That Anyone Can Edit</i>. Wikimedia Foundation, 2014. https://www.wikidata.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "Wikidata",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "http://www.worldcat.org/oclc/6684340",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/Q8X83VMV",
+      "citationDetail": "593",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Miller, Konrad. <i>Itineraria romana: Römische Reisewege an der Hand der Tabula Peutingeriana</i>. Stuttgart: Strecker und Schröder, 1916. http://www.worldcat.org/oclc/6684340.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "ItMiller",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://topostext.org/place/410265RThr",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/MC9RGDVB",
+      "citationDetail": "Thrace region (Evros) 1818 Thraki - Θραίκη",
+      "citationTypeURI": "http://purl.org/spar/cito/seeFurther",
+      "formattedCitation": "<div class=\"csl-entry\">Kiesling, Brady. <i>ToposText – a Reference Tool for Greek Civilization</i>. Version 2.0. Aikaterini Laskaridis Foundation, 2016. https://topostext.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "ToposText",
+      "type": "seeFurther"
+    },
+    {
+      "accessURI": "https://resource.manto.unh.edu/8195613",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/SLCUI2TB",
+      "citationDetail": "8195613: Thrace (N. Greece)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Hawes, Greta, and Scott Smith. <i>MANTO</i>. Accessed February 17, 2023. https://www.manto-myth.org/manto.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "MANTO",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://tp-online.ku.de/trefferanzeige_en.php?id=2238",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/KDZ6Q72N",
+      "citationDetail": "2238: Trhacia (Thracia)",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Ingolstadt, Katholische Universität Eichstätt-. “Tabula Peutingeriana.” Datenbank tp-online, 2019. https://www.ku.de/ggf/geschichte/alte-geschichte/forschung/datenbank-tp-online.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "KU TP Database (Rathmann)",
+      "type": "citesAsRelated"
+    },
+    {
+      "accessURI": "https://www.trismegistos.org/place/2414",
+      "alternateURI": "",
+      "bibliographicURI": "https://www.zotero.org/groups/pleiades/items/TN3GJAU8",
+      "citationDetail": "GEO ID 2414: Thracia",
+      "citationTypeURI": "http://purl.org/spar/cito/citesAsRelated",
+      "formattedCitation": "<div class=\"csl-entry\">Depauw, Mark, Tom Gheldof, Herbert Verreth, Nico Dogaer, Willy Clarysse, Yanne Broux, Gert Baetens, and Heinz-Josef Thissen. <i>Trismegistos: An Interdisciplinary Portal of the Ancient World</i>. Leuven, 2006. http://www.trismegistos.org/.</div>",
+      "otherIdentifier": "",
+      "shortTitle": "TM",
+      "type": "citesAsRelated"
+    }
+  ],
+  "reprPoint": [
+    26.962413795443094,
+    41.51783036533029
+  ],
+  "review_state": "published",
+  "rights": "Copyright © The Creators. Sharing and remixing permitted under terms of the Creative Commons Attribution 3.0 License (cc-by).",
+  "subject": [],
+  "title": "Thracia",
+  "type": "FeatureCollection",
+  "uri": "https://pleiades.stoa.org/places/501638"
+}

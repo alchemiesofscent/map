@@ -405,12 +405,12 @@
       {"surface": "Σάμον", "passage_id": "smt.9.1"}
     ],
     "place_type": "island",
-    "lat": 37.7547215,
-    "lon": 26.7741455,
+    "lat": 37.7324615,
+    "lon": 26.8391302,
     "certainty": "secure",
     "pleiades_id": "599926",
     "pleiades_uri": "https://pleiades.stoa.org/places/599926",
-    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "coordinates_source": "Pleiades reprPoint (refreshed 2026-05-10)",
     "notes": "Mentioned only as a comparison in SMT 9.1 ('like Samos and Chios sharing names with their islands'); category C (do not map as a route stop)."
   },
   {
@@ -421,12 +421,12 @@
       {"surface": "Χίον", "passage_id": "smt.9.1"}
     ],
     "place_type": "island",
-    "lat": 38.4214085,
-    "lon": 26.087502,
+    "lat": 38.3836419,
+    "lon": 26.0142412,
     "certainty": "secure",
     "pleiades_id": "550497",
     "pleiades_uri": "https://pleiades.stoa.org/places/550497",
-    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "coordinates_source": "Pleiades reprPoint (refreshed 2026-05-10)",
     "notes": "Same comparison context as Samos; category C."
   },
   {
@@ -438,17 +438,17 @@
       {"surface": "Αἰγαῖος", "passage_id": "smt.9.1"}
     ],
     "place_type": "sea",
-    "lat": 38.5,
-    "lon": 25.0,
+    "lat": 38.913963,
+    "lon": 24.917236,
     "certainty": "secure",
     "pleiades_id": "560221",
     "pleiades_uri": "https://pleiades.stoa.org/places/560221",
-    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
+    "coordinates_source": "Pleiades reprPoint (refreshed 2026-05-10)",
     "notes": "Comparison context; category C in the Lemnos route per the do_not_map list."
   },
   {
     "place_key": "crete",
-    "display_name": "Crete",
+    "display_name": "Creta (island)",
     "ancient_names_in_galen": [
       {"surface": "Κρήτη", "passage_id": "de_antidotis.1"},
       {"surface": "Κρήτην", "passage_id": "de_antidotis.1"},
@@ -456,12 +456,12 @@
       {"surface": "Κρήτῃ", "passage_id": "de_antidotis.1"}
     ],
     "place_type": "island",
-    "lat": 35.2,
-    "lon": 25.0,
-    "certainty": "probable",
-    "pleiades_id": "589961",
-    "pleiades_uri": "https://pleiades.stoa.org/places/589961",
-    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
-    "notes": "Mentioned in De antidotis 1.5 / 1.14 as the source of botanical materia (Cretan dittany etc.). Per the curator decision these passages are REJECTED as route evidence — Crete is source geography, not Galen travel. Kept here for the materia layer."
+    "lat": 35.214847063,
+    "lon": 25.0740796921,
+    "certainty": "secure",
+    "pleiades_id": "589748",
+    "pleiades_uri": "https://pleiades.stoa.org/places/589748",
+    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump; refreshed 2026-05-10)",
+    "notes": "Mentioned in De antidotis 1.5 / 1.14 as the source of botanical materia (Cretan dittany etc.). Per the curator decision these passages are REJECTED as route evidence — Crete is source geography, not Galen travel. Kept here for the materia layer. Originally entered with Pleiades 589961 (Onysia island) by mistake; corrected to 589748 (Creta island) after the 2026-05-10 drift check."
   }
 ]
