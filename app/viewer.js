@@ -644,7 +644,19 @@ function renderDossier(focus) {
   applyTextTransition(document.getElementById("dossier-greek-name"), focus.greekName ?? "");
 
   const translationEl = document.getElementById("dossier-translation");
-  applyHtmlTransition(translationEl, escapeHtml(focus.translation || ""));
+  let translationHtml;
+  if (focus.translation) {
+    translationHtml = escapeHtml(focus.translation);
+  } else if (focus.corpus === "galen" && focus.siteKind && focus.siteKind !== "primary") {
+    // Galen context / materia pins don't have a passage of their own — they
+    // show up in the narrative as background mentions or material-source
+    // observations. Distinguish that from a genuinely unreviewed translation.
+    const role = focus.siteKind === "materia" ? "Materia-medica observation" : "Context location";
+    translationHtml = `<span class="dossier__translation-placeholder">${role} — no Galen passage attached.</span>`;
+  } else {
+    translationHtml = `<span class="dossier__translation-placeholder">Translation pending review.</span>`;
+  }
+  applyHtmlTransition(translationEl, translationHtml);
 
   const greekEl = document.getElementById("dossier-greek");
   greekEl.textContent = focus.greekText || "";

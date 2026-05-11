@@ -461,8 +461,7 @@ body::after {
   transition: opacity 320ms ease;
 }
 
-.dossier__translation:empty::before {
-  content: "Translation pending review.";
+.dossier__translation-placeholder {
   color: var(--vellum-dim);
   font-style: italic;
 }
