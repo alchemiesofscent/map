@@ -53,6 +53,21 @@
     "notes": "The auto-detector treats Φίλιππος as a person (king of Macedon) and filters it. This override forces the place mapping for the dative 'ἐν Φιλίπποις' in SMT 2."
   },
   {
+    "place_key": "philippi_nearby_coast",
+    "display_name": "Nearby coast of Philippi (unnamed)",
+    "ancient_names_in_galen": [
+      {"surface": "τὴν πλησίον θάλατταν", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "port",
+    "lat": 40.83,
+    "lon": 24.40,
+    "certainty": "ambiguous",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Derived from Galen's stadia count, not a Pleiades record",
+    "notes": "The unnamed embarkation point 120 stades (~22 km) south of Philippi in SMT 9.1 (b): 'ἐντεῦθεν ἐπὶ τὴν πλησίον θάλατταν εἴκοσιν ἐπὶ τοῖς ἑκατὸν ἀπέχουσαν στάδια κατελθὼν'. Per the curator decision do NOT pin to Neapolis of Macedonia (501501) or any other Pleiades record — Galen does not name it. Derived coordinates approximate the modern coast south of Philippi."
+  },
+  {
     "place_key": "hephaistia",
     "display_name": "Hephaistia",
     "ancient_names_in_galen": [
@@ -87,6 +102,19 @@
     "pleiades_uri": "https://pleiades.stoa.org/places/707624",
     "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
     "notes": "Cyprus, not the Cilician Soli. Disambiguates against Pleiades's other 'Soloi' (Cilicia). The genitive Σόλων (also = 'of Solon') is the form Galen uses; CLTK can't lemmatize it correctly without context, hence the explicit override."
+  },
+  {
+    "place_key": "soloi_mine",
+    "display_name": "Mine near Soloi (unnamed)",
+    "ancient_names_in_galen": [],
+    "place_type": "mine",
+    "lat": 35.10,
+    "lon": 32.83,
+    "certainty": "ambiguous",
+    "pleiades_id": null,
+    "pleiades_uri": null,
+    "coordinates_source": "Derived (~30 stades from Soloi per smt.9.3.a), not a Pleiades record",
+    "notes": "The copper/cadmia/sory/chalcitis mine ~30 stades from Soloi (smt.9.3.a–c). Galen calls it 'τὸ μέταλλον' — no proper toponym exists. Mapped as a project-local place per curator decision; do not pin to a Pleiades record."
   },
   {
     "place_key": "ergasteria",
@@ -149,11 +177,7 @@
       {"surface": "κοίλη Συρία", "passage_id": "smt.9.1"},
       {"surface": "κοίλην Συρίαν", "passage_id": "smt.9.1"},
       {"surface": "κοίλης Συρίας", "passage_id": "smt.9.1"},
-      {"surface": "κοίλῃ Συρίᾳ", "passage_id": "smt.9.1"},
-      {"surface": "Συρία", "passage_id": "smt.9.1"},
-      {"surface": "Συρίαν", "passage_id": "smt.9.1"},
-      {"surface": "Συρίας", "passage_id": "smt.9.1"},
-      {"surface": "Συρίᾳ", "passage_id": "smt.9.1"}
+      {"surface": "κοίλῃ Συρίᾳ", "passage_id": "smt.9.1"}
     ],
     "place_type": "region",
     "lat": 33.75,
@@ -162,7 +186,7 @@
     "pleiades_id": "678096",
     "pleiades_uri": "https://pleiades.stoa.org/places/678096",
     "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
-    "notes": "Multi-word region label; the κοίλη qualifier is lowercased in the TEI so the auto-detector can't catch it as a single proper noun. The override prevents 'Συρία' alone from defaulting to one of the six ambiguous Pleiades 'Syria' records."
+    "notes": "Multi-word region label; the κοίλη qualifier is lowercased in the TEI so the auto-detector can't catch it as a single proper noun. The four κοίλη-prefixed surfaces are the override target; bare Συρία deliberately remains unmapped here to avoid auto-resolving every future bare-Syria token to Coele Syria (the phrase 'Παλαιστίνης Συρίας' is handled separately by palaestina_syria_province → 991396)."
   },
   {
     "place_key": "mysia",
@@ -292,6 +316,25 @@
     "notes": "The destination of Galen's main Lemnian-earth voyage. Pleiades 550693 is the island record."
   },
   {
+    "place_key": "myrina_lemnos",
+    "display_name": "Myrina (Lemnos)",
+    "ancient_names_in_galen": [
+      {"surface": "Μυρίναν", "passage_id": "smt.9.1"},
+      {"surface": "Μυρίνα", "passage_id": "smt.9.1"},
+      {"surface": "Μυρίνη", "passage_id": "smt.9.1"},
+      {"surface": "Μυρίνης", "passage_id": "smt.9.1"},
+      {"surface": "Μυρίνῃ", "passage_id": "smt.9.1"}
+    ],
+    "place_type": "city",
+    "lat": 39.8748,
+    "lon": 25.0570,
+    "certainty": "secure",
+    "pleiades_id": "550755",
+    "pleiades_uri": "https://pleiades.stoa.org/places/550755",
+    "coordinates_source": "Hand-set; pending Pleiades --refresh reconciliation against 550755 reprPoint",
+    "notes": "Galen's wrong-port disembarkation on Lemnos in SMT 9.1 (a), K. XII 172: 'ὡς δὲ ἀποβὰς τῆς νεὼς, ἔγνων Μυρίναν μὲν ὀνομάζεσθαι τὴν πόλιν'. Disambiguate vs Pleiades 550756 (Aiolis Myrina) and 594984 (Pisidia Myrina) — those are different cities. The intended destination Hephaistia was on the opposite (eastern) end of the island and not reached on this attempt."
+  },
+  {
     "place_key": "rome",
     "display_name": "Rome",
     "ancient_names_in_galen": [
@@ -372,13 +415,28 @@
       {"surface": "Παλαιστίνῃ", "passage_id": "smt.9.1"}
     ],
     "place_type": "region",
-    "lat": 31.614254,
-    "lon": 34.8910485,
+    "lat": 31.25,
+    "lon": 34.75,
     "certainty": "probable",
-    "pleiades_id": "1001939",
-    "pleiades_uri": "https://pleiades.stoa.org/places/1001939",
-    "coordinates_source": "Pleiades reprPoint (snapshot 2026-05-09 dump)",
-    "notes": "Pleiades has 3 separate Palaestina province records (I/II/III); using Palaestina I as the canonical pin since Galen's mention is general. Treated as context within the coele-syria-dead-sea-materials route."
+    "pleiades_id": "687995",
+    "pleiades_uri": "https://pleiades.stoa.org/places/687995",
+    "coordinates_source": "Pleiades 687995 reprPoint (refreshed 2026-05-11)",
+    "notes": "Pleiades 687995 = Palaestina region (Galen's general regional mention in smt.9.1.a, μόριον οὖσαν τῆς Παλαιστίνης). Previously misidentified as 1001939 (Palaestina I) — that is a fourth-century Roman province record, anachronistic for Galen. The exact phrase 'Παλαιστίνης Συρίας' in de_antidotis.1.2.a is handled separately by the palaestina_syria_province entry (991396)."
+  },
+  {
+    "place_key": "palaestina_syria_province",
+    "display_name": "Palaestina / Syria Palaestina (province)",
+    "ancient_names_in_galen": [
+      {"surface": "Παλαιστίνης Συρίας", "passage_id": "de_antidotis.1.2"}
+    ],
+    "place_type": "region",
+    "lat": 32.50,
+    "lon": 32.50,
+    "certainty": "secure",
+    "pleiades_id": "991396",
+    "pleiades_uri": "https://pleiades.stoa.org/places/991396",
+    "coordinates_source": "Pleiades 991396 reprPoint (refreshed 2026-05-11)",
+    "notes": "The administrative province Galen names once in de_antidotis.1.2.a (Παλαιστίνης Συρίας — pure opobalsam acquisition). Distinct from bare 'palestine' (687995, Palaestina region) which covers the broader regional mention in smt.9.1.a. Do NOT use 1001939 (Palaestina I) — that's a fourth-century record, too late for Galen."
   },
   {
     "place_key": "lycia",

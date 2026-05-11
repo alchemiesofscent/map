@@ -857,7 +857,32 @@ def cluster_hits(sentences: list[Sentence], gap_tolerance: int = 1) -> list[Cand
                 gap = 0
     if current and current.sentences:
         candidates.append(current)
-    return [c for c in candidates if any(s.place_mentions for s in c.sentences)]
+    candidates = [c for c in candidates if any(s.place_mentions for s in c.sentences)]
+    # Trailing-context extension: grow each cluster by one sentence if the
+    # next same-chapter sentence carries a curator-lexicon place mention
+    # (i.e., a place_keys-resolved Mention, not a raw Pleiades guess). This
+    # captures explanatory continuations like the Myrina disembarkation
+    # ("ἔγνων Μυρίναν…") that sit just outside the verb-hit cluster but
+    # belong with it narratively. Limited to one sentence so we don't
+    # bridge into the next cluster.
+    if not candidates:
+        return candidates
+    sentences_by_id = {id(s): i for i, s in enumerate(sentences)}
+    for c in candidates:
+        last = c.sentences[-1]
+        idx = sentences_by_id.get(id(last))
+        if idx is None or idx + 1 >= len(sentences):
+            continue
+        nxt = sentences[idx + 1]
+        if (
+            nxt.work == c.work
+            and nxt.book == c.book
+            and nxt.chapter == c.chapter
+            and any(m.place_keys for m in nxt.place_mentions)
+            and not nxt.is_hit  # don't absorb something that would start its own cluster
+        ):
+            c.sentences.append(nxt)
+    return candidates
 
 
 # ---------------------------------------------------------------------------
