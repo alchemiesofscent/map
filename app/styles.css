@@ -957,7 +957,7 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
     left: 10px;
     padding: 7px 11px;
     min-width: 0;
-    max-width: 56vw;
+    max-width: 50vw;
   }
   .masthead__rule,
   .masthead__title { display: none; }
@@ -977,6 +977,7 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
     top: 10px;
     right: 10px;
     padding: 2px 3px;
+    gap: 2px;
   }
   .corpus-control button {
     padding: 4px 8px;
@@ -990,21 +991,25 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
     padding: 3px 4px;
     max-width: calc(100vw - 20px);
   }
-  .view-control__routes { max-width: calc(100vw - 32px); }
+  .view-control__routes {
+    max-width: calc(100vw - 32px);
+    gap: 3px;
+  }
   .view-control button {
-    padding: 5px 8px;
-    font-size: 9.5px;
+    padding: 4px 7px;
+    font-size: 9px;
     letter-spacing: 0.14em;
   }
   .view-control__divider,
   .view-control__explore { display: none; }
 
-  /* Reader: bottom ~quarter of the screen. */
+  /* Reader: about 42vh on phones — needs headroom for Galen's materia
+   * chips + context-mention cards alongside the translation. */
   .dossier {
     bottom: 44px;
     left: 10px;
     width: calc(100vw - 20px);
-    max-height: 28vh;
+    max-height: 42vh;
   }
   .dossier__inner {
     padding: 11px 14px 10px;
@@ -1033,13 +1038,57 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
   /* The italic Greek name often duplicates the Latin title; hide on phones. */
   .dossier__greek-name { display: none; }
 
-  /* Body fills the remaining space inside the panel. */
+  /* Body fills the remaining space inside the panel and scrolls if
+   * the active pin has long translation + materia + mention cards.
+   * Without explicit overflow-y here the desktop scroll rule does not
+   * inherit (max-height was overridden), so content silently overflows
+   * the panel below. */
   .dossier__body {
-    max-height: none;
     flex: 1 1 auto;
     min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Soft fade at the bottom so users can tell more content is below. */
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
   }
   .dossier__translation { font-size: 14px; line-height: 1.5; }
+
+  /* Galen materia chips — compact pills on phones. */
+  .dossier__materia { margin-top: 8px; padding-top: 6px; }
+  .dossier__materia-chip {
+    padding: 3px 7px;
+    font-size: 11.5px;
+  }
+  .dossier__materia-chip__greek { font-size: 11px; margin-left: 4px; }
+  .dossier__materia-chip__relation {
+    font-size: 8.5px;
+    margin-left: 4px;
+    letter-spacing: 0.12em;
+  }
+
+  /* Galen context-mention cards — tighter on phones. */
+  .dossier-mention__lead {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    margin-bottom: 6px;
+  }
+  .dossier-mention {
+    padding: 6px 8px;
+    margin-top: 6px;
+  }
+  .dossier-mention__meta {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    margin-bottom: 4px;
+  }
+  .dossier-mention__english { font-size: 13px; line-height: 1.45; }
+  .dossier-mention__greek {
+    font-size: 12.5px;
+    line-height: 1.55;
+    margin-top: 4px;
+  }
 
   /* Greek source closed by default; opening it would blow past the panel.
    * On phones we collapse it entirely — the Pleiades link in the foot

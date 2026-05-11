@@ -90,6 +90,7 @@ const state = {
   cooldownUntil: 0,
   exploreMode: false,
   hintTimer: null,
+  lastViewportPhone: typeof window !== "undefined" && window.innerWidth <= 720,
   touchStartY: null,
   touchStartX: null,
 };
@@ -124,6 +125,7 @@ function loadJson(path) {
 
 function isPeriplus() { return state.corpusId === "periplus"; }
 function isGalen() { return state.corpusId === "galen"; }
+function isPhoneViewport() { return window.innerWidth <= 720; }
 
 function siteDisplayName(site) {
   return site?.source_name ?? site?.display_name ?? "";
@@ -405,10 +407,12 @@ function buildFocusList() {
       // For pins without a passage of their own (context, materia),
       // surface sentence-level snippets from every passage that does
       // name this place, so the dossier reads as actual Galen text
-      // rather than a "no passage attached" placeholder.
+      // rather than a "no passage attached" placeholder. Phones get a
+      // tighter limit because the dossier real-estate is smaller.
+      const mentionLimit = isPhoneViewport() ? 2 : 4;
       const contextMentions = site.passage_id
         ? []
-        : collectContextMentions(site.place_key, site.passage_id);
+        : collectContextMentions(site.place_key, site.passage_id, mentionLimit);
 
       list.push({
         index: idx,
@@ -1104,7 +1108,17 @@ function bindInputs() {
     if (state.map) state.map.invalidateSize();
     if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-      if (state.currentIndex >= 0 && !state.exploreMode) {
+      if (state.exploreMode) return;
+      // Crossing the phone/desktop breakpoint changes the context-mention
+      // limit (and reflows the dossier layout). Rebuild the focus list
+      // so cards re-render at the right count for the new viewport.
+      const isPhone = isPhoneViewport();
+      if (isPhone !== state.lastViewportPhone) {
+        state.lastViewportPhone = isPhone;
+        if (state.data) setView(state.selectedView, { instant: true });
+        return;
+      }
+      if (state.currentIndex >= 0) {
         goTo(state.currentIndex, { force: true, instant: true });
       }
     }, 160);
