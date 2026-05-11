@@ -1116,6 +1116,7 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
     left: 10px;
     width: calc(100vw - 20px);
     max-height: 42vh;
+    overflow: hidden;
   }
   .dossier__inner {
     padding: 11px 14px 10px;
@@ -1144,15 +1145,16 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
   /* The italic Greek name often duplicates the Latin title; hide on phones. */
   .dossier__greek-name { display: none; }
 
-  /* Body scrolls inside the panel. Use an explicit max-height instead
-   * of relying on flex — flex clamping was unreliable here because the
-   * dossier is grid-displayed (one row, content-sized), and the inner
-   * column could outgrow the grid track silently. The explicit cap
-   * guarantees scrollability and keeps the nav buttons reachable. */
+  /* Body scrolls inside the panel. The calc reserves room for the
+   * top eyebrow/title row, the foot (citation + Pleiades link), and
+   * the surrounding padding/margins — without it, on shorter phones
+   * (~568 px tall) the foot gets clipped at the bottom of the 42vh
+   * dossier. Numbers tuned to ~30 px top, ~30 px foot, ~22 px inner
+   * padding, ~12 px margins. */
   .dossier__body {
     flex: 1 1 auto;
     min-height: 0;
-    max-height: 30vh;
+    max-height: calc(42vh - 96px);
     overflow-y: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
@@ -1195,10 +1197,23 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
     margin-top: 4px;
   }
 
-  /* Greek source closed by default; opening it would blow past the panel.
-   * On phones we collapse it entirely — the Pleiades link in the foot
-   * still gets the curator to the canonical record. */
-  .dossier__greek { display: none; }
+  /* Greek source <details>: collapsed by default, expandable inside
+   * the scrollable body. With explicit body max-height + scroll, the
+   * panel no longer overflows when the user opens it. */
+  .dossier__greek {
+    margin-top: 12px;
+    padding-top: 10px;
+  }
+  .dossier__greek summary {
+    padding: 4px 0;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+  }
+  .dossier__greek-text {
+    font-size: 13px;
+    line-height: 1.55;
+    margin-top: 6px;
+  }
 
   .dossier__foot {
     margin-top: 6px;
@@ -1216,6 +1231,23 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
   .strip { padding: 6px 10px 8px; gap: 8px; }
   .strip__legend { display: none; }
   .strip__rail { height: 16px; }
+
+  /* Leaflet +/− zoom control: positioned bottom-left, lifted above
+   * the strip rail. Styled to match the rest of the dark chrome. */
+  .leaflet-bottom.leaflet-left { bottom: 38px; left: 10px; }
+  .leaflet-control-zoom a {
+    background: rgba(15, 23, 28, 0.84);
+    color: var(--vellum);
+    border: 1px solid var(--rule);
+    width: 34px;
+    height: 34px;
+    line-height: 32px;
+    font-family: var(--display);
+    font-size: 18px;
+  }
+  .leaflet-control-zoom a:hover { color: var(--gold-bright); }
+  .leaflet-control-zoom a:first-child { border-top-left-radius: var(--panel-radius); border-top-right-radius: var(--panel-radius); }
+  .leaflet-control-zoom a:last-child { border-top: 0; border-bottom-left-radius: var(--panel-radius); border-bottom-right-radius: var(--panel-radius); }
 
   /* The keyboard hint isn't useful on touch devices. */
   .hint { display: none; }

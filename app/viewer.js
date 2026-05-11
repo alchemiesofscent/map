@@ -479,7 +479,9 @@ function initMap() {
   // On phones the user expects to pan and pinch-zoom the map directly —
   // gating that behind an "Explore" toggle the way desktop does is
   // unnatural. So mobile starts with map gestures enabled; the explore
-  // toggle becomes a no-op there.
+  // toggle becomes a no-op there. Mobile also gets Leaflet's built-in
+  // +/− zoom buttons (positioned bottom-left so they don't fight with
+  // the drawer toggle), in addition to one-finger double-tap-to-zoom-in.
   const phone = isPhoneViewport();
   const map = L.map("map", {
     scrollWheelZoom: false,
@@ -487,12 +489,15 @@ function initMap() {
     touchZoom: phone,
     doubleClickZoom: phone,
     keyboard: false,
-    zoomControl: false,
+    zoomControl: phone,
     attributionControl: true,
     zoomAnimation: true,
     fadeAnimation: true,
     markerZoomAnimation: true,
   }).setView([18, 50], 5);
+  if (phone && map.zoomControl) {
+    map.zoomControl.setPosition("bottomleft");
+  }
 
   L.tileLayer(
     "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
