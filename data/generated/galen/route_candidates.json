@@ -55,7 +55,7 @@
             "surface": "Παλαιστίνης",
             "lemma": "παλαιστινης",
             "pleiades_ids": [
-              "1001939"
+              "687995"
             ],
             "place_keys": [
               "palestine"
@@ -182,6 +182,30 @@
             ],
             "match_type": "curator",
             "cert": "secure"
+          },
+          {
+            "surface": "Μυρίναν",
+            "lemma": "μυριναν",
+            "pleiades_ids": [
+              "550755"
+            ],
+            "place_keys": [
+              "myrina_lemnos"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
+            "surface": "Ἡφαιστιάδα",
+            "lemma": "ηφαιστιαδα",
+            "pleiades_ids": [
+              "550569"
+            ],
+            "place_keys": [
+              "hephaistia"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
           }
         ],
         "first_person_verbs": [
@@ -194,7 +218,7 @@
             "category": "movement"
           }
         ],
-        "sentence_count": 3,
+        "sentence_count": 4,
         "sentences": [
           {
             "kuhn_citation": "K. XII 168.7–178.1",
@@ -230,7 +254,7 @@
                 "surface": "Παλαιστίνης",
                 "lemma": "παλαιστινης",
                 "pleiades_ids": [
-                  "1001939"
+                  "687995"
                 ],
                 "place_keys": [
                   "palestine"
@@ -412,6 +436,75 @@
               }
             ],
             "verb_hits": []
+          },
+          {
+            "kuhn_citation": "K. XII 168.7–178.1",
+            "chapter_ref": "9.1.2",
+            "greek": "ὡς δὲ ἀποβὰς τῆς νεὼς, ἔγνων Μυρίναν μὲν ὀνομάζεσθαι τὴν πόλιν, εἶναι δ’ οὔτε κατὰ Φιλοκτήτην οὔτε κατὰ τὸ ἱερὸν τοῦ Ἡφαίστου λόφον ἐν τῇ χώρᾳ τῆς πόλεως ἐκείνης, ἀλλ’ ἐν ἑτέρᾳ τῇ Ἡφαιστιάδι καλουμένῃ, καὶ οὐδ’ ἐγγὺς εἶναι τὴν πόλιν ἐκείνην τῆς Μυρίνης, ὅ τε ναύκληρος οὐκ ἠδύνατό με περιμένειν, ἀνεβαλλόμην εἰσαῦθις, ὅταν ἀπὸ Ῥώμης εἰς Ἀσίαν ἀφίκωμαι, θεάσασθαι τὴν Ἡφαιστιάδα.",
+            "is_hit": false,
+            "place_mentions": [
+              {
+                "surface": "Μυρίναν",
+                "lemma": "μυριναν",
+                "pleiades_ids": [
+                  "550755"
+                ],
+                "place_keys": [
+                  "myrina_lemnos"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Μυρίνης",
+                "lemma": "Μυρίνη",
+                "pleiades_ids": [
+                  "550755"
+                ],
+                "place_keys": [
+                  "myrina_lemnos"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Ῥώμης",
+                "lemma": "ῥώμη",
+                "pleiades_ids": [
+                  "423025"
+                ],
+                "place_keys": [
+                  "rome"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Ἀσίαν",
+                "lemma": "Ἀσία",
+                "pleiades_ids": [
+                  "981509"
+                ],
+                "place_keys": [
+                  "asia_province"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Ἡφαιστιάδα",
+                "lemma": "ηφαιστιαδα",
+                "pleiades_ids": [
+                  "550569"
+                ],
+                "place_keys": [
+                  "hephaistia"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": []
           }
         ]
       },
@@ -472,6 +565,16 @@
             "cert": "secure"
           },
           {
+            "surface": "τὴν πλησίον θάλατταν",
+            "lemma": "την πλησιον θαλατταν",
+            "pleiades_ids": [],
+            "place_keys": [
+              "philippi_nearby_coast"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
+          },
+          {
             "surface": "Θάσον",
             "lemma": "Θάσος",
             "pleiades_ids": [
@@ -518,6 +621,18 @@
             ],
             "match_type": "curator",
             "cert": "secure"
+          },
+          {
+            "surface": "Μυρίνα",
+            "lemma": "μυρινα",
+            "pleiades_ids": [
+              "550755"
+            ],
+            "place_keys": [
+              "myrina_lemnos"
+            ],
+            "match_type": "curator",
+            "cert": "secure"
           }
         ],
         "first_person_verbs": [
@@ -526,7 +641,7 @@
             "category": "movement"
           }
         ],
-        "sentence_count": 2,
+        "sentence_count": 3,
         "sentences": [
           {
             "kuhn_citation": "K. XII 168.7–178.1",
@@ -578,6 +693,16 @@
                 ],
                 "place_keys": [
                   "thracia_region"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "τὴν πλησίον θάλατταν",
+                "lemma": "την πλησιον θαλατταν",
+                "pleiades_ids": [],
+                "place_keys": [
+                  "philippi_nearby_coast"
                 ],
                 "match_type": "curator",
                 "cert": "secure"
@@ -640,6 +765,51 @@
                 ],
                 "place_keys": [
                   "hephaistia"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
+            "verb_hits": []
+          },
+          {
+            "kuhn_citation": "K. XII 168.7–178.1",
+            "chapter_ref": "9.1.2",
+            "greek": "ἐν γάρ τοι τῇ ὅλῃ νήσῳ τῇ Λήμνῳ, κατὰ μὲν τὸ πρὸς ταῖς ἀνατολαῖς μέρος αὐτῆς ἐστιν Ἡφαιστιὰς, κατὰ δὲ τὸ πρὸς ταῖς δυσμαῖς ἡ Μυρίνα.",
+            "is_hit": false,
+            "place_mentions": [
+              {
+                "surface": "Λήμνῳ",
+                "lemma": "Λῆμνος",
+                "pleiades_ids": [
+                  "550693"
+                ],
+                "place_keys": [
+                  "lemnos"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Ἡφαιστιὰς",
+                "lemma": "ηφαιστιας",
+                "pleiades_ids": [
+                  "550569"
+                ],
+                "place_keys": [
+                  "hephaistia"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              },
+              {
+                "surface": "Μυρίνα",
+                "lemma": "μυρινα",
+                "pleiades_ids": [
+                  "550755"
+                ],
+                "place_keys": [
+                  "myrina_lemnos"
                 ],
                 "match_type": "curator",
                 "cert": "secure"
@@ -1599,25 +1769,13 @@
             "cert": "secure"
           },
           {
-            "surface": "Παλαιστίνης",
-            "lemma": "παλαιστινης",
+            "surface": "Παλαιστίνης Συρίας",
+            "lemma": "παλαιστινης συριας",
             "pleiades_ids": [
-              "1001939"
+              "991396"
             ],
             "place_keys": [
-              "palestine"
-            ],
-            "match_type": "curator",
-            "cert": "secure"
-          },
-          {
-            "surface": "Συρίας",
-            "lemma": "συρία",
-            "pleiades_ids": [
-              "678096"
-            ],
-            "place_keys": [
-              "coele_syria"
+              "palaestina_syria_province"
             ],
             "match_type": "curator",
             "cert": "secure"
@@ -1666,25 +1824,13 @@
                 "cert": "secure"
               },
               {
-                "surface": "Παλαιστίνης",
-                "lemma": "παλαιστινης",
+                "surface": "Παλαιστίνης Συρίας",
+                "lemma": "παλαιστινης συριας",
                 "pleiades_ids": [
-                  "1001939"
+                  "991396"
                 ],
                 "place_keys": [
-                  "palestine"
-                ],
-                "match_type": "curator",
-                "cert": "secure"
-              },
-              {
-                "surface": "Συρίας",
-                "lemma": "συρία",
-                "pleiades_ids": [
-                  "678096"
-                ],
-                "place_keys": [
-                  "coele_syria"
+                  "palaestina_syria_province"
                 ],
                 "match_type": "curator",
                 "cert": "secure"
@@ -2008,7 +2154,7 @@
             "category": "autopsy"
           }
         ],
-        "sentence_count": 2,
+        "sentence_count": 3,
         "sentences": [
           {
             "kuhn_citation": "K. XIV 51.5–54.5",
@@ -2066,6 +2212,27 @@
             "greek": "ἀπολείπεται δὲ τὸ φυτὸν τοῦτο τοῦ μάρου πάμπολυ κατὰ τὴν εὐωδίαν.",
             "is_hit": false,
             "place_mentions": [],
+            "verb_hits": []
+          },
+          {
+            "kuhn_citation": "K. XIV 51.5–54.5",
+            "chapter_ref": "1.10",
+            "greek": "ἱκανῶς γὰρ εὐῶδες τὸ μάρον, καὶ τό γε καλούμενον ἀμαράκινον μύρον ἐν Κυζίκῳ σκευαζόμενον, ὅσον μὲν ἐπὶ τῇ προσηγορίᾳ, δόξειεν ἅν τις ἀμαράκου ἔχειν πλεῖστον, καὶ ἴσως οὕτως ὑπὸ τῶν παλαιῶν ἐσκευάζετο, νυνὶ δὲ τὸ μάρον ἐμβάλλουσι μόνον.",
+            "is_hit": false,
+            "place_mentions": [
+              {
+                "surface": "Κυζίκῳ",
+                "lemma": "Κύζικος",
+                "pleiades_ids": [
+                  "511218"
+                ],
+                "place_keys": [
+                  "cyzicus"
+                ],
+                "match_type": "curator",
+                "cert": "secure"
+              }
+            ],
             "verb_hits": []
           }
         ]

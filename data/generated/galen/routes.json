@@ -1,8 +1,8 @@
 [
   {
     "route_key": "lemnos-alexandria-troas-to-thessalonica-context",
-    "label": "Lemnos via Alexandria Troas",
-    "synopsis": "Galen's first Lemnian-earth voyage (SMT 9.1). En route from Asia to Rome, he sails from Alexandria Troas to Lemnos aboard a Thessalonica-bound ship, arriving at the wrong city before walking to Hephaistia for the earth itself.",
+    "label": "First Lemnos attempt (via Alexandria Troas → Myrina)",
+    "synopsis": "Galen's first Lemnian-earth attempt (SMT 9.1, a). He boards a Thessalonica-bound ship at Alexandria Troas after arranging a Lemnos stopover. The captain puts in at the wrong Lemnian city — Myrina — and does not wait while Galen walks across the island; Hephaistia, the intended collection city, is not reached on this trip.",
     "start_place_key": "alexandria_troas",
     "stops": [
       {
@@ -18,160 +18,34 @@
       },
       {
         "route_order": 2,
-        "place_key": "lemnos",
+        "place_key": "myrina_lemnos",
         "order_basis": "explicit",
-        "evidence_phrase": "οὐκ ὤκνησα πλεῦσαι, θεασόμενος ὁπόσον μίγνυται τοῦ αἵματος τῇ γῇ",
-        "kuhn_citations": [
-          "K. XII 168.7–178.1"
-        ],
-        "materia_keys": [
-          "lemnian-earth"
-        ],
-        "narrative_note": "Galen lands on Lemnos at the wrong city; he intended Hephaistia but the captain put in elsewhere."
-      },
-      {
-        "route_order": 3,
-        "place_key": "hephaistia",
-        "order_basis": "strongly_implied",
-        "evidence_phrase": "τὴν Ἡφαιστιάδα διαγινώσκων τὴν θέσιν αὐτῆς",
-        "kuhn_citations": [
-          "K. XII 168.7–178.1"
-        ],
-        "materia_keys": [
-          "lemnian-earth",
-          "lemnian-seal"
-        ],
-        "narrative_note": "The actual collection city for Lemnian earth — only learned by Galen on this trip that the island has two cities."
-      },
-      {
-        "route_order": 4,
-        "place_key": "thessalonica",
-        "order_basis": "strongly_implied",
-        "evidence_phrase": "ἐπιτυχὼν εἰς Θεσσαλονίκην ἀναγομένου πλοίου",
+        "evidence_phrase": "ὡς δὲ ἀποβὰς τῆς νεὼς, ἔγνων Μυρίναν μὲν ὀνομάζεσθαι τὴν πόλιν",
         "kuhn_citations": [
           "K. XII 168.7–178.1"
         ],
         "materia_keys": [],
-        "narrative_note": "Boat's named destination after the Lemnos detour — Galen continued aboard once the materia stop was complete."
-      },
-      {
-        "route_order": 5,
-        "place_key": "thracia_region",
-        "order_basis": "explicit",
-        "evidence_phrase": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας",
-        "kuhn_citations": [
-          "K. XII 168.7–178.1"
-        ],
-        "materia_keys": [],
-        "narrative_note": "Galen's own statement that the Asia→Rome leg of this trip was on foot, listing Thrace first then Macedonia."
-      },
-      {
-        "route_order": 6,
-        "place_key": "macedonia_region",
-        "order_basis": "explicit",
-        "evidence_phrase": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας",
-        "kuhn_citations": [
-          "K. XII 168.7–178.1"
-        ],
-        "materia_keys": [],
-        "narrative_note": "The second walked region en route to Rome (continuing 'and Macedonia')."
-      },
-      {
-        "route_order": 7,
-        "place_key": "rome",
-        "order_basis": "explicit",
-        "evidence_phrase": "ἐξ Ἀσίας εἰς Ῥώμην ἀφικέσθαι",
-        "kuhn_citations": [
-          "K. XII 168.7–178.1"
-        ],
-        "materia_keys": [
-          "chamaepitys",
-          "chamaedrys",
-          "cretan-herbs",
-          "chicken-dung",
-          "theriac"
-        ],
-        "narrative_note": "The trip's stated destination: Galen was traveling from Asia to arrive at Rome."
+        "narrative_note": "Galen's wrong-port disembarkation. He learns on landing that the city is Myrina, not the Hephaistia he wanted, and the captain cannot wait."
       }
     ],
     "edges": [
       {
         "from_place_key": "alexandria_troas",
-        "to_place_key": "lemnos",
+        "to_place_key": "myrina_lemnos",
         "kuhn_citation": "K. XII 168.7–178.1",
-        "textual_basis": "ἔπλευσα πρότερον ἀπὸ Τρῳάδος Ἀλεξανδρείας εἰς Λῆμνον",
+        "textual_basis": "ἔπλευσα πρότερον … προσέσχε μὲν, οὐ μὴν ᾗ γ' ἐχρῆν πόλει … ἔγνων Μυρίναν μὲν ὀνομάζεσθαι τὴν πόλιν",
         "certainty": "secure"
-      },
-      {
-        "from_place_key": "lemnos",
-        "to_place_key": "hephaistia",
-        "kuhn_citation": "K. XII 168.7–178.1",
-        "textual_basis": "Implied: Galen describes intending Hephaistia and walking there after the captain's misdrop.",
-        "certainty": "probable"
-      },
-      {
-        "from_place_key": "hephaistia",
-        "to_place_key": "thessalonica",
-        "kuhn_citation": "K. XII 168.7–178.1",
-        "textual_basis": "Implied continuation aboard the Thessalonica-bound ship after the Lemnian-earth stop.",
-        "certainty": "probable"
-      },
-      {
-        "from_place_key": "thessalonica",
-        "to_place_key": "thracia_region",
-        "kuhn_citation": "K. XII 168.7–178.1",
-        "textual_basis": "πεζῇ πορευόμενος διὰ Θρᾴκης τε καὶ Μακεδονίας — start of the overland walk; ordered Thrace-first per Galen's own phrasing.",
-        "certainty": "probable"
-      },
-      {
-        "from_place_key": "thracia_region",
-        "to_place_key": "macedonia_region",
-        "kuhn_citation": "K. XII 168.7–178.1",
-        "textual_basis": "Continuation through Macedonia (διὰ Θρᾴκης τε καὶ Μακεδονίας).",
-        "certainty": "probable"
-      },
-      {
-        "from_place_key": "macedonia_region",
-        "to_place_key": "rome",
-        "kuhn_citation": "K. XII 168.7–178.1",
-        "textual_basis": "Final overland-then-Adriatic leg to Rome — the trip's stated destination.",
-        "certainty": "probable"
       }
     ]
   },
   {
     "route_key": "lemnos-italy-to-troas-via-thasos",
-    "label": "Lemnos via Italy → Thasos → Troas",
-    "synopsis": "Galen's second, methodically-documented Lemnos voyage (SMT 9.1, b). He records the precise itinerary — Italy, Macedonia, Philippi, the neighboring coast, Thasos, Lemnos, Hephaistia, back to Alexandria Troas — explicitly so that future readers can replicate the trip.",
-    "start_place_key": "italia_peninsula",
+    "label": "Second Lemnos voyage (Philippi → Thasos → Lemnos → Troas)",
+    "synopsis": "Galen's second, methodically-documented Lemnos voyage (SMT 9.1, b). Starting from Philippi he descends 120 stades to an unnamed nearby coast, then sails Thasos (200 stades) → Lemnos (700 stades) → Hephaistia (the collection city) → Alexandria Troas (another 700 stades). Galen records the stadia counts explicitly so future readers can replicate the trip. Italy and Macedonia frame the prose as backdrop but are not waypoints on the routed itinerary.",
+    "start_place_key": "philippi",
     "stops": [
       {
         "route_order": 1,
-        "place_key": "italia_peninsula",
-        "order_basis": "explicit",
-        "evidence_phrase": "ἐξ Ἰταλίας ἀφορμηθείς",
-        "kuhn_citations": [
-          "K. XII 168.7–178.1"
-        ],
-        "materia_keys": [
-          "amaracon",
-          "trifolinus-wine"
-        ],
-        "narrative_note": "Italy is the trip's stated point of departure for the second Lemnos voyage."
-      },
-      {
-        "route_order": 2,
-        "place_key": "macedonia_region",
-        "order_basis": "explicit",
-        "evidence_phrase": "διὰ Μακεδονίας πορευόμενος εἰς Φιλίππους",
-        "kuhn_citations": [
-          "K. XII 168.7–178.1"
-        ],
-        "materia_keys": [],
-        "narrative_note": "The walked region between Italy (via Adriatic crossing) and Philippi."
-      },
-      {
-        "route_order": 3,
         "place_key": "philippi",
         "order_basis": "explicit",
         "evidence_phrase": "ἐν Φιλίπποις ἐγενόμην, ἥπερ ἐστὶν ὅμορος τῇ Θρᾴκῃ πόλις",
@@ -182,7 +56,18 @@
         "narrative_note": "Embarkation city after walking through Macedonia. Galen explicitly records the 120-stade descent to the nearby coast."
       },
       {
-        "route_order": 4,
+        "route_order": 2,
+        "place_key": "philippi_nearby_coast",
+        "order_basis": "explicit",
+        "evidence_phrase": "ἐντεῦθεν ἐπὶ τὴν πλησίον θάλατταν εἴκοσιν ἐπὶ τοῖς ἑκατὸν ἀπέχουσαν στάδια κατελθὼν",
+        "kuhn_citations": [
+          "K. XII 168.7–178.1"
+        ],
+        "materia_keys": [],
+        "narrative_note": "The unnamed embarkation port 120 stades (~22 km) south of Philippi. Galen does not name it; per the curator decision it is mapped as a derived project-local place, not pinned to Neapolis or any Pleiades record."
+      },
+      {
+        "route_order": 3,
         "place_key": "thasos",
         "order_basis": "explicit",
         "evidence_phrase": "ἔπλευσα πρότερον μὲν εἰς Θάσον ἐγγύς που διακοσίους σταδίους",
@@ -190,10 +75,10 @@
           "K. XII 168.7–178.1"
         ],
         "materia_keys": [],
-        "narrative_note": "First stop on the sea voyage — 200 stades from the Philippi coast."
+        "narrative_note": "First sea leg — 200 stades from the Philippi coast."
       },
       {
-        "route_order": 5,
+        "route_order": 4,
         "place_key": "lemnos",
         "order_basis": "explicit",
         "evidence_phrase": "ἐκεῖθεν δὲ εἰς Λῆμνον ἑπτακοσίους",
@@ -203,10 +88,10 @@
         "materia_keys": [
           "lemnian-earth"
         ],
-        "narrative_note": "Second leg — 700 stades from Thasos to Lemnos."
+        "narrative_note": "Second sea leg — 700 stades from Thasos to Lemnos."
       },
       {
-        "route_order": 6,
+        "route_order": 5,
         "place_key": "hephaistia",
         "order_basis": "strongly_implied",
         "evidence_phrase": "ὅπως εἴ τις ἐθέλῃ θεάσασθαι … τὴν Ἡφαιστιάδα διαγινώσκων τὴν θέσιν αὐτῆς",
@@ -220,7 +105,7 @@
         "narrative_note": "The collection city on Lemnos — Galen's named destination."
       },
       {
-        "route_order": 7,
+        "route_order": 6,
         "place_key": "alexandria_troas",
         "order_basis": "explicit",
         "evidence_phrase": "ἀπὸ Λήμνου τοὺς ἴσους ἑπτακοσίους εἰς Ἀλεξανδρείαν Τρῳάδα",
@@ -233,21 +118,14 @@
     ],
     "edges": [
       {
-        "from_place_key": "italia_peninsula",
-        "to_place_key": "macedonia_region",
+        "from_place_key": "philippi",
+        "to_place_key": "philippi_nearby_coast",
         "kuhn_citation": "K. XII 168.7–178.1",
-        "textual_basis": "Implied Adriatic crossing: Galen sets out from Italy and walks through Macedonia toward Philippi.",
-        "certainty": "probable"
-      },
-      {
-        "from_place_key": "macedonia_region",
-        "to_place_key": "philippi",
-        "kuhn_citation": "K. XII 168.7–178.1",
-        "textual_basis": "διὰ Μακεδονίας πορευόμενος εἰς Φιλίππους — explicit overland leg to Philippi.",
+        "textual_basis": "ἐντεῦθεν ἐπὶ τὴν πλησίον θάλατταν εἴκοσιν ἐπὶ τοῖς ἑκατὸν ἀπέχουσαν στάδια κατελθὼν",
         "certainty": "secure"
       },
       {
-        "from_place_key": "philippi",
+        "from_place_key": "philippi_nearby_coast",
         "to_place_key": "thasos",
         "kuhn_citation": "K. XII 168.7–178.1",
         "textual_basis": "ἔπλευσα πρότερον μὲν εἰς Θάσον ἐγγύς που διακοσίους σταδίους",
@@ -264,7 +142,7 @@
         "from_place_key": "lemnos",
         "to_place_key": "hephaistia",
         "kuhn_citation": "K. XII 168.7–178.1",
-        "textual_basis": "Same implicit walk-to-Hephaistia leg as in the first Lemnos route.",
+        "textual_basis": "Implicit overland leg on Lemnos to the collection city.",
         "certainty": "probable"
       },
       {
@@ -297,15 +175,34 @@
           "misy",
           "sory"
         ],
-        "narrative_note": "The single primary stop. Multiple anchors document the same stay: SMT 9.3 (K. XII 214.5, 219.5, 226.7, 238.1×2) and De antidotis 1.2."
+        "narrative_note": "The named city anchor. Multiple anchors document the same stay: SMT 9.3 (K. XII 214.5, 219.5, 226.7, 238.1×2) and De antidotis 1.2."
+      },
+      {
+        "route_order": 2,
+        "place_key": "soloi_mine",
+        "order_basis": "explicit",
+        "evidence_phrase": "ἔνθα τὸ μέταλλόν ἐστιν, ὡς ἀπὸ σταδίων τῆς πόλεως τριάκοντα",
+        "kuhn_citations": [
+          "K. XII 214.5–217.3"
+        ],
+        "materia_keys": [],
+        "narrative_note": "The unnamed mine ~30 stades from Soloi. Project-local derived coordinates; no Pleiades record."
       }
     ],
-    "edges": []
+    "edges": [
+      {
+        "from_place_key": "soloi_cyprus",
+        "to_place_key": "soloi_mine",
+        "kuhn_citation": "K. XII 214.5–217.3",
+        "textual_basis": "ἔνθα τὸ μέταλλόν ἐστιν, ὡς ἀπὸ σταδίων τῆς πόλεως τριάκοντα — Galen specifies the mine's offset from the city in stades.",
+        "certainty": "probable"
+      }
+    ]
   },
   {
     "route_key": "coele-syria-dead-sea-materials",
     "label": "Coele Syria / Dead Sea materials",
-    "synopsis": "Galen's investigation of the asphalt-bearing zone of Coele Syria — the eastern hill ringing the Dead Sea — for both ἄσφαλτος and the bituminous black stones that smell like asphalt. Anchored by SMT 9.1 (Coele Syria mention as motivation) and SMT 9.2 (the stones brought back). De antidotis 1.2 supplies the related Palestinian-Syrian opobalsam acquisition.",
+    "synopsis": "Material-source aggregation, not a routed itinerary. SMT 9.1 (a) names Coele Syria as one of Galen's three primary materia-medica destinations (alongside Cyprus and Lemnos), and SMT 9.2 (a) records the bituminous black stones he brought back from there. De antidotis 1.2 supplies the related Palaestina-Syria opobalsam acquisition. No ordered city sequence is given; the Dead Sea is the source location for the asphalt and stones but not a routed waypoint. Rendered as a pin at Coele Syria with no polyline.",
     "start_place_key": "coele_syria",
     "stops": [
       {
@@ -321,31 +218,9 @@
           "bituminous-stones"
         ],
         "narrative_note": "Galen names Coele Syria as one of his three primary materia-medica destinations alongside Cyprus and Lemnos."
-      },
-      {
-        "route_order": 2,
-        "place_key": "dead_sea",
-        "order_basis": "strongly_implied",
-        "evidence_phrase": "ἐν τῷ λόφῳ γεννωμένας τῷ περιέχοντι τὴν νεκρὰν ὀνομαζομένην θάλασσαν",
-        "kuhn_citations": [
-          "K. XII 203.0–204.2"
-        ],
-        "materia_keys": [
-          "asphalt",
-          "bituminous-stones"
-        ],
-        "narrative_note": "The 'so-called Dead Sea' — Galen's term, in the eastern part of Coele Syria, where both asphalt and the bituminous stones come from."
       }
     ],
-    "edges": [
-      {
-        "from_place_key": "coele_syria",
-        "to_place_key": "dead_sea",
-        "kuhn_citation": "K. XII 203.0–204.2",
-        "textual_basis": "Galen places the Dead Sea / asphalt zone within Coele Syria; the route 'edge' here is the inland traverse from the broader region to the named lake.",
-        "certainty": "probable"
-      }
-    ]
+    "edges": []
   },
   {
     "route_key": "pergamum-ergasteria-mines",

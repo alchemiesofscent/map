@@ -263,7 +263,7 @@
       "surface": "Παλαιστίνῃ",
       "lemma": "παλαιστινη",
       "pleiades_ids": [
-        "1001939"
+        "687995"
       ],
       "place_keys": [
         "palestine"
@@ -281,13 +281,16 @@
       "surface": "Συρίᾳ",
       "lemma": "Συρία",
       "pleiades_ids": [
-        "678096"
+        "1306",
+        "29492",
+        "531109",
+        "531110",
+        "569131178",
+        "981550"
       ],
-      "place_keys": [
-        "coele_syria"
-      ],
-      "match_type": "curator",
-      "cert": "secure",
+      "place_keys": [],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
       "in_route_hit_sentence": false
     },
     {
@@ -587,13 +590,16 @@
       "surface": "Συρίαν",
       "lemma": "συρία",
       "pleiades_ids": [
-        "678096"
+        "1306",
+        "29492",
+        "531109",
+        "531110",
+        "569131178",
+        "981550"
       ],
-      "place_keys": [
-        "coele_syria"
-      ],
-      "match_type": "curator",
-      "cert": "secure",
+      "place_keys": [],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
       "in_route_hit_sentence": false
     },
     {
@@ -1812,13 +1818,16 @@
       "surface": "Συρίᾳ",
       "lemma": "Συρία",
       "pleiades_ids": [
-        "678096"
+        "1306",
+        "29492",
+        "531109",
+        "531110",
+        "569131178",
+        "981550"
       ],
-      "place_keys": [
-        "coele_syria"
-      ],
-      "match_type": "curator",
-      "cert": "secure",
+      "place_keys": [],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
       "in_route_hit_sentence": false
     },
     {
@@ -2337,7 +2346,7 @@
       "surface": "Παλαιστίνης",
       "lemma": "παλαιστινης",
       "pleiades_ids": [
-        "1001939"
+        "687995"
       ],
       "place_keys": [
         "palestine"
@@ -2568,16 +2577,34 @@
       "chapter": "1",
       "section": "2",
       "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "Μυρίναν",
+      "lemma": "μυριναν",
+      "pleiades_ids": [
+        "550755"
+      ],
+      "place_keys": [
+        "myrina_lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": false
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
       "surface": "Μυρίνης",
       "lemma": "Μυρίνη",
       "pleiades_ids": [
-        "550755",
-        "550756",
-        "594984"
+        "550755"
       ],
-      "place_keys": [],
-      "match_type": "ambiguous",
-      "cert": "ambiguous",
+      "place_keys": [
+        "myrina_lemnos"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
       "in_route_hit_sentence": false
     },
     {
@@ -2712,6 +2739,22 @@
       "chapter": "1",
       "section": "2",
       "kuhn_citation": "K. XII 168.7–178.1",
+      "surface": "τὴν πλησίον θάλατταν",
+      "lemma": "την πλησιον θαλατταν",
+      "pleiades_ids": [],
+      "place_keys": [
+        "philippi_nearby_coast"
+      ],
+      "match_type": "curator",
+      "cert": "secure",
+      "in_route_hit_sentence": true
+    },
+    {
+      "work": "SMT",
+      "book": "9",
+      "chapter": "1",
+      "section": "2",
+      "kuhn_citation": "K. XII 168.7–178.1",
       "surface": "Θάσον",
       "lemma": "Θάσος",
       "pleiades_ids": [
@@ -2823,10 +2866,12 @@
       "surface": "Μυρίνα",
       "lemma": "μυρινα",
       "pleiades_ids": [
-        "550756"
+        "550755"
       ],
-      "place_keys": [],
-      "match_type": "greek",
+      "place_keys": [
+        "myrina_lemnos"
+      ],
+      "match_type": "curator",
       "cert": "secure",
       "in_route_hit_sentence": false
     },
@@ -3251,7 +3296,7 @@
       "surface": "Παλαιστίνῃ",
       "lemma": "παλαιστινη",
       "pleiades_ids": [
-        "1001939"
+        "687995"
       ],
       "place_keys": [
         "palestine"
@@ -3269,13 +3314,16 @@
       "surface": "Συρίᾳ",
       "lemma": "Συρία",
       "pleiades_ids": [
-        "678096"
+        "1306",
+        "29492",
+        "531109",
+        "531110",
+        "569131178",
+        "981550"
       ],
-      "place_keys": [
-        "coele_syria"
-      ],
-      "match_type": "curator",
-      "cert": "secure",
+      "place_keys": [],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
       "in_route_hit_sentence": false
     },
     {
@@ -3553,7 +3601,7 @@
       "surface": "Παλαιστίνην",
       "lemma": "παλαιστινην",
       "pleiades_ids": [
-        "1001939"
+        "687995"
       ],
       "place_keys": [
         "palestine"
@@ -3571,13 +3619,16 @@
       "surface": "Συρίαν",
       "lemma": "συρία",
       "pleiades_ids": [
-        "678096"
+        "1306",
+        "29492",
+        "531109",
+        "531110",
+        "569131178",
+        "981550"
       ],
-      "place_keys": [
-        "coele_syria"
-      ],
-      "match_type": "curator",
-      "cert": "secure",
+      "place_keys": [],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
       "in_route_hit_sentence": false
     },
     {
@@ -3605,7 +3656,7 @@
       "surface": "Παλαιστίνης",
       "lemma": "παλαιστινης",
       "pleiades_ids": [
-        "1001939"
+        "687995"
       ],
       "place_keys": [
         "palestine"
@@ -4081,13 +4132,16 @@
       "surface": "Συρίᾳ",
       "lemma": "Συρία",
       "pleiades_ids": [
-        "678096"
+        "1306",
+        "29492",
+        "531109",
+        "531110",
+        "569131178",
+        "981550"
       ],
-      "place_keys": [
-        "coele_syria"
-      ],
-      "match_type": "curator",
-      "cert": "secure",
+      "place_keys": [],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
       "in_route_hit_sentence": false
     },
     {
@@ -4709,31 +4763,13 @@
       "chapter": "2",
       "section": null,
       "kuhn_citation": "K. XIV 5.10–13.15",
-      "surface": "Παλαιστίνης",
-      "lemma": "παλαιστινης",
+      "surface": "Παλαιστίνης Συρίας",
+      "lemma": "παλαιστινης συριας",
       "pleiades_ids": [
-        "1001939"
+        "991396"
       ],
       "place_keys": [
-        "palestine"
-      ],
-      "match_type": "curator",
-      "cert": "secure",
-      "in_route_hit_sentence": true
-    },
-    {
-      "work": "De_antidotis",
-      "book": "1",
-      "chapter": "2",
-      "section": null,
-      "kuhn_citation": "K. XIV 5.10–13.15",
-      "surface": "Συρίας",
-      "lemma": "συρία",
-      "pleiades_ids": [
-        "678096"
-      ],
-      "place_keys": [
-        "coele_syria"
+        "palaestina_syria_province"
       ],
       "match_type": "curator",
       "cert": "secure",
@@ -4766,13 +4802,16 @@
       "surface": "Συρίας",
       "lemma": "συρία",
       "pleiades_ids": [
-        "678096"
+        "1306",
+        "29492",
+        "531109",
+        "531110",
+        "569131178",
+        "981550"
       ],
-      "place_keys": [
-        "coele_syria"
-      ],
-      "match_type": "curator",
-      "cert": "secure",
+      "place_keys": [],
+      "match_type": "ambiguous",
+      "cert": "ambiguous",
       "in_route_hit_sentence": false
     },
     {
@@ -4784,7 +4823,7 @@
       "surface": "Παλαιστίνης",
       "lemma": "παλαιστινης",
       "pleiades_ids": [
-        "1001939"
+        "687995"
       ],
       "place_keys": [
         "palestine"
@@ -5344,7 +5383,7 @@
       "surface": "Παλαιστίνης",
       "lemma": "παλαιστινης",
       "pleiades_ids": [
-        "1001939"
+        "687995"
       ],
       "place_keys": [
         "palestine"
