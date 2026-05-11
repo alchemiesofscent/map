@@ -746,6 +746,40 @@ function dossierOffsetCenter(targetLatLng, zoom) {
   return state.map.unproject(L.point(point.x - offsetX, point.y), zoom);
 }
 
+/** Decide the map zoom level when focusing a site.
+ *
+ * Periplus keeps its existing fixed zoom — the corpus spans the Red Sea
+ * and Indian Ocean, and the fixed view shows the basin cleanly.
+ *
+ * Galen routes range from a 5 km hop (Soloi → mine) to a 90 km sea leg
+ * (Alex Troas → Lemnos) to broad regional sweeps; a single fixed zoom
+ * either loses local context (Lemnos cities sitting on top of each
+ * other) or pulls too far back. We pick a zoom based on the distance to
+ * the nearest other geometry-bearing site in the current view, so each
+ * stop gets a frame proportional to its closest neighbour.
+ */
+function targetZoomFor(focus) {
+  if (focus.corpus !== "galen") {
+    return focus.kind === "land" ? 6.4 : 6.2;
+  }
+  if (!focus.latLng) return 7;
+  const here = L.latLng(focus.latLng[0], focus.latLng[1]);
+  let minDistKm = Infinity;
+  for (const f of state.focusList) {
+    if (f === focus || !f.latLng) continue;
+    const d = here.distanceTo(L.latLng(f.latLng[0], f.latLng[1])) / 1000;
+    if (d < minDistKm) minDistKm = d;
+  }
+  if (!Number.isFinite(minDistKm)) return 7;
+  if (minDistKm < 5)    return 11;
+  if (minDistKm < 15)   return 10;
+  if (minDistKm < 50)   return 9;
+  if (minDistKm < 150)  return 8;
+  if (minDistKm < 400)  return 7;
+  if (minDistKm < 1000) return 6;
+  return 5;
+}
+
 function goTo(index, options = {}) {
   if (index < 0 || index >= state.focusList.length) return;
   if (index === state.currentIndex && !options.force) return;
@@ -756,7 +790,7 @@ function goTo(index, options = {}) {
   applyMateriaHighlightDecoration(); // markers were just re-classed; re-apply
 
   if (focus.latLng && !state.exploreMode) {
-    const targetZoom = focus.kind === "land" ? 6.4 : 6.2;
+    const targetZoom = targetZoomFor(focus);
     const center = dossierOffsetCenter(focus.latLng, targetZoom);
     if (state.reduceMotion || options.instant) {
       state.map.setView(center, targetZoom, { animate: false });
