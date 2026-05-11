@@ -183,6 +183,18 @@ async function loadCorpus(corpusId) {
   }
   if (bundle.passages) {
     bundle.passagesById = new Map(bundle.passages.map((p) => [p.passage_id, p]));
+    // Index every place_mention by place_key so context pins (which don't
+    // have a passage of their own) can surface the passages that *do*
+    // name them, with sentence-level snippets.
+    bundle.mentionsByPlace = new Map();
+    for (const p of bundle.passages) {
+      for (const m of p.place_mentions ?? []) {
+        if (!bundle.mentionsByPlace.has(m.place_key)) {
+          bundle.mentionsByPlace.set(m.place_key, []);
+        }
+        bundle.mentionsByPlace.get(m.place_key).push({ passage: p, surface: m.surface });
+      }
+    }
   }
   if (bundle.materia) {
     bundle.materiaByKey = new Map(bundle.materia.map((m) => [m.materia_key, m]));
@@ -203,6 +215,88 @@ async function loadCorpus(corpusId) {
 
 function currentView() {
   return state.data?.routeViews?.views?.[state.selectedView] ?? null;
+}
+
+/** Format a passage's Kühn span as "K. XII 168.7–178.1". */
+function formatKuhn(p) {
+  if (!p) return "";
+  const vol = p.kuhn_volume ?? "";
+  const ps = p.kuhn_page_start, ls = p.kuhn_line_start;
+  const pe = p.kuhn_page_end, le = p.kuhn_line_end;
+  if (!Number.isInteger(ps)) return vol ? `K. ${vol}` : "";
+  if (ps === pe) {
+    if (ls === le) return `K. ${vol} ${ps}.${ls}`;
+    return `K. ${vol} ${ps}.${ls}–${le}`;
+  }
+  return `K. ${vol} ${ps}.${ls}–${pe}.${le}`;
+}
+
+/** Walk back/forward from `pos` in `text` to nearest sentence terminator.
+ *  Greek terminators: '.', '·', ';' (interrogative). Falls back to the
+ *  whole string if no terminators surround the mention. */
+function extractSentenceAround(text, pos, terminatorsRegex) {
+  if (!text || pos < 0 || pos >= text.length) return text || "";
+  let start = 0;
+  for (let i = pos - 1; i >= 0; i--) {
+    if (terminatorsRegex.test(text[i])) { start = i + 1; break; }
+  }
+  let end = text.length;
+  for (let i = pos + 1; i < text.length; i++) {
+    if (terminatorsRegex.test(text[i])) { end = i + 1; break; }
+  }
+  return text.slice(start, end).trim();
+}
+
+const GREEK_TERMINATORS = /[.;·]/;
+const ENGLISH_TERMINATORS = /[.!?]/;
+
+/** Heuristic: given the Greek mention position, find an English sentence
+ *  at the proportional position in the translation. Falls back to the
+ *  full translation when the heuristic produces nothing usable. */
+function englishSnippetByProportion(english, greek, greekMentionPos) {
+  if (!english) return "";
+  if (!greek || greekMentionPos < 0 || greek.length === 0) return english;
+  const ratio = greekMentionPos / greek.length;
+  const estPos = Math.min(english.length - 1, Math.max(0, Math.floor(ratio * english.length)));
+  return extractSentenceAround(english, estPos, ENGLISH_TERMINATORS) || english;
+}
+
+/** For a Galen context pin without its own passage_id, gather every
+ *  passage that names the place and return sentence-level snippets. */
+function collectContextMentions(placeKey, currentPassageId, limit = 4) {
+  const rows = state.data?.mentionsByPlace?.get(placeKey) ?? [];
+  if (rows.length === 0) return [];
+  const seenSentence = new Set();
+  const out = [];
+  for (const { passage, surface } of rows) {
+    if (currentPassageId && passage.passage_id === currentPassageId) continue;
+    const greek = passage.greek || "";
+    const pos = greek.indexOf(surface);
+    const greekSentence = pos >= 0
+      ? extractSentenceAround(greek, pos, GREEK_TERMINATORS)
+      : greek;
+    // Dedup by (passage_id, sentence) so two close inflections that share
+    // a sentence don't both render. Distinct sentences in the same
+    // passage do appear separately — they typically frame the place in
+    // genuinely different ways (e.g. "to Rome" vs. "from Rome").
+    const dedupKey = `${passage.passage_id}::${greekSentence}`;
+    if (seenSentence.has(dedupKey)) continue;
+    seenSentence.add(dedupKey);
+    const englishSentence = englishSnippetByProportion(
+      passage.translation_en || "",
+      greek,
+      pos,
+    );
+    out.push({
+      passageId: passage.passage_id,
+      citation: formatKuhn(passage),
+      surface,
+      greekSentence,
+      englishSentence,
+    });
+    if (out.length >= limit) break;
+  }
+  return out;
 }
 
 function viewIdsForCorpus() {
@@ -308,6 +402,14 @@ function buildFocusList() {
         relation: [...x.relations].join(" / "),
         evidencePhrase: x.evidencePhrases.join(" — "),
       }));
+      // For pins without a passage of their own (context, materia),
+      // surface sentence-level snippets from every passage that does
+      // name this place, so the dossier reads as actual Galen text
+      // rather than a "no passage attached" placeholder.
+      const contextMentions = site.passage_id
+        ? []
+        : collectContextMentions(site.place_key, site.passage_id);
+
       list.push({
         index: idx,
         corpus: "galen",
@@ -331,6 +433,7 @@ function buildFocusList() {
         greekText: passage?.greek ?? "",
         latLng: siteLatLng(site),
         materia,
+        contextMentions,
       });
     });
   }
@@ -606,6 +709,27 @@ function eyebrowParts(focus) {
   };
 }
 
+function renderContextMentionsHtml(mentions) {
+  const items = mentions.map((m) => {
+    const meta = [m.citation, m.surface ? `“${escapeHtml(m.surface)}”` : ""]
+      .filter(Boolean).join(" · ");
+    return `
+      <div class="dossier-mention">
+        <p class="dossier-mention__meta">${meta}</p>
+        ${m.englishSentence ? `<p class="dossier-mention__english">${escapeHtml(m.englishSentence)}</p>` : ""}
+        ${m.greekSentence ? `<p class="dossier-mention__greek" lang="grc">${escapeHtml(m.greekSentence)}</p>` : ""}
+      </div>
+    `;
+  }).join("");
+  const lead = mentions.length === 1
+    ? "Mentioned in 1 passage:"
+    : `Mentioned in ${mentions.length} passages:`;
+  return `
+    <p class="dossier-mention__lead">${lead}</p>
+    ${items}
+  `;
+}
+
 function renderMateriaList(focus) {
   const wrap = document.getElementById("dossier-materia");
   const list = document.getElementById("dossier-materia-list");
@@ -644,23 +768,33 @@ function renderDossier(focus) {
   applyTextTransition(document.getElementById("dossier-greek-name"), focus.greekName ?? "");
 
   const translationEl = document.getElementById("dossier-translation");
+  const greekBlock = document.getElementById("dossier-greek-block");
+  const greekEl = document.getElementById("dossier-greek");
+
   let translationHtml;
   if (focus.translation) {
     translationHtml = escapeHtml(focus.translation);
+    greekEl.textContent = focus.greekText || "";
+    greekBlock.hidden = !focus.greekText;
+  } else if (focus.corpus === "galen" && focus.contextMentions && focus.contextMentions.length > 0) {
+    // Context / materia pin without its own passage — render snippets
+    // from every passage that names this place.
+    translationHtml = renderContextMentionsHtml(focus.contextMentions);
+    // The snippets carry their own Greek inline; hide the standalone
+    // "Greek source" details to avoid duplicating it.
+    greekEl.textContent = "";
+    greekBlock.hidden = true;
   } else if (focus.corpus === "galen" && focus.siteKind && focus.siteKind !== "primary") {
-    // Galen context / materia pins don't have a passage of their own — they
-    // show up in the narrative as background mentions or material-source
-    // observations. Distinguish that from a genuinely unreviewed translation.
     const role = focus.siteKind === "materia" ? "Materia-medica observation" : "Context location";
     translationHtml = `<span class="dossier__translation-placeholder">${role} — no Galen passage attached.</span>`;
+    greekEl.textContent = "";
+    greekBlock.hidden = true;
   } else {
     translationHtml = `<span class="dossier__translation-placeholder">Translation pending review.</span>`;
+    greekEl.textContent = focus.greekText || "";
+    greekBlock.hidden = !focus.greekText;
   }
   applyHtmlTransition(translationEl, translationHtml);
-
-  const greekEl = document.getElementById("dossier-greek");
-  greekEl.textContent = focus.greekText || "";
-  document.getElementById("dossier-greek-block").hidden = !focus.greekText;
 
   renderMateriaList(focus);
 

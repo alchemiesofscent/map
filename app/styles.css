@@ -466,6 +466,49 @@ body::after {
   font-style: italic;
 }
 
+.dossier-mention__lead {
+  margin: 0 0 8px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vellum-dim);
+}
+
+.dossier-mention {
+  margin: 10px 0 0;
+  padding: 8px 11px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: rgba(217, 166, 73, 0.05);
+}
+
+.dossier-mention__meta {
+  margin: 0 0 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.dossier-mention__english {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: var(--vellum);
+}
+
+.dossier-mention__greek {
+  margin: 6px 0 0;
+  font-family: var(--display);
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--vellum-muted);
+  letter-spacing: 0.01em;
+}
+
 .dossier__greek {
   margin: 14px 0 0;
   border-top: 1px solid var(--rule);
