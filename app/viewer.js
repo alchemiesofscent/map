@@ -127,6 +127,17 @@ function isPeriplus() { return state.corpusId === "periplus"; }
 function isGalen() { return state.corpusId === "galen"; }
 function isPhoneViewport() { return window.innerWidth <= 720; }
 
+function openDrawer() {
+  document.body.classList.add("menu-open");
+  const toggle = document.getElementById("drawer-toggle");
+  if (toggle) toggle.setAttribute("aria-expanded", "true");
+}
+function closeDrawer() {
+  document.body.classList.remove("menu-open");
+  const toggle = document.getElementById("drawer-toggle");
+  if (toggle) toggle.setAttribute("aria-expanded", "false");
+}
+
 function siteDisplayName(site) {
   return site?.source_name ?? site?.display_name ?? "";
 }
@@ -465,11 +476,16 @@ function buildLegs(sites) {
 // ───────────────────────── map ─────────────────────────
 
 function initMap() {
+  // On phones the user expects to pan and pinch-zoom the map directly —
+  // gating that behind an "Explore" toggle the way desktop does is
+  // unnatural. So mobile starts with map gestures enabled; the explore
+  // toggle becomes a no-op there.
+  const phone = isPhoneViewport();
   const map = L.map("map", {
     scrollWheelZoom: false,
-    dragging: false,
-    touchZoom: false,
-    doubleClickZoom: false,
+    dragging: phone,
+    touchZoom: phone,
+    doubleClickZoom: phone,
     keyboard: false,
     zoomControl: false,
     attributionControl: true,
@@ -962,6 +978,13 @@ function setExploreMode(on) {
   state.exploreMode = !!on;
   document.body.dataset.explore = state.exploreMode ? "true" : "false";
   if (!state.map) return;
+  // On phones the map gestures are always on; explore mode is desktop-only.
+  if (isPhoneViewport()) {
+    state.map.dragging.enable();
+    state.map.touchZoom.enable();
+    state.map.doubleClickZoom.enable();
+    return;
+  }
   if (state.exploreMode) {
     state.map.dragging.enable();
     state.map.scrollWheelZoom.enable();
@@ -984,6 +1007,9 @@ function bindInputs() {
     "wheel",
     (e) => {
       if (state.exploreMode) return;
+      // On phones, wheel events shouldn't drive site advance — the user
+      // navigates by buttons only and is free to scroll inside the dossier.
+      if (isPhoneViewport()) return;
       const target = e.target;
       if (target && target.closest && target.closest(".dossier")) return;
       e.preventDefault();
@@ -1038,7 +1064,9 @@ function bindInputs() {
         goTo(state.focusList.length - 1);
         break;
       case "Escape":
-        if (state.activeMateriaKey) {
+        if (document.body.classList.contains("menu-open")) {
+          closeDrawer();
+        } else if (state.activeMateriaKey) {
           toggleMateriaHighlight(state.activeMateriaKey);
         } else if (state.exploreMode) {
           document.getElementById("toggle-explore").checked = false;
@@ -1050,6 +1078,9 @@ function bindInputs() {
 
   window.addEventListener("touchstart", (e) => {
     if (state.exploreMode) return;
+    // On phones, touch belongs to the map (drag/pinch) and the dossier
+    // (scroll). Don't capture swipes to advance the site list.
+    if (isPhoneViewport()) return;
     const target = e.target;
     if (target && target.closest && target.closest(".dossier")) {
       state.touchStartX = state.touchStartY = null;
@@ -1062,6 +1093,7 @@ function bindInputs() {
 
   window.addEventListener("touchend", (e) => {
     if (state.exploreMode) return;
+    if (isPhoneViewport()) return;
     if (state.touchStartX === null) return;
     const t = e.changedTouches[0];
     const dx = t.clientX - state.touchStartX;
@@ -1083,16 +1115,33 @@ function bindInputs() {
   document.getElementById("next-step").addEventListener("click", next);
 
   // Delegated route-view selector — buttons re-render per corpus.
+  // Closes the mobile drawer after a selection so the user lands back
+  // on the map immediately.
   document.getElementById("view-control-routes").addEventListener("click", (e) => {
     const btn = e.target.closest("[data-view]");
-    if (btn) setView(btn.dataset.view);
+    if (btn) {
+      setView(btn.dataset.view);
+      closeDrawer();
+    }
   });
 
   // Delegated corpus selector.
   document.querySelector(".corpus-control").addEventListener("click", (e) => {
     const btn = e.target.closest("[data-corpus]");
-    if (btn) setCorpus(btn.dataset.corpus);
+    if (btn) {
+      setCorpus(btn.dataset.corpus);
+      // Leave the drawer open so the user can pick a route in the new
+      // corpus without an extra tap.
+    }
   });
+
+  // Mobile drawer toggle.
+  const drawerToggle = document.getElementById("drawer-toggle");
+  const drawerClose = document.getElementById("drawer-close");
+  const drawerBackdrop = document.getElementById("drawer-backdrop");
+  if (drawerToggle) drawerToggle.addEventListener("click", openDrawer);
+  if (drawerClose) drawerClose.addEventListener("click", closeDrawer);
+  if (drawerBackdrop) drawerBackdrop.addEventListener("click", closeDrawer);
 
   document.getElementById("toggle-explore").addEventListener("change", (e) => {
     setExploreMode(e.target.checked);
@@ -1108,16 +1157,22 @@ function bindInputs() {
     if (state.map) state.map.invalidateSize();
     if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-      if (state.exploreMode) return;
       // Crossing the phone/desktop breakpoint changes the context-mention
-      // limit (and reflows the dossier layout). Rebuild the focus list
-      // so cards re-render at the right count for the new viewport.
+      // limit AND the map's gesture defaults (drag always-on for phones,
+      // gated by explore-mode on desktop). Re-apply both.
       const isPhone = isPhoneViewport();
       if (isPhone !== state.lastViewportPhone) {
         state.lastViewportPhone = isPhone;
-        if (state.data) setView(state.selectedView, { instant: true });
+        // Re-evaluate map gestures for the new viewport class.
+        setExploreMode(state.exploreMode);
+        // The drawer only exists on mobile — collapse it if we left.
+        if (!isPhone) closeDrawer();
+        if (state.data && !state.exploreMode) {
+          setView(state.selectedView, { instant: true });
+        }
         return;
       }
+      if (state.exploreMode) return;
       if (state.currentIndex >= 0) {
         goTo(state.currentIndex, { force: true, instant: true });
       }

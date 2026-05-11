@@ -148,6 +148,17 @@ body::after {
   color: var(--vellum-muted);
 }
 
+/* ───────────────────────── mobile drawer ───────────────────────── */
+/* On desktop the wrapper is invisible — display: contents lets the
+ * corpus-control and view-control behave as if direct body children
+ * with their own fixed positions. On mobile the wrapper becomes a
+ * slide-in panel and the controls are repositioned inside it. */
+.mobile-menu { display: contents; }
+
+.drawer-toggle,
+.drawer-backdrop,
+.mobile-menu__close { display: none; }
+
 /* ───────────────────────── corpus control ──────────────────────── */
 .corpus-control {
   position: fixed;
@@ -955,16 +966,16 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
   .masthead {
     top: 10px;
     left: 10px;
-    padding: 7px 11px;
+    padding: 6px 10px;
     min-width: 0;
-    max-width: 50vw;
+    max-width: calc(100vw - 70px);
   }
   .masthead__rule,
   .masthead__title { display: none; }
   .masthead__series {
     font-size: 9px;
     letter-spacing: 0.18em;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
   .masthead__counter {
     margin-top: 0;
@@ -973,32 +984,127 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
   }
   #counter-roman { font-size: 11px; }
 
-  .corpus-control {
+  /* Drawer toggle: fixed at top-right, visible only on mobile. */
+  .drawer-toggle {
+    display: grid;
+    place-items: center;
+    position: fixed;
     top: 10px;
     right: 10px;
-    padding: 2px 3px;
-    gap: 2px;
+    z-index: 7;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: rgba(15, 23, 28, 0.84);
+    backdrop-filter: blur(14px) saturate(1.4);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
+    border: 1px solid var(--rule);
+    border-radius: var(--panel-radius);
+    box-shadow: var(--shadow-soft);
+    color: var(--vellum);
+    font-family: var(--display);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
   }
-  .corpus-control button {
-    padding: 4px 8px;
-    font-size: 10px;
-    letter-spacing: 0.12em;
+  body.menu-open .drawer-toggle { display: none; }
+
+  /* Backdrop: dims the map when the drawer is open. */
+  .drawer-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 8;
+    background: rgba(8, 10, 12, 0.45);
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  body.menu-open .drawer-backdrop { display: block; }
+
+  /* Drawer panel: slides in from the right. */
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 78vw;
+    max-width: 320px;
+    z-index: 9;
+    padding: 56px 18px 18px;
+    background: rgba(15, 23, 28, 0.96);
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    border-left: 1px solid var(--rule);
+    box-shadow: -18px 0 40px -20px rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+    transform: translateX(110%);
+    transition: transform 240ms ease;
+  }
+  body.menu-open .mobile-menu { transform: translateX(0); }
+
+  .mobile-menu__close {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: var(--panel-radius);
+    color: var(--vellum);
+    font-family: var(--display);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
   }
 
+  /* Re-style the corpus + view controls as stacked, full-width
+   * groups inside the drawer. Each row is a tap target. */
+  .corpus-control,
   .view-control {
-    top: 46px;
-    right: 10px;
-    padding: 3px 4px;
-    max-width: calc(100vw - 20px);
+    position: static;
+    margin: 0 0 20px;
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .corpus-control::before,
+  .view-control::before {
+    content: attr(aria-label);
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--vellum-dim);
+    margin-bottom: 8px;
+  }
+  .corpus-control button,
+  .view-control button {
+    width: 100%;
+    text-align: left;
+    padding: 9px 12px;
+    font-size: 13px;
+    letter-spacing: 0.1em;
   }
   .view-control__routes {
-    max-width: calc(100vw - 32px);
-    gap: 3px;
-  }
-  .view-control button {
-    padding: 4px 7px;
-    font-size: 9px;
-    letter-spacing: 0.14em;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: none;
   }
   .view-control__divider,
   .view-control__explore { display: none; }
@@ -1038,20 +1144,19 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
   /* The italic Greek name often duplicates the Latin title; hide on phones. */
   .dossier__greek-name { display: none; }
 
-  /* Body fills the remaining space inside the panel and scrolls if
-   * the active pin has long translation + materia + mention cards.
-   * Without explicit overflow-y here the desktop scroll rule does not
-   * inherit (max-height was overridden), so content silently overflows
-   * the panel below. */
+  /* Body scrolls inside the panel. Use an explicit max-height instead
+   * of relying on flex — flex clamping was unreliable here because the
+   * dossier is grid-displayed (one row, content-sized), and the inner
+   * column could outgrow the grid track silently. The explicit cap
+   * guarantees scrollability and keeps the nav buttons reachable. */
   .dossier__body {
     flex: 1 1 auto;
     min-height: 0;
-    max-height: none;
+    max-height: 30vh;
     overflow-y: auto;
+    overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-    /* Soft fade at the bottom so users can tell more content is below. */
-    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
-            mask-image: linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
+    padding-right: 2px;
   }
   .dossier__translation { font-size: 14px; line-height: 1.5; }
 

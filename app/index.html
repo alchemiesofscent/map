@@ -39,19 +39,32 @@
       </p>
     </header>
 
-    <div class="corpus-control" role="group" aria-label="Corpus">
-      <button type="button" data-corpus="periplus" aria-pressed="true">Periplus</button>
-      <button type="button" data-corpus="galen" aria-pressed="false">Galen</button>
+    <button class="drawer-toggle" id="drawer-toggle" type="button"
+            aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <span aria-hidden="true">≡</span>
+    </button>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <button class="mobile-menu__close" id="drawer-close" type="button" aria-label="Close menu">
+        <span aria-hidden="true">×</span>
+      </button>
+
+      <div class="corpus-control" role="group" aria-label="Corpus">
+        <button type="button" data-corpus="periplus" aria-pressed="true">Periplus</button>
+        <button type="button" data-corpus="galen" aria-pressed="false">Galen</button>
+      </div>
+
+      <div class="view-control" role="group" aria-label="Route view" id="view-control">
+        <div class="view-control__routes" id="view-control-routes"></div>
+        <span class="view-control__divider" aria-hidden="true"></span>
+        <label class="view-control__explore">
+          <input type="checkbox" id="toggle-explore" />
+          <span>Explore map</span>
+        </label>
+      </div>
     </div>
 
-    <div class="view-control" role="group" aria-label="Route view" id="view-control">
-      <div class="view-control__routes" id="view-control-routes"></div>
-      <span class="view-control__divider" aria-hidden="true"></span>
-      <label class="view-control__explore">
-        <input type="checkbox" id="toggle-explore" />
-        <span>Explore map</span>
-      </label>
-    </div>
+    <button class="drawer-backdrop" id="drawer-backdrop" type="button" aria-label="Close menu" tabindex="-1"></button>
 
     <button class="hint" id="hint-banner" type="button" aria-label="Dismiss hint">
       <span class="hint__keys">
