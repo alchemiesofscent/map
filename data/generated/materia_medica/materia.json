@@ -1,0 +1,197 @@
+[
+  {
+    "materia_key": "dsc:16",
+    "entry_id": "dsc:16",
+    "display_name": "Camel hay",
+    "greek_name": "σχοῖνος",
+    "category": "",
+    "source_citation": "Dioscorides, De materia medica, book 1, chapter 17",
+    "source_json_path": "data/generated/simples/entry_manifest.json",
+    "place_links": [
+      {
+        "link_id": "link-9c80b4940a8a",
+        "candidate_id": "candidate-4ecee2b1ce32",
+        "review_row_id": "review-326329d832d9",
+        "entry_id": "dsc:16",
+        "author": "dsc",
+        "work": "De materia medica",
+        "book": "1",
+        "chapter": "17",
+        "lemma": "σχοῖνος",
+        "relation": "grows_at",
+        "accepted_pleiades_id": "981506",
+        "accepted_pleiades_uri": "https://pleiades.stoa.org/places/981506",
+        "place_label": "Arabia (province)",
+        "evidence_phrase": "ἡ δὲ ἐν Ἀραβίᾳ",
+        "certainty": "possible",
+        "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+        "final_decision": "accept",
+        "consensus_method": "two_vote_match",
+        "consensus_confidence": 0.93,
+        "adjudication_id": "llm-adjudication-bc62febfbbd0",
+        "vote_trace_ids": [
+          "vote-52b00af3fac8",
+          "vote-133225fa3aec"
+        ],
+        "place_key": "pleiades_981506",
+        "passage_id": "dsc:16"
+      }
+    ]
+  },
+  {
+    "materia_key": "dsc:18",
+    "entry_id": "dsc:18",
+    "display_name": "Mecca balsam",
+    "greek_name": "βάλσαμον",
+    "category": "",
+    "source_citation": "Dioscorides, De materia medica, book 1, chapter 19",
+    "source_json_path": "data/generated/simples/entry_manifest.json",
+    "place_links": [
+      {
+        "link_id": "link-687755fd302c",
+        "candidate_id": "candidate-c087d2113aa2",
+        "review_row_id": "review-d3df4f2c7f98",
+        "entry_id": "dsc:18",
+        "author": "dsc",
+        "work": "De materia medica",
+        "book": "1",
+        "chapter": "19",
+        "lemma": "βάλσαμον",
+        "relation": "grows_at",
+        "accepted_pleiades_id": "687934",
+        "accepted_pleiades_uri": "https://pleiades.stoa.org/places/687934",
+        "place_label": "Iudaea (region)",
+        "evidence_phrase": "γεννώμενον ἐν μόνῃ Ἰουδαίᾳ",
+        "certainty": "possible",
+        "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+        "final_decision": "accept",
+        "consensus_method": "two_vote_match",
+        "consensus_confidence": 0.985,
+        "adjudication_id": "llm-adjudication-3627031a82c9",
+        "vote_trace_ids": [
+          "vote-1d2b6e7fee4b",
+          "vote-53706b08434a"
+        ],
+        "place_key": "pleiades_687934",
+        "passage_id": "dsc:18"
+      }
+    ]
+  },
+  {
+    "materia_key": "dsc:319",
+    "entry_id": "dsc:319",
+    "display_name": "Rhubarb",
+    "greek_name": "ἀγαρικόν",
+    "category": "",
+    "source_citation": "Dioscorides, De materia medica, book 3, chapter 1",
+    "source_json_path": "data/generated/simples/entry_manifest.json",
+    "place_links": [
+      {
+        "link_id": "link-c9321c0897b8",
+        "candidate_id": "candidate-1b2ad4e940fa",
+        "review_row_id": "review-b05ddc1f2a2c",
+        "entry_id": "dsc:319",
+        "author": "dsc",
+        "work": "De materia medica",
+        "book": "3",
+        "chapter": "1",
+        "lemma": "ἀγαρικόν",
+        "relation": "grows_at",
+        "accepted_pleiades_id": "619161",
+        "accepted_pleiades_uri": "https://pleiades.stoa.org/places/619161",
+        "place_label": "Galatia",
+        "evidence_phrase": "γεννᾶται δὲ καὶ ἐν τῇ κατὰ Ἀσίαν Γαλατίᾳ",
+        "certainty": "possible",
+        "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+        "final_decision": "accept",
+        "consensus_method": "two_vote_match",
+        "consensus_confidence": 0.97,
+        "adjudication_id": "llm-adjudication-1e38d0a783d9",
+        "vote_trace_ids": [
+          "vote-083a8faec400",
+          "vote-d5413f7403ab"
+        ],
+        "place_key": "pleiades_619161",
+        "passage_id": "dsc:319"
+      }
+    ]
+  },
+  {
+    "materia_key": "dsc:341",
+    "entry_id": "dsc:341",
+    "display_name": "Wormwood",
+    "greek_name": "ἁβρότονον",
+    "category": "",
+    "source_citation": "Dioscorides, De materia medica, book 3, chapter 24",
+    "source_json_path": "data/generated/simples/entry_manifest.json",
+    "place_links": [
+      {
+        "link_id": "link-c2fd19c8c863",
+        "candidate_id": "candidate-f59a5a03dbc0",
+        "review_row_id": "review-1df26216b50a",
+        "entry_id": "dsc:341",
+        "author": "dsc",
+        "work": "De materia medica",
+        "book": "3",
+        "chapter": "24",
+        "lemma": "ἁβρότονον",
+        "relation": "grows_at",
+        "accepted_pleiades_id": "619161",
+        "accepted_pleiades_uri": "https://pleiades.stoa.org/places/619161",
+        "place_label": "Galatia",
+        "evidence_phrase": "πλεῖστον δὲ γίνεται ἐν Καππαδοκίᾳ καὶ Γαλατίᾳ τῇ κατὰ τὴν Ἀσίαν",
+        "certainty": "possible",
+        "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+        "final_decision": "accept",
+        "consensus_method": "two_vote_match",
+        "consensus_confidence": 0.98,
+        "adjudication_id": "llm-adjudication-841fe377fbc2",
+        "vote_trace_ids": [
+          "vote-baf9deadcfec",
+          "vote-c6dd1cdc63a2"
+        ],
+        "place_key": "pleiades_619161",
+        "passage_id": "dsc:341"
+      }
+    ]
+  },
+  {
+    "materia_key": "dsc:5",
+    "entry_id": "dsc:5",
+    "display_name": "Cardamom",
+    "greek_name": "καρδάμωμον",
+    "category": "",
+    "source_citation": "Dioscorides, De materia medica, book 1, chapter 6",
+    "source_json_path": "data/generated/simples/entry_manifest.json",
+    "place_links": [
+      {
+        "link_id": "link-69aedb95a981",
+        "candidate_id": "candidate-31f977e598ec",
+        "review_row_id": "review-42092963f839",
+        "entry_id": "dsc:5",
+        "author": "dsc",
+        "work": "De materia medica",
+        "book": "1",
+        "chapter": "6",
+        "lemma": "καρδάμωμον",
+        "relation": "grows_at",
+        "accepted_pleiades_id": "981506",
+        "accepted_pleiades_uri": "https://pleiades.stoa.org/places/981506",
+        "place_label": "Arabia (province)",
+        "evidence_phrase": "γεννᾶται δὲ καὶ ἐν Ἰνδίᾳ καὶ Ἀραβίᾳ",
+        "certainty": "possible",
+        "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+        "final_decision": "accept",
+        "consensus_method": "two_vote_match",
+        "consensus_confidence": 0.925,
+        "adjudication_id": "llm-adjudication-7be74e513726",
+        "vote_trace_ids": [
+          "vote-fe131daa05eb",
+          "vote-7d8480189a7d"
+        ],
+        "place_key": "pleiades_981506",
+        "passage_id": "dsc:5"
+      }
+    ]
+  }
+]

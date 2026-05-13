@@ -7,71 +7,20 @@
  * pane joining passages + materia per stop.
  */
 
-const CORPORA = {
-  periplus: {
-    title: ["Periplvs", "Maris Erythraei"],
-    series: "Periplus Tour · Red Sea Atlas",
-    paths: {
-      places: "../data/generated/periplus/places_authority.json",
-      sections: "../data/generated/periplus/raw_sections.json",
-      journey: "../data/generated/periplus/journey_route.json",
-      routeViews: "../data/generated/periplus/route_views.json",
-    },
-    defaultView: "all",
-    viewLabels: {
-      all: "All",
-      western: "Occidens",
-      eastern: "Oriens",
-    },
-  },
-  galen: {
-    title: ["Galenvs", "Itinera Medicinalia"],
-    series: "Galen · Pharmacological Itineraries",
-    paths: {
-      places: "../data/generated/galen/places_authority.json",
-      passages: "../data/generated/galen/passages.json",
-      materia: "../data/generated/galen/materia.json",
-      routeViews: "../data/generated/galen/route_views.json",
-    },
-    defaultView: "all",
-    viewLabels: {
-      all: "All",
-      "lemnos-alexandria-troas-to-thessalonica-context": "Lemnos via Troas",
-      "lemnos-italy-to-troas-via-thasos": "Lemnos via Thasos",
-      "cyprus-soloi-mines": "Cyprus / Soloi",
-      "coele-syria-dead-sea-materials": "Coele Syria",
-      "pergamum-ergasteria-mines": "Pergamum",
-      materia_observations: "Materia",
-    },
-    viewOrder: [
-      "all",
-      "lemnos-alexandria-troas-to-thessalonica-context",
-      "lemnos-italy-to-troas-via-thasos",
-      "cyprus-soloi-mines",
-      "coele-syria-dead-sea-materials",
-      "pergamum-ergasteria-mines",
-      "materia_observations",
-    ],
-  },
-};
-
-// Periplus pin classification
-const INLAND_RX = /(Inland|Metropolis|Frontier|Region)/i;
-const REGION_RX = /Region/i;
-
-// Galen place_type → land/sea pin shape
-const GALEN_LAND_TYPES = new Set(["city", "mine", "sanctuary", "mountain"]);
-const GALEN_SEA_TYPES = new Set(["port", "island", "sea"]);
-
-const ROMAN = [
-  [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"],
-  [100, "C"], [90, "XC"], [50, "L"], [40, "XL"],
-  [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"],
-];
+const AtlasData = window.PeriplusAtlasData;
+const {
+  CORPORA,
+  escapeHtml,
+  toRoman,
+  siteDisplayName,
+  sitePlaceType,
+  siteLatLng,
+  corpusIsMateria,
+} = AtlasData;
 
 const state = {
   corpusId: "periplus",
-  corpusCache: new Map(), // corpusId → loaded data bundle
+  corpusCache: new Map(), // corpusId -> loaded data bundle
   data: null,
   selectedView: "all",
   focusList: [],
@@ -97,34 +46,6 @@ const state = {
 
 // ───────────────────────── helpers ─────────────────────────
 
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
-
-function toRoman(n) {
-  if (!Number.isFinite(n) || n <= 0) return "—";
-  let num = Math.floor(n);
-  let out = "";
-  for (const [v, s] of ROMAN) {
-    while (num >= v) { out += s; num -= v; }
-  }
-  return out;
-}
-
-function loadJson(path) {
-  return fetch(path).then((r) => {
-    if (!r.ok) throw new Error(`Could not fetch ${path}: ${r.status}`);
-    return r.json();
-  });
-}
-
-function isPeriplus() { return state.corpusId === "periplus"; }
-function isGalen() { return state.corpusId === "galen"; }
 function isPhoneViewport() { return window.innerWidth <= 720; }
 
 function openDrawer() {
@@ -138,339 +59,41 @@ function closeDrawer() {
   if (toggle) toggle.setAttribute("aria-expanded", "false");
 }
 
-function siteDisplayName(site) {
-  return site?.source_name ?? site?.display_name ?? "";
-}
-
-function sitePlaceType(site) {
-  return site?.periplus_place_type ?? site?.place_type ?? "";
-}
-
 function isInland(site) {
-  if (isPeriplus()) return INLAND_RX.test(sitePlaceType(site));
-  // Galen
-  const t = sitePlaceType(site).toLowerCase();
-  if (GALEN_SEA_TYPES.has(t)) return false;
-  return GALEN_LAND_TYPES.has(t) || t === "region";
+  return AtlasData.isInland(state.corpusId, site);
 }
 
-function isRegion(site) {
-  if (!site) return false;
-  if (isPeriplus()) {
-    if (REGION_RX.test(sitePlaceType(site))) return true;
-    if ((site.location_precision ?? "").toLowerCase() === "region") return true;
-    return false;
-  }
-  // Galen: regions and seas are pin-only.
-  const t = sitePlaceType(site).toLowerCase();
-  return t === "region" || t === "sea";
-}
-
-/** Galen: route lines connect only `primary` stops. Context and materia
- *  pins still render but no leg passes through them. For Periplus we fall
- *  back to the existing region filter. */
-function isLineEndpoint(site) {
-  if (isGalen()) return site?.kind === "primary";
-  return !isRegion(site);
-}
-
-function siteLatLng(site) {
-  return site?.has_geometry && site.lat !== null && site.lon !== null
-    ? [site.lat, site.lon]
-    : null;
-}
-
-// ───────────────────────── data loading ─────────────────────────
-
-async function loadCorpus(corpusId) {
-  if (state.corpusCache.has(corpusId)) return state.corpusCache.get(corpusId);
-  const cfg = CORPORA[corpusId];
-  if (!cfg) throw new Error(`Unknown corpus: ${corpusId}`);
-  const entries = await Promise.all(
-    Object.entries(cfg.paths).map(async ([k, p]) => [k, await loadJson(p)]),
-  );
-  const bundle = Object.fromEntries(entries);
-  bundle.placesByKey = new Map(bundle.places.map((p) => [p.place_key, p]));
-  if (bundle.sections) {
-    bundle.sectionsByChunkId = new Map(bundle.sections.map((s) => [s.chunk_id, s]));
-  }
-  if (bundle.passages) {
-    bundle.passagesById = new Map(bundle.passages.map((p) => [p.passage_id, p]));
-    // Index every place_mention by place_key so context pins (which don't
-    // have a passage of their own) can surface the passages that *do*
-    // name them, with sentence-level snippets.
-    bundle.mentionsByPlace = new Map();
-    for (const p of bundle.passages) {
-      for (const m of p.place_mentions ?? []) {
-        if (!bundle.mentionsByPlace.has(m.place_key)) {
-          bundle.mentionsByPlace.set(m.place_key, []);
-        }
-        bundle.mentionsByPlace.get(m.place_key).push({ passage: p, surface: m.surface });
-      }
-    }
-  }
-  if (bundle.materia) {
-    bundle.materiaByKey = new Map(bundle.materia.map((m) => [m.materia_key, m]));
-    // Index: place_key → array of {materia, link}
-    bundle.materiaByPlace = new Map();
-    for (const m of bundle.materia) {
-      for (const link of m.place_links ?? []) {
-        if (!bundle.materiaByPlace.has(link.place_key)) {
-          bundle.materiaByPlace.set(link.place_key, []);
-        }
-        bundle.materiaByPlace.get(link.place_key).push({ materia: m, link });
-      }
-    }
-  }
-  state.corpusCache.set(corpusId, bundle);
-  return bundle;
+function loadCorpus(corpusId) {
+  return AtlasData.loadCorpus(corpusId, state.corpusCache);
 }
 
 function currentView() {
-  return state.data?.routeViews?.views?.[state.selectedView] ?? null;
-}
-
-/** Format a passage's Kühn span as "K. XII 168.7–178.1". */
-function formatKuhn(p) {
-  if (!p) return "";
-  const vol = p.kuhn_volume ?? "";
-  const ps = p.kuhn_page_start, ls = p.kuhn_line_start;
-  const pe = p.kuhn_page_end, le = p.kuhn_line_end;
-  if (!Number.isInteger(ps)) return vol ? `K. ${vol}` : "";
-  if (ps === pe) {
-    if (ls === le) return `K. ${vol} ${ps}.${ls}`;
-    return `K. ${vol} ${ps}.${ls}–${le}`;
-  }
-  return `K. ${vol} ${ps}.${ls}–${pe}.${le}`;
-}
-
-/** Walk back/forward from `pos` in `text` to nearest sentence terminator.
- *  Greek terminators: '.', '·', ';' (interrogative). Falls back to the
- *  whole string if no terminators surround the mention. */
-function extractSentenceAround(text, pos, terminatorsRegex) {
-  if (!text || pos < 0 || pos >= text.length) return text || "";
-  let start = 0;
-  for (let i = pos - 1; i >= 0; i--) {
-    if (terminatorsRegex.test(text[i])) { start = i + 1; break; }
-  }
-  let end = text.length;
-  for (let i = pos + 1; i < text.length; i++) {
-    if (terminatorsRegex.test(text[i])) { end = i + 1; break; }
-  }
-  return text.slice(start, end).trim();
-}
-
-const GREEK_TERMINATORS = /[.;·]/;
-const ENGLISH_TERMINATORS = /[.!?]/;
-
-/** Heuristic: given the Greek mention position, find an English sentence
- *  at the proportional position in the translation. Falls back to the
- *  full translation when the heuristic produces nothing usable. */
-function englishSnippetByProportion(english, greek, greekMentionPos) {
-  if (!english) return "";
-  if (!greek || greekMentionPos < 0 || greek.length === 0) return english;
-  const ratio = greekMentionPos / greek.length;
-  const estPos = Math.min(english.length - 1, Math.max(0, Math.floor(ratio * english.length)));
-  return extractSentenceAround(english, estPos, ENGLISH_TERMINATORS) || english;
-}
-
-/** For a Galen context pin without its own passage_id, gather every
- *  passage that names the place and return sentence-level snippets. */
-function collectContextMentions(placeKey, currentPassageId, limit = 4) {
-  const rows = state.data?.mentionsByPlace?.get(placeKey) ?? [];
-  if (rows.length === 0) return [];
-  const seenSentence = new Set();
-  const out = [];
-  for (const { passage, surface } of rows) {
-    if (currentPassageId && passage.passage_id === currentPassageId) continue;
-    const greek = passage.greek || "";
-    const pos = greek.indexOf(surface);
-    const greekSentence = pos >= 0
-      ? extractSentenceAround(greek, pos, GREEK_TERMINATORS)
-      : greek;
-    // Dedup by (passage_id, sentence) so two close inflections that share
-    // a sentence don't both render. Distinct sentences in the same
-    // passage do appear separately — they typically frame the place in
-    // genuinely different ways (e.g. "to Rome" vs. "from Rome").
-    const dedupKey = `${passage.passage_id}::${greekSentence}`;
-    if (seenSentence.has(dedupKey)) continue;
-    seenSentence.add(dedupKey);
-    const englishSentence = englishSnippetByProportion(
-      passage.translation_en || "",
-      greek,
-      pos,
-    );
-    out.push({
-      passageId: passage.passage_id,
-      citation: formatKuhn(passage),
-      surface,
-      greekSentence,
-      englishSentence,
-    });
-    if (out.length >= limit) break;
-  }
-  return out;
+  return AtlasData.currentView(state.data, state.selectedView);
 }
 
 function viewIdsForCorpus() {
-  const cfg = CORPORA[state.corpusId];
-  const fromData = Object.keys(state.data?.routeViews?.views ?? {});
-  if (cfg.viewOrder) {
-    return cfg.viewOrder.filter((id) => fromData.includes(id));
-  }
-  // Default: put `all` first.
-  const ordered = [];
-  if (fromData.includes("all")) ordered.push("all");
-  for (const id of fromData) if (id !== "all" && !ordered.includes(id)) ordered.push(id);
-  return ordered;
+  return AtlasData.viewIdsForCorpus(state.corpusId, state.data);
 }
 
 function viewLabel(viewId) {
-  const cfg = CORPORA[state.corpusId];
-  return cfg.viewLabels?.[viewId]
-    ?? state.data?.routeViews?.views?.[viewId]?.label
-    ?? viewId;
+  return AtlasData.viewLabel(state.corpusId, state.data, viewId);
 }
 
-/** Return a focus list — one entry per place visited in route_views order,
- *  enriched with corpus-specific reader content. */
 function buildFocusList() {
-  const view = currentView();
-  if (!view) return [];
-
-  const list = [];
-  if (isPeriplus()) {
-    const sectionFocusByOrder = new Map();
-    for (const sf of view.section_focus ?? []) {
-      sectionFocusByOrder.set(sf.section_order, sf);
-    }
-    view.sites.forEach((site, idx) => {
-      const sectionOrder = (site.section_numbers ?? [])[0] ?? null;
-      const reviewed = sectionFocusByOrder.get(sectionOrder);
-      const section = Number.isInteger(sectionOrder)
-        ? state.data.sections.find((s) => s.section_order === sectionOrder)
-        : null;
-      list.push({
-        index: idx,
-        corpus: "periplus",
-        site,
-        siteKey: site.site_key,
-        placeKey: site.place_key ?? site.site_key,
-        sectionOrder,
-        kind: isInland(site) ? "land" : "sea",
-        displayName: siteDisplayName(site),
-        greekName: site.page_metadata?.page_ancient_toponym ?? null,
-        placeType: sitePlaceType(site),
-        routeLabel: site.route_label ?? "",
-        chapter: site.periplus_chapter ?? "",
-        pleiadesUri: site.pleiades_uri ?? null,
-        pleiadesId: site.pleiades_id ?? null,
-        modernId: [site.modern_identification, site.modern_country].filter(Boolean).join(", "),
-        translation: section?.draft_translation ?? "",
-        greekText: section?.greek_text ?? "",
-        reviewedNote: reviewed?.context_places?.length
-          ? `${reviewed.context_places.length} context place${reviewed.context_places.length === 1 ? "" : "s"}`
-          : "",
-        latLng: siteLatLng(site),
-        materia: [],
-      });
-    });
-  } else if (isGalen()) {
-    view.sites.forEach((site, idx) => {
-      const passage = site.passage_id
-        ? state.data.passagesById?.get(site.passage_id)
-        : null;
-      const greekName = (site.ancient_names_in_galen ?? [])[0]?.surface ?? null;
-      // Materia at this place, filtered to those evidenced by *this* passage
-      // when one exists; otherwise show all links to the place.
-      const placeMateria = state.data.materiaByPlace?.get(site.place_key) ?? [];
-      const filtered = site.passage_id
-        ? placeMateria.filter((row) => row.link.passage_id === site.passage_id)
-        : placeMateria;
-      const candidates = filtered.length > 0 ? filtered : placeMateria;
-      // Dedupe by materia_key. A single substance can link to the same place
-      // from multiple passages or with different relations (e.g. cadmia is
-      // both `acquired` and `observed` at Cyprus across SMT 9.3.b/c/d). Show
-      // one chip per materia and union the relations.
-      const byKey = new Map();
-      for (const row of candidates) {
-        const k = row.materia.materia_key;
-        if (!byKey.has(k)) {
-          byKey.set(k, {
-            materiaKey: k,
-            displayName: row.materia.display_name,
-            greekName: row.materia.greek_name,
-            relations: new Set(),
-            evidencePhrases: [],
-          });
-        }
-        const entry = byKey.get(k);
-        if (row.link.relation) entry.relations.add(row.link.relation);
-        if (row.link.evidence_phrase) entry.evidencePhrases.push(row.link.evidence_phrase);
-      }
-      const materia = [...byKey.values()].map((x) => ({
-        materiaKey: x.materiaKey,
-        displayName: x.displayName,
-        greekName: x.greekName,
-        relation: [...x.relations].join(" / "),
-        evidencePhrase: x.evidencePhrases.join(" — "),
-      }));
-      // For pins without a passage of their own (context, materia),
-      // surface sentence-level snippets from every passage that does
-      // name this place, so the dossier reads as actual Galen text
-      // rather than a "no passage attached" placeholder. Phones get a
-      // tighter limit because the dossier real-estate is smaller.
-      const mentionLimit = isPhoneViewport() ? 2 : 4;
-      const contextMentions = site.passage_id
-        ? []
-        : collectContextMentions(site.place_key, site.passage_id, mentionLimit);
-
-      list.push({
-        index: idx,
-        corpus: "galen",
-        site,
-        siteKey: site.site_key,
-        placeKey: site.place_key,
-        kind: isInland(site) ? "land" : "sea",
-        displayName: siteDisplayName(site),
-        greekName,
-        placeType: sitePlaceType(site),
-        routeLabel: site.route_label ?? "",
-        kuhnCitation: site.kuhn_citation ?? "",
-        passageId: site.passage_id ?? null,
-        evidencePhrase: site.evidence_phrase ?? "",
-        narrativeNote: site.narrative_note ?? "",
-        orderBasis: site.order_basis ?? "",
-        siteKind: site.kind ?? "",
-        pleiadesUri: site.pleiades_uri ?? null,
-        pleiadesId: site.pleiades_id ?? null,
-        translation: passage?.translation_en ?? "",
-        greekText: passage?.greek ?? "",
-        latLng: siteLatLng(site),
-        materia,
-        contextMentions,
-      });
-    });
-  }
-  return list;
+  return AtlasData.buildFocusList({
+    corpusId: state.corpusId,
+    data: state.data,
+    selectedView: state.selectedView,
+    isPhoneViewport: isPhoneViewport(),
+  });
 }
 
 function buildLegs(sites) {
-  const eligible = sites.filter((s) => isLineEndpoint(s));
-  const legs = [];
-  for (let i = 1; i < eligible.length; i += 1) {
-    const a = eligible[i - 1];
-    const b = eligible[i];
-    const aLL = siteLatLng(a);
-    const bLL = siteLatLng(b);
-    if (!aLL || !bLL) continue;
-    // Cross-route boundary in the `all` view: skip — the trips aren't
-    // contiguous and Galen explicitly forbids synthetic edges between trips.
-    if (a.route_key !== b.route_key && state.selectedView === "all") continue;
-    const category = isInland(a) || isInland(b) ? "land" : "sea";
-    legs.push({ from: a, to: b, fromLL: aLL, toLL: bLL, category });
-  }
-  return legs;
+  return AtlasData.buildLegs({
+    corpusId: state.corpusId,
+    sites,
+    selectedView: state.selectedView,
+  });
 }
 
 // ───────────────────────── map ─────────────────────────
@@ -517,16 +140,22 @@ function initMap() {
   requestAnimationFrame(() => map.invalidateSize());
 }
 
-function pinHtml(kind) {
-  return `<span class="site-pin site-pin--${kind === "land" ? "land" : "sea"} site-pin--inactive" aria-hidden="true"></span>`;
+function pinHtml(kind, options = {}) {
+  const markerKind = ["land", "sea", "materia"].includes(kind) ? kind : "sea";
+  const classes = ["site-pin", `site-pin--${markerKind}`, "site-pin--inactive"];
+  if (options.broad) classes.push("site-pin--broad");
+  return `<span class="${classes.join(" ")}" aria-hidden="true"></span>`;
 }
 
-function pinIcon(kind) {
+function pinIcon(kind, options = {}) {
+  const markerKind = ["land", "sea", "materia"].includes(kind) ? kind : "sea";
+  const size = markerKind === "materia" ? [20, 20] : markerKind === "land" ? [16, 16] : [18, 18];
+  const anchor = markerKind === "materia" ? [10, 10] : markerKind === "land" ? [8, 8] : [9, 9];
   return L.divIcon({
     className: "site-pin-wrap",
-    html: pinHtml(kind),
-    iconSize: kind === "land" ? [16, 16] : [18, 18],
-    iconAnchor: kind === "land" ? [8, 8] : [9, 9],
+    html: pinHtml(markerKind, options),
+    iconSize: size,
+    iconAnchor: anchor,
     tooltipAnchor: [10, 0],
     popupAnchor: [0, -10],
   });
@@ -589,10 +218,13 @@ function drawRoute() {
   for (const site of view.sites) {
     const ll = siteLatLng(site);
     if (!ll) continue;
-    const kind = isInland(site) ? "land" : "sea";
-    const name = siteDisplayName(site);
+    const kind = corpusIsMateria(state.corpusId) ? "materia" : isInland(site) ? "land" : "sea";
+    const isBroad = Boolean(site.is_broad_region || site.has_uncertain_coordinates);
+    const name = corpusIsMateria(state.corpusId) && site.place_label
+      ? `${siteDisplayName(site)} · ${site.place_label}`
+      : siteDisplayName(site);
     const marker = L.marker(ll, {
-      icon: pinIcon(kind),
+      icon: pinIcon(kind, { broad: isBroad }),
       keyboard: true,
       title: name,
       alt: name,
@@ -608,7 +240,12 @@ function drawRoute() {
       if (idx >= 0) goTo(idx);
     });
     marker.addTo(state.layers.markers);
-    state.markers.set(site.site_key, { marker, kind, placeKey: site.place_key ?? site.site_key });
+    state.markers.set(site.site_key, {
+      marker,
+      kind,
+      placeKey: site.place_key ?? site.site_key,
+      isBroad,
+    });
   }
 }
 
@@ -661,11 +298,34 @@ function renderCorpusButtons() {
   });
 }
 
+function renderStripLegend() {
+  const legend = document.querySelector(".strip__legend");
+  if (!legend) return;
+  if (corpusIsMateria(state.corpusId)) {
+    legend.innerHTML = `
+      <span class="strip__swatch strip__swatch--materia"></span>
+      <span class="strip__legend-label">Materia</span>
+      <span class="strip__swatch strip__swatch--broad"></span>
+      <span class="strip__legend-label">Broad</span>
+    `;
+    return;
+  }
+  legend.innerHTML = `
+    <span class="strip__swatch strip__swatch--sea"></span>
+    <span class="strip__legend-label">Sea</span>
+    <span class="strip__swatch strip__swatch--land"></span>
+    <span class="strip__legend-label">Caravan</span>
+  `;
+}
+
 function renderStrip() {
+  renderStripLegend();
   const rail = document.getElementById("strip-rail");
   rail.innerHTML = state.focusList
     .map((f, idx) => {
-      const label = f.corpus === "galen" && Number.isFinite(f.site.route_order)
+      const label = f.corpus === "materia_medica"
+        ? `${idx + 1} · ${f.displayName}${f.placeLabel ? ` · ${f.placeLabel}` : ""}`
+        : f.corpus === "galen" && Number.isFinite(f.site.route_order)
         ? `${f.site.route_order} · ${f.displayName}`
         : f.corpus === "periplus" && Number.isInteger(f.sectionOrder)
           ? `${f.sectionOrder} · ${f.displayName}`
@@ -677,6 +337,7 @@ function renderStrip() {
           data-index="${idx}"
           data-route="${escapeHtml(f.site.route_key ?? "")}"
           data-kind="${f.kind}"
+          data-broad="${f.isBroadRegion ? "true" : "false"}"
           role="option"
           aria-selected="false"
           aria-label="${escapeHtml(f.displayName)}"
@@ -722,6 +383,13 @@ function eyebrowParts(focus) {
     const section = Number.isInteger(focus.sectionOrder) ? `Section ${focus.sectionOrder}` : (focus.chapter || "");
     return { route, type, section };
   }
+  if (focus.corpus === "materia_medica") {
+    return {
+      route: "Materia Medica",
+      type: focus.relation || focus.placeType || "Provenance",
+      section: focus.sourceCitation || "",
+    };
+  }
   // Galen
   const route = focus.routeLabel || viewLabel(state.selectedView);
   const typeBits = [focus.placeType];
@@ -758,7 +426,7 @@ function renderContextMentionsHtml(mentions) {
 function renderMateriaList(focus) {
   const wrap = document.getElementById("dossier-materia");
   const list = document.getElementById("dossier-materia-list");
-  if (focus.corpus !== "galen" || !focus.materia || focus.materia.length === 0) {
+  if (!focus.materia || focus.materia.length === 0) {
     wrap.hidden = true;
     list.innerHTML = "";
     return;
@@ -781,6 +449,42 @@ function renderMateriaList(focus) {
   });
 }
 
+function renderMateriaMedicaHtml(focus) {
+  const confidence = Number.isFinite(focus.consensusConfidence)
+    ? `${Math.round(focus.consensusConfidence * 100)}% consensus`
+    : "";
+  const precision = [focus.locationPrecision, focus.coordinateSource]
+    .filter(Boolean)
+    .join(" · ");
+  const warning = focus.isBroadRegion || focus.hasUncertainCoordinates
+    ? `<p class="dossier-warning">${escapeHtml(focus.broadRegionLabel || "Broad or uncertain place; marker is representative.")}</p>`
+    : "";
+  const rows = [
+    ["Place", focus.placeLabel],
+    ["Relation", focus.relation],
+    ["Source", focus.sourceCitation],
+    ["Evidence", focus.evidencePhrase],
+    ["Confidence", confidence],
+    ["Coordinates", precision],
+  ].filter(([, value]) => value);
+  const meta = rows.map(([label, value]) => `
+    <div class="dossier-provenance__row">
+      <span>${escapeHtml(label)}</span>
+      <strong>${escapeHtml(value)}</strong>
+    </div>
+  `).join("");
+  const text = focus.translation
+    ? `<p class="dossier-provenance__entry">${escapeHtml(focus.translation)}</p>`
+    : `<p class="dossier__translation-placeholder">Translation pending review.</p>`;
+  return `
+    <div class="dossier-provenance">
+      ${meta}
+      ${warning}
+      ${text}
+    </div>
+  `;
+}
+
 function renderDossier(focus) {
   if (!focus) return;
   const { route, type, section } = eyebrowParts(focus);
@@ -797,7 +501,11 @@ function renderDossier(focus) {
   const greekEl = document.getElementById("dossier-greek");
 
   let translationHtml;
-  if (focus.translation) {
+  if (focus.corpus === "materia_medica") {
+    translationHtml = renderMateriaMedicaHtml(focus);
+    greekEl.textContent = focus.greekText || "";
+    greekBlock.hidden = !focus.greekText;
+  } else if (focus.translation) {
     translationHtml = escapeHtml(focus.translation);
     greekEl.textContent = focus.greekText || "";
     greekBlock.hidden = !focus.greekText;
@@ -827,6 +535,12 @@ function renderDossier(focus) {
   let sourceBits;
   if (focus.corpus === "galen") {
     sourceBits = [focus.kuhnCitation && `K. ${focus.kuhnCitation}`, focus.orderBasis].filter(Boolean);
+  } else if (focus.corpus === "materia_medica") {
+    sourceBits = [
+      focus.placeLabel,
+      focus.relation,
+      focus.isBroadRegion ? "representative point" : "",
+    ].filter(Boolean);
   } else {
     sourceBits = [focus.modernId, focus.chapter].filter(Boolean);
   }
@@ -930,6 +644,9 @@ function dossierOffsetCenter(targetLatLng, zoom) {
  * stop gets a frame proportional to its closest neighbour.
  */
 function targetZoomFor(focus) {
+  if (focus.corpus === "materia_medica") {
+    return focus.isBroadRegion || focus.hasUncertainCoordinates ? 5.4 : 6.6;
+  }
   if (focus.corpus !== "galen") {
     return focus.kind === "land" ? 6.4 : 6.2;
   }

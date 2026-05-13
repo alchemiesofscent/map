@@ -1,6 +1,7 @@
 # 03. Front-end wireframe spec
 
-The interface should work like a guided sailor's notebook.
+The interface should work like a guided route notebook. The canonical
+implementation is the Atlas viewer in `app/`.
 
 ## Primary layout
 
@@ -8,18 +9,17 @@ Desktop layout:
 
 ```text
 +---------------------------------------------------------------+
-| Header: Periplus Tour / text selector / layer toggles          |
+| Header: corpus selector / route-view selector / explore toggle |
 +-------------------------------+-------------------------------+
-|                               | Passage card                  |
+|                               | Dossier panel                 |
 | Map                           |                               |
-|                               | Section title                 |
-| - main sea route              | Translation                   |
-| - current stop marker         | Places                        |
-| - dashed side movements       | Goods                         |
-| - uncertainty styling         | Movement notes                |
-|                               | Source reference              |
+|                               | Site title                    |
+| - selected route view         | Translation / snippets        |
+| - current site marker         | Materia chips when available  |
+| - land/sea route styling      | Greek source                  |
+| - context pins when available | Source reference              |
 +-------------------------------+-------------------------------+
-| Route strip: 1 Myos → 2 Berenike → 3 Ptolemais → 4 Adulis      |
+| Route strip: ordered focus sites for the selected view          |
 +---------------------------------------------------------------+
 ```
 
@@ -27,11 +27,11 @@ Mobile layout:
 
 ```text
 +-------------------------------+
-| Header                        |
+| Header / drawer toggle         |
 +-------------------------------+
 | Map                           |
 +-------------------------------+
-| Passage card                  |
+| Dossier panel                 |
 +-------------------------------+
 | Prev / Next                   |
 +-------------------------------+
@@ -43,101 +43,102 @@ Mobile layout:
 
 Shows:
 
-- project title
-- active text title
-- layer toggles: route, movements, unresolved places
+- active corpus title
+- active route view
+- corpus and route-view controls
+- desktop explore-map toggle
 
 ### Map
 
 Required layers:
 
-- main route line
-- stop markers
-- side movement lines
-- optional candidate markers
+- selected route-view line
+- route-site markers
+- context or materia markers when the selected generated view provides them
 
 Marker rules:
 
-- primary route stops are visible by default
-- side-route places are visible when they have coordinates
-- unresolved places remain in the passage panel
-- low-certainty places get a low-certainty badge and a visually distinct marker
+- selected-view route sites are visible by default
+- Galen context and materia pins render without becoming route-line endpoints
+- unresolved or geometry-null places remain in route metadata and dossier text, but do not draw markers
+- land and sea sites get visually distinct pin treatments
 
 Line rules:
 
-- main sea route: solid
-- inferred sea route: visually distinct from text-explicit route
-- inland movement: dashed
-- island supply: dashed or dotted
+- sea route: solid blue sequence guide
+- land/caravan route: dashed warm sequence guide
+- Galen route lines connect only `primary` stops
+- Periplus route lines omit region-style sites so the line does not imply sailing across land
 
-### Passage card
+### Dossier panel
 
 Required fields:
 
-- section number
-- title
-- subtitle
-- short summary
-- draft translation
-- places mentioned
-- goods mentioned
-- movement notes
-- source reference
-- uncertainty note, if any
+- active route/view label
+- site type
+- Periplus section or Galen Kuhn citation
+- display name
+- Greek name when available
+- translation or context snippets
+- Greek source when available
+- materia medica chips for Galen sites when available
+- source reference and Pleiades link when available
 
 ### Route strip
 
-A compact ordered list of primary stops. Clicking a stop moves the tour to the corresponding card or nearest section.
+A compact ordered list of normalized focus sites. Clicking a stop moves the tour to that site in the current route view.
 
 Example:
 
 ```text
-1 Myos Hormos → 2 Berenike → 3 Ptolemais → 4 Adulis
+1 Myos Hormos -> 2 Berenike -> 3 Ptolemais -> 4 Adulis
 ```
 
-### Place drawer
+### Data adapter
 
-Optional for the next version. When a marker is clicked, show:
+The Atlas app is split across two JavaScript files:
 
-- display name
-- Greek name(s)
-- aliases
-- Pleiades URI
-- certainty
-- notes
+- `app/viewer-data.js`: corpus configuration, JSON fetches, lookup indexes, normalized focus lists, and route-leg derivation.
+- `app/viewer.js`: Leaflet layers, dossier/strip rendering, navigation, keyboard/wheel/touch input, and corpus/view switching.
+
+The runtime contract between them is the focus list: one item per rendered site in the selected generated route view, with corpus-specific reading fields already normalized.
 
 ## Interaction behavior
 
 On load:
 
-1. Load all JSON files.
-2. Build a place-key index.
-3. Draw all primary stops.
-4. Draw main route legs.
-5. Draw mapped movement overlays.
-6. Open the first tour card.
+1. Load the default corpus through `viewer-data.js`.
+2. Build corpus indexes and the selected view's focus list.
+3. Draw route-view sites and eligible route legs.
+4. Fit the map to the selected view.
+5. Open the first dossier entry.
 
 On Previous / Next:
 
-1. Update the active card.
-2. Highlight places listed in `place_keys`.
-3. Fit the map to mapped places on that card.
+1. Update the active dossier.
+2. Highlight the active marker and incoming leg.
+3. Fly or set the map to the active mapped site unless explore mode is enabled.
 4. Scroll the route strip if needed.
 
 On marker click:
 
-1. Open a popup with place metadata.
-2. Offer a link to the Pleiades URI when available.
-3. Show certainty and notes.
+1. Move the focus list to the clicked site.
+2. Update the dossier and strip selection.
+3. Apply the same map focus behavior as Previous / Next.
 
 ## Accessibility
 
 - Previous and Next must be keyboard-focusable buttons.
-- The active section title should be a real heading.
-- Place and goods lists should be semantic lists.
-- Do not encode uncertainty by color alone; also display text badges.
+- The active site title should be a real heading.
+- Materia lists should be semantic lists.
+- Do not encode route status by color alone where a text label is available.
 - Keep translations readable in a single column.
 
 ## Prototype included
 
-The included `app/` directory implements the base wireframe with vanilla JavaScript and Leaflet. It is deliberately simple so the data model remains the focus.
+The included `app/` directory implements the canonical Atlas viewer with vanilla JavaScript and Leaflet. Syntax-check both runtime files after edits:
+
+```bash
+node --check app/viewer-data.js
+node --check app/viewer.js
+```

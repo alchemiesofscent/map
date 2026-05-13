@@ -16,6 +16,9 @@
   --gold: #d9a649;
   --gold-bright: #f0c264;
   --gold-glow: rgba(217, 166, 73, 0.55);
+  --specimen: #6f8f3d;
+  --specimen-bright: #a8bd5f;
+  --specimen-amber: #d8a94a;
   --shadow-strong: 0 22px 50px -28px rgba(0, 0, 0, 0.6);
   --shadow-soft: 0 8px 30px -14px rgba(0, 0, 0, 0.35);
   --rule: rgba(244, 234, 213, 0.18);
@@ -520,6 +523,58 @@ body::after {
   letter-spacing: 0.01em;
 }
 
+.dossier-provenance {
+  display: grid;
+  gap: 8px;
+}
+
+.dossier-provenance__row {
+  display: grid;
+  grid-template-columns: minmax(88px, 0.28fr) 1fr;
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(244, 234, 213, 0.1);
+  align-items: baseline;
+}
+
+.dossier-provenance__row span {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--vellum-dim);
+}
+
+.dossier-provenance__row strong {
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 500;
+  color: var(--vellum);
+}
+
+.dossier-warning {
+  margin: 2px 0 0;
+  padding: 8px 10px;
+  border: 1px dashed rgba(168, 189, 95, 0.75);
+  border-radius: 4px;
+  background: rgba(111, 143, 61, 0.14);
+  color: var(--vellum);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.dossier-provenance__entry {
+  margin: 6px 0 0;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.58;
+  color: var(--vellum);
+}
+
 .dossier__greek {
   margin: 14px 0 0;
   border-top: 1px solid var(--rule);
@@ -743,6 +798,20 @@ body::after {
   background-size: 4px 2px;
   background-repeat: repeat-x;
 }
+.strip__swatch--materia {
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(19, 21, 23, 0.58);
+  background: linear-gradient(135deg, var(--specimen-amber), var(--specimen));
+  transform: rotate(45deg);
+}
+.strip__swatch--broad {
+  width: 12px;
+  height: 12px;
+  border: 1px dashed var(--specimen-bright);
+  background: transparent;
+  border-radius: 50%;
+}
 
 .strip__legend-label + .strip__swatch { margin-left: 14px; }
 
@@ -788,8 +857,27 @@ body::after {
   transform: rotate(45deg);
 }
 
+.strip__dot[data-kind="materia"]::before {
+  border-radius: 2px;
+  width: 7px;
+  height: 7px;
+  background: linear-gradient(135deg, var(--specimen-amber), var(--specimen));
+  transform: rotate(45deg);
+}
+
+.strip__dot[data-kind="materia"][data-broad="true"]::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px dashed var(--specimen-bright);
+  border-radius: 50%;
+  opacity: 0.72;
+}
+
 .strip__dot:hover::before { transform: scale(1.6); opacity: 1; }
 .strip__dot[data-kind="land"]:hover::before { transform: rotate(45deg) scale(1.6); opacity: 1; }
+.strip__dot[data-kind="materia"]:hover::before { transform: rotate(45deg) scale(1.5); opacity: 1; }
 
 .strip__dot.is-active::before {
   width: 10px;
@@ -804,6 +892,13 @@ body::after {
   transform: rotate(45deg);
   width: 9px;
   height: 9px;
+}
+
+.strip__dot[data-kind="materia"].is-active::before {
+  transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, var(--specimen-amber), var(--specimen-bright));
 }
 
 .strip__dot__label {
@@ -881,6 +976,25 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
   height: 12px;
 }
 
+.site-pin--materia {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, var(--specimen-amber), var(--specimen));
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
+}
+
+.site-pin--broad::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border: 1px dashed rgba(111, 143, 61, 0.92);
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  opacity: 0.82;
+}
+
 .site-pin--inactive {
   opacity: 0.78;
 }
@@ -899,6 +1013,11 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
 .site-pin--land.site-pin--active {
   transform: rotate(45deg) scale(1.18);
   background: var(--gold-bright);
+}
+
+.site-pin--materia.site-pin--active {
+  transform: rotate(45deg) scale(1.18);
+  background: linear-gradient(135deg, var(--specimen-amber), var(--specimen-bright));
 }
 
 @keyframes pinPulse {

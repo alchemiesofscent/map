@@ -1,0 +1,50 @@
+[
+  {
+    "place_key": "pleiades_981506",
+    "display_name": "Arabia (province)",
+    "place_type": "region",
+    "lat": 27.5,
+    "lon": 32.5,
+    "certainty": "representative",
+    "pleiades_id": "981506",
+    "pleiades_uri": "https://pleiades.stoa.org/places/981506",
+    "coordinates_source": "pleiades_repr_point",
+    "location_precision": "rough",
+    "is_broad_region": true,
+    "has_uncertain_coordinates": true,
+    "accepted_link_count": 2,
+    "notes": "Representative Pleiades point for a broad provenance region."
+  },
+  {
+    "place_key": "pleiades_619161",
+    "display_name": "Galatia",
+    "place_type": "region",
+    "lat": 39.9338119976,
+    "lon": 32.4274370108,
+    "certainty": "representative",
+    "pleiades_id": "619161",
+    "pleiades_uri": "https://pleiades.stoa.org/places/619161",
+    "coordinates_source": "pleiades_repr_point",
+    "location_precision": "precise",
+    "is_broad_region": true,
+    "has_uncertain_coordinates": false,
+    "accepted_link_count": 2,
+    "notes": "Representative Pleiades point for a broad provenance region."
+  },
+  {
+    "place_key": "pleiades_687934",
+    "display_name": "Iudaea (region)",
+    "place_type": "region",
+    "lat": 31.73416715,
+    "lon": 35.0017203,
+    "certainty": "representative",
+    "pleiades_id": "687934",
+    "pleiades_uri": "https://pleiades.stoa.org/places/687934",
+    "coordinates_source": "pleiades_repr_point",
+    "location_precision": "related",
+    "is_broad_region": true,
+    "has_uncertain_coordinates": true,
+    "accepted_link_count": 1,
+    "notes": "Representative Pleiades point for a broad provenance region."
+  }
+]
