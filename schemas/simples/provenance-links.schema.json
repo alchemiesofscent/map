@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/simples/provenance-links.schema.json",
+  "title": "Accepted simples provenance links",
+  "type": "object",
+  "required": ["metadata", "counts", "reports", "links"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "artifact_id",
+        "stage",
+        "source_candidates_path",
+        "source_review_queue_path",
+        "source_llm_adjudications_path",
+        "source_mode",
+        "notes"
+      ]
+    },
+    "counts": {
+      "type": "object",
+      "required": ["review_rows", "accepted_links", "skipped_invalid_accept_rows"]
+    },
+    "reports": { "type": "object" },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "link_id",
+          "candidate_id",
+          "review_row_id",
+          "entry_id",
+          "lemma",
+          "author",
+          "work",
+          "book",
+          "chapter",
+          "relation",
+          "accepted_pleiades_id",
+          "accepted_pleiades_uri",
+          "place_label",
+          "evidence_phrase",
+          "certainty",
+          "review_decision_source"
+        ],
+        "properties": {
+          "consensus_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "vote_trace_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/simples/provenance-llm-adjudications.schema.json",
+  "title": "LLM consensus simples provenance adjudications",
+  "type": "object",
+  "required": ["metadata", "counts", "reports", "adjudications"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "artifact_id",
+        "stage",
+        "source_candidates_path",
+        "source_manifest_path",
+        "source_gazetteer_path",
+        "prompt_version",
+        "runner",
+        "notes"
+      ]
+    },
+    "counts": {
+      "type": "object",
+      "required": ["candidates_in", "adjudications", "votes", "third_votes", "final_accepts"]
+    },
+    "reports": { "type": "object" },
+    "adjudications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "adjudication_id",
+          "candidate_id",
+          "entry_id",
+          "prompt_version",
+          "runner",
+          "created_at",
+          "votes",
+          "consensus"
+        ],
+        "properties": {
+          "votes": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "required": [
+                "vote_trace_id",
+                "candidate_id",
+                "agent_label",
+                "runner",
+                "prompt_version",
+                "created_at",
+                "response"
+              ],
+              "properties": {
+                "response": { "$ref": "#/$defs/vote_response" }
+              }
+            }
+          },
+          "consensus": {
+            "type": "object",
+            "required": [
+              "method",
+              "decision_key",
+              "decision",
+              "supported",
+              "relation",
+              "accepted_pleiades_id",
+              "confidence",
+              "evidence_phrase",
+              "rationale",
+              "warnings"
+            ],
+            "properties": {
+              "decision": { "$ref": "#/$defs/decision" },
+              "supported": { "type": "boolean" },
+              "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+              "warnings": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "accept",
+        "reject",
+        "context_only",
+        "uncertain",
+        "needs_more_context",
+        "wrong_pleiades_match"
+      ]
+    },
+    "vote_response": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision",
+        "supported",
+        "relation",
+        "accepted_pleiades_id",
+        "confidence",
+        "evidence_phrase",
+        "rationale",
+        "warnings"
+      ],
+      "properties": {
+        "decision": { "$ref": "#/$defs/decision" },
+        "supported": { "type": "boolean" },
+        "relation": {
+          "type": "string",
+          "enum": [
+            "",
+            "named_variety_from",
+            "grows_at",
+            "produced_at",
+            "sourced_from",
+            "acquired",
+            "observed",
+            "tested",
+            "prepared",
+            "context_only",
+            "rejected_candidate"
+          ]
+        },
+        "accepted_pleiades_id": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "evidence_phrase": { "type": "string" },
+        "rationale": { "type": "string" },
+        "warnings": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

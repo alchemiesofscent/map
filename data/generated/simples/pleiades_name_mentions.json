@@ -1,0 +1,236 @@
+{
+  "metadata": {
+    "artifact_id": "simples-pleiades-name-mentions",
+    "stage": "stage_2_scan_source_text_for_pleiades_names",
+    "source_manifest_path": "data/generated/simples/entry_manifest.json",
+    "source_gazetteer_path": "data/generated/simples/pleiades_gazetteer.json",
+    "scanned_fields": [
+      "greek_entry_text",
+      "lemma",
+      "chapter_heading_gr",
+      "section_heading_gr",
+      "variant_or_parallel_gr",
+      "book_no_gr",
+      "chapter_no_gr"
+    ],
+    "matching": "longest normalized Pleiades Greek-script lookup keys first; occupied spans suppress shorter overlaps"
+  },
+  "counts": {
+    "entries_scanned": 83,
+    "lookup_keys_scanned": 3324,
+    "mentions": 5,
+    "entries_with_mentions": 5,
+    "ambiguous_mentions": 0,
+    "high_risk_mentions": 0,
+    "suppressed_entry_label_matches": 23,
+    "suppressed_lowercase_matches": 30,
+    "suppressed_alias_matches": 1
+  },
+  "reports": {
+    "mentions_by_author": {
+      "dsc": 5
+    },
+    "mentions_by_entry": {
+      "dsc:16": 1,
+      "dsc:18": 1,
+      "dsc:319": 1,
+      "dsc:341": 1,
+      "dsc:5": 1
+    },
+    "mentions_by_field": {
+      "greek_entry_text": 5
+    },
+    "high_risk_mentions": []
+  },
+  "mentions": [
+    {
+      "mention_id": "mention-2edb87906bfd",
+      "entry_id": "dsc:16",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "17",
+      "lemma": "σχοῖνος",
+      "matched_field": "greek_entry_text",
+      "matched_surface": "Ἀραβίᾳ",
+      "normalized_key": "αραβια",
+      "candidate_pleiades_ids": [
+        "981506"
+      ],
+      "candidate_places": [
+        {
+          "pleiades_id": "981506",
+          "pleiades_uri": "https://pleiades.stoa.org/places/981506",
+          "title": "Arabia (province)",
+          "feature_types": [
+            "province-2"
+          ],
+          "coordinates": {
+            "lat": 27.5,
+            "lon": 32.5
+          },
+          "location_precision": "rough"
+        }
+      ],
+      "char_offsets": {
+        "start": 44,
+        "end": 50
+      },
+      "context_window": "σχοῖνος· ἡ μέν τις γίνεται ἐν Λιβύῃ ἡ δὲ ἐν Ἀραβίᾳ, ἑτέρα δὲ ἐν τῇ Ναβαταίᾳ καλουμένῃ, ἥτις ἐστὶ κρατίστη· δευτερεύει δὲ ἡ Ἀραβική, ἣν ἔνιοι…",
+      "ambiguity_count": 1,
+      "is_high_risk": false
+    },
+    {
+      "mention_id": "mention-90951a0d4614",
+      "entry_id": "dsc:18",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "19",
+      "lemma": "βάλσαμον",
+      "matched_field": "greek_entry_text",
+      "matched_surface": "Ἰουδαίᾳ",
+      "normalized_key": "ιουδαια",
+      "candidate_pleiades_ids": [
+        "687934"
+      ],
+      "candidate_places": [
+        {
+          "pleiades_id": "687934",
+          "pleiades_uri": "https://pleiades.stoa.org/places/687934",
+          "title": "Iudaea (region)",
+          "feature_types": [
+            "region"
+          ],
+          "coordinates": {
+            "lat": 31.73416715,
+            "lon": 35.0017203
+          },
+          "location_precision": "related"
+        }
+      ],
+      "char_offsets": {
+        "start": 149,
+        "end": 156
+      },
+      "context_window": "…λέπεται, φύλλα ἔχον ὅμοια πηγάνῳ, λευκότερα δὲ πολλῷ καὶ ἀειθαλέστερα, γεννώμενον ἐν μόνῃ Ἰουδαίᾳ κατά τινα αὐλῶνα, διαφέρον αὐτὸ ἑαυτοῦ τραχύτητι καὶ μήκει καὶ ἰσχνότητι. λέγεται γοῦν τὸ…",
+      "ambiguity_count": 1,
+      "is_high_risk": false
+    },
+    {
+      "mention_id": "mention-742a09c61367",
+      "entry_id": "dsc:319",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "3",
+      "chapter": "1",
+      "lemma": "ἀγαρικόν",
+      "matched_field": "greek_entry_text",
+      "matched_surface": "Γαλατίᾳ",
+      "normalized_key": "γαλατια",
+      "candidate_pleiades_ids": [
+        "619161"
+      ],
+      "candidate_places": [
+        {
+          "pleiades_id": "619161",
+          "pleiades_uri": "https://pleiades.stoa.org/places/619161",
+          "title": "Galatia",
+          "feature_types": [
+            "province",
+            "region",
+            "label"
+          ],
+          "coordinates": {
+            "lat": 39.9338119976,
+            "lon": 32.4274370108
+          },
+          "location_precision": "precise"
+        }
+      ],
+      "char_offsets": {
+        "start": 522,
+        "end": 529
+      },
+      "context_window": "…κατὰ σῆψιν γίνεσθαι, καθάπερ καὶ οἱ μύκητες ἐπιφύονται. γεννᾶται δὲ καὶ ἐν τῇ κατὰ Ἀσίαν Γαλατίᾳ καὶ Κιλικίᾳ ἐπὶ τῶν κέδρων, εὔθρυπτον μέντοι καὶ ἀσθενὲς τῇ δυνάμει. 3 ἐστι δὲ στυπτικόν,…",
+      "ambiguity_count": 1,
+      "is_high_risk": false
+    },
+    {
+      "mention_id": "mention-14a7db22a1e0",
+      "entry_id": "dsc:341",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "3",
+      "chapter": "24",
+      "lemma": "ἁβρότονον",
+      "matched_field": "greek_entry_text",
+      "matched_surface": "Γαλατίᾳ",
+      "normalized_key": "γαλατια",
+      "candidate_pleiades_ids": [
+        "619161"
+      ],
+      "candidate_places": [
+        {
+          "pleiades_id": "619161",
+          "pleiades_uri": "https://pleiades.stoa.org/places/619161",
+          "title": "Galatia",
+          "feature_types": [
+            "province",
+            "region",
+            "label"
+          ],
+          "coordinates": {
+            "lat": 39.9338119976,
+            "lon": 32.4274370108
+          },
+          "location_precision": "precise"
+        }
+      ],
+      "char_offsets": {
+        "start": 441,
+        "end": 448
+      },
+      "context_window": "…εν καλεῖται, κληματῶδες, λεπτόκαρπον ὡς ἀψίνθιον. 2 πλεῖστον δὲ γίνεται ἐν Καππαδοκίᾳ καὶ Γαλατίᾳ τῇ κατὰ τὴν Ἀσίαν καὶ Ἱεραπόλει τῇ κατὰ τὴν Συρίαν. τούτων ὁ καρπὸς ἀπεζεσμένος μεθʼ ὕδατ…",
+      "ambiguity_count": 1,
+      "is_high_risk": false
+    },
+    {
+      "mention_id": "mention-7d7dd0a6ee62",
+      "entry_id": "dsc:5",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "6",
+      "lemma": "καρδάμωμον",
+      "matched_field": "greek_entry_text",
+      "matched_surface": "Ἀραβίᾳ",
+      "normalized_key": "αραβια",
+      "candidate_pleiades_ids": [
+        "981506"
+      ],
+      "candidate_places": [
+        {
+          "pleiades_id": "981506",
+          "pleiades_uri": "https://pleiades.stoa.org/places/981506",
+          "title": "Arabia (province)",
+          "feature_types": [
+            "province-2"
+          ],
+          "coordinates": {
+            "lat": 27.5,
+            "lon": 32.5
+          },
+          "location_precision": "rough"
+        }
+      ],
+      "char_offsets": {
+        "start": 108,
+        "end": 114
+      },
+      "context_window": "…τὸ ἐκ τῆς Κομμαγηνῆς καὶ Ἀρμενίας καὶ βοσπόρου κομιζόμενον· γεννᾶται δὲ καὶ ἐν Ἰνδίᾳ καὶ Ἀραβίᾳ. ἐκλέγου δὲ τὸ δύσθραυστον, πλῆρες, μεμυκός — τὸ γὰρ μὴ τοιοῦτον ἔξωρόν ἐστι — καὶ τὸ τῇ…",
+      "ambiguity_count": 1,
+      "is_high_risk": false
+    }
+  ]
+}

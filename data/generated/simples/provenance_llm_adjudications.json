@@ -1,0 +1,345 @@
+{
+  "metadata": {
+    "artifact_id": "simples-provenance-llm-adjudications",
+    "stage": "stage_4_llm_consensus_review",
+    "built_at": "2026-05-13T01:50:33+00:00",
+    "source_candidates_path": "data/generated/simples/provenance_candidates.json",
+    "source_manifest_path": "data/generated/simples/entry_manifest.json",
+    "source_gazetteer_path": "data/generated/simples/pleiades_gazetteer.json",
+    "prompt_version": "simples-provenance-consensus-v1",
+    "runner": "codex exec",
+    "notes": [
+      "Agent A and Agent B vote independently for every candidate.",
+      "Agent C is called only when the first two normalized vote keys disagree.",
+      "Accepted links are generated only from final consensus decisions."
+    ]
+  },
+  "counts": {
+    "candidates_in": 5,
+    "adjudications": 5,
+    "votes": 10,
+    "third_votes": 0,
+    "final_accepts": 5
+  },
+  "reports": {
+    "final_decisions": {
+      "accept": 5
+    },
+    "consensus_methods": {
+      "two_vote_match": 5
+    },
+    "vote_counts": {
+      "2": 5
+    }
+  },
+  "adjudications": [
+    {
+      "adjudication_id": "llm-adjudication-bc62febfbbd0",
+      "candidate_id": "candidate-4ecee2b1ce32",
+      "entry_id": "dsc:16",
+      "prompt_version": "simples-provenance-consensus-v1",
+      "runner": "codex exec",
+      "created_at": "2026-05-12T23:27:00+00:00",
+      "votes": [
+        {
+          "vote_trace_id": "vote-52b00af3fac8",
+          "candidate_id": "candidate-4ecee2b1ce32",
+          "agent_label": "A",
+          "runner": "codex exec",
+          "prompt_version": "simples-provenance-consensus-v1",
+          "created_at": "2026-05-12T23:26:24+00:00",
+          "response": {
+            "decision": "accept",
+            "supported": true,
+            "relation": "grows_at",
+            "accepted_pleiades_id": "981506",
+            "confidence": 0.93,
+            "evidence_phrase": "ἡ δὲ ἐν Ἀραβίᾳ",
+            "rationale": "The passage explicitly distinguishes kinds of σχοῖνος by where they grow, using γίνεται and then giving one as in Arabia. The supplied Pleiades option matches the Greek surface Ἀραβίᾳ/Ἀραβία, so the proposed grows_at relation is supported.",
+            "warnings": [
+              "The passage also separately mentions Nabataia as another variety/locality, but that does not undermine the Arabia provenance for this candidate."
+            ]
+          }
+        },
+        {
+          "vote_trace_id": "vote-133225fa3aec",
+          "candidate_id": "candidate-4ecee2b1ce32",
+          "agent_label": "B",
+          "runner": "codex exec",
+          "prompt_version": "simples-provenance-consensus-v1",
+          "created_at": "2026-05-12T23:27:00+00:00",
+          "response": {
+            "decision": "accept",
+            "supported": true,
+            "relation": "grows_at",
+            "accepted_pleiades_id": "981506",
+            "confidence": 0.93,
+            "evidence_phrase": "ἡ δὲ ἐν Ἀραβίᾳ",
+            "rationale": "The passage states that one kind of σχοῖνος occurs in Libya and another in Arabia; the matched place surface is used as a growth location for the simple, not merely as a label or comparison.",
+            "warnings": []
+          }
+        }
+      ],
+      "consensus": {
+        "method": "two_vote_match",
+        "decision_key": "accept|grows_at|981506",
+        "decision": "accept",
+        "supported": true,
+        "relation": "grows_at",
+        "accepted_pleiades_id": "981506",
+        "confidence": 0.93,
+        "evidence_phrase": "ἡ δὲ ἐν Ἀραβίᾳ",
+        "rationale": "The passage explicitly distinguishes kinds of σχοῖνος by where they grow, using γίνεται and then giving one as in Arabia. The supplied Pleiades option matches the Greek surface Ἀραβίᾳ/Ἀραβία, so the proposed grows_at relation is supported.",
+        "warnings": [
+          "The passage also separately mentions Nabataia as another variety/locality, but that does not undermine the Arabia provenance for this candidate."
+        ]
+      }
+    },
+    {
+      "adjudication_id": "llm-adjudication-3627031a82c9",
+      "candidate_id": "candidate-c087d2113aa2",
+      "entry_id": "dsc:18",
+      "prompt_version": "simples-provenance-consensus-v1",
+      "runner": "codex exec",
+      "created_at": "2026-05-13T01:50:33+00:00",
+      "votes": [
+        {
+          "vote_trace_id": "vote-1d2b6e7fee4b",
+          "candidate_id": "candidate-c087d2113aa2",
+          "agent_label": "A",
+          "runner": "codex exec",
+          "prompt_version": "simples-provenance-consensus-v1",
+          "created_at": "2026-05-13T01:50:10+00:00",
+          "response": {
+            "decision": "accept",
+            "supported": true,
+            "relation": "grows_at",
+            "accepted_pleiades_id": "687934",
+            "confidence": 0.99,
+            "evidence_phrase": "γεννώμενον ἐν μόνῃ Ἰουδαίᾳ",
+            "rationale": "The passage explicitly says the balsam tree is generated/grows only in Judea, and the supplied Pleiades option is Iudaea (region), matching the Greek place name Ἰουδαίᾳ.",
+            "warnings": []
+          }
+        },
+        {
+          "vote_trace_id": "vote-53706b08434a",
+          "candidate_id": "candidate-c087d2113aa2",
+          "agent_label": "B",
+          "runner": "codex exec",
+          "prompt_version": "simples-provenance-consensus-v1",
+          "created_at": "2026-05-13T01:50:33+00:00",
+          "response": {
+            "decision": "accept",
+            "supported": true,
+            "relation": "grows_at",
+            "accepted_pleiades_id": "687934",
+            "confidence": 0.98,
+            "evidence_phrase": "γεννώμενον ἐν μόνῃ Ἰουδαίᾳ",
+            "rationale": "The passage explicitly says the balsam tree grows only in Judea, and the supplied Pleiades option is Iudaea (region), matching the Greek place name.",
+            "warnings": []
+          }
+        }
+      ],
+      "consensus": {
+        "method": "two_vote_match",
+        "decision_key": "accept|grows_at|687934",
+        "decision": "accept",
+        "supported": true,
+        "relation": "grows_at",
+        "accepted_pleiades_id": "687934",
+        "confidence": 0.985,
+        "evidence_phrase": "γεννώμενον ἐν μόνῃ Ἰουδαίᾳ",
+        "rationale": "The passage explicitly says the balsam tree is generated/grows only in Judea, and the supplied Pleiades option is Iudaea (region), matching the Greek place name Ἰουδαίᾳ.",
+        "warnings": []
+      }
+    },
+    {
+      "adjudication_id": "llm-adjudication-1e38d0a783d9",
+      "candidate_id": "candidate-1b2ad4e940fa",
+      "entry_id": "dsc:319",
+      "prompt_version": "simples-provenance-consensus-v1",
+      "runner": "codex exec",
+      "created_at": "2026-05-12T23:39:54+00:00",
+      "votes": [
+        {
+          "vote_trace_id": "vote-083a8faec400",
+          "candidate_id": "candidate-1b2ad4e940fa",
+          "agent_label": "A",
+          "runner": "codex exec",
+          "prompt_version": "simples-provenance-consensus-v1",
+          "created_at": "2026-05-12T23:39:35+00:00",
+          "response": {
+            "decision": "accept",
+            "supported": true,
+            "relation": "grows_at",
+            "accepted_pleiades_id": "619161",
+            "confidence": 0.97,
+            "evidence_phrase": "γεννᾶται δὲ καὶ ἐν τῇ κατὰ Ἀσίαν Γαλατίᾳ",
+            "rationale": "The Greek passage explicitly says the simple is also produced/grows in Galatia in Asia, matching the supplied Galatia option and supporting a provenance relation.",
+            "warnings": [
+              "The English entry text appears mismatched to the Greek lemma/passage, but the Greek passage itself supports the judgment."
+            ]
+          }
+        },
+        {
+          "vote_trace_id": "vote-d5413f7403ab",
+          "candidate_id": "candidate-1b2ad4e940fa",
+          "agent_label": "B",
+          "runner": "codex exec",
+          "prompt_version": "simples-provenance-consensus-v1",
+          "created_at": "2026-05-12T23:39:54+00:00",
+          "response": {
+            "decision": "accept",
+            "supported": true,
+            "relation": "grows_at",
+            "accepted_pleiades_id": "619161",
+            "confidence": 0.97,
+            "evidence_phrase": "γεννᾶται δὲ καὶ ἐν τῇ κατὰ Ἀσίαν Γαλατίᾳ",
+            "rationale": "The passage explicitly says the simple is also produced or grows in Galatia in Asia, with Cilicia also named, so the supplied Galatia place supports a provenance relation.",
+            "warnings": [
+              "The passage also names Cilicia as another provenance, but only Galatia is supplied as an option."
+            ]
+          }
+        }
+      ],
+      "consensus": {
+        "method": "two_vote_match",
+        "decision_key": "accept|grows_at|619161",
+        "decision": "accept",
+        "supported": true,
+        "relation": "grows_at",
+        "accepted_pleiades_id": "619161",
+        "confidence": 0.97,
+        "evidence_phrase": "γεννᾶται δὲ καὶ ἐν τῇ κατὰ Ἀσίαν Γαλατίᾳ",
+        "rationale": "The Greek passage explicitly says the simple is also produced/grows in Galatia in Asia, matching the supplied Galatia option and supporting a provenance relation.",
+        "warnings": [
+          "The English entry text appears mismatched to the Greek lemma/passage, but the Greek passage itself supports the judgment.",
+          "The passage also names Cilicia as another provenance, but only Galatia is supplied as an option."
+        ]
+      }
+    },
+    {
+      "adjudication_id": "llm-adjudication-841fe377fbc2",
+      "candidate_id": "candidate-f59a5a03dbc0",
+      "entry_id": "dsc:341",
+      "prompt_version": "simples-provenance-consensus-v1",
+      "runner": "codex exec",
+      "created_at": "2026-05-12T23:43:59+00:00",
+      "votes": [
+        {
+          "vote_trace_id": "vote-baf9deadcfec",
+          "candidate_id": "candidate-f59a5a03dbc0",
+          "agent_label": "A",
+          "runner": "codex exec",
+          "prompt_version": "simples-provenance-consensus-v1",
+          "created_at": "2026-05-12T23:43:35+00:00",
+          "response": {
+            "decision": "accept",
+            "supported": true,
+            "relation": "grows_at",
+            "accepted_pleiades_id": "619161",
+            "confidence": 0.98,
+            "evidence_phrase": "πλεῖστον δὲ γίνεται ἐν Καππαδοκίᾳ καὶ Γαλατίᾳ τῇ κατὰ τὴν Ἀσίαν",
+            "rationale": "The passage explicitly says the plant grows abundantly in Cappadocia and in Galatia in Asia; the supplied Pleiades option is Galatia and matches the geographic provenance phrase.",
+            "warnings": []
+          }
+        },
+        {
+          "vote_trace_id": "vote-c6dd1cdc63a2",
+          "candidate_id": "candidate-f59a5a03dbc0",
+          "agent_label": "B",
+          "runner": "codex exec",
+          "prompt_version": "simples-provenance-consensus-v1",
+          "created_at": "2026-05-12T23:43:59+00:00",
+          "response": {
+            "decision": "accept",
+            "supported": true,
+            "relation": "grows_at",
+            "accepted_pleiades_id": "619161",
+            "confidence": 0.98,
+            "evidence_phrase": "πλεῖστον δὲ γίνεται ἐν Καππαδοκίᾳ καὶ Γαλατίᾳ τῇ κατὰ τὴν Ἀσίαν",
+            "rationale": "The passage explicitly says the plant occurs abundantly in Galatia in Asia, and the supplied Pleiades option is Galatia.",
+            "warnings": []
+          }
+        }
+      ],
+      "consensus": {
+        "method": "two_vote_match",
+        "decision_key": "accept|grows_at|619161",
+        "decision": "accept",
+        "supported": true,
+        "relation": "grows_at",
+        "accepted_pleiades_id": "619161",
+        "confidence": 0.98,
+        "evidence_phrase": "πλεῖστον δὲ γίνεται ἐν Καππαδοκίᾳ καὶ Γαλατίᾳ τῇ κατὰ τὴν Ἀσίαν",
+        "rationale": "The passage explicitly says the plant grows abundantly in Cappadocia and in Galatia in Asia; the supplied Pleiades option is Galatia and matches the geographic provenance phrase.",
+        "warnings": []
+      }
+    },
+    {
+      "adjudication_id": "llm-adjudication-7be74e513726",
+      "candidate_id": "candidate-31f977e598ec",
+      "entry_id": "dsc:5",
+      "prompt_version": "simples-provenance-consensus-v1",
+      "runner": "codex exec",
+      "created_at": "2026-05-12T23:49:06+00:00",
+      "votes": [
+        {
+          "vote_trace_id": "vote-fe131daa05eb",
+          "candidate_id": "candidate-31f977e598ec",
+          "agent_label": "A",
+          "runner": "codex exec",
+          "prompt_version": "simples-provenance-consensus-v1",
+          "created_at": "2026-05-12T23:48:38+00:00",
+          "response": {
+            "decision": "accept",
+            "supported": true,
+            "relation": "grows_at",
+            "accepted_pleiades_id": "981506",
+            "confidence": 0.93,
+            "evidence_phrase": "γεννᾶται δὲ καὶ ἐν Ἰνδίᾳ καὶ Ἀραβίᾳ",
+            "rationale": "The passage explicitly says cardamom also grows in India and Arabia, so Arabia is a supported growth/provenance location for the simple. The supplied Pleiades option matches the Greek surface Ἀραβίᾳ/Ἀραβία.",
+            "warnings": [
+              "The candidate's provisional relation 'acquired' should be corrected to 'grows_at' for this surface."
+            ]
+          }
+        },
+        {
+          "vote_trace_id": "vote-7d8480189a7d",
+          "candidate_id": "candidate-31f977e598ec",
+          "agent_label": "B",
+          "runner": "codex exec",
+          "prompt_version": "simples-provenance-consensus-v1",
+          "created_at": "2026-05-12T23:49:06+00:00",
+          "response": {
+            "decision": "accept",
+            "supported": true,
+            "relation": "grows_at",
+            "accepted_pleiades_id": "981506",
+            "confidence": 0.92,
+            "evidence_phrase": "γεννᾶται δὲ καὶ ἐν Ἰνδίᾳ καὶ Ἀραβίᾳ",
+            "rationale": "The passage explicitly says cardamom also grows in India and Arabia, which supports a provenance/growth relation for Arabia. The relation is growth rather than acquisition/transport.",
+            "warnings": [
+              "The supplied Pleiades option is titled Arabia (province), while the passage may use Arabia as a broad geographic region."
+            ]
+          }
+        }
+      ],
+      "consensus": {
+        "method": "two_vote_match",
+        "decision_key": "accept|grows_at|981506",
+        "decision": "accept",
+        "supported": true,
+        "relation": "grows_at",
+        "accepted_pleiades_id": "981506",
+        "confidence": 0.925,
+        "evidence_phrase": "γεννᾶται δὲ καὶ ἐν Ἰνδίᾳ καὶ Ἀραβίᾳ",
+        "rationale": "The passage explicitly says cardamom also grows in India and Arabia, so Arabia is a supported growth/provenance location for the simple. The supplied Pleiades option matches the Greek surface Ἀραβίᾳ/Ἀραβία.",
+        "warnings": [
+          "The candidate's provisional relation 'acquired' should be corrected to 'grows_at' for this surface.",
+          "The supplied Pleiades option is titled Arabia (province), while the passage may use Arabia as a broad geographic region."
+        ]
+      }
+    }
+  ]
+}

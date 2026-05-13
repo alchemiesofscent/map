@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/simples/pleiades-gazetteer.schema.json",
+  "title": "Simples Pleiades gazetteer",
+  "type": "object",
+  "required": ["metadata", "counts", "places", "lookup_index", "ambiguous_lookup_keys", "spot_checks"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["artifact_id", "stage", "built_at", "source_paths", "normalization", "notes"]
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "total_pleiades_place_rows",
+        "places_with_lookup_names",
+        "total_lookup_names",
+        "greek_script_names",
+        "transliterated_names",
+        "title_strings",
+        "lookup_keys",
+        "ambiguous_lookup_keys"
+      ]
+    },
+    "places": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "pleiades_id",
+          "pleiades_uri",
+          "title",
+          "feature_types",
+          "coordinates",
+          "location_precision",
+          "names",
+          "lookup_keys"
+        ]
+      }
+    },
+    "lookup_index": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 1
+      }
+    },
+    "ambiguous_lookup_keys": { "type": "object" },
+    "spot_checks": { "type": "object" }
+  }
+}

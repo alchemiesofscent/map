@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "artifact_id": "simples-provenance-links",
+    "stage": "stage_5_accepted_provenance_links",
+    "source_candidates_path": "data/generated/simples/provenance_candidates.json",
+    "source_review_queue_path": "data/review/simples_provenance_review.csv",
+    "source_llm_adjudications_path": "data/generated/simples/provenance_llm_adjudications.json",
+    "source_mode": "llm_consensus",
+    "notes": [
+      "When LLM adjudications exist, final LLM consensus decisions are the review authority.",
+      "Without LLM adjudications, rows with review_decision=accept and a valid accepted_pleiades_id become links.",
+      "Rejected, undecided, context-only, and uncertain records remain in sidecar review/audit outputs."
+    ]
+  },
+  "counts": {
+    "review_rows": 5,
+    "accepted_links": 5,
+    "skipped_invalid_accept_rows": 0
+  },
+  "reports": {
+    "review_decisions": {
+      "accept": 5
+    },
+    "accepted_by_relation": {
+      "grows_at": 5
+    },
+    "accepted_by_author": {
+      "dsc": 5
+    },
+    "accepted_by_place": {
+      "Arabia (province)": 2,
+      "Galatia": 2,
+      "Iudaea (region)": 1
+    },
+    "accepted_by_lemma": {
+      "βάλσαμον": 1,
+      "καρδάμωμον": 1,
+      "σχοῖνος": 1,
+      "ἀγαρικόν": 1,
+      "ἁβρότονον": 1
+    }
+  },
+  "links": [
+    {
+      "link_id": "link-9c80b4940a8a",
+      "candidate_id": "candidate-4ecee2b1ce32",
+      "review_row_id": "review-326329d832d9",
+      "entry_id": "dsc:16",
+      "lemma": "σχοῖνος",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "17",
+      "relation": "grows_at",
+      "accepted_pleiades_id": "981506",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/981506",
+      "place_label": "Arabia (province)",
+      "evidence_phrase": "ἡ δὲ ἐν Ἀραβίᾳ",
+      "certainty": "possible",
+      "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+      "adjudication_id": "llm-adjudication-bc62febfbbd0",
+      "final_decision": "accept",
+      "consensus_method": "two_vote_match",
+      "consensus_confidence": 0.93,
+      "vote_trace_ids": [
+        "vote-52b00af3fac8",
+        "vote-133225fa3aec"
+      ]
+    },
+    {
+      "link_id": "link-687755fd302c",
+      "candidate_id": "candidate-c087d2113aa2",
+      "review_row_id": "review-d3df4f2c7f98",
+      "entry_id": "dsc:18",
+      "lemma": "βάλσαμον",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "19",
+      "relation": "grows_at",
+      "accepted_pleiades_id": "687934",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/687934",
+      "place_label": "Iudaea (region)",
+      "evidence_phrase": "γεννώμενον ἐν μόνῃ Ἰουδαίᾳ",
+      "certainty": "possible",
+      "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+      "adjudication_id": "llm-adjudication-3627031a82c9",
+      "final_decision": "accept",
+      "consensus_method": "two_vote_match",
+      "consensus_confidence": 0.985,
+      "vote_trace_ids": [
+        "vote-1d2b6e7fee4b",
+        "vote-53706b08434a"
+      ]
+    },
+    {
+      "link_id": "link-c9321c0897b8",
+      "candidate_id": "candidate-1b2ad4e940fa",
+      "review_row_id": "review-b05ddc1f2a2c",
+      "entry_id": "dsc:319",
+      "lemma": "ἀγαρικόν",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "3",
+      "chapter": "1",
+      "relation": "grows_at",
+      "accepted_pleiades_id": "619161",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/619161",
+      "place_label": "Galatia",
+      "evidence_phrase": "γεννᾶται δὲ καὶ ἐν τῇ κατὰ Ἀσίαν Γαλατίᾳ",
+      "certainty": "possible",
+      "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+      "adjudication_id": "llm-adjudication-1e38d0a783d9",
+      "final_decision": "accept",
+      "consensus_method": "two_vote_match",
+      "consensus_confidence": 0.97,
+      "vote_trace_ids": [
+        "vote-083a8faec400",
+        "vote-d5413f7403ab"
+      ]
+    },
+    {
+      "link_id": "link-c2fd19c8c863",
+      "candidate_id": "candidate-f59a5a03dbc0",
+      "review_row_id": "review-1df26216b50a",
+      "entry_id": "dsc:341",
+      "lemma": "ἁβρότονον",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "3",
+      "chapter": "24",
+      "relation": "grows_at",
+      "accepted_pleiades_id": "619161",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/619161",
+      "place_label": "Galatia",
+      "evidence_phrase": "πλεῖστον δὲ γίνεται ἐν Καππαδοκίᾳ καὶ Γαλατίᾳ τῇ κατὰ τὴν Ἀσίαν",
+      "certainty": "possible",
+      "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+      "adjudication_id": "llm-adjudication-841fe377fbc2",
+      "final_decision": "accept",
+      "consensus_method": "two_vote_match",
+      "consensus_confidence": 0.98,
+      "vote_trace_ids": [
+        "vote-baf9deadcfec",
+        "vote-c6dd1cdc63a2"
+      ]
+    },
+    {
+      "link_id": "link-69aedb95a981",
+      "candidate_id": "candidate-31f977e598ec",
+      "review_row_id": "review-42092963f839",
+      "entry_id": "dsc:5",
+      "lemma": "καρδάμωμον",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "6",
+      "relation": "grows_at",
+      "accepted_pleiades_id": "981506",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/981506",
+      "place_label": "Arabia (province)",
+      "evidence_phrase": "γεννᾶται δὲ καὶ ἐν Ἰνδίᾳ καὶ Ἀραβίᾳ",
+      "certainty": "possible",
+      "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+      "adjudication_id": "llm-adjudication-7be74e513726",
+      "final_decision": "accept",
+      "consensus_method": "two_vote_match",
+      "consensus_confidence": 0.925,
+      "vote_trace_ids": [
+        "vote-fe131daa05eb",
+        "vote-7d8480189a7d"
+      ]
+    }
+  ]
+}

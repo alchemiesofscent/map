@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/simples/provenance-map-points.schema.json",
+  "title": "Map-ready simples provenance points",
+  "type": "object",
+  "required": ["metadata", "counts", "points"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["artifact_id", "stage", "source_links_path", "notes"]
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "accepted_links_in",
+        "map_points",
+        "null_coordinate_points",
+        "broad_region_points"
+      ]
+    },
+    "points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "map_point_id",
+          "group_key",
+          "place_label",
+          "pleiades_uri",
+          "coordinates",
+          "coordinate_source",
+          "location_precision",
+          "is_broad_region",
+          "has_uncertain_coordinates",
+          "link_ids"
+        ]
+      }
+    }
+  }
+}

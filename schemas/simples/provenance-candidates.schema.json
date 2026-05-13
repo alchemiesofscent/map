@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/simples/provenance-candidates.schema.json",
+  "title": "Simples provenance candidates",
+  "type": "object",
+  "required": ["metadata", "counts", "reports", "candidates"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["artifact_id", "stage", "source_mentions_path", "relations", "notes"]
+    },
+    "counts": {
+      "type": "object",
+      "required": ["mentions_in", "candidates", "mention_entries_without_candidate"]
+    },
+    "reports": { "type": "object" },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_id",
+          "mention_id",
+          "entry_id",
+          "lemma",
+          "matched_place_surface",
+          "candidate_pleiades_ids",
+          "provisional_relation",
+          "certainty",
+          "evidence_phrase",
+          "context_window",
+          "accepted"
+        ],
+        "properties": {
+          "provisional_relation": {
+            "type": "string",
+            "enum": [
+              "named_variety_from",
+              "grows_at",
+              "produced_at",
+              "sourced_from",
+              "acquired",
+              "observed",
+              "tested",
+              "prepared",
+              "context_only",
+              "rejected_candidate"
+            ]
+          },
+          "accepted": { "const": false }
+        }
+      }
+    }
+  }
+}

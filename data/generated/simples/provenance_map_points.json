@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "artifact_id": "simples-provenance-map-points",
+    "stage": "stage_6_map_ready_output",
+    "source_links_path": "data/generated/simples/provenance_links.json",
+    "notes": [
+      "Map points derive only from accepted provenance links.",
+      "Broad regions and uncertain coordinates are flagged rather than treated as precise points."
+    ]
+  },
+  "counts": {
+    "accepted_links_in": 5,
+    "map_points": 5,
+    "null_coordinate_points": 0,
+    "broad_region_points": 5
+  },
+  "points": [
+    {
+      "map_point_id": "map-point-9344495d980d",
+      "group_key": {
+        "pleiades_id": "619161",
+        "lemma": "ἀγαρικόν",
+        "relation": "grows_at",
+        "entry_id": "dsc:319"
+      },
+      "place_label": "Galatia",
+      "pleiades_uri": "https://pleiades.stoa.org/places/619161",
+      "coordinates": {
+        "lat": 39.9338119976,
+        "lon": 32.4274370108
+      },
+      "coordinate_source": "pleiades_repr_point",
+      "location_precision": "precise",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": false,
+      "link_ids": [
+        "link-c9321c0897b8"
+      ],
+      "links": [
+        {
+          "link_id": "link-c9321c0897b8",
+          "candidate_id": "candidate-1b2ad4e940fa",
+          "review_row_id": "review-b05ddc1f2a2c",
+          "entry_id": "dsc:319",
+          "lemma": "ἀγαρικόν",
+          "author": "dsc",
+          "work": "De materia medica",
+          "book": "3",
+          "chapter": "1",
+          "relation": "grows_at",
+          "accepted_pleiades_id": "619161",
+          "accepted_pleiades_uri": "https://pleiades.stoa.org/places/619161",
+          "place_label": "Galatia",
+          "evidence_phrase": "γεννᾶται δὲ καὶ ἐν τῇ κατὰ Ἀσίαν Γαλατίᾳ",
+          "certainty": "possible",
+          "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+          "adjudication_id": "llm-adjudication-1e38d0a783d9",
+          "final_decision": "accept",
+          "consensus_method": "two_vote_match",
+          "consensus_confidence": 0.97,
+          "vote_trace_ids": [
+            "vote-083a8faec400",
+            "vote-d5413f7403ab"
+          ]
+        }
+      ]
+    },
+    {
+      "map_point_id": "map-point-ca6355d99e8a",
+      "group_key": {
+        "pleiades_id": "619161",
+        "lemma": "ἁβρότονον",
+        "relation": "grows_at",
+        "entry_id": "dsc:341"
+      },
+      "place_label": "Galatia",
+      "pleiades_uri": "https://pleiades.stoa.org/places/619161",
+      "coordinates": {
+        "lat": 39.9338119976,
+        "lon": 32.4274370108
+      },
+      "coordinate_source": "pleiades_repr_point",
+      "location_precision": "precise",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": false,
+      "link_ids": [
+        "link-c2fd19c8c863"
+      ],
+      "links": [
+        {
+          "link_id": "link-c2fd19c8c863",
+          "candidate_id": "candidate-f59a5a03dbc0",
+          "review_row_id": "review-1df26216b50a",
+          "entry_id": "dsc:341",
+          "lemma": "ἁβρότονον",
+          "author": "dsc",
+          "work": "De materia medica",
+          "book": "3",
+          "chapter": "24",
+          "relation": "grows_at",
+          "accepted_pleiades_id": "619161",
+          "accepted_pleiades_uri": "https://pleiades.stoa.org/places/619161",
+          "place_label": "Galatia",
+          "evidence_phrase": "πλεῖστον δὲ γίνεται ἐν Καππαδοκίᾳ καὶ Γαλατίᾳ τῇ κατὰ τὴν Ἀσίαν",
+          "certainty": "possible",
+          "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+          "adjudication_id": "llm-adjudication-841fe377fbc2",
+          "final_decision": "accept",
+          "consensus_method": "two_vote_match",
+          "consensus_confidence": 0.98,
+          "vote_trace_ids": [
+            "vote-baf9deadcfec",
+            "vote-c6dd1cdc63a2"
+          ]
+        }
+      ]
+    },
+    {
+      "map_point_id": "map-point-6e119ca92f21",
+      "group_key": {
+        "pleiades_id": "687934",
+        "lemma": "βάλσαμον",
+        "relation": "grows_at",
+        "entry_id": "dsc:18"
+      },
+      "place_label": "Iudaea (region)",
+      "pleiades_uri": "https://pleiades.stoa.org/places/687934",
+      "coordinates": {
+        "lat": 31.73416715,
+        "lon": 35.0017203
+      },
+      "coordinate_source": "pleiades_repr_point",
+      "location_precision": "related",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "link_ids": [
+        "link-687755fd302c"
+      ],
+      "links": [
+        {
+          "link_id": "link-687755fd302c",
+          "candidate_id": "candidate-c087d2113aa2",
+          "review_row_id": "review-d3df4f2c7f98",
+          "entry_id": "dsc:18",
+          "lemma": "βάλσαμον",
+          "author": "dsc",
+          "work": "De materia medica",
+          "book": "1",
+          "chapter": "19",
+          "relation": "grows_at",
+          "accepted_pleiades_id": "687934",
+          "accepted_pleiades_uri": "https://pleiades.stoa.org/places/687934",
+          "place_label": "Iudaea (region)",
+          "evidence_phrase": "γεννώμενον ἐν μόνῃ Ἰουδαίᾳ",
+          "certainty": "possible",
+          "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+          "adjudication_id": "llm-adjudication-3627031a82c9",
+          "final_decision": "accept",
+          "consensus_method": "two_vote_match",
+          "consensus_confidence": 0.985,
+          "vote_trace_ids": [
+            "vote-1d2b6e7fee4b",
+            "vote-53706b08434a"
+          ]
+        }
+      ]
+    },
+    {
+      "map_point_id": "map-point-172c6bce532a",
+      "group_key": {
+        "pleiades_id": "981506",
+        "lemma": "καρδάμωμον",
+        "relation": "grows_at",
+        "entry_id": "dsc:5"
+      },
+      "place_label": "Arabia (province)",
+      "pleiades_uri": "https://pleiades.stoa.org/places/981506",
+      "coordinates": {
+        "lat": 27.5,
+        "lon": 32.5
+      },
+      "coordinate_source": "pleiades_repr_point",
+      "location_precision": "rough",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "link_ids": [
+        "link-69aedb95a981"
+      ],
+      "links": [
+        {
+          "link_id": "link-69aedb95a981",
+          "candidate_id": "candidate-31f977e598ec",
+          "review_row_id": "review-42092963f839",
+          "entry_id": "dsc:5",
+          "lemma": "καρδάμωμον",
+          "author": "dsc",
+          "work": "De materia medica",
+          "book": "1",
+          "chapter": "6",
+          "relation": "grows_at",
+          "accepted_pleiades_id": "981506",
+          "accepted_pleiades_uri": "https://pleiades.stoa.org/places/981506",
+          "place_label": "Arabia (province)",
+          "evidence_phrase": "γεννᾶται δὲ καὶ ἐν Ἰνδίᾳ καὶ Ἀραβίᾳ",
+          "certainty": "possible",
+          "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+          "adjudication_id": "llm-adjudication-7be74e513726",
+          "final_decision": "accept",
+          "consensus_method": "two_vote_match",
+          "consensus_confidence": 0.925,
+          "vote_trace_ids": [
+            "vote-fe131daa05eb",
+            "vote-7d8480189a7d"
+          ]
+        }
+      ]
+    },
+    {
+      "map_point_id": "map-point-afd9c89d4167",
+      "group_key": {
+        "pleiades_id": "981506",
+        "lemma": "σχοῖνος",
+        "relation": "grows_at",
+        "entry_id": "dsc:16"
+      },
+      "place_label": "Arabia (province)",
+      "pleiades_uri": "https://pleiades.stoa.org/places/981506",
+      "coordinates": {
+        "lat": 27.5,
+        "lon": 32.5
+      },
+      "coordinate_source": "pleiades_repr_point",
+      "location_precision": "rough",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "link_ids": [
+        "link-9c80b4940a8a"
+      ],
+      "links": [
+        {
+          "link_id": "link-9c80b4940a8a",
+          "candidate_id": "candidate-4ecee2b1ce32",
+          "review_row_id": "review-326329d832d9",
+          "entry_id": "dsc:16",
+          "lemma": "σχοῖνος",
+          "author": "dsc",
+          "work": "De materia medica",
+          "book": "1",
+          "chapter": "17",
+          "relation": "grows_at",
+          "accepted_pleiades_id": "981506",
+          "accepted_pleiades_uri": "https://pleiades.stoa.org/places/981506",
+          "place_label": "Arabia (province)",
+          "evidence_phrase": "ἡ δὲ ἐν Ἀραβίᾳ",
+          "certainty": "possible",
+          "review_decision_source": "data/generated/simples/provenance_llm_adjudications.json",
+          "adjudication_id": "llm-adjudication-bc62febfbbd0",
+          "final_decision": "accept",
+          "consensus_method": "two_vote_match",
+          "consensus_confidence": 0.93,
+          "vote_trace_ids": [
+            "vote-52b00af3fac8",
+            "vote-133225fa3aec"
+          ]
+        }
+      ]
+    }
+  ]
+}

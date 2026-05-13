@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/simples/pleiades-name-mentions.schema.json",
+  "title": "Simples Pleiades name mentions",
+  "type": "object",
+  "required": ["metadata", "counts", "reports", "mentions"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["artifact_id", "stage", "source_manifest_path", "source_gazetteer_path", "scanned_fields", "matching"]
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "entries_scanned",
+        "lookup_keys_scanned",
+        "mentions",
+        "entries_with_mentions",
+        "ambiguous_mentions",
+        "high_risk_mentions",
+        "suppressed_entry_label_matches",
+        "suppressed_lowercase_matches",
+        "suppressed_alias_matches"
+      ]
+    },
+    "reports": { "type": "object" },
+    "mentions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "mention_id",
+          "entry_id",
+          "author",
+          "work",
+          "book",
+          "chapter",
+          "matched_field",
+          "matched_surface",
+          "normalized_key",
+          "candidate_pleiades_ids",
+          "char_offsets",
+          "context_window"
+        ]
+      }
+    }
+  }
+}
