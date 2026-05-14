@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.org/schemas/simples/entry-manifest.schema.json",
-  "title": "Simple medicine pilot entry manifest",
+  "title": "Materia TEI ingredient journey manifest",
   "type": "object",
-  "required": ["metadata", "entries", "overlap_terms", "galen_materia_context"],
+  "required": ["metadata", "ingredients", "entries"],
   "properties": {
     "metadata": {
       "type": "object",
@@ -11,22 +11,24 @@
         "manifest_id",
         "stage",
         "schema_path",
-        "aetius_root",
-        "source_csv_paths",
-        "galen_materia_source_path"
+        "source_boundary",
+        "source_registry_path",
+        "draft_translations_path",
+        "source_tei_paths"
       ],
       "properties": {
         "manifest_id": { "type": "string" },
         "stage": { "type": "string" },
         "schema_path": { "type": "string" },
-        "aetius_root": { "type": "string" },
-        "source_csv_paths": {
+        "source_boundary": { "const": "data/tei" },
+        "source_registry_path": { "type": "string" },
+        "draft_translations_path": { "type": "string" },
+        "source_tei_paths": {
           "type": "array",
           "items": { "type": "string" },
           "minItems": 1,
           "uniqueItems": true
         },
-        "galen_materia_source_path": { "type": "string" },
         "notes": {
           "type": "array",
           "items": { "type": "string" }
@@ -34,30 +36,65 @@
       },
       "additionalProperties": false
     },
+    "ingredients": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ingredient" },
+      "minItems": 5,
+      "maxItems": 5
+    },
     "entries": {
       "type": "array",
       "items": { "$ref": "#/$defs/entry" },
       "minItems": 1
-    },
-    "overlap_terms": {
-      "type": "array",
-      "items": { "$ref": "#/$defs/overlapTerm" },
-      "minItems": 1
-    },
-    "galen_materia_context": {
-      "type": "array",
-      "items": { "$ref": "#/$defs/galenMateriaContext" }
     }
   },
   "additionalProperties": false,
   "$defs": {
+    "ingredient": {
+      "type": "object",
+      "required": [
+        "ingredient_key",
+        "display_name",
+        "greek_name",
+        "entry_ids",
+        "passage_ids",
+        "view_id"
+      ],
+      "properties": {
+        "ingredient_key": {
+          "type": "string",
+          "enum": ["balsamum", "cardamom", "calamus", "schoinos", "myrrh"]
+        },
+        "display_name": { "type": "string", "minLength": 1 },
+        "greek_name": { "type": "string", "minLength": 1 },
+        "entry_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "passage_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "view_id": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
     "entry": {
       "type": "object",
       "required": [
         "entry_id",
         "selection_sets",
-        "source_csv_path",
-        "source_row_idx",
+        "ingredient_keys",
+        "source_registry_id",
+        "source_tei_path",
+        "source_raw_tei_path",
+        "source_tei_annotated",
+        "source_entry_index",
+        "source_xml_id",
         "witness_slug",
         "author",
         "work",
@@ -66,7 +103,8 @@
         "lemma",
         "lemma_en",
         "edition_pages",
-        "greek_entry_text"
+        "greek_entry_text",
+        "evidence_authority"
       ],
       "properties": {
         "entry_id": { "type": "string" },
@@ -76,8 +114,21 @@
           "minItems": 1,
           "uniqueItems": true
         },
-        "source_csv_path": { "type": "string" },
-        "source_row_idx": { "type": "string" },
+        "ingredient_keys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["balsamum", "cardamom", "calamus", "schoinos", "myrrh"]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "source_registry_id": { "type": "string" },
+        "source_tei_path": { "type": "string" },
+        "source_raw_tei_path": { "type": "string" },
+        "source_tei_annotated": { "type": "boolean" },
+        "source_entry_index": { "type": "string" },
+        "source_xml_id": { "type": "string" },
         "witness_slug": { "type": "string" },
         "author": { "type": "string", "minLength": 1 },
         "work": { "type": "string", "minLength": 1 },
@@ -92,83 +143,14 @@
         "variant_or_parallel_gr": { "type": "string" },
         "variant_or_parallel_en": { "type": "string" },
         "entry_en": { "type": "string" },
+        "translation_en_authority": { "type": "string" },
+        "translation_en_source": { "type": "string" },
+        "evidence_authority": { "const": "greek_tei" },
         "category": { "type": "string" },
         "edition_pages": { "type": "string" },
         "greek_entry_text": { "type": "string", "minLength": 1 },
         "lemma_derived": { "type": "boolean" },
-        "derived_from": { "type": "string" },
-        "matched_overlap_terms": {
-          "type": "array",
-          "items": { "type": "string" },
-          "uniqueItems": true
-        }
-      },
-      "additionalProperties": false
-    },
-    "overlapTerm": {
-      "type": "object",
-      "required": ["term_id", "label", "greek_forms", "selected_entry_ids"],
-      "properties": {
-        "term_id": { "type": "string" },
-        "label": { "type": "string" },
-        "greek_forms": {
-          "type": "array",
-          "items": { "type": "string" },
-          "minItems": 1
-        },
-        "selected_entry_ids": {
-          "type": "array",
-          "items": { "type": "string" }
-        }
-      },
-      "additionalProperties": false
-    },
-    "galenMateriaContext": {
-      "type": "object",
-      "required": [
-        "materia_key",
-        "display_name",
-        "greek_name",
-        "category",
-        "source_json_path",
-        "place_links"
-      ],
-      "properties": {
-        "materia_key": { "type": "string" },
-        "display_name": { "type": "string" },
-        "greek_name": { "type": "string" },
-        "category": { "type": "string" },
-        "source_json_path": { "type": "string" },
-        "description": { "type": "string" },
-        "place_links": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": ["place_key", "relation", "passage_id", "evidence_phrase"],
-            "properties": {
-              "place_key": { "type": "string" },
-              "relation": {
-                "type": "string",
-                "enum": [
-                  "acquired",
-                  "observed",
-                  "sourced_from",
-                  "tested",
-                  "prepared",
-                  "named_variety_from",
-                  "grows_at",
-                  "produced_at",
-                  "traded_from",
-                  "compared_with",
-                  "rejected"
-                ]
-              },
-              "passage_id": { "type": "string" },
-              "evidence_phrase": { "type": "string" }
-            },
-            "additionalProperties": false
-          }
-        }
+        "derived_from": { "type": "string" }
       },
       "additionalProperties": false
     }

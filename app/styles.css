@@ -227,6 +227,50 @@ body::after {
   max-width: 60vw;
 }
 
+.material-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 4px;
+  padding-left: 8px;
+  border-left: 1px solid var(--rule);
+}
+
+.material-control[hidden] {
+  display: none;
+}
+
+.material-control__label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--vellum-dim);
+}
+
+.material-control__input {
+  width: min(220px, 28vw);
+  min-width: 120px;
+  height: 30px;
+  border: 1px solid rgba(244, 234, 213, 0.22);
+  border-radius: 3px;
+  background: rgba(244, 234, 213, 0.08);
+  color: var(--vellum);
+  font-family: var(--serif);
+  font-size: 14px;
+  padding: 3px 8px 4px;
+  outline: none;
+}
+
+.material-control__input::placeholder {
+  color: rgba(244, 234, 213, 0.46);
+}
+
+.material-control__input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(217, 166, 73, 0.18);
+}
+
 .view-control button {
   appearance: none;
   border: 0;
@@ -567,12 +611,160 @@ body::after {
   text-transform: uppercase;
 }
 
+.dossier-place-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 2px 0 0;
+}
+
+.dossier-place-chip {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  border: 1px solid rgba(244, 234, 213, 0.16);
+  border-radius: 999px;
+  padding: 3px 8px 4px;
+  background: rgba(217, 166, 73, 0.08);
+  color: var(--vellum);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  line-height: 1.35;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.dossier-place-chip:hover {
+  border-color: var(--gold);
+  color: var(--gold-bright);
+}
+
+.dossier-place-chip--active {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--ink);
+}
+
 .dossier-provenance__entry {
   margin: 6px 0 0;
   font-family: var(--serif);
   font-size: 17px;
   line-height: 1.58;
   color: var(--vellum);
+}
+
+.dossier-claims {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.dossier-claim {
+  padding: 10px 12px;
+  border: 1px solid rgba(244, 234, 213, 0.14);
+  border-left: 3px solid var(--specimen-amber);
+  border-radius: 4px;
+  background: rgba(111, 143, 61, 0.08);
+}
+
+.dossier-claim--active {
+  border-color: rgba(240, 194, 100, 0.56);
+  background: rgba(217, 166, 73, 0.12);
+}
+
+.dossier-claim__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.dossier-claim__head strong {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--vellum);
+}
+
+.dossier-claim__qualifier {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--specimen-bright);
+}
+
+.dossier-claim__group {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+
+.dossier-claim__num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+}
+
+.dossier-claim__surface {
+  margin: 4px 0 0;
+  font-family: var(--display);
+  font-size: 14px;
+  color: var(--gold-bright);
+}
+
+.dossier-claim__evidence {
+  margin: 5px 0 0;
+  font-family: var(--display);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--vellum-muted);
+}
+
+.dossier-claim__note {
+  margin: 5px 0 0;
+  font-family: var(--serif);
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--vellum-dim);
+  font-style: italic;
+}
+
+.dossier-claim__meta {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--vellum-dim);
+}
+
+.dossier-claim__link {
+  color: var(--gold-bright);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--gold);
+}
+
+.dossier-claim__link:hover { color: var(--vellum); }
+
+.dossier-claim__warning {
+  margin: 6px 0 0;
+  color: var(--specimen-bright);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.11em;
+  line-height: 1.45;
+  text-transform: uppercase;
 }
 
 .dossier__greek {
@@ -1224,6 +1416,20 @@ body[data-explore="true"] .leaflet-container:active { cursor: grabbing; }
     flex-direction: column;
     gap: 4px;
     max-width: none;
+  }
+  .material-control {
+    width: 100%;
+    margin: 8px 0 0;
+    padding: 0;
+    border-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .material-control__input {
+    width: 100%;
+    min-width: 0;
   }
   .view-control__divider,
   .view-control__explore { display: none; }

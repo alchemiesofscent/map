@@ -1,0 +1,883 @@
+{
+  "metadata": {
+    "artifact_id": "simples-provenance-entry-claims",
+    "stage": "stage_2_tei_placeName_claims",
+    "built_at": "2026-05-14T07:46:54+00:00",
+    "source_manifest_path": "data/generated/simples/entry_manifest.json",
+    "source_gazetteer_path": "data/generated/simples/pleiades_gazetteer.json",
+    "source_tei_paths": [
+      "data/tei/annotated/tlg0656.tlg001.annotated.xml"
+    ],
+    "schema_path": "schemas/simples/provenance-entry-claims.schema.json",
+    "notes": [
+      "Accepted Materia provenance links are extracted only from annotated TEI placeName elements.",
+      "Old review queues and LLM adjudication sidecars are not accepted-link authorities.",
+      "Broad regions remain representative Pleiades points and carry warnings for the viewer."
+    ]
+  },
+  "counts": {
+    "tei_place_claims_in": 14,
+    "accepted_claims": 14,
+    "ingredients_with_claims": 5,
+    "entries_with_claims": 6
+  },
+  "reports": {
+    "claims_by_ingredient": {
+      "cardamom": 5,
+      "myrrh": 4,
+      "schoinos": 3,
+      "balsamum": 1,
+      "calamus": 1
+    },
+    "claims_by_entry": {
+      "dsc:5": 5,
+      "dsc:16": 3,
+      "dsc:63": 3,
+      "dsc:17": 1,
+      "dsc:18": 1,
+      "dsc:64": 1
+    },
+    "claims_by_relation": {
+      "grows_at": 8,
+      "named_variety_from": 3,
+      "sourced_from": 3
+    },
+    "claims_by_place": {
+      "Arabia": 3,
+      "India": 2,
+      "Armenia (region)": 1,
+      "Boeotia": 1,
+      "Bosphorus": 1,
+      "Commagene": 1,
+      "Iudaea (region)": 1,
+      "Libya": 1,
+      "Minaei": 1,
+      "Nabataea (region)": 1,
+      "Trogodytice": 1
+    },
+    "claims_by_group": {
+      "best_source": 4,
+      "named_variety": 3,
+      "also_grows": 2,
+      "ranked_source": 2,
+      "source_region": 2,
+      "only_source": 1
+    }
+  },
+  "claims": [
+    {
+      "claim_id": "tei-claim-bdfb8813d44d",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:18",
+      "passage_id": "dsc:18",
+      "ingredient_key": "balsamum",
+      "lemma": "βάλσαμον",
+      "lemma_en": "Balsamum",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "19",
+      "source_xml_id": "1.19",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 19",
+      "claim_order": 1,
+      "place_surface": "Ἰουδαίᾳ",
+      "relation": "grows_at",
+      "qualifier": "only",
+      "claim_group": "only_source",
+      "claim_note": "",
+      "accepted_pleiades_id": "687934",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/687934",
+      "place_label": "Iudaea (region)",
+      "feature_types": [
+        "region"
+      ],
+      "coordinates": {
+        "lat": 31.73416715,
+        "lon": 35.0017203
+      },
+      "location_precision": "related",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "evidence_phrase": "γεννώμενον ἐν μόνῃ Ἰουδαίᾳ κατά τινα αὐλῶνα",
+      "source_char_offsets": {
+        "start": 130,
+        "end": 173
+      },
+      "place_char_offsets": {
+        "start": 149,
+        "end": 156
+      },
+      "certainty": "secure",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 1.0,
+      "consensus_confidence": 1.0,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point",
+        "uncertain_coordinate_precision"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-3042af6ce358",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:5",
+      "passage_id": "dsc:5",
+      "ingredient_key": "cardamom",
+      "lemma": "καρδάμωμον",
+      "lemma_en": "Cardamom",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "6",
+      "source_xml_id": "1.6",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 6",
+      "claim_order": 1,
+      "place_surface": "Κομμαγηνῆς",
+      "relation": "sourced_from",
+      "qualifier": "best",
+      "claim_group": "best_source",
+      "claim_note": "",
+      "accepted_pleiades_id": "658443",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/658443",
+      "place_label": "Commagene",
+      "feature_types": [
+        "region",
+        "label"
+      ],
+      "coordinates": {
+        "lat": 37.6236147534,
+        "lon": 37.5371164364
+      },
+      "location_precision": "precise",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": false,
+      "evidence_phrase": "τὸ ἐκ τῆς Κομμαγηνῆς καὶ Ἀρμενίας καὶ βοσπόρου κομιζόμενον",
+      "source_char_offsets": {
+        "start": 19,
+        "end": 77
+      },
+      "place_char_offsets": {
+        "start": 29,
+        "end": 39
+      },
+      "certainty": "secure",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 1.0,
+      "consensus_confidence": 1.0,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-4dd111e4d99f",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:5",
+      "passage_id": "dsc:5",
+      "ingredient_key": "cardamom",
+      "lemma": "καρδάμωμον",
+      "lemma_en": "Cardamom",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "6",
+      "source_xml_id": "1.6",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 6",
+      "claim_order": 2,
+      "place_surface": "Ἀρμενίας",
+      "relation": "sourced_from",
+      "qualifier": "best",
+      "claim_group": "best_source",
+      "claim_note": "",
+      "accepted_pleiades_id": "874350",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/874350",
+      "place_label": "Armenia (region)",
+      "feature_types": [
+        "region",
+        "label"
+      ],
+      "coordinates": {
+        "lat": 38.7401436819,
+        "lon": 42.1670167182
+      },
+      "location_precision": "related",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "evidence_phrase": "τὸ ἐκ τῆς Κομμαγηνῆς καὶ Ἀρμενίας καὶ βοσπόρου κομιζόμενον",
+      "source_char_offsets": {
+        "start": 19,
+        "end": 77
+      },
+      "place_char_offsets": {
+        "start": 44,
+        "end": 52
+      },
+      "certainty": "probable",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 0.85,
+      "consensus_confidence": 0.85,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point",
+        "uncertain_coordinate_precision"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-3693eae14f86",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:5",
+      "passage_id": "dsc:5",
+      "ingredient_key": "cardamom",
+      "lemma": "καρδάμωμον",
+      "lemma_en": "Cardamom",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "6",
+      "source_xml_id": "1.6",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 6",
+      "claim_order": 3,
+      "place_surface": "βοσπόρου",
+      "relation": "sourced_from",
+      "qualifier": "best",
+      "claim_group": "best_source",
+      "claim_note": "",
+      "accepted_pleiades_id": "520977",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/520977",
+      "place_label": "Bosphorus",
+      "feature_types": [
+        "water-open"
+      ],
+      "coordinates": {
+        "lat": 41.1148629754,
+        "lon": 29.0621504115
+      },
+      "location_precision": "precise",
+      "is_broad_region": false,
+      "has_uncertain_coordinates": false,
+      "evidence_phrase": "τὸ ἐκ τῆς Κομμαγηνῆς καὶ Ἀρμενίας καὶ βοσπόρου κομιζόμενον",
+      "source_char_offsets": {
+        "start": 19,
+        "end": 77
+      },
+      "place_char_offsets": {
+        "start": 57,
+        "end": 65
+      },
+      "certainty": "ambiguous",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 0.65,
+      "consensus_confidence": 0.65,
+      "vote_trace_ids": [],
+      "warnings": [
+        "bosporus_target_ambiguous"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-b9d238a50686",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:5",
+      "passage_id": "dsc:5",
+      "ingredient_key": "cardamom",
+      "lemma": "καρδάμωμον",
+      "lemma_en": "Cardamom",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "6",
+      "source_xml_id": "1.6",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 6",
+      "claim_order": 4,
+      "place_surface": "Ἰνδίᾳ",
+      "relation": "grows_at",
+      "qualifier": "also",
+      "claim_group": "also_grows",
+      "claim_note": "",
+      "accepted_pleiades_id": "50004",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/50004",
+      "place_label": "India",
+      "feature_types": [
+        "region",
+        "label"
+      ],
+      "coordinates": {
+        "lat": 20.6367379616,
+        "lon": 79.5332605032
+      },
+      "location_precision": "precise",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": false,
+      "evidence_phrase": "γεννᾶται δὲ καὶ ἐν Ἰνδίᾳ καὶ Ἀραβίᾳ",
+      "source_char_offsets": {
+        "start": 79,
+        "end": 114
+      },
+      "place_char_offsets": {
+        "start": 98,
+        "end": 103
+      },
+      "certainty": "secure",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 1.0,
+      "consensus_confidence": 1.0,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-61e8092364b3",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:5",
+      "passage_id": "dsc:5",
+      "ingredient_key": "cardamom",
+      "lemma": "καρδάμωμον",
+      "lemma_en": "Cardamom",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "6",
+      "source_xml_id": "1.6",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 6",
+      "claim_order": 5,
+      "place_surface": "Ἀραβίᾳ",
+      "relation": "grows_at",
+      "qualifier": "also",
+      "claim_group": "also_grows",
+      "claim_note": "",
+      "accepted_pleiades_id": "1001942",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/1001942",
+      "place_label": "Arabia",
+      "feature_types": [
+        "province"
+      ],
+      "coordinates": {
+        "lat": 32.5,
+        "lon": 37.5
+      },
+      "location_precision": "rough",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "evidence_phrase": "γεννᾶται δὲ καὶ ἐν Ἰνδίᾳ καὶ Ἀραβίᾳ",
+      "source_char_offsets": {
+        "start": 79,
+        "end": 114
+      },
+      "place_char_offsets": {
+        "start": 108,
+        "end": 114
+      },
+      "certainty": "secure",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 1.0,
+      "consensus_confidence": 1.0,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point",
+        "uncertain_coordinate_precision"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-c91369a53c92",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:17",
+      "passage_id": "dsc:17",
+      "ingredient_key": "calamus",
+      "lemma": "κάλαμος ἀρωματικός",
+      "lemma_en": "Calamus",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "18",
+      "source_xml_id": "1.18",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 18",
+      "claim_order": 1,
+      "place_surface": "Ἰνδίᾳ",
+      "relation": "grows_at",
+      "qualifier": "source",
+      "claim_group": "source_region",
+      "claim_note": "",
+      "accepted_pleiades_id": "50004",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/50004",
+      "place_label": "India",
+      "feature_types": [
+        "region",
+        "label"
+      ],
+      "coordinates": {
+        "lat": 20.6367379616,
+        "lon": 79.5332605032
+      },
+      "location_precision": "precise",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": false,
+      "evidence_phrase": "κάλαμος ἀρωματικὸς φύεται μὲν ἐν Ἰνδίᾳ",
+      "source_char_offsets": {
+        "start": 0,
+        "end": 38
+      },
+      "place_char_offsets": {
+        "start": 33,
+        "end": 38
+      },
+      "certainty": "secure",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 1.0,
+      "consensus_confidence": 1.0,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-52806f3905c4",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:16",
+      "passage_id": "dsc:16",
+      "ingredient_key": "schoinos",
+      "lemma": "σχοῖνος",
+      "lemma_en": "Schoinos",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "17",
+      "source_xml_id": "1.17",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 17",
+      "claim_order": 1,
+      "place_surface": "Ναβαταίᾳ",
+      "relation": "grows_at",
+      "qualifier": "best",
+      "claim_group": "best_source",
+      "claim_note": "Nabataean schoinos is ranked as strongest/best.",
+      "accepted_pleiades_id": "29677",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/29677",
+      "place_label": "Nabataea (region)",
+      "feature_types": [
+        "region"
+      ],
+      "coordinates": {
+        "lat": 32.5,
+        "lon": 37.5
+      },
+      "location_precision": "rough",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "evidence_phrase": "ἑτέρα δὲ ἐν τῇ Ναβαταίᾳ καλουμένῃ, ἥτις ἐστὶ κρατίστη",
+      "source_char_offsets": {
+        "start": 52,
+        "end": 105
+      },
+      "place_char_offsets": {
+        "start": 67,
+        "end": 75
+      },
+      "certainty": "secure",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 1.0,
+      "consensus_confidence": 1.0,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point",
+        "uncertain_coordinate_precision"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-17e3ee7d811c",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:16",
+      "passage_id": "dsc:16",
+      "ingredient_key": "schoinos",
+      "lemma": "σχοῖνος",
+      "lemma_en": "Schoinos",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "17",
+      "source_xml_id": "1.17",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 17",
+      "claim_order": 2,
+      "place_surface": "Ἀραβίᾳ",
+      "relation": "grows_at",
+      "qualifier": "second",
+      "claim_group": "ranked_source",
+      "claim_note": "Arabian schoinos ranks second and is also called Babylonian or teuchitis.",
+      "accepted_pleiades_id": "1001942",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/1001942",
+      "place_label": "Arabia",
+      "feature_types": [
+        "province"
+      ],
+      "coordinates": {
+        "lat": 32.5,
+        "lon": 37.5
+      },
+      "location_precision": "rough",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "evidence_phrase": "ἡ δὲ ἐν Ἀραβίᾳ",
+      "source_char_offsets": {
+        "start": 36,
+        "end": 50
+      },
+      "place_char_offsets": {
+        "start": 44,
+        "end": 50
+      },
+      "certainty": "secure",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 1.0,
+      "consensus_confidence": 1.0,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point",
+        "uncertain_coordinate_precision"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-d2bfe9d7b779",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:16",
+      "passage_id": "dsc:16",
+      "ingredient_key": "schoinos",
+      "lemma": "σχοῖνος",
+      "lemma_en": "Schoinos",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "17",
+      "source_xml_id": "1.17",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 17",
+      "claim_order": 3,
+      "place_surface": "Λιβύῃ",
+      "relation": "grows_at",
+      "qualifier": "poor",
+      "claim_group": "ranked_source",
+      "claim_note": "Libyan schoinos is reported but ranked as useless in the quality note.",
+      "accepted_pleiades_id": "716588",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/716588",
+      "place_label": "Libya",
+      "feature_types": [
+        "region"
+      ],
+      "coordinates": {
+        "lat": 31.5,
+        "lon": 26.5
+      },
+      "location_precision": "rough",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "evidence_phrase": "ἡ μέν τις γίνεται ἐν Λιβύῃ",
+      "source_char_offsets": {
+        "start": 9,
+        "end": 35
+      },
+      "place_char_offsets": {
+        "start": 30,
+        "end": 35
+      },
+      "certainty": "secure",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 1.0,
+      "consensus_confidence": 1.0,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point",
+        "uncertain_coordinate_precision"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-70472f379726",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:63",
+      "passage_id": "dsc:63",
+      "ingredient_key": "myrrh",
+      "lemma": "σμύρνα",
+      "lemma_en": "Myrrh",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "64",
+      "source_xml_id": "1.64",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 64",
+      "claim_order": 1,
+      "place_surface": "Ἀραβίᾳ",
+      "relation": "grows_at",
+      "qualifier": "source",
+      "claim_group": "source_region",
+      "claim_note": "",
+      "accepted_pleiades_id": "1001942",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/1001942",
+      "place_label": "Arabia",
+      "feature_types": [
+        "province"
+      ],
+      "coordinates": {
+        "lat": 32.5,
+        "lon": 37.5
+      },
+      "location_precision": "rough",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "evidence_phrase": "σμύρνα δάκρυόν ἐστι δένδρου γεννωμένου ἐν Ἀραβίᾳ",
+      "source_char_offsets": {
+        "start": 0,
+        "end": 48
+      },
+      "place_char_offsets": {
+        "start": 42,
+        "end": 48
+      },
+      "certainty": "secure",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 1.0,
+      "consensus_confidence": 1.0,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point",
+        "uncertain_coordinate_precision"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-5e6c4085ecd0",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:63",
+      "passage_id": "dsc:63",
+      "ingredient_key": "myrrh",
+      "lemma": "σμύρνα",
+      "lemma_en": "Myrrh",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "64",
+      "source_xml_id": "1.64",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 64",
+      "claim_order": 2,
+      "place_surface": "Τρωγλοδυτική",
+      "relation": "named_variety_from",
+      "qualifier": "best",
+      "claim_group": "named_variety",
+      "claim_note": "Troglodytic myrrh is the leading named variety and is named from its producing country.",
+      "accepted_pleiades_id": "39435",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/39435",
+      "place_label": "Trogodytice",
+      "feature_types": [
+        "region"
+      ],
+      "coordinates": {
+        "lat": 15.2553507976,
+        "lon": 39.0015986281
+      },
+      "location_precision": "precise",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": false,
+      "evidence_phrase": "πρωτεύει δὲ ἡ Τρωγλοδυτική, καλουμένη ἀπὸ τῆς γεννώσης αὐτὴν χώρας",
+      "source_char_offsets": {
+        "start": 360,
+        "end": 426
+      },
+      "place_char_offsets": {
+        "start": 374,
+        "end": 386
+      },
+      "certainty": "secure",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 1.0,
+      "consensus_confidence": 1.0,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-24697436185a",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:63",
+      "passage_id": "dsc:63",
+      "ingredient_key": "myrrh",
+      "lemma": "σμύρνα",
+      "lemma_en": "Myrrh",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "64",
+      "source_xml_id": "1.64",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 64",
+      "claim_order": 3,
+      "place_surface": "Μιναία",
+      "relation": "named_variety_from",
+      "qualifier": "low_precision",
+      "claim_group": "named_variety",
+      "claim_note": "Minaean is encoded as a named-variety/ethnic attestation with low geographic precision.",
+      "accepted_pleiades_id": "39386",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/39386",
+      "place_label": "Minaei",
+      "feature_types": [
+        "people"
+      ],
+      "coordinates": {
+        "lat": 17.5,
+        "lon": 47.5
+      },
+      "location_precision": "rough",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "evidence_phrase": "ἡ Μιναία δὲ καλουμένη ἀποδόκιμος",
+      "source_char_offsets": {
+        "start": 774,
+        "end": 806
+      },
+      "place_char_offsets": {
+        "start": 776,
+        "end": 782
+      },
+      "certainty": "low",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 0.45,
+      "consensus_confidence": 0.45,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_low_precision",
+        "broad_region_representative_point",
+        "ethnic_named_variety",
+        "uncertain_coordinate_precision"
+      ]
+    },
+    {
+      "claim_id": "tei-claim-98361b5c24d2",
+      "candidate_id": "",
+      "mention_id": "",
+      "review_row_id": "",
+      "entry_id": "dsc:64",
+      "passage_id": "dsc:64",
+      "ingredient_key": "myrrh",
+      "lemma": "Βοιωτικὴ σμύρνα",
+      "lemma_en": "Boeotian myrrh",
+      "author": "dsc",
+      "work": "De materia medica",
+      "book": "1",
+      "chapter": "65",
+      "source_xml_id": "1.65",
+      "source_tei_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "source_citation": "Dioscorides, De materia medica, book 1, chapter 65",
+      "claim_order": 4,
+      "place_surface": "Βοιωτίᾳ",
+      "relation": "named_variety_from",
+      "qualifier": "related",
+      "claim_group": "named_variety",
+      "claim_note": "Boeotian myrrh is a related named variety, not the main Arabian resin.",
+      "accepted_pleiades_id": "540689",
+      "accepted_pleiades_uri": "https://pleiades.stoa.org/places/540689",
+      "place_label": "Boeotia",
+      "feature_types": [
+        "region"
+      ],
+      "coordinates": {
+        "lat": 38.3168971672,
+        "lon": 23.1349191419
+      },
+      "location_precision": "related",
+      "is_broad_region": true,
+      "has_uncertain_coordinates": true,
+      "evidence_phrase": "ἡ δὲ Βοιςτιακὴ σμύρνα ἐστὶ δένδρου τινὸς ἐν Βοιωτίᾳ γεννωμένου",
+      "source_char_offsets": {
+        "start": 0,
+        "end": 62
+      },
+      "place_char_offsets": {
+        "start": 44,
+        "end": 51
+      },
+      "certainty": "secure",
+      "review_decision_source": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_claim_source": "data/generated/simples/provenance_entry_claims.json",
+      "final_decision": "accept",
+      "consensus_method": "tei_placeName_annotation",
+      "confidence": 1.0,
+      "consensus_confidence": 1.0,
+      "vote_trace_ids": [],
+      "warnings": [
+        "broad_region_representative_point",
+        "related_variety_not_primary",
+        "uncertain_coordinate_precision"
+      ]
+    }
+  ]
+}

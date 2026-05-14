@@ -2,7 +2,14 @@
 """Validate map-ready provenance points."""
 from __future__ import annotations
 
-from provenance_common import LINKS_PATH, MAP_POINTS_PATH, REPO_ROOT, load_json, validate_schema
+from provenance_common import (
+    DEPRECATED_ARABIA_PLEIADES_ID,
+    LINKS_PATH,
+    MAP_POINTS_PATH,
+    REPO_ROOT,
+    load_json,
+    validate_schema,
+)
 
 
 SCHEMA_PATH = REPO_ROOT / "schemas" / "simples" / "provenance-map-points.schema.json"
@@ -20,6 +27,8 @@ def main() -> None:
         point_ids.add(point_id)
         if not point.get("coordinate_source"):
             raise AssertionError(f"{point_id}: coordinate_source missing")
+        if point["group_key"]["pleiades_id"] == DEPRECATED_ARABIA_PLEIADES_ID:
+            raise AssertionError(f"{point_id}: Arabia provenance must not emit 981506")
         for link_id in point["link_ids"]:
             if link_id not in links:
                 raise AssertionError(f"{point_id}: unknown link {link_id}")

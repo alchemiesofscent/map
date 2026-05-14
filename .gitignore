@@ -14,5 +14,7 @@ data/pleiades/dumps/
 data/generated/galen/pleiades_gazetteer.json
 data/generated/galen/.lemma_cache.json
 
-# Annotated TEI is regenerated on every survey run.
-data/tei/annotated/
+# Annotated Galen TEI is regenerated on every survey run. The Dioscorides
+# annotated source is part of the local Materia pipeline source boundary.
+data/tei/annotated/*
+!data/tei/annotated/tlg0656.tlg001.annotated.xml

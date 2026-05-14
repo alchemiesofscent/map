@@ -19,13 +19,19 @@ def is_broad_region(place: dict[str, Any]) -> bool:
 def main() -> None:
     links = load_json(LINKS_PATH)["links"]
     places = load_json(GAZETTEER_PATH)["places"]
-    groups: dict[tuple[str, str, str, str], list[dict[str, Any]]] = defaultdict(list)
+    groups: dict[tuple[str, str, str, str, str], list[dict[str, Any]]] = defaultdict(list)
     for link in links:
-        key = (link["accepted_pleiades_id"], link["lemma"], link["relation"], link["entry_id"])
+        key = (
+            link["accepted_pleiades_id"],
+            link["ingredient_key"],
+            link["relation"],
+            link["entry_id"],
+            link.get("claim_id", link["link_id"]),
+        )
         groups[key].append(link)
 
     points = []
-    for (pid, lemma, relation, entry_id), grouped_links in sorted(groups.items()):
+    for (pid, ingredient_key, relation, entry_id, claim_id), grouped_links in sorted(groups.items()):
         place = places[pid]
         coords = place.get("coordinates") or {}
         lat = coords.get("lat")
@@ -35,12 +41,13 @@ def main() -> None:
         precision = place.get("location_precision", "")
         points.append(
             {
-                "map_point_id": stable_id("map-point", pid, lemma, relation, entry_id),
+                "map_point_id": stable_id("map-point", pid, ingredient_key, relation, entry_id, claim_id),
                 "group_key": {
                     "pleiades_id": pid,
-                    "lemma": lemma,
+                    "ingredient_key": ingredient_key,
                     "relation": relation,
                     "entry_id": entry_id,
+                    "claim_id": claim_id,
                 },
                 "place_label": place.get("title", ""),
                 "pleiades_uri": place.get("pleiades_uri", ""),

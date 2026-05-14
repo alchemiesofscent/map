@@ -1,274 +1,373 @@
 #!/usr/bin/env python3
-"""Build the Stage 1 simple-entry pilot manifest from read-only source rows."""
+"""Build the Materia ingredient manifest from local TEI annotations."""
 from __future__ import annotations
 
-import csv
+from collections import defaultdict
 import json
-import os
-import unicodedata
+import re
+import xml.etree.ElementTree as ET
 from pathlib import Path
+from typing import Any
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-AETIUS_ROOT = (REPO_ROOT / ".." / "aetius").resolve()
-SOURCE_DIR = AETIUS_ROOT / "processing" / "alignment" / "data" / "csvs"
+SOURCE_REGISTRY_PATH = REPO_ROOT / "data" / "tei" / "source_registry.json"
+DRAFT_TRANSLATIONS_PATH = REPO_ROOT / "data" / "review" / "materia_draft_translations.json"
 OUTPUT_PATH = REPO_ROOT / "data" / "generated" / "simples" / "entry_manifest.json"
 SCHEMA_PATH = REPO_ROOT / "schemas" / "simples" / "entry-manifest.schema.json"
-GALEN_MATERIA_PATH = REPO_ROOT / "data" / "generated" / "galen" / "materia.json"
+TEI_NS = {"tei": "http://www.tei-c.org/ns/1.0"}
+TEI = "{http://www.tei-c.org/ns/1.0}"
 
-WITNESS_WORKS = {
-    "dsc": ("Dioscorides", "De materia medica"),
-    "gal_smt": ("Galen", "De simplicium medicamentorum"),
-    "gal_alimfac": ("Galen", "De alimentorum facultatibus"),
-    "aet": ("Aetius", "Libri medicinales"),
-    "orib": ("Oribasius", "Collectiones medicae XV"),
-    "paul": ("Paul of Aegina", "Epitome VII.3"),
+INGREDIENT_ORDER = ["balsamum", "cardamom", "calamus", "schoinos", "myrrh"]
+INGREDIENTS: dict[str, dict[str, str]] = {
+    "balsamum": {
+        "display_name": "Balsamum",
+        "greek_name": "βάλσαμον",
+        "view_id": "balsamum",
+    },
+    "cardamom": {
+        "display_name": "Cardamom",
+        "greek_name": "καρδάμωμον",
+        "view_id": "cardamom",
+    },
+    "calamus": {
+        "display_name": "Calamus",
+        "greek_name": "κάλαμος ἀρωματικός",
+        "view_id": "calamus",
+    },
+    "schoinos": {
+        "display_name": "Schoinos",
+        "greek_name": "σχοῖνος",
+        "view_id": "schoinos",
+    },
+    "myrrh": {
+        "display_name": "Myrrh",
+        "greek_name": "σμύρνα",
+        "view_id": "myrrh",
+    },
 }
-
-OVERLAP_TERMS = [
-    {
-        "term_id": "abrotonon",
-        "label": "ἀβρότονον",
-        "greek_forms": ["ἀβρότονον", "ἀβρότονον", "ἁβρότονον"],
-    },
-    {
-        "term_id": "agnos_lygos",
-        "label": "ἄγνος/λύγος",
-        "greek_forms": ["ἄγνος", "λύγος", "λύγος"],
-    },
-    {
-        "term_id": "agrostis",
-        "label": "ἄγρωστις",
-        "greek_forms": ["ἄγρωστις"],
-    },
-    {
-        "term_id": "anchousa",
-        "label": "ἄγχουσα",
-        "greek_forms": ["ἄγχουσα", "ἄγχουσαι"],
-    },
-    {
-        "term_id": "agarikon",
-        "label": "ἀγαρικόν",
-        "greek_forms": ["ἀγαρικόν", "ἀγαρικόν"],
-    },
-    {
-        "term_id": "akantha_aigyptia_arabike",
-        "label": "ἄκανθα Αἰγυπτία/Ἀραβική",
-        "greek_forms": [
-            "ἄκανθα Αἰγυπτία",
-            "ἄκανθα Αἰγυπτία",
-            "ἄκανθα Ἀραβική",
-            "ἄκανθα Ἀραβική",
-            "ἄκανθα αἰγυπτία",
-            "ἄκανθα ἀραβική",
-        ],
-    },
-    {
-        "term_id": "bdellion",
-        "label": "βδέλλιον",
-        "greek_forms": ["βδέλλιον", "βδέλλιον"],
-    },
-    {
-        "term_id": "nardos",
-        "label": "νάρδος",
-        "greek_forms": [
-            "νάρδος",
-            "νάρδος",
-            "Κελτικὴ νάρδος",
-            "ὀρεινὴ νάρδος",
-            "νάρδος κελτική",
-            "νάρδος ὀρεία",
-            "ναρδόσταχυς",
-        ],
-    },
-    {
-        "term_id": "phou",
-        "label": "φοῦ",
-        "greek_forms": ["φοῦ"],
-    },
-    {
-        "term_id": "agalochon",
-        "label": "ἀγάλοχον",
-        "greek_forms": ["ἀγάλοχον", "ἀγάλοχον"],
-    },
-]
+ENTRY_LABEL_OVERRIDES: dict[str, dict[str, str]] = {
+    "dsc:5": {"lemma": "καρδάμωμον", "lemma_en": "Cardamom"},
+    "dsc:16": {"lemma": "σχοῖνος", "lemma_en": "Schoinos"},
+    "dsc:17": {"lemma": "κάλαμος ἀρωματικός", "lemma_en": "Calamus"},
+    "dsc:18": {"lemma": "βάλσαμον", "lemma_en": "Balsamum"},
+    "dsc:63": {"lemma": "σμύρνα", "lemma_en": "Myrrh"},
+    "dsc:64": {"lemma": "Βοιωτικὴ σμύρνα", "lemma_en": "Boeotian myrrh"},
+}
 
 
 def rel(path: Path) -> str:
-    try:
-        return path.resolve().relative_to(REPO_ROOT).as_posix()
-    except ValueError:
-        return os.path.relpath(path.resolve(), REPO_ROOT)
+    return path.resolve().relative_to(REPO_ROOT).as_posix()
 
 
-def read_csv(path: Path) -> list[dict[str, str]]:
-    with path.open("r", encoding="utf-8", newline="") as handle:
-        return list(csv.DictReader(handle))
+def load_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
-def strip_to_match_key(text: str) -> str:
-    text = unicodedata.normalize("NFD", text or "")
-    text = "".join(c for c in text if unicodedata.category(c) != "Mn")
-    return " ".join(text.lower().replace("ς", "σ").split())
+def normalize_spaces(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip()
 
 
-def split_forms(lemma: str) -> list[str]:
-    forms: list[str] = []
-    for delimiter in (":", ";"):
-        lemma = lemma.replace(delimiter, "\n")
-    for form in lemma.splitlines():
-        form = " ".join(form.split())
-        if form:
-            forms.append(form)
-    return forms
+def source_path(spec: dict[str, Any], key: str) -> Path:
+    return (REPO_ROOT / spec[key]).resolve()
 
 
-def row_matches_term(row: dict[str, str], term: dict[str, object]) -> bool:
-    forms = {strip_to_match_key(form) for form in split_forms(row.get("lemma_gr", ""))}
-    wanted = {strip_to_match_key(form) for form in term["greek_forms"]}  # type: ignore[index]
-    return bool(forms & wanted)
+def preferred_source_path(spec: dict[str, Any]) -> tuple[Path, bool]:
+    annotated = spec.get("annotated_path")
+    if annotated:
+        annotated_path = source_path(spec, "annotated_path")
+        if annotated_path.exists():
+            return annotated_path, True
+    return source_path(spec, "raw_path"), False
 
 
-def make_entry(
-    row: dict[str, str],
-    witness_slug: str,
-    source_path: Path,
-    selection_sets: set[str],
-    matched_terms: set[str],
-) -> dict[str, object]:
-    author, work = WITNESS_WORKS[witness_slug]
-    row_idx = row.get("row_idx", "")
-    entry_id = f"{witness_slug}:{row_idx}"
+def load_registry() -> list[dict[str, Any]]:
+    payload = load_json(SOURCE_REGISTRY_PATH)
+    return payload.get("sources", [])
+
+
+def load_draft_translations() -> dict[str, dict[str, Any]]:
+    if not DRAFT_TRANSLATIONS_PATH.exists():
+        return {}
+    payload = load_json(DRAFT_TRANSLATIONS_PATH)
     return {
-        "entry_id": entry_id,
-        "selection_sets": sorted(selection_sets),
-        "source_csv_path": rel(source_path),
-        "source_row_idx": row_idx,
-        "witness_slug": witness_slug,
-        "author": row.get("author") or author,
-        "work": work,
-        "book": row.get("book", ""),
-        "chapter": row.get("chapter", ""),
-        "book_no_gr": row.get("book_no_gr", ""),
-        "chapter_no_gr": row.get("chapter_no_gr", ""),
-        "chapter_heading_gr": row.get("chapter_gr", ""),
-        "section_heading_gr": row.get("section_gr", ""),
-        "lemma": row.get("lemma_gr", ""),
-        "lemma_en": row.get("lemma_en", ""),
-        "variant_or_parallel_gr": row.get("var_par_prod_gr", ""),
-        "variant_or_parallel_en": row.get("var_par_prod_en", ""),
-        "entry_en": row.get("entry_en", ""),
-        "category": row.get("cat", ""),
-        "edition_pages": row.get("edition_pages", ""),
-        "greek_entry_text": row.get("entry_gr", ""),
-        "lemma_derived": row.get("lemma_derived", "").lower() == "true",
-        "derived_from": row.get("derived_from", ""),
-        "matched_overlap_terms": sorted(matched_terms),
+        entry_id: row
+        for entry_id, row in payload.get("translations", {}).items()
+        if isinstance(row, dict)
     }
 
 
-def selected_rows() -> dict[str, dict[str, object]]:
-    selected: dict[str, dict[str, object]] = {}
-    sources = {slug: SOURCE_DIR / f"{slug}.csv" for slug in WITNESS_WORKS}
+def append_text_without_notes(node: ET.Element, parts: list[str]) -> None:
+    if node.tag == f"{TEI}note":
+        return
+    if node.tag in {f"{TEI}lb", f"{TEI}pb", f"{TEI}milestone"}:
+        parts.append(" ")
+    if node.text:
+        parts.append(node.text)
+    for child in list(node):
+        append_text_without_notes(child, parts)
+        if child.tail:
+            parts.append(child.tail)
 
-    for witness_slug, source_path in sources.items():
-        rows = read_csv(source_path)
-        for row in rows:
-            selection_sets: set[str] = set()
-            matched_terms: set[str] = set()
 
-            if (
-                witness_slug == "dsc"
-                and row.get("book") == "1"
-                and row.get("chapter", "").isdigit()
-                and 1 <= int(row["chapter"]) <= 23
-            ):
-                selection_sets.add("dioscorides_1_1-1_23")
+def text_without_notes(node: ET.Element) -> str:
+    parts: list[str] = []
+    append_text_without_notes(node, parts)
+    return normalize_spaces("".join(parts))
 
-            for term in OVERLAP_TERMS:
-                if row_matches_term(row, term):
-                    term_id = str(term["term_id"])
-                    selection_sets.add(f"overlap:{term_id}")
-                    matched_terms.add(term_id)
 
-            if not selection_sets:
+def strip_leading_marker(text: str) -> str:
+    text = re.sub(r"^\s*\d+\s+", "", text)
+    text = re.sub(r"^\s*\[[^\]]{1,80}\]\s*", "", text)
+    return text.strip()
+
+
+def derive_lemma(text: str) -> str:
+    text = strip_leading_marker(text)
+    bracket = re.match(r"^\[([^\]]{1,80})\]", text)
+    if bracket:
+        text = bracket.group(1)
+    text = re.sub(r"^[α-ωΑ-Ωϛϙϟʹʹ΄´'.\s]+περὶ\s+", "", text, flags=re.IGNORECASE)
+    text = text.split("·", 1)[0].split("·", 1)[0].split(".", 1)[0].split(":", 1)[0]
+    words = text.split()
+    return " ".join(words[:4]).strip("[] ,;·.") if words else ""
+
+
+def annotated_ingredient_keys(node: ET.Element) -> list[str]:
+    keys: set[str] = set()
+    for place in node.findall(".//tei:placeName", TEI_NS):
+        key = place.get("ingredient_key")
+        if key:
+            keys.add(key)
+    return [key for key in INGREDIENT_ORDER if key in keys]
+
+
+def translation_fields(entry_id: str, draft_translations: dict[str, dict[str, Any]]) -> dict[str, Any]:
+    draft = draft_translations.get(entry_id, {})
+    entry_en = draft.get("translation_en", "")
+    return {
+        "entry_en": entry_en,
+        "translation_en_authority": "display_only_draft_translation" if entry_en else "",
+        "translation_en_source": rel(DRAFT_TRANSLATIONS_PATH) if entry_en else "",
+        "evidence_authority": "greek_tei",
+    }
+
+
+def dioscorides_entry_id(book: str, chapter: str, chapter_index: int) -> str:
+    if book == "1" and chapter.isdigit():
+        return f"dsc:{int(chapter) - 1}"
+    if book == "3" and chapter == "1":
+        return "dsc:319"
+    if book == "3" and chapter == "24":
+        return "dsc:341"
+    return f"dsc:tei{chapter_index}"
+
+
+def make_entry(
+    *,
+    spec: dict[str, Any],
+    entry_id: str,
+    source_entry_index: int,
+    source_xml_id: str,
+    preferred_path: Path,
+    raw_path: Path,
+    source_tei_annotated: bool,
+    book: str,
+    chapter: str,
+    text: str,
+    ingredient_keys: list[str],
+    draft_translations: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    labels = ENTRY_LABEL_OVERRIDES.get(entry_id, {})
+    lemma = labels.get("lemma") or derive_lemma(text)
+    return {
+        "entry_id": entry_id,
+        "selection_sets": [f"ingredient:{key}" for key in ingredient_keys],
+        "ingredient_keys": ingredient_keys,
+        "source_registry_id": spec["source_id"],
+        "source_tei_path": rel(preferred_path),
+        "source_raw_tei_path": rel(raw_path),
+        "source_tei_annotated": source_tei_annotated,
+        "source_entry_index": str(source_entry_index),
+        "source_xml_id": source_xml_id,
+        "witness_slug": spec["witness_slug"],
+        "author": spec["author"],
+        "work": spec["work"],
+        "book": book,
+        "chapter": chapter,
+        "book_no_gr": "",
+        "chapter_no_gr": "",
+        "chapter_heading_gr": lemma,
+        "section_heading_gr": "",
+        "lemma": lemma,
+        "lemma_en": labels.get("lemma_en", ""),
+        "variant_or_parallel_gr": "",
+        "variant_or_parallel_en": "",
+        **translation_fields(entry_id, draft_translations),
+        "category": "",
+        "edition_pages": "",
+        "greek_entry_text": text,
+        "lemma_derived": True,
+        "derived_from": "local_tei_heading",
+    }
+
+
+def iter_dioscorides_entries(
+    spec: dict[str, Any],
+    draft_translations: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    preferred_path, annotated = preferred_source_path(spec)
+    raw_path = source_path(spec, "raw_path")
+    root = ET.parse(preferred_path).getroot()
+    entries = []
+    chapter_index = 0
+    for book_div in root.findall(".//tei:div[@subtype='book']", TEI_NS):
+        book = book_div.get("n", "")
+        for chapter_div in book_div.findall("./tei:div[@subtype='chapter']", TEI_NS):
+            chapter = chapter_div.get("n", "")
+            if not chapter.isdigit():
                 continue
-
-            entry_id = f"{witness_slug}:{row.get('row_idx', '')}"
-            if entry_id in selected:
-                existing = selected[entry_id]
-                existing["selection_sets"] = sorted(
-                    set(existing["selection_sets"]) | selection_sets  # type: ignore[arg-type]
+            ingredient_keys = annotated_ingredient_keys(chapter_div)
+            if not ingredient_keys:
+                chapter_index += 1
+                continue
+            text = strip_leading_marker(text_without_notes(chapter_div))
+            entry_id = dioscorides_entry_id(book, chapter, chapter_index)
+            entries.append(
+                make_entry(
+                    spec=spec,
+                    entry_id=entry_id,
+                    source_entry_index=chapter_index,
+                    source_xml_id=f"{book}.{chapter}",
+                    preferred_path=preferred_path,
+                    raw_path=raw_path,
+                    source_tei_annotated=annotated,
+                    book=book,
+                    chapter=chapter,
+                    text=text,
+                    ingredient_keys=ingredient_keys,
+                    draft_translations=draft_translations,
                 )
-                existing["matched_overlap_terms"] = sorted(
-                    set(existing["matched_overlap_terms"]) | matched_terms  # type: ignore[arg-type]
+            )
+            chapter_index += 1
+    return entries
+
+
+def iter_paragraph_entries(
+    spec: dict[str, Any],
+    draft_translations: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    preferred_path, annotated = preferred_source_path(spec)
+    raw_path = source_path(spec, "raw_path")
+    root = ET.parse(preferred_path).getroot()
+    entries = []
+    paragraph_index = 0
+    for book_div in root.findall(".//tei:div[@subtype='book']", TEI_NS):
+        book = book_div.get("n", "")
+        for chapter_div in book_div.findall("./tei:div[@subtype='chapter']", TEI_NS):
+            chapter = chapter_div.get("n", "")
+            for para in chapter_div.findall(".//tei:p", TEI_NS):
+                ingredient_keys = annotated_ingredient_keys(para)
+                if not ingredient_keys:
+                    paragraph_index += 1
+                    continue
+                text = strip_leading_marker(text_without_notes(para))
+                entry_id = f"{spec['witness_slug']}:p{paragraph_index}"
+                entries.append(
+                    make_entry(
+                        spec=spec,
+                        entry_id=entry_id,
+                        source_entry_index=paragraph_index,
+                        source_xml_id=f"{book}.{chapter}.p{paragraph_index}",
+                        preferred_path=preferred_path,
+                        raw_path=raw_path,
+                        source_tei_annotated=annotated,
+                        book=book,
+                        chapter=chapter,
+                        text=text,
+                        ingredient_keys=ingredient_keys,
+                        draft_translations=draft_translations,
+                    )
                 )
-            else:
-                selected[entry_id] = make_entry(
-                    row, witness_slug, source_path, selection_sets, matched_terms
-                )
-
-    return dict(sorted(selected.items()))
+                paragraph_index += 1
+    return entries
 
 
-def galen_materia_context() -> list[dict[str, object]]:
-    data = json.loads(GALEN_MATERIA_PATH.read_text(encoding="utf-8"))
-    return [
-        {
-            "materia_key": item["materia_key"],
-            "display_name": item["display_name"],
-            "greek_name": item["greek_name"],
-            "category": item["category"],
-            "source_json_path": rel(GALEN_MATERIA_PATH),
-            "description": item.get("description", ""),
-            "place_links": item.get("place_links", []),
-        }
-        for item in data
-    ]
+def selected_entries() -> dict[str, dict[str, Any]]:
+    draft_translations = load_draft_translations()
+    entries: dict[str, dict[str, Any]] = {}
+    for spec in load_registry():
+        if not spec.get("enabled", True):
+            continue
+        if spec["witness_slug"] == "dsc":
+            rows = iter_dioscorides_entries(spec, draft_translations)
+        else:
+            rows = iter_paragraph_entries(spec, draft_translations)
+        for row in rows:
+            entries[row["entry_id"]] = row
+    return dict(sorted(entries.items()))
+
+
+def build_ingredients(entries: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    entries_by_ingredient: dict[str, list[str]] = defaultdict(list)
+    for entry_id, entry in entries.items():
+        for ingredient_key in entry.get("ingredient_keys", []):
+            entries_by_ingredient[ingredient_key].append(entry_id)
+
+    ingredients = []
+    for ingredient_key in INGREDIENT_ORDER:
+        entry_ids = sorted(
+            set(entries_by_ingredient.get(ingredient_key, [])),
+            key=lambda entry_id: (
+                int(entries[entry_id]["book"]) if str(entries[entry_id]["book"]).isdigit() else 999,
+                int(entries[entry_id]["chapter"]) if str(entries[entry_id]["chapter"]).isdigit() else 999,
+                entry_id,
+            ),
+        )
+        if not entry_ids:
+            continue
+        spec = INGREDIENTS[ingredient_key]
+        ingredients.append(
+            {
+                "ingredient_key": ingredient_key,
+                "display_name": spec["display_name"],
+                "greek_name": spec["greek_name"],
+                "entry_ids": entry_ids,
+                "passage_ids": entry_ids,
+                "view_id": spec["view_id"],
+            }
+        )
+    return ingredients
 
 
 def build_manifest() -> dict[str, object]:
-    by_id = selected_rows()
-    overlap_terms = []
-    for term in OVERLAP_TERMS:
-        term_id = str(term["term_id"])
-        overlap_terms.append(
-            {
-                "term_id": term_id,
-                "label": term["label"],
-                "greek_forms": term["greek_forms"],
-                "selected_entry_ids": [
-                    entry_id
-                    for entry_id, entry in by_id.items()
-                    if term_id in entry.get("matched_overlap_terms", [])
-                ],
-            }
-        )
-
-    source_csv_paths = sorted(
+    by_id = selected_entries()
+    source_tei_paths = sorted(
         {
-            entry["source_csv_path"]
+            entry["source_tei_path"]
             for entry in by_id.values()
-            if isinstance(entry["source_csv_path"], str)
+            if isinstance(entry["source_tei_path"], str)
         }
     )
     return {
         "metadata": {
-            "manifest_id": "simples-stage-1-pilot",
-            "stage": "stage_1_provenance_model_pilot",
+            "manifest_id": "materia-tei-ingredient-journeys",
+            "stage": "stage_1_local_tei_ingredient_claims",
             "schema_path": rel(SCHEMA_PATH),
-            "aetius_root": rel(AETIUS_ROOT),
-            "source_csv_paths": source_csv_paths,
-            "galen_materia_source_path": rel(GALEN_MATERIA_PATH),
+            "source_boundary": "data/tei",
+            "source_registry_path": rel(SOURCE_REGISTRY_PATH),
+            "draft_translations_path": rel(DRAFT_TRANSLATIONS_PATH),
+            "source_tei_paths": source_tei_paths,
             "notes": [
-                "Entries are copied from read-only ../aetius alignment CSVs.",
-                "Galen materia place links are context for calibration, not newly adjudicated links.",
-                "No Pleiades matching or LLM adjudication is run in this stage.",
+                "Entries are selected only when local TEI placeName annotations carry ingredient provenance claims.",
+                "Greek TEI is the evidence authority; English is derived display data only.",
+                "The manifest is keyed by five ingredient journeys, not by one source entry per view.",
+                "Generated Galen materia JSON is not an input to the Materia extraction path.",
+                "Draft English is loaded from the review translation sidecar for display only, never from old generated caches.",
             ],
         },
+        "ingredients": build_ingredients(by_id),
         "entries": list(by_id.values()),
-        "overlap_terms": overlap_terms,
-        "galen_materia_context": galen_materia_context(),
     }
 
 
@@ -280,8 +379,9 @@ def main() -> None:
         encoding="utf-8",
     )
     print(f"Wrote {rel(OUTPUT_PATH)}")
+    print(f"Ingredients: {len(manifest['ingredients'])}")
     print(f"Entries: {len(manifest['entries'])}")
-    print(f"Galen materia context rows: {len(manifest['galen_materia_context'])}")
+    print(f"Source TEI paths: {len(manifest['metadata']['source_tei_paths'])}")
 
 
 if __name__ == "__main__":

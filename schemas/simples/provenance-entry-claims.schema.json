@@ -1,31 +1,36 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/schemas/simples/provenance-links.schema.json",
-  "title": "Accepted TEI-derived simples provenance links",
+  "$id": "https://example.org/schemas/simples/provenance-entry-claims.schema.json",
+  "title": "TEI-derived Materia provenance claims",
   "type": "object",
-  "required": ["metadata", "counts", "reports", "links"],
+  "required": ["metadata", "counts", "reports", "claims"],
   "properties": {
     "metadata": {
       "type": "object",
       "required": [
         "artifact_id",
         "stage",
-        "source_entry_claims_path",
-        "source_mode",
+        "source_manifest_path",
+        "source_gazetteer_path",
+        "source_tei_paths",
         "notes"
       ]
     },
     "counts": {
       "type": "object",
-      "required": ["tei_claims", "accepted_links", "skipped_invalid_accept_rows"]
+      "required": [
+        "tei_place_claims_in",
+        "accepted_claims",
+        "ingredients_with_claims",
+        "entries_with_claims"
+      ]
     },
     "reports": { "type": "object" },
-    "links": {
+    "claims": {
       "type": "array",
       "items": {
         "type": "object",
         "required": [
-          "link_id",
           "claim_id",
           "entry_id",
           "passage_id",
@@ -35,7 +40,12 @@
           "work",
           "book",
           "chapter",
+          "source_tei_path",
+          "claim_order",
+          "place_surface",
           "relation",
+          "qualifier",
+          "claim_group",
           "accepted_pleiades_id",
           "accepted_pleiades_uri",
           "place_label",
@@ -50,8 +60,24 @@
             "type": "string",
             "enum": ["balsamum", "cardamom", "calamus", "schoinos", "myrrh"]
           },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "named_variety_from",
+              "grows_at",
+              "produced_at",
+              "sourced_from",
+              "acquired",
+              "observed",
+              "tested",
+              "prepared"
+            ]
+          },
+          "claim_order": { "type": "integer", "minimum": 1 },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
           "consensus_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
-          "vote_trace_ids": {
+          "final_decision": { "const": "accept" },
+          "warnings": {
             "type": "array",
             "items": { "type": "string" }
           }

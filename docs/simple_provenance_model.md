@@ -1,9 +1,10 @@
 # Simple Provenance Model
 
-This stage defines the evidence model for later provenance extraction. It does
-not accept new place links, run Pleiades matching, or ask an LLM to adjudicate
-ambiguous geography. The first generated artifact is an entry manifest: source
-rows plus enough context to decide provenance links in a later pass.
+This stage defines the evidence model for Materia provenance extraction. The
+current accepted-link path is TEI annotation first: local `placeName` elements
+carry the Pleiades `ref`, ingredient key, relation, claim group, qualifier,
+claim order, evidence phrase, and warnings. Generated JSON is rebuildable
+runtime data.
 
 ## Core Record
 
@@ -27,7 +28,7 @@ Required fields:
 - `evidence_phrase`: shortest useful Greek evidence span.
 - `evidence_translation`: optional working translation or gloss.
 - `source_entry_id`: entry manifest id supplying the evidence.
-- `source_path`: source CSV or JSON path.
+- `source_path`: local TEI source path under `data/tei/`.
 - `notes`: brief editorial note when the link is not obvious.
 
 ## Relation Vocabulary
@@ -93,6 +94,19 @@ candidate is specifically a rejected match to that place.
 
 ### Place Matching
 
-This stage does not perform place matching. Later stages may add `place_key`,
-`pleiades_id`, and authority metadata after review. Until then, source-form
-place labels and evidence phrases are the source of truth.
+Accepted Materia claims must already point to a Pleiades `ref` in annotated TEI.
+Old Pleiades mention scans, review queues, and LLM adjudication sidecars can
+remain as research artifacts, but they are not accepted-link authorities for the
+reset Materia viewer.
+
+### Source Boundary
+
+The simples pipeline reads source text only from `data/tei/`, preferring
+`data/tei/annotated/` when an annotated file exists. Greek TEI is the evidence
+authority. English in generated viewer data is derived display text and must not
+be used as the authority for extraction or adjudication.
+
+Current Materia draft translations are stored in
+`data/review/materia_draft_translations.json` for viewer orientation only. Do
+not repopulate English from old generated manifest caches such as
+`derived_display_cache`.

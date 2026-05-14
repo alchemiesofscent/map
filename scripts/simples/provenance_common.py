@@ -14,15 +14,24 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 GENERATED_DIR = REPO_ROOT / "data" / "generated" / "simples"
 REVIEW_DIR = REPO_ROOT / "data" / "review"
 PLEIADES_DUMP_DIR = REPO_ROOT / "data" / "pleiades" / "dumps"
+TEI_SOURCE_REGISTRY_PATH = REPO_ROOT / "data" / "tei" / "source_registry.json"
 
 MANIFEST_PATH = GENERATED_DIR / "entry_manifest.json"
 GAZETTEER_PATH = GENERATED_DIR / "pleiades_gazetteer.json"
 MENTIONS_PATH = GENERATED_DIR / "pleiades_name_mentions.json"
 CANDIDATES_PATH = GENERATED_DIR / "provenance_candidates.json"
 REVIEW_QUEUE_PATH = REVIEW_DIR / "simples_provenance_review.csv"
+ENTRY_CLAIM_REVIEW_PATH = REVIEW_DIR / "simples_entry_provenance_claims.json"
 LLM_ADJUDICATIONS_PATH = GENERATED_DIR / "provenance_llm_adjudications.json"
+ENTRY_CLAIMS_PATH = GENERATED_DIR / "provenance_entry_claims.json"
 LINKS_PATH = GENERATED_DIR / "provenance_links.json"
 MAP_POINTS_PATH = GENERATED_DIR / "provenance_map_points.json"
+
+CANONICAL_ARABIA_PLEIADES_ID = "1001942"
+DEPRECATED_ARABIA_PLEIADES_ID = "981506"
+PROVENANCE_PLEIADES_REPLACEMENTS = {
+    DEPRECATED_ARABIA_PLEIADES_ID: CANONICAL_ARABIA_PLEIADES_ID,
+}
 
 
 def now_utc() -> str:
@@ -159,3 +168,29 @@ def json_compact(value: Any) -> str:
 
 def normalize_relation_context(text: str) -> str:
     return re.sub(r"\s+", " ", normalize_key(text))
+
+
+def canonical_provenance_pleiades_id(pleiades_id: str) -> str:
+    return PROVENANCE_PLEIADES_REPLACEMENTS.get(str(pleiades_id), str(pleiades_id))
+
+
+def is_deprecated_arabia_provenance_id(pleiades_id: object) -> bool:
+    return str(pleiades_id) == DEPRECATED_ARABIA_PLEIADES_ID
+
+
+def normalized_offsets(text: str, needle: str) -> dict[str, int] | None:
+    norm_text, norm_offsets = normalize_with_offsets(text)
+    norm_needle, _needle_offsets = normalize_with_offsets(needle)
+    if not norm_text or not norm_needle:
+        return None
+    start = norm_text.find(norm_needle)
+    if start < 0:
+        return None
+    end = start + len(norm_needle)
+    if end > len(norm_offsets):
+        return None
+    return {"start": norm_offsets[start], "end": norm_offsets[end - 1] + 1}
+
+
+def normalized_contains(text: str, needle: str) -> bool:
+    return normalized_offsets(text, needle) is not None

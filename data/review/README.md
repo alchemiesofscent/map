@@ -58,3 +58,20 @@ Each section record contains:
   `geometry_policy`
 - `context_places`: named places that should stay linkable as context but must
   not become focus stops
+
+## Retired Materia Review Sidecars
+
+The Materia reset no longer promotes accepted links from
+`simples_provenance_review.csv`, `simples_entry_provenance_claims.json`, or
+generated LLM adjudication JSON. Accepted Materia claims now live in annotated
+TEI `placeName` elements under `data/tei/annotated/` and are normalized into
+`data/generated/simples/provenance_entry_claims.json`.
+
+Use `docs/materia_tei_ingredient_journeys.md` when adding more ingredient
+journeys. Do not hand-edit generated JSON.
+
+## `materia_draft_translations.json`
+
+Fresh draft English translations for the current Materia TEI passages. These
+are viewer-orientation text only. Do not use them as extraction evidence,
+provenance authority, or a replacement for the annotated Greek TEI claims.

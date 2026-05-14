@@ -33,6 +33,7 @@ const state = {
   legGlowPolys: new Map(),
   highlightedPlaceKeys: new Set(),
   activeMateriaKey: null,
+  materialSearchValue: "",
   reduceMotion: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
   wheelLast: 0,
   wheelAccum: 0,
@@ -236,7 +237,10 @@ function drawRoute() {
       className: "site-tip",
     });
     marker.on("click", () => {
-      const idx = state.focusList.findIndex((f) => f.siteKey === site.site_key);
+      const idx = state.focusList.findIndex((f) => {
+        if (f.siteKey === site.site_key) return true;
+        return (f.siteKeys ?? []).includes(site.site_key);
+      });
       if (idx >= 0) goTo(idx);
     });
     marker.addTo(state.layers.markers);
@@ -290,6 +294,49 @@ function renderRouteButtons() {
       return `<button type="button" data-view="${escapeHtml(id)}" aria-pressed="${active ? "true" : "false"}">${escapeHtml(viewLabel(id))}</button>`;
     })
     .join("");
+}
+
+function materialRows() {
+  return [...(state.data?.materia ?? [])]
+    .filter((m) => m.view_id && state.data.routeViews?.views?.[m.view_id]);
+}
+
+function renderMaterialOptions(value = "") {
+  const options = document.getElementById("material-options");
+  const input = document.getElementById("material-search");
+  if (!options || !input) return;
+  const minChars = Number(input.dataset.suggestMinChars ?? 1);
+  const query = value.trim().toLowerCase();
+  if (query.length < minChars) {
+    options.innerHTML = "";
+    return;
+  }
+  const rows = materialRows().filter((m) => {
+    const haystack = `${m.display_name ?? ""} ${m.greek_name ?? ""}`.toLowerCase();
+    return haystack.includes(query);
+  });
+  options.innerHTML = rows
+    .map((m) => `<option value="${escapeHtml(m.display_name)}" data-view="${escapeHtml(m.view_id)}">${escapeHtml(m.greek_name ?? "")}</option>`)
+    .join("");
+}
+
+function renderMaterialSelector() {
+  const control = document.getElementById("material-control");
+  const input = document.getElementById("material-search");
+  const options = document.getElementById("material-options");
+  if (!control || !input || !options) return;
+  if (!corpusIsMateria(state.corpusId) || !state.data?.materia) {
+    control.hidden = true;
+    input.value = "";
+    options.innerHTML = "";
+    return;
+  }
+  control.hidden = false;
+  const rows = materialRows();
+  const selectedMateriaKey = currentView()?.materia_key ?? "";
+  const selected = rows.find((m) => m.ingredient_key === selectedMateriaKey || m.materia_key === selectedMateriaKey);
+  input.value = state.selectedView === "all" ? "" : selected?.display_name ?? "";
+  renderMaterialOptions(input.value);
 }
 
 function renderCorpusButtons() {
@@ -423,6 +470,19 @@ function renderContextMentionsHtml(mentions) {
   `;
 }
 
+function claimWarningLabel(warning) {
+  if (warning === "bosporus_target_ambiguous") {
+    return "Bosporus target reviewed as ambiguous";
+  }
+  if (warning === "broad_region_representative_point") {
+    return "";
+  }
+  if (warning === "uncertain_coordinate_precision") {
+    return "";
+  }
+  return warning.replaceAll("_", " ");
+}
+
 function renderMateriaList(focus) {
   const wrap = document.getElementById("dossier-materia");
   const list = document.getElementById("dossier-materia-list");
@@ -450,22 +510,18 @@ function renderMateriaList(focus) {
 }
 
 function renderMateriaMedicaHtml(focus) {
-  const confidence = Number.isFinite(focus.consensusConfidence)
-    ? `${Math.round(focus.consensusConfidence * 100)}% consensus`
-    : "";
-  const precision = [focus.locationPrecision, focus.coordinateSource]
-    .filter(Boolean)
-    .join(" · ");
+  const claims = focus.placeClaims ?? [];
+  const active = focus.activeClaim ?? claims.find((claim) => claim.isActive) ?? claims[0] ?? {};
   const warning = focus.isBroadRegion || focus.hasUncertainCoordinates
     ? `<p class="dossier-warning">${escapeHtml(focus.broadRegionLabel || "Broad or uncertain place; marker is representative.")}</p>`
     : "";
   const rows = [
-    ["Place", focus.placeLabel],
-    ["Relation", focus.relation],
     ["Source", focus.sourceCitation],
-    ["Evidence", focus.evidencePhrase],
-    ["Confidence", confidence],
-    ["Coordinates", precision],
+    ["Place", active.placeLabel],
+    ["Claim", claims.length > 1 && active.claimOrder ? `${active.claimOrder} of ${claims.length}` : ""],
+    ["Relation", active.relationLabel || focus.relation],
+    ["Relation group", active.relationGroupLabel],
+    ["English", focus.translation ? "Draft display text" : ""],
   ].filter(([, value]) => value);
   const meta = rows.map(([label, value]) => `
     <div class="dossier-provenance__row">
@@ -473,6 +529,64 @@ function renderMateriaMedicaHtml(focus) {
       <strong>${escapeHtml(value)}</strong>
     </div>
   `).join("");
+  const chips = claims.length ? `
+    <div class="dossier-place-chips" aria-label="Place claims">
+      ${claims.map((claim) => {
+        const label = [claim.placeLabel, claim.relationGroupLabel].filter(Boolean).join(" · ");
+        const href = claim.pleiadesUri || "#";
+        const activeClass = claim.isActive ? " dossier-place-chip--active" : "";
+        return `<a class="dossier-place-chip${activeClass}" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
+      }).join("")}
+    </div>
+  ` : "";
+  const claimList = claims.length ? `
+    <ol class="dossier-claims">
+      ${claims.map((claim, index) => {
+        const confidence = Number.isFinite(claim.consensusConfidence)
+          ? `${Math.round(claim.consensusConfidence * 100)}%`
+          : "";
+        const qualifier = [claim.qualifier, claim.relationLabel].filter(Boolean).join(" · ");
+        const group = claim.relationGroupLabel
+          ? `<span class="dossier-claim__group">${escapeHtml(claim.relationGroupLabel)}</span>`
+          : "";
+        const precision = [claim.locationPrecision, claim.coordinateSource]
+          .filter(Boolean)
+          .join(" · ");
+        const broad = claim.isBroadRegion || claim.hasUncertainCoordinates
+          ? `<p class="dossier-claim__warning">${escapeHtml(claim.broadRegionLabel || "Representative Pleiades point")}</p>`
+          : "";
+        const warningLabels = (claim.warnings ?? [])
+          .map(claimWarningLabel)
+          .filter(Boolean);
+        const warnings = warningLabels.length
+          ? `<p class="dossier-claim__warning">${escapeHtml(warningLabels.join(" · "))}</p>`
+          : "";
+        const pleiades = claim.pleiadesUri
+          ? `<a class="dossier-claim__link" href="${escapeHtml(claim.pleiadesUri)}" target="_blank" rel="noreferrer">Pleiades ${escapeHtml(claim.pleiadesId ?? "")} ↗</a>`
+          : "";
+        return `
+          <li class="dossier-claim${claim.isActive ? " dossier-claim--active" : ""}">
+            <div class="dossier-claim__head">
+              <span class="dossier-claim__num">${String(index + 1).padStart(2, "0")}</span>
+              <strong>${escapeHtml(claim.placeLabel)}</strong>
+              ${group}
+              ${qualifier ? `<span class="dossier-claim__qualifier">${escapeHtml(qualifier)}</span>` : ""}
+            </div>
+            ${claim.placeSurface ? `<p class="dossier-claim__surface" lang="grc">${escapeHtml(claim.placeSurface)}</p>` : ""}
+            ${claim.evidencePhrase ? `<p class="dossier-claim__evidence" lang="grc">${escapeHtml(claim.evidencePhrase)}</p>` : ""}
+            ${claim.claimNote ? `<p class="dossier-claim__note">${escapeHtml(claim.claimNote)}</p>` : ""}
+            <div class="dossier-claim__meta">
+              ${confidence ? `<span>${escapeHtml(confidence)} confidence</span>` : ""}
+              ${precision ? `<span>${escapeHtml(precision)}</span>` : ""}
+              ${pleiades}
+            </div>
+            ${broad}
+            ${warnings}
+          </li>
+        `;
+      }).join("")}
+    </ol>
+  ` : "";
   const text = focus.translation
     ? `<p class="dossier-provenance__entry">${escapeHtml(focus.translation)}</p>`
     : `<p class="dossier__translation-placeholder">Translation pending review.</p>`;
@@ -480,6 +594,8 @@ function renderMateriaMedicaHtml(focus) {
     <div class="dossier-provenance">
       ${meta}
       ${warning}
+      ${chips}
+      ${claimList}
       ${text}
     </div>
   `;
@@ -536,8 +652,9 @@ function renderDossier(focus) {
   if (focus.corpus === "galen") {
     sourceBits = [focus.kuhnCitation && `K. ${focus.kuhnCitation}`, focus.orderBasis].filter(Boolean);
   } else if (focus.corpus === "materia_medica") {
+    const claimCount = focus.placeClaims?.length ?? 0;
     sourceBits = [
-      focus.placeLabel,
+      claimCount > 1 ? `${claimCount} places` : focus.placeLabel,
       focus.relation,
       focus.isBroadRegion ? "representative point" : "",
     ].filter(Boolean);
@@ -551,6 +668,8 @@ function renderDossier(focus) {
     link.href = focus.pleiadesUri;
     link.textContent = `Pleiades ${focus.pleiadesId ?? ""} ↗`.trim();
     link.hidden = false;
+  } else if (focus.corpus === "materia_medica" && (focus.placeClaims?.length ?? 0) > 1) {
+    link.hidden = true;
   } else {
     link.hidden = true;
   }
@@ -575,8 +694,10 @@ function highlightActive(focus) {
   for (const [key, entry] of state.markers.entries()) {
     const pin = entry.marker.getElement()?.querySelector(".site-pin");
     if (!pin) continue;
-    pin.classList.toggle("site-pin--active", key === focus.siteKey);
-    pin.classList.toggle("site-pin--inactive", key !== focus.siteKey);
+    const activeKeys = focus.siteKeys ?? [focus.siteKey];
+    const isActive = activeKeys.includes(key);
+    pin.classList.toggle("site-pin--active", isActive);
+    pin.classList.toggle("site-pin--inactive", !isActive);
   }
 
   for (const [key, { poly, leg }] of state.legPolys.entries()) {
@@ -676,6 +797,21 @@ function goTo(index, options = {}) {
   renderDossier(focus);
   highlightActive(focus);
   applyMateriaHighlightDecoration(); // markers were just re-classed; re-apply
+
+  if (
+    focus.corpus === "materia_medica"
+    && (focus.boundsLatLngs?.length ?? 0) > 1
+    && !state.exploreMode
+  ) {
+    const bounds = L.latLngBounds(focus.boundsLatLngs).pad(0.42);
+    const fitOptions = { maxZoom: 5.8, animate: !state.reduceMotion && !options.instant };
+    if (state.reduceMotion || options.instant) {
+      state.map.fitBounds(bounds, { ...fitOptions, animate: false });
+    } else {
+      state.map.flyToBounds(bounds, { ...fitOptions, duration: 1.2, easeLinearity: 0.28 });
+    }
+    return;
+  }
 
   if (focus.latLng && !state.exploreMode) {
     const targetZoom = targetZoomFor(focus);
@@ -847,6 +983,36 @@ function bindInputs() {
     }
   });
 
+  const materialSearch = document.getElementById("material-search");
+  if (materialSearch) {
+    materialSearch.addEventListener("input", (e) => {
+      if (!corpusIsMateria(state.corpusId)) return;
+      const value = e.target.value.trim();
+      state.materialSearchValue = value;
+      renderMaterialOptions(value);
+      if (!value) {
+        setView("all");
+        return;
+      }
+      const match = [...(state.data?.materia ?? [])].find((m) => {
+        return String(m.display_name).toLowerCase() === value.toLowerCase()
+          || String(m.greek_name ?? "").toLowerCase() === value.toLowerCase();
+      });
+      if (match?.view_id) {
+        setView(match.view_id);
+      }
+    });
+    materialSearch.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        materialSearch.value = "";
+        state.materialSearchValue = "";
+        renderMaterialOptions("");
+        setView("all");
+      }
+    });
+  }
+
   // Delegated corpus selector.
   document.querySelector(".corpus-control").addEventListener("click", (e) => {
     const btn = e.target.closest("[data-corpus]");
@@ -927,6 +1093,7 @@ function setView(viewId, options = {}) {
 
   drawRoute();
   renderStrip();
+  renderMaterialSelector();
   fitToView();
 
   let nextIndex = 0;
@@ -943,6 +1110,7 @@ async function setCorpus(corpusId, options = {}) {
   state.corpusId = corpusId;
   state.activeMateriaKey = null;
   state.highlightedPlaceKeys = new Set();
+  state.materialSearchValue = "";
 
   state.data = await loadCorpus(corpusId);
   const cfg = CORPORA[corpusId];
@@ -955,6 +1123,7 @@ async function setCorpus(corpusId, options = {}) {
   renderMasthead();
   renderCorpusButtons();
   renderRouteButtons();
+  renderMaterialSelector();
 
   setView(wantedView, { instant: options.instant ?? true });
 }

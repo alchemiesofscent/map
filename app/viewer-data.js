@@ -281,6 +281,16 @@
   function viewIdsForCorpus(corpusId, data) {
     const cfg = CORPORA[corpusId];
     const fromData = Object.keys(data?.routeViews?.views ?? {});
+    if (corpusIsMateria(corpusId)) {
+      const ids = [];
+      if (fromData.includes("all")) ids.push("all");
+      for (const material of data?.materia ?? []) {
+        if (material.view_id && fromData.includes(material.view_id)) {
+          ids.push(material.view_id);
+        }
+      }
+      return ids;
+    }
     if (cfg.viewOrder) {
       return cfg.viewOrder.filter((id) => fromData.includes(id));
     }
@@ -373,6 +383,74 @@
     }));
   }
 
+  function relationLabel(value) {
+    return String(value ?? "").replaceAll("_", " ");
+  }
+
+  function sortMateriaSites(sites) {
+    return [...sites].sort((a, b) => {
+      const ag = Number.isFinite(a.relation_group_rank) ? a.relation_group_rank : 90;
+      const bg = Number.isFinite(b.relation_group_rank) ? b.relation_group_rank : 90;
+      if (ag !== bg) return ag - bg;
+      const ao = Number.isFinite(a.claim_order) ? a.claim_order : 9999;
+      const bo = Number.isFinite(b.claim_order) ? b.claim_order : 9999;
+      if (ao !== bo) return ao - bo;
+      return String(a.place_label ?? "").localeCompare(String(b.place_label ?? ""));
+    });
+  }
+
+  function materiaPlaceClaims(sites) {
+    return sortMateriaSites(sites).map((site) => {
+      const primaryLink = (site.accepted_links ?? [])[0] ?? {};
+      return {
+        siteKey: site.site_key,
+        placeKey: site.place_key,
+        placeLabel: site.place_label ?? "",
+        placeSurface: site.place_surface ?? primaryLink.place_surface ?? "",
+        relation: site.relation ?? primaryLink.relation ?? "",
+        relationLabel: relationLabel(site.relation ?? primaryLink.relation ?? ""),
+        relationGroup: site.relation_group ?? primaryLink.relation_group ?? "",
+        relationGroupRank: site.relation_group_rank ?? primaryLink.relation_group_rank ?? 90,
+        relationGroupLabel: site.relation_group_label ?? primaryLink.relation_group_label ?? "",
+        qualifier: site.qualifier ?? primaryLink.qualifier ?? "",
+        claimGroup: site.claim_group ?? primaryLink.claim_group ?? "",
+        claimNote: site.claim_note ?? primaryLink.claim_note ?? "",
+        claimOrder: site.claim_order ?? primaryLink.claim_order ?? null,
+        evidencePhrase: site.evidence_phrase ?? primaryLink.evidence_phrase ?? "",
+        consensusConfidence: site.consensus_confidence ?? primaryLink.consensus_confidence ?? null,
+        reviewDecisionSource: site.review_decision_source ?? primaryLink.review_decision_source ?? "",
+        candidateId: site.candidate_id ?? primaryLink.candidate_id ?? "",
+        claimId: site.claim_id ?? primaryLink.claim_id ?? "",
+        warnings: primaryLink.warnings ?? [],
+        isBroadRegion: Boolean(site.is_broad_region),
+        hasUncertainCoordinates: Boolean(site.has_uncertain_coordinates),
+        broadRegionLabel: site.broad_region_label ?? "",
+        locationPrecision: site.location_precision ?? "",
+        coordinateSource: site.coordinates_source ?? "",
+        pleiadesUri: site.pleiades_uri ?? null,
+        pleiadesId: site.pleiades_id ?? null,
+        latLng: siteLatLng(site),
+      };
+    });
+  }
+
+  function materiaFocusChip(material, sites) {
+    const relations = new Set();
+    const evidence = [];
+    for (const site of sites) {
+      if (site.relation) relations.add(site.relation);
+      if (site.evidence_phrase) evidence.push(site.evidence_phrase);
+    }
+    return {
+      materiaKey: material?.materia_key ?? sites[0]?.materia_key ?? "",
+      displayName: material?.display_name ?? sites[0]?.display_name ?? "",
+      greekName: material?.greek_name ?? sites[0]?.greek_name ?? "",
+      sourceCitation: material?.source_citation ?? sites[0]?.source_citation ?? "",
+      relation: [...relations].map(relationLabel).join(" / "),
+      evidencePhrase: evidence.join(" — "),
+    };
+  }
+
   function galenFocusList(data, view, isPhoneViewport) {
     const mentionLimit = isPhoneViewport ? 2 : 4;
     return view.sites.map((site, idx) => {
@@ -411,46 +489,71 @@
   }
 
   function materiaMedicaFocusList(data, view) {
-    return view.sites.map((site, idx) => {
+    const sites = sortMateriaSites(view.sites ?? []);
+    return sites.map((site, idx) => {
+      const materiaKey = site.ingredient_key ?? site.materia_key ?? "";
+      const material = materiaKey
+        ? data.materiaByKey?.get(materiaKey)
+        : null;
+      const ingredientViewSites = data.routeViews?.views?.[materiaKey]?.sites
+        ?? sites.filter((row) => (row.ingredient_key ?? row.materia_key) === materiaKey);
+      const materialSites = sortMateriaSites(ingredientViewSites);
       const passage = site.passage_id
         ? data.passagesById?.get(site.passage_id)
         : null;
-      const material = site.materia_key
-        ? data.materiaByKey?.get(site.materia_key)
-        : null;
+      const currentClaim = materiaPlaceClaims([site])[0] ?? null;
+      const claims = materiaPlaceClaims(materialSites).map((claim) => ({
+        ...claim,
+        isActive: claim.siteKey === site.site_key,
+      }));
+      const activeClaim = claims.find((claim) => claim.isActive) ?? currentClaim ?? claims[0] ?? null;
+      const latLng = activeClaim?.latLng ?? siteLatLng(site);
+      const isBroad = Boolean(activeClaim?.isBroadRegion);
+      const uncertain = Boolean(activeClaim?.hasUncertainCoordinates);
       return {
         index: idx,
         corpus: "materia_medica",
         site,
+        sites: [site],
         siteKey: site.site_key,
+        siteKeys: [site.site_key],
         placeKey: site.place_key,
         kind: "materia",
         displayName: material?.display_name ?? site.display_name,
         greekName: material?.greek_name ?? site.greek_name ?? null,
-        placeLabel: site.place_label ?? "",
+        placeLabel: activeClaim?.placeLabel ?? site.place_label ?? "",
+        placeLabels: claims.map((claim) => claim.placeLabel),
         placeType: sitePlaceType(site),
         routeLabel: site.route_label ?? "",
         sourceCitation: site.source_citation ?? passage?.source_citation ?? "",
+        translationAuthority: passage?.translation_en_authority ?? "",
+        evidenceAuthority: passage?.evidence_authority ?? "",
         passageId: site.passage_id ?? null,
         entryId: site.entry_id ?? site.passage_id ?? null,
-        materiaKey: site.materia_key ?? null,
-        relation: site.relation ?? "",
-        evidencePhrase: site.evidence_phrase ?? "",
-        consensusConfidence: site.consensus_confidence ?? null,
-        reviewDecisionSource: site.review_decision_source ?? "",
-        candidateId: site.candidate_id ?? "",
-        broadRegionLabel: site.broad_region_label ?? "",
-        isBroadRegion: Boolean(site.is_broad_region),
-        hasUncertainCoordinates: Boolean(site.has_uncertain_coordinates),
-        locationPrecision: site.location_precision ?? "",
-        coordinateSource: site.coordinates_source ?? "",
-        pleiadesUri: site.pleiades_uri ?? null,
-        pleiadesId: site.pleiades_id ?? null,
+        materiaKey,
+        relation: activeClaim?.relationLabel ?? relationLabel(site.relation ?? ""),
+        evidencePhrase: activeClaim?.evidencePhrase ?? site.evidence_phrase ?? "",
+        consensusConfidence: activeClaim?.consensusConfidence ?? null,
+        reviewDecisionSource: activeClaim?.reviewDecisionSource ?? "",
+        candidateId: activeClaim?.candidateId ?? "",
+        claimId: activeClaim?.claimId ?? "",
+        broadRegionLabel: isBroad
+          ? activeClaim?.broadRegionLabel || "Broad region; representative Pleiades point."
+          : "",
+        isBroadRegion: isBroad,
+        hasUncertainCoordinates: uncertain,
+        locationPrecision: activeClaim?.locationPrecision ?? "",
+        coordinateSource: activeClaim?.coordinateSource ?? "",
+        pleiadesUri: activeClaim?.pleiadesUri ?? null,
+        pleiadesId: activeClaim?.pleiadesId ?? null,
         translation: passage?.translation_en ?? "",
         greekText: passage?.greek ?? "",
-        latLng: siteLatLng(site),
-        materia: materiaForSite(data, site),
+        latLng,
+        boundsLatLngs: latLng ? [latLng] : [],
+        materia: [materiaFocusChip(material, materialSites)].filter((row) => row.materiaKey),
         acceptedLinks: site.accepted_links ?? [],
+        activeClaim,
+        placeClaims: claims,
       };
     });
   }

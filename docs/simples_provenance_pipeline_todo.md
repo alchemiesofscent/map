@@ -1,25 +1,54 @@
 # Simples Provenance Pipeline Checklist
 
-Current stage: stage 7 complete; accepted links and map points derive from LLM consensus review.
+Current stage: Materia reset complete. The Materia Medica viewer data now derives
+five ingredient journeys from local TEI annotations.
 
-Status: Pleiades-first deterministic pipeline with an automated LLM consensus review stage. When `data/generated/simples/provenance_llm_adjudications.json` exists, final LLM consensus decisions are the accepted-link authority; `data/review/simples_provenance_review.csv` remains a readable audit surface.
+Status: TEI-first deterministic pipeline with a local `data/tei/` source
+boundary. Accepted Materia links come from annotated `placeName` claims, not
+from the old review queue, Pleiades mention candidates, or LLM adjudication
+sidecars.
 
-Last updated: 2026-05-13T02:17:00+02:00
+Last updated: 2026-05-14
 
 ## Implementation Rules
 
-- [x] `../aetius` is read-only input.
-- [x] Pleiades is the first place-name authority.
-- [x] Entry-label homonyms and lowercase ordinary-word Pleiades collisions are suppressed before candidate generation.
-- [x] Immediate alias/synonym formulae are suppressed before candidate generation.
-- [x] LLM adjudication uses two independent Codex CLI votes, with a third vote only on disagreement.
-- [x] No accepted provenance link without a final LLM `accept` decision or explicit human-review fallback.
-- [x] Every generated artifact has a checker.
+- [x] Source text is read only from `data/tei/`; annotated TEI is preferred when present.
+- [x] Greek TEI is evidence authority; generated English is display-only draft data.
+- [x] Old cached generated English is retired; draft display translations live in `data/review/materia_draft_translations.json`.
+- [x] Pleiades is the place authority.
+- [x] Arabia provenance claims use Pleiades `1001942`; accepted outputs must not emit `981506`.
+- [x] Accepted Materia claims are encoded as TEI `placeName` annotations with ingredient key, relation, claim group, qualifier, order, evidence phrase, and warnings.
+- [x] The manifest is grouped by ingredient keys, not by one source entry per route view.
+- [x] Generated Galen materia JSON is not an input to the Materia extraction path.
+- [x] Old review/LLM sidecars are not accepted-link authorities.
 - [x] Broad regions and uncertain coordinates are flagged in map output.
+- [x] Materia Medica stops are point-only ingredient journeys, not itinerary routes.
+
+## Current Pilot
+
+- Balsamum: Iudaea `687934`.
+- Cardamom: Commagene `658443`, Armenia `874350`, Bosphorus `520977`, India `50004`, Arabia `1001942`.
+- Calamus: India `50004`.
+- Schoinos: Nabataea `29677`, Arabia `1001942`, Libya `716588`.
+- Myrrh: Arabia `1001942`, Trogodytice `39435`, Minaei `39386`, Boeotia `540689`.
 
 ## Stages
 
-### 0. Baseline And Inputs
+### 0. Annotate And Check TEI
+
+Output path: `data/tei/annotated/tlg0656.tlg001.annotated.xml`.
+
+Commands:
+
+- `python3 scripts/simples/annotate_dioscorides_tei.py`
+- `python3 scripts/simples/check_tei_source_registry.py`
+
+Current counts:
+
+- Dioscorides Materia place annotations: 14.
+- Ingredient keys: 5.
+
+### 1. Build Ingredient Manifest
 
 Output path: `data/generated/simples/entry_manifest.json`.
 
@@ -27,120 +56,31 @@ Commands:
 
 - `python3 scripts/simples/build_pilot_manifest.py`
 - `python3 scripts/simples/check_pilot_manifest.py`
-- `git -C ../aetius status --short`
 
 Current counts:
 
-- Manifest entries: 83.
-- Galen materia context rows: 25.
-- Source CSV paths: 6.
-- `../aetius`: unmodified.
+- Ingredient journeys: 5.
+- Manifest entries: 6.
+- Source TEI paths: 1.
+- Galen materia context rows: 0.
+- Draft translation source: `data/review/materia_draft_translations.json`.
 
-### 1. Build Pleiades Name Gazetteer
+### 2. Normalize TEI Claims
 
-Output path: `data/generated/simples/pleiades_gazetteer.json`.
+Output path: `data/generated/simples/provenance_entry_claims.json`.
 
 Commands:
 
-- `python3 scripts/simples/build_pleiades_gazetteer.py`
-- `python3 scripts/simples/check_pleiades_gazetteer.py`
+- `python3 scripts/simples/build_entry_provenance_claims.py`
+- `python3 scripts/simples/check_entry_provenance_claims.py`
 
 Current counts:
 
-- Total Pleiades place rows: 42,168.
-- Lookup-name records: 93,472.
-- Greek-script names: 3,516.
-- Transliterated names: 42,980.
-- Ambiguous lookup keys: 3,174.
+- Accepted TEI claims: 14.
+- Ingredients with claims: 5.
+- Entries with claims: 6.
 
-### 2. Scan Source Text For Pleiades Names
-
-Output path: `data/generated/simples/pleiades_name_mentions.json`.
-
-Commands:
-
-- `python3 scripts/simples/scan_pleiades_name_mentions.py`
-- `python3 scripts/simples/check_pleiades_name_mentions.py`
-
-Current counts:
-
-- Entries scanned: 83.
-- Greek-script lookup keys scanned: 3,324.
-- Mentions: 5.
-- Entries with mentions: 5.
-- Ambiguous mentions: 0.
-- High-risk mentions: 0.
-- Suppressed entry-label matches: 23.
-- Suppressed lowercase ordinary-word matches: 30.
-- Suppressed alias/synonym matches: 1.
-- Mentions by author: `dsc` 5.
-- Mentions by field: `greek_entry_text` 5.
-
-Debug note: the old 59-mention output was dominated by false positives. The simple label `ἀβρότονον/ἁβρότονον` matched Pleiades Abrotonum/Sabratha, and ordinary lowercase words such as `λευκή`, `μέλαινα`, `παλαιά`, and `ἔλαιον` matched Pleiades names. The scanner now requires uppercase proper-name surface forms, rejects exact entry-label matches, and suppresses immediate alias formulae such as "some call it Herakleion."
-
-### 3. Filter Mentions Into Provenance Candidates
-
-Output path: `data/generated/simples/provenance_candidates.json`.
-
-Commands:
-
-- `python3 scripts/simples/build_provenance_candidates.py`
-- `python3 scripts/simples/check_provenance_candidates.py`
-
-Current counts:
-
-- Mentions in: 5.
-- Candidates: 5.
-- Relation counts: `grows_at` 4, `acquired` 1.
-- Author counts: `dsc` 5.
-- Certainty counts: `possible` 5.
-
-Current candidate set:
-
-- `σχοῖνος` grows at Arabia.
-- `βάλσαμον` grows at Iudaea.
-- `ἀγαρικόν` grows at Galatia.
-- `ἁβρότονον` grows at Galatia.
-- `καρδάμωμον` grows at Arabia.
-
-### 4. Readable Review Queue
-
-Output path: `data/review/simples_provenance_review.csv`.
-
-Commands:
-
-- `python3 scripts/simples/build_provenance_review_queue.py`
-- `python3 scripts/simples/check_provenance_review_queue.py`
-
-Current counts:
-
-- Review rows: 5.
-- Undecided rows: 5.
-- Decisions: `undecided` 5.
-
-Notes: the queue intentionally starts blank and remains useful for inspection. The automated accepted-link path uses LLM consensus when the JSON adjudication sidecar exists.
-
-### 5. LLM Consensus Review
-
-Output path: `data/generated/simples/provenance_llm_adjudications.json`.
-
-Commands:
-
-- `python3 scripts/simples/build_llm_provenance_adjudications.py --timeout 900`
-- `python3 scripts/simples/check_llm_provenance_adjudications.py`
-
-Current counts:
-
-- Candidates in: 5.
-- Adjudications: 5.
-- Votes: 10.
-- Third votes: 0.
-- Final accepts: 5.
-- Final decisions: `accept` 5.
-
-Notes: four adjudications were reused from the interrupted 59-candidate run because their candidate IDs and evidence packages remained valid. The stale false-positive adjudications were dropped when the sidecar was rewritten for the cleaned five-candidate set; one new vote pair was run for the corrected balsam/Iudaea candidate.
-
-### 6. Accepted Provenance Links
+### 3. Accepted Provenance Links
 
 Output path: `data/generated/simples/provenance_links.json`.
 
@@ -151,15 +91,11 @@ Commands:
 
 Current counts:
 
-- Review rows/adjudications: 5.
-- Review decisions: `accept` 5.
-- Accepted links: 5.
-- Skipped invalid accept rows: 0.
-- Accepted by place: `Arabia (province)` 2, `Galatia` 2, `Iudaea (region)` 1.
+- Accepted links: 14.
+- Source mode: `tei_placeName_claims`.
+- Accepted by ingredient: Cardamom 5, Myrrh 4, Schoinos 3, Balsamum 1, Calamus 1.
 
-Notes: `review_decision_source` is `data/generated/simples/provenance_llm_adjudications.json`; accepted links include consensus confidence and vote trace IDs.
-
-### 7. Map-Ready Output
+### 4. Map-Ready Output
 
 Output path: `data/generated/simples/provenance_map_points.json`.
 
@@ -170,21 +106,41 @@ Commands:
 
 Current counts:
 
-- Accepted links in: 5.
-- Map points: 5.
+- Accepted links in: 14.
+- Map points: 14.
 - Null-coordinate points: 0.
-- Broad-region points: 5.
+- Broad-region points: 13.
 
-Notes: all five current map points are broad regions and are flagged as such rather than treated as precise point geography.
+### 5. Materia Medica Viewer Data
+
+Output path: `data/generated/materia_medica/`.
+
+Commands:
+
+- `python3 scripts/simples/build_materia_medica_viewer.py`
+- `python3 scripts/simples/check_materia_medica_viewer.py`
+
+Current counts:
+
+- Places: 11.
+- Materia journeys: 5.
+- Passages: 6.
+- Sites: 14.
+- Ingredient views: 5 plus the `all` overview.
+- Drawable line points: 0.
 
 ## Stop Conditions
 
-- Stop if `../aetius` has any modified or untracked files.
-- Stop if Pleiades dump CSVs are unavailable and cannot be fetched with existing tooling.
-- Stop if a generated artifact fails its checker.
-- Stop before promoting any candidate to `provenance_links.json` unless the LLM consensus sidecar has a final `accept` with a candidate Pleiades ID, or the fallback review queue contains explicit `accept` decisions with valid accepted Pleiades IDs.
+- Stop if a source path escapes `data/tei/`.
+- Stop if an accepted claim lacks a Pleiades `ref`.
+- Stop if an accepted claim, link, map point, or viewer site emits Pleiades `981506` for Arabia.
+- Stop if generated English is used as extraction evidence.
+- Stop if `entry_manifest.json` repopulates English from old generated caches such as `derived_display_cache`.
+- Stop if `provenance_links.json` cites old review or LLM sidecars as its authority.
 - Stop before treating a broad region or null-coordinate place as a precise map point.
 
-## Last Report
+## Add-More Checklist
 
-Stage 7 completed at 2026-05-13T02:17:00+02:00 after debugging the false-positive scan behavior. The scanner now suppresses exact entry-label homonyms, lowercase ordinary-word Pleiades collisions, and immediate alias formulae before candidate generation. The cleaned pipeline has 5 candidates, 5 LLM consensus accepts, 5 accepted links, and 5 broad-region map points.
+See `docs/materia_tei_ingredient_journeys.md` for the current "how to add the
+rest" path: choose ingredient, annotate TEI, add display-only translation if
+needed, rebuild, verify no stale sidecars, and inspect the viewer.

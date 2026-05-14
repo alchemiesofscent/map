@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "registry_id": "local-tei-source-registry",
+    "source_boundary": "data/tei",
+    "notes": [
+      "The simples provenance pipeline reads TEI only from this repository.",
+      "When annotated_path exists, it is the preferred source for extraction.",
+      "Greek TEI is evidence authority; generated English remains display-only downstream."
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "dioscorides_de_materia_medica",
+      "witness_slug": "dsc",
+      "author": "dsc",
+      "author_label": "Dioscorides",
+      "work": "De materia medica",
+      "cts_urn": "urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1",
+      "raw_path": "data/tei/tlg0656.tlg001.1st1K-grc1.xml",
+      "annotated_path": "data/tei/annotated/tlg0656.tlg001.annotated.xml",
+      "entry_granularity": "chapter",
+      "enabled": true
+    },
+    {
+      "source_id": "galen_simplicium_medicamentorum",
+      "witness_slug": "gal_smt",
+      "author": "gal_smt",
+      "author_label": "Galen",
+      "work": "De simplicium medicamentorum",
+      "cts_urn": "urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1",
+      "raw_path": "data/tei/tlg0057.tlg075.1st1K-grc1.xml",
+      "annotated_path": "data/tei/annotated/tlg0057.tlg075.annotated.xml",
+      "entry_granularity": "paragraph",
+      "enabled": true
+    },
+    {
+      "source_id": "galen_de_antidotis",
+      "witness_slug": "gal_antid",
+      "author": "gal_antid",
+      "author_label": "Galen",
+      "work": "De antidotis",
+      "cts_urn": "urn:cts:greekLit:tlg0057.tlg078.1st1K-grc1",
+      "raw_path": "data/tei/tlg0057.tlg078.1st1K-grc1.xml",
+      "annotated_path": "data/tei/annotated/tlg0057.tlg078.annotated.xml",
+      "entry_granularity": "paragraph",
+      "enabled": true
+    }
+  ]
+}

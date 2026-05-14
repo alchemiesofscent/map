@@ -57,6 +57,20 @@
 
       <div class="view-control" role="group" aria-label="Route view" id="view-control">
         <div class="view-control__routes" id="view-control-routes"></div>
+        <div class="material-control" id="material-control" hidden>
+          <label class="material-control__label" for="material-search">Material</label>
+          <input
+            class="material-control__input"
+            id="material-search"
+            type="search"
+            list="material-options"
+            autocomplete="off"
+            minlength="1"
+            data-suggest-min-chars="1"
+            placeholder="Search"
+          />
+          <datalist id="material-options"></datalist>
+        </div>
         <span class="view-control__divider" aria-hidden="true"></span>
         <label class="view-control__explore">
           <input type="checkbox" id="toggle-explore" />
