@@ -14,9 +14,10 @@
   (async function () {
     const contentFiles = ["content-1.html","content-2.html","content-3.html"];
     const scriptFiles = [];
+    const assetVersion = "20260812-1";
     async function readParts(files) {
       return Promise.all(files.map(async function (file) {
-        const response = await fetch(file);
+        const response = await fetch(file + "?v=" + encodeURIComponent(assetVersion));
         if (!response.ok) throw new Error("Could not load " + file + ": " + response.status);
         return response.text();
       }));
