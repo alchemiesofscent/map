@@ -4,17 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
   <title>Ingredients of the House of Mendes — dossier and interactive map</title>
-  <meta name="description" content="A single-page research dossier, recipe catalogue, and interactive provenance map for Mendesian, Metopion, and Susinum perfumes.">
+  <meta name="description" content="A research dossier and ingredient catalogue for Mendesian, Metopion, and Susinum perfumes, with a separate interactive provenance map.">
   <link rel="stylesheet" href="site.css">
-  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+  
 </head>
 <body>
   <div id="site-root" role="status" aria-live="polite">Loading the House of Mendes dossier…</div>
   <script>
   (async function () {
-    const contentFiles = ["content-1.html","content-2.html","content-3.html","content-4.html"];
-    const scriptFiles = ["app-1.js","app-2.js","app-3.js"];
+    const contentFiles = ["content-1.html","content-2.html","content-3.html"];
+    const scriptFiles = ;
     async function readParts(files) {
       return Promise.all(files.map(async function (file) {
         const response = await fetch(file);
@@ -26,7 +25,7 @@
     const root = document.getElementById("site-root");
     root.insertAdjacentHTML("beforebegin",loaded[0].join(""));
     root.remove();
-    new Function(loaded[1].join(""))();
+    if (scriptFiles.length) new Function(loaded[1].join(""))();
   }()).catch(function (error) {
     console.error(error);
     const root = document.getElementById("site-root");
