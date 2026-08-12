@@ -924,6 +924,7 @@
         width: 100%;
         max-width: 100%;
         height: auto;
+        aspect-ratio: auto 4 / 3;
         object-fit: contain;
       }
       .map-section { margin-inline: -12px; }
