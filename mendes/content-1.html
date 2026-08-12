@@ -4,7 +4,7 @@
       <strong>House of Mendes</strong>
       <a href="#ingredients-of-the-house-of-mendes">Introduction</a>
       <a href="#executive-summary-for-allyson">Executive summary</a>
-      <a href="#map-section">Interactive map</a>
+      <a href="map/">Interactive map</a>
       <a href="#part-i-the-recipes-with-citations-and-quantities">Recipes</a>
       <a href="#part-ii-ingredient-catalogue">Ingredients</a>
       <a href="#part-iii-what-perfume-cost-and-who-kept-the-books">Costs &amp; records</a>
@@ -154,187 +154,281 @@
 <hr />
 
     </article>
-
-    <div class="map-divider" aria-hidden="true">
+    <section class="map-launch" aria-labelledby="map-launch-title">
       <p class="eyebrow">Interactive research map</p>
-    </div>
-    <section id="map-section" class="map-section" aria-label="Interactive ingredient provenance map">
-
-    <header class="masthead">
-      <div>
-        <p class="eyebrow">Working reference · National Geographic research support</p>
-        <h1>Ancient ingredient provenances converging on Mendes</h1>
-        <p class="dek">What Greek, Latin, and Egyptian texts say—not a modern botanical distribution map. Source disagreements remain separate; source silence remains visible.</p>
-      </div>
-      <div class="stamp">
-        <strong>Alchemies of Scent</strong>
-        Institute of Philosophy, CAS / IOCB Prague<br>
-        Evidence pass: 10 August 2026
-      </div>
-    </header>
-
-    <div class="map-experience">
-    <div class="toolbar mobile-sheet" id="layers-panel" data-mobile-panel="layers" aria-label="Map controls">
-      <div class="mobile-sheet-header">
-        <span class="mobile-sheet-handle" aria-hidden="true"></span>
-        <div class="mobile-sheet-title-row">
-          <div>
-            <span class="mobile-sheet-kicker">Map panel</span>
-            <strong id="layers-panel-title">Layers</strong>
-          </div>
-          <button type="button" class="mobile-sheet-close" data-mobile-panel-close aria-label="Close layers panel">Close</button>
-        </div>
-      </div>
-      <span class="toolbar-label">Perfume layers</span>
-      <label class="toggle" style="--toggle-color:var(--mendesian)">
-        <input type="checkbox" value="m" checked>
-        <span class="toggle-dot"></span> Dark Mendesian
-      </label>
-      <label class="toggle" style="--toggle-color:var(--metopion)">
-        <input type="checkbox" value="t" checked>
-        <span class="toggle-dot"></span> Metopion
-      </label>
-      <label class="toggle" style="--toggle-color:var(--susinum)">
-        <input type="checkbox" value="s" checked>
-        <span class="toggle-dot"></span> Susinum
-      </label>
-      <div class="method-key" aria-label="Evidence key">
-        <span class="key-item"><span class="key-shape ancient"></span> ancient-attested claim</span>
-        <span class="key-item"><span class="key-shape modern"></span> inference / modern correction</span>
-        <span class="key-item"><span class="key-shape theology"></span> theological provenance</span>
-      </div>
-    </div>
-
-    <div class="map-shell">
-      <div class="mobile-map-header" aria-hidden="true">
-        <div>
-          <span>Ancient ingredient provenance</span>
-          <strong>Routes to Mendes</strong>
-        </div>
-        <div class="mobile-map-count"><span id="mobile-visible-count">0</span> claims</div>
-      </div>
-      <div class="map-wrap">
-        <div class="map-tools" aria-label="Map navigation">
-          <div class="zoom-controls" role="group" aria-label="Map zoom controls">
-            <button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
-            <button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
-            <button type="button" id="zoom-reset" class="zoom-reset" aria-label="Reset map view">Reset</button>
-            <output id="zoom-level" class="zoom-level" aria-label="Current zoom level">100%</output>
-          </div>
-          <label class="explore-control">
-            <input type="checkbox" id="explore-map">
-            <span>Explore map</span>
-          </label>
-          <p class="map-gesture-hint" id="map-gesture-hint">Use +/−, or enable Explore map to drag and wheel-zoom.</p>
-        </div>
-        <svg id="map" viewBox="0 0 900 710" preserveAspectRatio="xMidYMid slice" role="group" aria-roledescription="interactive provenance map" aria-labelledby="map-title map-desc" aria-describedby="map-gesture-hint">
-          <title id="map-title">Ancient ingredient provenance claims and conventional routes to Mendes</title>
-          <desc id="map-desc">An interactive map of the eastern Mediterranean, Red Sea, Arabia, and India. Select a point for its Greek ingredient label, source citation, and evidence note.</desc>
-        </svg>
-      </div>
-      <aside id="detail" class="mobile-sheet" data-mobile-panel="details" aria-labelledby="details-panel-title">
-        <div class="mobile-sheet-header">
-          <span class="mobile-sheet-handle" aria-hidden="true"></span>
-          <div class="mobile-sheet-title-row">
-            <div>
-              <span class="mobile-sheet-kicker">Selected provenance</span>
-              <strong id="details-panel-title">Details</strong>
-            </div>
-            <button type="button" class="mobile-sheet-close" data-mobile-panel-close aria-label="Close details panel">Close</button>
-          </div>
-        </div>
-        <div id="detail-content" class="detail-content mobile-sheet-body" aria-live="polite">
-          <p class="detail-kicker">How to read the map</p>
-          <h2>Select a provenance point</h2>
-          <p class="detail-gloss">The highlighted path is a conventional corridor, not a route attested for that ingredient.</p>
-          <p class="detail-copy">Solid circles reproduce an ancient source claim. Dashed diamonds show either a modern correction or a working supply inference where the ancient recipe is silent. The gold halo is theological language, deliberately not pinned as literal geography.</p>
-          <div class="detail-citation">Every selectable point includes its source citation here and in its map tooltip.</div>
-          <p class="detail-hint">Keyboard: tab to a point and press Enter. Recipe colors appear as small satellites around each evidence marker.</p>
-        </div>
-      </aside>
-
-      <section id="search-panel" class="mobile-sheet mobile-only-sheet" data-mobile-panel="search" aria-labelledby="search-panel-title" aria-hidden="true">
-        <div class="mobile-sheet-header">
-          <span class="mobile-sheet-handle" aria-hidden="true"></span>
-          <div class="mobile-sheet-title-row">
-            <div>
-              <span class="mobile-sheet-kicker">Find a source claim</span>
-              <strong id="search-panel-title">Search</strong>
-            </div>
-            <button type="button" class="mobile-sheet-close" data-mobile-panel-close aria-label="Close search panel">Close</button>
-          </div>
-        </div>
-        <div class="mobile-sheet-body">
-          <label class="mobile-search-label" for="mobile-search-input">Ingredient, place, or ancient source</label>
-          <input type="search" id="mobile-search-input" class="mobile-search-input" placeholder="Try myrrh, Petra, Pliny…" autocomplete="off" spellcheck="false">
-          <p id="mobile-search-summary" class="mobile-search-summary" aria-live="polite"></p>
-          <ul id="mobile-search-results" class="mobile-search-results"></ul>
-        </div>
-      </section>
-
-      <section id="info-panel" class="mobile-sheet mobile-only-sheet" data-mobile-panel="info" aria-labelledby="info-panel-title" aria-hidden="true">
-        <div class="mobile-sheet-header">
-          <span class="mobile-sheet-handle" aria-hidden="true"></span>
-          <div class="mobile-sheet-title-row">
-            <div>
-              <span class="mobile-sheet-kicker">Reading the map</span>
-              <strong id="info-panel-title">Info &amp; sources</strong>
-            </div>
-            <button type="button" class="mobile-sheet-close" data-mobile-panel-close aria-label="Close info panel">Close</button>
-          </div>
-        </div>
-        <div class="mobile-sheet-body mobile-info-body">
-          <p><strong>Evidence classes.</strong> Solid circles are ancient-attested claims; dashed diamonds are inference or modern correction; gold double rings mark theological provenance.</p>
-          <p><strong>Route caution.</strong> Every sea, land, and Nile corridor is conventional—not attested per ingredient.</p>
-          <p><span id="mobile-info-visible-count">0</span> visible provenance claims across <span id="mobile-info-ingredient-count">0</span> recipe materials.</p>
-          <div class="mobile-reference-links" aria-label="Full research sections">
-            <button type="button" data-mobile-jump="index-title">Ingredient index</button>
-            <button type="button" data-mobile-jump="sources-title">Sources</button>
-            <button type="button" data-mobile-jump="unverified-title">Unverified claims</button>
-          </div>
-          <details>
-            <summary>Sources and editions</summary>
-            <ol id="mobile-sources-list" class="mobile-source-list"></ol>
-          </details>
-          <details>
-            <summary>Claims not verified</summary>
-            <ul id="mobile-unverified-list" class="mobile-unverified-list"></ul>
-          </details>
-        </div>
-      </section>
-
-      <button type="button" class="mobile-panel-backdrop" aria-label="Close open map panel" hidden></button>
-      <nav class="mobile-panel-nav" aria-label="Map panels">
-        <button type="button" data-mobile-panel-target="search" aria-controls="search-panel" aria-expanded="false"><span aria-hidden="true">⌕</span>Search</button>
-        <button type="button" data-mobile-panel-target="layers" aria-controls="layers-panel" aria-expanded="false"><span aria-hidden="true">≡</span>Layers</button>
-        <button type="button" data-mobile-panel-target="details" aria-controls="detail" aria-expanded="false"><span aria-hidden="true">●</span>Details</button>
-        <button type="button" data-mobile-panel-target="info" aria-controls="info-panel" aria-expanded="false"><span aria-hidden="true">i</span>Info</button>
-      </nav>
-    </div>
-    </div>
-
-    <div class="map-caption">
-      <p><strong>Route caution.</strong> Sea, land, and Nile corridors are conventional reconstructions only: Red Sea ports → Coptos → Nile; Petra → Gaza; Mediterranean lanes; and Syria overland. No route is invented for workshop-local items.</p>
-      <p class="map-count"><span id="visible-count">0</span> visible claims · <span id="ingredient-count">0</span> recipe materials</p>
-    </div>
-
-    <section class="section" aria-labelledby="index-title">
-      <h2 id="index-title">Ingredient and claim index</h2>
-      <p class="section-intro">Greek labels are primary. Open an ingredient to see every plotted source claim and its citation; selecting a place returns to the same point on the map.</p>
-      <div id="claim-index"></div>
+      <h2 id="map-launch-title">Explore the ingredient provenances on their own page</h2>
+      <p>The dedicated map has more room for zooming, searching, filters, source notes, and touch controls. It opens as a full map experience and links back to this catalogue.</p>
+      <a class="map-launch-button" href="map/">Open the full interactive map <span aria-hidden="true">→</span></a>
     </section>
 
-    <section class="section" aria-labelledby="sources-title">
-      <h2 id="sources-title">Sources and editions</h2>
-      <p class="section-intro">Ancient citations on the dots use book and chapter divisions. Page and line anchors remain in the verified local editions and structured recipe records.</p>
-      <ol class="sources-grid">
-        <li><strong>Dioscorides, <em>De materia medica</em></strong>, ed. Wellmann: 1.6 (cardamom); 1.13–14 (cassia/cinnamon); 1.17–18 (schoinos/kalamos); 1.26 (saffron); 1.52 (Susinum); 1.59 (Metopion and Mendesian); 1.64 (myrrh); 1.71 (terebinth resin); 3.83–84 (galbanum and ammoniacum as distinct substances); 4.157 (balanos, without a provenance claim).</li>
-        <li><strong>Theophrastus, <em>Historia plantarum</em></strong> 9.7.1–3: the Lebanon valley, Syria, Arabia, India, and Media provenance reports.</li>
-        <li><strong>Herodotus, <em>Histories</em></strong> 3.107–111: the Arabian claim for cassia and cinnamon, retained here as an ancient claim rather than harmonized with later evidence.</li>
-        <li><strong>Pliny the Elder, <em>Naturalis historia</em></strong> 12.50; 12.66–70; 12.82–98; 12.100–107; 12.111–126; 13.5–11: cardamom, myrrh grades, cinnamon/cassia, balanos grades, aromatic reed/rush, hammoniacum from the <em>metopon</em> tree near the oracle of Hammon, balsam, galbanum, and Egyptian perfume manufacture.</li>
-        <li><strong>Josephus, <em>Bellum Judaicum</em></strong> 4.469: Jericho as a producer of opobalsam, alongside henna and myrobalanos.</li>
-        <li><strong>Paul of Aegina, <em>Epitome medica</em></strong> 7.20.8, 7.20.16, 7.20.31, ed. Heiberg: Susinum, Metopion, and Mendesian recipe witnesses; 7.20.16 explicitly specifies Attic honey.</li>
-        <li><strong>Aëtius of Amida, <em>Libri medicinales</em></strong> 1.125–126, ed. Olivieri: Metopion and Mendesian ingredient witnesses; no additional ingredient-origin claims were silently inferred from the recipe headings.</li>
-        <li><strong>Galen, <em>De antidotis</em></strong> 1.14 (Kühn XIV 71–72): καρπήσιον most abundant and cheapest at Side in Pamphylia.</li>
-        <li><strong>Edfu II 204–208</strong> and Wilde, Míčková, Pehal &amp; Coughlin, “<a href="https://doi.org/10.1515/zaes-2023-0021">The Antu-List Reconsidered</a>,” <em>ZÄS</em> 152.1 (2025), 117–135: “Things of the Land of god” and explicitly divine origins for temple aromatics.</li>
-        <li><strong>Modern correction register.</strong> Gilboa &amp; Namdar, “<a href="https://www.cambridge.org/core/journals/radiocarbon/article/abs/on-the-beginnings-of-south-asian-spice-trade-with-the-mediterranean-region-a-review/57B7230DFD38F6B035420F1D11A93210">On the Beginnings of South Asian Spice Trade</a>,” <em>Radiocarbon</em> 57.2 (2015), 265–283; and Kew, <a href="https://powo.science.kew.org/taxon/463752-1">Plants of the World Online</a>. These correct the broad source-zone eastward without forcing Greek κἀσσία or κινάμωμον onto a single modern species.</li>
+    <article class="dossier dossier-continuation" aria-label="Recipes, ingredient catalogue, costs, and sourcing">
+<h1 id="part-i-the-recipes-with-citations-and-quantities">Part I — The recipes, with citations and quantities</h1>
+<h2 id="the-dark-mendesian-mendesion">1. The dark Mendesian (Μενδήσιον, <em>Mendēsion</em>)</h2>
+<p><strong>The name.</strong> From <a href="https://en.wikipedia.org/wiki/Mendes">Mendes</a> in the <a href="https://en.wikipedia.org/wiki/Nile_Delta">Nile Delta</a>. Paul's etymology: &quot;so called because it was discovered in Egypt, where the <em>mendes</em> (ram) is also raised&quot; (7.20.31). Mendes kept its perfume pedigree for centuries — the <a href="https://en.wikipedia.org/wiki/Suda">Suda</a> remembers <strong><a href="https://en.wikipedia.org/wiki/Manetho">Manetho</a>, high priest of Mendes</strong>, as author of a treatise on preparing <a href="https://en.wikipedia.org/wiki/Kyphi">kyphi</a>: recipe-writing as a priestly credential.</p>
+<p>Three independent recipe witnesses, in chronological order:</p>
+<table>
+<thead>
+<tr>
+<th>Witness</th>
+<th>Date</th>
+<th>Citation</th>
+<th>Character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dioscorides, <em>MM</em> 1.59.3</td>
+<td>1st c. CE</td>
+<td>Wellmann 55.5–55.10</td>
+<td>Qualitative: the classic four ingredients, no weights</td>
+</tr>
+<tr>
+<td>Aëtius, <em>Libr. med.</em> 1.126</td>
+<td>6th c. CE</td>
+<td>Olivieri 63.10–63.13</td>
+<td>Qualitative, with the cinnamon variant marked ἔνιοι (&quot;some&quot;)</td>
+</tr>
+<tr>
+<td>Paul of Aegina, <em>Epitome</em> 7.20.31</td>
+<td>7th c. CE</td>
+<td>Heiberg 2.388.21–2.389.2</td>
+<td>The full workshop recipe, with quantities and timings</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dioscorides' base list</strong> (<em>MM</em> 1.59.3): balanos oil (ἔλαιον βαλάνινον), myrrh (σμύρνα), cassia (κασσία), resin (ῥητίνη). He adds that some makers throw in a little cinnamon after the ingredients are weighed out — &quot;uselessly&quot; (ἀνωφελῶς): &quot;ingredients not worked in together do not give up their power.&quot;</p>
+<p><strong>Aëtius</strong> (1.126) carries the same four (his base oil is named μυροβαλάνινον, &quot;ben-nut oil&quot; — the same balanos base under its other name) and keeps the cinnamon as a marked variant: &quot;but some, after the astringing-step, also sprinkle in cinnamon.&quot;</p>
+<p><strong>Paul's quantified recipe</strong> (7.20.31):</p>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Greek</th>
+<th>Amount</th>
+<th>Modern equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Balanos oil</td>
+<td>ἐλαίου βαλανίνου</td>
+<td>10 litrai (another copy: 10 xestai)</td>
+<td>~3.3 kg (or ~5.5 L)</td>
+</tr>
+<tr>
+<td>Myrrh</td>
+<td>σμύρνης</td>
+<td>3 ounces</td>
+<td>~82 g</td>
+</tr>
+<tr>
+<td>Quill cassia</td>
+<td>κασσίας σύριγγος</td>
+<td>3 ounces</td>
+<td>~82 g</td>
+</tr>
+<tr>
+<td>Terebinth resin</td>
+<td>τερεβινθίνης</td>
+<td>1 litra (some: 10)</td>
+<td>~327 g</td>
+</tr>
+<tr>
+<td>Cinnamon</td>
+<td>κιναμώμου</td>
+<td>3 ounces</td>
+<td>~82 g</td>
+</tr>
+</tbody>
+</table>
+<p><em>A one-line textual note:</em> the Greek (σμύρνης, κασσίας, σύριγγος ἀνὰ οὐγγίας γ′) can be segmented as either two aromatics (&quot;myrrh; quill cassia — 3 oz each&quot;) or three (&quot;myrrh; cassia; syrinx — 3 oz each&quot;). We print the perfumers' reading, quill cassia, since σῦριγξ (&quot;pipe&quot;) is the market grade of cassia sold in rolled tubes (see the catalogue entry below); our database records both segmentations.</p>
+<p><strong>Process</strong> (Paul 7.20.31): explicitly <em>not</em> boiled (τοῦτο οὐχ ἕψεται). The dry aromatics are put into the oil and stirred for <strong>sixty days</strong>; then the terebinth, melted, is added into a portion of the oil; the whole is stirred <strong>seven days more</strong> and stored. A cold, slow maceration — two months of patience, no heat. Paul makes this a class marker elsewhere in the same chapter: some perfumes &quot;do not admit boiling at all, but are only mixed — like the Mendesian&quot; (7.20.2). No fire anywhere in the making: the patience <em>was</em> the technique.</p>
+<p><strong>Color:</strong> Pliny's workshop-adulteration catalogue (<em>NH</em> 13) notes that oil cut with Mendesian turns <strong>black</strong> (with susinum, greasy; with rose, white). This is the dark perfume of the pair.</p>
+<p><strong>The Mendesian in the ledgers.</strong> The most celebrated Egyptian perfume of the literary tradition survives in the documentary papyri exactly <strong>once</strong> — as a stock-book. P.Cair.Zen. 1 59089 (<a href="https://en.wikipedia.org/wiki/Zenon_Archive">Zenon archive</a>, 258/7 BCE): received at <a href="https://en.wikipedia.org/wiki/Memphis,_Egypt">Memphis</a>, &quot;of Mendesian perfume: <strong>lead alabastra</strong> of one kotylē, 26; of two kotylai, 1; of half a kotylē, 5&quot; — then issued over five months at Alexandria, by name and by the half-kotylē: &quot;to Theudoros the orderly, 1 alabastron of half a kotylē … to Echetodoros the <a href="https://en.wikipedia.org/wiki/Byzantium">Byzantine</a>, 2 alabastra of one kotylē.&quot; Standard vessel sizes, named recipients, a slow issue rate: luxury as controlled inventory.</p>
+<h2 id="metopion-metopion">2. Metopion (μετώπιον, <em>metōpion</em>)</h2>
+<table>
+<thead>
+<tr>
+<th>Witness</th>
+<th>Date</th>
+<th>Citation</th>
+<th>Character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dioscorides, <em>MM</em> 1.59.1–2</td>
+<td>1st c. CE</td>
+<td>Wellmann 54.10–55.5</td>
+<td>Full ingredient list, quality test, pharmacology; no weights</td>
+</tr>
+<tr>
+<td>Pliny, <em>NH</em> 13.8</td>
+<td>1st c. CE</td>
+<td>—</td>
+<td>Agreeing list; specifies the resin as terebinth</td>
+</tr>
+<tr>
+<td>Aëtius, <em>Libr. med.</em> 1.125</td>
+<td>6th c. CE</td>
+<td>Olivieri 63.3–63.9</td>
+<td>The same recipe still current five centuries on; no weights</td>
+</tr>
+<tr>
+<td>Paul of Aegina, <em>Epitome</em> 7.20.16</td>
+<td>7th c. CE</td>
+<td>Heiberg 2.385.1–2.385.11</td>
+<td><strong>The weighed recipe</strong> — filed under &quot;Ἀμυγδάλινον, which is also metopion&quot;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dioscorides' list</strong> (<em>MM</em> 1.59.1) — eleven components, the maximalist against the Mendesian's minimalist five:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Ingredient</th>
+<th>Greek</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Bitter almonds (the pressed oil is the base)</td>
+<td>ἀμύγδαλα πικρά</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Omphacine oil (unripe-fruit oil)</td>
+<td>ἔλαιον ὀμφάκινον</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Cardamom</td>
+<td>καρδάμωμον</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Aromatic rush</td>
+<td>σχοῖνος</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Aromatic reed</td>
+<td>κάλαμος</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Honey</td>
+<td>μέλι</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Wine</td>
+<td>οἶνος</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Myrrh</td>
+<td>σμύρνα</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Balsam seed</td>
+<td>βαλσάμου καρπός</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://en.wikipedia.org/wiki/Galbanum">Galbanum</a></td>
+<td>χαλβάνη</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Resin (terebinth, per Pliny)</td>
+<td>ῥητίνη</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The weighed recipe.</strong> Dioscorides, Pliny and Aëtius all transmit metopion without weights — the descriptive-perfumery register. But the full workshop formula survives, easy to miss because Paul of Aegina files it under the almond-oil heading: <strong>Ἀμυγδάλινον, ὃ καὶ μετώπιον</strong> — &quot;Almond oil, which is also metopion&quot; (<em>Epitome</em> 7.20.16, Heiberg 2.385.1–2.385.11), opening with the same galbanum etymology (&quot;the Egyptians, having invented this oil, named it metopion because it takes galbanum&quot;). The only quantified metopion in the record, matching Dioscorides item for item:</p>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Greek</th>
+<th>Amount</th>
+<th>Modern equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Omphacine oil (the base)</td>
+<td>ἐλαίου ὀμφακίνου</td>
+<td>20 xestai</td>
+<td>~11 L</td>
+</tr>
+<tr>
+<td>Bitter almonds</td>
+<td>ἀμυγδάλων πικρῶν</td>
+<td>2 litrai</td>
+<td>~650 g</td>
+</tr>
+<tr>
+<td>Cardamom</td>
+<td>καρδαμώμου</td>
+<td>1 litra</td>
+<td>~327 g</td>
+</tr>
+<tr>
+<td>Rush-flower</td>
+<td>σχοίνου ἄνθους</td>
+<td>1 litra (ἀνά, &quot;each&quot;)</td>
+<td>~327 g</td>
+</tr>
+<tr>
+<td>Aromatic reed</td>
+<td>καλάμου ἀρωματικοῦ</td>
+<td>1 litra (each)</td>
+<td>~327 g</td>
+</tr>
+<tr>
+<td>Balsam seed</td>
+<td>καρποβαλσάμου</td>
+<td>1 litra (each)</td>
+<td>~327 g</td>
+</tr>
+<tr>
+<td>Myrrh</td>
+<td>σμύρνης</td>
+<td>6 ounces (ἀνά, &quot;each&quot;)</td>
+<td>~164 g</td>
+</tr>
+<tr>
+<td>Galbanum</td>
+<td>χαλβάνης</td>
+<td>6 ounces (each)</td>
+<td>~164 g</td>
+</tr>
+<tr>
+<td>Terebinth resin</td>
+<td>τερεβινθίνης</td>
+<td>2 litrai</td>
+<td>~650 g</td>
+</tr>
+<tr>
+<td>Fragrant wine, &quot;for soaking the dry ingredients&quot;</td>
+<td>οἴνου εὐώδους εἰς τὸ ἐμβρέξαι τὰ ξηρά</td>
+<td>4 xestai</td>
+<td>~2.2 L</td>
+</tr>
+<tr>
+<td>Attic honey</td>
+<td>μέλιτος Ἀττικοῦ</td>
+<td>3 litrai</td>
+<td>~1 kg</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Process</strong> (Paul 7.20.16): the dry aromatics are soaked in the fragrant wine; the resin and galbanum are ground and dissolved in a portion of the oil, then added to the rest once boiled, and then the honey; everything mixed thoroughly, taken off, and <strong>strained while still lukewarm — &quot;for it becomes thick as it cools&quot;</strong> (ἕως ἔτι χλιαρόν ἐστι, σειροῦμεν· παχὺ γὰρ γίνεται ψυχόμενον). A caption-ready workshop detail: this was a perfume you had to race through a sieve.</p>
+<p><em>Aëtius' list</em> (1.125) matches Dioscorides item for item with one difference worth a caption: he <strong>omits the myrrh</strong> — likely an early copyist's slip, since Dioscorides and Paul both have it. (His spelling σχίνου for the rush is an itacism; Paul's σχοίνου ἄνθους confirms the aromatic rush.)</p>
+<p><strong>The name</strong> was already disputed in antiquity. Dioscorides: called metopion &quot;because of the admixture of galbanum — the tree from which galbanum comes is called <em>metopon</em>&quot; (<em>MM</em> 1.59.1; Paul repeats the etymology, &quot;the Egyptians, having invented this oil, named it metopion because it takes galbanum,&quot; 7.20.16). Pliny attaches the tree-name to a different gum entirely: in his entry on <strong><a href="https://en.wikipedia.org/wiki/Ammoniacum">hammoniacum</a></strong> (<em>NH</em> 12.107), the resin that &quot;distills its tear in the sands&quot; of Africa is &quot;produced near the <strong><a href="https://en.wikipedia.org/wiki/Amun">oracle of Hammon</a></strong> by a tree they call <em>metopon</em>&quot; — the namesake tree growing beside the very oracle where <a href="https://en.wikipedia.org/wiki/Alexander_the_Great">Alexander</a> was hailed son of Ammon. And Galen's Hippocratic glossary offers a third derivation: &quot;Egyptian perfume: the perfume from the flowers of the Egyptian thistle, <strong>which is also called Metopion</strong>.&quot; Three authors, three plants — the name was already obscure in antiquity, though galbanum and ammoniacum are at least cousin gum-resins (Dioscorides, for his part, names the ammoniacum shrub <em>agasyllis</em>, keeping <em>metopon</em> for galbanum alone).</p>
+<p><strong>Fashion history</strong> (Pliny <em>NH</em> 13.6–7). Perfumes rose and fell by city like vintages — <a href="https://en.wikipedia.org/wiki/Iris_%28plant%29">iris</a> at <a href="https://en.wikipedia.org/wiki/Ancient_Corinth">Corinth</a> then <a href="https://en.wikipedia.org/wiki/Cyzicus">Cyzicus</a>, rose at <a href="https://en.wikipedia.org/wiki/Phaselis">Phaselis</a> until <a href="https://en.wikipedia.org/wiki/Naples">Naples</a> and <a href="https://en.wikipedia.org/wiki/Capua">Capua</a> took the crown — and in Egypt &quot;<strong>Mendesium and metopium suddenly became more favored</strong>; soon <a href="https://en.wikipedia.org/wiki/Phoenicia">Phoenicia</a> took these away,&quot; leaving Egypt only the fame of its <a href="https://en.wikipedia.org/wiki/Henna">henna</a> perfume. Even the era's icons were subject to the trend cycle.</p>
