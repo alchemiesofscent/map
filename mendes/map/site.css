@@ -700,191 +700,26 @@
       .section { break-inside: avoid; }
     }
   
-    /* Combined dossier and map edition */
-    html { scroll-behavior: smooth; }
-    [id] { scroll-margin-top: 78px; }
-    .combined-page { width: min(1380px, 100%); }
-    .jump-nav {
-      position: sticky;
-      z-index: 30;
-      top: 0;
+    .map-site-nav {
       display: flex;
-      gap: 6px;
-      align-items: center;
-      margin: 0 0 18px;
-      padding: 9px;
-      overflow-x: auto;
-      border: 1px solid rgba(130, 119, 98, .58);
-      background: rgba(248, 244, 234, .94);
-      box-shadow: 0 8px 24px rgba(42, 48, 45, .10);
-      backdrop-filter: blur(12px);
-      scrollbar-width: thin;
+      justify-content: flex-start;
+      padding: 12px clamp(16px,3vw,38px) 0;
+      background: var(--paper);
     }
-    .jump-nav strong {
-      flex: 0 0 auto;
-      padding: 0 9px;
-      color: #6f654e;
-      font-size: .68rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-    .jump-nav a {
-      flex: 0 0 auto;
-      padding: 7px 10px;
-      border-radius: 999px;
-      color: #314440;
-      font-size: .78rem;
-      font-weight: 720;
-      text-decoration: none;
-    }
-    .jump-nav a:hover,
-    .jump-nav a:focus-visible { background: #e5ded0; outline: none; }
-    .dossier {
-      max-width: 1040px;
-      margin: 0 auto 46px;
-      padding: clamp(24px, 5vw, 62px);
-      border: 1px solid #c7bba5;
-      background: rgba(255, 253, 247, .94);
-      box-shadow: var(--shadow);
-    }
-    .dossier-intro { border-top: 7px solid var(--mendesian); }
-    .dossier h1 {
-      max-width: none;
-      margin: 2.2em 0 .55em;
-      color: #253533;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.85rem, 3.7vw, 3.25rem);
-      line-height: 1.06;
-      letter-spacing: -.025em;
-    }
-    .dossier h1:first-child {
-      margin-top: 0;
-      color: #3e2542;
-      font-size: clamp(2.65rem, 7vw, 5.6rem);
-      line-height: .94;
-    }
-    .dossier h2 {
-      margin: 2.1em 0 .6em;
-      color: #31423f;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.45rem, 2.8vw, 2.25rem);
-      line-height: 1.15;
-    }
-    .dossier h1:first-child + h2 {
-      max-width: 760px;
-      margin: .85rem 0 1.6rem;
-      color: #6b6255;
-      font-family: inherit;
-      font-size: clamp(1rem, 2vw, 1.28rem);
-      font-weight: 480;
-      line-height: 1.45;
-    }
-    .dossier h3 {
-      margin: 2em 0 .55em;
-      padding-top: .7em;
-      border-top: 1px solid #ddd3c1;
-      color: #3a4441;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.13rem, 2vw, 1.45rem);
-      line-height: 1.25;
-    }
-    .dossier p,
-    .dossier li { max-width: 88ch; }
-    .dossier p { margin: .72em 0 1em; }
-    .dossier ul,
-    .dossier ol { padding-left: 1.35rem; }
-    .dossier li + li { margin-top: .44em; }
-    .dossier blockquote {
-      margin: 1.4rem 0;
-      padding: .9rem 1.2rem;
-      border-left: 4px solid var(--mendesian);
-      background: #f3ede2;
-      color: #3e4a47;
-    }
-    .dossier hr {
-      height: 1px;
-      margin: 2.8rem 0;
-      border: 0;
-      background: #cfc4b1;
-    }
-    .dossier table {
-      display: block;
-      width: 100%;
-      margin: 1.25rem 0 1.7rem;
-      overflow-x: auto;
-      border-collapse: collapse;
-      font-size: .88rem;
-    }
-    .dossier th,
-    .dossier td {
-      min-width: 128px;
-      padding: 9px 11px;
-      border: 1px solid #d5cbb9;
-      text-align: left;
-      vertical-align: top;
-    }
-    .dossier th { background: #eae3d7; color: #33413e; }
-    .dossier tbody tr:nth-child(even) { background: rgba(239, 234, 223, .46); }
-    .dossier code {
-      padding: .08em .3em;
-      border-radius: 3px;
-      background: #ebe5da;
-      font-size: .88em;
-    }
-    .map-divider {
-      margin: 52px 0 20px;
-      padding: 18px 0 0;
-      border-top: 1px solid #bbae98;
-    }
-    .map-divider .eyebrow { margin-bottom: 4px; }
-    .map-section > .masthead { margin-top: 0; }
-    .map-section { margin-bottom: 52px; }
-    .combined-footer {
-      max-width: 1040px;
-      margin: 0 auto;
-      color: #625c50;
-    }
-    @media (max-width: 720px) {
-      .combined-page { padding: 12px; }
-      .jump-nav { margin-bottom: 12px; }
-      .jump-nav strong { display: none; }
-      .dossier { padding: 24px 17px; }
-      .dossier h1:first-child { font-size: clamp(2.35rem, 14vw, 4rem); }
-      .dossier th,
-      .dossier td { min-width: 150px; }
-      .map-section { margin-inline: -12px; }
-      .map-section > .masthead { padding-inline: 12px; }
-    }
-    @media print {
-      .jump-nav { display: none; }
-      .dossier { max-width: none; padding: 0; border: 0; box-shadow: none; }
-      .map-section { break-before: page; }
-    }
-  
-    .map-launch {
-      max-width: 980px;
-      margin: 32px auto 42px;
-      padding: clamp(28px,5vw,52px);
-      border: 1px solid rgba(34,86,80,.22);
-      border-radius: 24px;
-      background: linear-gradient(135deg,rgba(220,235,226,.88),rgba(245,240,229,.96));
-      box-shadow: 0 22px 60px rgba(27,55,51,.12);
-    }
-    .map-launch h2 { margin: 8px 0 12px; max-width: 720px; }
-    .map-launch p:not(.eyebrow) { max-width: 720px; color: var(--muted); }
-    .map-launch-button {
+    .map-site-nav a {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      margin-top: 12px;
-      padding: 13px 18px;
+      min-height: 42px;
+      padding: 8px 14px;
+      border: 1px solid rgba(34,86,80,.25);
       border-radius: 999px;
-      background: var(--ink);
-      color: var(--paper);
+      color: var(--teal);
       font-family: var(--sans);
+      font-size: .82rem;
       font-weight: 750;
       text-decoration: none;
+      background: rgba(255,255,255,.58);
     }
-    .map-launch-button:hover { background: var(--teal); color: white; }
-    .map-launch-button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    .map-site-nav a:hover { background: white; color: var(--ink); }
+    .map-site-nav a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
   

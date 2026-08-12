@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
-  <title>Ingredients of the House of Mendes — dossier and interactive map</title>
-  <meta name="description" content="A research dossier and ingredient catalogue for Mendesian, Metopion, and Susinum perfumes, with a separate interactive provenance map.">
+  <title>Interactive ingredient provenance map &#183; House of Mendes</title>
+  <meta name="description" content="An interactive source-critical map of ingredient provenance claims for Mendesian, Metopion, and Susinum perfumes.">
   <link rel="stylesheet" href="site.css">
-  
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 </head>
 <body>
   <div id="site-root" role="status" aria-live="polite">Loading the House of Mendes dossier…</div>
   <script>
   (async function () {
-    const contentFiles = ["content-1.html","content-2.html","content-3.html"];
-    const scriptFiles = ;
+    const contentFiles = "content-1.html";
+    const scriptFiles = ["app-1.js","app-2.js","app-3.js"];
     async function readParts(files) {
       return Promise.all(files.map(async function (file) {
         const response = await fetch(file);
