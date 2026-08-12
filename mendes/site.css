@@ -859,6 +859,7 @@
     .ingredient-images img {
       display: block;
       width: 100%;
+      max-width: 100%;
       height: 220px;
       object-fit: cover;
       background: #ece6da;
@@ -914,8 +915,17 @@
       .dossier th,
       .dossier td { min-width: 150px; }
       .ingredient-gallery { grid-template-columns: 1fr; }
-      .ingredient-images-trio { grid-template-columns: 1fr 1fr; }
-      .ingredient-images-trio figure:last-child { grid-column: 1 / -1; }
+      .ingredient-images-pair,
+      .ingredient-images-trio { grid-template-columns: 1fr; }
+      .ingredient-images-trio figure:last-child { grid-column: auto; }
+      .ingredient-images img,
+      .ingredient-images-pair img,
+      .ingredient-images-trio img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
       .map-section { margin-inline: -12px; }
       .map-section > .masthead { padding-inline: 12px; }
     }
