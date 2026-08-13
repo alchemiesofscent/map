@@ -307,6 +307,14 @@
       { id:"workshop", label:"Workshop and processing materials", ids:["honey","wine","water","salt"] },
       { id:"context", label:"Comparative and theological context", ids:["hammoniacum-metopon","theology"] }
     ];
+    const ingredientGroupShortLabels = {
+      bases:"Base oils",
+      resins:"Resins",
+      spices:"Spices & grasses",
+      flowers:"Flowers & colour",
+      workshop:"Workshop",
+      context:"Context"
+    };
     const ingredientById = new Map(allIngredients.map(function (ingredient) { return [ingredient.id,ingredient]; }));
     const ingredientGroupById = new Map();
     const orderedIngredients = [];
@@ -383,11 +391,3 @@
       syria: [[36.3,33.5],[34.47,31.5],[31.5,30.95]],
       india: [[43.3,12.6],[35.5,23.9],[32.8,26.0],[31.5,30.95]]
     };
-
-    const svg = d3.select("#map");
-    const width = 900;
-    const height = 710;
-    let currentZoom = d3.zoomIdentity;
-    let selectedClaim = null;
-    let selectedIngredientId = null;
-    let navigationReady = false;
