@@ -1,3 +1,64 @@
+      if (!isPhoneViewport()) return d3.zoomIdentity;
+      const view = visibleViewportExtent();
+      const center = [(view[0][0]+view[1][0])/2,(view[0][1]+view[1][1])/2];
+      const corridorCenter = projection([32.5,27.0]);
+      return constrainToFrame(
+        d3.zoomIdentity.translate(center[0]-corridorCenter[0],center[1]-corridorCenter[1])
+      );
+    }
+
+    const mapWrap = document.querySelector(".map-wrap");
+    const zoomIn = document.getElementById("zoom-in");
+    const zoomOut = document.getElementById("zoom-out");
+    const zoomReset = document.getElementById("zoom-reset");
+    const zoomLevel = document.getElementById("zoom-level");
+    const exploreToggle = document.getElementById("explore-map");
+    const gestureHint = document.getElementById("map-gesture-hint");
+    const phoneQuery = window.matchMedia("(max-width: 720px)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let exploreMode = exploreToggle.checked;
+    let activeMobilePanel = null;
+    let lastMobilePanelTrigger = null;
+    let mobilePanelScrollY = 0;
+
+    const mobilePanels = Array.from(document.querySelectorAll("[data-mobile-panel]"));
+    const mobilePanelButtons = Array.from(document.querySelectorAll("[data-mobile-panel-target]"));
+    const mobilePanelBackdrop = document.querySelector(".mobile-panel-backdrop");
+    const mobilePanelNav = document.querySelector(".mobile-panel-nav");
+    const mobileMapHeader = document.querySelector(".mobile-map-header");
+    const mobileSearchInput = document.getElementById("mobile-search-input");
+    const mobileSearchSummary = document.getElementById("mobile-search-summary");
+    const mobileSearchResults = document.getElementById("mobile-search-results");
+
+    function syncMobilePanelMode() {
+      const phone = isPhoneViewport();
+      mobileMapHeader.setAttribute("aria-hidden",phone ? "false" : "true");
+      mobilePanelNav.setAttribute("aria-hidden",phone ? "false" : "true");
+      if (!phone) activeMobilePanel = null;
+
+      mobilePanels.forEach(function (panel) {
+        const mobileOnly = panel.classList.contains("mobile-only-sheet");
+        if (!phone) {
+          if (mobileOnly) {
+            panel.setAttribute("aria-hidden","true");
+            panel.inert = true;
+          } else {
+            panel.removeAttribute("aria-hidden");
+            panel.inert = false;
+          }
+          return;
+        }
+        const open = panel.dataset.mobilePanel === activeMobilePanel;
+        panel.setAttribute("aria-hidden",open ? "false" : "true");
+        panel.inert = !open;
+      });
+
+      mobilePanelButtons.forEach(function (button) {
+        const open = phone && button.dataset.mobilePanelTarget === activeMobilePanel;
+        button.setAttribute("aria-expanded",open ? "true" : "false");
+      });
+      mobilePanelBackdrop.hidden = !phone || !activeMobilePanel;
+      const shouldLockPage = phone && !!activeMobilePanel;
       document.querySelector(".map-experience").classList.toggle("has-mobile-panel",shouldLockPage);
 
       if (shouldLockPage && !document.body.classList.contains("mobile-panel-open")) {
@@ -357,4 +418,3 @@
       renderMobileSearch();
     }
   }());
-  

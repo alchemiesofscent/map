@@ -1,3 +1,11 @@
+    const svg = d3.select("#map");
+    const width = 900;
+    const height = 710;
+    let currentZoom = d3.zoomIdentity;
+    let selectedClaim = null;
+    let selectedIngredientId = null;
+    let navigationReady = false;
+    let ingredientPickerOpen = false;
     let overlayScale = 1;
     let viewAtHome = true;
     const frameGeo = { type:"Polygon", coordinates:[[[7,3],[7,48],[83,48],[83,3],[7,3]]] };
@@ -224,6 +232,7 @@
       const locations = visibleClaimsForIngredient(selectedIngredient);
       const locationIndex = d ? locations.findIndex(function (claim) { return claim.id === d.id; }) : -1;
       const currentLocationIndex = locationIndex < 0 ? 0 : locationIndex;
+      const currentLocation = locations[currentLocationIndex] || null;
       const previous = currentLocationIndex > 0 ? locations[currentLocationIndex - 1] : null;
       const next = currentLocationIndex < locations.length - 1 ? locations[currentLocationIndex + 1] : null;
       const groupOptions = groups.map(function (item) {
@@ -232,29 +241,36 @@
       const ingredientOptions = groupIngredients.map(function (item) {
         return optionMarkup(item.id,item.gloss,item.id === selectedIngredient.id);
       }).join("");
-      const swipeHint = locations.length > 1
-        ? 'Swipe right or left to move through this ingredient\'s mapped locations.'
-        : locations.length === 1
-          ? 'This ingredient has one visible mapped location.'
-          : 'This ingredient has no mapped location.';
+      const compactGroupLabel = ingredientGroupShortLabels[selectedGroup.id] || selectedGroup.label;
+      const currentPlaceLabel = currentLocation ? currentLocation.place : "No mapped place";
+      const locationPosition = locations.length ? (currentLocationIndex + 1) + " of " + locations.length : "No locations";
       return '<div class="ingredient-browser" aria-label="Browse ingredient kinds, ingredients, and locations">' +
-        '<div class="ingredient-switchers">' +
-          '<label class="ingredient-switcher-label" for="ingredient-kind-select"><span>Ingredient kind</span>' +
-            '<select class="ingredient-switcher" id="ingredient-kind-select">' + groupOptions + '</select>' +
-          '</label>' +
-          '<label class="ingredient-switcher-label" for="ingredient-select"><span>Ingredient</span>' +
-            '<select class="ingredient-switcher" id="ingredient-select">' + ingredientOptions + '</select>' +
-          '</label>' +
+        '<div class="ingredient-browser-row">' +
+          '<button type="button" class="ingredient-picker-toggle" aria-expanded="' + (ingredientPickerOpen ? 'true' : 'false') + '" aria-controls="ingredient-picker-panel" aria-label="Change ingredient. ' + escapeHTML(selectedGroup.label) + '. ' + escapeHTML(selectedIngredient.gloss) + '" title="Change ingredient: ' + escapeHTML(selectedIngredient.gloss) + '">' +
+            '<span class="ingredient-picker-kind">' + escapeHTML(compactGroupLabel) + '</span>' +
+            '<span class="ingredient-picker-name">' + escapeHTML(selectedIngredient.gloss) + '</span>' +
+            '<span class="ingredient-picker-chevron" aria-hidden="true">⌄</span>' +
+          '</button>' +
+          '<nav class="location-nav" aria-label="Browse mapped locations for ' + escapeHTML(selectedIngredient.gloss) + '" aria-describedby="location-swipe-instructions">' +
+            '<button type="button" data-location-step="-1"' + (previous ? ' aria-label="Previous location: ' + escapeHTML(previous.place) + '"' : ' disabled aria-label="No previous location"') + '><span aria-hidden="true">←</span></button>' +
+            '<div class="location-nav-status" aria-live="polite" aria-atomic="true" title="' + escapeHTML(currentPlaceLabel) + '">' +
+              '<strong>' + escapeHTML(currentPlaceLabel) + '</strong>' +
+              '<span class="location-nav-position">' + escapeHTML(locationPosition) + '</span>' +
+            '</div>' +
+            '<button type="button" data-location-step="1"' + (next ? ' aria-label="Next location: ' + escapeHTML(next.place) + '"' : ' disabled aria-label="No next location"') + '><span aria-hidden="true">→</span></button>' +
+          '</nav>' +
         '</div>' +
-        '<nav class="location-nav" aria-label="Browse mapped locations for ' + escapeHTML(selectedIngredient.gloss) + '">' +
-          '<button type="button" data-location-step="-1"' + (previous ? ' aria-label="Previous location: ' + escapeHTML(previous.place) + '"' : ' disabled aria-label="No previous location"') + '>← Previous</button>' +
-          '<div class="location-nav-status">' +
-            '<strong>Mapped locations</strong>' +
-            '<span class="location-nav-position">' + (locations.length ? 'Location ' + (currentLocationIndex + 1) + ' of ' + locations.length : 'No mapped location') + '</span>' +
+        '<div class="ingredient-picker-panel" id="ingredient-picker-panel"' + (ingredientPickerOpen ? '' : ' hidden') + '>' +
+          '<div class="ingredient-switchers">' +
+            '<label class="ingredient-switcher-label" for="ingredient-kind-select"><span>Ingredient kind</span>' +
+              '<select class="ingredient-switcher" id="ingredient-kind-select">' + groupOptions + '</select>' +
+            '</label>' +
+            '<label class="ingredient-switcher-label" for="ingredient-select"><span>Ingredient</span>' +
+              '<select class="ingredient-switcher" id="ingredient-select">' + ingredientOptions + '</select>' +
+            '</label>' +
           '</div>' +
-          '<button type="button" data-location-step="1"' + (next ? ' aria-label="Next location: ' + escapeHTML(next.place) + '"' : ' disabled aria-label="No next location"') + '>Next →</button>' +
-        '</nav>' +
-        '<p class="location-swipe-hint">' + escapeHTML(swipeHint) + '</p>' +
+        '</div>' +
+        '<p class="visually-hidden" id="location-swipe-instructions">On a phone, swipe right or left in the details to move through this ingredient\'s mapped locations.</p>' +
       '</div>';
     }
 
@@ -293,16 +309,47 @@
       const currentIndex = locations.findIndex(function (claim) { return claim.id === selectedClaim.id; });
       const nextIndex = currentIndex + direction;
       if (nextIndex < 0 || nextIndex >= locations.length) return;
+      ingredientPickerOpen = false;
       selectClaim(locations[nextIndex],false,true,false,true);
+    }
+
+    function setIngredientPickerOpen(open, returnFocus) {
+      ingredientPickerOpen = open;
+      const toggle = detailContent.querySelector(".ingredient-picker-toggle");
+      const panel = document.getElementById("ingredient-picker-panel");
+      if (toggle) toggle.setAttribute("aria-expanded",open ? "true" : "false");
+      if (panel) panel.hidden = !open;
+      if (returnFocus && toggle) toggle.focus();
     }
 
     function bindIngredientBrowser() {
       const kindSelect = document.getElementById("ingredient-kind-select");
       const ingredientSelect = document.getElementById("ingredient-select");
-      if (kindSelect) kindSelect.addEventListener("change", function () { selectIngredientGroup(kindSelect.value); });
+      const pickerToggle = detailContent.querySelector(".ingredient-picker-toggle");
+      const pickerPanel = document.getElementById("ingredient-picker-panel");
+      if (pickerToggle) pickerToggle.addEventListener("click", function () {
+        setIngredientPickerOpen(!ingredientPickerOpen,false);
+      });
+      if (kindSelect) kindSelect.addEventListener("change", function () {
+        ingredientPickerOpen = true;
+        selectIngredientGroup(kindSelect.value);
+        window.requestAnimationFrame(function () {
+          const refreshedIngredientSelect = document.getElementById("ingredient-select");
+          if (refreshedIngredientSelect) refreshedIngredientSelect.focus();
+        });
+      });
       if (ingredientSelect) ingredientSelect.addEventListener("change", function () {
         const ingredient = ingredientById.get(ingredientSelect.value);
-        if (ingredient) selectIngredient(ingredient,true);
+        if (ingredient) {
+          ingredientPickerOpen = false;
+          selectIngredient(ingredient,true);
+        }
+      });
+      if (pickerPanel) pickerPanel.addEventListener("keydown", function (event) {
+        if (event.key !== "Escape") return;
+        event.preventDefault();
+        event.stopPropagation();
+        setIngredientPickerOpen(false,true);
       });
       detailContent.querySelectorAll("[data-location-step]").forEach(function (button) {
         button.addEventListener("click", function () { stepLocation(Number(button.dataset.locationStep)); });
@@ -317,6 +364,7 @@
     }
 
     function selectClaim(d, shouldScroll, shouldFocus, shouldOpenDetails, shouldForceFocus) {
+      if (shouldOpenDetails) ingredientPickerOpen = false;
       selectedClaim = d;
       selectedIngredientId = d.ingredient;
       marker.classed("is-selected", function (x) { return x.id === d.id; });
@@ -433,6 +481,7 @@
     renderIndex();
 
     function updateVisibility() {
+      ingredientPickerOpen = false;
       const active = new Set(Array.from(document.querySelectorAll(".toggle input:checked")).map(function (input) { return input.value; }));
       let visible = 0;
       marker.classed("is-hidden", function (d) {
@@ -520,64 +569,3 @@
     }
 
     function homeTransform() {
-      if (!isPhoneViewport()) return d3.zoomIdentity;
-      const view = visibleViewportExtent();
-      const center = [(view[0][0]+view[1][0])/2,(view[0][1]+view[1][1])/2];
-      const corridorCenter = projection([32.5,27.0]);
-      return constrainToFrame(
-        d3.zoomIdentity.translate(center[0]-corridorCenter[0],center[1]-corridorCenter[1])
-      );
-    }
-
-    const mapWrap = document.querySelector(".map-wrap");
-    const zoomIn = document.getElementById("zoom-in");
-    const zoomOut = document.getElementById("zoom-out");
-    const zoomReset = document.getElementById("zoom-reset");
-    const zoomLevel = document.getElementById("zoom-level");
-    const exploreToggle = document.getElementById("explore-map");
-    const gestureHint = document.getElementById("map-gesture-hint");
-    const phoneQuery = window.matchMedia("(max-width: 720px)");
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let exploreMode = exploreToggle.checked;
-    let activeMobilePanel = null;
-    let lastMobilePanelTrigger = null;
-    let mobilePanelScrollY = 0;
-
-    const mobilePanels = Array.from(document.querySelectorAll("[data-mobile-panel]"));
-    const mobilePanelButtons = Array.from(document.querySelectorAll("[data-mobile-panel-target]"));
-    const mobilePanelBackdrop = document.querySelector(".mobile-panel-backdrop");
-    const mobilePanelNav = document.querySelector(".mobile-panel-nav");
-    const mobileMapHeader = document.querySelector(".mobile-map-header");
-    const mobileSearchInput = document.getElementById("mobile-search-input");
-    const mobileSearchSummary = document.getElementById("mobile-search-summary");
-    const mobileSearchResults = document.getElementById("mobile-search-results");
-
-    function syncMobilePanelMode() {
-      const phone = isPhoneViewport();
-      mobileMapHeader.setAttribute("aria-hidden",phone ? "false" : "true");
-      mobilePanelNav.setAttribute("aria-hidden",phone ? "false" : "true");
-      if (!phone) activeMobilePanel = null;
-
-      mobilePanels.forEach(function (panel) {
-        const mobileOnly = panel.classList.contains("mobile-only-sheet");
-        if (!phone) {
-          if (mobileOnly) {
-            panel.setAttribute("aria-hidden","true");
-            panel.inert = true;
-          } else {
-            panel.removeAttribute("aria-hidden");
-            panel.inert = false;
-          }
-          return;
-        }
-        const open = panel.dataset.mobilePanel === activeMobilePanel;
-        panel.setAttribute("aria-hidden",open ? "false" : "true");
-        panel.inert = !open;
-      });
-
-      mobilePanelButtons.forEach(function (button) {
-        const open = phone && button.dataset.mobilePanelTarget === activeMobilePanel;
-        button.setAttribute("aria-expanded",open ? "true" : "false");
-      });
-      mobilePanelBackdrop.hidden = !phone || !activeMobilePanel;
-      const shouldLockPage = phone && !!activeMobilePanel;
