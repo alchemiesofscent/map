@@ -14,7 +14,7 @@
   (async function () {
     const contentFiles = ["content-1.html","content-2.html","content-3.html"];
     const scriptFiles = [];
-    const assetVersion = "20260813-1";
+    const assetVersion = "20260813-2";
     async function readParts(files) {
       return Promise.all(files.map(async function (file) {
         const response = await fetch(file + "?v=" + encodeURIComponent(assetVersion));
