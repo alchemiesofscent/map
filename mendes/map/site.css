@@ -290,16 +290,42 @@
     .badge.s { background: var(--susinum); }
     .badge.context { background: #6d6558; }
     .detail-hint { margin-top: 18px; color: #7b7568; font-size: .74rem; }
-    .ingredient-nav {
-      display: grid;
-      grid-template-columns: minmax(72px,auto) minmax(0,1fr) minmax(72px,auto);
-      gap: 8px;
-      align-items: stretch;
+    .ingredient-browser {
       margin: 0 0 16px;
       padding: 0 0 14px;
       border-bottom: 1px solid #d5cebf;
     }
-    .ingredient-nav button {
+    .ingredient-switchers {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .ingredient-switcher-label {
+      display: block;
+      color: #625d52;
+      font: 750 .66rem/1.2 system-ui, sans-serif;
+    }
+    .ingredient-switcher-label span { display: block; margin-bottom: 4px; }
+    .ingredient-switcher {
+      display: block;
+      width: 100%;
+      min-height: 42px;
+      padding: 7px 30px 7px 9px;
+      border: 1px solid #aaa08e;
+      border-radius: 0;
+      background: #fffdf8;
+      color: #263532;
+      font: 650 .76rem/1.2 system-ui, sans-serif;
+    }
+    .ingredient-switcher:focus-visible { outline: 3px solid rgba(242,184,71,.55); outline-offset: 2px; }
+    .location-nav {
+      display: grid;
+      grid-template-columns: minmax(72px,auto) minmax(0,1fr) minmax(72px,auto);
+      gap: 8px;
+      align-items: stretch;
+    }
+    .location-nav button {
       min-height: 44px;
       padding: 7px 9px;
       border: 1px solid #bcb3a3;
@@ -308,20 +334,21 @@
       font: 750 .7rem/1.15 system-ui, sans-serif;
       cursor: pointer;
     }
-    .ingredient-nav button:hover { background: #eee6d7; color: #173f43; }
-    .ingredient-nav button:focus-visible { outline: 3px solid rgba(242,184,71,.55); outline-offset: 2px; }
-    .ingredient-nav-status {
+    .location-nav button:hover:not(:disabled) { background: #eee6d7; color: #173f43; }
+    .location-nav button:focus-visible { outline: 3px solid rgba(242,184,71,.55); outline-offset: 2px; }
+    .location-nav button:disabled { cursor: default; opacity: .38; }
+    .location-nav-status {
       align-self: center;
       min-width: 0;
       color: #625d52;
       font: 750 .66rem/1.25 system-ui, sans-serif;
       text-align: center;
     }
-    .ingredient-nav-status strong,
-    .ingredient-nav-status span { display: block; }
-    .ingredient-nav-status strong { color: #273734; font-size: .72rem; }
-    .ingredient-nav-position { margin-top: 2px; font-variant-numeric: tabular-nums; }
-    .ingredient-swipe-hint { margin: -8px 0 14px; color: #756f63; font-size: .7rem; text-align: center; }
+    .location-nav-status strong,
+    .location-nav-status span { display: block; }
+    .location-nav-status strong { color: #273734; font-size: .72rem; }
+    .location-nav-position { margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .location-swipe-hint { margin: 8px 0 0; color: #756f63; font-size: .7rem; text-align: center; }
     .map-caption {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
@@ -442,7 +469,8 @@
     .claim { cursor: pointer; }
     .claim-hit { fill: transparent; pointer-events: all; }
     .claim:focus-visible { outline: none; }
-    .claim:focus-visible .focus-ring, .claim.is-selected .focus-ring { opacity: 1; }
+    .claim.is-same-ingredient .focus-ring { opacity: .42; stroke-width: 2; }
+    .claim:focus-visible .focus-ring, .claim.is-selected .focus-ring { opacity: 1; stroke-width: 3; }
     .focus-ring { fill: none; stroke: var(--focus); stroke-width: 3; opacity: 0; }
     .claim.is-hidden { display: none; }
     .claim .ancient-shape { fill: var(--ancient); stroke: #fffdf8; stroke-width: 1.5; }
@@ -638,8 +666,8 @@
       }
       #detail .mobile-sheet-body { max-height: calc(min(54dvh, 520px) - 58px); }
       .detail-content { padding: 16px 18px calc(22px + env(safe-area-inset-bottom)); touch-action: pan-y; }
-      .ingredient-nav { position: sticky; z-index: 1; top: -16px; padding-top: 8px; background: #fffdf8; }
-      .ingredient-swipe-hint { display: block; }
+      .ingredient-browser { position: sticky; z-index: 1; top: -16px; padding-top: 8px; background: #fffdf8; }
+      .location-swipe-hint { display: block; }
 
       .mobile-search-label { display: block; margin-bottom: 6px; color: #4d5855; font: 750 .72rem/1.2 system-ui, sans-serif; }
       .mobile-search-input {

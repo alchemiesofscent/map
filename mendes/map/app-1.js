@@ -321,9 +321,6 @@
     allIngredients.forEach(function (ingredient) {
       if (!ingredientGroupById.has(ingredient.id)) orderedIngredients.push(ingredient);
     });
-    const swipeableIngredients = orderedIngredients.filter(function (ingredient) {
-      return !ingredient.context && ingredient.id !== "theology" && ingredient.claims.length;
-    });
     const claims = [];
     allIngredients.forEach(function (ingredient) {
       ingredient.claims.forEach(function (claim) {
@@ -388,3 +385,9 @@
     };
 
     const svg = d3.select("#map");
+    const width = 900;
+    const height = 710;
+    let currentZoom = d3.zoomIdentity;
+    let selectedClaim = null;
+    let selectedIngredientId = null;
+    let navigationReady = false;
