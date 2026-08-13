@@ -1,7 +1,3 @@
-    const width = 900;
-    const height = 710;
-    let currentZoom = d3.zoomIdentity;
-    let selectedClaim = null;
     let overlayScale = 1;
     let viewAtHome = true;
     const frameGeo = { type:"Polygon", coordinates:[[[7,3],[7,48],[83,48],[83,3],[7,3]]] };
@@ -127,7 +123,7 @@
         g.append("circle").attr("class","ancient-shape").attr("r",6.5);
       } else if (d.evidence === "modern") {
         g.append("rect").attr("class","modern-shape").attr("x",-6).attr("y",-6).attr("width",12).attr("height",12).attr("transform","rotate(45)");
-      } else {
+      } else if (navigationReady) {
         g.append("circle").attr("class","theology-shape").attr("r",9);
         g.append("circle").attr("class","theology-shape").attr("r",5);
       }
@@ -193,54 +189,138 @@
       }));
     }
 
-    function currentIngredientTrack() {
+    function visibleClaimsForIngredient(ingredient) {
       const active = activeRecipeKeys();
-      return swipeableIngredients.filter(function (ingredient) {
-        return ingredient.recipes.some(function (recipe) { return active.has(recipe); });
+      return ingredient.claims.filter(function (claim) {
+        return claim.recipes.some(function (recipe) { return active.has(recipe); });
       });
     }
 
-    function preferredClaimForIngredient(ingredient) {
-      const active = activeRecipeKeys();
-      return ingredient.claims.find(function (claim) {
-        return claim.recipes.some(function (recipe) { return active.has(recipe); });
-      }) || ingredient.claims[0] || null;
+    function visibleIngredientsForGroup(group) {
+      return group.ids.map(function (id) { return ingredientById.get(id); }).filter(function (ingredient) {
+        return ingredient && ingredient.recipes.some(function (recipe) { return activeRecipeKeys().has(recipe); });
+      });
     }
 
-    function ingredientNavigationMarkup(d) {
-      const ingredient = ingredientById.get(d.ingredient);
-      const track = currentIngredientTrack();
-      const index = ingredient ? track.findIndex(function (item) { return item.id === ingredient.id; }) : -1;
-      if (!ingredient || index < 0 || !track.length) return "";
+    function visibleIngredientGroups() {
+      return ingredientGroups.filter(function (group) { return visibleIngredientsForGroup(group).length; });
+    }
+
+    function optionMarkup(value, label, selected) {
+      return '<option value="' + escapeHTML(value) + '"' + (selected ? ' selected' : '') + '>' + escapeHTML(label) + '</option>';
+    }
+
+    function ingredientBrowserMarkup(d) {
+      const ingredientId = d ? d.ingredient : selectedIngredientId;
+      const ingredient = ingredientById.get(ingredientId);
+      if (!ingredient) return "";
       const group = ingredientGroupById.get(ingredient.id);
-      const previous = track[(index - 1 + track.length) % track.length];
-      const next = track[(index + 1) % track.length];
-      return '<nav class="ingredient-nav" aria-label="Browse mapped ingredients">' +
-        '<button type="button" data-ingredient-step="-1" aria-label="Previous ingredient: ' + escapeHTML(previous.gloss) + '">← Previous</button>' +
-        '<div class="ingredient-nav-status">' +
-          '<strong>' + escapeHTML(group ? group.label : "Ingredient sequence") + '</strong>' +
-          '<span class="ingredient-nav-position">Ingredient ' + (index + 1) + ' of ' + track.length + '</span>' +
+      const groups = visibleIngredientGroups();
+      const selectedGroup = group && groups.some(function (item) { return item.id === group.id; }) ? group : groups[0];
+      if (!selectedGroup) return "";
+      const groupIngredients = visibleIngredientsForGroup(selectedGroup);
+      const selectedIngredient = groupIngredients.find(function (item) { return item.id === ingredient.id; }) || groupIngredients[0];
+      if (!selectedIngredient) return "";
+      const locations = visibleClaimsForIngredient(selectedIngredient);
+      const locationIndex = d ? locations.findIndex(function (claim) { return claim.id === d.id; }) : -1;
+      const currentLocationIndex = locationIndex < 0 ? 0 : locationIndex;
+      const previous = currentLocationIndex > 0 ? locations[currentLocationIndex - 1] : null;
+      const next = currentLocationIndex < locations.length - 1 ? locations[currentLocationIndex + 1] : null;
+      const groupOptions = groups.map(function (item) {
+        return optionMarkup(item.id,item.label,item.id === selectedGroup.id);
+      }).join("");
+      const ingredientOptions = groupIngredients.map(function (item) {
+        return optionMarkup(item.id,item.gloss,item.id === selectedIngredient.id);
+      }).join("");
+      const swipeHint = locations.length > 1
+        ? 'Swipe right or left to move through this ingredient\'s mapped locations.'
+        : locations.length === 1
+          ? 'This ingredient has one visible mapped location.'
+          : 'This ingredient has no mapped location.';
+      return '<div class="ingredient-browser" aria-label="Browse ingredient kinds, ingredients, and locations">' +
+        '<div class="ingredient-switchers">' +
+          '<label class="ingredient-switcher-label" for="ingredient-kind-select"><span>Ingredient kind</span>' +
+            '<select class="ingredient-switcher" id="ingredient-kind-select">' + groupOptions + '</select>' +
+          '</label>' +
+          '<label class="ingredient-switcher-label" for="ingredient-select"><span>Ingredient</span>' +
+            '<select class="ingredient-switcher" id="ingredient-select">' + ingredientOptions + '</select>' +
+          '</label>' +
         '</div>' +
-        '<button type="button" data-ingredient-step="1" aria-label="Next ingredient: ' + escapeHTML(next.gloss) + '">Next →</button>' +
-      '</nav>' +
-      '<p class="ingredient-swipe-hint">Swipe right or left to move between related ingredients.</p>';
+        '<nav class="location-nav" aria-label="Browse mapped locations for ' + escapeHTML(selectedIngredient.gloss) + '">' +
+          '<button type="button" data-location-step="-1"' + (previous ? ' aria-label="Previous location: ' + escapeHTML(previous.place) + '"' : ' disabled aria-label="No previous location"') + '>← Previous</button>' +
+          '<div class="location-nav-status">' +
+            '<strong>Mapped locations</strong>' +
+            '<span class="location-nav-position">' + (locations.length ? 'Location ' + (currentLocationIndex + 1) + ' of ' + locations.length : 'No mapped location') + '</span>' +
+          '</div>' +
+          '<button type="button" data-location-step="1"' + (next ? ' aria-label="Next location: ' + escapeHTML(next.place) + '"' : ' disabled aria-label="No next location"') + '>Next →</button>' +
+        '</nav>' +
+        '<p class="location-swipe-hint">' + escapeHTML(swipeHint) + '</p>' +
+      '</div>';
     }
 
-    function stepIngredient(direction) {
-      const track = currentIngredientTrack();
-      if (!track.length) return;
-      const currentId = selectedClaim ? selectedClaim.ingredient : null;
-      const currentIndex = track.findIndex(function (ingredient) { return ingredient.id === currentId; });
-      const nextIndex = currentIndex < 0
-        ? (direction > 0 ? 0 : track.length - 1)
-        : (currentIndex + direction + track.length) % track.length;
-      const claim = preferredClaimForIngredient(track[nextIndex]);
-      if (claim) selectClaim(claim,false,true,false);
+    function selectIngredient(ingredient, focusAllLocations) {
+      selectedIngredientId = ingredient.id;
+      const locations = visibleClaimsForIngredient(ingredient);
+      if (!locations.length) {
+        selectedClaim = null;
+        marker.classed("is-selected",false).classed("is-same-ingredient",false);
+        selectedRoute.attr("d",null);
+        selectedLabel.style("display","none");
+        detailContent.innerHTML =
+          ingredientBrowserMarkup(null) +
+          '<p class="detail-kicker">' + escapeHTML(ingredient.translit) + '</p>' +
+          '<h2>' + escapeHTML(ingredient.greek) + '</h2>' +
+          '<p class="detail-gloss">' + escapeHTML(ingredient.gloss) + '</p>' +
+          '<div class="unlocated">' + escapeHTML(ingredient.unlocated || "No mapped provenance is available for the active perfume layers.") + '</div>' +
+          '<div class="recipe-badges">' + affiliationBadges(ingredient) + '</div>';
+        bindIngredientBrowser();
+        return;
+      }
+      selectClaim(locations[0],false,false,false);
+      if (focusAllLocations) focusIngredient(ingredient,true);
     }
 
-    function selectClaim(d, shouldScroll, shouldFocus, shouldOpenDetails) {
+    function selectIngredientGroup(groupId) {
+      const group = ingredientGroups.find(function (item) { return item.id === groupId; });
+      const ingredient = group ? visibleIngredientsForGroup(group)[0] : null;
+      if (ingredient) selectIngredient(ingredient,true);
+    }
+
+    function stepLocation(direction) {
+      if (!selectedClaim) return;
+      const ingredient = ingredientById.get(selectedClaim.ingredient);
+      const locations = ingredient ? visibleClaimsForIngredient(ingredient) : [];
+      const currentIndex = locations.findIndex(function (claim) { return claim.id === selectedClaim.id; });
+      const nextIndex = currentIndex + direction;
+      if (nextIndex < 0 || nextIndex >= locations.length) return;
+      selectClaim(locations[nextIndex],false,true,false,true);
+    }
+
+    function bindIngredientBrowser() {
+      const kindSelect = document.getElementById("ingredient-kind-select");
+      const ingredientSelect = document.getElementById("ingredient-select");
+      if (kindSelect) kindSelect.addEventListener("change", function () { selectIngredientGroup(kindSelect.value); });
+      if (ingredientSelect) ingredientSelect.addEventListener("change", function () {
+        const ingredient = ingredientById.get(ingredientSelect.value);
+        if (ingredient) selectIngredient(ingredient,true);
+      });
+      detailContent.querySelectorAll("[data-location-step]").forEach(function (button) {
+        button.addEventListener("click", function () { stepLocation(Number(button.dataset.locationStep)); });
+      });
+    }
+
+    function renderNoVisibleIngredients() {
+      detailContent.innerHTML =
+        '<p class="detail-kicker">Ingredient browser</p>' +
+        '<h2>No visible ingredients</h2>' +
+        '<p class="detail-gloss">Turn on at least one perfume layer to browse ingredient kinds, ingredients, and mapped locations.</p>';
+    }
+
+    function selectClaim(d, shouldScroll, shouldFocus, shouldOpenDetails, shouldForceFocus) {
       selectedClaim = d;
+      selectedIngredientId = d.ingredient;
       marker.classed("is-selected", function (x) { return x.id === d.id; });
+      marker.classed("is-same-ingredient", function (x) { return x.ingredient === d.ingredient; });
       if (d.route && convergence[d.route]) {
         selectedRoute.attr("d",projectedLine([d.coord].concat(convergence[d.route])));
       } else {
@@ -252,7 +332,7 @@
       positionSelectedLabel();
 
       detailContent.innerHTML =
-        ingredientNavigationMarkup(d) +
+        ingredientBrowserMarkup(d) +
         '<p class="detail-kicker">' + escapeHTML(d.translit) + '</p>' +
         '<h2>' + escapeHTML(d.greek) + '</h2>' +
         '<p class="detail-gloss">' + escapeHTML(d.gloss) + '</p>' +
@@ -266,14 +346,10 @@
           (exploreMode ? 'Explore mode preserves your manual view.' : 'Guided mode refocuses the map on each selection.') +
         '</p>';
 
-      detailContent.querySelectorAll("[data-ingredient-step]").forEach(function (button) {
-        button.addEventListener("click", function () {
-          stepIngredient(Number(button.dataset.ingredientStep));
-        });
-      });
+      bindIngredientBrowser();
 
       if (shouldOpenDetails && isPhoneViewport()) openMobilePanel("details");
-      if (shouldFocus) focusClaim(d);
+      if (shouldFocus) focusClaim(d,shouldForceFocus);
 
       if (shouldScroll) {
         document.querySelector(".map-shell").scrollIntoView({ behavior:reducedMotion.matches ? "auto" : "smooth", block:"start" });
@@ -298,8 +374,8 @@
       const deltaX = event.clientX - ingredientSwipeStart.x;
       const deltaY = event.clientY - ingredientSwipeStart.y;
       ingredientSwipeStart = null;
-      if (Math.abs(deltaX) < 52 || Math.abs(deltaX) < Math.abs(deltaY) * 1.35) return;
-      stepIngredient(deltaX < 0 ? 1 : -1);
+      if (!selectedClaim || Math.abs(deltaX) < 52 || Math.abs(deltaX) < Math.abs(deltaY) * 1.35) return;
+      stepLocation(deltaX < 0 ? 1 : -1);
     });
     detailContent.addEventListener("pointercancel", function () { ingredientSwipeStart = null; });
 
@@ -379,14 +455,45 @@
       document.getElementById("mobile-visible-count").textContent = visible;
       document.getElementById("mobile-info-visible-count").textContent = visible;
       document.getElementById("mobile-info-ingredient-count").textContent = ingredients.length;
-      const selected = claims.find(function (claim) {
-        return marker.filter(function (d) { return d.id === claim.id; }).classed("is-selected");
-      });
-      if (selected && !selected.recipes.some(function (r) { return active.has(r); })) {
-        selectedRoute.attr("d",null);
-        selectedLabel.style("display","none");
-        marker.classed("is-selected",false);
-        selectedClaim = null;
+      if (selectedClaim) {
+        const selectedIngredient = ingredientById.get(selectedClaim.ingredient);
+        const selectedLocations = selectedIngredient ? visibleClaimsForIngredient(selectedIngredient) : [];
+        if (selectedLocations.length) {
+          const replacement = selectedLocations.find(function (claim) { return claim.id === selectedClaim.id; }) || selectedLocations[0];
+          selectClaim(replacement,false,false,false);
+        } else {
+          const fallbackGroup = visibleIngredientGroups()[0];
+          const fallbackIngredient = fallbackGroup ? visibleIngredientsForGroup(fallbackGroup)[0] : null;
+          if (fallbackIngredient) {
+            selectIngredient(fallbackIngredient,true);
+          } else {
+            selectedRoute.attr("d",null);
+            selectedLabel.style("display","none");
+            marker.classed("is-selected",false).classed("is-same-ingredient",false);
+            selectedClaim = null;
+            selectedIngredientId = null;
+            renderNoVisibleIngredients();
+          }
+        }
+      } else if (selectedIngredientId) {
+        const selectedIngredient = ingredientById.get(selectedIngredientId);
+        const stillVisible = selectedIngredient && selectedIngredient.recipes.some(function (recipe) { return active.has(recipe); });
+        if (stillVisible) {
+          selectIngredient(selectedIngredient,false);
+        } else {
+          const fallbackGroup = visibleIngredientGroups()[0];
+          const fallbackIngredient = fallbackGroup ? visibleIngredientsForGroup(fallbackGroup)[0] : null;
+          if (fallbackIngredient) selectIngredient(fallbackIngredient,true);
+          else {
+            selectedIngredientId = null;
+            renderNoVisibleIngredients();
+          }
+        }
+      } else {
+        const fallbackGroup = visibleIngredientGroups()[0];
+        const fallbackIngredient = fallbackGroup ? visibleIngredientsForGroup(fallbackGroup)[0] : null;
+        if (fallbackIngredient) selectIngredient(fallbackIngredient,false);
+        else renderNoVisibleIngredients();
       }
     }
     document.querySelectorAll(".toggle input").forEach(function (input) {
@@ -474,149 +581,3 @@
       });
       mobilePanelBackdrop.hidden = !phone || !activeMobilePanel;
       const shouldLockPage = phone && !!activeMobilePanel;
-      document.querySelector(".map-experience").classList.toggle("has-mobile-panel",shouldLockPage);
-
-      if (shouldLockPage && !document.body.classList.contains("mobile-panel-open")) {
-        mobilePanelScrollY = window.scrollY;
-        document.body.style.top = "-" + mobilePanelScrollY + "px";
-        document.body.classList.add("mobile-panel-open");
-      } else if (!shouldLockPage && document.body.classList.contains("mobile-panel-open")) {
-        const restoreScrollY = mobilePanelScrollY;
-        document.body.classList.remove("mobile-panel-open");
-        document.body.style.removeProperty("top");
-        window.requestAnimationFrame(function () {
-          window.scrollTo({ top:restoreScrollY, left:0, behavior:"auto" });
-        });
-      }
-    }
-
-    function openMobilePanel(name, trigger) {
-      if (!isPhoneViewport()) return;
-      activeMobilePanel = name;
-      lastMobilePanelTrigger = trigger || (document.activeElement !== document.body ? document.activeElement : null);
-      syncMobilePanelMode();
-      document.querySelector(".map-shell").scrollTop = 0;
-      if (name === "search") {
-        window.setTimeout(function () {
-          mobileSearchInput.focus({ preventScroll:true });
-          document.querySelector(".map-shell").scrollTop = 0;
-        },60);
-      }
-    }
-
-    function closeMobilePanel(restoreFocus) {
-      const target = lastMobilePanelTrigger;
-      const focused = document.activeElement;
-      if (focused && focused !== document.body && focused.closest && focused.closest("[data-mobile-panel]")) {
-        focused.blur();
-      }
-      activeMobilePanel = null;
-      lastMobilePanelTrigger = null;
-      syncMobilePanelMode();
-      document.querySelector(".map-shell").scrollTop = 0;
-      if (restoreFocus !== false && target && target.isConnected) {
-        target.focus({ preventScroll:true });
-      }
-    }
-
-    mobilePanelButtons.forEach(function (button) {
-      button.addEventListener("click",function () {
-        const name = button.dataset.mobilePanelTarget;
-        if (activeMobilePanel === name) closeMobilePanel(true);
-        else openMobilePanel(name,button);
-      });
-    });
-    document.querySelectorAll("[data-mobile-panel-close]").forEach(function (button) {
-      button.addEventListener("click",function () { closeMobilePanel(true); });
-    });
-    mobilePanelBackdrop.addEventListener("click",function () { closeMobilePanel(true); });
-
-    document.querySelectorAll("[data-mobile-jump]").forEach(function (button) {
-      button.addEventListener("click",function () {
-        const target = document.getElementById(button.dataset.mobileJump);
-        closeMobilePanel(false);
-        if (target) {
-          window.setTimeout(function () {
-            target.scrollIntoView({ behavior:reducedMotion.matches ? "auto" : "smooth", block:"start" });
-          },20);
-        }
-      });
-    });
-
-    function normalizedSearch(value) {
-      return String(value || "")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g,"")
-        .toLocaleLowerCase();
-    }
-
-    function claimMatchesActiveRecipes(claim) {
-      const active = new Set(Array.from(document.querySelectorAll(".toolbar .toggle input:checked")).map(function (input) { return input.value; }));
-      return claim.recipes.some(function (recipe) { return active.has(recipe); });
-    }
-
-    function claimSearchText(claim) {
-      return normalizedSearch([
-        claim.greek,
-        claim.translit,
-        claim.gloss,
-        claim.place,
-        claim.cite,
-        claim.note,
-        evidenceText(claim),
-        claim.recipes.map(function (key) { return recipes[key].name; }).join(" ")
-      ].join(" "));
-    }
-
-    function renderMobileSearch() {
-      const query = normalizedSearch(mobileSearchInput.value.trim());
-      let matches = claims.filter(claimMatchesActiveRecipes);
-      if (query) matches = matches.filter(function (claim) { return claimSearchText(claim).includes(query); });
-      if (!query && selectedClaim) {
-        matches = [selectedClaim].concat(matches.filter(function (claim) { return claim.id !== selectedClaim.id; }));
-      }
-      const shown = matches.slice(0,30);
-      mobileSearchSummary.textContent = matches.length
-        ? matches.length + " matching claim" + (matches.length === 1 ? "" : "s") + (matches.length > shown.length ? " · showing first " + shown.length : "")
-        : "No visible claims match this search.";
-      mobileSearchResults.innerHTML = shown.map(function (claim) {
-        return '<li><button type="button" class="mobile-search-result" data-claim-id="' + escapeHTML(claim.id) + '">' +
-          '<span class="result-greek">' + escapeHTML(claim.greek) + '</span>' +
-          '<span class="result-place">' + escapeHTML(claim.translit + " · " + claim.place) + '</span>' +
-          '<span class="result-cite">' + escapeHTML(claim.cite) + '</span>' +
-        '</button></li>';
-      }).join("");
-    }
-
-    mobileSearchInput.addEventListener("input",renderMobileSearch);
-    mobileSearchResults.addEventListener("click",function (event) {
-      const button = event.target.closest("[data-claim-id]");
-      if (!button) return;
-      const claim = claims.find(function (item) { return item.id === button.dataset.claimId; });
-      if (claim) selectClaim(claim,false,true,true);
-    });
-    document.querySelectorAll(".toolbar .toggle input").forEach(function (input) {
-      input.addEventListener("change",renderMobileSearch);
-    });
-
-    document.getElementById("mobile-sources-list").innerHTML = document.querySelector(".sources-grid").innerHTML;
-    document.getElementById("mobile-unverified-list").innerHTML = document.querySelector(".unverified ul").innerHTML;
-    renderMobileSearch();
-
-    function isPhoneViewport() {
-      return phoneQuery.matches;
-    }
-
-    function updateExploreMode() {
-      const gesturesEnabled = isPhoneViewport() || exploreMode;
-      mapWrap.classList.toggle("is-exploring",gesturesEnabled);
-      if (isPhoneViewport()) {
-        gestureHint.textContent = "Tap a point for guided focus; drag, pinch, double-tap, or use +/− to explore.";
-      } else if (exploreMode) {
-        gestureHint.textContent = "Drag the map; use the wheel, double-click, or +/− to zoom. Press Escape for guided mode.";
-      } else {
-        gestureHint.textContent = "Select a point for guided focus. Use +/−, or enable Explore map to drag and wheel-zoom.";
-      }
-    }
-
-    function updateZoomControls(transform) {

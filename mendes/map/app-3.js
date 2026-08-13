@@ -1,3 +1,149 @@
+      document.querySelector(".map-experience").classList.toggle("has-mobile-panel",shouldLockPage);
+
+      if (shouldLockPage && !document.body.classList.contains("mobile-panel-open")) {
+        mobilePanelScrollY = window.scrollY;
+        document.body.style.top = "-" + mobilePanelScrollY + "px";
+        document.body.classList.add("mobile-panel-open");
+      } else if (!shouldLockPage && document.body.classList.contains("mobile-panel-open")) {
+        const restoreScrollY = mobilePanelScrollY;
+        document.body.classList.remove("mobile-panel-open");
+        document.body.style.removeProperty("top");
+        window.requestAnimationFrame(function () {
+          window.scrollTo({ top:restoreScrollY, left:0, behavior:"auto" });
+        });
+      }
+    }
+
+    function openMobilePanel(name, trigger) {
+      if (!isPhoneViewport()) return;
+      activeMobilePanel = name;
+      lastMobilePanelTrigger = trigger || (document.activeElement !== document.body ? document.activeElement : null);
+      syncMobilePanelMode();
+      document.querySelector(".map-shell").scrollTop = 0;
+      if (name === "search") {
+        window.setTimeout(function () {
+          mobileSearchInput.focus({ preventScroll:true });
+          document.querySelector(".map-shell").scrollTop = 0;
+        },60);
+      }
+    }
+
+    function closeMobilePanel(restoreFocus) {
+      const target = lastMobilePanelTrigger;
+      const focused = document.activeElement;
+      if (focused && focused !== document.body && focused.closest && focused.closest("[data-mobile-panel]")) {
+        focused.blur();
+      }
+      activeMobilePanel = null;
+      lastMobilePanelTrigger = null;
+      syncMobilePanelMode();
+      document.querySelector(".map-shell").scrollTop = 0;
+      if (restoreFocus !== false && target && target.isConnected) {
+        target.focus({ preventScroll:true });
+      }
+    }
+
+    mobilePanelButtons.forEach(function (button) {
+      button.addEventListener("click",function () {
+        const name = button.dataset.mobilePanelTarget;
+        if (activeMobilePanel === name) closeMobilePanel(true);
+        else openMobilePanel(name,button);
+      });
+    });
+    document.querySelectorAll("[data-mobile-panel-close]").forEach(function (button) {
+      button.addEventListener("click",function () { closeMobilePanel(true); });
+    });
+    mobilePanelBackdrop.addEventListener("click",function () { closeMobilePanel(true); });
+
+    document.querySelectorAll("[data-mobile-jump]").forEach(function (button) {
+      button.addEventListener("click",function () {
+        const target = document.getElementById(button.dataset.mobileJump);
+        closeMobilePanel(false);
+        if (target) {
+          window.setTimeout(function () {
+            target.scrollIntoView({ behavior:reducedMotion.matches ? "auto" : "smooth", block:"start" });
+          },20);
+        }
+      });
+    });
+
+    function normalizedSearch(value) {
+      return String(value || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .toLocaleLowerCase();
+    }
+
+    function claimMatchesActiveRecipes(claim) {
+      const active = new Set(Array.from(document.querySelectorAll(".toolbar .toggle input:checked")).map(function (input) { return input.value; }));
+      return claim.recipes.some(function (recipe) { return active.has(recipe); });
+    }
+
+    function claimSearchText(claim) {
+      return normalizedSearch([
+        claim.greek,
+        claim.translit,
+        claim.gloss,
+        claim.place,
+        claim.cite,
+        claim.note,
+        evidenceText(claim),
+        claim.recipes.map(function (key) { return recipes[key].name; }).join(" ")
+      ].join(" "));
+    }
+
+    function renderMobileSearch() {
+      const query = normalizedSearch(mobileSearchInput.value.trim());
+      let matches = claims.filter(claimMatchesActiveRecipes);
+      if (query) matches = matches.filter(function (claim) { return claimSearchText(claim).includes(query); });
+      if (!query && selectedClaim) {
+        matches = [selectedClaim].concat(matches.filter(function (claim) { return claim.id !== selectedClaim.id; }));
+      }
+      const shown = matches.slice(0,30);
+      mobileSearchSummary.textContent = matches.length
+        ? matches.length + " matching claim" + (matches.length === 1 ? "" : "s") + (matches.length > shown.length ? " · showing first " + shown.length : "")
+        : "No visible claims match this search.";
+      mobileSearchResults.innerHTML = shown.map(function (claim) {
+        return '<li><button type="button" class="mobile-search-result" data-claim-id="' + escapeHTML(claim.id) + '">' +
+          '<span class="result-greek">' + escapeHTML(claim.greek) + '</span>' +
+          '<span class="result-place">' + escapeHTML(claim.translit + " · " + claim.place) + '</span>' +
+          '<span class="result-cite">' + escapeHTML(claim.cite) + '</span>' +
+        '</button></li>';
+      }).join("");
+    }
+
+    mobileSearchInput.addEventListener("input",renderMobileSearch);
+    mobileSearchResults.addEventListener("click",function (event) {
+      const button = event.target.closest("[data-claim-id]");
+      if (!button) return;
+      const claim = claims.find(function (item) { return item.id === button.dataset.claimId; });
+      if (claim) selectClaim(claim,false,true,true);
+    });
+    document.querySelectorAll(".toolbar .toggle input").forEach(function (input) {
+      input.addEventListener("change",renderMobileSearch);
+    });
+
+    document.getElementById("mobile-sources-list").innerHTML = document.querySelector(".sources-grid").innerHTML;
+    document.getElementById("mobile-unverified-list").innerHTML = document.querySelector(".unverified ul").innerHTML;
+    renderMobileSearch();
+
+    function isPhoneViewport() {
+      return phoneQuery.matches;
+    }
+
+    function updateExploreMode() {
+      const gesturesEnabled = isPhoneViewport() || exploreMode;
+      mapWrap.classList.toggle("is-exploring",gesturesEnabled);
+      if (isPhoneViewport()) {
+        gestureHint.textContent = "Tap a point for guided focus; drag, pinch, double-tap, or use +/− to explore.";
+      } else if (exploreMode) {
+        gestureHint.textContent = "Drag the map; use the wheel, double-click, or +/− to zoom. Press Escape for guided mode.";
+      } else {
+        gestureHint.textContent = "Select a point for guided focus. Use +/−, or enable Explore map to drag and wheel-zoom.";
+      }
+    }
+
+    function updateZoomControls(transform) {
       const home = homeTransform();
       zoomLevel.textContent = Math.round(transform.k * 100) + "%";
       zoomIn.disabled = transform.k >= 7.999;
@@ -108,8 +254,8 @@
       ];
     }
 
-    function focusClaim(d) {
-      if (exploreMode) return;
+    function focusClaim(d, forceFocus) {
+      if (exploreMode && !forceFocus) return;
       const p = projection(d.coord);
       const targetScale = focusScaleForClaim(d);
       const visible = focusViewportExtent();
@@ -120,6 +266,41 @@
           .translate(targetX,targetY)
           .scale(targetScale)
           .translate(-p[0],-p[1]),
+        visible
+      );
+      zoomTarget(520).call(zoom.transform,target);
+    }
+
+    function focusIngredient(ingredient, forceFocus) {
+      if (exploreMode && !forceFocus) return;
+      const ingredientClaims = visibleClaimsForIngredient(ingredient);
+      if (!ingredientClaims.length) return;
+      if (ingredientClaims.length === 1) {
+        focusClaim(ingredientClaims[0],forceFocus);
+        return;
+      }
+      const points = ingredientClaims.map(function (claim) { return projection(claim.coord); });
+      const xExtent = d3.extent(points,function (point) { return point[0]; });
+      const yExtent = d3.extent(points,function (point) { return point[1]; });
+      const visible = focusViewportExtent();
+      const visibleWidth = visible[1][0] - visible[0][0];
+      const visibleHeight = visible[1][1] - visible[0][1];
+      const pointWidth = Math.max(1,xExtent[1] - xExtent[0]);
+      const pointHeight = Math.max(1,yExtent[1] - yExtent[0]);
+      const padding = isPhoneViewport() ? 92 : 130;
+      const targetScale = Math.max(1,Math.min(4.2,
+        (visibleWidth-padding)/pointWidth,
+        (visibleHeight-padding)/pointHeight
+      ));
+      const targetX = (visible[0][0]+visible[1][0])/2;
+      const targetY = (visible[0][1]+visible[1][1])/2;
+      const ingredientX = (xExtent[0]+xExtent[1])/2;
+      const ingredientY = (yExtent[0]+yExtent[1])/2;
+      const target = constrainToFrame(
+        d3.zoomIdentity
+          .translate(targetX,targetY)
+          .scale(targetScale)
+          .translate(-ingredientX,-ingredientY),
         visible
       );
       zoomTarget(520).call(zoom.transform,target);
@@ -169,6 +350,7 @@
 
     svg.append("path").datum(frameGeo).attr("class","frame").attr("d",geoPath);
 
+    navigationReady = true;
     const defaultClaim = claims.find(function (d) { return d.id === "bal-petra"; });
     if (defaultClaim) {
       selectClaim(defaultClaim, false);
