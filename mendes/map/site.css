@@ -290,6 +290,38 @@
     .badge.s { background: var(--susinum); }
     .badge.context { background: #6d6558; }
     .detail-hint { margin-top: 18px; color: #7b7568; font-size: .74rem; }
+    .ingredient-nav {
+      display: grid;
+      grid-template-columns: minmax(72px,auto) minmax(0,1fr) minmax(72px,auto);
+      gap: 8px;
+      align-items: stretch;
+      margin: 0 0 16px;
+      padding: 0 0 14px;
+      border-bottom: 1px solid #d5cebf;
+    }
+    .ingredient-nav button {
+      min-height: 44px;
+      padding: 7px 9px;
+      border: 1px solid #bcb3a3;
+      background: #f7f2e8;
+      color: #2e5f68;
+      font: 750 .7rem/1.15 system-ui, sans-serif;
+      cursor: pointer;
+    }
+    .ingredient-nav button:hover { background: #eee6d7; color: #173f43; }
+    .ingredient-nav button:focus-visible { outline: 3px solid rgba(242,184,71,.55); outline-offset: 2px; }
+    .ingredient-nav-status {
+      align-self: center;
+      min-width: 0;
+      color: #625d52;
+      font: 750 .66rem/1.25 system-ui, sans-serif;
+      text-align: center;
+    }
+    .ingredient-nav-status strong,
+    .ingredient-nav-status span { display: block; }
+    .ingredient-nav-status strong { color: #273734; font-size: .72rem; }
+    .ingredient-nav-position { margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .ingredient-swipe-hint { margin: -8px 0 14px; color: #756f63; font-size: .7rem; text-align: center; }
     .map-caption {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
@@ -315,6 +347,18 @@
     }
     .section-intro { max-width: 920px; margin: 8px 0 20px; color: #5e6966; }
     #claim-index { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .ingredient-group-heading {
+      grid-column: 1 / -1;
+      margin: 16px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid #cfc7b8;
+      color: #4f5b58;
+      font: 800 .74rem/1.2 system-ui, sans-serif;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .ingredient-group-heading:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+    .ingredient-group-heading[hidden] { display: none; }
     .ingredient-card {
       border: 1px solid #d0c8b9;
       background: #fffdf8;
@@ -593,7 +637,9 @@
         overscroll-behavior: contain;
       }
       #detail .mobile-sheet-body { max-height: calc(min(54dvh, 520px) - 58px); }
-      .detail-content { padding: 16px 18px calc(22px + env(safe-area-inset-bottom)); }
+      .detail-content { padding: 16px 18px calc(22px + env(safe-area-inset-bottom)); touch-action: pan-y; }
+      .ingredient-nav { position: sticky; z-index: 1; top: -16px; padding-top: 8px; background: #fffdf8; }
+      .ingredient-swipe-hint { display: block; }
 
       .mobile-search-label { display: block; margin-bottom: 6px; color: #4d5855; font: 750 .72rem/1.2 system-ui, sans-serif; }
       .mobile-search-input {
