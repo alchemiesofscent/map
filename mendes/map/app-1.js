@@ -299,6 +299,31 @@
     };
 
     const allIngredients = ingredients.concat(contextIngredients,[theology]);
+    const ingredientGroups = [
+      { id:"bases", label:"Base oils and carriers", ids:["balanos","almonds","omphacine","oil"] },
+      { id:"resins", label:"Resins and plant exudates", ids:["myrrh","resin","balsam","galbanum","gum"] },
+      { id:"spices", label:"Spices and aromatic grasses", ids:["cassia","cinnamon","cardamom","schoinos","kalamos"] },
+      { id:"flowers", label:"Flowers, colourants, and substitutes", ids:["lily","saffron","karpesion","arnabo"] },
+      { id:"workshop", label:"Workshop and processing materials", ids:["honey","wine","water","salt"] },
+      { id:"context", label:"Comparative and theological context", ids:["hammoniacum-metopon","theology"] }
+    ];
+    const ingredientById = new Map(allIngredients.map(function (ingredient) { return [ingredient.id,ingredient]; }));
+    const ingredientGroupById = new Map();
+    const orderedIngredients = [];
+    ingredientGroups.forEach(function (group) {
+      group.ids.forEach(function (id) {
+        const ingredient = ingredientById.get(id);
+        if (!ingredient) return;
+        ingredientGroupById.set(id,group);
+        orderedIngredients.push(ingredient);
+      });
+    });
+    allIngredients.forEach(function (ingredient) {
+      if (!ingredientGroupById.has(ingredient.id)) orderedIngredients.push(ingredient);
+    });
+    const swipeableIngredients = orderedIngredients.filter(function (ingredient) {
+      return !ingredient.context && ingredient.id !== "theology" && ingredient.claims.length;
+    });
     const claims = [];
     allIngredients.forEach(function (ingredient) {
       ingredient.claims.forEach(function (claim) {
@@ -363,32 +388,3 @@
     };
 
     const svg = d3.select("#map");
-    const width = 900;
-    const height = 710;
-    let currentZoom = d3.zoomIdentity;
-    let selectedClaim = null;
-    let overlayScale = 1;
-    let viewAtHome = true;
-    const frameGeo = { type:"Polygon", coordinates:[[[7,3],[7,48],[83,48],[83,3],[7,3]]] };
-    const projection = d3.geoEquirectangular().fitExtent([[18,18],[width-18,height-18]], frameGeo);
-    const geoPath = d3.geoPath(projection);
-    const projectedLine = d3.line()
-      .x(function (d) { return projection(d)[0]; })
-      .y(function (d) { return projection(d)[1]; })
-      .curve(d3.curveCatmullRom.alpha(.35));
-
-    svg.append("defs").html(
-      '<clipPath id="map-clip"><rect x="18" y="18" width="' + (width-36) + '" height="' + (height-36) + '"></rect></clipPath>' +
-      '<filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"></feGaussianBlur></filter>'
-    );
-
-    const viewport = svg.append("g").attr("clip-path", "url(#map-clip)");
-    const zoomLayer = viewport.append("g").attr("class","zoom-layer");
-    zoomLayer.append("path").datum(d3.geoGraticule10()).attr("class","graticule").attr("d",geoPath);
-
-    let world;
-    try {
-      const topologyResponse = await fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");
-      if (!topologyResponse.ok) throw new Error("Basemap request failed: " + topologyResponse.status);
-      const topology = await topologyResponse.json();
-      world = topojson.feature(topology,topology.objects.countries);

@@ -1,3 +1,32 @@
+    const width = 900;
+    const height = 710;
+    let currentZoom = d3.zoomIdentity;
+    let selectedClaim = null;
+    let overlayScale = 1;
+    let viewAtHome = true;
+    const frameGeo = { type:"Polygon", coordinates:[[[7,3],[7,48],[83,48],[83,3],[7,3]]] };
+    const projection = d3.geoEquirectangular().fitExtent([[18,18],[width-18,height-18]], frameGeo);
+    const geoPath = d3.geoPath(projection);
+    const projectedLine = d3.line()
+      .x(function (d) { return projection(d)[0]; })
+      .y(function (d) { return projection(d)[1]; })
+      .curve(d3.curveCatmullRom.alpha(.35));
+
+    svg.append("defs").html(
+      '<clipPath id="map-clip"><rect x="18" y="18" width="' + (width-36) + '" height="' + (height-36) + '"></rect></clipPath>' +
+      '<filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"></feGaussianBlur></filter>'
+    );
+
+    const viewport = svg.append("g").attr("clip-path", "url(#map-clip)");
+    const zoomLayer = viewport.append("g").attr("class","zoom-layer");
+    zoomLayer.append("path").datum(d3.geoGraticule10()).attr("class","graticule").attr("d",geoPath);
+
+    let world;
+    try {
+      const topologyResponse = await fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");
+      if (!topologyResponse.ok) throw new Error("Basemap request failed: " + topologyResponse.status);
+      const topology = await topologyResponse.json();
+      world = topojson.feature(topology,topology.objects.countries);
     } catch (error) {
       console.warn("The basemap could not be loaded; research points remain available.",error);
       world = { type:"FeatureCollection", features:[] };
@@ -158,6 +187,57 @@
       });
     }
 
+    function activeRecipeKeys() {
+      return new Set(Array.from(document.querySelectorAll(".toolbar .toggle input:checked")).map(function (input) {
+        return input.value;
+      }));
+    }
+
+    function currentIngredientTrack() {
+      const active = activeRecipeKeys();
+      return swipeableIngredients.filter(function (ingredient) {
+        return ingredient.recipes.some(function (recipe) { return active.has(recipe); });
+      });
+    }
+
+    function preferredClaimForIngredient(ingredient) {
+      const active = activeRecipeKeys();
+      return ingredient.claims.find(function (claim) {
+        return claim.recipes.some(function (recipe) { return active.has(recipe); });
+      }) || ingredient.claims[0] || null;
+    }
+
+    function ingredientNavigationMarkup(d) {
+      const ingredient = ingredientById.get(d.ingredient);
+      const track = currentIngredientTrack();
+      const index = ingredient ? track.findIndex(function (item) { return item.id === ingredient.id; }) : -1;
+      if (!ingredient || index < 0 || !track.length) return "";
+      const group = ingredientGroupById.get(ingredient.id);
+      const previous = track[(index - 1 + track.length) % track.length];
+      const next = track[(index + 1) % track.length];
+      return '<nav class="ingredient-nav" aria-label="Browse mapped ingredients">' +
+        '<button type="button" data-ingredient-step="-1" aria-label="Previous ingredient: ' + escapeHTML(previous.gloss) + '">← Previous</button>' +
+        '<div class="ingredient-nav-status">' +
+          '<strong>' + escapeHTML(group ? group.label : "Ingredient sequence") + '</strong>' +
+          '<span class="ingredient-nav-position">Ingredient ' + (index + 1) + ' of ' + track.length + '</span>' +
+        '</div>' +
+        '<button type="button" data-ingredient-step="1" aria-label="Next ingredient: ' + escapeHTML(next.gloss) + '">Next →</button>' +
+      '</nav>' +
+      '<p class="ingredient-swipe-hint">Swipe right or left to move between related ingredients.</p>';
+    }
+
+    function stepIngredient(direction) {
+      const track = currentIngredientTrack();
+      if (!track.length) return;
+      const currentId = selectedClaim ? selectedClaim.ingredient : null;
+      const currentIndex = track.findIndex(function (ingredient) { return ingredient.id === currentId; });
+      const nextIndex = currentIndex < 0
+        ? (direction > 0 ? 0 : track.length - 1)
+        : (currentIndex + direction + track.length) % track.length;
+      const claim = preferredClaimForIngredient(track[nextIndex]);
+      if (claim) selectClaim(claim,false,true,false);
+    }
+
     function selectClaim(d, shouldScroll, shouldFocus, shouldOpenDetails) {
       selectedClaim = d;
       marker.classed("is-selected", function (x) { return x.id === d.id; });
@@ -172,6 +252,7 @@
       positionSelectedLabel();
 
       detailContent.innerHTML =
+        ingredientNavigationMarkup(d) +
         '<p class="detail-kicker">' + escapeHTML(d.translit) + '</p>' +
         '<h2>' + escapeHTML(d.greek) + '</h2>' +
         '<p class="detail-gloss">' + escapeHTML(d.gloss) + '</p>' +
@@ -184,6 +265,12 @@
           (d.route ? 'The gold convergence highlight follows a conventional corridor. ' : 'No route is drawn for this point. ') +
           (exploreMode ? 'Explore mode preserves your manual view.' : 'Guided mode refocuses the map on each selection.') +
         '</p>';
+
+      detailContent.querySelectorAll("[data-ingredient-step]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          stepIngredient(Number(button.dataset.ingredientStep));
+        });
+      });
 
       if (shouldOpenDetails && isPhoneViewport()) openMobilePanel("details");
       if (shouldFocus) focusClaim(d);
@@ -201,12 +288,38 @@
       }
     });
 
+    let ingredientSwipeStart = null;
+    detailContent.addEventListener("pointerdown", function (event) {
+      if (!isPhoneViewport() || event.pointerType === "mouse" || event.target.closest("button, a, input, select, textarea")) return;
+      ingredientSwipeStart = { id:event.pointerId, x:event.clientX, y:event.clientY };
+    });
+    detailContent.addEventListener("pointerup", function (event) {
+      if (!ingredientSwipeStart || ingredientSwipeStart.id !== event.pointerId) return;
+      const deltaX = event.clientX - ingredientSwipeStart.x;
+      const deltaY = event.clientY - ingredientSwipeStart.y;
+      ingredientSwipeStart = null;
+      if (Math.abs(deltaX) < 52 || Math.abs(deltaX) < Math.abs(deltaY) * 1.35) return;
+      stepIngredient(deltaX < 0 ? 1 : -1);
+    });
+    detailContent.addEventListener("pointercancel", function () { ingredientSwipeStart = null; });
+
     function renderIndex() {
       const host = document.getElementById("claim-index");
-      allIngredients.forEach(function (ingredient) {
+      let previousGroupId = null;
+      orderedIngredients.forEach(function (ingredient) {
+        const group = ingredientGroupById.get(ingredient.id);
+        if (group && group.id !== previousGroupId) {
+          const heading = document.createElement("h3");
+          heading.className = "ingredient-group-heading";
+          heading.dataset.group = group.id;
+          heading.textContent = group.label;
+          host.appendChild(heading);
+          previousGroupId = group.id;
+        }
         const details = document.createElement("details");
         details.className = "ingredient-card";
         details.dataset.recipes = ingredient.recipes.join(" ");
+        details.dataset.group = group ? group.id : "other";
         const summary = document.createElement("summary");
         summary.innerHTML =
           '<span class="ingredient-name">' + escapeHTML(ingredient.greek) + '</span>' +
@@ -254,6 +367,12 @@
       document.querySelectorAll(".ingredient-card").forEach(function (card) {
         const cardRecipes = card.dataset.recipes.split(" ");
         card.hidden = !cardRecipes.some(function (r) { return active.has(r); });
+      });
+      const visibleGroups = new Set(Array.from(document.querySelectorAll(".ingredient-card:not([hidden])")).map(function (card) {
+        return card.dataset.group;
+      }));
+      document.querySelectorAll(".ingredient-group-heading").forEach(function (heading) {
+        heading.hidden = !visibleGroups.has(heading.dataset.group);
       });
       document.getElementById("visible-count").textContent = visible;
       document.getElementById("ingredient-count").textContent = ingredients.length;
@@ -501,148 +620,3 @@
     }
 
     function updateZoomControls(transform) {
-      const home = homeTransform();
-      zoomLevel.textContent = Math.round(transform.k * 100) + "%";
-      zoomIn.disabled = transform.k >= 7.999;
-      zoomOut.disabled = transform.k <= 1.001;
-      zoomReset.disabled = transformsNear(transform,home);
-    }
-
-    function renderZoom(transform) {
-      currentZoom = transform;
-      const matrix = svg.node().getScreenCTM();
-      const cssPerUserUnit = matrix ? Math.hypot(matrix.a,matrix.b) : 1;
-      const fullScreenScale = cssPerUserUnit > 0 ? 1/cssPerUserUnit : 1;
-      overlayScale = Math.min(fullScreenScale,2.1);
-      zoomLayer.attr("transform",transform);
-
-      marker.attr("transform", function (d) {
-        const p = transformedPoint(d.coord);
-        return "translate(" + p[0] + "," + p[1] + ") scale(" + overlayScale + ")";
-      });
-      marker.select(".claim-hit").attr("r",18 * fullScreenScale / overlayScale);
-      routeLabels
-        .attr("x", function (d) { return transformedPoint(d.labelAt)[0]; })
-        .attr("y", function (d) { return transformedPoint(d.labelAt)[1]; });
-      regionLabels
-        .attr("x", function (d) { return transformedPoint(d.coord)[0]; })
-        .attr("y", function (d) { return transformedPoint(d.coord)[1]; });
-      mapPlaceLabels
-        .attr("x", function (d) { return transformedPoint(d.coord)[0] + d.dx; })
-        .attr("y", function (d) { return transformedPoint(d.coord)[1] + d.dy; });
-      theologyLabels
-        .attr("x", function (d) { return transformedPoint([42.0,9.2])[0] + d.dx; })
-        .attr("y", function (d) { return transformedPoint([42.0,9.2])[1] + d.dy; });
-      hubs.attr("transform", function (d) {
-        const p = transformedPoint(d.coord);
-        return "translate(" + p[0] + "," + p[1] + ") scale(" + overlayScale + ")";
-      });
-      positionSelectedLabel();
-      viewAtHome = transformsNear(transform,homeTransform());
-      updateZoomControls(transform);
-    }
-
-    const zoom = d3.zoom()
-      .scaleExtent([1,8])
-      .extent(function () { return visibleViewportExtent(); })
-      .translateExtent(mapExtent)
-      .clickDistance(4)
-      .filter(function (event) {
-        const ordinaryPointer = (!event.ctrlKey || event.type === "wheel") && !event.button;
-        return ordinaryPointer && (isPhoneViewport() || exploreMode);
-      })
-      .on("start", function () { svg.classed("is-zooming",true); })
-      .on("zoom", function (event) { renderZoom(event.transform); })
-      .on("end", function () { svg.classed("is-zooming",false); });
-
-    svg.call(zoom);
-    svg.call(zoom.transform,homeTransform());
-
-    if (window.ResizeObserver) {
-      let resizeFrame = null;
-      const mapResizeObserver = new ResizeObserver(function () {
-        const preserveHome = viewAtHome;
-        if (resizeFrame !== null) window.cancelAnimationFrame(resizeFrame);
-        resizeFrame = window.requestAnimationFrame(function () {
-          resizeFrame = null;
-          const target = preserveHome ? homeTransform() : constrainToFrame(currentZoom);
-          svg.call(zoom.transform,target);
-        });
-      });
-      mapResizeObserver.observe(mapWrap);
-    } else {
-      window.addEventListener("resize", function () {
-        svg.call(zoom.transform,viewAtHome ? homeTransform() : constrainToFrame(currentZoom));
-      });
-    }
-
-    function constrainToFrame(transform, visibleOverride) {
-      const visible = visibleOverride || visibleViewportExtent();
-      const dx0 = transform.invertX(visible[0][0]) - mapExtent[0][0];
-      const dx1 = transform.invertX(visible[1][0]) - mapExtent[1][0];
-      const dy0 = transform.invertY(visible[0][1]) - mapExtent[0][1];
-      const dy1 = transform.invertY(visible[1][1]) - mapExtent[1][1];
-      return transform.translate(
-        dx1 > dx0 ? (dx0 + dx1) / 2 : Math.min(0,dx0) || Math.max(0,dx1),
-        dy1 > dy0 ? (dy0 + dy1) / 2 : Math.min(0,dy0) || Math.max(0,dy1)
-      );
-    }
-
-    function focusScaleForClaim(d) {
-      if (isPhoneViewport()) {
-        return d.evidence === "theology" || d.subtype === "correction" ? 1.25 : 1.8;
-      }
-      return d.evidence === "theology" || d.subtype === "correction" ? 1.8 : 2.8;
-    }
-
-    function focusViewportExtent() {
-      const full = visibleViewportExtent();
-      if (!isPhoneViewport() || activeMobilePanel !== "details") return full;
-      const svgRect = svg.node().getBoundingClientRect();
-      const detailPanel = document.getElementById("detail");
-      const navTop = mobilePanelNav.getBoundingClientRect().top;
-      const finalPanelTop = navTop - detailPanel.offsetHeight;
-      const screenScale = Math.max(svgRect.width/width,svgRect.height/height);
-      const usablePixels = Math.max(150,finalPanelTop-svgRect.top-18);
-      const logicalBottom = full[0][1] + usablePixels/screenScale;
-      return [
-        full[0],
-        [full[1][0],Math.min(full[1][1],logicalBottom)]
-      ];
-    }
-
-    function focusClaim(d) {
-      if (exploreMode) return;
-      const p = projection(d.coord);
-      const targetScale = focusScaleForClaim(d);
-      const visible = focusViewportExtent();
-      const targetX = (visible[0][0]+visible[1][0])/2;
-      const targetY = (visible[0][1]+visible[1][1])/2;
-      const target = constrainToFrame(
-        d3.zoomIdentity
-          .translate(targetX,targetY)
-          .scale(targetScale)
-          .translate(-p[0],-p[1]),
-        visible
-      );
-      zoomTarget(520).call(zoom.transform,target);
-    }
-
-    function zoomTarget(duration) {
-      return reducedMotion.matches ? svg : svg.transition().duration(duration || 180).ease(d3.easeCubicOut);
-    }
-
-    zoomIn.addEventListener("click", function () {
-      zoomTarget().call(zoom.scaleBy,1.6);
-    });
-    zoomOut.addEventListener("click", function () {
-      zoomTarget().call(zoom.scaleBy,1/1.6);
-    });
-    zoomReset.addEventListener("click", function () {
-      zoomTarget().call(zoom.transform,homeTransform());
-    });
-    exploreToggle.addEventListener("change", function () {
-      exploreMode = exploreToggle.checked;
-      updateExploreMode();
-    });
-    document.addEventListener("keydown", function (event) {
