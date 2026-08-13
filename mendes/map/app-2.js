@@ -123,7 +123,7 @@
         g.append("circle").attr("class","ancient-shape").attr("r",6.5);
       } else if (d.evidence === "modern") {
         g.append("rect").attr("class","modern-shape").attr("x",-6).attr("y",-6).attr("width",12).attr("height",12).attr("transform","rotate(45)");
-      } else if (navigationReady) {
+      } else {
         g.append("circle").attr("class","theology-shape").attr("r",9);
         g.append("circle").attr("class","theology-shape").attr("r",5);
       }
@@ -489,7 +489,7 @@
             renderNoVisibleIngredients();
           }
         }
-      } else {
+      } else if (navigationReady) {
         const fallbackGroup = visibleIngredientGroups()[0];
         const fallbackIngredient = fallbackGroup ? visibleIngredientsForGroup(fallbackGroup)[0] : null;
         if (fallbackIngredient) selectIngredient(fallbackIngredient,false);
