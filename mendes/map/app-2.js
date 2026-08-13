@@ -253,7 +253,7 @@
           '</button>' +
           '<nav class="location-nav" aria-label="Browse mapped locations for ' + escapeHTML(selectedIngredient.gloss) + '" aria-describedby="location-swipe-instructions">' +
             '<button type="button" data-location-step="-1"' + (previous ? ' aria-label="Previous location: ' + escapeHTML(previous.place) + '"' : ' disabled aria-label="No previous location"') + '><span aria-hidden="true">←</span></button>' +
-            '<div class="location-nav-status" aria-live="polite" aria-atomic="true" title="' + escapeHTML(currentPlaceLabel) + '">' +
+            '<div class="location-nav-status" tabindex="-1" aria-live="polite" aria-atomic="true" title="' + escapeHTML(currentPlaceLabel) + '">' +
               '<strong>' + escapeHTML(currentPlaceLabel) + '</strong>' +
               '<span class="location-nav-position">' + escapeHTML(locationPosition) + '</span>' +
             '</div>' +
@@ -311,6 +311,12 @@
       if (nextIndex < 0 || nextIndex >= locations.length) return;
       ingredientPickerOpen = false;
       selectClaim(locations[nextIndex],false,true,false,true);
+      window.requestAnimationFrame(function () {
+        const preferred = detailContent.querySelector('[data-location-step="' + direction + '"]:not(:disabled)');
+        const alternate = detailContent.querySelector('[data-location-step="' + (-direction) + '"]:not(:disabled)');
+        const target = preferred || alternate || detailContent.querySelector(".location-nav-status");
+        if (target) target.focus({ preventScroll:true });
+      });
     }
 
     function setIngredientPickerOpen(open, returnFocus) {
@@ -343,6 +349,10 @@
         if (ingredient) {
           ingredientPickerOpen = false;
           selectIngredient(ingredient,true);
+          window.requestAnimationFrame(function () {
+            const refreshedPickerToggle = detailContent.querySelector(".ingredient-picker-toggle");
+            if (refreshedPickerToggle) refreshedPickerToggle.focus({ preventScroll:true });
+          });
         }
       });
       if (pickerPanel) pickerPanel.addEventListener("keydown", function (event) {
@@ -548,24 +558,3 @@
     document.querySelectorAll(".toggle input").forEach(function (input) {
       input.addEventListener("change",updateVisibility);
     });
-    updateVisibility();
-
-    const mapExtent = [[18,18],[width-18,height-18]];
-
-    function visibleViewportExtent() {
-      const rect = svg.node().getBoundingClientRect();
-      if (!rect.width || !rect.height) return mapExtent;
-      const scale = Math.max(rect.width/width,rect.height/height);
-      const visibleWidth = rect.width/scale;
-      const visibleHeight = rect.height/scale;
-      return [
-        [(width-visibleWidth)/2,(height-visibleHeight)/2],
-        [(width+visibleWidth)/2,(height+visibleHeight)/2]
-      ];
-    }
-
-    function transformsNear(a, b) {
-      return Math.abs(a.k-b.k) < .001 && Math.abs(a.x-b.x) < .5 && Math.abs(a.y-b.y) < .5;
-    }
-
-    function homeTransform() {

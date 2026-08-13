@@ -347,6 +347,7 @@
       font: 750 .72rem/1.12 system-ui, sans-serif;
     }
     .ingredient-picker-chevron { grid-area: chevron; align-self: center; margin-left: 5px; color: #2e5f68; font-size: 1rem; }
+    .ingredient-picker-toggle[aria-expanded="true"] .ingredient-picker-chevron { transform: rotate(180deg); }
     .ingredient-picker-panel {
       margin-top: 8px;
       padding: 9px;
