@@ -1,5 +1,17 @@
 
-  <nav class="map-site-nav" aria-label="House of Mendes pages"><a href="../?v=20260813-3">← Dossier &amp; ingredient catalogue</a></nav>
+  <nav class="map-site-nav" aria-label="House of Mendes pages"><a href="../?v=20260814-1">← Dossier &amp; ingredient catalogue</a><span class="site-nav-title" aria-hidden="true">House of Mendes</span></nav>
+  <svg hidden aria-hidden="true" class="glyph-sprite">
+    <symbol id="glyph-ancient" viewBox="-12 -12 24 24">
+      <circle r="6.5" fill="currentColor" stroke="var(--glyph-stroke, transparent)" stroke-width="1.5"></circle>
+    </symbol>
+    <symbol id="glyph-inference" viewBox="-12 -12 24 24">
+      <rect x="-6" y="-6" width="12" height="12" transform="rotate(45)" fill="var(--glyph-fill, transparent)" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2"></rect>
+    </symbol>
+    <symbol id="glyph-theology" viewBox="-12 -12 24 24">
+      <circle r="9" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"></circle>
+      <circle r="5" fill="var(--glyph-fill, transparent)" stroke="currentColor" stroke-width="1.6"></circle>
+    </symbol>
+  </svg>
   <main class="page">
     <header class="masthead">
       <div>
@@ -15,17 +27,7 @@
     </header>
 
     <div class="map-experience">
-    <div class="toolbar mobile-sheet" id="layers-panel" data-mobile-panel="layers" aria-label="Map controls">
-      <div class="mobile-sheet-header">
-        <span class="mobile-sheet-handle" aria-hidden="true"></span>
-        <div class="mobile-sheet-title-row">
-          <div>
-            <span class="mobile-sheet-kicker">Map panel</span>
-            <strong id="layers-panel-title">Layers</strong>
-          </div>
-          <button type="button" class="mobile-sheet-close" data-mobile-panel-close aria-label="Close layers panel">Close</button>
-        </div>
-      </div>
+    <div class="toolbar" aria-label="Map controls">
       <span class="toolbar-label">Perfume layers</span>
       <label class="toggle" style="--toggle-color:var(--mendesian)">
         <input type="checkbox" value="m" checked>
@@ -47,13 +49,6 @@
     </div>
 
     <div class="map-shell">
-      <div class="mobile-map-header" aria-hidden="true">
-        <div>
-          <span>Ancient ingredient provenance</span>
-          <strong>Routes to Mendes</strong>
-        </div>
-        <div class="mobile-map-count"><span id="mobile-visible-count">0</span> claims</div>
-      </div>
       <div class="map-wrap">
         <div class="map-tools" aria-label="Map navigation">
           <div class="zoom-controls" role="group" aria-label="Map zoom controls">
@@ -62,111 +57,87 @@
             <button type="button" id="zoom-reset" class="zoom-reset" aria-label="Reset map view">Reset</button>
             <output id="zoom-level" class="zoom-level" aria-label="Current zoom level">100%</output>
           </div>
-          <label class="explore-control">
-            <input type="checkbox" id="explore-map">
-            <span>Explore map</span>
-          </label>
-          <p class="map-gesture-hint" id="map-gesture-hint">Use +/−, or enable Explore map to drag and wheel-zoom.</p>
+          <p class="map-gesture-hint" id="map-gesture-hint">Click the map to activate scroll-zoom and drag; press Escape to release. The +/− controls always work.</p>
         </div>
+        <p class="map-toast" id="map-toast" role="status" aria-live="polite"></p>
+        <p class="map-caution-chip" aria-hidden="true">All routes are conventional corridors — not attested per ingredient</p>
         <svg id="map" viewBox="0 0 900 710" preserveAspectRatio="xMidYMid slice" role="group" aria-roledescription="interactive provenance map" aria-labelledby="map-title map-desc" aria-describedby="map-gesture-hint">
           <title id="map-title">Ancient ingredient provenance claims and conventional routes to Mendes</title>
           <desc id="map-desc">An interactive map of the eastern Mediterranean, Red Sea, Arabia, and India. Select a point for its Greek ingredient label, source citation, and evidence note.</desc>
         </svg>
       </div>
-      <aside id="detail" class="mobile-sheet" data-mobile-panel="details" aria-labelledby="details-panel-title">
-        <div class="mobile-sheet-header">
-          <span class="mobile-sheet-handle" aria-hidden="true"></span>
-          <div class="mobile-sheet-title-row">
-            <div>
-              <span class="mobile-sheet-kicker">Selected provenance</span>
-              <strong id="details-panel-title">Details</strong>
+      <button type="button" class="sheet-backdrop" aria-label="Collapse map panel" hidden></button>
+      <section class="sheet" id="map-sheet" data-snap="peek" aria-label="Map panel">
+        <div class="sheet-grab" aria-hidden="true"><span class="sheet-handle"></span></div>
+        <div class="sheet-tabs" role="tablist" aria-label="Map panels">
+          <button type="button" role="tab" id="tab-details" data-sheet-tab="details" aria-selected="true" aria-controls="sheet-panel-details">Details</button>
+          <button type="button" role="tab" id="tab-layers" data-sheet-tab="layers" aria-selected="false" aria-controls="sheet-panel-layers" tabindex="-1">Layers</button>
+          <button type="button" role="tab" id="tab-search" data-sheet-tab="search" aria-selected="false" aria-controls="sheet-panel-search" tabindex="-1">Search</button>
+          <button type="button" role="tab" id="tab-info" data-sheet-tab="info" aria-selected="false" aria-controls="sheet-panel-info" tabindex="-1">Info</button>
+        </div>
+        <p class="sheet-peek"><span class="sheet-peek-label" data-peek-label aria-live="polite"></span></p>
+        <div class="sheet-panels">
+          <div class="sheet-panel" id="sheet-panel-details" role="tabpanel" aria-labelledby="tab-details" data-sheet-panel="details">
+            <aside id="detail" aria-label="Selected provenance details">
+              <div id="detail-content" class="detail-content">
+                <p class="detail-kicker">How to read the map</p>
+                <h2>Select a provenance point</h2>
+                <p class="detail-gloss">The highlighted path is a conventional corridor, not a route attested for that ingredient.</p>
+                <p class="detail-copy">Solid circles reproduce an ancient source claim. Dashed diamonds show either a modern correction or a working supply inference where the ancient recipe is silent. The gold halo is theological language, deliberately not pinned as literal geography.</p>
+                <div class="detail-citation">Every selectable point includes its source citation here and in its map tooltip.</div>
+                <p class="detail-hint">Keyboard: tab to a point and press Enter. Recipe colors appear as small satellites around each evidence marker.</p>
+              </div>
+            </aside>
+          </div>
+          <div class="sheet-panel" id="sheet-panel-layers" role="tabpanel" aria-labelledby="tab-layers" data-sheet-panel="layers" hidden>
+            <h3 class="sheet-panel-heading">Perfume layers</h3>
+            <div class="layer-proxies">
+              <button type="button" data-layer-proxy="m" aria-pressed="true"><span class="recipe-dot m" aria-hidden="true"></span>Dark Mendesian</button>
+              <button type="button" data-layer-proxy="t" aria-pressed="true"><span class="recipe-dot t" aria-hidden="true"></span>Metopion</button>
+              <button type="button" data-layer-proxy="s" aria-pressed="true"><span class="recipe-dot s" aria-hidden="true"></span>Susinum</button>
             </div>
-            <button type="button" class="mobile-sheet-close" data-mobile-panel-close aria-label="Close details panel">Close</button>
+            <h3 class="sheet-panel-heading">Evidence key</h3>
+            <ul class="sheet-key">
+              <li><svg class="key-glyph ancient" aria-hidden="true"><use href="#glyph-ancient"></use></svg>ancient-attested claim</li>
+              <li><svg class="key-glyph modern" aria-hidden="true"><use href="#glyph-inference"></use></svg>inference / modern correction</li>
+              <li><svg class="key-glyph theology" aria-hidden="true"><use href="#glyph-theology"></use></svg>theological provenance</li>
+            </ul>
+          </div>
+          <div class="sheet-panel" id="sheet-panel-search" role="tabpanel" aria-labelledby="tab-search" data-sheet-panel="search" hidden>
+            <label class="mobile-search-label" for="mobile-search-input">Ingredient, place, or ancient source</label>
+            <input type="search" id="mobile-search-input" class="mobile-search-input" placeholder="Try myrrh, Petra, Pliny…" autocomplete="off" spellcheck="false">
+            <p id="mobile-search-summary" class="mobile-search-summary" aria-live="polite"></p>
+            <ul id="mobile-search-results" class="mobile-search-results"></ul>
+          </div>
+          <div class="sheet-panel" id="sheet-panel-info" role="tabpanel" aria-labelledby="tab-info" data-sheet-panel="info" hidden>
+            <p><strong>Evidence classes.</strong> Solid circles are ancient-attested claims; dashed diamonds are inference or modern correction; gold double rings mark theological provenance.</p>
+            <p><strong>Route caution.</strong> Every sea, land, and Nile corridor is conventional—not attested per ingredient.</p>
+            <p><span id="mobile-info-visible-count" data-visible-count>0</span> visible provenance claims across 22 recipe materials.</p>
+            <div class="mobile-reference-links" aria-label="Full research sections">
+              <button type="button" data-mobile-jump="index-title">Ingredient index</button>
+              <button type="button" data-mobile-jump="sources-title">Sources</button>
+              <button type="button" data-mobile-jump="unverified-title">Unverified claims</button>
+            </div>
           </div>
         </div>
-        <div id="detail-content" class="detail-content mobile-sheet-body">
-          <p class="detail-kicker">How to read the map</p>
-          <h2>Select a provenance point</h2>
-          <p class="detail-gloss">The highlighted path is a conventional corridor, not a route attested for that ingredient.</p>
-          <p class="detail-copy">Solid circles reproduce an ancient source claim. Dashed diamonds show either a modern correction or a working supply inference where the ancient recipe is silent. The gold halo is theological language, deliberately not pinned as literal geography.</p>
-          <div class="detail-citation">Every selectable point includes its source citation here and in its map tooltip.</div>
-          <p class="detail-hint">Keyboard: tab to a point and press Enter. Recipe colors appear as small satellites around each evidence marker.</p>
-        </div>
-      </aside>
-
-      <section id="search-panel" class="mobile-sheet mobile-only-sheet" data-mobile-panel="search" aria-labelledby="search-panel-title" aria-hidden="true">
-        <div class="mobile-sheet-header">
-          <span class="mobile-sheet-handle" aria-hidden="true"></span>
-          <div class="mobile-sheet-title-row">
-            <div>
-              <span class="mobile-sheet-kicker">Find a source claim</span>
-              <strong id="search-panel-title">Search</strong>
-            </div>
-            <button type="button" class="mobile-sheet-close" data-mobile-panel-close aria-label="Close search panel">Close</button>
-          </div>
-        </div>
-        <div class="mobile-sheet-body">
-          <label class="mobile-search-label" for="mobile-search-input">Ingredient, place, or ancient source</label>
-          <input type="search" id="mobile-search-input" class="mobile-search-input" placeholder="Try myrrh, Petra, Pliny…" autocomplete="off" spellcheck="false">
-          <p id="mobile-search-summary" class="mobile-search-summary" aria-live="polite"></p>
-          <ul id="mobile-search-results" class="mobile-search-results"></ul>
-        </div>
+        <span class="safe-probe" aria-hidden="true"></span>
       </section>
-
-      <section id="info-panel" class="mobile-sheet mobile-only-sheet" data-mobile-panel="info" aria-labelledby="info-panel-title" aria-hidden="true">
-        <div class="mobile-sheet-header">
-          <span class="mobile-sheet-handle" aria-hidden="true"></span>
-          <div class="mobile-sheet-title-row">
-            <div>
-              <span class="mobile-sheet-kicker">Reading the map</span>
-              <strong id="info-panel-title">Info &amp; sources</strong>
-            </div>
-            <button type="button" class="mobile-sheet-close" data-mobile-panel-close aria-label="Close info panel">Close</button>
-          </div>
-        </div>
-        <div class="mobile-sheet-body mobile-info-body">
-          <p><strong>Evidence classes.</strong> Solid circles are ancient-attested claims; dashed diamonds are inference or modern correction; gold double rings mark theological provenance.</p>
-          <p><strong>Route caution.</strong> Every sea, land, and Nile corridor is conventional—not attested per ingredient.</p>
-          <p><span id="mobile-info-visible-count">0</span> visible provenance claims across <span id="mobile-info-ingredient-count">0</span> recipe materials.</p>
-          <div class="mobile-reference-links" aria-label="Full research sections">
-            <button type="button" data-mobile-jump="index-title">Ingredient index</button>
-            <button type="button" data-mobile-jump="sources-title">Sources</button>
-            <button type="button" data-mobile-jump="unverified-title">Unverified claims</button>
-          </div>
-          <details>
-            <summary>Sources and editions</summary>
-            <ol id="mobile-sources-list" class="mobile-source-list"></ol>
-          </details>
-          <details>
-            <summary>Claims not verified</summary>
-            <ul id="mobile-unverified-list" class="mobile-unverified-list"></ul>
-          </details>
-        </div>
-      </section>
-
-      <button type="button" class="mobile-panel-backdrop" aria-label="Close open map panel" hidden></button>
-      <nav class="mobile-panel-nav" aria-label="Map panels">
-        <button type="button" data-mobile-panel-target="search" aria-controls="search-panel" aria-expanded="false"><span aria-hidden="true">⌕</span>Search</button>
-        <button type="button" data-mobile-panel-target="layers" aria-controls="layers-panel" aria-expanded="false"><span aria-hidden="true">≡</span>Layers</button>
-        <button type="button" data-mobile-panel-target="details" aria-controls="detail" aria-expanded="false"><span aria-hidden="true">●</span>Details</button>
-        <button type="button" data-mobile-panel-target="info" aria-controls="info-panel" aria-expanded="false"><span aria-hidden="true">i</span>Info</button>
-      </nav>
     </div>
     </div>
 
     <div class="map-caption">
       <p><strong>Route caution.</strong> Sea, land, and Nile corridors are conventional reconstructions only: Red Sea ports → Coptos → Nile; Petra → Gaza; Mediterranean lanes; and Syria overland. No route is invented for workshop-local items.</p>
-      <p class="map-count"><span id="visible-count">0</span> visible claims · <span id="ingredient-count">0</span> recipe materials</p>
+      <p class="map-count"><span id="visible-count" data-visible-count>0</span> visible claims · 22 recipe materials</p>
     </div>
 
     <section class="section" aria-labelledby="index-title">
-      <h2 id="index-title">Ingredient and claim index</h2>
+      <h2 id="index-title"><svg class="section-glyph" aria-hidden="true"><use href="#glyph-ancient"></use></svg>Ingredient and claim index</h2>
       <p class="section-intro">Greek labels are primary. Open an ingredient to see every plotted source claim and its citation; selecting a place returns to the same point on the map.</p>
       <div id="claim-index"></div>
     </section>
 
     <section class="section" aria-labelledby="sources-title">
-      <h2 id="sources-title">Sources and editions</h2>
+      <h2 id="sources-title"><svg class="section-glyph" aria-hidden="true"><use href="#glyph-inference"></use></svg>Sources and editions</h2>
       <p class="section-intro">Ancient citations on the dots use book and chapter divisions. Page and line anchors remain in the verified local editions and structured recipe records.</p>
       <ol class="sources-grid">
         <li><strong>Dioscorides, <em>De materia medica</em></strong>, ed. Wellmann: 1.6 (cardamom); 1.13–14 (cassia/cinnamon); 1.17–18 (schoinos/kalamos); 1.26 (saffron); 1.52 (Susinum); 1.59 (Metopion and Mendesian); 1.64 (myrrh); 1.71 (terebinth resin); 3.83–84 (galbanum and ammoniacum as distinct substances); 4.157 (balanos, without a provenance claim).</li>
@@ -176,9 +147,9 @@
         <li><strong>Josephus, <em>Bellum Judaicum</em></strong> 4.469: Jericho as a producer of opobalsam, alongside henna and myrobalanos.</li>
         <li><strong>Paul of Aegina, <em>Epitome medica</em></strong> 7.20.8, 7.20.16, 7.20.31, ed. Heiberg: Susinum, Metopion, and Mendesian recipe witnesses; 7.20.16 explicitly specifies Attic honey.</li>
         <li><strong>Aëtius of Amida, <em>Libri medicinales</em></strong> 1.125–126, ed. Olivieri: Metopion and Mendesian ingredient witnesses; no additional ingredient-origin claims were silently inferred from the recipe headings.</li>
-        <li><strong>Galen, <em>De antidotis</em></strong> 1.14 (Kühn XIV 71–72): καρπήσιον most abundant and cheapest at Side in Pamphylia.</li>
+        <li><strong>Galen, <em>De antidotis</em></strong> 1.14 (Kühn XIV 71–72): <span lang="grc">καρπήσιον</span> most abundant and cheapest at Side in Pamphylia.</li>
         <li><strong>Edfu II 204–208</strong> and Wilde, Míčková, Pehal &amp; Coughlin, “<a href="https://doi.org/10.1515/zaes-2023-0021">The Antu-List Reconsidered</a>,” <em>ZÄS</em> 152.1 (2025), 117–135: “Things of the Land of god” and explicitly divine origins for temple aromatics.</li>
-        <li><strong>Modern correction register.</strong> Gilboa &amp; Namdar, “<a href="https://www.cambridge.org/core/journals/radiocarbon/article/abs/on-the-beginnings-of-south-asian-spice-trade-with-the-mediterranean-region-a-review/57B7230DFD38F6B035420F1D11A93210">On the Beginnings of South Asian Spice Trade</a>,” <em>Radiocarbon</em> 57.2 (2015), 265–283; and Kew, <a href="https://powo.science.kew.org/taxon/463752-1">Plants of the World Online</a>. These correct the broad source-zone eastward without forcing Greek κἀσσία or κινάμωμον onto a single modern species.</li>
+        <li><strong>Modern correction register.</strong> Gilboa &amp; Namdar, “<a href="https://www.cambridge.org/core/journals/radiocarbon/article/abs/on-the-beginnings-of-south-asian-spice-trade-with-the-mediterranean-region-a-review/57B7230DFD38F6B035420F1D11A93210">On the Beginnings of South Asian Spice Trade</a>,” <em>Radiocarbon</em> 57.2 (2015), 265–283; and Kew, <a href="https://powo.science.kew.org/taxon/463752-1">Plants of the World Online</a>. These correct the broad source-zone eastward without forcing Greek <span lang="grc">κἀσσία</span> or <span lang="grc">κινάμωμον</span> onto a single modern species.</li>
         <li><strong>Basemap.</strong> <a href="https://www.naturalearthdata.com/downloads/110m-cultural-vectors/">Natural Earth 1:110m Admin 0 countries</a>, public-domain geometry, loaded through the compact <a href="https://github.com/topojson/world-atlas">world-atlas</a> package. Ancient labels and research points are overlaid independently.</li>
         <li><strong>Interaction pattern.</strong> Guided focus, zoom, pan, reset, fixed-size markers, and the mobile map-first panel model adapt the project’s <a href="https://github.com/alchemiesofscent/periplus-tour">Periplus Tour</a> viewer while keeping this map’s geography embedded.</li>
         <li><strong>Primary project input.</strong> <code>research/allyson-natgeo-ingredient-dossier.md</code>, checked against the verified CTS witnesses and recipe records in <code>editions/</code>, Pliny’s local witness at <code>sources/phi0978001.xml</code>, and <code>aos-recipes/data/recipes/</code>.</li>
@@ -186,16 +157,16 @@
     </section>
 
     <section class="section unverified" aria-labelledby="unverified-title">
-      <h2 id="unverified-title">Claims not verified—and therefore not silently plotted as ancient origins</h2>
+      <h2 id="unverified-title"><svg class="section-glyph" aria-hidden="true"><use href="#glyph-inference"></use></svg>Claims not verified—and therefore not silently plotted as ancient origins</h2>
       <ul>
         <li><strong>En Gedi as the balsam source.</strong> Pliny 12.111–123 gives Judaea and two royal gardens but does not name En Gedi; Josephus <em>BJ</em> 4.469 verifies Jericho. En Gedi is omitted.</li>
-        <li><strong>Egyptian origin or pressing of ἔλαιον ὀμφάκινον.</strong> The sources place Metopion manufacture/invention in Egypt; they do not say the omphacine oil itself came from Egypt. Its workshop marker is dashed. Pliny 13.8 does separately attest bitter-almond oil expression in Egypt.</li>
+        <li><strong>Egyptian origin or pressing of <span lang="grc">ἔλαιον ὀμφάκινον</span>.</strong> The sources place Metopion manufacture/invention in Egypt; they do not say the omphacine oil itself came from Egypt. Its workshop marker is dashed. Pliny 13.8 does separately attest bitter-almond oil expression in Egypt.</li>
         <li><strong>Local or Aegean origins for ordinary oil, fragrant wine, rainwater, fine salt, gum, and generic Susinum honey.</strong> The recipes name or use them but do not state a provenance. Dashed points mark working supply context only.</li>
         <li><strong>Local lily cultivation.</strong> Dioscorides 1.52.5 says the best finished Susinum is made in Phoenicia and Egypt; it does not state where the lilies themselves grew. Product and inferred flower-supply markers are distinguished.</li>
-        <li><strong>ἀρναβώ (<em>arnabō</em>).</strong> Paul 7.20.8 transmits it as a Susinum substitute but provides no geographical origin; it remains unlocated in the index.</li>
+        <li><strong><span lang="grc">ἀρναβώ</span> (<em>arnabō</em>).</strong> Paul 7.20.8 transmits it as a Susinum substitute but provides no geographical origin; it remains unlocated in the index.</li>
         <li><strong>Exact coordinates for Pliny’s interior myrrh grade names</strong> (Atramitic, Gebbanitic, Ausaritis, Dianitis, Sambracena, Dusaritis, Mesalum). The names are retained under the Arabian claim, but not assigned invented point coordinates.</li>
         <li><strong>Which “Bosporus” Dioscorides 1.6 intends.</strong> The source’s toponym is plotted approximately at the Cimmerian Bosporus and flagged in its note; the textual referent is not silently disambiguated.</li>
-        <li><strong>A botanical identity for generic ῥητίνη, σύριγξ, καρπήσιον, or Pliny’s <em>metopon</em>.</strong> Conventional glosses are supplied for reading; the map does not force modern taxa.</li>
+        <li><strong>A botanical identity for generic <span lang="grc">ῥητίνη</span>, <span lang="grc">σύριγξ</span>, <span lang="grc">καρπήσιον</span>, or Pliny’s <em>metopon</em>.</strong> Conventional glosses are supplied for reading; the map does not force modern taxa.</li>
       </ul>
     </section>
 

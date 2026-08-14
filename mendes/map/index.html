@@ -2,20 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
   <title>Interactive ingredient provenance map &#183; House of Mendes</title>
   <meta name="description" content="An interactive source-critical map of ingredient provenance claims for Mendesian, Metopion, and Susinum perfumes.">
-  <link rel="stylesheet" href="site.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Gentium+Plus:wght@400&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap">
+  <!-- The asset version appears three times: the site.css link below, assetVersion in the loader, and the back-link in content-1.html. Bump all together. -->
+  <link rel="stylesheet" href="site.css?v=20260814-1">
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 </head>
 <body>
-  <div id="site-root" role="status" aria-live="polite">Loading the House of Mendes dossier…</div>
+  <div id="site-root" role="status" aria-live="polite">
+    <span class="visually-hidden">Loading the House of Mendes dossier…</span>
+    <div class="skeleton" aria-hidden="true">
+      <div class="skeleton-masthead">
+        <span class="skeleton-bar skeleton-bar--eyebrow"></span>
+        <span class="skeleton-bar skeleton-bar--title"></span>
+        <span class="skeleton-bar skeleton-bar--title skeleton-bar--short"></span>
+        <span class="skeleton-bar skeleton-bar--dek"></span>
+      </div>
+      <div class="skeleton-map">
+        <svg viewBox="0 0 900 710" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <path class="skeleton-coast" d="M112 236 L196 214 L268 244 L332 220 L404 250 L468 232 L512 268 L470 316 L446 372 L470 430 L512 486 L556 548 L596 618 M512 268 L570 258 L628 286 L672 262 L724 292 M446 372 L520 396 L578 448 L618 516 M628 286 L688 330 L742 386 L788 458"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
   <script>
   (async function () {
     const contentFiles = ["content-1.html"];
     const scriptFiles = ["app-1.js","app-2.js","app-3.js"];
-    const assetVersion = "20260813-3";
+    const assetVersion = "20260814-1";
     async function readParts(files) {
       return Promise.all(files.map(async function (file) {
         const response = await fetch(file + "?v=" + encodeURIComponent(assetVersion));

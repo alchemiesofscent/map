@@ -73,15 +73,8 @@
       .selectAll("text")
       .data(routes)
       .join("text")
-      .attr("class","route-label")
-      .attr("fill", function (d) { return d.type === "sea" ? "#2c7890" : d.type === "river" ? "#4d87a5" : "#8a5f36"; })
+      .attr("class", function (d) { return "route-label " + d.type; })
       .text(function (d) { return d.label; });
-
-    viewport.append("text")
-      .attr("class","route-note")
-      .attr("x",26)
-      .attr("y",36)
-      .text("ALL ROUTES ARE CONVENTIONAL CORRIDORS — NOT ATTESTED PER INGREDIENT");
 
     const selectedRoute = zoomLayer.append("path").attr("class","selected-route").attr("d",null);
 
@@ -101,8 +94,8 @@
 
     function drawHub(coord, name, sub, dx, dy) {
       const g = labelLayer.append("g").attr("class","hub").datum({ coord:coord });
-      g.append("circle").attr("r",7).attr("fill","#fffdf8").attr("stroke","#162321").attr("stroke-width",2.5);
-      g.append("circle").attr("r",2.6).attr("fill","#162321");
+      g.append("circle").attr("class","hub-ring").attr("r",7);
+      g.append("circle").attr("class","hub-core").attr("r",2.6);
       g.append("text").attr("class","hub-label").attr("x",dx).attr("y",dy).text(name);
       g.append("text").attr("class","hub-sub").attr("x",dx).attr("y",dy+12).text(sub);
     }
@@ -123,27 +116,24 @@
       .attr("tabindex","0")
       .attr("aria-label", function (d) { return d.greek + ", " + d.place + ". " + d.cite; });
 
-    marker.append("circle").attr("class","claim-hit").attr("r",16);
+    const markerGlyphIds = { ancient:"glyph-ancient", modern:"glyph-inference", theology:"glyph-theology" };
+    const markerShapeClasses = { ancient:"ancient-shape", modern:"modern-shape", theology:"theology-shape" };
+
+    marker.append("circle").attr("class","claim-hit").attr("r",22);
     marker.append("circle").attr("class","focus-ring").attr("r",14);
     marker.each(function (d) {
       const g = d3.select(this);
-      if (d.evidence === "ancient") {
-        g.append("circle").attr("class","ancient-shape").attr("r",6.5);
-      } else if (d.evidence === "modern") {
-        g.append("rect").attr("class","modern-shape").attr("x",-6).attr("y",-6).attr("width",12).attr("height",12).attr("transform","rotate(45)");
-      } else {
-        g.append("circle").attr("class","theology-shape").attr("r",9);
-        g.append("circle").attr("class","theology-shape").attr("r",5);
-      }
+      g.append("use")
+        .attr("href","#" + markerGlyphIds[d.evidence])
+        .attr("class","claim-glyph " + markerShapeClasses[d.evidence])
+        .attr("x",-12).attr("y",-12).attr("width",24).attr("height",24);
       d.recipes.forEach(function (key) {
         g.append("circle")
-          .attr("class","recipe-satellite")
+          .attr("class","recipe-satellite recipe-" + key)
           .attr("cx",recipeOffsets[key][0])
           .attr("cy",recipeOffsets[key][1])
-          .attr("r",recipeRadius)
-          .attr("fill",recipes[key].color);
+          .attr("r",recipeRadius);
       });
-      g.append("title").text(d.greek + " — " + d.place + " — " + d.cite);
     });
 
     const selectedLabel = viewport.append("text").attr("class","selected-label").style("display","none");
@@ -191,8 +181,12 @@
       });
     }
 
+    function layerInputs() {
+      return Array.from(document.querySelectorAll(".toolbar .toggle input"));
+    }
+
     function activeRecipeKeys() {
-      return new Set(Array.from(document.querySelectorAll(".toolbar .toggle input:checked")).map(function (input) {
+      return new Set(layerInputs().filter(function (input) { return input.checked; }).map(function (input) {
         return input.value;
       }));
     }
@@ -285,7 +279,7 @@
         detailContent.innerHTML =
           ingredientBrowserMarkup(null) +
           '<p class="detail-kicker">' + escapeHTML(ingredient.translit) + '</p>' +
-          '<h2>' + escapeHTML(ingredient.greek) + '</h2>' +
+          '<h2 lang="grc">' + escapeHTML(ingredient.greek) + '</h2>' +
           '<p class="detail-gloss">' + escapeHTML(ingredient.gloss) + '</p>' +
           '<div class="unlocated">' + escapeHTML(ingredient.unlocated || "No mapped provenance is available for the active perfume layers.") + '</div>' +
           '<div class="recipe-badges">' + affiliationBadges(ingredient) + '</div>';
@@ -373,17 +367,51 @@
         '<p class="detail-gloss">Turn on at least one perfume layer to browse ingredient kinds, ingredients, and mapped locations.</p>';
     }
 
+    let lastDrawnRouteKey = null;
+
+    function drawSelectedRoute(d) {
+      selectedRoute.interrupt().attr("stroke-dasharray",null).attr("stroke-dashoffset",null);
+      if (!d.route || !convergence[d.route]) {
+        selectedRoute.attr("d",null);
+        lastDrawnRouteKey = null;
+        return;
+      }
+      const routeKey = d.route + ":" + d.id;
+      selectedRoute.attr("d",projectedLine([d.coord].concat(convergence[d.route])));
+      if (routeKey !== lastDrawnRouteKey && !reducedMotion.matches) {
+        // Draw the course in like a plotted line. The dash pattern is in user
+        // units, so it is removed as soon as the transition settles — a lasting
+        // dash would visibly rescale under zoom.
+        const length = selectedRoute.node().getTotalLength();
+        if (length > 0) {
+          selectedRoute
+            .attr("stroke-dasharray",length + " " + length)
+            .attr("stroke-dashoffset",length)
+            .transition("route-draw").duration(600).ease(d3.easeCubicOut)
+            .attr("stroke-dashoffset",0)
+            .on("end interrupt", function () {
+              selectedRoute.attr("stroke-dasharray",null).attr("stroke-dashoffset",null);
+            });
+        }
+      }
+      lastDrawnRouteKey = routeKey;
+    }
+
+    function stampDetailPanel() {
+      const panel = document.getElementById("detail");
+      if (!panel) return;
+      panel.classList.remove("is-stamping");
+      void panel.offsetWidth;
+      panel.classList.add("is-stamping");
+    }
+
     function selectClaim(d, shouldScroll, shouldFocus, shouldOpenDetails, shouldForceFocus) {
       if (shouldOpenDetails) ingredientPickerOpen = false;
       selectedClaim = d;
       selectedIngredientId = d.ingredient;
       marker.classed("is-selected", function (x) { return x.id === d.id; });
       marker.classed("is-same-ingredient", function (x) { return x.ingredient === d.ingredient; });
-      if (d.route && convergence[d.route]) {
-        selectedRoute.attr("d",projectedLine([d.coord].concat(convergence[d.route])));
-      } else {
-        selectedRoute.attr("d",null);
-      }
+      drawSelectedRoute(d);
       selectedLabel
         .style("display",null)
         .text(d.place);
@@ -392,7 +420,7 @@
       detailContent.innerHTML =
         ingredientBrowserMarkup(d) +
         '<p class="detail-kicker">' + escapeHTML(d.translit) + '</p>' +
-        '<h2>' + escapeHTML(d.greek) + '</h2>' +
+        '<h2 lang="grc">' + escapeHTML(d.greek) + '</h2>' +
         '<p class="detail-gloss">' + escapeHTML(d.gloss) + '</p>' +
         '<p class="detail-place">' + escapeHTML(d.place) + '</p>' +
         '<span class="evidence-pill ' + d.evidence + '">' + escapeHTML(evidenceText(d)) + '</span>' +
@@ -401,12 +429,14 @@
         '<div class="recipe-badges">' + affiliationBadges(d) + '</div>' +
         '<p class="detail-hint">' +
           (d.route ? 'The gold convergence highlight follows a conventional corridor. ' : 'No route is drawn for this point. ') +
-          (exploreMode ? 'Explore mode preserves your manual view.' : 'Guided mode refocuses the map on each selection.') +
+          (exploreMode ? 'Map active — your manual view is preserved.' : 'Guided mode refocuses the map on each selection.') +
         '</p>';
 
       bindIngredientBrowser();
+      stampDetailPanel();
 
-      if (shouldOpenDetails && isPhoneViewport()) openMobilePanel("details");
+      if (shouldOpenDetails) presentSelection(d);
+      updatePeekLabel();
       if (shouldFocus) focusClaim(d,shouldForceFocus);
 
       if (shouldScroll) {
@@ -422,6 +452,63 @@
       }
     });
 
+    // Desktop tooltip: one reused dark-glass card, hover/focus only. It is
+    // aria-hidden because the marker's aria-label and the detail panel carry
+    // the same greek — place — citation content for assistive tech.
+    const tooltip = document.createElement("div");
+    tooltip.className = "map-tooltip";
+    tooltip.setAttribute("aria-hidden","true");
+    document.querySelector(".map-wrap").appendChild(tooltip);
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    let tooltipClaim = null;
+
+    function tooltipMarkup(d) {
+      return '<span class="tooltip-greek" lang="grc">' + escapeHTML(d.greek) + '</span>' +
+        '<span class="tooltip-place">' +
+          '<svg class="tooltip-glyph ' + d.evidence + '" aria-hidden="true"><use href="#' + markerGlyphIds[d.evidence] + '"></use></svg>' +
+          escapeHTML(d.place) +
+        '</span>' +
+        '<span class="tooltip-cite">' + escapeHTML(d.cite) + '</span>';
+    }
+
+    function positionTooltip() {
+      if (!tooltipClaim) return;
+      const wrapNode = document.querySelector(".map-wrap");
+      const wrapRect = wrapNode.getBoundingClientRect();
+      const matrix = svg.node().getScreenCTM();
+      if (!matrix || !wrapRect.width) return;
+      const p = transformedPoint(tooltipClaim.coord);
+      const x = matrix.a * p[0] + matrix.c * p[1] + matrix.e - wrapRect.left;
+      const y = matrix.b * p[0] + matrix.d * p[1] + matrix.f - wrapRect.top;
+      const box = tooltip.getBoundingClientRect();
+      let left = x + 18;
+      let top = y - box.height / 2;
+      if (left + box.width > wrapRect.width - 12) left = x - box.width - 18;
+      left = Math.max(12,Math.min(left,wrapRect.width - box.width - 12));
+      top = Math.max(12,Math.min(top,wrapRect.height - box.height - 12));
+      tooltip.style.left = left + "px";
+      tooltip.style.top = top + "px";
+    }
+
+    function showTooltip(d) {
+      if (!finePointer.matches) return;
+      tooltipClaim = d;
+      tooltip.innerHTML = tooltipMarkup(d);
+      tooltip.classList.add("is-visible");
+      positionTooltip();
+    }
+
+    function hideTooltip() {
+      tooltipClaim = null;
+      tooltip.classList.remove("is-visible");
+    }
+
+    marker
+      .on("pointerenter", function (event, d) { showTooltip(d); })
+      .on("pointerleave", hideTooltip)
+      .on("focus", function (event, d) { showTooltip(d); })
+      .on("blur", hideTooltip);
+
     let ingredientSwipeStart = null;
     detailContent.addEventListener("pointerdown", function (event) {
       if (!isPhoneViewport() || event.pointerType === "mouse" || event.target.closest("button, a, input, select, textarea")) return;
@@ -436,6 +523,30 @@
       stepLocation(deltaX < 0 ? 1 : -1);
     });
     detailContent.addEventListener("pointercancel", function () { ingredientSwipeStart = null; });
+
+    function dominantEvidence(ingredient) {
+      const counts = {};
+      ingredient.claims.forEach(function (claim) { counts[claim.evidence] = (counts[claim.evidence] || 0) + 1; });
+      let best = "modern";
+      let bestCount = 0;
+      ["ancient","theology","modern"].forEach(function (kind) {
+        if ((counts[kind] || 0) > bestCount) { best = kind; bestCount = counts[kind]; }
+      });
+      return best;
+    }
+
+    const evidenceGlyphIds = { ancient: "glyph-ancient", modern: "glyph-inference", theology: "glyph-theology" };
+
+    function recipeDots(d) {
+      if (d.context) {
+        return '<span class="recipe-dot context" title="Metopion name-history · not a recipe ingredient"></span>' +
+          '<span class="visually-hidden">Metopion name-history · not a recipe ingredient</span>';
+      }
+      return d.recipes.map(function (key) {
+        return '<span class="recipe-dot ' + key + '" title="' + escapeHTML(recipes[key].name) + '"></span>';
+      }).join("") +
+        '<span class="visually-hidden">Recipes: ' + escapeHTML(d.recipes.map(function (key) { return recipes[key].name; }).join(", ")) + '</span>';
+    }
 
     function renderIndex() {
       const host = document.getElementById("claim-index");
@@ -454,11 +565,18 @@
         details.className = "ingredient-card";
         details.dataset.recipes = ingredient.recipes.join(" ");
         details.dataset.group = group ? group.id : "other";
+        const evidence = dominantEvidence(ingredient);
         const summary = document.createElement("summary");
         summary.innerHTML =
-          '<span class="ingredient-name">' + escapeHTML(ingredient.greek) + '</span>' +
-          '<span class="ingredient-gloss">' + escapeHTML(ingredient.translit + " — " + ingredient.gloss) + '</span>' +
-          '<span class="recipe-badges">' + affiliationBadges(ingredient) + '</span>';
+          '<svg class="card-glyph ' + evidence + '" aria-hidden="true"><use href="#' + evidenceGlyphIds[evidence] + '"></use></svg>' +
+          '<span class="ingredient-title">' +
+            '<span class="ingredient-name" lang="grc">' + escapeHTML(ingredient.greek) + '</span>' +
+            '<span class="ingredient-gloss">' + escapeHTML(ingredient.translit + " — " + ingredient.gloss) + '</span>' +
+          '</span>' +
+          '<span class="ingredient-meta">' +
+            '<span class="recipe-dots">' + recipeDots(ingredient) + '</span>' +
+            '<span class="claim-count" aria-label="' + ingredient.claims.length + ' plotted claims">' + ingredient.claims.length + '</span>' +
+          '</span>';
         details.appendChild(summary);
 
         if (ingredient.claims.length) {
@@ -492,7 +610,7 @@
 
     function updateVisibility() {
       ingredientPickerOpen = false;
-      const active = new Set(Array.from(document.querySelectorAll(".toggle input:checked")).map(function (input) { return input.value; }));
+      const active = activeRecipeKeys();
       let visible = 0;
       marker.classed("is-hidden", function (d) {
         const hidden = !d.recipes.some(function (r) { return active.has(r); });
@@ -509,11 +627,8 @@
       document.querySelectorAll(".ingredient-group-heading").forEach(function (heading) {
         heading.hidden = !visibleGroups.has(heading.dataset.group);
       });
-      document.getElementById("visible-count").textContent = visible;
-      document.getElementById("ingredient-count").textContent = ingredients.length;
-      document.getElementById("mobile-visible-count").textContent = visible;
-      document.getElementById("mobile-info-visible-count").textContent = visible;
-      document.getElementById("mobile-info-ingredient-count").textContent = ingredients.length;
+      document.querySelectorAll("[data-visible-count]").forEach(function (node) { node.textContent = visible; });
+      syncLayerProxies();
       if (selectedClaim) {
         const selectedIngredient = ingredientById.get(selectedClaim.ingredient);
         const selectedLocations = selectedIngredient ? visibleClaimsForIngredient(selectedIngredient) : [];
@@ -554,7 +669,8 @@
         if (fallbackIngredient) selectIngredient(fallbackIngredient,false);
         else renderNoVisibleIngredients();
       }
+      updatePeekLabel();
     }
-    document.querySelectorAll(".toggle input").forEach(function (input) {
+    layerInputs().forEach(function (input) {
       input.addEventListener("change",updateVisibility);
     });
