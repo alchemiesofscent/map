@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-2";
+      --asset-version: "20260814-3";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -108,6 +108,15 @@
       background: var(--paper);
     }
     button, input { font: inherit; }
+    /* iOS reads a quick second tap on a control as double-tap-to-zoom and scales
+       the whole page instead of firing the button twice. This disables that one
+       gesture on controls only: pinch and browser zoom are untouched, and the
+       map keeps its own touch-action rules for pan and pinch arbitration. */
+    button,
+    select,
+    summary,
+    .toggle,
+    .map-site-nav a { touch-action: manipulation; }
     a { color: #275f6b; text-underline-offset: 2px; }
     .page { width: min(1280px, 100%); margin: 0 auto; padding: 24px; }
     .mono-voice {
