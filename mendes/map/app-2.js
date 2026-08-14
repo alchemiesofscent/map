@@ -437,6 +437,30 @@
     });
     detailContent.addEventListener("pointercancel", function () { ingredientSwipeStart = null; });
 
+    function dominantEvidence(ingredient) {
+      const counts = {};
+      ingredient.claims.forEach(function (claim) { counts[claim.evidence] = (counts[claim.evidence] || 0) + 1; });
+      let best = "modern";
+      let bestCount = 0;
+      ["ancient","theology","modern"].forEach(function (kind) {
+        if ((counts[kind] || 0) > bestCount) { best = kind; bestCount = counts[kind]; }
+      });
+      return best;
+    }
+
+    const evidenceGlyphIds = { ancient: "glyph-ancient", modern: "glyph-inference", theology: "glyph-theology" };
+
+    function recipeDots(d) {
+      if (d.context) {
+        return '<span class="recipe-dot context" title="Metopion name-history · not a recipe ingredient"></span>' +
+          '<span class="visually-hidden">Metopion name-history · not a recipe ingredient</span>';
+      }
+      return d.recipes.map(function (key) {
+        return '<span class="recipe-dot ' + key + '" title="' + escapeHTML(recipes[key].name) + '"></span>';
+      }).join("") +
+        '<span class="visually-hidden">Recipes: ' + escapeHTML(d.recipes.map(function (key) { return recipes[key].name; }).join(", ")) + '</span>';
+    }
+
     function renderIndex() {
       const host = document.getElementById("claim-index");
       let previousGroupId = null;
@@ -454,11 +478,18 @@
         details.className = "ingredient-card";
         details.dataset.recipes = ingredient.recipes.join(" ");
         details.dataset.group = group ? group.id : "other";
+        const evidence = dominantEvidence(ingredient);
         const summary = document.createElement("summary");
         summary.innerHTML =
-          '<span class="ingredient-name" lang="grc">' + escapeHTML(ingredient.greek) + '</span>' +
-          '<span class="ingredient-gloss">' + escapeHTML(ingredient.translit + " — " + ingredient.gloss) + '</span>' +
-          '<span class="recipe-badges">' + affiliationBadges(ingredient) + '</span>';
+          '<svg class="card-glyph ' + evidence + '" aria-hidden="true"><use href="#' + evidenceGlyphIds[evidence] + '"></use></svg>' +
+          '<span class="ingredient-title">' +
+            '<span class="ingredient-name" lang="grc">' + escapeHTML(ingredient.greek) + '</span>' +
+            '<span class="ingredient-gloss">' + escapeHTML(ingredient.translit + " — " + ingredient.gloss) + '</span>' +
+          '</span>' +
+          '<span class="ingredient-meta">' +
+            '<span class="recipe-dots">' + recipeDots(ingredient) + '</span>' +
+            '<span class="claim-count" aria-label="' + ingredient.claims.length + ' plotted claims">' + ingredient.claims.length + '</span>' +
+          '</span>';
         details.appendChild(summary);
 
         if (ingredient.claims.length) {
