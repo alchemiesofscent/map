@@ -581,3 +581,20 @@
       background: transparent;
       box-shadow: inset 0 0 0 1.5px var(--route-color, var(--gold));
     }
+
+    /* ————— Touch targets —————
+       A finger needs about 44px where a cursor needs none, so the rail's rows
+       and links grow on touch devices and are left alone under a fine pointer.
+       Keyed on the pointer rather than the viewport for the same reason the
+       gestures are: a tablet is wide and still has no cursor.
+
+       This block is in the shared sheet deliberately. Both viewers draw their
+       rail from it, and a row too small to hit is too small on either page. */
+    @media (pointer: coarse) {
+      .view-control__routes button { min-height: 44px; }
+      .material-control__input { min-height: 44px; }
+      .view-control__link { min-height: 44px; }
+      /* The checkbox itself stays 13px; the label around it takes the hit. */
+      .view-control__explore { min-height: 44px; align-items: center; }
+      .mobile-menu__close { width: 44px; height: 44px; }
+    }
