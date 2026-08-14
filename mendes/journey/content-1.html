@@ -1,0 +1,182 @@
+
+  <svg hidden aria-hidden="true" class="glyph-sprite">
+    <symbol id="glyph-ancient" viewBox="-12 -12 24 24">
+      <circle r="6.5" fill="currentColor" stroke="var(--glyph-stroke, transparent)" stroke-width="1.5"></circle>
+    </symbol>
+    <symbol id="glyph-inference" viewBox="-12 -12 24 24">
+      <rect x="-6" y="-6" width="12" height="12" transform="rotate(45)" fill="var(--glyph-fill, transparent)" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2"></rect>
+    </symbol>
+    <symbol id="glyph-theology" viewBox="-12 -12 24 24">
+      <circle r="9" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"></circle>
+      <circle r="5" fill="var(--glyph-fill, transparent)" stroke="currentColor" stroke-width="1.6"></circle>
+    </symbol>
+    <symbol id="glyph-guide" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle>
+      <path d="M9.3 9.2a2.8 2.8 0 1 1 3.5 2.7v1.9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      <circle cx="12.1" cy="17.2" r="1.15" fill="currentColor"></circle>
+    </symbol>
+  </svg>
+
+  <div class="map-wrap">
+    <svg id="map" viewBox="0 0 900 710" preserveAspectRatio="xMidYMid slice" role="application" aria-roledescription="ingredient journey map" aria-labelledby="map-title map-desc" aria-describedby="map-gesture-hint">
+      <title id="map-title">Places ancient sources attest for each perfume ingredient</title>
+      <desc id="map-desc">An interactive map of the eastern Mediterranean, Red Sea, Arabia, and India. Choose an ingredient and step through the places its sources name, each with its citation and evidence class.</desc>
+    </svg>
+    <p class="map-gesture-hint visually-hidden" id="map-gesture-hint">Use the arrow keys or scroll to move between stops. Enable Explore map to pan and zoom freely.</p>
+  </div>
+
+  <header class="masthead" aria-label="Title">
+    <div class="masthead__rule"></div>
+    <p class="masthead__series" id="masthead-series">Ingredient journeys</p>
+    <h1 class="masthead__title" id="masthead-title">
+      <span>Attested</span>
+      <span class="masthead__title-sep">·</span>
+      <span>Provenances</span>
+    </h1>
+    <p class="masthead__counter" aria-live="polite">
+      <span id="counter-roman">—</span>
+      <span class="masthead__counter-of">of</span>
+      <span id="counter-total">—</span>
+    </p>
+  </header>
+
+  <button class="drawer-toggle" id="drawer-toggle" type="button"
+          aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+    <span aria-hidden="true">≡</span>
+  </button>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" id="drawer-close" type="button" aria-label="Close menu">
+      <span aria-hidden="true">×</span>
+    </button>
+
+    <div class="view-control" role="group" aria-label="Ingredient journey" id="view-control">
+      <div class="view-control__routes" id="view-control-routes"></div>
+      <div class="material-control" id="material-control">
+        <label class="material-control__label" for="material-search">Ingredient</label>
+        <input
+          class="material-control__input"
+          id="material-search"
+          type="search"
+          list="material-options"
+          autocomplete="off"
+          minlength="1"
+          placeholder="Search all 24"
+        />
+        <datalist id="material-options"></datalist>
+      </div>
+      <span class="view-control__divider" aria-hidden="true"></span>
+      <label class="view-control__explore">
+        <input type="checkbox" id="toggle-explore" />
+        <span>Explore map</span>
+      </label>
+      <span class="view-control__divider" aria-hidden="true"></span>
+      <div class="view-control__links">
+        <button type="button" id="open-guide" class="view-control__link" aria-haspopup="dialog">
+          <svg class="view-control__link-glyph" aria-hidden="true"><use href="#glyph-guide"></use></svg>
+          How to read this
+        </button>
+        <a class="view-control__link" href="../map/?v=20260814-7">Provenance map</a>
+        <a class="view-control__link" href="../?v=20260814-4">Dossier</a>
+      </div>
+    </div>
+  </div>
+
+  <button class="drawer-backdrop" id="drawer-backdrop" type="button" aria-label="Close menu" tabindex="-1"></button>
+
+  <button class="hint" id="hint-banner" type="button" aria-label="Dismiss hint">
+    <span class="hint__keys">
+      <kbd>↑</kbd><kbd>↓</kbd>
+      <span class="hint__or">or</span>
+      <span class="hint__scroll">scroll</span>
+      <span class="hint__or">·</span>
+      the order the source names them
+    </span>
+  </button>
+
+  <aside class="dossier" aria-live="polite" aria-label="Active place">
+    <div class="dossier__inner">
+      <div class="dossier__top">
+        <p class="dossier__eyebrow">
+          <span id="dossier-route">—</span>
+          <span class="dossier__sep" aria-hidden="true">·</span>
+          <span id="dossier-type">—</span>
+          <span class="dossier__sep" aria-hidden="true">·</span>
+          <span id="dossier-section">—</span>
+        </p>
+        <h2 class="dossier__title" id="dossier-title">—</h2>
+        <p class="dossier__greek-name" id="dossier-greek-name" lang="grc"></p>
+      </div>
+
+      <div class="dossier__body">
+        <p class="dossier__translation" id="dossier-translation"></p>
+        <div class="dossier__citation" id="dossier-citation" hidden>
+          <span class="dossier__eyebrow dossier__eyebrow--inline">Citation</span>
+          <span id="dossier-cite"></span>
+        </div>
+        <div class="dossier__materia" id="dossier-materia" hidden>
+          <p class="dossier__eyebrow dossier__eyebrow--inline">Recipes</p>
+          <ul class="dossier__materia-list" id="dossier-materia-list"></ul>
+        </div>
+      </div>
+
+      <div class="dossier__foot">
+        <span class="dossier__source" id="dossier-source"></span>
+      </div>
+    </div>
+
+    <div class="dossier__nav" aria-label="Step navigation">
+      <button type="button" id="prev-step" aria-label="Previous place">
+        <span aria-hidden="true">‹</span>
+      </button>
+      <button type="button" id="next-step" aria-label="Next place">
+        <span aria-hidden="true">›</span>
+      </button>
+    </div>
+  </aside>
+
+  <nav class="strip" aria-label="Place strip">
+    <div class="strip__legend">
+      <svg class="strip__swatch" aria-hidden="true"><use href="#glyph-ancient"></use></svg>
+      <span class="strip__legend-label">Attested</span>
+      <svg class="strip__swatch strip__swatch--modern" aria-hidden="true"><use href="#glyph-inference"></use></svg>
+      <span class="strip__legend-label">Inference</span>
+      <svg class="strip__swatch strip__swatch--theology" aria-hidden="true"><use href="#glyph-theology"></use></svg>
+      <span class="strip__legend-label">Theological</span>
+    </div>
+    <div class="strip__rail" id="strip-rail" role="listbox" aria-label="Places in the order the source names them"></div>
+  </nav>
+
+  <dialog class="pane" id="guide-pane" aria-labelledby="guide-pane-title">
+    <form method="dialog" class="pane-head">
+      <h2 class="pane-title" id="guide-pane-title">How to read this</h2>
+      <button value="close" class="pane-close" aria-label="Close">✕</button>
+    </form>
+    <div class="pane-body">
+      <h3 class="pane-section">What a journey is</h3>
+      <p>Each journey steps through the places one ancient source names as an origin for a single ingredient, <strong>in the order that source names them</strong>. The stops are not a voyage and not a supply chain: no line joins them, because the sources attest origins, not travel between them.</p>
+      <h3 class="pane-section">Evidence classes</h3>
+      <ul class="pane-key">
+        <li>
+          <svg class="key-glyph ancient" aria-hidden="true"><use href="#glyph-ancient"></use></svg>
+          <span><strong>Ancient-attested claim.</strong> A Greek, Latin, or Egyptian source states this origin.</span>
+        </li>
+        <li>
+          <svg class="key-glyph modern" aria-hidden="true"><use href="#glyph-inference"></use></svg>
+          <span><strong>Inference or modern correction.</strong> The recipe is silent about provenance, or later evidence corrects the ancient claim.</span>
+        </li>
+        <li>
+          <svg class="key-glyph theology" aria-hidden="true"><use href="#glyph-theology"></use></svg>
+          <span><strong>Theological provenance.</strong> Divine-origin language, deliberately not pinned as literal geography.</span>
+        </li>
+      </ul>
+      <h3 class="pane-section">Route caution</h3>
+      <p>Every sea, land, and Nile corridor on the companion map is a conventional reconstruction—not a route attested for any single ingredient. This viewer draws no corridors at all.</p>
+      <h3 class="pane-section">Ingredients without a journey</h3>
+      <p>Fifteen of the twenty-four materials have one attested place or none. They open as a single card rather than a journey, because the sources give no sequence to walk. Source silence stays visible.</p>
+    </div>
+  </dialog>
+
+  <noscript>
+    <p class="noscript-note">This viewer requires JavaScript. The <a href="../map/">provenance map</a> and the <a href="../">ingredient dossier</a> carry the same claims and citations.</p>
+  </noscript>
