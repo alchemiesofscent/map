@@ -73,15 +73,8 @@
       .selectAll("text")
       .data(routes)
       .join("text")
-      .attr("class","route-label")
-      .attr("fill", function (d) { return d.type === "sea" ? "#2c7890" : d.type === "river" ? "#4d87a5" : "#8a5f36"; })
+      .attr("class", function (d) { return "route-label " + d.type; })
       .text(function (d) { return d.label; });
-
-    viewport.append("text")
-      .attr("class","route-note")
-      .attr("x",26)
-      .attr("y",36)
-      .text("ALL ROUTES ARE CONVENTIONAL CORRIDORS — NOT ATTESTED PER INGREDIENT");
 
     const selectedRoute = zoomLayer.append("path").attr("class","selected-route").attr("d",null);
 
@@ -101,8 +94,8 @@
 
     function drawHub(coord, name, sub, dx, dy) {
       const g = labelLayer.append("g").attr("class","hub").datum({ coord:coord });
-      g.append("circle").attr("r",7).attr("fill","#fffdf8").attr("stroke","#162321").attr("stroke-width",2.5);
-      g.append("circle").attr("r",2.6).attr("fill","#162321");
+      g.append("circle").attr("class","hub-ring").attr("r",7);
+      g.append("circle").attr("class","hub-core").attr("r",2.6);
       g.append("text").attr("class","hub-label").attr("x",dx).attr("y",dy).text(name);
       g.append("text").attr("class","hub-sub").attr("x",dx).attr("y",dy+12).text(sub);
     }
