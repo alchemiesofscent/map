@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-13";
+      --asset-version: "20260814-14";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -443,6 +443,12 @@
       padding: 10px 4px;
       border: 0;
       background: transparent;
+      /* Explicit, because a button with no colour is not black everywhere: iOS
+         Safari paints unstyled button text in the system accent, which turned
+         every Greek headword in the picker link-blue on a phone while desktop
+         Chromium showed it correctly. The gloss below it was already fine only
+         because it names its own colour. */
+      color: var(--ink);
       text-align: left;
       cursor: pointer;
     }
