@@ -1,4 +1,9 @@
 
+  // Shared data file. Two shells fetch this verbatim as their first script —
+  // mendes/map/ and mendes/journey/ — so the claims and their citations have a
+  // single home and a correction reaches both viewers. It opens the async IIFE
+  // that each shell's last file closes: do not close it here, and do not move
+  // the opening line, or the concatenated body stops parsing on both pages.
   (async function () {
     "use strict";
 

@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-6";
+      --asset-version: "20260814-7";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -126,7 +126,9 @@
     }
     .map-site-nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: flex-start;
+      gap: 10px;
       padding: 12px clamp(16px,3vw,38px) 0;
       background: var(--paper);
     }
