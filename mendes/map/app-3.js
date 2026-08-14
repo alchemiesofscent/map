@@ -462,6 +462,7 @@
       if (!ingredient) return;
       if (searchPane && searchPane.open) { paneOpener = null; searchPane.close(); }
       selectIngredient(ingredient,true);
+      updateIngredientPill();
       if (isPhoneViewport()) setSnap("half");
     });
     layerInputs().forEach(function (input) {
@@ -813,6 +814,29 @@
         updateExploreMode();
       });
     }
+
+    // ————— The phone's ingredient pill —————
+    // Reads the DOM fresh rather than closing over an element, so app-2.js can
+    // call it during its first render, before this file's own consts exist.
+    function updateIngredientPill() {
+      const label = document.getElementById("ingredient-pill-label");
+      if (!label) return;
+      const ingredient = selectedIngredientId ? ingredientById.get(selectedIngredientId) : null;
+      // The gloss reads better on a pill than the full Greek, which runs long
+      // and is already the first line of every row in the picker itself.
+      label.textContent = ingredient ? ingredient.gloss.split(" / ")[0] : "All ingredients";
+      label.parentElement.setAttribute("aria-label",
+        ingredient ? "Ingredient: " + ingredient.gloss + ". Choose another" : "Choose an ingredient");
+    }
+
+    const ingredientPill = document.getElementById("ingredient-pill");
+    if (ingredientPill && searchPane) {
+      ingredientPill.addEventListener("click", function () {
+        openPane(searchPane, ingredientPill);
+        renderIngredientBrowse();
+      });
+    }
+    updateIngredientPill();
 
     // ————— The rail's search field —————
     // The rail carries a real search field rather than a button that says

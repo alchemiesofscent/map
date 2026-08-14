@@ -1,5 +1,5 @@
 
-  <nav class="map-site-nav" aria-label="House of Mendes pages"><a href="../?v=20260814-11">← Dossier &amp; ingredient catalogue</a><a href="../journey/?v=20260814-11">Ingredient journeys →</a><span class="site-nav-title" aria-hidden="true">House of Mendes</span></nav>
+  <nav class="map-site-nav" aria-label="House of Mendes pages"><a href="../?v=20260814-12">← Dossier &amp; ingredient catalogue</a><a href="../journey/?v=20260814-12">Ingredient journeys →</a><span class="site-nav-title" aria-hidden="true">House of Mendes</span></nav>
   <svg hidden aria-hidden="true" class="glyph-sprite">
     <symbol id="glyph-ancient" viewBox="-12 -12 24 24">
       <circle r="6.5" fill="currentColor" stroke="var(--glyph-stroke, transparent)" stroke-width="1.5"></circle>
@@ -91,8 +91,8 @@
               <svg class="view-control__link-glyph" aria-hidden="true"><use href="#glyph-guide"></use></svg>
               How to read this
             </button>
-            <a class="view-control__link" href="../journey/?v=20260814-11">Ingredient journeys</a>
-            <a class="view-control__link" href="../?v=20260814-11">Dossier &amp; catalogue</a>
+            <a class="view-control__link" href="../journey/?v=20260814-12">Ingredient journeys</a>
+            <a class="view-control__link" href="../?v=20260814-12">Dossier &amp; catalogue</a>
           </div>
         </div>
       </div>
@@ -130,6 +130,18 @@
           <svg class="strip__swatch strip__swatch--theology" aria-hidden="true"><use href="#glyph-theology"></use></svg>
           <span class="strip__legend-label">Theological</span>
         </div>
+
+        <!-- The phone's ingredient control. It lives in the strip because the
+             evidence key that occupies this bar on a desktop is hidden at phone
+             width, leaving the most reachable strip of the screen empty, and
+             because choosing an ingredient should not start by opening a menu.
+             The picker itself is the search pane, which already browses the
+             ingredients grouped by recipe. -->
+        <button type="button" id="ingredient-pill" class="ingredient-pill" aria-haspopup="dialog">
+          <svg class="ingredient-pill__glyph" aria-hidden="true"><use href="#glyph-search"></use></svg>
+          <span class="ingredient-pill__label" id="ingredient-pill-label">All ingredients</span>
+          <span class="ingredient-pill__caret" aria-hidden="true">▾</span>
+        </button>
       </nav>
     </div>
 
@@ -172,7 +184,7 @@
         <h3 class="pane-section">Route caution</h3>
         <p>Every sea, land, and Nile corridor on this map is a conventional reconstruction—not a route attested for any single ingredient.</p>
         <h3 class="pane-section">One ingredient at a time</h3>
-        <p>This map answers where the three recipes' materials came from, all claims at once. To walk the places attested for a single ingredient, in the order its source names them, open the <a href="../journey/?v=20260814-11">ingredient journeys</a>.</p>
+        <p>This map answers where the three recipes' materials came from, all claims at once. To walk the places attested for a single ingredient, in the order its source names them, open the <a href="../journey/?v=20260814-12">ingredient journeys</a>.</p>
         <h3 class="pane-section">Full research sections</h3>
         <div class="mobile-reference-links" aria-label="Full research sections">
           <button type="button" data-mobile-jump="index-title">Ingredient and claim index</button>

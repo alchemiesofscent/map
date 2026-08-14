@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-11";
+      --asset-version: "20260814-12";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -1592,4 +1592,54 @@
     @media (pointer: coarse) {
       .map-site-nav a { min-height: 44px; }
       .zoom-controls button { min-height: 44px; }
+    }
+
+    /* ————— The phone's ingredient control —————
+       Desktop chooses ingredients from the rail, which is always on screen and
+       needs no help. At phone width the rail is behind the drawer toggle, so
+       choosing an ingredient began with opening a menu — two taps and a scroll
+       before the reader could even see the list. This puts one control on the
+       most reachable edge of the screen, carrying the current choice, and hands
+       the search pane the job of browsing.
+
+       Width, not pointer: this exists because the rail became a drawer, which
+       is a question about how much room there is. A tablet keeps its rail. */
+    .ingredient-pill { display: none; }
+
+    @media (max-width: 720px) {
+      .strip { justify-content: center; }
+      .ingredient-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        min-height: 44px;
+        max-width: 100%;
+        padding: 8px 16px;
+        border: 1px solid var(--rule);
+        border-radius: var(--r-chip);
+        background: rgba(14,34,41,.92);
+        -webkit-backdrop-filter: blur(14px);
+        backdrop-filter: blur(14px);
+        color: var(--land);
+        font-family: var(--font-body);
+        font-size: .84rem;
+        font-weight: 600;
+        box-shadow: 0 8px 24px rgba(0,0,0,.34);
+        cursor: pointer;
+        touch-action: manipulation;
+      }
+      .ingredient-pill__glyph { flex: none; width: 15px; height: 15px; }
+      .ingredient-pill__label {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .ingredient-pill__caret { flex: none; color: rgba(231,220,195,.6); font-size: .72rem; }
+      .ingredient-pill:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+      /* The pane is the picker at this width, so its rows are the touch
+         targets: the browse list already sits at 48px, and the Greek stays the
+         primary label with the gloss beneath it. */
+      .browse-item { min-height: 48px; }
     }
