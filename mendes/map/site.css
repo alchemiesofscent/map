@@ -1,31 +1,66 @@
 
     :root {
-      --ink: #1e2b2b;
-      --muted: #63706d;
-      --paper: #f5f0e5;
-      --panel: #fffdf7;
-      --land: #d8d2c2;
-      --land-line: #aaa28f;
+      /* Grounds — the two registers: dark chart-room, light study */
+      --sea-deep: #0E2229;
+      --land: #E7DCC3;
+      --land-line: #B9AA8C;
+      --paper: #F2EBDB;
+      --panel: #FBF7EC;
+      --ink: #1B2422;
+      --muted: #5C6763;
+
+      /* Recipe layers — pass 3:1 on both --sea-deep and --paper */
+      --mendesian: #B65E9A;
+      --metopion: #1F8A7F;
+      --susinum: #C05E31;
+
+      /* Evidence classes. Gold and focus are register pairs: the plain token
+         for the dark chart-room, the -ink/-study variant for light paper. */
+      --gold: #C9A227;
+      --gold-ink: #93750E;
+      --inference: #66788F;
+      --glyph-ancient-dark: #F5EFDF; /* ancient solid circle on the dark sea */
+      --focus: #F2B847;
+      --focus-study: #6B5620;
+
+      /* Conventional corridors (drawn on the dark sea only) */
+      --route-sea: #4C93A8;
+      --route-land: #A8794A;
+      --route-river: #6FA3BD;
+
+      /* Legacy aliases still referenced by the light-map styles; retired as
+         the chart-room phases land. */
       --sea: #cfe1df;
       --grid: #b6cbc7;
-      --mendesian: #5d315f;
-      --metopion: #007b78;
-      --susinum: #c7643f;
       --ancient: #202f2e;
-      --modern: #667589;
-      --theology: #a87822;
-      --route-sea: #2c7890;
-      --route-land: #9a6a3a;
-      --route-river: #4d87a5;
-      --focus: #f2b847;
-      --shadow: 0 18px 50px rgba(43, 51, 47, 0.12);
+      --modern: var(--inference);
+      --theology: var(--gold-ink);
+
+      /* Type */
+      --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --font-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --font-greek: "Gentium Plus", Georgia, "Times New Roman", serif;
+      --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+      /* Shape + elevation */
+      --r-card: 12px;
+      --r-chip: 999px;
+      --shadow: 0 18px 50px rgba(20, 30, 34, 0.16);
+
+      /* Motion */
+      --t-hover: 120ms;
+      --t-stamp: 120ms;
+      --t-snap: 240ms;
+      --t-route: 600ms;
     }
+
+    :lang(grc), .greek { font-family: var(--font-greek); }
 
     * { box-sizing: border-box; }
     html { background: #e9e3d7; color: var(--ink); }
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: var(--font-body);
       line-height: 1.48;
       background:
         radial-gradient(circle at 8% 0%, rgba(255,255,255,.75), transparent 34rem),
@@ -52,7 +87,7 @@
     h1 {
       margin: 0;
       max-width: 920px;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: var(--font-display);
       font-size: clamp(2rem, 4.6vw, 4.4rem);
       line-height: .98;
       font-weight: 500;
@@ -249,7 +284,7 @@
     }
     #detail h2 {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: var(--font-display);
       font-size: 1.7rem;
       line-height: 1.08;
       font-weight: 500;
@@ -260,7 +295,7 @@
       padding: 12px 0;
       border-top: 1px solid #d5cebf;
       border-bottom: 1px solid #d5cebf;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: var(--font-display);
       font-size: 1.25rem;
     }
     .evidence-pill {
@@ -426,7 +461,7 @@
     }
     .section h2 {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: var(--font-display);
       font-size: 1.9rem;
       font-weight: 500;
     }
@@ -457,7 +492,7 @@
     .ingredient-card summary::-webkit-details-marker { display: none; }
     .ingredient-card summary::after { content: "+"; float: right; color: #817661; font-size: 1.2rem; line-height: 1; }
     .ingredient-card[open] summary::after { content: "–"; }
-    .ingredient-name { display: block; font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; }
+    .ingredient-name { display: block; font-family: var(--font-display); font-size: 1.05rem; }
     .ingredient-gloss { display: block; margin-top: 2px; color: #66716e; font-size: .75rem; }
     .claim-list { margin: 0; padding: 0 12px 12px 28px; }
     .claim-list li { margin: 7px 0; font-size: .76rem; }
@@ -609,7 +644,7 @@
         pointer-events: none;
       }
       .mobile-map-header span { display: block; font: 750 .65rem/1.1 system-ui, sans-serif; letter-spacing: .07em; text-transform: uppercase; }
-      .mobile-map-header strong { display: block; margin-top: 2px; font: 500 1.05rem/1.05 Georgia, "Times New Roman", serif; }
+      .mobile-map-header strong { display: block; margin-top: 2px; font: 500 1.05rem/1.05 var(--font-display); }
       .mobile-map-count { color: #596562; font: 750 .7rem/1 system-ui, sans-serif; white-space: nowrap; }
       .mobile-map-count span { display: inline; font: inherit; letter-spacing: 0; }
 
@@ -704,7 +739,7 @@
       }
       .mobile-sheet-handle { display: block; width: 38px; height: 4px; margin: 0 auto 6px; border-radius: 999px; background: #bcb4a5; }
       .mobile-sheet-title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-      .mobile-sheet-title-row strong { display: block; font: 500 1.05rem/1.1 Georgia, "Times New Roman", serif; }
+      .mobile-sheet-title-row strong { display: block; font: 500 1.05rem/1.1 var(--font-display); }
       .mobile-sheet-kicker { display: block; margin-bottom: 2px; color: #746d60; font: 750 .62rem/1 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
       .mobile-sheet-close {
         min-width: 56px;
@@ -752,7 +787,7 @@
         text-align: left;
         cursor: pointer;
       }
-      .mobile-search-result .result-greek { display: block; font: 500 1rem/1.15 Georgia, "Times New Roman", serif; }
+      .mobile-search-result .result-greek { display: block; font: 500 1rem/1.15 var(--font-display); }
       .mobile-search-result .result-place { display: block; margin-top: 3px; color: #315f66; font: 750 .78rem/1.2 system-ui, sans-serif; }
       .mobile-search-result .result-cite { display: block; margin-top: 3px; color: #747168; font: 400 .7rem/1.25 system-ui, sans-serif; }
 
@@ -844,13 +879,13 @@
       padding: 8px 14px;
       border: 1px solid rgba(34,86,80,.25);
       border-radius: 999px;
-      color: var(--teal);
-      font-family: var(--sans);
+      color: #275f6b;
+      font-family: var(--font-body);
       font-size: .82rem;
       font-weight: 750;
       text-decoration: none;
       background: rgba(255,255,255,.58);
     }
     .map-site-nav a:hover { background: white; color: var(--ink); }
-    .map-site-nav a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    .map-site-nav a:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 3px; }
   

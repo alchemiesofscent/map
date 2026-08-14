@@ -3,9 +3,9 @@
     "use strict";
 
     const recipes = {
-      m: { name: "Dark Mendesian", color: "#5d315f" },
-      t: { name: "Metopion", color: "#007b78" },
-      s: { name: "Susinum", color: "#c7643f" }
+      m: { name: "Dark Mendesian", color: "#B65E9A" },
+      t: { name: "Metopion", color: "#1F8A7F" },
+      s: { name: "Susinum", color: "#C05E31" }
     };
 
     const ingredients = [

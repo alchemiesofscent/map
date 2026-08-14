@@ -187,7 +187,7 @@
         : "No visible claims match this search.";
       mobileSearchResults.innerHTML = shown.map(function (claim) {
         return '<li><button type="button" class="mobile-search-result" data-claim-id="' + escapeHTML(claim.id) + '">' +
-          '<span class="result-greek">' + escapeHTML(claim.greek) + '</span>' +
+          '<span class="result-greek" lang="grc">' + escapeHTML(claim.greek) + '</span>' +
           '<span class="result-place">' + escapeHTML(claim.translit + " · " + claim.place) + '</span>' +
           '<span class="result-cite">' + escapeHTML(claim.cite) + '</span>' +
         '</button></li>';

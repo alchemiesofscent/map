@@ -285,7 +285,7 @@
         detailContent.innerHTML =
           ingredientBrowserMarkup(null) +
           '<p class="detail-kicker">' + escapeHTML(ingredient.translit) + '</p>' +
-          '<h2>' + escapeHTML(ingredient.greek) + '</h2>' +
+          '<h2 lang="grc">' + escapeHTML(ingredient.greek) + '</h2>' +
           '<p class="detail-gloss">' + escapeHTML(ingredient.gloss) + '</p>' +
           '<div class="unlocated">' + escapeHTML(ingredient.unlocated || "No mapped provenance is available for the active perfume layers.") + '</div>' +
           '<div class="recipe-badges">' + affiliationBadges(ingredient) + '</div>';
@@ -392,7 +392,7 @@
       detailContent.innerHTML =
         ingredientBrowserMarkup(d) +
         '<p class="detail-kicker">' + escapeHTML(d.translit) + '</p>' +
-        '<h2>' + escapeHTML(d.greek) + '</h2>' +
+        '<h2 lang="grc">' + escapeHTML(d.greek) + '</h2>' +
         '<p class="detail-gloss">' + escapeHTML(d.gloss) + '</p>' +
         '<p class="detail-place">' + escapeHTML(d.place) + '</p>' +
         '<span class="evidence-pill ' + d.evidence + '">' + escapeHTML(evidenceText(d)) + '</span>' +
@@ -456,7 +456,7 @@
         details.dataset.group = group ? group.id : "other";
         const summary = document.createElement("summary");
         summary.innerHTML =
-          '<span class="ingredient-name">' + escapeHTML(ingredient.greek) + '</span>' +
+          '<span class="ingredient-name" lang="grc">' + escapeHTML(ingredient.greek) + '</span>' +
           '<span class="ingredient-gloss">' + escapeHTML(ingredient.translit + " — " + ingredient.gloss) + '</span>' +
           '<span class="recipe-badges">' + affiliationBadges(ingredient) + '</span>';
         details.appendChild(summary);
