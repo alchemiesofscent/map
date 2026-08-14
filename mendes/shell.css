@@ -284,8 +284,29 @@
       box-shadow: var(--shadow);
       color: #D9DED3;
       overflow: hidden;
+      /* One row, allowed to shrink. Without this the row takes its content's
+         height, the panel clips it, and the inner pane never scrolls because
+         nothing overflows *it*. */
+      grid-template-rows: minmax(0, 1fr);
+      /* A double-tap inside the panel is a reader tapping a word, not asking
+         iOS to scale the page. Pinch and browser zoom are untouched. */
+      touch-action: manipulation;
     }
-    .dossier__inner { min-width: 0; padding: 20px 22px; overflow: auto; }
+    .dossier__inner {
+      min-width: 0;
+      /* Grid and flex children default to min-height: auto, which refuses to
+         shrink below the content. That is what stopped this pane scrolling on
+         a phone: the citation and the recipes sat below the fold with no way
+         to reach them. */
+      min-height: 0;
+      padding: 20px 22px;
+      overflow-y: auto;
+      /* Keep the scroll here: chaining it hands the gesture to the map behind,
+         which pans instead. */
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-y;
+    }
     .dossier__eyebrow {
       margin: 0 0 8px;
       color: rgba(231,220,195,.62);
