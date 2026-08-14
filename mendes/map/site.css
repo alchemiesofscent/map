@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-8";
+      --asset-version: "20260814-9";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
