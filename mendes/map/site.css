@@ -259,6 +259,152 @@
     @media (max-width: 1100px) {
       #claim-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
+    /* Chips scroll; the actions stay pinned so Search and Guide never scroll away. */
+    .chip-scroll {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      min-width: 0;
+    }
+    .map-actions { display: flex; gap: 8px; margin-left: auto; }
+    .map-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 40px;
+      min-width: 40px;
+      padding: 8px 14px;
+      border: 1px solid rgba(231,220,195,.3);
+      border-radius: var(--r-chip);
+      background: rgba(231,220,195,.08);
+      color: var(--land);
+      font-weight: 600;
+      font-size: .82rem;
+      cursor: pointer;
+    }
+    .map-action:hover { background: rgba(231,220,195,.18); }
+    .map-action-glyph { flex: none; width: 16px; height: 16px; }
+
+    /* ————— Search and Guide panes: study surfaces pulled over the map ————— */
+    .pane {
+      width: min(560px, calc(100vw - 32px));
+      max-height: min(78dvh, 720px);
+      padding: 0;
+      border: 1px solid #ddd4c0;
+      border-radius: var(--r-card);
+      background: var(--panel);
+      color: var(--ink);
+      box-shadow: 0 24px 60px rgba(10,20,24,.42);
+      overflow: hidden;
+    }
+    .pane::backdrop { background: rgba(8,18,22,.55); }
+    .pane:not([open]) { display: none; }
+    .pane-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin: 0;
+      padding: 16px 18px 12px;
+      border-bottom: 1px solid #e3dac6;
+    }
+    .pane-title {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+    .pane-close {
+      flex: none;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: 1px solid #ddd4c0;
+      border-radius: var(--r-chip);
+      background: var(--panel);
+      color: var(--muted);
+      font-size: .9rem;
+      cursor: pointer;
+    }
+    .pane-close:hover { background: #f2ebdb; color: var(--ink); }
+    .pane-body {
+      max-height: calc(min(78dvh, 720px) - 69px);
+      padding: 16px 18px calc(20px + env(safe-area-inset-bottom));
+      overflow: auto;
+      overscroll-behavior: contain;
+    }
+    .pane-body > p { margin: 0 0 14px; font-size: .88rem; }
+    .pane-section {
+      margin: 20px 0 10px;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .pane-section:first-child { margin-top: 0; }
+    .pane-key { margin: 0; padding: 0; list-style: none; }
+    .pane-key li {
+      display: grid;
+      grid-template-columns: 20px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      margin: 0 0 12px;
+      font-size: .86rem;
+      line-height: 1.45;
+    }
+    .pane-key .key-glyph { margin-top: 2px; }
+    .pane-note { color: var(--muted); font-size: .8rem; }
+    .key-glyph { flex: none; width: 18px; height: 18px; color: var(--ink); --glyph-stroke: var(--panel); }
+    .key-glyph.modern { color: var(--inference); }
+    .key-glyph.theology { color: var(--gold-ink); }
+
+    .mobile-search-label { display: block; margin-bottom: 7px; color: var(--muted); font-size: .78rem; font-weight: 600; }
+    .mobile-search-input {
+      width: 100%;
+      min-height: 46px;
+      padding: 10px 13px;
+      border: 1px solid #cdc2a9;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 16px; /* keeps iOS from zooming the page on focus */
+    }
+    .mobile-search-summary { min-height: 18px; margin: 12px 0 4px; color: var(--muted); font-family: var(--font-mono); font-size: .72rem; }
+    .mobile-search-results { margin: 0; padding: 0; list-style: none; }
+    .mobile-search-results li { border-top: 1px solid #e3dac6; }
+    .mobile-search-result {
+      display: block;
+      width: 100%;
+      min-height: 48px;
+      padding: 11px 4px;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+    .mobile-search-result:hover { background: #f2ebdb; }
+    .mobile-search-result .result-greek { display: block; font-family: var(--font-greek); font-size: 1rem; line-height: 1.2; }
+    .mobile-search-result .result-place { display: block; margin-top: 3px; color: #275f6b; font-size: .78rem; font-weight: 600; }
+    .mobile-search-result .result-cite { display: block; margin-top: 3px; color: var(--muted); font-family: var(--font-mono); font-size: .68rem; }
+
+    .mobile-reference-links { display: grid; gap: 8px; }
+    .mobile-reference-links button {
+      min-height: 44px;
+      padding: 10px 14px;
+      border: 1px solid #ddd4c0;
+      border-radius: 10px;
+      background: var(--panel);
+      color: #275f6b;
+      text-align: left;
+      font-weight: 600;
+      font-size: .84rem;
+      cursor: pointer;
+    }
+    .mobile-reference-links button:hover { background: #f2ebdb; }
+
     /* ————— The chart-room band (desktop layout) ————— */
     .map-experience {
       position: relative;
@@ -598,9 +744,6 @@
       @supports not (backdrop-filter: blur(8px)) {
         .sheet { background: rgba(14,34,41,.95); }
       }
-      /* Desktop keeps the Details panel only; the other tabs are the phone
-         model. The markup is shared, so enabling them later is CSS-only. */
-      .sheet-tabs { display: none; }
       .sheet-panels { flex: 1; min-height: 0; overflow: auto; }
       #detail { border: 0; background: transparent; color: inherit; }
       #detail a { color: #9CC4DA; }
@@ -874,10 +1017,6 @@
     .claim .ancient-shape { color: var(--glyph-ancient-dark); --glyph-stroke: var(--sea-deep); }
     .claim .modern-shape { color: var(--inference); --glyph-fill: rgba(245,239,223,.82); }
     .claim .theology-shape { color: var(--gold); --glyph-fill: rgba(201,162,39,.14); }
-    .recipe-satellite { stroke: var(--sea-deep); stroke-width: 1; }
-    .recipe-satellite.recipe-m { fill: var(--mendesian); }
-    .recipe-satellite.recipe-t { fill: var(--metopion); }
-    .recipe-satellite.recipe-s { fill: var(--susinum); }
     .selected-label {
       fill: #F5EFDF;
       font-size: 11px;
@@ -916,6 +1055,7 @@
     .tooltip-glyph.ancient { color: var(--glyph-ancient-dark); --glyph-stroke: var(--sea-deep); }
     .tooltip-glyph.modern { color: #9FB0C5; }
     .tooltip-glyph.theology { color: var(--gold); }
+    .tooltip-recipes { display: block; margin-bottom: 5px; color: rgba(231,220,195,.7); font-size: .72rem; }
     .tooltip-cite { display: block; color: rgba(231,220,195,.72); font-family: var(--font-mono); font-size: .66rem; letter-spacing: .01em; line-height: 1.5; }
 
     @keyframes card-stamp {
@@ -1018,19 +1158,42 @@
         white-space: nowrap;
       }
 
-      /* Layer chips ride on the map itself, so toggling never needs the sheet. */
-      .toolbar {
-        top: 0;
-        gap: 8px;
-        padding: 10px 12px;
-        flex-wrap: nowrap;
+      /* Panes go full-screen on phones: finding and reading are modes here. */
+      .pane {
+        width: 100%;
+        max-width: none;
+        max-height: none;
+        height: 100dvh;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+      }
+      .pane-head { padding: calc(14px + env(safe-area-inset-top)) 16px 12px; }
+      .pane-body { max-height: none; height: calc(100dvh - 69px - env(safe-area-inset-top)); padding: 16px; }
+
+      /* Layer chips ride on the map itself, so toggling never needs the sheet;
+         the actions stay pinned beside them and drop to icons for width. */
+      .toolbar { top: 0; gap: 8px; padding: 10px 12px; flex-wrap: nowrap; }
+      .toolbar-label { display: none; }
+      .chip-scroll {
+        flex: 1;
+        min-width: 0;
         overflow-x: auto;
         overscroll-behavior-x: contain;
         scrollbar-width: none;
       }
-      .toolbar::-webkit-scrollbar { display: none; }
-      .toolbar-label { display: none; }
+      .chip-scroll::-webkit-scrollbar { display: none; }
       .toggle { flex: none; min-height: 40px; }
+      .map-actions { flex: none; margin-left: 0; gap: 6px; }
+      .map-action { min-width: 44px; min-height: 44px; padding: 8px; justify-content: center; }
+      .map-action-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
 
       .map-tools {
         position: absolute;
@@ -1105,28 +1268,6 @@
       .sheet-grab { display: block; padding: 9px 0 5px; cursor: grab; }
       .sheet-handle { display: block; width: 40px; height: 4px; margin: 0 auto; border-radius: 999px; background: #c3b9a4; }
 
-      .sheet-tabs {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0,1fr));
-        gap: 4px;
-        margin: 0 12px;
-        padding: 4px;
-        border-radius: var(--r-chip);
-        background: #ece4d2;
-      }
-      .sheet-tabs button {
-        min-height: 40px;
-        padding: 8px 4px;
-        border: 0;
-        border-radius: var(--r-chip);
-        background: transparent;
-        color: var(--muted);
-        font: 600 .78rem/1 var(--font-body);
-        cursor: pointer;
-      }
-      .sheet-tabs button[aria-selected="true"] { background: var(--panel); color: var(--ink); box-shadow: 0 1px 3px rgba(20,30,34,.16); }
-      .sheet-tabs button:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 1px; }
-
       .sheet-peek {
         display: block;
         margin: 0;
@@ -1148,46 +1289,8 @@
         overscroll-behavior: contain;
         touch-action: pan-y;
       }
-      .sheet-panel { padding: 4px 18px 22px; }
-      .sheet-panel[hidden] { display: none; }
-      .sheet-panel-heading {
-        margin: 16px 0 10px;
-        color: var(--muted);
-        font-family: var(--font-mono);
-        font-size: .7rem;
-        font-weight: 600;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-      }
-      .sheet-panel-heading:first-child { margin-top: 6px; }
-      #detail { border: 0; background: transparent; overflow: visible; }
-      .detail-content { padding: 4px 0 0; touch-action: pan-y; }
+      .sheet-panels > #detail { padding: 4px 18px 22px; }
 
-      .layer-proxies { display: grid; gap: 8px; }
-      .layer-proxies button {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        min-height: 44px;
-        padding: 10px 14px;
-        border: 1px solid #ddd4c0;
-        border-radius: var(--r-chip);
-        background: var(--panel);
-        color: var(--ink);
-        font: 600 .86rem/1 var(--font-body);
-        text-align: left;
-        cursor: pointer;
-      }
-      .layer-proxies button[aria-pressed="false"] { border-style: dashed; color: var(--muted); }
-      .layer-proxies button[aria-pressed="false"] .recipe-dot { background: transparent; border: 2px solid currentColor; }
-      .layer-proxies button:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 2px; }
-      .layer-proxies .recipe-dot { width: 11px; height: 11px; flex: none; }
-      .layer-proxies button[aria-pressed="false"] .recipe-dot.m { border-color: var(--mendesian); }
-      .layer-proxies button[aria-pressed="false"] .recipe-dot.t { border-color: var(--metopion); }
-      .layer-proxies button[aria-pressed="false"] .recipe-dot.s { border-color: var(--susinum); }
-
-      .sheet-key { margin: 0; padding: 0; list-style: none; }
-      .sheet-key li { display: flex; align-items: center; gap: 10px; margin: 0 0 10px; font-size: .82rem; }
       .key-glyph { flex: none; width: 16px; height: 16px; color: var(--ink); --glyph-stroke: var(--panel); }
       .key-glyph.modern { color: var(--inference); }
       .key-glyph.theology { color: var(--gold-ink); }
@@ -1231,9 +1334,9 @@
       .map-toast,
       .map-tooltip,
       .sheet-grab,
-      .sheet-tabs,
       .sheet-peek,
-      .sheet-backdrop { display: none !important; }
+      .sheet-backdrop,
+      .pane { display: none !important; }
 
       /* The band becomes a normal block so the map prints in full. */
       .map-experience { position: static; height: auto; margin: 0; background: white; }
@@ -1295,7 +1398,6 @@
         break-inside: avoid;
       }
       .sheet-panels { overflow: visible; }
-      .sheet-panel[hidden] { display: none; }
       #detail { color: #1B2422; }
       #detail h2, .detail-place { color: #1B2422; }
       .detail-kicker, .detail-gloss, .detail-hint { color: #444444; }

@@ -39,18 +39,18 @@
     let exploreMode = false;
     let mapToastTimer = null;
     let sheetSnap = "peek";
-    let activeSheetTab = "details";
     let sheetScrollY = 0;
 
     const sheet = document.getElementById("map-sheet");
     const sheetGrab = sheet.querySelector(".sheet-grab");
-    const sheetTabsRow = sheet.querySelector(".sheet-tabs");
-    const sheetTabs = Array.from(sheet.querySelectorAll("[data-sheet-tab]"));
-    const sheetPanels = Array.from(sheet.querySelectorAll("[data-sheet-panel]"));
+    const sheetPeek = sheet.querySelector(".sheet-peek");
     const sheetBackdrop = document.querySelector(".sheet-backdrop");
     const safeProbe = sheet.querySelector(".safe-probe");
     const peekLabels = Array.from(document.querySelectorAll("[data-peek-label]"));
-    const layerProxies = Array.from(document.querySelectorAll("[data-layer-proxy]"));
+    const searchPane = document.getElementById("search-pane");
+    const guidePane = document.getElementById("guide-pane");
+    const openSearchButton = document.getElementById("open-search");
+    const openGuideButton = document.getElementById("open-guide");
     const mobileSearchInput = document.getElementById("mobile-search-input");
     const mobileSearchSummary = document.getElementById("mobile-search-summary");
     const mobileSearchResults = document.getElementById("mobile-search-results");
@@ -132,24 +132,6 @@
       mapWrap.classList.toggle("sheet-owns-drag",!mapOwnsDrag);
     }
 
-    function setTab(name, options) {
-      const settings = options || {};
-      activeSheetTab = name;
-      sheetTabs.forEach(function (tab) {
-        const selected = tab.dataset.sheetTab === name;
-        tab.setAttribute("aria-selected",selected ? "true" : "false");
-        tab.tabIndex = selected ? 0 : -1;
-        if (selected && settings.focusTab) tab.focus({ preventScroll:true });
-      });
-      sheetPanels.forEach(function (panel) {
-        const selected = panel.dataset.sheetPanel === name;
-        panel.hidden = !selected;
-      });
-      if (name === "search" && settings.focusInput !== false && isPhoneViewport()) {
-        window.setTimeout(function () { mobileSearchInput.focus({ preventScroll:true }); },60);
-      }
-    }
-
     function updatePeekLabel() {
       const visible = document.getElementById("visible-count");
       const count = visible ? visible.textContent : "0";
@@ -162,45 +144,51 @@
       });
     }
 
-    // Tapping a marker: raise the sheet to half on Details and pan the point
-    // into the visible half above it. On desktop the panel is fixed, so this is
-    // only the focus call.
+    // Tapping a marker: raise the sheet to half and pan the point into the map
+    // still visible above it. On desktop the panel is docked, so this is a no-op.
     function presentSelection(d) {
       if (!isPhoneViewport()) return;
-      setTab("details",{ focusInput:false });
       if (sheetSnap === "peek") setSnap("half");
     }
 
-    sheetTabs.forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        setTab(tab.dataset.sheetTab);
-        if (isPhoneViewport() && sheetSnap === "peek") setSnap("half");
+    // ————— Search and Guide panes —————
+    // Both are modal dialogs, so the platform handles the focus trap, the
+    // backdrop, and Escape; we only manage what opens them and where focus lands.
+    let paneOpener = null;
+
+    function openPane(pane, trigger) {
+      if (!pane || pane.open) return;
+      paneOpener = trigger || null;
+      hideTooltip();
+      pane.showModal();
+    }
+
+    function panesOpen() {
+      return (searchPane && searchPane.open) || (guidePane && guidePane.open);
+    }
+
+    [searchPane,guidePane].forEach(function (pane) {
+      if (!pane) return;
+      pane.addEventListener("close", function () {
+        const target = paneOpener;
+        paneOpener = null;
+        if (target && target.isConnected) target.focus({ preventScroll:true });
       });
-      tab.addEventListener("keydown", function (event) {
-        const index = sheetTabs.indexOf(tab);
-        let nextIndex = null;
-        if (event.key === "ArrowRight") nextIndex = (index + 1) % sheetTabs.length;
-        else if (event.key === "ArrowLeft") nextIndex = (index - 1 + sheetTabs.length) % sheetTabs.length;
-        else if (event.key === "Home") nextIndex = 0;
-        else if (event.key === "End") nextIndex = sheetTabs.length - 1;
-        if (nextIndex === null) return;
-        event.preventDefault();
-        setTab(sheetTabs[nextIndex].dataset.sheetTab,{ focusTab:true, focusInput:false });
+      // A click on the backdrop lands on the dialog element itself.
+      pane.addEventListener("click", function (event) {
+        if (event.target === pane) pane.close();
       });
     });
 
-    layerProxies.forEach(function (proxy) {
-      proxy.addEventListener("click", function () {
-        const input = layerInputs().find(function (item) { return item.value === proxy.dataset.layerProxy; });
-        if (input) input.click();
+    if (openSearchButton) {
+      openSearchButton.addEventListener("click", function () {
+        renderMobileSearch();
+        openPane(searchPane,openSearchButton);
+        window.setTimeout(function () { mobileSearchInput.focus({ preventScroll:true }); },40);
       });
-    });
-
-    function syncLayerProxies() {
-      layerProxies.forEach(function (proxy) {
-        const input = layerInputs().find(function (item) { return item.value === proxy.dataset.layerProxy; });
-        proxy.setAttribute("aria-pressed",input && input.checked ? "true" : "false");
-      });
+    }
+    if (openGuideButton) {
+      openGuideButton.addEventListener("click", function () { openPane(guidePane,openGuideButton); });
     }
 
     if (sheetBackdrop) {
@@ -282,7 +270,7 @@
       setSnap(nearestSnap(offset,velocity));
     }
 
-    [sheetGrab,sheetTabsRow].forEach(function (handle) {
+    [sheetGrab,sheetPeek].forEach(function (handle) {
       if (!handle) return;
       handle.addEventListener("pointerdown", function (event) { beginDrag(event,false); });
     });
@@ -304,9 +292,6 @@
       if (!phone) {
         sheet.style.removeProperty("--sheet-y");
         sheet.dataset.snap = "docked";
-        sheetPanels.forEach(function (panel) {
-          panel.hidden = panel.dataset.sheetPanel !== activeSheetTab;
-        });
         if (sheetBackdrop) sheetBackdrop.hidden = true;
         unlockPageScroll();
       } else {
@@ -319,6 +304,7 @@
     document.querySelectorAll("[data-mobile-jump]").forEach(function (button) {
       button.addEventListener("click",function () {
         const target = document.getElementById(button.dataset.mobileJump);
+        if (guidePane && guidePane.open) { paneOpener = null; guidePane.close(); }
         if (isPhoneViewport()) setSnap("peek");
         if (target) {
           window.setTimeout(function () {
@@ -379,11 +365,12 @@
       if (!button) return;
       const claim = claims.find(function (item) { return item.id === button.dataset.claimId; });
       if (!claim) return;
-      selectClaim(claim,false,true,true);
-      if (isPhoneViewport()) {
-        setTab("details",{ focusInput:false });
-        setSnap("half");
+      if (searchPane && searchPane.open) {
+        paneOpener = null; // focus belongs to the selection now, not the trigger
+        searchPane.close();
       }
+      selectClaim(claim,false,true,true);
+      if (isPhoneViewport()) setSnap("half");
     });
     layerInputs().forEach(function (input) {
       input.addEventListener("change",renderMobileSearch);
@@ -653,6 +640,7 @@
     });
     document.addEventListener("keydown", function (event) {
       if (event.key !== "Escape") return;
+      if (panesOpen()) return; // the open dialog closes itself
       hideTooltip();
       if (isPhoneViewport() && sheetSnap !== "peek") {
         setSnap("peek");
@@ -677,10 +665,8 @@
 
     // Bootstrap: every helper above is defined, so the first paint is safe here.
     updateVisibility();
-    syncLayerProxies();
-    setTab(activeSheetTab,{ focusInput:false });
-    syncSheetMode();
     setSnap("peek",{ animate:false });
+    syncSheetMode();
 
     navigationReady = true;
     const defaultClaim = claims.find(function (d) { return d.id === "bal-petra"; });
