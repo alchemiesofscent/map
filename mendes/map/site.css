@@ -491,20 +491,31 @@
        already the containing block: it is position:relative above. */
     .map-experience.chart { --chart-anchor: absolute; }
 
+    .map-experience.chart .dossier__inner { overflow: auto; }
+
     /* The rail and the dossier are sized off the viewport in shell.css because
        the journeys viewer fills it. Here they measure the band, which is roughly
        three quarters as tall — so the dossier has to stop well short of the
-       masthead it would otherwise climb into. */
-    .map-experience.chart .view-control { max-height: calc(100% - 48px); overflow: auto; }
-    .map-experience.chart .dossier {
-      max-height: calc(100% - 250px);
-      width: min(560px, calc(100% - 56px - var(--rail-w) - var(--rail-gap) * 2));
-    }
-    .map-experience.chart .dossier__inner { overflow: auto; }
+       masthead it would otherwise climb into.
 
-    /* The strip took the foot of the band, so the zoom cluster rides above it
-       rather than underneath. */
-    .map-experience.chart .map-tools { bottom: 68px; }
+       Desktop only, and the media query is load-bearing rather than tidiness.
+       These selectors carry a class more than the phone rules in ../shell.css
+       do, so unscoped they win everywhere: the width reserved a column for a
+       rail that is a drawer on a phone, leaving the dossier calc(100% - 340px)
+       — about 50px on a 390px screen, one glyph per line — and the tools offset
+       replaced a bottom that accounts for env(safe-area-inset-bottom), putting
+       the zoom cluster under the browser chrome. */
+    @media (min-width: 721px) {
+      .map-experience.chart .view-control { max-height: calc(100% - 48px); overflow: auto; }
+      .map-experience.chart .dossier {
+        max-height: calc(100% - 250px);
+        width: min(560px, calc(100% - 56px - var(--rail-w) - var(--rail-gap) * 2));
+      }
+
+      /* The strip took the foot of the band, so the zoom cluster rides above it
+         rather than underneath. */
+      .map-experience.chart .map-tools { bottom: 68px; }
+    }
 
     /* app-2.js still writes the selected claim into #detail-content; the shell
        only changes where it sits, so its own padding gives way to the dossier's. */
