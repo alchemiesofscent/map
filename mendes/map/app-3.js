@@ -35,6 +35,13 @@
     const mapToast = document.getElementById("map-toast");
     const mapExperience = document.querySelector(".map-experience");
     const phoneQuery = window.matchMedia("(max-width: 720px)");
+    // Layout and input are two questions, and the viewport only answers the
+    // first. A tablet is wider than the phone breakpoint but has no pointer to
+    // hover with, so gating gestures on width handed every tablet the desktop's
+    // click-to-activate: the reader dragged, nothing moved, and nothing said
+    // why. Width still decides the drawer, the framing and the padding; whether
+    // the map should wait for a click is a question about the pointer.
+    const coarsePointerQuery = window.matchMedia("(pointer: coarse)");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let exploreMode = false;
     let mapToastTimer = null;
@@ -467,11 +474,16 @@
       return phoneQuery.matches;
     }
 
+    // Touch and pen get the gestures directly; only a fine pointer has to ask.
+    function isTouchInput() {
+      return coarsePointerQuery.matches;
+    }
+
     function updateExploreMode() {
-      const gesturesEnabled = isPhoneViewport() || exploreMode;
+      const gesturesEnabled = isTouchInput() || exploreMode;
       mapWrap.classList.toggle("is-exploring",gesturesEnabled);
-      if (isPhoneViewport()) {
-        gestureHint.textContent = "Tap a point for guided focus; drag, pinch, double-tap, or use +/− to explore.";
+      if (isTouchInput()) {
+        gestureHint.textContent = "Tap a point for guided focus; drag, pinch, or use +/− to explore.";
       } else if (exploreMode) {
         gestureHint.textContent = "Map active — scroll to zoom, drag to pan, Escape to release.";
       } else {
@@ -513,18 +525,18 @@
     // Click once to activate wheel-zoom and drag (desktop only). Marker taps
     // keep guided focus, so they do not activate the map by themselves.
     svg.node().addEventListener("pointerdown", function (event) {
-      if (isPhoneViewport() || exploreMode) return;
+      if (isTouchInput() || exploreMode) return;
       if (event.button) return;
       if (event.target && event.target.closest && event.target.closest(".claim")) return;
       activateMap();
     }, true);
     document.addEventListener("pointerdown", function (event) {
-      if (isPhoneViewport() || !exploreMode) return;
+      if (isTouchInput() || !exploreMode) return;
       if (mapExperience && event.target instanceof Node && !mapExperience.contains(event.target)) releaseMap();
     });
     if (mapExperience) {
       mapExperience.addEventListener("focusout", function (event) {
-        if (isPhoneViewport() || !exploreMode) return;
+        if (isTouchInput() || !exploreMode) return;
         if (!event.relatedTarget || !mapExperience.contains(event.relatedTarget)) releaseMap();
       });
     }
@@ -580,7 +592,7 @@
       .filter(function (event) {
         const ordinaryPointer = (!event.ctrlKey || event.type === "wheel") && !event.button;
         if (!ordinaryPointer) return false;
-        if (!isPhoneViewport()) return exploreMode;
+        if (!isTouchInput()) return exploreMode;
         const touches = event.touches ? event.touches.length : 0;
         return touches > 1 || sheetSnap === "peek";
       })
@@ -794,6 +806,13 @@
     phoneQuery.addEventListener("change",function () {
       if (!isPhoneViewport()) setDrawer(false);
     });
+    // A detached keyboard or a paired mouse changes the answer mid-session.
+    if (coarsePointerQuery.addEventListener) {
+      coarsePointerQuery.addEventListener("change",function () {
+        if (isTouchInput()) releaseMap();
+        updateExploreMode();
+      });
+    }
 
     // ————— The rail's search field —————
     // The rail carries a real search field rather than a button that says

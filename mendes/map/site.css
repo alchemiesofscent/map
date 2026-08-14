@@ -1545,3 +1545,11 @@
       .sources-grid li { border-color: #999999; background: white; }
       a { color: #1B2422; }
     }
+
+    /* ————— Touch targets —————
+       See the matching block in ../shell.css: sized for a finger, keyed on the
+       pointer so a wide tablet counts and a narrow desktop window does not. */
+    @media (pointer: coarse) {
+      .map-site-nav a { min-height: 44px; }
+      .zoom-controls button { min-height: 44px; }
+    }
