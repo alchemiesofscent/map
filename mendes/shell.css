@@ -1,0 +1,583 @@
+
+    /* ————— Chart-room shell —————
+       The interface furniture shared by the two full-map viewers: the floating
+       masthead card, the phone drawer, the control rail, the dossier, and the
+       stop strip. Extracted from journey.css, which had carried app/'s geometry
+       alone since the journeys viewer was built.
+
+       Load order on both pages is site.css -> shell.css -> page css, so tokens,
+       glyphs, panes, print and motion still come from site.css and each page
+       keeps the last word.
+
+       Two knobs let one sheet serve both pages:
+
+       .chart          scopes every rule, so site.css keeps owning .masthead for
+                       the map page's document header. Winning on source order
+                       alone would leave either page one edit away from a
+                       collapsed masthead.
+
+       --chart-anchor  positions the chrome. The journeys viewer is full-bleed
+                       and leaves it `fixed`. The provenance map scrolls a
+                       catalogue underneath its stage, so it sets `absolute` and
+                       the furniture stays with the map instead of floating over
+                       the sources. The two modal layers — the drawer and its
+                       backdrop — stay `fixed` either way, since a drawer covers
+                       the viewport on both. */
+
+    .chart {
+      --dossier-bg: rgba(14,34,41,.78);
+      --rule: rgba(231,220,195,.18);
+      /* The control rail's footprint on the right edge. The dossier reads it so
+         the two never overlap on a narrow desktop or a landscape tablet. */
+      --rail-w: 236px;
+      --rail-gap: 24px;
+    }
+
+    /* ————— Masthead —————
+       app/ sets the masthead on a glass card rather than bare on the basemap,
+       and it has to be a card here too: the chart-room land is dark but the
+       reader can pan any part of the map under this corner.
+
+       Scoped to .chart because ../map/site.css already owns .masthead for
+       the dossier header — a grid on desktop, display:none under 720px. Winning
+       on source order alone would put this page one edit to that file away from
+       a collapsed masthead. */
+    .chart .masthead {
+      display: block;
+      grid-template-columns: none;
+      gap: 0;
+      margin: 0;
+      position: var(--chart-anchor, fixed);
+      z-index: 5;
+      top: calc(22px + env(safe-area-inset-top));
+      left: 28px;
+      min-width: 252px;
+      max-width: min(340px, calc(100vw - 96px));
+      padding: 16px 20px 14px;
+      border: 1px solid var(--rule);
+      border-radius: var(--r-card);
+      background: rgba(14,34,41,.74);
+      -webkit-backdrop-filter: blur(14px) saturate(1.3);
+      backdrop-filter: blur(14px) saturate(1.3);
+      box-shadow: var(--shadow);
+      pointer-events: none;
+    }
+    .masthead__rule { width: 32px; height: 1px; margin-bottom: 10px; background: var(--gold); opacity: .85; }
+    .masthead__series {
+      margin: 0 0 8px;
+      color: rgba(231,220,195,.62);
+      font-family: var(--font-mono);
+      font-size: .66rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .masthead__title {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .3em;
+      align-items: baseline;
+      margin: 0;
+      color: #F5EFDF;
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 500;
+      line-height: 1.06;
+      letter-spacing: .01em;
+    }
+    .masthead__title span:first-child { font-variant: small-caps; letter-spacing: .05em; }
+    .masthead__title-sep { color: var(--gold); font-size: .85em; }
+    .masthead__counter {
+      display: flex;
+      gap: .6em;
+      align-items: baseline;
+      margin: 12px 0 0;
+      color: rgba(231,220,195,.62);
+      font-family: var(--font-mono);
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    #counter-roman { color: var(--focus); font-size: .78rem; letter-spacing: .14em; font-weight: 600; }
+    .masthead__counter-of { opacity: .5; }
+
+    /* ————— Controls ————— */
+    .drawer-toggle {
+      position: var(--chart-anchor, fixed);
+      z-index: 8;
+      top: calc(20px + env(safe-area-inset-top));
+      right: 20px;
+      width: 46px;
+      height: 46px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(14,34,41,.86);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      color: var(--land);
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .mobile-menu { display: contents; }
+    .mobile-menu__close { display: none; }
+    .drawer-backdrop { display: none; }
+
+    .view-control {
+      position: var(--chart-anchor, fixed);
+      z-index: 5;
+      top: calc(24px + env(safe-area-inset-top));
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      width: var(--rail-w);
+      padding: 14px;
+      border: 1px solid var(--rule);
+      border-radius: var(--r-card);
+      background: rgba(14,34,41,.74);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow);
+    }
+    @supports not (backdrop-filter: blur(8px)) {
+      .view-control, .drawer-toggle, .dossier { background: rgba(14,34,41,.95); }
+    }
+    .view-control__routes { display: grid; gap: 6px; }
+    .view-control__routes button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      min-height: 40px;
+      padding: 8px 12px;
+      border: 1px solid rgba(231,220,195,.22);
+      border-radius: var(--r-chip);
+      background: rgba(231,220,195,.06);
+      color: var(--land);
+      font-size: .82rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+    }
+    .view-control__routes button:hover { background: rgba(231,220,195,.16); }
+    .view-control__routes button[aria-pressed="true"] {
+      border-color: var(--gold);
+      background: rgba(201,162,39,.18);
+      color: #F5EFDF;
+    }
+    .view-control__count {
+      flex: none;
+      color: rgba(231,220,195,.6);
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .view-control__divider { height: 1px; background: var(--rule); }
+    .material-control__label,
+    .view-control__explore {
+      display: block;
+      color: rgba(231,220,195,.68);
+      font-family: var(--font-mono);
+      font-size: .66rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .material-control__label { margin-bottom: 5px; }
+    .material-control__input {
+      width: 100%;
+      min-height: 40px;
+      padding: 8px 11px;
+      border: 1px solid rgba(231,220,195,.26);
+      border-radius: 10px;
+      background: rgba(14,34,41,.9);
+      color: var(--land);
+      font-size: 16px; /* keeps iOS from zooming the page on focus */
+    }
+    .view-control__explore {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: none;
+      letter-spacing: 0;
+      font-family: var(--font-body);
+      font-size: .78rem;
+      cursor: pointer;
+    }
+    .view-control__explore input { accent-color: var(--gold); }
+    .view-control__links { display: grid; gap: 6px; }
+    .view-control__link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      padding: 6px 10px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: rgba(231,220,195,.82);
+      font-family: var(--font-body);
+      font-size: .78rem;
+      text-align: left;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .view-control__link:hover { background: rgba(231,220,195,.12); color: #F5EFDF; }
+    .view-control__link-glyph { flex: none; width: 14px; height: 14px; }
+
+    /* ————— Hint —————
+       Top centre, as in app/: the bottom half of the screen belongs to the
+       dossier and the strip, and a hint there lands on top of the citation. */
+    .hint {
+      position: var(--chart-anchor, fixed);
+      z-index: 7;
+      left: 50%;
+      top: calc(26px + env(safe-area-inset-top));
+      transform: translateX(-50%);
+      padding: 8px 15px;
+      border: 1px solid var(--rule);
+      border-radius: var(--r-chip);
+      background: rgba(14,34,41,.82);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      color: rgba(231,220,195,.8);
+      font-family: var(--font-mono);
+      font-size: .66rem;
+      letter-spacing: .04em;
+      cursor: pointer;
+    }
+    .hint[hidden] { display: none; }
+    /* Below this the top band between masthead and control rail is narrower
+       than the hint itself, so it would land on one or the other. The guide
+       pane and the prev/next rail carry the same affordance. */
+    @media (max-width: 1099px) { .hint { display: none; } }
+    .hint kbd {
+      display: inline-block;
+      min-width: 18px;
+      margin: 0 1px;
+      padding: 1px 4px;
+      border: 1px solid rgba(231,220,195,.3);
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    .hint__or { margin: 0 6px; color: rgba(231,220,195,.45); }
+
+    /* ————— Dossier ————— */
+    .dossier {
+      position: var(--chart-anchor, fixed);
+      z-index: 6;
+      left: 28px;
+      bottom: 72px;
+      width: min(660px, calc(100vw - 56px - var(--rail-w) - var(--rail-gap) * 2));
+      max-height: calc(100svh - 250px);
+      display: grid;
+      grid-template-columns: minmax(0,1fr) auto;
+      border: 1px solid var(--rule);
+      border-radius: var(--r-card);
+      background: var(--dossier-bg);
+      -webkit-backdrop-filter: blur(14px) saturate(1.3);
+      backdrop-filter: blur(14px) saturate(1.3);
+      box-shadow: var(--shadow);
+      color: #D9DED3;
+      overflow: hidden;
+    }
+    .dossier__inner { min-width: 0; padding: 20px 22px; overflow: auto; }
+    .dossier__eyebrow {
+      margin: 0 0 8px;
+      color: rgba(231,220,195,.62);
+      font-family: var(--font-mono);
+      font-size: .66rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    /* "Stop 1 of 6" is a unit and must not break; the ingredient's gloss is
+       long enough that it has to. */
+    #dossier-section { white-space: nowrap; }
+    .dossier__eyebrow--inline { display: block; margin-bottom: 4px; }
+    .dossier__sep { margin: 0 .5em; color: rgba(231,220,195,.35); }
+    .dossier__title {
+      margin: 0;
+      color: #F5EFDF;
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+      font-weight: 500;
+      line-height: 1.1;
+    }
+    .dossier__greek-name {
+      margin: 4px 0 0;
+      color: var(--gold);
+      font-size: 1.05rem;
+    }
+    .dossier__greek-name:empty { display: none; }
+    .dossier__body { margin-top: 14px; }
+    .dossier__translation { margin: 0; font-size: .92rem; line-height: 1.55; }
+    .dossier__citation {
+      margin-top: 14px;
+      padding: 10px 12px;
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      background: rgba(0,0,0,.24);
+      font-family: var(--font-mono);
+      font-size: .74rem;
+      line-height: 1.55;
+    }
+    .dossier__materia { margin-top: 14px; }
+    .dossier__materia-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+    .dossier__materia-list li {
+      padding: 3px 10px;
+      border: 1px solid rgba(231,220,195,.24);
+      border-radius: var(--r-chip);
+      font-size: .72rem;
+    }
+    .dossier__foot {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--rule);
+      color: rgba(231,220,195,.6);
+      font-family: var(--font-mono);
+      font-size: .68rem;
+    }
+    .dossier__nav {
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid var(--rule);
+    }
+    .dossier__nav button {
+      flex: 1;
+      width: 52px;
+      border: 0;
+      background: transparent;
+      color: var(--land);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    .dossier__nav button + button { border-top: 1px solid var(--rule); }
+    .dossier__nav button:hover:not(:disabled) { background: rgba(231,220,195,.12); }
+    .dossier__nav button:disabled { opacity: .3; cursor: default; }
+    .dossier--single .dossier__nav { display: none; }
+
+    /* ————— Strip ————— */
+    .strip {
+      position: var(--chart-anchor, fixed);
+      z-index: 4;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 10px 28px calc(12px + env(safe-area-inset-bottom));
+      background: linear-gradient(to top, rgba(14,34,41,.9) 0%, rgba(14,34,41,.55) 70%, rgba(14,34,41,0) 100%);
+    }
+    .strip[hidden] { display: none; }
+    .strip__legend { display: flex; align-items: center; gap: 7px; flex: none; }
+    .strip__swatch { width: 13px; height: 13px; color: var(--glyph-ancient-dark); --glyph-stroke: var(--sea-deep); }
+    .strip__swatch--modern { color: #9FB0C5; }
+    .strip__swatch--theology { color: var(--gold); }
+    .strip__legend-label {
+      margin-right: 6px;
+      color: rgba(231,220,195,.62);
+      font-family: var(--font-mono);
+      font-size: .62rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .strip__rail { display: flex; flex: 1; gap: 4px; min-width: 0; }
+    .strip__dot {
+      position: relative;
+      flex: 1;
+      min-width: 0;
+      height: 34px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+    .strip__dot::before {
+      content: "";
+      display: block;
+      width: 11px;
+      height: 11px;
+      margin: 0 auto;
+      border: 1.6px solid var(--glyph-ancient-dark);
+      border-radius: 50%;
+      background: transparent;
+      transition: transform var(--t-hover) ease, background var(--t-hover) ease;
+    }
+    .strip__dot[data-kind="modern"]::before { border-color: #9FB0C5; border-style: dashed; border-radius: 1px; transform: rotate(45deg); }
+    .strip__dot[data-kind="theology"]::before { border-color: var(--gold); border-style: double; border-width: 3px; }
+    .strip__dot.is-active::before { background: var(--gold); border-color: var(--gold); transform: scale(1.25); }
+    .strip__dot[data-kind="modern"].is-active::before { transform: rotate(45deg) scale(1.25); }
+    .strip__dot:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+    .strip__dot__label {
+      position: absolute;
+      left: 50%;
+      bottom: 100%;
+      transform: translateX(-50%);
+      margin-bottom: 6px;
+      padding: 3px 9px;
+      border-radius: var(--r-chip);
+      background: rgba(14,34,41,.94);
+      color: var(--land);
+      font-size: .68rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--t-hover) ease;
+    }
+    /* Only on hover or focus. The active stop is already named by the dossier
+       and by the map label, and a third copy lands on the dossier's foot. */
+    .strip__dot:hover .strip__dot__label,
+    .strip__dot:focus-visible .strip__dot__label { opacity: 1; }
+
+
+    /* ————— Phone: app/'s drawer model ————— */
+    @media (max-width: 720px) {
+      .chart .masthead {
+        display: block;
+        top: calc(10px + env(safe-area-inset-top));
+        left: 10px;
+        min-width: 0;
+        max-width: calc(100vw - 76px);
+        padding: 7px 11px;
+      }
+      .masthead__rule, .masthead__title { display: none; }
+      .masthead__series { margin-bottom: 3px; font-size: .58rem; letter-spacing: .16em; }
+      .masthead__counter { margin-top: 0; font-size: .62rem; letter-spacing: .13em; }
+      #counter-roman { font-size: .7rem; }
+
+      .drawer-toggle { display: flex; }
+      .mobile-menu {
+        position: fixed;
+        z-index: 9;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 78vw;
+        max-width: 320px;
+        height: 100svh;
+        padding: calc(18px + env(safe-area-inset-top)) 16px calc(18px + env(safe-area-inset-bottom));
+        border-left: 1px solid var(--rule);
+        background: rgba(14,34,41,.96);
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+        overflow: auto;
+        transform: translateX(110%);
+        transition: transform var(--t-snap) ease;
+      }
+      body.menu-open .mobile-menu { transform: translateX(0); }
+      .mobile-menu__close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        margin-left: auto;
+        border: 1px solid var(--rule);
+        border-radius: 50%;
+        background: transparent;
+        color: var(--land);
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      .drawer-backdrop {
+        position: fixed;
+        z-index: 8;
+        inset: 0;
+        display: none;
+        width: 100%;
+        border: 0;
+        background: rgba(8,18,22,.5);
+      }
+      body.menu-open .drawer-backdrop { display: block; }
+
+      .view-control {
+        position: static;
+        width: auto;
+        margin-top: 14px;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .dossier {
+        left: 12px;
+        right: 12px;
+        bottom: calc(58px + env(safe-area-inset-bottom));
+        width: auto;
+        max-height: min(46svh, 460px);
+      }
+      .dossier__inner { padding: 15px 16px; }
+      .dossier__nav button { width: 44px; }
+
+      .strip { gap: 10px; padding: 8px 12px calc(10px + env(safe-area-inset-bottom)); }
+      .strip__legend { display: none; }
+      .hint { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .mobile-menu, .claim, .strip__dot::before, .strip__dot__label { transition: none; }
+    }
+
+    @media print {
+      .drawer-toggle, .mobile-menu, .drawer-backdrop, .hint, .strip,
+      .dossier__nav { display: none !important; }
+      .chart .masthead {
+        position: static;
+        max-width: none;
+        padding: 0;
+        border: 0;
+        background: none;
+        box-shadow: none;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        color: var(--ink);
+      }
+      .masthead__series, .masthead__counter { color: #444444; }
+      .masthead__title { color: var(--ink); }
+      .dossier {
+        position: static;
+        width: auto;
+        max-height: none;
+        margin: 14px 0 0;
+        border-color: #999999;
+        border-radius: 0;
+        background: white;
+        color: var(--ink);
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        box-shadow: none;
+      }
+      .dossier__title, .dossier__greek-name { color: var(--ink); }
+      .dossier__eyebrow, .dossier__foot { color: #444444; }
+      .dossier__citation { border-left-color: #6B5620; background: white; color: var(--ink); }
+    }
+
+    /* ————— Layer rows carry their recipe colour —————
+       The journeys viewer's rail rows are uniform: one ingredient at a time, so
+       nothing needs telling apart. The provenance map shows all three recipes at
+       once, and the map's marks are keyed by recipe colour, so each row carries
+       its own dot. The colour arrives as --route-color from the renderer. */
+    .view-control__routes button[data-recipe] { gap: 8px; }
+    .view-control__dot {
+      flex: none;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--route-color, var(--gold));
+    }
+    .view-control__name { flex: 1; min-width: 0; text-align: left; }
+    .view-control__routes button[data-recipe][aria-pressed="false"] { opacity: .5; }
+    .view-control__routes button[data-recipe][aria-pressed="false"] .view-control__dot {
+      background: transparent;
+      box-shadow: inset 0 0 0 1.5px var(--route-color, var(--gold));
+    }

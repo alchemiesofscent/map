@@ -41,7 +41,14 @@
     let sheetSnap = "peek";
     let sheetScrollY = 0;
 
-    const sheet = document.getElementById("map-sheet");
+    // The selection now reads in the shared dossier at every width, so the
+    // bottom sheet is gone from the markup. The snap machinery below is left in
+    // place rather than unpicked from the drag and gesture code it interleaves
+    // with: a detached stand-in keeps every lookup total, and sheetEnabled gates
+    // the behaviour at its entry points. Removing it outright is a separate
+    // pass, and one worth doing on its own.
+    const sheet = document.getElementById("map-sheet") || document.createElement("section");
+    const sheetEnabled = sheet.isConnected;
     const sheetGrab = sheet.querySelector(".sheet-grab");
     const sheetPeek = sheet.querySelector(".sheet-peek");
     const sheetBackdrop = document.querySelector(".sheet-backdrop");
@@ -91,6 +98,7 @@
 
     // The zoom cluster rides just above the sheet rather than hiding behind it.
     function positionMapTools(name) {
+      if (!sheetEnabled) return;
       if (!mapExperience) return;
       mapExperience.dataset.sheetSnap = name;
       if (!isPhoneViewport()) {
@@ -102,6 +110,7 @@
     }
 
     function setSnap(name, options) {
+      if (!sheetEnabled) return;
       const settings = options || {};
       if (!isPhoneViewport()) {
         sheetSnap = name;
@@ -128,6 +137,7 @@
     }
 
     function lockPageScroll() {
+      if (!sheetEnabled) return;
       if (document.body.classList.contains("mobile-panel-open")) return;
       sheetScrollY = window.scrollY;
       document.body.style.top = "-" + sheetScrollY + "px";
@@ -135,6 +145,7 @@
     }
 
     function unlockPageScroll() {
+      if (!sheetEnabled) return;
       if (!document.body.classList.contains("mobile-panel-open")) return;
       const restore = sheetScrollY;
       document.body.classList.remove("mobile-panel-open");
@@ -154,6 +165,7 @@
     const peekGlyphIds = { ancient:"glyph-ancient", modern:"glyph-inference", theology:"glyph-theology" };
 
     function updatePeekLabel() {
+      if (!sheetEnabled) return;
       const visible = document.getElementById("visible-count");
       const count = visible ? visible.textContent : "0";
       peekLabels.forEach(function (node) {
@@ -247,6 +259,7 @@
     }
 
     function beginDrag(event, fromBody) {
+      if (!sheetEnabled) return;
       if (!isPhoneViewport() || event.pointerType === "mouse" && event.button) return;
       drag = {
         id: event.pointerId,
@@ -317,6 +330,7 @@
     document.addEventListener("pointercancel",endDrag);
 
     function syncSheetMode() {
+      if (!sheetEnabled) { syncMapGestures(); return; }
       const phone = isPhoneViewport();
       if (!phone) {
         sheet.style.removeProperty("--sheet-y");
@@ -752,4 +766,68 @@
         if (isPhoneViewport()) setSnap(sheetSnap,{ animate:false });
       });
     }
+
+    // ————— The phone drawer —————
+    // The control rail is a fixed panel on the desktop and a drawer on a phone,
+    // the same trade the journeys viewer makes; shell.css carries both states
+    // and this only opens and closes them.
+    const drawerToggle = document.getElementById("drawer-toggle");
+    const drawerClose = document.getElementById("drawer-close");
+    const drawerBackdrop = document.getElementById("drawer-backdrop");
+
+    function setDrawer(open) {
+      document.body.classList.toggle("menu-open",open);
+      if (drawerToggle) drawerToggle.setAttribute("aria-expanded",open ? "true" : "false");
+      if (open) {
+        const first = document.querySelector("#view-control-routes button");
+        if (first) first.focus();
+      } else if (drawerToggle && isPhoneViewport()) {
+        drawerToggle.focus();
+      }
+    }
+
+    if (drawerToggle) drawerToggle.addEventListener("click",function () {
+      setDrawer(!document.body.classList.contains("menu-open"));
+    });
+    if (drawerClose) drawerClose.addEventListener("click",function () { setDrawer(false); });
+    if (drawerBackdrop) drawerBackdrop.addEventListener("click",function () { setDrawer(false); });
+    phoneQuery.addEventListener("change",function () {
+      if (!isPhoneViewport()) setDrawer(false);
+    });
+
+    // ————— The rail's search field —————
+    // The rail carries a real search field rather than a button that says
+    // "Search", so the affordance matches the journeys viewer. The pane still
+    // owns the results and the ingredient browse, so the field hands its query
+    // over and lets the pane do the work.
+    const railSearch = document.getElementById("map-search");
+    if (railSearch && searchPane) {
+      const handOver = function () {
+        if (mobileSearchInput) {
+          mobileSearchInput.value = railSearch.value;
+          mobileSearchInput.dispatchEvent(new Event("input",{ bubbles:true }));
+        }
+        if (!searchPane.open) openPane(searchPane,railSearch);
+        if (mobileSearchInput) mobileSearchInput.focus();
+      };
+      railSearch.addEventListener("focus",handOver);
+      railSearch.addEventListener("input",handOver);
+      railSearch.addEventListener("keydown",function (event) {
+        if (event.key === "Enter") { event.preventDefault(); handOver(); }
+      });
+      // The pane is the one that searches; leaving the rail field holding a
+      // stale query would show a filter the map is no longer applying.
+      searchPane.addEventListener("close",function () { railSearch.value = ""; });
+    }
+
+    // The drawer is the outermost layer of the Escape ladder on a phone: panes
+    // close first, then the drawer, then the map releases its gestures.
+    document.addEventListener("keydown",function (event) {
+      if (event.key !== "Escape") return;
+      if (panesOpen()) return;
+      if (document.body.classList.contains("menu-open")) {
+        event.preventDefault();
+        setDrawer(false);
+      }
+    });
   }());

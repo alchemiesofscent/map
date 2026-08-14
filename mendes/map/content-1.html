@@ -1,5 +1,5 @@
 
-  <nav class="map-site-nav" aria-label="House of Mendes pages"><a href="../?v=20260814-7">← Dossier &amp; ingredient catalogue</a><a href="../journey/?v=20260814-7">Ingredient journeys →</a><span class="site-nav-title" aria-hidden="true">House of Mendes</span></nav>
+  <nav class="map-site-nav" aria-label="House of Mendes pages"><a href="../?v=20260814-8">← Dossier &amp; ingredient catalogue</a><a href="../journey/?v=20260814-8">Ingredient journeys →</a><span class="site-nav-title" aria-hidden="true">House of Mendes</span></nav>
   <svg hidden aria-hidden="true" class="glyph-sprite">
     <symbol id="glyph-ancient" viewBox="-12 -12 24 24">
       <circle r="6.5" fill="currentColor" stroke="var(--glyph-stroke, transparent)" stroke-width="1.5"></circle>
@@ -25,91 +25,112 @@
     </symbol>
   </svg>
   <main class="page">
-    <header class="masthead">
-      <div>
-        <p class="eyebrow">Working reference · National Geographic research support</p>
-        <h1>Ancient ingredient provenances converging on Mendes</h1>
-        <p class="dek">What Greek, Latin, and Egyptian texts say—not a modern botanical distribution map. Source disagreements remain separate; source silence remains visible.</p>
-      </div>
-      <div class="stamp">
-        <strong>Alchemies of Scent</strong>
-        Institute of Philosophy, CAS / IOCB Prague<br>
-        Evidence pass: 10 August 2026
-      </div>
-    </header>
-
-    <div class="map-experience">
-    <div class="toolbar" aria-label="Map controls">
-      <span class="toolbar-label">Perfume layers</span>
-      <div class="chip-scroll">
-        <label class="toggle" style="--toggle-color:var(--mendesian)">
-          <input type="checkbox" value="m" checked>
-          <span class="toggle-dot"></span> Dark Mendesian
-        </label>
-        <label class="toggle" style="--toggle-color:var(--metopion)">
-          <input type="checkbox" value="t" checked>
-          <span class="toggle-dot"></span> Metopion
-        </label>
-        <label class="toggle" style="--toggle-color:var(--susinum)">
-          <input type="checkbox" value="s" checked>
-          <span class="toggle-dot"></span> Susinum
-        </label>
-      </div>
-      <div class="method-key" aria-label="Evidence key">
-        <span class="key-item"><span class="key-shape ancient"></span> ancient-attested claim</span>
-        <span class="key-item"><span class="key-shape modern"></span> inference / modern correction</span>
-        <span class="key-item"><span class="key-shape theology"></span> theological provenance</span>
-      </div>
-      <div class="map-actions">
-        <a class="map-back" href="../?v=20260814-7" aria-label="Back to the dossier and ingredient catalogue">
-          <svg class="map-action-glyph" aria-hidden="true"><use href="#glyph-back"></use></svg>
-        </a>
-        <button type="button" id="open-search" class="map-action search-pill" aria-haspopup="dialog">
-          <svg class="map-action-glyph" aria-hidden="true"><use href="#glyph-search"></use></svg>
-          <span class="map-action-label">Search</span>
-          <span class="search-pill-hint" aria-hidden="true">Ingredients, places, sources</span>
-        </button>
-        <button type="button" id="open-guide" class="map-action" aria-haspopup="dialog">
-          <svg class="map-action-glyph" aria-hidden="true"><use href="#glyph-guide"></use></svg>
-          <span class="map-action-label">Guide</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="map-shell">
+    <div class="map-experience chart">
       <div class="map-wrap">
-        <div class="map-tools" aria-label="Map navigation">
-          <div class="zoom-controls" role="group" aria-label="Map zoom controls">
-            <button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
-            <button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
-            <button type="button" id="zoom-reset" class="zoom-reset" aria-label="Reset map view">Reset</button>
-            <output id="zoom-level" class="zoom-level" aria-label="Current zoom level">100%</output>
-          </div>
-          <p class="map-gesture-hint" id="map-gesture-hint">Click the map to activate scroll-zoom and drag; press Escape to release. The +/− controls always work.</p>
-        </div>
-        <p class="map-toast" id="map-toast" role="status" aria-live="polite"></p>
         <svg id="map" viewBox="0 0 900 710" preserveAspectRatio="xMidYMid slice" role="group" aria-roledescription="interactive provenance map" aria-labelledby="map-title map-desc" aria-describedby="map-gesture-hint">
           <title id="map-title">Ancient ingredient provenance claims and conventional routes to Mendes</title>
           <desc id="map-desc">An interactive map of the eastern Mediterranean, Red Sea, Arabia, and India. Select a point for its Greek ingredient label, source citation, and evidence note.</desc>
         </svg>
+        <p class="map-toast" id="map-toast" role="status" aria-live="polite"></p>
+        <p class="map-gesture-hint visually-hidden" id="map-gesture-hint">Click the map to activate scroll-zoom and drag; press Escape to release. The +/− controls always work.</p>
       </div>
-      <button type="button" class="sheet-backdrop" aria-label="Collapse map panel" hidden></button>
-      <section class="sheet" id="map-sheet" data-snap="peek" aria-label="Selected provenance">
-        <div class="sheet-grab" aria-hidden="true"><span class="sheet-handle"></span></div>
-        <p class="sheet-peek"><span class="sheet-peek-label" data-peek-label aria-live="polite"></span></p>
-        <div class="sheet-panels">
-          <aside id="detail" aria-label="Selected provenance details">
-            <div id="detail-content" class="detail-content">
-              <p class="detail-kicker">No point selected</p>
-              <h2>Select a provenance point</h2>
-              <p class="detail-gloss">Every point carries its Greek label, its source citation, and its evidence class—here and in its map tooltip.</p>
-              <p class="detail-hint">Keyboard: tab to a point and press Enter. Open Guide for the evidence key and the route caution.</p>
-            </div>
-          </aside>
+
+      <header class="masthead" aria-label="Title">
+        <div class="masthead__rule"></div>
+        <p class="masthead__series">Provenance map</p>
+        <h1 class="masthead__title">
+          <span>Attested</span>
+          <span class="masthead__title-sep">·</span>
+          <span>Origins</span>
+        </h1>
+        <p class="masthead__counter" aria-live="polite">
+          <span id="visible-count" data-visible-count>0</span>
+          <span class="masthead__counter-of">of</span>
+          <span id="claim-total">—</span>
+          <span class="masthead__counter-unit">claims</span>
+        </p>
+      </header>
+
+      <button class="drawer-toggle" id="drawer-toggle" type="button"
+              aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span aria-hidden="true">≡</span>
+      </button>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu__close" id="drawer-close" type="button" aria-label="Close menu">
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <div class="view-control" role="group" aria-label="Map controls" id="view-control">
+          <!-- Rendered by app-2.js from the recipe list, so the three layers and
+               their claim counts stay in step with the data rather than with a
+               hand-kept copy in the markup. -->
+          <div class="view-control__routes" id="view-control-routes" role="group" aria-label="Perfume layers"></div>
+
+          <div class="material-control" id="material-control">
+            <label class="material-control__label" for="map-search">Find a claim</label>
+            <input
+              class="material-control__input"
+              id="map-search"
+              type="search"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Try myrrh, Petra, Pliny…"
+            />
+          </div>
+
+          <span class="view-control__divider" aria-hidden="true"></span>
+          <label class="view-control__explore">
+            <input type="checkbox" id="toggle-explore" />
+            <span>Explore map</span>
+          </label>
+          <span class="view-control__divider" aria-hidden="true"></span>
+
+          <div class="view-control__links">
+            <button type="button" id="open-guide" class="view-control__link" aria-haspopup="dialog">
+              <svg class="view-control__link-glyph" aria-hidden="true"><use href="#glyph-guide"></use></svg>
+              How to read this
+            </button>
+            <a class="view-control__link" href="../journey/?v=20260814-8">Ingredient journeys</a>
+            <a class="view-control__link" href="../?v=20260814-8">Dossier &amp; catalogue</a>
+          </div>
         </div>
-        <span class="safe-probe" aria-hidden="true"></span>
-      </section>
-    </div>
+      </div>
+
+      <button class="drawer-backdrop" id="drawer-backdrop" type="button" aria-label="Close menu" tabindex="-1"></button>
+
+      <div class="map-tools" aria-label="Map navigation">
+        <div class="zoom-controls" role="group" aria-label="Map zoom controls">
+          <button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
+          <button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
+          <button type="button" id="zoom-reset" class="zoom-reset" aria-label="Reset map view">Reset</button>
+          <output id="zoom-level" class="zoom-level" aria-label="Current zoom level">100%</output>
+        </div>
+      </div>
+
+      <!-- The dossier keeps #detail-content as its body: app-2.js already writes
+           the selected claim there, and the shell only changes where it sits. -->
+      <aside class="dossier" aria-live="polite" aria-label="Selected provenance">
+        <div class="dossier__inner">
+          <div id="detail-content" class="detail-content">
+            <p class="detail-kicker">No point selected</p>
+            <h2>Select a provenance point</h2>
+            <p class="detail-gloss">Every point carries its Greek label, its source citation, and its evidence class—here and in its map tooltip.</p>
+            <p class="detail-hint">Keyboard: tab to a point and press Enter. Open “How to read this” for the evidence key and the route caution.</p>
+          </div>
+        </div>
+      </aside>
+
+      <nav class="strip" aria-label="Evidence key">
+        <div class="strip__legend">
+          <svg class="strip__swatch" aria-hidden="true"><use href="#glyph-ancient"></use></svg>
+          <span class="strip__legend-label">Attested</span>
+          <svg class="strip__swatch strip__swatch--modern" aria-hidden="true"><use href="#glyph-inference"></use></svg>
+          <span class="strip__legend-label">Inference</span>
+          <svg class="strip__swatch strip__swatch--theology" aria-hidden="true"><use href="#glyph-theology"></use></svg>
+          <span class="strip__legend-label">Theological</span>
+        </div>
+      </nav>
     </div>
 
     <dialog class="pane" id="search-pane" aria-labelledby="search-pane-title">
@@ -151,7 +172,7 @@
         <h3 class="pane-section">Route caution</h3>
         <p>Every sea, land, and Nile corridor on this map is a conventional reconstruction—not a route attested for any single ingredient.</p>
         <h3 class="pane-section">One ingredient at a time</h3>
-        <p>This map answers where the three recipes' materials came from, all claims at once. To walk the places attested for a single ingredient, in the order its source names them, open the <a href="../journey/?v=20260814-7">ingredient journeys</a>.</p>
+        <p>This map answers where the three recipes' materials came from, all claims at once. To walk the places attested for a single ingredient, in the order its source names them, open the <a href="../journey/?v=20260814-8">ingredient journeys</a>.</p>
         <h3 class="pane-section">Full research sections</h3>
         <div class="mobile-reference-links" aria-label="Full research sections">
           <button type="button" data-mobile-jump="index-title">Ingredient and claim index</button>
