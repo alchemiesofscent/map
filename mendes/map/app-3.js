@@ -641,34 +641,47 @@
       return d.evidence === "theology" || d.subtype === "correction" ? 1.8 : 2.8;
     }
 
+    // ————— Where a selection is allowed to land —————
+    // Focus must aim at the part of the map the reader can actually see, which
+    // is whatever the furniture is not covering. Both panels are measured
+    // rather than assumed: this function used to compute from #detail and from
+    // the sheet's height, and when the dossier replaced them it kept returning
+    // the full extent — #detail no longer exists and the sheet stand-in is
+    // zero-height — so every selection was centred in the whole viewport and
+    // the point it centred on landed behind the glass.
     function focusViewportExtent() {
       const full = visibleViewportExtent();
       const svgRect = svg.node().getBoundingClientRect();
+      if (!svgRect.width || !svgRect.height) return full;
       const screenScale = Math.max(svgRect.width/width,svgRect.height/height);
-      const detailPanel = document.getElementById("detail");
-      if (!isPhoneViewport()) {
-        // The detail panel floats over the map's right edge: focus targets the
-        // clear area to its left so the selection is never covered.
-        if (!detailPanel) return full;
-        const panelRect = detailPanel.getBoundingClientRect();
-        if (!panelRect.width || panelRect.left <= svgRect.left + 120) return full;
-        const usablePixels = Math.max(200,panelRect.left-svgRect.left-24);
-        const logicalRight = full[0][0] + usablePixels/screenScale;
-        return [
-          full[0],
-          [Math.min(full[1][0],logicalRight),full[1][1]]
-        ];
+      const min = [full[0][0],full[0][1]];
+      const max = [full[1][0],full[1][1]];
+
+      // The dossier is bottom-anchored at every width, so it always eats the
+      // foot of the map.
+      const dossier = document.querySelector(".dossier");
+      if (dossier) {
+        const rect = dossier.getBoundingClientRect();
+        if (rect.height) {
+          const usablePixels = Math.max(150,rect.top - svgRect.top - 18);
+          max[1] = Math.min(max[1],min[1] + usablePixels/screenScale);
+        }
       }
-      // The sheet will sit at half after a selection: keep the point in the
-      // map still visible above it.
-      const offsets = snapOffsets();
-      const sheetTop = svgRect.top + Math.max(0,viewportHeight() - (sheet.offsetHeight - offsets.half));
-      const usablePixels = Math.max(150,sheetTop-svgRect.top-18);
-      const logicalBottom = full[0][1] + usablePixels/screenScale;
-      return [
-        full[0],
-        [full[1][0],Math.min(full[1][1],logicalBottom)]
-      ];
+
+      // The rail only takes the right edge while it is a rail; on a phone it is
+      // a drawer sitting off-screen and should not shrink the target at all.
+      if (!isPhoneViewport()) {
+        const rail = document.querySelector(".view-control");
+        if (rail) {
+          const rect = rail.getBoundingClientRect();
+          if (rect.width && rect.left > svgRect.left + 120) {
+            const usablePixels = Math.max(200,rect.left - svgRect.left - 24);
+            max[0] = Math.min(max[0],min[0] + usablePixels/screenScale);
+          }
+        }
+      }
+
+      return [min,max];
     }
 
     function focusClaim(d, forceFocus) {
