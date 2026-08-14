@@ -59,7 +59,11 @@
     // peek: the selection line stays legible over the map
     // half: the detail panel is readable with the map still visible above
     // full: reading depth, with a strip of map always showing
+    // Measure the band the sheet actually lives in rather than the visual
+    // viewport: the band is sized in svh, so it already excludes the browser's
+    // own chrome and does not shift as that chrome expands and collapses.
     function viewportHeight() {
+      if (mapExperience && mapExperience.clientHeight) return mapExperience.clientHeight;
       return window.visualViewport ? window.visualViewport.height : window.innerHeight;
     }
 
@@ -72,7 +76,7 @@
     function snapOffsets() {
       const height = viewportHeight();
       const sheetHeight = sheet.offsetHeight || height;
-      const peekVisible = 88 + safeAreaBottom();
+      const peekVisible = 104 + safeAreaBottom();
       return {
         peek: Math.max(0,sheetHeight - peekVisible),
         half: Math.max(0,Math.min(sheetHeight - peekVisible,sheetHeight - height * 0.48)),
@@ -132,14 +136,24 @@
       mapWrap.classList.toggle("sheet-owns-drag",!mapOwnsDrag);
     }
 
+    const peekGlyphIds = { ancient:"glyph-ancient", modern:"glyph-inference", theology:"glyph-theology" };
+
     function updatePeekLabel() {
       const visible = document.getElementById("visible-count");
       const count = visible ? visible.textContent : "0";
       peekLabels.forEach(function (node) {
         if (selectedClaim) {
-          node.innerHTML = '<span lang="grc">' + escapeHTML(selectedClaim.greek) + "</span> · " + escapeHTML(selectedClaim.place);
+          node.innerHTML =
+            '<span class="peek-title" lang="grc">' + escapeHTML(selectedClaim.greek) + '</span>' +
+            '<span class="peek-sub">' +
+              '<svg class="peek-glyph ' + selectedClaim.evidence + '" aria-hidden="true"><use href="#' + peekGlyphIds[selectedClaim.evidence] + '"></use></svg>' +
+              '<span class="peek-place">' + escapeHTML(selectedClaim.place) + '</span>' +
+              '<span class="peek-class">' + escapeHTML(evidenceText(selectedClaim)) + '</span>' +
+            '</span>';
         } else {
-          node.textContent = count + " claims visible";
+          node.innerHTML =
+            '<span class="peek-title">' + escapeHTML(count) + ' claims visible</span>' +
+            '<span class="peek-sub"><span class="peek-place">Tap a point on the map</span></span>';
         }
       });
     }
