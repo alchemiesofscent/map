@@ -8,20 +8,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Gentium+Plus:wght@400&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap">
-  <!-- Bump JOURNEY_VERSION and both stylesheet queries below together on every
-       asset change — including changes to ../map/site.css, which this page
-       shares. If they drift, the guard after the links repairs the stale
-       stylesheet rather than rendering new markup against old rules. -->
-  <script>window.JOURNEY_VERSION = "20260814-1";</script>
-  <link rel="stylesheet" href="../map/site.css?v=20260814-1">
-  <link rel="stylesheet" href="journey.css?v=20260814-1">
+  <!-- Bump JOURNEY_VERSION and all three stylesheet queries below together on
+       every asset change — including changes to ../map/site.css and
+       ../shell.css, which this page shares. If they drift, the guard after the
+       links repairs the stale stylesheet rather than rendering new markup
+       against old rules. -->
+  <script>window.JOURNEY_VERSION = "20260814-2";</script>
+  <link rel="stylesheet" href="../map/site.css?v=20260814-2">
+  <link rel="stylesheet" href="../shell.css?v=20260814-2">
+  <link rel="stylesheet" href="journey.css?v=20260814-2">
   <script>
   (function () {
     var stamped = getComputedStyle(document.documentElement)
       .getPropertyValue("--journey-version").trim().replace(/^["']|["']$/g, "");
     if (stamped === window.JOURNEY_VERSION) return;
     var bust = "&r=" + Date.now();
-    document.querySelectorAll('link[rel="stylesheet"][href*="site.css"], link[rel="stylesheet"][href*="journey.css"]')
+    document.querySelectorAll('link[rel="stylesheet"][href*="site.css"], link[rel="stylesheet"][href*="shell.css"], link[rel="stylesheet"][href*="journey.css"]')
       .forEach(function (link) {
         var base = link.getAttribute("href").split("?")[0];
         link.href = base + "?v=" + encodeURIComponent(window.JOURNEY_VERSION) + bust;
@@ -31,7 +33,7 @@
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 </head>
-<body class="journey" data-explore="false">
+<body class="chart journey" data-explore="false">
   <div id="site-root" role="status" aria-live="polite">
     <span class="visually-hidden">Loading the ingredient journeys…</span>
     <div class="journey-skeleton" aria-hidden="true">

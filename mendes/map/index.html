@@ -8,18 +8,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Gentium+Plus:wght@400&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap">
-  <!-- Bump ASSET_VERSION and the site.css query below together on every asset
-       change. If they ever drift, the guard after the link repairs a stale
-       stylesheet rather than rendering new markup against old rules. -->
-  <script>window.ASSET_VERSION = "20260814-7";</script>
-  <link rel="stylesheet" href="site.css?v=20260814-7">
+  <!-- Bump ASSET_VERSION and both stylesheet queries below together on every
+       asset change — including changes to ../shell.css, which the journeys
+       viewer shares. If they ever drift, the guard after the links repairs a
+       stale stylesheet rather than rendering new markup against old rules. -->
+  <script>window.ASSET_VERSION = "20260814-8";</script>
+  <link rel="stylesheet" href="site.css?v=20260814-8">
+  <link rel="stylesheet" href="../shell.css?v=20260814-8">
   <script>
   (function () {
     var stamped = getComputedStyle(document.documentElement)
       .getPropertyValue("--asset-version").trim().replace(/^["']|["']$/g, "");
     if (stamped === window.ASSET_VERSION) return;
-    var link = document.querySelector('link[rel="stylesheet"][href^="site.css"]');
-    if (link) link.href = "site.css?v=" + encodeURIComponent(window.ASSET_VERSION) + "&r=" + Date.now();
+    var bust = "&r=" + Date.now();
+    document.querySelectorAll('link[rel="stylesheet"][href*="site.css"], link[rel="stylesheet"][href*="shell.css"]')
+      .forEach(function (link) {
+        var base = link.getAttribute("href").split("?")[0];
+        link.href = base + "?v=" + encodeURIComponent(window.ASSET_VERSION) + bust;
+      });
   }());
   </script>
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>

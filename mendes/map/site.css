@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-7";
+      --asset-version: "20260814-8";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -482,6 +482,33 @@
       background: var(--sea-deep);
       overflow: hidden;
     }
+
+    /* ————— The shell, anchored to the band —————
+       ../shell.css positions its furniture with --chart-anchor. The journeys
+       viewer is full-bleed and leaves it `fixed`; here the band is one stop on a
+       page that keeps scrolling into the claim index and the sources, so the
+       chrome anchors to the band instead and scrolls away with it. The band is
+       already the containing block: it is position:relative above. */
+    .map-experience.chart { --chart-anchor: absolute; }
+
+    /* The rail and the dossier are sized off the viewport in shell.css because
+       the journeys viewer fills it. Here they measure the band, which is roughly
+       three quarters as tall — so the dossier has to stop well short of the
+       masthead it would otherwise climb into. */
+    .map-experience.chart .view-control { max-height: calc(100% - 48px); overflow: auto; }
+    .map-experience.chart .dossier {
+      max-height: calc(100% - 250px);
+      width: min(560px, calc(100% - 56px - var(--rail-w) - var(--rail-gap) * 2));
+    }
+    .map-experience.chart .dossier__inner { overflow: auto; }
+
+    /* The strip took the foot of the band, so the zoom cluster rides above it
+       rather than underneath. */
+    .map-experience.chart .map-tools { bottom: 68px; }
+
+    /* app-2.js still writes the selected claim into #detail-content; the shell
+       only changes where it sits, so its own padding gives way to the dossier's. */
+    .dossier .detail-content { padding: 0; }
     .map-shell {
       position: absolute;
       inset: 0;

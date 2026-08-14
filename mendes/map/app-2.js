@@ -171,14 +171,66 @@
       });
     }
 
+    // ————— Perfume layers —————
+    // Three loose checkboxes in a toolbar strip became the control rail the
+    // journeys viewer already uses: one pressable row per recipe, carrying the
+    // number of claims it accounts for. The rail is built from `recipes` rather
+    // than written out in the markup, so a fourth recipe would arrive with its
+    // own row and count and nothing else to edit.
+    //
+    // Each row keeps `value` and `checked` and emits `change` on toggle, so the
+    // two places that listen for a layer change — the map's visibility pass and
+    // the search results — bind to it exactly as they bound to the checkboxes.
+    function renderPerfumeLayers() {
+      const host = document.getElementById("view-control-routes");
+      if (!host || host.childElementCount) return;
+      const counts = {};
+      ingredients.forEach(function (ingredient) {
+        ingredient.claims.forEach(function (claim) {
+          claim.recipes.forEach(function (key) { counts[key] = (counts[key] || 0) + 1; });
+        });
+      });
+      Object.keys(recipes).forEach(function (key) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.dataset.recipe = key;
+        button.setAttribute("aria-pressed","true");
+        button.style.setProperty("--route-color","var(--" + ({ m:"mendesian", t:"metopion", s:"susinum" })[key] + ")");
+        button.innerHTML =
+          '<span class="view-control__dot" aria-hidden="true"></span>' +
+          '<span class="view-control__name">' + escapeHTML(recipes[key].name) + "</span>" +
+          '<span class="view-control__count">' + (counts[key] || 0) + "</span>";
+        button.addEventListener("click",function () {
+          const next = button.getAttribute("aria-pressed") !== "true";
+          // One layer always stays lit: an empty map reads as a loading failure
+          // rather than as a choice the reader made.
+          if (!next && activeRecipeKeys().size < 2) return;
+          button.setAttribute("aria-pressed",next ? "true" : "false");
+          button.dispatchEvent(new Event("change",{ bubbles:false }));
+        });
+        host.appendChild(button);
+      });
+    }
+
     function layerInputs() {
-      return Array.from(document.querySelectorAll(".toolbar .toggle input"));
+      return Array.from(document.querySelectorAll("#view-control-routes button[data-recipe]"))
+        .map(function (button) {
+          // The call sites read .checked and .value; keep that shape so they do
+          // not have to know the control changed.
+          Object.defineProperty(button,"checked",{
+            configurable: true,
+            get: function () { return button.getAttribute("aria-pressed") === "true"; }
+          });
+          button.value = button.dataset.recipe;
+          return button;
+        });
     }
 
     function activeRecipeKeys() {
-      return new Set(layerInputs().filter(function (input) { return input.checked; }).map(function (input) {
-        return input.value;
-      }));
+      return new Set(
+        Array.from(document.querySelectorAll('#view-control-routes button[data-recipe][aria-pressed="true"]'))
+          .map(function (button) { return button.dataset.recipe; })
+      );
     }
 
     function visibleClaimsForIngredient(ingredient) {
@@ -581,6 +633,15 @@
       }
       updatePeekLabel();
     }
+    renderPerfumeLayers();
+    const claimTotal = document.getElementById("claim-total");
+    if (claimTotal) {
+      // Count the same array the visible tally counts, or the denominator ends
+      // up smaller than the numerator: `claims` is the flattened plot list and
+      // carries the context marks that no ingredient's own list holds.
+      claimTotal.textContent = claims.length;
+    }
+
     layerInputs().forEach(function (input) {
       input.addEventListener("change",updateVisibility);
     });
