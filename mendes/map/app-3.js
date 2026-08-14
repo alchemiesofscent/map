@@ -159,7 +159,7 @@
     }
 
     function claimMatchesActiveRecipes(claim) {
-      const active = new Set(Array.from(document.querySelectorAll(".toolbar .toggle input:checked")).map(function (input) { return input.value; }));
+      const active = activeRecipeKeys();
       return claim.recipes.some(function (recipe) { return active.has(recipe); });
     }
 
@@ -203,7 +203,7 @@
       const claim = claims.find(function (item) { return item.id === button.dataset.claimId; });
       if (claim) selectClaim(claim,false,true,true);
     });
-    document.querySelectorAll(".toolbar .toggle input").forEach(function (input) {
+    layerInputs().forEach(function (input) {
       input.addEventListener("change",renderMobileSearch);
     });
 
@@ -297,7 +297,7 @@
         const p = transformedPoint(d.coord);
         return "translate(" + p[0] + "," + p[1] + ") scale(" + overlayScale + ")";
       });
-      marker.select(".claim-hit").attr("r",18 * fullScreenScale / overlayScale);
+      marker.select(".claim-hit").attr("r",22 * fullScreenScale / overlayScale);
       routeLabels
         .attr("x", function (d) { return transformedPoint(d.labelAt)[0]; })
         .attr("y", function (d) { return transformedPoint(d.labelAt)[1]; });
@@ -315,6 +315,7 @@
         return "translate(" + p[0] + "," + p[1] + ") scale(" + overlayScale + ")";
       });
       positionSelectedLabel();
+      positionTooltip();
       viewAtHome = transformsNear(transform,homeTransform());
       updateZoomControls(transform);
     }
@@ -467,11 +468,13 @@
       zoomTarget().call(zoom.transform,homeTransform());
     });
     document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && activeMobilePanel && isPhoneViewport()) {
+      if (event.key !== "Escape") return;
+      hideTooltip();
+      if (activeMobilePanel && isPhoneViewport()) {
         closeMobilePanel(true);
         return;
       }
-      if (event.key === "Escape" && exploreMode) releaseMap();
+      if (exploreMode) releaseMap();
     });
     if (phoneQuery.addEventListener) {
       phoneQuery.addEventListener("change",function () {

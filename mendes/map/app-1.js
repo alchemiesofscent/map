@@ -2,10 +2,12 @@
   (async function () {
     "use strict";
 
+    // Recipe colors live in site.css (--mendesian / --metopion / --susinum);
+    // everything here paints through CSS classes keyed by these ids.
     const recipes = {
-      m: { name: "Dark Mendesian", color: "#B65E9A" },
-      t: { name: "Metopion", color: "#1F8A7F" },
-      s: { name: "Susinum", color: "#C05E31" }
+      m: { name: "Dark Mendesian" },
+      t: { name: "Metopion" },
+      s: { name: "Susinum" }
     };
 
     const ingredients = [
