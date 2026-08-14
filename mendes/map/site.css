@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-8";
+      --asset-version: "20260814-12";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -520,6 +520,35 @@
     /* app-2.js still writes the selected claim into #detail-content; the shell
        only changes where it sits, so its own padding gives way to the dossier's. */
     .dossier .detail-content { padding: 0; }
+
+    /* ————— The dark register, keyed to the panel —————
+       These colours used to sit inside the desktop @media block, because the
+       only dark home for this content was the sheet, and the sheet was a
+       desktop-width thing. The dossier is dark at every width, so a viewport
+       query is the wrong question: below 721px the overrides vanished and the
+       light-study greys underneath (#65706d, #7b7568) painted themselves onto
+       dark glass at roughly 1.3:1. Legible on a desk, unreadable on a phone.
+
+       Scoped to .dossier so they follow the panel rather than the viewport.
+       Keyed off .detail-content rather than #detail, which no element has
+       carried since the sheet was removed — the heading had been reading
+       correctly only by inheriting the panel's own colour. */
+    .dossier .detail-content a { color: #9CC4DA; }
+    .dossier .detail-content h2 { color: #F5EFDF; }
+    .dossier .detail-kicker { color: rgba(231,220,195,.62); }
+    .dossier .detail-gloss { color: rgba(217,222,211,.85); }
+    .dossier .detail-hint { color: rgba(217,222,211,.6); }
+    .dossier .detail-place { color: #F5EFDF; border-color: rgba(231,220,195,.18); }
+    .dossier .detail-citation {
+      border-left: 3px solid var(--gold);
+      background: rgba(0,0,0,.24);
+      color: #D9DED3;
+    }
+    .dossier .detail-citation strong { color: rgba(231,220,195,.8); }
+    .dossier .unlocated { border-left-color: #9FB0C5; background: rgba(0,0,0,.2); color: rgba(217,222,211,.85); }
+    .dossier .evidence-pill.ancient { color: var(--glyph-ancient-dark); }
+    .dossier .evidence-pill.modern { color: #9FB0C5; }
+    .dossier .evidence-pill.theology { color: var(--gold); }
     .map-shell {
       position: absolute;
       inset: 0;
@@ -1563,4 +1592,54 @@
     @media (pointer: coarse) {
       .map-site-nav a { min-height: 44px; }
       .zoom-controls button { min-height: 44px; }
+    }
+
+    /* ————— The phone's ingredient control —————
+       Desktop chooses ingredients from the rail, which is always on screen and
+       needs no help. At phone width the rail is behind the drawer toggle, so
+       choosing an ingredient began with opening a menu — two taps and a scroll
+       before the reader could even see the list. This puts one control on the
+       most reachable edge of the screen, carrying the current choice, and hands
+       the search pane the job of browsing.
+
+       Width, not pointer: this exists because the rail became a drawer, which
+       is a question about how much room there is. A tablet keeps its rail. */
+    .ingredient-pill { display: none; }
+
+    @media (max-width: 720px) {
+      .strip { justify-content: center; }
+      .ingredient-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        min-height: 44px;
+        max-width: 100%;
+        padding: 8px 16px;
+        border: 1px solid var(--rule);
+        border-radius: var(--r-chip);
+        background: rgba(14,34,41,.92);
+        -webkit-backdrop-filter: blur(14px);
+        backdrop-filter: blur(14px);
+        color: var(--land);
+        font-family: var(--font-body);
+        font-size: .84rem;
+        font-weight: 600;
+        box-shadow: 0 8px 24px rgba(0,0,0,.34);
+        cursor: pointer;
+        touch-action: manipulation;
+      }
+      .ingredient-pill__glyph { flex: none; width: 15px; height: 15px; }
+      .ingredient-pill__label {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .ingredient-pill__caret { flex: none; color: rgba(231,220,195,.6); font-size: .72rem; }
+      .ingredient-pill:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+      /* The pane is the picker at this width, so its rows are the touch
+         targets: the browse list already sits at 48px, and the Greek stays the
+         primary label with the gloss beneath it. */
+      .browse-item { min-height: 48px; }
     }

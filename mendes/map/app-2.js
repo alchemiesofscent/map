@@ -277,6 +277,7 @@
 
     function selectIngredient(ingredient, focusAllLocations) {
       selectedIngredientId = ingredient.id;
+      if (typeof updateIngredientPill === "function") updateIngredientPill();
       const locations = visibleClaimsForIngredient(ingredient);
       if (!locations.length) {
         selectedClaim = null;
