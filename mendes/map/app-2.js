@@ -628,7 +628,6 @@
         heading.hidden = !visibleGroups.has(heading.dataset.group);
       });
       document.querySelectorAll("[data-visible-count]").forEach(function (node) { node.textContent = visible; });
-      syncLayerProxies();
       if (selectedClaim) {
         const selectedIngredient = ingredientById.get(selectedClaim.ingredient);
         const selectedLocations = selectedIngredient ? visibleClaimsForIngredient(selectedIngredient) : [];
