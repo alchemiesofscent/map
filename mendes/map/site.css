@@ -132,6 +132,8 @@
       background: rgba(255,255,255,.58);
     }
     .map-site-nav a:hover { background: white; color: var(--ink); }
+    /* The wordmark belongs to the compact phone header; the H1 carries it here. */
+    .site-nav-title { display: none; }
     .map-site-nav a:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 3px; }
 
     .masthead {
@@ -1008,6 +1010,7 @@
       }
       .map-site-nav a:hover { background: rgba(231,220,195,.16); color: var(--land); }
       .site-nav-title {
+        display: block;
         color: rgba(231,220,195,.9);
         font-family: var(--font-display);
         font-size: 1.1rem;
@@ -1270,6 +1273,8 @@
         -webkit-backdrop-filter: none;
         backdrop-filter: none;
       }
+      /* The key prints at any paper width, unlike the narrow-screen rule. */
+      .method-key { display: flex; width: 100%; margin: 6px 0 0; }
       .toolbar-label, .method-key { color: #1B2422; }
       .key-shape.ancient { background: #1B2422; box-shadow: none; }
       .key-shape.modern { border-color: #3E4A5C; }
