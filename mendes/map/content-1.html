@@ -74,12 +74,9 @@
             <button type="button" id="zoom-reset" class="zoom-reset" aria-label="Reset map view">Reset</button>
             <output id="zoom-level" class="zoom-level" aria-label="Current zoom level">100%</output>
           </div>
-          <label class="explore-control">
-            <input type="checkbox" id="explore-map">
-            <span>Explore map</span>
-          </label>
-          <p class="map-gesture-hint" id="map-gesture-hint">Use +/−, or enable Explore map to drag and wheel-zoom.</p>
+          <p class="map-gesture-hint" id="map-gesture-hint">Click the map to activate scroll-zoom and drag; press Escape to release. The +/− controls always work.</p>
         </div>
+        <p class="map-toast" id="map-toast" role="status" aria-live="polite"></p>
         <p class="map-caution-chip" aria-hidden="true">All routes are conventional corridors — not attested per ingredient</p>
         <svg id="map" viewBox="0 0 900 710" preserveAspectRatio="xMidYMid slice" role="group" aria-roledescription="interactive provenance map" aria-labelledby="map-title map-desc" aria-describedby="map-gesture-hint">
           <title id="map-title">Ancient ingredient provenance claims and conventional routes to Mendes</title>

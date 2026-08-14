@@ -237,9 +237,7 @@
       gap: 8px;
       pointer-events: none;
     }
-    .zoom-controls,
-    .explore-control,
-    .map-gesture-hint {
+    .zoom-controls {
       pointer-events: auto;
       border: 1px solid rgba(231,220,195,.22);
       background: rgba(14,34,41,.72);
@@ -248,7 +246,7 @@
       box-shadow: 0 4px 16px rgba(0,0,0,.3);
     }
     @supports not (backdrop-filter: blur(8px)) {
-      .zoom-controls, .explore-control, .map-gesture-hint { background: rgba(14,34,41,.94); }
+      .zoom-controls { background: rgba(14,34,41,.94); }
     }
     .zoom-controls {
       display: flex;
@@ -270,8 +268,7 @@
       cursor: pointer;
     }
     .zoom-controls button:hover:not(:disabled) { background: rgba(231,220,195,.14); }
-    .zoom-controls button:focus-visible,
-    .explore-control:has(input:focus-visible) {
+    .zoom-controls button:focus-visible {
       outline: 3px solid var(--focus);
       outline-offset: 2px;
     }
@@ -285,29 +282,43 @@
       text-align: center;
       font-variant-numeric: tabular-nums;
     }
-    .explore-control {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      min-height: 34px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      color: var(--land);
-      font: 600 .72rem/1 var(--font-body);
-      cursor: pointer;
-      user-select: none;
-    }
-    .explore-control input { width: 15px; height: 15px; margin: 0; accent-color: var(--gold); }
+    /* Assistive-only interaction hint: the toast and cursors carry the visual signal. */
     .map-gesture-hint {
-      max-width: 230px;
+      position: absolute;
+      width: 1px;
+      height: 1px;
       margin: 0;
-      padding: 7px 10px;
-      border-radius: 10px;
-      color: rgba(231,220,195,.8);
-      font: 400 .64rem/1.4 var(--font-mono);
-      text-align: left;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      pointer-events: none;
     }
+    .map-toast {
+      position: absolute;
+      z-index: 6;
+      top: 78px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-4px);
+      margin: 0;
+      padding: 9px 16px;
+      border: 1px solid rgba(231,220,195,.2);
+      border-radius: var(--r-chip);
+      background: rgba(14,34,41,.86);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      color: var(--land);
+      font-family: var(--font-mono);
+      font-size: .68rem;
+      letter-spacing: .05em;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--t-snap) ease, transform var(--t-snap) ease;
+    }
+    .map-toast.is-visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .map-toast:empty { visibility: hidden; }
     #detail {
       border-left: 1px solid #c8c0b0;
       background: #fbf8ef;
@@ -884,7 +895,6 @@
       .mobile-map-count { color: #596562; font: 750 .7rem/1 system-ui, sans-serif; white-space: nowrap; }
       .mobile-map-count span { display: inline; font: inherit; letter-spacing: 0; }
 
-      .explore-control { display: none; }
       .map-tools {
         position: absolute;
         z-index: 5;

@@ -394,7 +394,7 @@
         '<div class="recipe-badges">' + affiliationBadges(d) + '</div>' +
         '<p class="detail-hint">' +
           (d.route ? 'The gold convergence highlight follows a conventional corridor. ' : 'No route is drawn for this point. ') +
-          (exploreMode ? 'Explore mode preserves your manual view.' : 'Guided mode refocuses the map on each selection.') +
+          (exploreMode ? 'Map active — your manual view is preserved.' : 'Guided mode refocuses the map on each selection.') +
         '</p>';
 
       bindIngredientBrowser();

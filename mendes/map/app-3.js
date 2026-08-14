@@ -33,11 +33,13 @@
     const zoomOut = document.getElementById("zoom-out");
     const zoomReset = document.getElementById("zoom-reset");
     const zoomLevel = document.getElementById("zoom-level");
-    const exploreToggle = document.getElementById("explore-map");
     const gestureHint = document.getElementById("map-gesture-hint");
+    const mapToast = document.getElementById("map-toast");
+    const mapExperience = document.querySelector(".map-experience");
     const phoneQuery = window.matchMedia("(max-width: 720px)");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let exploreMode = exploreToggle.checked;
+    let exploreMode = false;
+    let mapToastTimer = null;
     let activeMobilePanel = null;
     let lastMobilePanelTrigger = null;
     let mobilePanelScrollY = 0;
@@ -219,10 +221,60 @@
       if (isPhoneViewport()) {
         gestureHint.textContent = "Tap a point for guided focus; drag, pinch, double-tap, or use +/− to explore.";
       } else if (exploreMode) {
-        gestureHint.textContent = "Drag the map; use the wheel, double-click, or +/− to zoom. Press Escape for guided mode.";
+        gestureHint.textContent = "Map active — scroll to zoom, drag to pan, Escape to release.";
       } else {
-        gestureHint.textContent = "Select a point for guided focus. Use +/−, or enable Explore map to drag and wheel-zoom.";
+        gestureHint.textContent = "Click the map to activate scroll-zoom and drag; press Escape to release. The +/− controls always work.";
       }
+    }
+
+    function showMapToast() {
+      if (!mapToast) return;
+      mapToast.textContent = "Map active — scroll to zoom, drag to pan, Esc to release";
+      mapToast.classList.add("is-visible");
+      if (mapToastTimer !== null) window.clearTimeout(mapToastTimer);
+      mapToastTimer = window.setTimeout(hideMapToast,2600);
+    }
+
+    function hideMapToast() {
+      if (!mapToast) return;
+      if (mapToastTimer !== null) { window.clearTimeout(mapToastTimer); mapToastTimer = null; }
+      mapToast.classList.remove("is-visible");
+      window.setTimeout(function () {
+        if (!mapToast.classList.contains("is-visible")) mapToast.textContent = "";
+      },300);
+    }
+
+    function activateMap() {
+      if (exploreMode) return;
+      exploreMode = true;
+      updateExploreMode();
+      showMapToast();
+    }
+
+    function releaseMap() {
+      if (!exploreMode) return;
+      exploreMode = false;
+      updateExploreMode();
+      hideMapToast();
+    }
+
+    // Click once to activate wheel-zoom and drag (desktop only). Marker taps
+    // keep guided focus, so they do not activate the map by themselves.
+    svg.node().addEventListener("pointerdown", function (event) {
+      if (isPhoneViewport() || exploreMode) return;
+      if (event.button) return;
+      if (event.target && event.target.closest && event.target.closest(".claim")) return;
+      activateMap();
+    }, true);
+    document.addEventListener("pointerdown", function (event) {
+      if (isPhoneViewport() || !exploreMode) return;
+      if (mapExperience && event.target instanceof Node && !mapExperience.contains(event.target)) releaseMap();
+    });
+    if (mapExperience) {
+      mapExperience.addEventListener("focusout", function (event) {
+        if (isPhoneViewport() || !exploreMode) return;
+        if (!event.relatedTarget || !mapExperience.contains(event.relatedTarget)) releaseMap();
+      });
     }
 
     function updateZoomControls(transform) {
@@ -322,12 +374,25 @@
 
     function focusViewportExtent() {
       const full = visibleViewportExtent();
-      if (!isPhoneViewport() || activeMobilePanel !== "details") return full;
       const svgRect = svg.node().getBoundingClientRect();
+      const screenScale = Math.max(svgRect.width/width,svgRect.height/height);
       const detailPanel = document.getElementById("detail");
+      if (!isPhoneViewport()) {
+        // The detail panel floats over the map's right edge: focus targets the
+        // clear area to its left so the selection is never covered.
+        if (!detailPanel) return full;
+        const panelRect = detailPanel.getBoundingClientRect();
+        if (!panelRect.width || panelRect.left <= svgRect.left + 120) return full;
+        const usablePixels = Math.max(200,panelRect.left-svgRect.left-24);
+        const logicalRight = full[0][0] + usablePixels/screenScale;
+        return [
+          full[0],
+          [Math.min(full[1][0],logicalRight),full[1][1]]
+        ];
+      }
+      if (activeMobilePanel !== "details") return full;
       const navTop = mobilePanelNav.getBoundingClientRect().top;
       const finalPanelTop = navTop - detailPanel.offsetHeight;
-      const screenScale = Math.max(svgRect.width/width,svgRect.height/height);
       const usablePixels = Math.max(150,finalPanelTop-svgRect.top-18);
       const logicalBottom = full[0][1] + usablePixels/screenScale;
       return [
@@ -401,20 +466,12 @@
     zoomReset.addEventListener("click", function () {
       zoomTarget().call(zoom.transform,homeTransform());
     });
-    exploreToggle.addEventListener("change", function () {
-      exploreMode = exploreToggle.checked;
-      updateExploreMode();
-    });
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape" && activeMobilePanel && isPhoneViewport()) {
         closeMobilePanel(true);
         return;
       }
-      if (event.key === "Escape" && exploreMode) {
-        exploreToggle.checked = false;
-        exploreMode = false;
-        updateExploreMode();
-      }
+      if (event.key === "Escape" && exploreMode) releaseMap();
     });
     if (phoneQuery.addEventListener) {
       phoneQuery.addEventListener("change",function () {
