@@ -104,8 +104,6 @@
 
     const hubs = labelLayer.selectAll(".hub");
     const claimLayer = viewport.append("g").attr("aria-label","Provenance points");
-    const recipeOffsets = { m:[-8,-8], t:[8,-8], s:[0,10] };
-    const recipeRadius = 3.5;
 
     const marker = claimLayer.selectAll(".claim")
       .data(claims)
@@ -127,13 +125,6 @@
         .attr("href","#" + markerGlyphIds[d.evidence])
         .attr("class","claim-glyph " + markerShapeClasses[d.evidence])
         .attr("x",-12).attr("y",-12).attr("width",24).attr("height",24);
-      d.recipes.forEach(function (key) {
-        g.append("circle")
-          .attr("class","recipe-satellite recipe-" + key)
-          .attr("cx",recipeOffsets[key][0])
-          .attr("cy",recipeOffsets[key][1])
-          .attr("r",recipeRadius);
-      });
     });
 
     const selectedLabel = viewport.append("text").attr("class","selected-label").style("display","none");
@@ -462,12 +453,18 @@
     const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
     let tooltipClaim = null;
 
+    function tooltipRecipes(d) {
+      if (d.context) return "Metopion name-history";
+      return d.recipes.map(function (key) { return recipes[key].name; }).join(" · ");
+    }
+
     function tooltipMarkup(d) {
       return '<span class="tooltip-greek" lang="grc">' + escapeHTML(d.greek) + '</span>' +
         '<span class="tooltip-place">' +
           '<svg class="tooltip-glyph ' + d.evidence + '" aria-hidden="true"><use href="#' + markerGlyphIds[d.evidence] + '"></use></svg>' +
           escapeHTML(d.place) +
         '</span>' +
+        '<span class="tooltip-recipes">' + escapeHTML(tooltipRecipes(d)) + '</span>' +
         '<span class="tooltip-cite">' + escapeHTML(d.cite) + '</span>';
     }
 

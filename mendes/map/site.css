@@ -1017,10 +1017,6 @@
     .claim .ancient-shape { color: var(--glyph-ancient-dark); --glyph-stroke: var(--sea-deep); }
     .claim .modern-shape { color: var(--inference); --glyph-fill: rgba(245,239,223,.82); }
     .claim .theology-shape { color: var(--gold); --glyph-fill: rgba(201,162,39,.14); }
-    .recipe-satellite { stroke: var(--sea-deep); stroke-width: 1; }
-    .recipe-satellite.recipe-m { fill: var(--mendesian); }
-    .recipe-satellite.recipe-t { fill: var(--metopion); }
-    .recipe-satellite.recipe-s { fill: var(--susinum); }
     .selected-label {
       fill: #F5EFDF;
       font-size: 11px;
@@ -1059,6 +1055,7 @@
     .tooltip-glyph.ancient { color: var(--glyph-ancient-dark); --glyph-stroke: var(--sea-deep); }
     .tooltip-glyph.modern { color: #9FB0C5; }
     .tooltip-glyph.theology { color: var(--gold); }
+    .tooltip-recipes { display: block; margin-bottom: 5px; color: rgba(231,220,195,.7); font-size: .72rem; }
     .tooltip-cite { display: block; color: rgba(231,220,195,.72); font-family: var(--font-mono); font-size: .66rem; letter-spacing: .01em; line-height: 1.5; }
 
     @keyframes card-stamp {
