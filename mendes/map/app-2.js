@@ -5,7 +5,6 @@
     let selectedClaim = null;
     let selectedIngredientId = null;
     let navigationReady = false;
-    let ingredientPickerOpen = false;
     let overlayScale = 1;
     let viewAtHome = true;
     const frameGeo = { type:"Polygon", coordinates:[[[7,3],[7,48],[83,48],[83,3],[7,3]]] };
@@ -199,63 +198,28 @@
       return ingredientGroups.filter(function (group) { return visibleIngredientsForGroup(group).length; });
     }
 
-    function optionMarkup(value, label, selected) {
-      return '<option value="' + escapeHTML(value) + '"' + (selected ? ' selected' : '') + '>' + escapeHTML(label) + '</option>';
-    }
-
     function ingredientBrowserMarkup(d) {
       const ingredientId = d ? d.ingredient : selectedIngredientId;
       const ingredient = ingredientById.get(ingredientId);
       if (!ingredient) return "";
-      const group = ingredientGroupById.get(ingredient.id);
-      const groups = visibleIngredientGroups();
-      const selectedGroup = group && groups.some(function (item) { return item.id === group.id; }) ? group : groups[0];
-      if (!selectedGroup) return "";
-      const groupIngredients = visibleIngredientsForGroup(selectedGroup);
-      const selectedIngredient = groupIngredients.find(function (item) { return item.id === ingredient.id; }) || groupIngredients[0];
-      if (!selectedIngredient) return "";
-      const locations = visibleClaimsForIngredient(selectedIngredient);
+      const locations = visibleClaimsForIngredient(ingredient);
       const locationIndex = d ? locations.findIndex(function (claim) { return claim.id === d.id; }) : -1;
       const currentLocationIndex = locationIndex < 0 ? 0 : locationIndex;
       const currentLocation = locations[currentLocationIndex] || null;
       const previous = currentLocationIndex > 0 ? locations[currentLocationIndex - 1] : null;
       const next = currentLocationIndex < locations.length - 1 ? locations[currentLocationIndex + 1] : null;
-      const groupOptions = groups.map(function (item) {
-        return optionMarkup(item.id,item.label,item.id === selectedGroup.id);
-      }).join("");
-      const ingredientOptions = groupIngredients.map(function (item) {
-        return optionMarkup(item.id,item.gloss,item.id === selectedIngredient.id);
-      }).join("");
-      const compactGroupLabel = ingredientGroupShortLabels[selectedGroup.id] || selectedGroup.label;
       const currentPlaceLabel = currentLocation ? currentLocation.place : "No mapped place";
       const locationPosition = locations.length ? (currentLocationIndex + 1) + " of " + locations.length : "No locations";
-      return '<div class="ingredient-browser" aria-label="Browse ingredient kinds, ingredients, and locations">' +
-        '<div class="ingredient-browser-row">' +
-          '<button type="button" class="ingredient-picker-toggle" aria-expanded="' + (ingredientPickerOpen ? 'true' : 'false') + '" aria-controls="ingredient-picker-panel" aria-label="Change ingredient. ' + escapeHTML(selectedGroup.label) + '. ' + escapeHTML(selectedIngredient.gloss) + '" title="Change ingredient: ' + escapeHTML(selectedIngredient.gloss) + '">' +
-            '<span class="ingredient-picker-kind">' + escapeHTML(compactGroupLabel) + '</span>' +
-            '<span class="ingredient-picker-name">' + escapeHTML(selectedIngredient.gloss) + '</span>' +
-            '<span class="ingredient-picker-chevron" aria-hidden="true">⌄</span>' +
-          '</button>' +
-          '<nav class="location-nav" aria-label="Browse mapped locations for ' + escapeHTML(selectedIngredient.gloss) + '" aria-describedby="location-swipe-instructions">' +
-            '<button type="button" data-location-step="-1"' + (previous ? ' aria-label="Previous location: ' + escapeHTML(previous.place) + '"' : ' disabled aria-label="No previous location"') + '><span aria-hidden="true">←</span></button>' +
-            '<div class="location-nav-status" tabindex="-1" aria-live="polite" aria-atomic="true" title="' + escapeHTML(currentPlaceLabel) + '">' +
-              '<strong>' + escapeHTML(currentPlaceLabel) + '</strong>' +
-              '<span class="location-nav-position">' + escapeHTML(locationPosition) + '</span>' +
-            '</div>' +
-            '<button type="button" data-location-step="1"' + (next ? ' aria-label="Next location: ' + escapeHTML(next.place) + '"' : ' disabled aria-label="No next location"') + '><span aria-hidden="true">→</span></button>' +
-          '</nav>' +
-        '</div>' +
-        '<div class="ingredient-picker-panel" id="ingredient-picker-panel"' + (ingredientPickerOpen ? '' : ' hidden') + '>' +
-          '<div class="ingredient-switchers">' +
-            '<label class="ingredient-switcher-label" for="ingredient-kind-select"><span>Ingredient kind</span>' +
-              '<select class="ingredient-switcher" id="ingredient-kind-select">' + groupOptions + '</select>' +
-            '</label>' +
-            '<label class="ingredient-switcher-label" for="ingredient-select"><span>Ingredient</span>' +
-              '<select class="ingredient-switcher" id="ingredient-select">' + ingredientOptions + '</select>' +
-            '</label>' +
+      return '<div class="ingredient-browser">' +
+        '<nav class="location-nav" aria-label="Browse mapped locations for ' + escapeHTML(ingredient.gloss) + '" aria-describedby="location-swipe-instructions">' +
+          '<button type="button" data-location-step="-1"' + (previous ? ' aria-label="Previous location: ' + escapeHTML(previous.place) + '"' : ' disabled aria-label="No previous location"') + '><span aria-hidden="true">←</span></button>' +
+          '<div class="location-nav-status" tabindex="-1" aria-live="polite" aria-atomic="true" title="' + escapeHTML(currentPlaceLabel) + '">' +
+            '<strong>' + escapeHTML(currentPlaceLabel) + '</strong>' +
+            '<span class="location-nav-position">' + escapeHTML(locationPosition) + '</span>' +
           '</div>' +
-        '</div>' +
-        '<p class="visually-hidden" id="location-swipe-instructions">On a phone, swipe right or left in the details to move through this ingredient\'s mapped locations.</p>' +
+          '<button type="button" data-location-step="1"' + (next ? ' aria-label="Next location: ' + escapeHTML(next.place) + '"' : ' disabled aria-label="No next location"') + '><span aria-hidden="true">→</span></button>' +
+        '</nav>' +
+        '<p class="visually-hidden" id="location-swipe-instructions">On a phone, swipe right or left in the details to move through this ingredient\'s mapped locations. Use Search to change ingredient.</p>' +
       '</div>';
     }
 
@@ -281,12 +245,6 @@
       if (focusAllLocations) focusIngredient(ingredient,true);
     }
 
-    function selectIngredientGroup(groupId) {
-      const group = ingredientGroups.find(function (item) { return item.id === groupId; });
-      const ingredient = group ? visibleIngredientsForGroup(group)[0] : null;
-      if (ingredient) selectIngredient(ingredient,true);
-    }
-
     function stepLocation(direction) {
       if (!selectedClaim) return;
       const ingredient = ingredientById.get(selectedClaim.ingredient);
@@ -294,7 +252,6 @@
       const currentIndex = locations.findIndex(function (claim) { return claim.id === selectedClaim.id; });
       const nextIndex = currentIndex + direction;
       if (nextIndex < 0 || nextIndex >= locations.length) return;
-      ingredientPickerOpen = false;
       selectClaim(locations[nextIndex],false,true,false,true);
       window.requestAnimationFrame(function () {
         const preferred = detailContent.querySelector('[data-location-step="' + direction + '"]:not(:disabled)');
@@ -304,48 +261,7 @@
       });
     }
 
-    function setIngredientPickerOpen(open, returnFocus) {
-      ingredientPickerOpen = open;
-      const toggle = detailContent.querySelector(".ingredient-picker-toggle");
-      const panel = document.getElementById("ingredient-picker-panel");
-      if (toggle) toggle.setAttribute("aria-expanded",open ? "true" : "false");
-      if (panel) panel.hidden = !open;
-      if (returnFocus && toggle) toggle.focus();
-    }
-
     function bindIngredientBrowser() {
-      const kindSelect = document.getElementById("ingredient-kind-select");
-      const ingredientSelect = document.getElementById("ingredient-select");
-      const pickerToggle = detailContent.querySelector(".ingredient-picker-toggle");
-      const pickerPanel = document.getElementById("ingredient-picker-panel");
-      if (pickerToggle) pickerToggle.addEventListener("click", function () {
-        setIngredientPickerOpen(!ingredientPickerOpen,false);
-      });
-      if (kindSelect) kindSelect.addEventListener("change", function () {
-        ingredientPickerOpen = true;
-        selectIngredientGroup(kindSelect.value);
-        window.requestAnimationFrame(function () {
-          const refreshedIngredientSelect = document.getElementById("ingredient-select");
-          if (refreshedIngredientSelect) refreshedIngredientSelect.focus();
-        });
-      });
-      if (ingredientSelect) ingredientSelect.addEventListener("change", function () {
-        const ingredient = ingredientById.get(ingredientSelect.value);
-        if (ingredient) {
-          ingredientPickerOpen = false;
-          selectIngredient(ingredient,true);
-          window.requestAnimationFrame(function () {
-            const refreshedPickerToggle = detailContent.querySelector(".ingredient-picker-toggle");
-            if (refreshedPickerToggle) refreshedPickerToggle.focus({ preventScroll:true });
-          });
-        }
-      });
-      if (pickerPanel) pickerPanel.addEventListener("keydown", function (event) {
-        if (event.key !== "Escape") return;
-        event.preventDefault();
-        event.stopPropagation();
-        setIngredientPickerOpen(false,true);
-      });
       detailContent.querySelectorAll("[data-location-step]").forEach(function (button) {
         button.addEventListener("click", function () { stepLocation(Number(button.dataset.locationStep)); });
       });
@@ -397,7 +313,6 @@
     }
 
     function selectClaim(d, shouldScroll, shouldFocus, shouldOpenDetails, shouldForceFocus) {
-      if (shouldOpenDetails) ingredientPickerOpen = false;
       selectedClaim = d;
       selectedIngredientId = d.ingredient;
       marker.classed("is-selected", function (x) { return x.id === d.id; });
@@ -606,7 +521,6 @@
     renderIndex();
 
     function updateVisibility() {
-      ingredientPickerOpen = false;
       const active = activeRecipeKeys();
       let visible = 0;
       marker.classed("is-hidden", function (d) {

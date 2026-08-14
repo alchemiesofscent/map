@@ -54,6 +54,7 @@
     const mobileSearchInput = document.getElementById("mobile-search-input");
     const mobileSearchSummary = document.getElementById("mobile-search-summary");
     const mobileSearchResults = document.getElementById("mobile-search-results");
+    const ingredientBrowse = document.getElementById("ingredient-browse");
 
     // ————— One bottom sheet, three snap points —————
     // peek: the selection line stays legible over the map
@@ -88,6 +89,18 @@
       sheet.style.setProperty("--sheet-y",offset + "px");
     }
 
+    // The zoom cluster rides just above the sheet rather than hiding behind it.
+    function positionMapTools(name) {
+      if (!mapExperience) return;
+      mapExperience.dataset.sheetSnap = name;
+      if (!isPhoneViewport()) {
+        mapExperience.style.removeProperty("--fab-bottom");
+        return;
+      }
+      const visible = Math.max(0,(sheet.offsetHeight || 0) - snapOffsets()[name]);
+      mapExperience.style.setProperty("--fab-bottom",(visible + 14) + "px");
+    }
+
     function setSnap(name, options) {
       const settings = options || {};
       if (!isPhoneViewport()) {
@@ -96,6 +109,7 @@
         sheet.style.removeProperty("--sheet-y");
         if (sheetBackdrop) sheetBackdrop.hidden = true;
         unlockPageScroll();
+        positionMapTools("docked");
         return;
       }
       sheetSnap = name;
@@ -109,6 +123,7 @@
       if (sheetBackdrop) sheetBackdrop.hidden = name !== "full";
       if (name === "full") lockPageScroll();
       else unlockPageScroll();
+      positionMapTools(name);
       syncMapGestures();
     }
 
@@ -353,13 +368,46 @@
       ].join(" "));
     }
 
+    // With no query the pane browses the ingredients by kind — this is what
+    // replaced the cramped dropdowns that used to sit in the sheet. Typing
+    // switches to matching individual claims.
+    function renderIngredientBrowse() {
+      const active = activeRecipeKeys();
+      const markup = ingredientGroups.map(function (group) {
+        const members = group.ids
+          .map(function (id) { return ingredientById.get(id); })
+          .filter(function (item) { return item && item.recipes.some(function (r) { return active.has(r); }); });
+        if (!members.length) return "";
+        return '<h3 class="browse-group">' + escapeHTML(group.label) + '</h3>' +
+          '<ul class="browse-list">' + members.map(function (item) {
+            const count = item.claims.filter(function (claim) {
+              return claim.recipes.some(function (r) { return active.has(r); });
+            }).length;
+            return '<li><button type="button" class="browse-item" data-ingredient-id="' + escapeHTML(item.id) + '">' +
+              '<span class="browse-name" lang="grc">' + escapeHTML(item.greek) + '</span>' +
+              '<span class="browse-gloss">' + escapeHTML(item.gloss) + '</span>' +
+              '<span class="browse-count">' + count + '</span>' +
+            '</button></li>';
+          }).join("") + '</ul>';
+      }).join("");
+      ingredientBrowse.innerHTML = markup;
+    }
+
     function renderMobileSearch() {
       const query = normalizedSearch(mobileSearchInput.value.trim());
-      let matches = claims.filter(claimMatchesActiveRecipes);
-      if (query) matches = matches.filter(function (claim) { return claimSearchText(claim).includes(query); });
-      if (!query && selectedClaim) {
-        matches = [selectedClaim].concat(matches.filter(function (claim) { return claim.id !== selectedClaim.id; }));
+      if (!query) {
+        mobileSearchResults.innerHTML = "";
+        mobileSearchResults.hidden = true;
+        ingredientBrowse.hidden = false;
+        renderIngredientBrowse();
+        mobileSearchSummary.textContent = "Browse every ingredient, or type to search claims.";
+        return;
       }
+      ingredientBrowse.hidden = true;
+      mobileSearchResults.hidden = false;
+      const matches = claims
+        .filter(claimMatchesActiveRecipes)
+        .filter(function (claim) { return claimSearchText(claim).includes(query); });
       const shown = matches.slice(0,30);
       mobileSearchSummary.textContent = matches.length
         ? matches.length + " matching claim" + (matches.length === 1 ? "" : "s") + (matches.length > shown.length ? " · showing first " + shown.length : "")
@@ -384,6 +432,15 @@
         searchPane.close();
       }
       selectClaim(claim,false,true,true);
+      if (isPhoneViewport()) setSnap("half");
+    });
+    ingredientBrowse.addEventListener("click", function (event) {
+      const button = event.target.closest("[data-ingredient-id]");
+      if (!button) return;
+      const ingredient = ingredientById.get(button.dataset.ingredientId);
+      if (!ingredient) return;
+      if (searchPane && searchPane.open) { paneOpener = null; searchPane.close(); }
+      selectIngredient(ingredient,true);
       if (isPhoneViewport()) setSnap("half");
     });
     layerInputs().forEach(function (input) {

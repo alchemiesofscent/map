@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-5";
+      --asset-version: "20260814-6";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -297,6 +297,21 @@
     }
     .map-action:hover { background: rgba(231,220,195,.18); }
     .map-action-glyph { flex: none; width: 16px; height: 16px; }
+    .map-back {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(231,220,195,.3);
+      border-radius: 50%;
+      background: rgba(231,220,195,.08);
+      color: var(--land);
+      text-decoration: none;
+    }
+    .map-back:hover { background: rgba(231,220,195,.18); }
+    .search-pill-hint { display: none; }
 
     /* ————— Search and Guide panes: study surfaces pulled over the map ————— */
     .pane {
@@ -385,7 +400,7 @@
       color: var(--ink);
       font-size: 16px; /* keeps iOS from zooming the page on focus */
     }
-    .mobile-search-summary { min-height: 18px; margin: 12px 0 4px; color: var(--muted); font-family: var(--font-mono); font-size: .72rem; }
+    .mobile-search-summary { min-height: 18px; margin: 12px 0 4px; color: var(--muted); font-size: .8rem; }
     .mobile-search-results { margin: 0; padding: 0; list-style: none; }
     .mobile-search-results li { border-top: 1px solid #e3dac6; }
     .mobile-search-result {
@@ -402,6 +417,45 @@
     .mobile-search-result .result-greek { display: block; font-family: var(--font-greek); font-size: 1rem; line-height: 1.2; }
     .mobile-search-result .result-place { display: block; margin-top: 3px; color: #275f6b; font-size: .78rem; font-weight: 600; }
     .mobile-search-result .result-cite { display: block; margin-top: 3px; color: var(--muted); font-family: var(--font-mono); font-size: .68rem; }
+
+    .ingredient-browse[hidden], .mobile-search-results[hidden] { display: none; }
+    .browse-group {
+      margin: 18px 0 8px;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .browse-group:first-child { margin-top: 4px; }
+    .browse-list { margin: 0; padding: 0; list-style: none; }
+    .browse-list li { border-top: 1px solid #e3dac6; }
+    .browse-item {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) auto;
+      align-items: baseline;
+      column-gap: 12px;
+      width: 100%;
+      min-height: 48px;
+      padding: 10px 4px;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+    .browse-item:hover { background: #f2ebdb; }
+    .browse-name { font-family: var(--font-greek); font-size: 1rem; line-height: 1.25; }
+    .browse-gloss { grid-column: 1; color: var(--muted); font-size: .76rem; }
+    .browse-count {
+      grid-row: 1 / span 2;
+      grid-column: 2;
+      align-self: center;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      font-variant-numeric: tabular-nums;
+    }
 
     .mobile-reference-links { display: grid; gap: 8px; }
     .mobile-reference-links button {
@@ -632,12 +686,6 @@
       margin: 0 0 12px;
       padding: 0 0 10px;
       border-bottom: 1px solid #d5cebf;
-    }
-    .ingredient-browser-row {
-      display: grid;
-      grid-template-columns: minmax(0,1fr) minmax(150px,1.18fr);
-      gap: 6px;
-      align-items: stretch;
     }
     .ingredient-picker-toggle {
       display: grid;
@@ -1077,27 +1125,8 @@
     }
     #detail.is-stamping { animation: card-stamp var(--t-stamp) ease-out; }
 
-    .map-caution-chip {
-      position: absolute;
-      z-index: 4;
-      bottom: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      margin: 0;
-      padding: 6px 12px;
-      border: 1px solid rgba(231,220,195,.18);
-      border-radius: var(--r-chip);
-      background: rgba(14,34,41,.66);
-      color: rgba(231,220,195,.78);
-      font-family: var(--font-mono);
-      font-size: .62rem;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      pointer-events: none;
-    }
     @media (max-width: 720px) {
-      :root { --nav-h: calc(48px + env(safe-area-inset-top)); }
+      :root { --nav-h: 0px; }
       body { overscroll-behavior-y: contain; }
       body.mobile-panel-open { position: fixed; left: 0; right: 0; width: 100%; height: 100%; overflow: hidden; }
       .page { width: 100%; padding: 0; }
@@ -1136,15 +1165,6 @@
       }
       #map.is-zooming { cursor: grabbing; }
 
-      .map-caution-chip {
-        left: 12px;
-        right: 68px;
-        bottom: calc(118px + env(safe-area-inset-bottom));
-        transform: none;
-        max-width: none;
-        white-space: normal;
-        text-align: left;
-      }
 
       /* Compact, safe-area-aware header above the map band. */
       .map-site-nav {
@@ -1189,12 +1209,21 @@
       .pane-head { padding: calc(14px + env(safe-area-inset-top)) 16px 12px; }
       .pane-body { max-height: none; height: calc(100svh - 69px - env(safe-area-inset-top)); padding: 16px; }
 
-      /* Layer chips ride on the map itself, so toggling never needs the sheet;
-         the actions stay pinned beside them and drop to icons for width. */
-      .toolbar { top: 0; gap: 8px; padding: 10px 12px; flex-wrap: nowrap; }
+      /* Two rows over the map: a search bar with back and guide beside it, then
+         the layer chips. The wordmark row is gone — its back-link is the arrow. */
+      .toolbar { top: 0; gap: 8px; padding: 10px 12px; flex-wrap: wrap; }
       .toolbar-label { display: none; }
+      .map-site-nav { display: none; }
+      .map-actions {
+        order: -1;
+        width: 100%;
+        flex: none;
+        margin-left: 0;
+        gap: 8px;
+      }
+      .map-back { display: inline-flex; }
       .chip-scroll {
-        flex: 1;
+        width: 100%;
         min-width: 0;
         overflow-x: auto;
         overscroll-behavior-x: contain;
@@ -1202,9 +1231,31 @@
       }
       .chip-scroll::-webkit-scrollbar { display: none; }
       .toggle { flex: none; min-height: 40px; }
-      .map-actions { flex: none; margin-left: 0; gap: 6px; }
       .map-action { min-width: 44px; min-height: 44px; padding: 8px; justify-content: center; }
-      .map-action-label {
+      /* Search stretches into a bar and shows what it searches. */
+      .search-pill {
+        flex: 1;
+        min-width: 0;
+        justify-content: flex-start;
+        padding: 8px 16px;
+        border-radius: var(--r-chip);
+      }
+      .search-pill .map-action-label {
+        position: static;
+        width: auto;
+        height: auto;
+        clip-path: none;
+      }
+      .search-pill-hint {
+        display: block;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: rgba(231,220,195,.6);
+        font-weight: 400;
+      }
+      #open-guide .map-action-label {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -1217,7 +1268,8 @@
         position: absolute;
         z-index: 5;
         right: 12px;
-        bottom: calc(118px + env(safe-area-inset-bottom));
+        bottom: calc(var(--fab-bottom, 118px) + env(safe-area-inset-bottom));
+        transition: bottom var(--t-snap) ease, opacity var(--t-snap) ease;
         top: auto;
         left: auto;
         display: block;
@@ -1250,6 +1302,8 @@
         box-shadow: 0 4px 14px rgba(0,0,0,.34);
       }
       .zoom-controls button:hover:not(:disabled) { background: rgba(14,34,41,.94); }
+      /* At full the sheet owns the screen; the zoom cluster steps aside. */
+      .map-experience[data-sheet-snap="full"] .map-tools { opacity: 0; pointer-events: none; }
       .zoom-reset { min-width: 40px !important; width: 40px; font-size: 0 !important; }
       .zoom-reset::before { content: "↺"; font: 700 1.05rem/1 var(--font-body); }
       .zoom-level {
@@ -1418,15 +1472,6 @@
       .theology-zone-label { fill: #6B5620; }
       .claim .modern-shape { color: #3E4A5C; --glyph-fill: #ffffff; }
       .claim .ancient-shape { --glyph-stroke: #ffffff; }
-      .map-caution-chip {
-        position: static;
-        transform: none;
-        max-width: none;
-        border-color: #999999;
-        background: white;
-        color: #1B2422;
-        white-space: normal;
-      }
 
       /* The evidence key and the selected claim's citation both print. */
       .toolbar {
