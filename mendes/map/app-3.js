@@ -1,5 +1,3 @@
-    updateVisibility();
-
     const mapExtent = [[18,18],[width-18,height-18]];
 
     function visibleViewportExtent() {
@@ -40,109 +38,288 @@
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let exploreMode = false;
     let mapToastTimer = null;
-    let activeMobilePanel = null;
-    let lastMobilePanelTrigger = null;
-    let mobilePanelScrollY = 0;
+    let sheetSnap = "peek";
+    let activeSheetTab = "details";
+    let sheetScrollY = 0;
 
-    const mobilePanels = Array.from(document.querySelectorAll("[data-mobile-panel]"));
-    const mobilePanelButtons = Array.from(document.querySelectorAll("[data-mobile-panel-target]"));
-    const mobilePanelBackdrop = document.querySelector(".mobile-panel-backdrop");
-    const mobilePanelNav = document.querySelector(".mobile-panel-nav");
-    const mobileMapHeader = document.querySelector(".mobile-map-header");
+    const sheet = document.getElementById("map-sheet");
+    const sheetGrab = sheet.querySelector(".sheet-grab");
+    const sheetTabsRow = sheet.querySelector(".sheet-tabs");
+    const sheetTabs = Array.from(sheet.querySelectorAll("[data-sheet-tab]"));
+    const sheetPanels = Array.from(sheet.querySelectorAll("[data-sheet-panel]"));
+    const sheetBackdrop = document.querySelector(".sheet-backdrop");
+    const safeProbe = sheet.querySelector(".safe-probe");
+    const peekLabels = Array.from(document.querySelectorAll("[data-peek-label]"));
+    const layerProxies = Array.from(document.querySelectorAll("[data-layer-proxy]"));
     const mobileSearchInput = document.getElementById("mobile-search-input");
     const mobileSearchSummary = document.getElementById("mobile-search-summary");
     const mobileSearchResults = document.getElementById("mobile-search-results");
 
-    function syncMobilePanelMode() {
-      const phone = isPhoneViewport();
-      mobileMapHeader.setAttribute("aria-hidden",phone ? "false" : "true");
-      mobilePanelNav.setAttribute("aria-hidden",phone ? "false" : "true");
-      if (!phone) activeMobilePanel = null;
+    // ————— One bottom sheet, three snap points —————
+    // peek: the selection line stays legible over the map
+    // half: the detail panel is readable with the map still visible above
+    // full: reading depth, with a strip of map always showing
+    function viewportHeight() {
+      return window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    }
 
-      mobilePanels.forEach(function (panel) {
-        const mobileOnly = panel.classList.contains("mobile-only-sheet");
-        if (!phone) {
-          if (mobileOnly) {
-            panel.setAttribute("aria-hidden","true");
-            panel.inert = true;
-          } else {
-            panel.removeAttribute("aria-hidden");
-            panel.inert = false;
-          }
-          return;
+    function safeAreaBottom() {
+      if (!safeProbe) return 0;
+      const value = parseFloat(window.getComputedStyle(safeProbe).paddingBottom);
+      return isNaN(value) ? 0 : value;
+    }
+
+    function snapOffsets() {
+      const height = viewportHeight();
+      const sheetHeight = sheet.offsetHeight || height;
+      const peekVisible = 88 + safeAreaBottom();
+      return {
+        peek: Math.max(0,sheetHeight - peekVisible),
+        half: Math.max(0,Math.min(sheetHeight - peekVisible,sheetHeight - height * 0.48)),
+        full: Math.max(0,sheetHeight - (height - 128))
+      };
+    }
+
+    function applySheetOffset(offset) {
+      sheet.style.setProperty("--sheet-y",offset + "px");
+    }
+
+    function setSnap(name, options) {
+      const settings = options || {};
+      if (!isPhoneViewport()) {
+        sheetSnap = name;
+        sheet.dataset.snap = name;
+        sheet.style.removeProperty("--sheet-y");
+        if (sheetBackdrop) sheetBackdrop.hidden = true;
+        unlockPageScroll();
+        return;
+      }
+      sheetSnap = name;
+      sheet.dataset.snap = name;
+      if (settings.animate === false) sheet.classList.add("is-dragging");
+      applySheetOffset(snapOffsets()[name]);
+      if (settings.animate === false) {
+        void sheet.offsetWidth;
+        sheet.classList.remove("is-dragging");
+      }
+      if (sheetBackdrop) sheetBackdrop.hidden = name !== "full";
+      if (name === "full") lockPageScroll();
+      else unlockPageScroll();
+      syncMapGestures();
+    }
+
+    function lockPageScroll() {
+      if (document.body.classList.contains("mobile-panel-open")) return;
+      sheetScrollY = window.scrollY;
+      document.body.style.top = "-" + sheetScrollY + "px";
+      document.body.classList.add("mobile-panel-open");
+    }
+
+    function unlockPageScroll() {
+      if (!document.body.classList.contains("mobile-panel-open")) return;
+      const restore = sheetScrollY;
+      document.body.classList.remove("mobile-panel-open");
+      document.body.style.removeProperty("top");
+      window.requestAnimationFrame(function () {
+        window.scrollTo({ top:restore, left:0, behavior:"auto" });
+      });
+    }
+
+    // At peek the map owns single-finger drags; at half and full the sheet does,
+    // but pinch keeps zooming the map at every snap.
+    function syncMapGestures() {
+      const mapOwnsDrag = !isPhoneViewport() || sheetSnap === "peek";
+      mapWrap.classList.toggle("sheet-owns-drag",!mapOwnsDrag);
+    }
+
+    function setTab(name, options) {
+      const settings = options || {};
+      activeSheetTab = name;
+      sheetTabs.forEach(function (tab) {
+        const selected = tab.dataset.sheetTab === name;
+        tab.setAttribute("aria-selected",selected ? "true" : "false");
+        tab.tabIndex = selected ? 0 : -1;
+        if (selected && settings.focusTab) tab.focus({ preventScroll:true });
+      });
+      sheetPanels.forEach(function (panel) {
+        const selected = panel.dataset.sheetPanel === name;
+        panel.hidden = !selected;
+      });
+      if (name === "search" && settings.focusInput !== false && isPhoneViewport()) {
+        window.setTimeout(function () { mobileSearchInput.focus({ preventScroll:true }); },60);
+      }
+    }
+
+    function updatePeekLabel() {
+      const visible = document.getElementById("visible-count");
+      const count = visible ? visible.textContent : "0";
+      peekLabels.forEach(function (node) {
+        if (selectedClaim) {
+          node.innerHTML = '<span lang="grc">' + escapeHTML(selectedClaim.greek) + "</span> · " + escapeHTML(selectedClaim.place);
+        } else {
+          node.textContent = count + " claims visible";
         }
-        const open = panel.dataset.mobilePanel === activeMobilePanel;
-        panel.setAttribute("aria-hidden",open ? "false" : "true");
-        panel.inert = !open;
       });
-
-      mobilePanelButtons.forEach(function (button) {
-        const open = phone && button.dataset.mobilePanelTarget === activeMobilePanel;
-        button.setAttribute("aria-expanded",open ? "true" : "false");
-      });
-      mobilePanelBackdrop.hidden = !phone || !activeMobilePanel;
-      const shouldLockPage = phone && !!activeMobilePanel;
-      document.querySelector(".map-experience").classList.toggle("has-mobile-panel",shouldLockPage);
-
-      if (shouldLockPage && !document.body.classList.contains("mobile-panel-open")) {
-        mobilePanelScrollY = window.scrollY;
-        document.body.style.top = "-" + mobilePanelScrollY + "px";
-        document.body.classList.add("mobile-panel-open");
-      } else if (!shouldLockPage && document.body.classList.contains("mobile-panel-open")) {
-        const restoreScrollY = mobilePanelScrollY;
-        document.body.classList.remove("mobile-panel-open");
-        document.body.style.removeProperty("top");
-        window.requestAnimationFrame(function () {
-          window.scrollTo({ top:restoreScrollY, left:0, behavior:"auto" });
-        });
-      }
     }
 
-    function openMobilePanel(name, trigger) {
+    // Tapping a marker: raise the sheet to half on Details and pan the point
+    // into the visible half above it. On desktop the panel is fixed, so this is
+    // only the focus call.
+    function presentSelection(d) {
       if (!isPhoneViewport()) return;
-      activeMobilePanel = name;
-      lastMobilePanelTrigger = trigger || (document.activeElement !== document.body ? document.activeElement : null);
-      syncMobilePanelMode();
-      document.querySelector(".map-shell").scrollTop = 0;
-      if (name === "search") {
-        window.setTimeout(function () {
-          mobileSearchInput.focus({ preventScroll:true });
-          document.querySelector(".map-shell").scrollTop = 0;
-        },60);
-      }
+      setTab("details",{ focusInput:false });
+      if (sheetSnap === "peek") setSnap("half");
     }
 
-    function closeMobilePanel(restoreFocus) {
-      const target = lastMobilePanelTrigger;
-      const focused = document.activeElement;
-      if (focused && focused !== document.body && focused.closest && focused.closest("[data-mobile-panel]")) {
-        focused.blur();
-      }
-      activeMobilePanel = null;
-      lastMobilePanelTrigger = null;
-      syncMobilePanelMode();
-      document.querySelector(".map-shell").scrollTop = 0;
-      if (restoreFocus !== false && target && target.isConnected) {
-        target.focus({ preventScroll:true });
-      }
-    }
-
-    mobilePanelButtons.forEach(function (button) {
-      button.addEventListener("click",function () {
-        const name = button.dataset.mobilePanelTarget;
-        if (activeMobilePanel === name) closeMobilePanel(true);
-        else openMobilePanel(name,button);
+    sheetTabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        setTab(tab.dataset.sheetTab);
+        if (isPhoneViewport() && sheetSnap === "peek") setSnap("half");
+      });
+      tab.addEventListener("keydown", function (event) {
+        const index = sheetTabs.indexOf(tab);
+        let nextIndex = null;
+        if (event.key === "ArrowRight") nextIndex = (index + 1) % sheetTabs.length;
+        else if (event.key === "ArrowLeft") nextIndex = (index - 1 + sheetTabs.length) % sheetTabs.length;
+        else if (event.key === "Home") nextIndex = 0;
+        else if (event.key === "End") nextIndex = sheetTabs.length - 1;
+        if (nextIndex === null) return;
+        event.preventDefault();
+        setTab(sheetTabs[nextIndex].dataset.sheetTab,{ focusTab:true, focusInput:false });
       });
     });
-    document.querySelectorAll("[data-mobile-panel-close]").forEach(function (button) {
-      button.addEventListener("click",function () { closeMobilePanel(true); });
+
+    layerProxies.forEach(function (proxy) {
+      proxy.addEventListener("click", function () {
+        const input = layerInputs().find(function (item) { return item.value === proxy.dataset.layerProxy; });
+        if (input) input.click();
+      });
     });
-    mobilePanelBackdrop.addEventListener("click",function () { closeMobilePanel(true); });
+
+    function syncLayerProxies() {
+      layerProxies.forEach(function (proxy) {
+        const input = layerInputs().find(function (item) { return item.value === proxy.dataset.layerProxy; });
+        proxy.setAttribute("aria-pressed",input && input.checked ? "true" : "false");
+      });
+    }
+
+    if (sheetBackdrop) {
+      sheetBackdrop.addEventListener("click", function () { setSnap("half"); });
+    }
+
+    // Sheet drag: pointer events only, transform-driven, with a velocity bias so
+    // a flick moves one snap in the direction of travel.
+    let drag = null;
+
+    function snapNames() { return ["full","half","peek"]; }
+
+    function nearestSnap(offset, velocity) {
+      const offsets = snapOffsets();
+      const order = snapNames();
+      let closest = order[0];
+      order.forEach(function (name) {
+        if (Math.abs(offsets[name] - offset) < Math.abs(offsets[closest] - offset)) closest = name;
+      });
+      if (Math.abs(velocity) > 0.5) {
+        const index = order.indexOf(closest);
+        const direction = velocity > 0 ? 1 : -1;
+        const nextIndex = Math.max(0,Math.min(order.length - 1,index + direction));
+        return order[nextIndex];
+      }
+      return closest;
+    }
+
+    function beginDrag(event, fromBody) {
+      if (!isPhoneViewport() || event.pointerType === "mouse" && event.button) return;
+      drag = {
+        id: event.pointerId,
+        startY: event.clientY,
+        startOffset: snapOffsets()[sheetSnap],
+        lastY: event.clientY,
+        lastTime: event.timeStamp,
+        velocity: 0,
+        fromBody: !!fromBody,
+        active: !fromBody
+      };
+      if (!fromBody) {
+        sheet.classList.add("is-dragging");
+        if (event.target.setPointerCapture) event.target.setPointerCapture(event.pointerId);
+      }
+    }
+
+    function moveDrag(event) {
+      if (!drag || drag.id !== event.pointerId) return;
+      const delta = event.clientY - drag.startY;
+      if (!drag.active) {
+        // A drag that starts inside the scrolling body only takes over the sheet
+        // when the body is already at the top and the gesture is downward.
+        if (delta <= 6) return;
+        drag.active = true;
+        sheet.classList.add("is-dragging");
+      }
+      const offsets = snapOffsets();
+      const next = Math.max(offsets.full,Math.min(offsets.peek,drag.startOffset + delta));
+      const elapsed = event.timeStamp - drag.lastTime;
+      if (elapsed > 0) drag.velocity = (event.clientY - drag.lastY) / elapsed;
+      drag.lastY = event.clientY;
+      drag.lastTime = event.timeStamp;
+      drag.offset = next;
+      applySheetOffset(next);
+      event.preventDefault();
+    }
+
+    function endDrag(event) {
+      if (!drag || drag.id !== event.pointerId) return;
+      const wasActive = drag.active;
+      const offset = drag.offset;
+      const velocity = drag.velocity;
+      drag = null;
+      sheet.classList.remove("is-dragging");
+      if (!wasActive || typeof offset !== "number") {
+        setSnap(sheetSnap);
+        return;
+      }
+      setSnap(nearestSnap(offset,velocity));
+    }
+
+    [sheetGrab,sheetTabsRow].forEach(function (handle) {
+      if (!handle) return;
+      handle.addEventListener("pointerdown", function (event) { beginDrag(event,false); });
+    });
+    const sheetPanelsHost = sheet.querySelector(".sheet-panels");
+    if (sheetPanelsHost) {
+      sheetPanelsHost.addEventListener("pointerdown", function (event) {
+        if (event.pointerType === "mouse") return;
+        if (sheetPanelsHost.scrollTop > 0) return;
+        if (event.target.closest("button, a, input, select, textarea")) return;
+        beginDrag(event,true);
+      });
+    }
+    document.addEventListener("pointermove",moveDrag,{ passive:false });
+    document.addEventListener("pointerup",endDrag);
+    document.addEventListener("pointercancel",endDrag);
+
+    function syncSheetMode() {
+      const phone = isPhoneViewport();
+      if (!phone) {
+        sheet.style.removeProperty("--sheet-y");
+        sheet.dataset.snap = "docked";
+        sheetPanels.forEach(function (panel) {
+          panel.hidden = panel.dataset.sheetPanel !== activeSheetTab;
+        });
+        if (sheetBackdrop) sheetBackdrop.hidden = true;
+        unlockPageScroll();
+      } else {
+        sheet.dataset.snap = sheetSnap;
+        setSnap(sheetSnap,{ animate:false });
+      }
+      syncMapGestures();
+    }
 
     document.querySelectorAll("[data-mobile-jump]").forEach(function (button) {
       button.addEventListener("click",function () {
         const target = document.getElementById(button.dataset.mobileJump);
-        closeMobilePanel(false);
+        if (isPhoneViewport()) setSnap("peek");
         if (target) {
           window.setTimeout(function () {
             target.scrollIntoView({ behavior:reducedMotion.matches ? "auto" : "smooth", block:"start" });
@@ -201,14 +378,17 @@
       const button = event.target.closest("[data-claim-id]");
       if (!button) return;
       const claim = claims.find(function (item) { return item.id === button.dataset.claimId; });
-      if (claim) selectClaim(claim,false,true,true);
+      if (!claim) return;
+      selectClaim(claim,false,true,true);
+      if (isPhoneViewport()) {
+        setTab("details",{ focusInput:false });
+        setSnap("half");
+      }
     });
     layerInputs().forEach(function (input) {
       input.addEventListener("change",renderMobileSearch);
     });
 
-    document.getElementById("mobile-sources-list").innerHTML = document.querySelector(".sources-grid").innerHTML;
-    document.getElementById("mobile-unverified-list").innerHTML = document.querySelector(".unverified ul").innerHTML;
     renderMobileSearch();
 
     function isPhoneViewport() {
@@ -327,7 +507,10 @@
       .clickDistance(4)
       .filter(function (event) {
         const ordinaryPointer = (!event.ctrlKey || event.type === "wheel") && !event.button;
-        return ordinaryPointer && (isPhoneViewport() || exploreMode);
+        if (!ordinaryPointer) return false;
+        if (!isPhoneViewport()) return exploreMode;
+        const touches = event.touches ? event.touches.length : 0;
+        return touches > 1 || sheetSnap === "peek";
       })
       .on("start", function () { svg.classed("is-zooming",true); })
       .on("zoom", function (event) { renderZoom(event.transform); })
@@ -391,10 +574,11 @@
           [Math.min(full[1][0],logicalRight),full[1][1]]
         ];
       }
-      if (activeMobilePanel !== "details") return full;
-      const navTop = mobilePanelNav.getBoundingClientRect().top;
-      const finalPanelTop = navTop - detailPanel.offsetHeight;
-      const usablePixels = Math.max(150,finalPanelTop-svgRect.top-18);
+      // The sheet will sit at half after a selection: keep the point in the
+      // map still visible above it.
+      const offsets = snapOffsets();
+      const sheetTop = svgRect.top + Math.max(0,viewportHeight() - (sheet.offsetHeight - offsets.half));
+      const usablePixels = Math.max(150,sheetTop-svgRect.top-18);
       const logicalBottom = full[0][1] + usablePixels/screenScale;
       return [
         full[0],
@@ -470,8 +654,8 @@
     document.addEventListener("keydown", function (event) {
       if (event.key !== "Escape") return;
       hideTooltip();
-      if (activeMobilePanel && isPhoneViewport()) {
-        closeMobilePanel(true);
+      if (isPhoneViewport() && sheetSnap !== "peek") {
+        setSnap("peek");
         return;
       }
       if (exploreMode) releaseMap();
@@ -479,23 +663,36 @@
     if (phoneQuery.addEventListener) {
       phoneQuery.addEventListener("change",function () {
         updateExploreMode();
-        syncMobilePanelMode();
+        syncSheetMode();
       });
     } else {
       phoneQuery.addListener(function () {
         updateExploreMode();
-        syncMobilePanelMode();
+        syncSheetMode();
       });
     }
     updateExploreMode();
-    syncMobilePanelMode();
 
     svg.append("path").datum(frameGeo).attr("class","frame").attr("d",geoPath);
+
+    // Bootstrap: every helper above is defined, so the first paint is safe here.
+    updateVisibility();
+    syncLayerProxies();
+    setTab(activeSheetTab,{ focusInput:false });
+    syncSheetMode();
+    setSnap("peek",{ animate:false });
 
     navigationReady = true;
     const defaultClaim = claims.find(function (d) { return d.id === "bal-petra"; });
     if (defaultClaim) {
       selectClaim(defaultClaim, false);
       renderMobileSearch();
+    }
+    updatePeekLabel();
+
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", function () {
+        if (isPhoneViewport()) setSnap(sheetSnap,{ animate:false });
+      });
     }
   }());

@@ -435,7 +435,8 @@
       bindIngredientBrowser();
       stampDetailPanel();
 
-      if (shouldOpenDetails && isPhoneViewport()) openMobilePanel("details");
+      if (shouldOpenDetails) presentSelection(d);
+      updatePeekLabel();
       if (shouldFocus) focusClaim(d,shouldForceFocus);
 
       if (shouldScroll) {
@@ -627,6 +628,7 @@
         heading.hidden = !visibleGroups.has(heading.dataset.group);
       });
       document.querySelectorAll("[data-visible-count]").forEach(function (node) { node.textContent = visible; });
+      syncLayerProxies();
       if (selectedClaim) {
         const selectedIngredient = ingredientById.get(selectedClaim.ingredient);
         const selectedLocations = selectedIngredient ? visibleClaimsForIngredient(selectedIngredient) : [];
@@ -667,6 +669,7 @@
         if (fallbackIngredient) selectIngredient(fallbackIngredient,false);
         else renderNoVisibleIngredients();
       }
+      updatePeekLabel();
     }
     layerInputs().forEach(function (input) {
       input.addEventListener("change",updateVisibility);
