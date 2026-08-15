@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-20";
+      --asset-version: "20260814-21";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -512,15 +512,34 @@
        replaced a bottom that accounts for env(safe-area-inset-bottom), putting
        the zoom cluster under the browser chrome. */
     @media (min-width: 721px) {
-      .map-experience.chart .view-control { max-height: calc(100% - 48px); overflow: auto; }
+      .map-experience.chart .view-control { overflow: auto; }
       .map-experience.chart .dossier {
         max-height: calc(100% - 250px);
         width: min(560px, calc(100% - 56px - var(--rail-w) - var(--rail-gap) * 2));
       }
 
-      /* The strip took the foot of the band, so the zoom cluster rides above it
-         rather than underneath. */
-      .map-experience.chart .map-tools { bottom: 68px; }
+      /* The zoom cluster mirrors to the right edge: the dossier owns the
+         bottom-left — collapsed, its peek column sat exactly on top of the
+         cluster — and the strip owns the foot. The rail above stops short so
+         the two never meet on a squat window. */
+      .map-experience.chart .map-tools {
+        left: auto;
+        right: 16px;
+        bottom: 68px;
+        align-items: flex-end;
+      }
+      .map-experience.chart .view-control { max-height: calc(100% - 200px); }
+
+      /* Six dots across the band's whole width read as unrelated specks; the
+         rail keeps the journeys viewer's elastic dots but inside a measured
+         case, centred on the band rather than on what the legend leaves over. */
+      .map-experience.chart .strip__rail {
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+        width: min(440px, 44%);
+      }
     }
 
     /* app-2.js still writes the selected claim into #detail-content; the shell
