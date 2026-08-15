@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-18";
+      --asset-version: "20260814-20";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -549,6 +549,11 @@
     }
     .map-wrap.is-exploring #map { cursor: grab; touch-action: none; }
     .map-wrap.is-exploring #map.is-zooming { cursor: grabbing; }
+    /* On a desktop the action row is transparent to layout: the pill is
+       hidden and the zoom cluster positions itself absolutely against the
+       strip, which spans the band's foot — same offsets, same place. */
+    .strip__actions { display: contents; }
+
     .map-tools {
       position: absolute;
       z-index: 5;
@@ -661,12 +666,6 @@
       white-space: nowrap !important;
       border: 0 !important;
     }
-    /* One sheet serves both registers: a docked glass panel on desktop, a
-       dragging bottom sheet with three snap points on phones. */
-    .sheet-grab,
-    .sheet-peek,
-    .sheet-backdrop { display: none; }
-    .safe-probe { display: block; height: 0; padding-bottom: env(safe-area-inset-bottom); }
     .detail-kicker {
       margin: 0 0 4px;
       color: #7a705d;
@@ -802,28 +801,6 @@
     .ingredient-switcher:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 2px; }
     /* Desktop: the detail panel floats over the chart-room's right edge as dark glass. */
     @media (min-width: 721px) {
-      .sheet {
-        position: absolute;
-        z-index: 5;
-        top: 78px;
-        right: 20px;
-        bottom: 20px;
-        display: flex;
-        flex-direction: column;
-        width: min(360px, 38vw);
-        border: 1px solid rgba(231,220,195,.16);
-        border-radius: var(--r-card);
-        background: rgba(14,34,41,.74);
-        -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);
-        box-shadow: 0 18px 50px rgba(0,0,0,.4);
-        color: #D9DED3;
-        overflow: hidden;
-      }
-      @supports not (backdrop-filter: blur(8px)) {
-        .sheet { background: rgba(14,34,41,.95); }
-      }
-      .sheet-panels { flex: 1; min-height: 0; overflow: auto; }
       #detail { border: 0; background: transparent; color: inherit; }
       #detail a { color: #9CC4DA; }
       .detail-kicker { color: rgba(231,220,195,.62); font-family: var(--font-mono); font-weight: 600; }
@@ -1193,7 +1170,6 @@
     @media (max-width: 720px) {
       :root { --nav-h: 0px; }
       body { overscroll-behavior-y: contain; }
-      body.mobile-panel-open { position: fixed; left: 0; right: 0; width: 100%; height: 100%; overflow: hidden; }
       .page { width: 100%; padding: 0; }
       .masthead { display: none; }
       .map-experience {
@@ -1329,14 +1305,18 @@
         white-space: nowrap;
       }
 
+      /* The zoom cluster leaves its floating right-edge perch and joins the
+         pill on one centred row: transposed horizontal, thumb-height, and no
+         longer hovering over the map it zooms. */
+      .strip__actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-width: 0;
+      }
       .map-tools {
-        position: absolute;
-        z-index: 5;
-        right: 12px;
-        bottom: calc(var(--fab-bottom, 118px) + env(safe-area-inset-bottom));
-        transition: bottom var(--t-snap) ease, opacity var(--t-snap) ease;
-        top: auto;
-        left: auto;
+        position: static;
         display: block;
         padding: 0;
         border: 0;
@@ -1344,8 +1324,8 @@
         pointer-events: auto;
       }
       .zoom-controls {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 8px;
         padding: 0;
         border: 0;
         border-radius: 0;
@@ -1367,8 +1347,6 @@
         box-shadow: 0 4px 14px rgba(0,0,0,.34);
       }
       .zoom-controls button:hover:not(:disabled) { background: rgba(14,34,41,.94); }
-      /* At full the sheet owns the screen; the zoom cluster steps aside. */
-      .map-experience[data-sheet-snap="full"] .map-tools { opacity: 0; pointer-events: none; }
       .zoom-reset { min-width: 40px !important; width: 40px; font-size: 0 !important; }
       .zoom-reset::before { content: "↺"; font: 700 1.05rem/1 var(--font-body); }
       .zoom-level {
@@ -1391,86 +1369,6 @@
         pointer-events: none;
       }
 
-      .sheet-backdrop {
-        position: absolute;
-        z-index: 6;
-        inset: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        border: 0;
-        background: rgba(8,18,22,.42);
-      }
-      .sheet-backdrop[hidden] { display: none; }
-
-      .sheet {
-        position: absolute;
-        z-index: 7;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        height: calc(100vh - var(--nav-h) - 96px);
-        height: calc(100svh - var(--nav-h) - 96px);
-        border-top: 1px solid #cdc2a9;
-        border-radius: 18px 18px 0 0;
-        background: var(--panel);
-        box-shadow: 0 -10px 30px rgba(10,20,24,.28);
-        color: var(--ink);
-        transform: translateY(var(--sheet-y, 100%));
-        transition: transform var(--t-snap) ease;
-        touch-action: none;
-      }
-      .sheet.is-dragging { transition: none; }
-
-      .sheet-grab { display: block; padding: 9px 0 5px; cursor: grab; }
-      .sheet-handle { display: block; width: 40px; height: 4px; margin: 0 auto; border-radius: 999px; background: #c3b9a4; }
-
-      /* Peek reads like a Google Maps place card: title, then the place and
-         its evidence class on a second line. */
-      .sheet-peek {
-        display: block;
-        margin: 0;
-        padding: 6px 18px 0;
-        color: var(--ink);
-      }
-      .peek-title {
-        display: block;
-        font-family: var(--font-greek);
-        font-size: 1.12rem;
-        line-height: 1.25;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-      .peek-sub {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        margin-top: 3px;
-        min-width: 0;
-        color: var(--muted);
-        font-size: .8rem;
-        white-space: nowrap;
-      }
-      .peek-glyph { flex: none; width: 13px; height: 13px; color: var(--ink); --glyph-stroke: var(--panel); }
-      .peek-glyph.modern { color: var(--inference); }
-      .peek-glyph.theology { color: var(--gold-ink); }
-      .peek-place { flex: none; font-weight: 600; color: var(--ink); }
-      .peek-class { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
-      .peek-class::before { content: "· "; }
-
-      .sheet-panels {
-        flex: 1;
-        min-height: 0;
-        padding-bottom: calc(var(--sheet-y, 0px) + 96px + env(safe-area-inset-bottom));
-        overflow: auto;
-        overscroll-behavior: contain;
-        touch-action: pan-y;
-      }
-      .sheet-panels > #detail { padding: 4px 18px 22px; }
 
       .key-glyph { flex: none; width: 16px; height: 16px; color: var(--ink); --glyph-stroke: var(--panel); }
       .key-glyph.modern { color: var(--inference); }
@@ -1484,7 +1382,6 @@
     }
     /* ————— Motion ————— */
     @media (prefers-reduced-motion: reduce) {
-      .sheet { transition: none; }
       .map-toast { transition: opacity var(--t-snap) ease; transform: translateX(-50%); }
       .map-toast.is-visible { transform: translateX(-50%); }
       .claim-glyph { transition: none; }
@@ -1514,9 +1411,6 @@
       .map-tools,
       .map-toast,
       .map-tooltip,
-      .sheet-grab,
-      .sheet-peek,
-      .sheet-backdrop,
       .pane { display: none !important; }
 
       /* The band becomes a normal block so the map prints in full. */
@@ -1556,20 +1450,6 @@
       .key-shape.theology { border-color: #6B5620; box-shadow: none; }
       .toggle { border-color: #999999; background: white; color: #1B2422; }
 
-      .sheet {
-        position: static;
-        width: auto;
-        height: auto;
-        margin: 14px 0 0;
-        border: 1px solid #999999;
-        border-radius: 0;
-        background: white;
-        box-shadow: none;
-        color: #1B2422;
-        transform: none;
-        break-inside: avoid;
-      }
-      .sheet-panels { overflow: visible; }
       #detail { color: #1B2422; }
       #detail h2, .detail-place { color: #1B2422; }
       .detail-kicker, .detail-gloss, .detail-hint { color: #444444; }
@@ -1605,7 +1485,7 @@
     @media (max-width: 720px) {
       .strip { flex-direction: column; align-items: stretch; gap: 8px; }
       .strip .strip__rail { width: 100%; }
-      .ingredient-pill { align-self: center; }
+      .ingredient-pill { min-width: 0; flex: 0 1 auto; }
       /* The strip grew a second row for the dots, so the dossier's foot
          clearance grows with it: shell.css's 58px was measured against the
          pill alone. */

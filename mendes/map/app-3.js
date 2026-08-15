@@ -45,22 +45,6 @@
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let exploreMode = false;
     let mapToastTimer = null;
-    let sheetSnap = "peek";
-    let sheetScrollY = 0;
-
-    // The selection now reads in the shared dossier at every width, so the
-    // bottom sheet is gone from the markup. The snap machinery below is left in
-    // place rather than unpicked from the drag and gesture code it interleaves
-    // with: a detached stand-in keeps every lookup total, and sheetEnabled gates
-    // the behaviour at its entry points. Removing it outright is a separate
-    // pass, and one worth doing on its own.
-    const sheet = document.getElementById("map-sheet") || document.createElement("section");
-    const sheetEnabled = sheet.isConnected;
-    const sheetGrab = sheet.querySelector(".sheet-grab");
-    const sheetPeek = sheet.querySelector(".sheet-peek");
-    const sheetBackdrop = document.querySelector(".sheet-backdrop");
-    const safeProbe = sheet.querySelector(".safe-probe");
-    const peekLabels = Array.from(document.querySelectorAll("[data-peek-label]"));
     const searchPane = document.getElementById("search-pane");
     const guidePane = document.getElementById("guide-pane");
     const openSearchButton = document.getElementById("open-search");
@@ -69,135 +53,6 @@
     const mobileSearchSummary = document.getElementById("mobile-search-summary");
     const mobileSearchResults = document.getElementById("mobile-search-results");
     const ingredientBrowse = document.getElementById("ingredient-browse");
-
-    // ————— One bottom sheet, three snap points —————
-    // peek: the selection line stays legible over the map
-    // half: the detail panel is readable with the map still visible above
-    // full: reading depth, with a strip of map always showing
-    // Measure the band the sheet actually lives in rather than the visual
-    // viewport: the band is sized in svh, so it already excludes the browser's
-    // own chrome and does not shift as that chrome expands and collapses.
-    function viewportHeight() {
-      if (mapExperience && mapExperience.clientHeight) return mapExperience.clientHeight;
-      return window.visualViewport ? window.visualViewport.height : window.innerHeight;
-    }
-
-    function safeAreaBottom() {
-      if (!safeProbe) return 0;
-      const value = parseFloat(window.getComputedStyle(safeProbe).paddingBottom);
-      return isNaN(value) ? 0 : value;
-    }
-
-    function snapOffsets() {
-      const height = viewportHeight();
-      const sheetHeight = sheet.offsetHeight || height;
-      const peekVisible = 104 + safeAreaBottom();
-      return {
-        peek: Math.max(0,sheetHeight - peekVisible),
-        half: Math.max(0,Math.min(sheetHeight - peekVisible,sheetHeight - height * 0.48)),
-        full: Math.max(0,sheetHeight - (height - 128))
-      };
-    }
-
-    function applySheetOffset(offset) {
-      sheet.style.setProperty("--sheet-y",offset + "px");
-    }
-
-    // The zoom cluster rides just above the sheet rather than hiding behind it.
-    function positionMapTools(name) {
-      if (!sheetEnabled) return;
-      if (!mapExperience) return;
-      mapExperience.dataset.sheetSnap = name;
-      if (!isPhoneViewport()) {
-        mapExperience.style.removeProperty("--fab-bottom");
-        return;
-      }
-      const visible = Math.max(0,(sheet.offsetHeight || 0) - snapOffsets()[name]);
-      mapExperience.style.setProperty("--fab-bottom",(visible + 14) + "px");
-    }
-
-    function setSnap(name, options) {
-      if (!sheetEnabled) return;
-      const settings = options || {};
-      if (!isPhoneViewport()) {
-        sheetSnap = name;
-        sheet.dataset.snap = name;
-        sheet.style.removeProperty("--sheet-y");
-        if (sheetBackdrop) sheetBackdrop.hidden = true;
-        unlockPageScroll();
-        positionMapTools("docked");
-        return;
-      }
-      sheetSnap = name;
-      sheet.dataset.snap = name;
-      if (settings.animate === false) sheet.classList.add("is-dragging");
-      applySheetOffset(snapOffsets()[name]);
-      if (settings.animate === false) {
-        void sheet.offsetWidth;
-        sheet.classList.remove("is-dragging");
-      }
-      if (sheetBackdrop) sheetBackdrop.hidden = name !== "full";
-      if (name === "full") lockPageScroll();
-      else unlockPageScroll();
-      positionMapTools(name);
-      syncMapGestures();
-    }
-
-    function lockPageScroll() {
-      if (!sheetEnabled) return;
-      if (document.body.classList.contains("mobile-panel-open")) return;
-      sheetScrollY = window.scrollY;
-      document.body.style.top = "-" + sheetScrollY + "px";
-      document.body.classList.add("mobile-panel-open");
-    }
-
-    function unlockPageScroll() {
-      if (!sheetEnabled) return;
-      if (!document.body.classList.contains("mobile-panel-open")) return;
-      const restore = sheetScrollY;
-      document.body.classList.remove("mobile-panel-open");
-      document.body.style.removeProperty("top");
-      window.requestAnimationFrame(function () {
-        window.scrollTo({ top:restore, left:0, behavior:"auto" });
-      });
-    }
-
-    // At peek the map owns single-finger drags; at half and full the sheet does,
-    // but pinch keeps zooming the map at every snap.
-    function syncMapGestures() {
-      const mapOwnsDrag = !isPhoneViewport() || sheetSnap === "peek";
-      mapWrap.classList.toggle("sheet-owns-drag",!mapOwnsDrag);
-    }
-
-    const peekGlyphIds = { ancient:"glyph-ancient", modern:"glyph-inference", theology:"glyph-theology" };
-
-    function updatePeekLabel() {
-      if (!sheetEnabled) return;
-      const visible = document.getElementById("visible-count");
-      const count = visible ? visible.textContent : "0";
-      peekLabels.forEach(function (node) {
-        if (selectedClaim) {
-          node.innerHTML =
-            '<span class="peek-title" lang="grc">' + escapeHTML(selectedClaim.greek) + '</span>' +
-            '<span class="peek-sub">' +
-              '<svg class="peek-glyph ' + selectedClaim.evidence + '" aria-hidden="true"><use href="#' + peekGlyphIds[selectedClaim.evidence] + '"></use></svg>' +
-              '<span class="peek-place">' + escapeHTML(selectedClaim.place) + '</span>' +
-              '<span class="peek-class">' + escapeHTML(evidenceText(selectedClaim)) + '</span>' +
-            '</span>';
-        } else {
-          node.innerHTML =
-            '<span class="peek-title">' + escapeHTML(count) + ' claims visible</span>' +
-            '<span class="peek-sub"><span class="peek-place">Tap a point on the map</span></span>';
-        }
-      });
-    }
-
-    // Tapping a marker: raise the sheet to half and pan the point into the map
-    // still visible above it. On desktop the panel is docked, so this is a no-op.
-    function presentSelection(d) {
-      if (!isPhoneViewport()) return;
-      if (sheetSnap === "peek") setSnap("half");
-    }
 
     // ————— Search and Guide panes —————
     // Both are modal dialogs, so the platform handles the focus trap, the
@@ -239,123 +94,10 @@
       openGuideButton.addEventListener("click", function () { openPane(guidePane,openGuideButton); });
     }
 
-    if (sheetBackdrop) {
-      sheetBackdrop.addEventListener("click", function () { setSnap("half"); });
-    }
-
-    // Sheet drag: pointer events only, transform-driven, with a velocity bias so
-    // a flick moves one snap in the direction of travel.
-    let drag = null;
-
-    function snapNames() { return ["full","half","peek"]; }
-
-    function nearestSnap(offset, velocity) {
-      const offsets = snapOffsets();
-      const order = snapNames();
-      let closest = order[0];
-      order.forEach(function (name) {
-        if (Math.abs(offsets[name] - offset) < Math.abs(offsets[closest] - offset)) closest = name;
-      });
-      if (Math.abs(velocity) > 0.5) {
-        const index = order.indexOf(closest);
-        const direction = velocity > 0 ? 1 : -1;
-        const nextIndex = Math.max(0,Math.min(order.length - 1,index + direction));
-        return order[nextIndex];
-      }
-      return closest;
-    }
-
-    function beginDrag(event, fromBody) {
-      if (!sheetEnabled) return;
-      if (!isPhoneViewport() || event.pointerType === "mouse" && event.button) return;
-      drag = {
-        id: event.pointerId,
-        startY: event.clientY,
-        startOffset: snapOffsets()[sheetSnap],
-        lastY: event.clientY,
-        lastTime: event.timeStamp,
-        velocity: 0,
-        fromBody: !!fromBody,
-        active: !fromBody
-      };
-      if (!fromBody) {
-        sheet.classList.add("is-dragging");
-        if (event.target.setPointerCapture) event.target.setPointerCapture(event.pointerId);
-      }
-    }
-
-    function moveDrag(event) {
-      if (!drag || drag.id !== event.pointerId) return;
-      const delta = event.clientY - drag.startY;
-      if (!drag.active) {
-        // A drag that starts inside the scrolling body only takes over the sheet
-        // when the body is already at the top and the gesture is downward.
-        if (delta <= 6) return;
-        drag.active = true;
-        sheet.classList.add("is-dragging");
-      }
-      const offsets = snapOffsets();
-      const next = Math.max(offsets.full,Math.min(offsets.peek,drag.startOffset + delta));
-      const elapsed = event.timeStamp - drag.lastTime;
-      if (elapsed > 0) drag.velocity = (event.clientY - drag.lastY) / elapsed;
-      drag.lastY = event.clientY;
-      drag.lastTime = event.timeStamp;
-      drag.offset = next;
-      applySheetOffset(next);
-      event.preventDefault();
-    }
-
-    function endDrag(event) {
-      if (!drag || drag.id !== event.pointerId) return;
-      const wasActive = drag.active;
-      const offset = drag.offset;
-      const velocity = drag.velocity;
-      drag = null;
-      sheet.classList.remove("is-dragging");
-      if (!wasActive || typeof offset !== "number") {
-        setSnap(sheetSnap);
-        return;
-      }
-      setSnap(nearestSnap(offset,velocity));
-    }
-
-    [sheetGrab,sheetPeek].forEach(function (handle) {
-      if (!handle) return;
-      handle.addEventListener("pointerdown", function (event) { beginDrag(event,false); });
-    });
-    const sheetPanelsHost = sheet.querySelector(".sheet-panels");
-    if (sheetPanelsHost) {
-      sheetPanelsHost.addEventListener("pointerdown", function (event) {
-        if (event.pointerType === "mouse") return;
-        if (sheetPanelsHost.scrollTop > 0) return;
-        if (event.target.closest("button, a, input, select, textarea")) return;
-        beginDrag(event,true);
-      });
-    }
-    document.addEventListener("pointermove",moveDrag,{ passive:false });
-    document.addEventListener("pointerup",endDrag);
-    document.addEventListener("pointercancel",endDrag);
-
-    function syncSheetMode() {
-      if (!sheetEnabled) { syncMapGestures(); return; }
-      const phone = isPhoneViewport();
-      if (!phone) {
-        sheet.style.removeProperty("--sheet-y");
-        sheet.dataset.snap = "docked";
-        if (sheetBackdrop) sheetBackdrop.hidden = true;
-        unlockPageScroll();
-      } else {
-        sheet.dataset.snap = sheetSnap;
-        setSnap(sheetSnap,{ animate:false });
-      }
-      syncMapGestures();
-    }
-
     document.querySelectorAll("[data-mobile-jump]").forEach(function (button) {
       button.addEventListener("click",function () {
         const target = document.getElementById(button.dataset.mobileJump);
         if (guidePane && guidePane.open) { paneOpener = null; guidePane.close(); }
-        if (isPhoneViewport()) setSnap("peek");
         if (target) {
           window.setTimeout(function () {
             target.scrollIntoView({ behavior:reducedMotion.matches ? "auto" : "smooth", block:"start" });
@@ -453,7 +195,6 @@
         searchPane.close();
       }
       selectClaim(claim,false,true,true);
-      if (isPhoneViewport()) setSnap("half");
     });
     ingredientBrowse.addEventListener("click", function (event) {
       const button = event.target.closest("[data-ingredient-id]");
@@ -463,7 +204,6 @@
       if (searchPane && searchPane.open) { paneOpener = null; searchPane.close(); }
       selectIngredient(ingredient,true);
       updateIngredientPill();
-      if (isPhoneViewport()) setSnap("half");
     });
     layerInputs().forEach(function (input) {
       input.addEventListener("change",renderMobileSearch);
@@ -484,7 +224,7 @@
       const gesturesEnabled = isTouchInput() || exploreMode;
       mapWrap.classList.toggle("is-exploring",gesturesEnabled);
       if (isTouchInput()) {
-        gestureHint.textContent = "Tap a point for guided focus; drag, pinch, or use +/− to explore.";
+        gestureHint.textContent = "Tap a point for guided focus; drag, pinch, double-tap, or use +/− to explore.";
       } else if (exploreMode) {
         gestureHint.textContent = "Map active — scroll to zoom, drag to pan, Escape to release.";
       } else {
@@ -665,18 +405,123 @@
       .extent(function () { return visibleViewportExtent(); })
       .translateExtent(mapExtent)
       .clickDistance(4)
+      /* d3's own touch double-tap cannot tell a marker tap from a map tap and
+         counts a drag as a first tap; a negative tap distance disables it, and
+         the hand-rolled gesture below owns the double-tap instead. The mouse
+         dblclick.zoom stays: it is gated by the same filter as every other
+         desktop gesture. */
+      .tapDistance(-1)
       .filter(function (event) {
         const ordinaryPointer = (!event.ctrlKey || event.type === "wheel") && !event.button;
         if (!ordinaryPointer) return false;
+        // Browsers synthesize dblclick from a double-tap, so without this the
+        // built-in dblclick.zoom stacks on the hand-rolled gesture below and a
+        // double-tap lands at 2.9x instead of 2x. Mouse double-click keeps it.
+        if (event.type === "dblclick" && isTouchInput()) return false;
         if (!isTouchInput()) return exploreMode;
-        const touches = event.touches ? event.touches.length : 0;
-        return touches > 1 || sheetSnap === "peek";
+        return true;
       })
       .on("start", function () { svg.classed("is-zooming",true); })
       .on("zoom", function (event) { renderZoom(event.transform); })
       .on("end", function () { svg.classed("is-zooming",false); });
 
+    // ————— Double-tap zoom —————
+    // Registered BEFORE svg.call(zoom), and that order is load-bearing: d3's
+    // zoom behaviour calls stopImmediatePropagation on every touch event its
+    // filter accepts, so a listener added after it never hears a touch at all.
+    // Same-node listeners fire in registration order; these must be first.
+    // One finger, tapped twice: zoom in one level, centred on the tap — not on
+    // the viewport, which is what makes the gesture worth having. Two fingers,
+    // tapped once: zoom out one level, the platform's own convention (the
+    // review that asked for this said "two-finger double-tap", but a single
+    // two-finger tap is what iOS and Google Maps both ship, and thumbs expect).
+    //
+    // Hand-rolled rather than d3's dblclick handling because the taps must not
+    // fight the existing arbitration: pinch stays the zoom behaviour's, taps on
+    // claim markers stay selections (a double-tap on a marker would otherwise
+    // select AND zoom, compounding with guided focus), and iOS's page-level
+    // double-tap zoom is already suppressed by the map's touch-action rules.
+    const TAP_MS = 300;      // a tap is a touch shorter than this
+    const TAP_LINK_MS = 320; // two taps this close make a double
+    const TAP_SLOP = 24;     // CSS px of drift allowed within and between taps
+    let tapCandidate = null; // { time, x, y } of the last completed single tap
+    let touchTracking = null;
+
+    function zoomStep(factor, point) {
+      const target = reducedMotion.matches
+        ? svg
+        : svg.transition("dbltap").duration(240).ease(d3.easeCubicOut);
+      target.call(zoom.scaleBy, factor, point);
+    }
+
+    svg.node().addEventListener("touchstart", function (event) {
+      // Marker taps are selections; leave them out of the gesture entirely.
+      if (event.target && event.target.closest && event.target.closest(".claim")) {
+        touchTracking = null;
+        tapCandidate = null;
+        return;
+      }
+      if (!touchTracking) {
+        const n = event.touches.length;
+        const x = n === 2
+          ? (event.touches[0].clientX + event.touches[1].clientX) / 2
+          : event.touches[0].clientX;
+        const y = n === 2
+          ? (event.touches[0].clientY + event.touches[1].clientY) / 2
+          : event.touches[0].clientY;
+        touchTracking = { time: Date.now(), x: x, y: y, fingers: n, moved: n > 2 };
+      } else {
+        touchTracking.fingers = Math.max(touchTracking.fingers, event.touches.length);
+        if (event.touches.length === 2) {
+          // Midpoint, for centring a two-finger zoom-out.
+          touchTracking.x = (event.touches[0].clientX + event.touches[1].clientX) / 2;
+          touchTracking.y = (event.touches[0].clientY + event.touches[1].clientY) / 2;
+        }
+      }
+    }, { passive: true });
+
+    svg.node().addEventListener("touchmove", function (event) {
+      if (!touchTracking) return;
+      const t = event.touches[0];
+      if (touchTracking.fingers === 1 &&
+          Math.hypot(t.clientX - touchTracking.x, t.clientY - touchTracking.y) > TAP_SLOP) {
+        touchTracking.moved = true;
+      }
+      if (touchTracking.fingers > 1) {
+        // Any real two-finger movement is a pinch; the zoom behaviour owns it.
+        touchTracking.moved = true;
+      }
+    }, { passive: true });
+
+    svg.node().addEventListener("touchend", function (event) {
+      if (!touchTracking || event.touches.length > 0) return;
+      const tap = touchTracking;
+      touchTracking = null;
+      const now = Date.now();
+      if (tap.moved || now - tap.time > TAP_MS) { tapCandidate = null; return; }
+      const point = d3.pointer({ clientX: tap.x, clientY: tap.y }, svg.node());
+
+      if (tap.fingers >= 2) {
+        tapCandidate = null;
+        zoomStep(1 / 2, point);
+        return;
+      }
+      if (tapCandidate && now - tapCandidate.time < TAP_LINK_MS &&
+          Math.hypot(tap.x - tapCandidate.x, tap.y - tapCandidate.y) < TAP_SLOP * 2) {
+        tapCandidate = null;
+        zoomStep(2, point);
+        return;
+      }
+      tapCandidate = { time: now, x: tap.x, y: tap.y };
+    }, { passive: true });
+
+    svg.node().addEventListener("touchcancel", function () {
+      touchTracking = null;
+      tapCandidate = null;
+    }, { passive: true });
+
     svg.call(zoom);
+
     svg.call(zoom.transform,homeTransform());
 
     if (window.ResizeObserver) {
@@ -828,21 +673,15 @@
       if (event.key !== "Escape") return;
       if (panesOpen()) return; // the open dialog closes itself
       hideTooltip();
-      if (isPhoneViewport() && sheetSnap !== "peek") {
-        setSnap("peek");
-        return;
-      }
       if (exploreMode) releaseMap();
     });
     if (phoneQuery.addEventListener) {
       phoneQuery.addEventListener("change",function () {
         updateExploreMode();
-        syncSheetMode();
       });
     } else {
       phoneQuery.addListener(function () {
         updateExploreMode();
-        syncSheetMode();
       });
     }
     updateExploreMode();
@@ -851,8 +690,6 @@
 
     // Bootstrap: every helper above is defined, so the first paint is safe here.
     updateVisibility();
-    setSnap("peek",{ animate:false });
-    syncSheetMode();
 
     navigationReady = true;
     const defaultClaim = claims.find(function (d) { return d.id === "bal-petra"; });
@@ -860,7 +697,6 @@
       selectClaim(defaultClaim, false);
       renderMobileSearch();
     }
-    updatePeekLabel();
 
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(function () {
@@ -869,11 +705,6 @@
       });
     }
 
-    if (window.visualViewport) {
-      window.visualViewport.addEventListener("resize", function () {
-        if (isPhoneViewport()) setSnap(sheetSnap,{ animate:false });
-      });
-    }
 
     // ————— The phone drawer —————
     // The control rail is a fixed panel on the desktop and a drawer on a phone,
