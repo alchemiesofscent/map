@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-17";
+      --asset-version: "20260814-18";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -1160,6 +1160,36 @@
     }
     .dossier.is-stamping { animation: card-stamp var(--t-stamp) ease-out; }
 
+    /* ————— A dossier that gets out of the way —————
+       Collapsed, the panel slides left until only its nav column peeks from
+       the screen edge: the arrows stay reachable, the chevron flips to »,
+       and the map underneath is unobstructed. Selecting anything — a point,
+       a search result, an index row — reopens it, so the reader never has to
+       remember where the panel went.
+
+       --dossier-left mirrors the panel's own left offset so the arithmetic
+       lands the right edge exactly one column-width from the screen edge at
+       either breakpoint. */
+    .map-experience.chart .dossier {
+      --dossier-left: 28px;
+      transition: transform var(--t-snap) ease;
+    }
+    .map-experience.chart .dossier.is-collapsed {
+      transform: translateX(calc(-100% + 52px - var(--dossier-left)));
+    }
+    /* Off-screen content should not catch a tab stop or a screen reader; the
+       delay lets the slide finish before it winks out, and clears instantly
+       on the way back in. */
+    .map-experience.chart .dossier.is-collapsed .dossier__inner {
+      visibility: hidden;
+      transition: visibility 0s var(--t-snap);
+    }
+    .map-experience.chart .dossier .dossier__inner { transition: visibility 0s; }
+    .dossier.is-collapsed .dossier__collapse-glyph { display: inline-block; transform: scaleX(-1); }
+    @media (prefers-reduced-motion: reduce) {
+      .map-experience.chart .dossier { transition: none; }
+    }
+
     @media (max-width: 720px) {
       :root { --nav-h: 0px; }
       body { overscroll-behavior-y: contain; }
@@ -1579,7 +1609,10 @@
       /* The strip grew a second row for the dots, so the dossier's foot
          clearance grows with it: shell.css's 58px was measured against the
          pill alone. */
-      .map-experience.chart .dossier { bottom: calc(112px + env(safe-area-inset-bottom)); }
+      .map-experience.chart .dossier {
+        --dossier-left: 12px;
+        bottom: calc(112px + env(safe-area-inset-bottom));
+      }
       .ingredient-pill {
         display: inline-flex;
         align-items: center;

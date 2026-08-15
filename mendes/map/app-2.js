@@ -290,6 +290,28 @@
     // The arrows are persistent chrome on the dossier's right edge, and the
     // dots are the strip's rail — both the journeys viewer's furniture, fed by
     // the map's own stepper.
+    // Collapsing is the reader's choice; reopening is the map's. Every path
+    // that lands a claim or an ingredient in the panel runs through
+    // selectClaim or selectIngredient, so those two calls are the whole
+    // "open automatically" contract.
+    const dossierPanel = document.querySelector(".dossier");
+    const dossierCollapse = document.getElementById("dossier-collapse");
+
+    function setDossierCollapsed(collapsed) {
+      if (!dossierPanel) return;
+      dossierPanel.classList.toggle("is-collapsed",collapsed);
+      if (dossierCollapse) {
+        dossierCollapse.setAttribute("aria-expanded",collapsed ? "false" : "true");
+        dossierCollapse.setAttribute("aria-label",collapsed ? "Expand the details panel" : "Collapse the details panel");
+      }
+    }
+
+    if (dossierCollapse) {
+      dossierCollapse.addEventListener("click", function () {
+        setDossierCollapsed(!dossierPanel.classList.contains("is-collapsed"));
+      });
+    }
+
     const prevStep = document.getElementById("prev-step");
     const nextStep = document.getElementById("next-step");
     const stripRail = document.getElementById("strip-rail");
@@ -362,6 +384,7 @@
           '<div class="dossier__foot"><span>' + escapeHTML(ingredient.translit) + '</span></div>';
         updateStepNav({ locations:[], index:-1 });
         renderStripRail({ locations:[], index:-1 });
+        setDossierCollapsed(false);
         return;
       }
       selectClaim(locations[0],false,false,false);
@@ -443,6 +466,7 @@
         .text(d.place);
       positionSelectedLabel();
 
+      setDossierCollapsed(false);
       const state = locationsFor(d);
       const position = state.locations.length
         ? (state.index + 1) + " of " + state.locations.length
@@ -457,7 +481,12 @@
       if (shouldFocus) focusClaim(d,shouldForceFocus);
 
       if (shouldScroll) {
-        document.querySelector(".map-shell").scrollIntoView({ behavior:reducedMotion.matches ? "auto" : "smooth", block:"start" });
+        // .map-shell went with the sheet-era chrome; the band itself is the
+        // scroll target now. The null lookup had thrown here since then, so
+        // index rows selected their claim but never carried the reader back
+        // up to the map.
+        const band = document.querySelector(".map-experience");
+        if (band) band.scrollIntoView({ behavior:reducedMotion.matches ? "auto" : "smooth", block:"start" });
       }
     }
 
