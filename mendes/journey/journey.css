@@ -9,7 +9,7 @@
        register under it. */
 
     :root {
-      --journey-version: "20260815-3";
+      --journey-version: "20260815-4";
     }
 
     html, body { height: 100%; }

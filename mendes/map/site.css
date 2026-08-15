@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260815-3";
+      --asset-version: "20260815-4";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -1564,3 +1564,28 @@
       text-decoration-color: rgba(231,220,195,.4);
     }
     .dossier__reader-link:hover { color: #F5EFDF; }
+
+    /* ————— The court layer —————
+       Placed reports from the queens' dossier: a dashed parchment triangle,
+       deliberately unlike every evidence glyph — the solid ancient circle,
+       the dashed inference diamond, the gold theological rings. */
+    .court-claim { cursor: pointer; }
+    .court-claim:focus-visible { outline: none; }
+    .court-claim:focus-visible .focus-ring,
+    .court-claim.is-selected .focus-ring { opacity: 1; }
+    .court-claim .court-glyph { color: var(--glyph-ancient-dark); }
+    .key-glyph.court { color: var(--gold-ink); }
+    .strip__swatch--court { color: var(--glyph-ancient-dark); }
+    .view-control__court-glyph {
+      flex: none;
+      width: 13px;
+      height: 13px;
+      color: var(--gold);
+    }
+    #toggle-court[aria-pressed="false"] { opacity: .55; }
+    #toggle-court[aria-pressed="false"] .view-control__court-glyph { color: rgba(231,220,195,.6); }
+    #toggle-court[aria-pressed="true"] {
+      border-color: var(--gold);
+      background: rgba(201,162,39,.14);
+      color: #F5EFDF;
+    }

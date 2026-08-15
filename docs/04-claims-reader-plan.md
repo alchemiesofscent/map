@@ -134,11 +134,22 @@ Mapping rules:
   ingredient in claims.json (validated against the content files by
   `check_mendes_claims.py`).
 
-**Phase 2b — filters and the court layer**
-- Filter chips in the search results (evidence class, recipe layer, queen,
-  aromatic).
-- Optional “court” map layer for the placed PQF reports (Alexandria, Cyrene,
-  Jericho, Tarsus), dashed, clearly labelled report-evidence.
+**Phase 2b — filters and the court layer (shipped)**
+- Filter chips under the dossier search: a scope row (All · Text · Map
+  claims · Queens), then per-scope refinements — evidence class and recipe
+  layer for the map corpus, queen and olfactory relevance for the court
+  records. With a scope chosen and no query, the search browses that corpus
+  under the active refinements instead of going quiet. (Aromatic filtering
+  stays free-text: searching an aromatic’s name is the filter.)
+- The “court” map layer: the placed queens’ reports (Alexandria ×4, Cyrene,
+  Tarsus, Jericho — same-city dots spread in a fixed-size ring) draw as a
+  dashed parchment triangle, a register deliberately unlike every evidence
+  glyph. Off by default; its rail row sits under the recipe layers and never
+  joins the claim counter, the recipe filters, or the stop strip. Selecting
+  a court dot fills the panel with queen, commentary, citation, aromatics,
+  and a link to the record’s dossier row; `#claim-court-…` deep links switch
+  the layer on and select the dot. The guide pane and the strip legend
+  explain the register: a report never becomes an ingredient-origin dot.
 
 **Phase 3 — the rest of the corpus**
 - Fold in `data/generated/simples/provenance_entry_claims.json` (already has

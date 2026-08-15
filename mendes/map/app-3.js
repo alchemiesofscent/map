@@ -389,6 +389,13 @@
         return "translate(" + p[0] + "," + p[1] + ") scale(" + overlayScale + ")";
       });
       marker.select(".claim-hit").attr("r",22 * fullScreenScale / overlayScale);
+      courtMarker.attr("transform", function (d) {
+        // The ring offset for shared cities is screen-space, applied after
+        // projection, so the spread stays finger-sized at every zoom.
+        const p = transformedPoint(d.coord);
+        return "translate(" + (p[0] + d.dx * overlayScale) + "," + (p[1] + d.dy * overlayScale) + ") scale(" + overlayScale + ")";
+      });
+      courtMarker.select(".claim-hit").attr("r",20 * fullScreenScale / overlayScale);
       routeLabels
         .attr("x", function (d) { return transformedPoint(d.labelAt)[0]; })
         .attr("y", function (d) { return transformedPoint(d.labelAt)[1]; });
@@ -827,7 +834,16 @@
       const match = /^#claim-(.+)$/.exec(hash);
       if (!match) return;
       const claim = claims.find(function (c) { return c.id === match[1]; });
-      if (claim) selectClaim(claim, false, true, false, true);
+      if (claim) { selectClaim(claim, false, true, false, true); return; }
+      // Court ids arrive from the dossier too; a court link switches the
+      // layer on rather than landing on an invisibly selected dot.
+      const plot = courtPlots.find(function (p) {
+        return p.id === match[1] || p.record.id === match[1];
+      });
+      if (plot) {
+        setCourtLayer(true);
+        selectCourtPlot(plot,true);
+      }
     }
     window.addEventListener("hashchange", selectClaimFromHash);
     selectClaimFromHash();
