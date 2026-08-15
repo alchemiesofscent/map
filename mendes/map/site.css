@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260815-8";
+      --asset-version: "20260815-9";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -103,7 +103,7 @@
     select,
     summary,
     .toggle,
-    .site-menu__panel a { touch-action: manipulation; }
+    .browse-item { touch-action: manipulation; }
     a { color: #275f6b; text-underline-offset: 2px; }
     .page { width: min(1280px, 100%); margin: 0 auto; padding: 24px; }
     .mono-voice {
@@ -460,64 +460,61 @@
        already the containing block: it is position:relative above. */
     .map-experience.chart { --chart-anchor: absolute; }
 
-    /* ————— Site menu: the page links behind a hamburger —————
-       Chart-room glass, in the corner the rail used to hold; the rail sits
-       just below. Hidden on a phone, where the drawer toggle owns the corner
-       and the drawer already carries the same links. */
-    .site-menu {
-      position: absolute;
-      z-index: 8;
-      top: calc(20px + env(safe-area-inset-top));
-      right: 20px;
+    /* ————— The drawer's ingredient browse —————
+       The complete list, grouped by kind with live claim counts — the search
+       pane's browse restyled for the drawer's dark glass. */
+    .view-control__browse .browse-group {
+      margin: 12px 0 4px;
+      color: rgba(231,220,195,.6);
+      font-family: var(--font-mono);
+      font-size: .64rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
     }
-    .site-menu__toggle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 46px;
-      height: 46px;
-      border: 1px solid rgba(231,220,195,.3);
-      border-radius: 50%;
-      background: rgba(14,34,41,.86);
-      -webkit-backdrop-filter: blur(8px);
-      backdrop-filter: blur(8px);
-      color: var(--land);
-      font-size: 1.2rem;
+    .view-control__browse .browse-group:first-child { margin-top: 0; }
+    .view-control__browse .browse-list { margin: 0; padding: 0; list-style: none; }
+    .view-control__browse .browse-list li { border-top: 1px solid rgba(231,220,195,.12); }
+    .view-control__browse .browse-item {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) auto;
+      align-items: baseline;
+      column-gap: 12px;
+      width: 100%;
+      min-height: 44px;
+      padding: 8px 2px;
+      border: 0;
+      background: transparent;
+      color: #F5EFDF;
+      text-align: left;
       cursor: pointer;
     }
-    .site-menu__toggle:hover,
-    .site-menu__toggle[aria-expanded="true"] { background: rgba(231,220,195,.16); }
-    .site-menu__panel {
-      position: absolute;
-      top: 54px;
-      right: 0;
-      display: grid;
-      gap: 4px;
-      min-width: 268px;
-      padding: 8px;
-      border: 1px solid rgba(231,220,195,.18);
-      border-radius: var(--r-card);
-      background: rgba(14,34,41,.92);
-      -webkit-backdrop-filter: blur(14px) saturate(1.3);
-      backdrop-filter: blur(14px) saturate(1.3);
-      box-shadow: var(--shadow);
+    .view-control__browse .browse-item:hover { background: rgba(231,220,195,.1); }
+    .view-control__browse .browse-item[aria-current="true"] { background: rgba(201,162,39,.16); }
+    .view-control__browse .browse-name { font-family: var(--font-greek); font-size: .95rem; line-height: 1.25; }
+    .view-control__browse .browse-gloss { grid-column: 1; color: rgba(231,220,195,.62); font-size: .72rem; }
+    .view-control__browse .browse-count {
+      grid-row: 1 / span 2;
+      grid-column: 2;
+      align-self: center;
+      color: rgba(231,220,195,.62);
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      font-variant-numeric: tabular-nums;
     }
-    .site-menu__panel[hidden] { display: none; }
-    .site-menu__panel a {
-      display: block;
-      padding: 11px 14px;
-      border-radius: 8px;
-      color: var(--land);
-      font-size: .84rem;
-      font-weight: 600;
-      text-decoration: none;
-      white-space: nowrap;
+
+    /* Keyboard keys in the guide pane's light register. */
+    .pane kbd {
+      display: inline-block;
+      min-width: 18px;
+      padding: 1px 5px;
+      border: 1px solid #cdc2a9;
+      border-radius: 4px;
+      background: var(--paper);
+      font-family: var(--font-mono);
+      font-size: .82em;
+      text-align: center;
     }
-    .site-menu__panel a:hover { background: rgba(231,220,195,.12); color: #F5EFDF; }
-    @supports not (backdrop-filter: blur(8px)) {
-      .site-menu__toggle, .site-menu__panel { background: rgba(14,34,41,.96); }
-    }
-    .map-experience.chart .view-control { top: calc(82px + env(safe-area-inset-top)); }
 
     .map-experience.chart .dossier__inner { overflow: auto; }
 

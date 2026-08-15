@@ -134,9 +134,9 @@
     // With no query the pane browses the ingredients by kind — this is what
     // replaced the cramped dropdowns that used to sit in the sheet. Typing
     // switches to matching individual claims.
-    function renderIngredientBrowse() {
+    function ingredientBrowseMarkup(currentId) {
       const active = activeRecipeKeys();
-      const markup = ingredientGroups.map(function (group) {
+      return ingredientGroups.map(function (group) {
         const members = group.ids
           .map(function (id) { return ingredientById.get(id); })
           .filter(function (item) { return item && item.recipes.some(function (r) { return active.has(r); }); });
@@ -146,14 +146,19 @@
             const count = item.claims.filter(function (claim) {
               return claim.recipes.some(function (r) { return active.has(r); });
             }).length;
-            return '<li><button type="button" class="browse-item" data-ingredient-id="' + escapeHTML(item.id) + '">' +
+            return '<li><button type="button" class="browse-item"' +
+              (currentId === item.id ? ' aria-current="true"' : '') +
+              ' data-ingredient-id="' + escapeHTML(item.id) + '">' +
               '<span class="browse-name" lang="grc">' + escapeHTML(item.greek) + '</span>' +
               '<span class="browse-gloss">' + escapeHTML(item.gloss) + '</span>' +
               '<span class="browse-count">' + count + '</span>' +
             '</button></li>';
           }).join("") + '</ul>';
       }).join("");
-      ingredientBrowse.innerHTML = markup;
+    }
+
+    function renderIngredientBrowse() {
+      ingredientBrowse.innerHTML = ingredientBrowseMarkup(null);
     }
 
     function renderMobileSearch() {
@@ -738,13 +743,31 @@
     const drawerClose = document.getElementById("drawer-close");
     const drawerBackdrop = document.getElementById("drawer-backdrop");
 
+    const drawerBrowse = document.getElementById("drawer-browse");
+
+    function renderDrawerBrowse() {
+      if (!drawerBrowse) return;
+      drawerBrowse.innerHTML = ingredientBrowseMarkup(selectedIngredientId);
+    }
+    if (drawerBrowse) {
+      drawerBrowse.addEventListener("click",function (event) {
+        const button = event.target.closest("[data-ingredient-id]");
+        if (!button) return;
+        const ingredient = ingredientById.get(button.dataset.ingredientId);
+        if (!ingredient) return;
+        setDrawer(false);
+        selectIngredient(ingredient,true);
+      });
+    }
+
     function setDrawer(open) {
       document.body.classList.toggle("menu-open",open);
       if (drawerToggle) drawerToggle.setAttribute("aria-expanded",open ? "true" : "false");
       if (open) {
+        renderDrawerBrowse();
         const first = document.querySelector("#view-control-routes button");
         if (first) first.focus();
-      } else if (drawerToggle && isPhoneViewport()) {
+      } else if (drawerToggle) {
         drawerToggle.focus();
       }
     }
@@ -754,9 +777,6 @@
     });
     if (drawerClose) drawerClose.addEventListener("click",function () { setDrawer(false); });
     if (drawerBackdrop) drawerBackdrop.addEventListener("click",function () { setDrawer(false); });
-    phoneQuery.addEventListener("change",function () {
-      if (!isPhoneViewport()) setDrawer(false);
-    });
     // A detached keyboard or a paired mouse changes the answer mid-session.
     if (coarsePointerQuery.addEventListener) {
       coarsePointerQuery.addEventListener("change",function () {
@@ -824,30 +844,44 @@
       }
     });
 
-    // ————— Site menu —————
-    // The page links behind the top-right hamburger. Click toggles, a click
-    // anywhere else closes, and Escape closes before the rest of the ladder.
-    const siteMenuToggle = document.getElementById("site-menu-toggle");
-    const siteMenuPanel = document.getElementById("site-menu-panel");
-    if (siteMenuToggle && siteMenuPanel) {
-      const setSiteMenu = function (open) {
-        siteMenuPanel.hidden = !open;
-        siteMenuToggle.setAttribute("aria-expanded",open ? "true" : "false");
-      };
-      siteMenuToggle.addEventListener("click",function () {
-        setSiteMenu(siteMenuPanel.hidden);
-      });
-      document.addEventListener("click",function (event) {
-        if (siteMenuPanel.hidden) return;
-        if (!event.target.closest(".site-menu")) setSiteMenu(false);
-      });
-      document.addEventListener("keydown",function (event) {
-        if (event.key !== "Escape" || siteMenuPanel.hidden) return;
-        event.preventDefault();
-        setSiteMenu(false);
-        siteMenuToggle.focus();
+    // ————— Arrow-key navigation —————
+    // ←/→ step the selected ingredient's places in source order; ↑/↓ move
+    // between ingredients, wrapping at the ends. Only while the band holds
+    // the viewport's centre — below it the arrows scroll the catalogue as
+    // usual — and never while typing or while a pane or the drawer is open.
+    function visibleOrderedIngredients() {
+      const active = activeRecipeKeys();
+      return orderedIngredients.filter(function (ingredient) {
+        return ingredient.recipes.some(function (r) { return active.has(r); });
       });
     }
+    function stepIngredient(delta) {
+      const list = visibleOrderedIngredients();
+      if (!list.length) return;
+      const index = list.findIndex(function (ingredient) { return ingredient.id === selectedIngredientId; });
+      const next = index < 0
+        ? (delta > 0 ? list[0] : list[list.length - 1])
+        : list[(index + delta + list.length) % list.length];
+      selectIngredient(next,true);
+    }
+    document.addEventListener("keydown",function (event) {
+      if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      if (["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].indexOf(event.key) < 0) return;
+      const target = event.target;
+      if (target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA" ||
+          target.tagName === "SELECT" || target.isContentEditable)) return;
+      if (panesOpen() || document.body.classList.contains("menu-open")) return;
+      const band = mapExperience.getBoundingClientRect();
+      const centre = window.innerHeight / 2;
+      if (band.top > centre || band.bottom < centre) return;
+      event.preventDefault();
+      if (event.key === "ArrowLeft") stepLocation(-1);
+      else if (event.key === "ArrowRight") {
+        if (selectedClaim) stepLocation(1);
+        else stepIngredient(1);
+      }
+      else stepIngredient(event.key === "ArrowDown" ? 1 : -1);
+    });
 
     // ————— Deep links —————
     // ../#claim-<id> selects that claim on load, so the dossier's search can

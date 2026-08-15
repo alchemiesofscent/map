@@ -58,20 +58,6 @@
         <span aria-hidden="true">≡</span>
       </button>
 
-      <!-- The desktop's page links, folded behind a hamburger on the map's
-           top-right corner; the light nav strip above the band is gone. On a
-           phone the drawer toggle owns this corner and its drawer carries the
-           same links, so this menu hides there. -->
-      <div class="site-menu" id="site-menu">
-        <button class="site-menu__toggle" id="site-menu-toggle" type="button"
-                aria-expanded="false" aria-controls="site-menu-panel" aria-label="House of Mendes pages">
-          <span aria-hidden="true">≡</span>
-        </button>
-        <nav class="site-menu__panel" id="site-menu-panel" aria-label="House of Mendes pages" hidden>
-          <a href="../?v=20260815-7">← Dossier &amp; ingredient catalogue</a>
-        </nav>
-      </div>
-
       <div class="mobile-menu" id="mobile-menu">
         <button class="mobile-menu__close" id="drawer-close" type="button" aria-label="Close menu">
           <span aria-hidden="true">×</span>
@@ -94,6 +80,14 @@
               placeholder="Try myrrh, Petra, Pliny…"
             />
           </div>
+
+          <span class="view-control__divider" aria-hidden="true"></span>
+
+          <!-- The complete ingredient list, grouped by kind with live claim
+               counts — rendered by app-3.js from the same data as the search
+               pane's browse. Selecting a row selects the ingredient on the
+               map and closes the drawer. -->
+          <div class="view-control__browse" id="drawer-browse" aria-label="All ingredients"></div>
 
           <span class="view-control__divider" aria-hidden="true"></span>
           <label class="view-control__explore">
@@ -222,6 +216,8 @@
           </li>
         </ul>
         <p class="pane-note">Markers show the evidence class only. Use the perfume layers above the map to see which points belong to a recipe; each point also names its recipes when you select or hover it.</p>
+        <h3 class="pane-section">Keyboard</h3>
+        <p class="pane-note"><kbd>←</kbd> / <kbd>→</kbd> step through the selected ingredient&rsquo;s places in source order; <kbd>↑</kbd> / <kbd>↓</kbd> move between ingredients; <kbd>Esc</kbd> closes panes and releases the map.</p>
         <h3 class="pane-section">Route caution</h3>
         <p>Every sea, land, and Nile corridor on this map is a conventional reconstruction—not a route attested for any single ingredient.</p>
         <h3 class="pane-section">One ingredient at a time</h3>
