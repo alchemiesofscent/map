@@ -173,6 +173,14 @@ Mapping rules:
   `app-3.js` are removed (nothing referenced them since the combined-page
   era; the viewers load `mendes/map/app-1.js` and their own files).
 
+**Retired**
+- The journeys viewer (`mendes/journey/`). Its one distinct behaviour —
+  walking a single ingredient’s attested places in source order — lives in
+  the map: selecting an ingredient (index row, search, or a catalogue
+  entry’s `#ingredient-<id>` link) frames all its claims, and the panel
+  arrows and stop strip step through them. The old URL redirects to the
+  map; `shell.css` (extracted from journey.css) now serves the map alone.
+
 **Still open (future work)**
 - The periplus dataset behind the same schema, if its journey records ever
   need to be searchable from the dossier.

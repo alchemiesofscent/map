@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260815-6";
+      --asset-version: "20260815-8";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -1075,10 +1075,8 @@
     }
 
     /* ————— The chart-room: map SVG on the dark sea —————
-       The basemap is painted in the journeys viewer's dark register — dark
-       land under parchment labels — so the two full-map pages read as one
-       room. journey.css carries the same values for its own full-bleed body;
-       change them together. */
+       Dark land under parchment labels — the register the retired journeys
+       viewer established, now this page's alone. */
     .graticule { fill: none; stroke: rgba(129,181,199,.13); stroke-width: .6; }
     .land { fill: #17313A; stroke: rgba(231,220,195,.22); stroke-width: .5; vector-effect: non-scaling-stroke; }
     .frame { fill: none; stroke: rgba(231,220,195,.22); stroke-width: 1; }

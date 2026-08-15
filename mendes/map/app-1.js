@@ -1,19 +1,17 @@
 
-  // Shared data loader. Two shells fetch this verbatim as their first script —
-  // mendes/map/ and mendes/journey/ — so the claims and their citations have a
-  // single home and a correction reaches both viewers. It opens the async IIFE
-  // that each shell's last file closes: do not close it here, and do not move
-  // the opening line, or the concatenated body stops parsing on both pages.
+  // Data loader. The shell fetches this as its first script; it opens the
+  // async IIFE that app-3.js closes — do not close it here, and do not move
+  // the opening line, or the concatenated body stops parsing.
   //
-  // The records themselves live in ../data/claims.json (one directory up from
-  // either page, so the same relative URL works for both shells). This file
-  // keeps only what is viewer furniture rather than evidence: the derived
-  // indexes and the map geometry (labels, corridors, convergence).
+  // The records themselves live in ../data/claims.json. This file keeps only
+  // what is viewer furniture rather than evidence: the derived indexes and
+  // the map geometry (labels, corridors, convergence). (The retired journeys
+  // viewer used to share this loader; the map is its only reader now.)
   (async function () {
     "use strict";
 
     const claimsUrl = "../data/claims.json?v="
-      + encodeURIComponent(window.ASSET_VERSION || window.JOURNEY_VERSION || "");
+      + encodeURIComponent(window.ASSET_VERSION || "");
     const claimsResponse = await fetch(claimsUrl);
     if (!claimsResponse.ok) throw new Error("Could not load " + claimsUrl + ": " + claimsResponse.status);
     const claimsData = await claimsResponse.json();

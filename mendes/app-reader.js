@@ -257,6 +257,20 @@
               record.commentary || ""].join(" "))
           });
         });
+        // Every plotted material's catalogue entry gets a jump onto the map,
+        // landing with the ingredient selected and all its claims framed.
+        // H3s only: that is the Part II shelf — context anchors point at
+        // prose sections where a map chip would dangle oddly.
+        data.ingredients.concat(data.contextIngredients, [data.theology]).forEach(function (ingredient) {
+          if (!ingredient.claims.length || !ingredient.dossierAnchor) return;
+          var heading = document.getElementById(ingredient.dossierAnchor);
+          if (!heading || heading.tagName !== "H3") return;
+          var link = document.createElement("a");
+          link.className = "entry-map-link";
+          link.href = "map/#ingredient-" + encodeURIComponent(ingredient.id);
+          link.textContent = ingredient.claims.length + (ingredient.claims.length === 1 ? " claim" : " claims") + " on the map →";
+          heading.appendChild(link);
+        });
         if (corpus) {
           // TEI-verified simples claims join the provenance group; their rows
           // link out to the accepted Pleiades place.

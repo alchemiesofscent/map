@@ -1,28 +1,24 @@
 
     /* ————— Chart-room shell —————
-       The interface furniture shared by the two full-map viewers: the floating
-       masthead card, the phone drawer, the control rail, the dossier, and the
-       stop strip. Extracted from journey.css, which had carried app/'s geometry
-       alone since the journeys viewer was built.
+       The interface furniture of the chart room: the floating masthead card,
+       the phone drawer, the control rail, the dossier, and the stop strip.
+       Extracted from the retired journeys viewer's journey.css; the
+       provenance map is its only reader now.
 
-       Load order on both pages is site.css -> shell.css -> page css, so tokens,
-       glyphs, panes, print and motion still come from site.css and each page
-       keeps the last word.
+       Load order is site.css -> shell.css, so tokens, glyphs, panes, print
+       and motion come from site.css and the page keeps the last word.
 
-       Two knobs let one sheet serve both pages:
+       Two knobs survive the extraction:
 
-       .chart          scopes every rule, so site.css keeps owning .masthead for
-                       the map page's document header. Winning on source order
-                       alone would leave either page one edit away from a
-                       collapsed masthead.
+       .chart          scopes every rule, so site.css keeps owning .masthead
+                       for the map page's document header.
 
-       --chart-anchor  positions the chrome. The journeys viewer is full-bleed
-                       and leaves it `fixed`. The provenance map scrolls a
-                       catalogue underneath its stage, so it sets `absolute` and
-                       the furniture stays with the map instead of floating over
-                       the sources. The two modal layers — the drawer and its
-                       backdrop — stay `fixed` either way, since a drawer covers
-                       the viewport on both. */
+       --chart-anchor  positions the chrome; unset it defaults to `fixed`
+                       (the retired full-bleed viewer's mode). The provenance
+                       map scrolls a catalogue underneath its stage, so it
+                       sets `absolute` and the furniture stays with the map.
+                       The drawer and its backdrop stay `fixed` either way,
+                       since a drawer covers the viewport regardless. */
 
     .chart {
       --dossier-bg: rgba(14,34,41,.78);
