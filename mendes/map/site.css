@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-16";
+      --asset-version: "20260814-17";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -527,34 +527,6 @@
        only changes where it sits, so its own padding gives way to the dossier's. */
     .dossier .detail-content { padding: 0; }
 
-    /* ————— The dark register, keyed to the panel —————
-       These colours used to sit inside the desktop @media block, because the
-       only dark home for this content was the sheet, and the sheet was a
-       desktop-width thing. The dossier is dark at every width, so a viewport
-       query is the wrong question: below 721px the overrides vanished and the
-       light-study greys underneath (#65706d, #7b7568) painted themselves onto
-       dark glass at roughly 1.3:1. Legible on a desk, unreadable on a phone.
-
-       Scoped to .dossier so they follow the panel rather than the viewport.
-       Keyed off .detail-content rather than #detail, which no element has
-       carried since the sheet was removed — the heading had been reading
-       correctly only by inheriting the panel's own colour. */
-    .dossier .detail-content a { color: #9CC4DA; }
-    .dossier .detail-content h2 { color: #F5EFDF; }
-    .dossier .detail-kicker { color: rgba(231,220,195,.62); }
-    .dossier .detail-gloss { color: rgba(217,222,211,.85); }
-    .dossier .detail-hint { color: rgba(217,222,211,.6); }
-    .dossier .detail-place { color: #F5EFDF; border-color: rgba(231,220,195,.18); }
-    .dossier .detail-citation {
-      border-left: 3px solid var(--gold);
-      background: rgba(0,0,0,.24);
-      color: #D9DED3;
-    }
-    .dossier .detail-citation strong { color: rgba(231,220,195,.8); }
-    .dossier .unlocated { border-left-color: #9FB0C5; background: rgba(0,0,0,.2); color: rgba(217,222,211,.85); }
-    .dossier .evidence-pill.ancient { color: var(--glyph-ancient-dark); }
-    .dossier .evidence-pill.modern { color: #9FB0C5; }
-    .dossier .evidence-pill.theology { color: var(--gold); }
     .map-shell {
       position: absolute;
       inset: 0;
@@ -828,35 +800,6 @@
       font: 600 .76rem/1.2 var(--font-body);
     }
     .ingredient-switcher:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 2px; }
-    .location-nav {
-      display: grid;
-      grid-template-columns: 44px minmax(0,1fr) 44px;
-      gap: 4px;
-      align-items: stretch;
-    }
-    .location-nav button {
-      min-height: 44px;
-      padding: 0;
-      border: 1px solid #bcb3a3;
-      background: #f7f2e8;
-      color: #2e5f68;
-      font: 600 1rem/1 var(--font-body);
-      cursor: pointer;
-    }
-    .location-nav button:hover:not(:disabled) { background: #eee6d7; color: #173f43; }
-    .location-nav button:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 2px; }
-    .location-nav button:disabled { cursor: default; opacity: .38; }
-    .location-nav-status {
-      align-self: center;
-      min-width: 0;
-      color: #625d52;
-      font: 600 .62rem/1.15 var(--font-body);
-      text-align: center;
-    }
-    .location-nav-status strong,
-    .location-nav-status span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .location-nav-status strong { color: #273734; font-size: .68rem; }
-    .location-nav-position { margin-top: 2px; font-variant-numeric: tabular-nums; }
     /* Desktop: the detail panel floats over the chart-room's right edge as dark glass. */
     @media (min-width: 721px) {
       .sheet {
@@ -1215,7 +1158,7 @@
       from { transform: translateY(2px) scale(1.012); opacity: .55; }
       to { transform: none; opacity: 1; }
     }
-    #detail.is-stamping { animation: card-stamp var(--t-stamp) ease-out; }
+    .dossier.is-stamping { animation: card-stamp var(--t-stamp) ease-out; }
 
     @media (max-width: 720px) {
       :root { --nav-h: 0px; }
@@ -1519,7 +1462,7 @@
       .claim:hover .claim-glyph,
       .claim:focus-visible .claim-glyph { transform: none; }
       .skeleton-coast { animation: none; }
-      #detail.is-stamping { animation: card-fade var(--t-stamp) ease-out; }
+      .dossier.is-stamping { animation: card-fade var(--t-stamp) ease-out; }
       @keyframes card-fade { from { opacity: .55; } to { opacity: 1; } }
     }
 
@@ -1630,7 +1573,13 @@
     .ingredient-pill { display: none; }
 
     @media (max-width: 720px) {
-      .strip { justify-content: center; }
+      .strip { flex-direction: column; align-items: stretch; gap: 8px; }
+      .strip .strip__rail { width: 100%; }
+      .ingredient-pill { align-self: center; }
+      /* The strip grew a second row for the dots, so the dossier's foot
+         clearance grows with it: shell.css's 58px was measured against the
+         pill alone. */
+      .map-experience.chart .dossier { bottom: calc(112px + env(safe-area-inset-bottom)); }
       .ingredient-pill {
         display: inline-flex;
         align-items: center;

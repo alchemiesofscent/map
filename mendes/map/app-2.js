@@ -160,19 +160,6 @@
       return "Working inference / source silence";
     }
 
-    function recipeBadges(keys) {
-      return keys.map(function (key) {
-        return '<span class="badge ' + key + '">' + recipes[key].name + '</span>';
-      }).join("");
-    }
-
-    function affiliationBadges(d) {
-      if (d.context) {
-        return '<span class="badge context">Metopion name-history · not a recipe ingredient</span>';
-      }
-      return recipeBadges(d.recipes);
-    }
-
     function escapeHTML(value) {
       return String(value).replace(/[&<>"']/g, function (char) {
         return ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;" })[char];
@@ -258,29 +245,99 @@
       return ingredientGroups.filter(function (group) { return visibleIngredientsForGroup(group).length; });
     }
 
-    function ingredientBrowserMarkup(d) {
-      const ingredientId = d ? d.ingredient : selectedIngredientId;
-      const ingredient = ingredientById.get(ingredientId);
-      if (!ingredient) return "";
+    // ————— The dossier, in the journeys viewer's shape —————
+    // Eyebrow: ingredient · evidence class · stop counter. Title: the place.
+    // Greek in gold beneath, the note as the reading text, the citation in the
+    // gold-edged block, recipes as quiet chips, and the transliteration as the
+    // foot line. The classes are the shell's, so both viewers read from the
+    // same stylesheet and the colours arrive with the markup.
+    function locationsFor(d) {
+      const ingredient = ingredientById.get(d ? d.ingredient : selectedIngredientId);
+      if (!ingredient) return { ingredient:null, locations:[], index:-1 };
       const locations = visibleClaimsForIngredient(ingredient);
-      const locationIndex = d ? locations.findIndex(function (claim) { return claim.id === d.id; }) : -1;
-      const currentLocationIndex = locationIndex < 0 ? 0 : locationIndex;
-      const currentLocation = locations[currentLocationIndex] || null;
-      const previous = currentLocationIndex > 0 ? locations[currentLocationIndex - 1] : null;
-      const next = currentLocationIndex < locations.length - 1 ? locations[currentLocationIndex + 1] : null;
-      const currentPlaceLabel = currentLocation ? currentLocation.place : "No mapped place";
-      const locationPosition = locations.length ? (currentLocationIndex + 1) + " of " + locations.length : "No locations";
-      return '<div class="ingredient-browser">' +
-        '<nav class="location-nav" aria-label="Browse mapped locations for ' + escapeHTML(ingredient.gloss) + '" aria-describedby="location-swipe-instructions">' +
-          '<button type="button" data-location-step="-1"' + (previous ? ' aria-label="Previous location: ' + escapeHTML(previous.place) + '"' : ' disabled aria-label="No previous location"') + '><span aria-hidden="true">←</span></button>' +
-          '<div class="location-nav-status" tabindex="-1" aria-live="polite" aria-atomic="true" title="' + escapeHTML(currentPlaceLabel) + '">' +
-            '<strong>' + escapeHTML(currentPlaceLabel) + '</strong>' +
-            '<span class="location-nav-position">' + escapeHTML(locationPosition) + '</span>' +
-          '</div>' +
-          '<button type="button" data-location-step="1"' + (next ? ' aria-label="Next location: ' + escapeHTML(next.place) + '"' : ' disabled aria-label="No next location"') + '><span aria-hidden="true">→</span></button>' +
-        '</nav>' +
-        '<p class="visually-hidden" id="location-swipe-instructions">On a phone, swipe right or left in the details to move through this ingredient\'s mapped locations. Use Search to change ingredient.</p>' +
-      '</div>';
+      const index = d ? locations.findIndex(function (claim) { return claim.id === d.id; }) : -1;
+      return { ingredient:ingredient, locations:locations, index:index };
+    }
+
+    function recipeChips(d) {
+      if (d.context) {
+        return '<li>Metopion name-history · not a recipe ingredient</li>';
+      }
+      return d.recipes.map(function (key) {
+        return '<li>' + escapeHTML(recipes[key].name) + '</li>';
+      }).join("");
+    }
+
+    function dossierMarkup(d, position) {
+      return '<div class="dossier__top">' +
+          '<p class="dossier__eyebrow">' +
+            '<span>' + escapeHTML(d.gloss) + '</span>' +
+            '<span class="dossier__sep" aria-hidden="true">·</span>' +
+            '<span>' + escapeHTML(evidenceText(d)) + '</span>' +
+            (position ? '<span class="dossier__sep" aria-hidden="true">·</span><span>Stop ' + position + '</span>' : '') +
+          '</p>' +
+          '<h2 class="dossier__title">' + escapeHTML(d.place) + '</h2>' +
+          '<p class="dossier__greek-name" lang="grc">' + escapeHTML(d.greek) + '</p>' +
+        '</div>' +
+        '<div class="dossier__body">' +
+          '<p class="dossier__translation">' + escapeHTML(d.note) + '</p>' +
+          '<div class="dossier__citation"><span class="dossier__eyebrow dossier__eyebrow--inline">Citation</span><span>' + escapeHTML(d.cite) + '</span></div>' +
+          '<div class="dossier__materia"><p class="dossier__eyebrow dossier__eyebrow--inline">Recipes</p><ul class="dossier__materia-list">' + recipeChips(d) + '</ul></div>' +
+        '</div>' +
+        '<div class="dossier__foot"><span>' + escapeHTML(d.translit) + ' — ' + escapeHTML(d.gloss) + '</span></div>';
+    }
+
+    // The arrows are persistent chrome on the dossier's right edge, and the
+    // dots are the strip's rail — both the journeys viewer's furniture, fed by
+    // the map's own stepper.
+    const prevStep = document.getElementById("prev-step");
+    const nextStep = document.getElementById("next-step");
+    const stripRail = document.getElementById("strip-rail");
+    const stripDotKinds = { modern:"modern", theology:"theology" };
+
+    function updateStepNav(state) {
+      if (!prevStep || !nextStep) return;
+      const havePrev = state.index > 0;
+      const haveNext = state.index >= 0 && state.index < state.locations.length - 1;
+      // A button that disables under the finger strands focus; hand it across.
+      if (!havePrev && document.activeElement === prevStep && haveNext) nextStep.focus();
+      if (!haveNext && document.activeElement === nextStep && havePrev) prevStep.focus();
+      prevStep.disabled = !havePrev;
+      nextStep.disabled = !haveNext;
+      const prevPlace = havePrev ? state.locations[state.index - 1].place : null;
+      const nextPlace = haveNext ? state.locations[state.index + 1].place : null;
+      prevStep.setAttribute("aria-label", prevPlace ? "Previous location: " + prevPlace : "No previous location");
+      nextStep.setAttribute("aria-label", nextPlace ? "Next location: " + nextPlace : "No next location");
+    }
+
+    function renderStripRail(state) {
+      if (!stripRail) return;
+      // A single mapped place needs no rail, matching the journeys viewer's
+      // treatment of one-stop ingredients.
+      if (!state.locations || state.locations.length < 2) {
+        stripRail.hidden = true;
+        stripRail.innerHTML = "";
+        return;
+      }
+      stripRail.hidden = false;
+      stripRail.innerHTML = state.locations.map(function (claim, i) {
+        const kind = stripDotKinds[claim.evidence];
+        return '<button type="button" class="strip__dot' + (i === state.index ? ' is-active' : '') + '"' +
+          (kind ? ' data-kind="' + kind + '"' : '') +
+          ' role="option" aria-selected="' + (i === state.index) + '"' +
+          ' data-claim-id="' + escapeHTML(claim.id) + '">' +
+          '<span class="strip__dot__label">' + escapeHTML(claim.place) + '</span>' +
+        '</button>';
+      }).join("");
+    }
+
+    if (stripRail) {
+      stripRail.addEventListener("click", function (event) {
+        const dot = event.target.closest("[data-claim-id]");
+        if (!dot) return;
+        const claim = claims.find(function (c) { return c.id === dot.dataset.claimId; });
+        if (claim) selectClaim(claim,false,true,false,true);
+      });
     }
 
     function selectIngredient(ingredient, focusAllLocations) {
@@ -293,13 +350,18 @@
         selectedRoute.attr("d",null);
         selectedLabel.style("display","none");
         detailContent.innerHTML =
-          ingredientBrowserMarkup(null) +
-          '<p class="detail-kicker">' + escapeHTML(ingredient.translit) + '</p>' +
-          '<h2 lang="grc">' + escapeHTML(ingredient.greek) + '</h2>' +
-          '<p class="detail-gloss">' + escapeHTML(ingredient.gloss) + '</p>' +
-          '<div class="unlocated">' + escapeHTML(ingredient.unlocated || "No mapped provenance is available for the active perfume layers.") + '</div>' +
-          '<div class="recipe-badges">' + affiliationBadges(ingredient) + '</div>';
-        bindIngredientBrowser();
+          '<div class="dossier__top">' +
+            '<p class="dossier__eyebrow">' + escapeHTML(ingredient.gloss) + '</p>' +
+            '<h2 class="dossier__title">No mapped provenance</h2>' +
+            '<p class="dossier__greek-name" lang="grc">' + escapeHTML(ingredient.greek) + '</p>' +
+          '</div>' +
+          '<div class="dossier__body">' +
+            '<p class="dossier__translation">' + escapeHTML(ingredient.unlocated || "No mapped provenance is available for the active perfume layers.") + '</p>' +
+            '<div class="dossier__materia"><p class="dossier__eyebrow dossier__eyebrow--inline">Recipes</p><ul class="dossier__materia-list">' + recipeChips(ingredient) + '</ul></div>' +
+          '</div>' +
+          '<div class="dossier__foot"><span>' + escapeHTML(ingredient.translit) + '</span></div>';
+        updateStepNav({ locations:[], index:-1 });
+        renderStripRail({ locations:[], index:-1 });
         return;
       }
       selectClaim(locations[0],false,false,false);
@@ -314,25 +376,22 @@
       const nextIndex = currentIndex + direction;
       if (nextIndex < 0 || nextIndex >= locations.length) return;
       selectClaim(locations[nextIndex],false,true,false,true);
-      window.requestAnimationFrame(function () {
-        const preferred = detailContent.querySelector('[data-location-step="' + direction + '"]:not(:disabled)');
-        const alternate = detailContent.querySelector('[data-location-step="' + (-direction) + '"]:not(:disabled)');
-        const target = preferred || alternate || detailContent.querySelector(".location-nav-status");
-        if (target) target.focus({ preventScroll:true });
-      });
     }
 
-    function bindIngredientBrowser() {
-      detailContent.querySelectorAll("[data-location-step]").forEach(function (button) {
-        button.addEventListener("click", function () { stepLocation(Number(button.dataset.locationStep)); });
-      });
-    }
+    if (prevStep) prevStep.addEventListener("click", function () { stepLocation(-1); });
+    if (nextStep) nextStep.addEventListener("click", function () { stepLocation(1); });
 
     function renderNoVisibleIngredients() {
       detailContent.innerHTML =
-        '<p class="detail-kicker">Ingredient browser</p>' +
-        '<h2>No visible ingredients</h2>' +
-        '<p class="detail-gloss">Turn on at least one perfume layer to browse ingredient kinds, ingredients, and mapped locations.</p>';
+        '<div class="dossier__top">' +
+          '<p class="dossier__eyebrow">Ingredient browser</p>' +
+          '<h2 class="dossier__title">No visible ingredients</h2>' +
+        '</div>' +
+        '<div class="dossier__body">' +
+          '<p class="dossier__translation">Turn on at least one perfume layer to browse ingredient kinds, ingredients, and mapped locations.</p>' +
+        '</div>';
+      updateStepNav({ locations:[], index:-1 });
+      renderStripRail({ locations:[], index:-1 });
     }
 
     let lastDrawnRouteKey = null;
@@ -366,7 +425,7 @@
     }
 
     function stampDetailPanel() {
-      const panel = document.getElementById("detail");
+      const panel = document.querySelector(".dossier");
       if (!panel) return;
       panel.classList.remove("is-stamping");
       void panel.offsetWidth;
@@ -384,22 +443,13 @@
         .text(d.place);
       positionSelectedLabel();
 
-      detailContent.innerHTML =
-        ingredientBrowserMarkup(d) +
-        '<p class="detail-kicker">' + escapeHTML(d.translit) + '</p>' +
-        '<h2 lang="grc">' + escapeHTML(d.greek) + '</h2>' +
-        '<p class="detail-gloss">' + escapeHTML(d.gloss) + '</p>' +
-        '<p class="detail-place">' + escapeHTML(d.place) + '</p>' +
-        '<span class="evidence-pill ' + d.evidence + '">' + escapeHTML(evidenceText(d)) + '</span>' +
-        '<p class="detail-copy">' + escapeHTML(d.note) + '</p>' +
-        '<div class="detail-citation"><strong>Citation</strong><br>' + escapeHTML(d.cite) + '</div>' +
-        '<div class="recipe-badges">' + affiliationBadges(d) + '</div>' +
-        '<p class="detail-hint">' +
-          (d.route ? 'The gold convergence highlight follows a conventional corridor. ' : 'No route is drawn for this point. ') +
-          (exploreMode ? 'Map active — your manual view is preserved.' : 'Guided mode refocuses the map on each selection.') +
-        '</p>';
-
-      bindIngredientBrowser();
+      const state = locationsFor(d);
+      const position = state.locations.length
+        ? (state.index + 1) + " of " + state.locations.length
+        : "";
+      detailContent.innerHTML = dossierMarkup(d, position);
+      updateStepNav(state);
+      renderStripRail(state);
       stampDetailPanel();
 
       if (shouldOpenDetails) presentSelection(d);
