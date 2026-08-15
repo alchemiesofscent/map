@@ -15,7 +15,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260815-4";
+      --asset-version: "20260815-5";
 
       /* Grounds — the study register shared with map/site.css */
       --sea-deep: #0E2229;
