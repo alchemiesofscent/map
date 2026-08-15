@@ -476,8 +476,6 @@
       renderStripRail(state);
       stampDetailPanel();
 
-      if (shouldOpenDetails) presentSelection(d);
-      updatePeekLabel();
       if (shouldFocus) focusClaim(d,shouldForceFocus);
 
       if (shouldScroll) {
@@ -719,7 +717,6 @@
         if (fallbackIngredient) selectIngredient(fallbackIngredient,false);
         else renderNoVisibleIngredients();
       }
-      updatePeekLabel();
     }
     renderPerfumeLayers();
     const claimTotal = document.getElementById("claim-total");
