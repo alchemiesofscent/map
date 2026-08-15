@@ -550,6 +550,79 @@
       zoomReset.disabled = transformsNear(transform,home);
     }
 
+    // ————— Keeping labels inside the window —————
+    // slice crops the viewBox horizontally on a narrow screen, and every label
+    // was painted wherever its anchor landed — including half off the crop,
+    // which is how MEDIA rendered as EDIA and ALEXANDRIA lost its head. Each
+    // label's box is measured once (and again when the webfonts arrive, since
+    // the fallback face measures differently), and a label whose box would
+    // cross the window's edge is hidden whole: no label is better than a
+    // fragment of one.
+    const labelBoxes = new Map();
+
+    function measureLabels() {
+      function measure(selection) {
+        selection.each(function () {
+          let w = 0;
+          try { w = this.getComputedTextLength(); } catch (e) { w = 0; }
+          labelBoxes.set(this,w);
+        });
+      }
+      measure(routeLabels);
+      measure(regionLabels);
+      measure(mapPlaceLabels);
+      measure(theologyLabels);
+      hubs.each(function () { measure(d3.select(this).selectAll("text")); });
+    }
+
+    function cullLabels() {
+      const ext = visibleViewportExtent();
+      const pad = 6;
+
+      function boxVisible(left, right, y) {
+        return left >= ext[0][0] + pad && right <= ext[1][0] - pad &&
+          y >= ext[0][1] + 12 && y <= ext[1][1] - pad;
+      }
+
+      // Region labels are middle-anchored; the rest run rightward from x.
+      regionLabels.attr("opacity", function () {
+        const w = labelBoxes.get(this) || 0;
+        const x = parseFloat(this.getAttribute("x"));
+        const y = parseFloat(this.getAttribute("y"));
+        return boxVisible(x - w / 2, x + w / 2, y) ? 1 : 0;
+      });
+      routeLabels.merge(theologyLabels).attr("opacity", function () {
+        const w = labelBoxes.get(this) || 0;
+        const x = parseFloat(this.getAttribute("x"));
+        const y = parseFloat(this.getAttribute("y"));
+        return boxVisible(x, x + w, y) ? 1 : 0;
+      });
+
+      // Place labels are also culled when the selected point already names the
+      // same place: the selection label repeats the text a few pixels away.
+      const selectedAt = selectedClaim ? transformedPoint(selectedClaim.coord) : null;
+      mapPlaceLabels.attr("opacity", function () {
+        const w = labelBoxes.get(this) || 0;
+        const x = parseFloat(this.getAttribute("x"));
+        const y = parseFloat(this.getAttribute("y"));
+        if (selectedAt && Math.hypot(x - selectedAt[0],y - selectedAt[1]) < 30 * overlayScale) return 0;
+        return boxVisible(x, x + w, y) ? 1 : 0;
+      });
+
+      // Hub text sits inside a group scaled by overlayScale, so its box scales
+      // with it. The ring stays: a marker clipped by the edge is honest in a
+      // way half a word is not.
+      hubs.each(function (d) {
+        const p = transformedPoint(d.coord);
+        d3.select(this).selectAll("text").attr("opacity", function () {
+          const w = (labelBoxes.get(this) || 0) * overlayScale;
+          const lx = parseFloat(this.getAttribute("x")) * overlayScale;
+          const ly = parseFloat(this.getAttribute("y")) * overlayScale;
+          return boxVisible(p[0] + lx, p[0] + lx + w, p[1] + ly) ? 1 : 0;
+        });
+      });
+    }
+
     function renderZoom(transform) {
       currentZoom = transform;
       const matrix = svg.node().getScreenCTM();
@@ -579,6 +652,8 @@
         const p = transformedPoint(d.coord);
         return "translate(" + p[0] + "," + p[1] + ") scale(" + overlayScale + ")";
       });
+      if (!labelBoxes.size) measureLabels();
+      cullLabels();
       positionSelectedLabel();
       positionTooltip();
       viewAtHome = transformsNear(transform,homeTransform());
@@ -786,6 +861,13 @@
       renderMobileSearch();
     }
     updatePeekLabel();
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        measureLabels();
+        cullLabels();
+      });
+    }
 
     if (window.visualViewport) {
       window.visualViewport.addEventListener("resize", function () {
