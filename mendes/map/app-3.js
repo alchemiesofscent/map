@@ -856,6 +856,14 @@
     function selectClaimFromHash() {
       let hash = location.hash || "";
       try { hash = decodeURIComponent(hash); } catch (error) { /* leave undecoded */ }
+      // ../#ingredient-<id> selects a whole ingredient and frames all its
+      // claims — the dossier's catalogue entries link here.
+      const ingredientMatch = /^#ingredient-(.+)$/.exec(hash);
+      if (ingredientMatch) {
+        const ingredient = ingredientById.get(ingredientMatch[1]);
+        if (ingredient) selectIngredient(ingredient,true);
+        return;
+      }
       const match = /^#claim-(.+)$/.exec(hash);
       if (!match) return;
       const claim = claims.find(function (c) { return c.id === match[1]; });
