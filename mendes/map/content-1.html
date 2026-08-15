@@ -1,5 +1,4 @@
 
-  <nav class="map-site-nav" aria-label="House of Mendes pages"><a href="../?v=20260815-3">← Dossier &amp; ingredient catalogue</a><a href="../journey/?v=20260815-4">Ingredient journeys →</a><span class="site-nav-title" aria-hidden="true">House of Mendes</span></nav>
   <svg hidden aria-hidden="true" class="glyph-sprite">
     <symbol id="glyph-ancient" viewBox="-12 -12 24 24">
       <circle r="6.5" fill="currentColor" stroke="var(--glyph-stroke, transparent)" stroke-width="1.5"></circle>
@@ -58,6 +57,21 @@
               aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
         <span aria-hidden="true">≡</span>
       </button>
+
+      <!-- The desktop's page links, folded behind a hamburger on the map's
+           top-right corner; the light nav strip above the band is gone. On a
+           phone the drawer toggle owns this corner and its drawer carries the
+           same links, so this menu hides there. -->
+      <div class="site-menu" id="site-menu">
+        <button class="site-menu__toggle" id="site-menu-toggle" type="button"
+                aria-expanded="false" aria-controls="site-menu-panel" aria-label="House of Mendes pages">
+          <span aria-hidden="true">≡</span>
+        </button>
+        <nav class="site-menu__panel" id="site-menu-panel" aria-label="House of Mendes pages" hidden>
+          <a href="../?v=20260815-5">← Dossier &amp; ingredient catalogue</a>
+          <a href="../journey/?v=20260815-6">Ingredient journeys →</a>
+        </nav>
+      </div>
 
       <div class="mobile-menu" id="mobile-menu">
         <button class="mobile-menu__close" id="drawer-close" type="button" aria-label="Close menu">

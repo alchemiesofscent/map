@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260815-5";
+      --asset-version: "20260815-6";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -64,20 +64,8 @@
     .glyph-sprite { display: none; }
 
     /* ————— Loading skeleton (lives in the shell, replaced on first paint) ————— */
-    .skeleton-masthead { width: min(1280px, 100%); margin: 0 auto; padding: 38px 24px 30px; }
-    .skeleton-bar {
-      display: block;
-      height: 14px;
-      margin-bottom: 14px;
-      border-radius: 4px;
-      background: #E3D9C2;
-    }
-    .skeleton-bar--eyebrow { width: 280px; height: 10px; }
-    .skeleton-bar--title { width: min(640px, 90%); height: 42px; margin-bottom: 10px; }
-    .skeleton-bar--short { width: min(420px, 60%); margin-bottom: 22px; }
-    .skeleton-bar--dek { width: min(520px, 78%); height: 12px; }
     .skeleton-map {
-      height: clamp(560px, 76dvh, 940px);
+      height: clamp(560px, 100svh, 1200px);
       background: var(--sea-deep);
       overflow: hidden;
     }
@@ -92,7 +80,6 @@
     }
     @keyframes skeleton-drift { to { stroke-dashoffset: -72; } }
     @media (max-width: 720px) {
-      .skeleton-masthead { display: none; }
       .skeleton-map { height: 100svh; }
     }
 
@@ -116,7 +103,7 @@
     select,
     summary,
     .toggle,
-    .map-site-nav a { touch-action: manipulation; }
+    .site-menu__panel a { touch-action: manipulation; }
     a { color: #275f6b; text-underline-offset: 2px; }
     .page { width: min(1280px, 100%); margin: 0 auto; padding: 24px; }
     .mono-voice {
@@ -124,32 +111,6 @@
       font-size: .74rem;
       letter-spacing: .04em;
     }
-    .map-site-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 10px;
-      padding: 12px clamp(16px,3vw,38px) 0;
-      background: var(--paper);
-    }
-    .map-site-nav a {
-      display: inline-flex;
-      align-items: center;
-      min-height: 42px;
-      padding: 8px 14px;
-      border: 1px solid rgba(34,86,80,.25);
-      border-radius: 999px;
-      color: #275f6b;
-      font-family: var(--font-body);
-      font-size: .82rem;
-      font-weight: 600;
-      text-decoration: none;
-      background: rgba(255,255,255,.58);
-    }
-    .map-site-nav a:hover { background: white; color: var(--ink); }
-    /* The wordmark belongs to the compact phone header; the H1 carries it here. */
-    .site-nav-title { display: none; }
-    .map-site-nav a:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 3px; }
 
     .masthead {
       display: grid;
@@ -483,8 +444,10 @@
     /* ————— The chart-room band (desktop layout) ————— */
     .map-experience {
       position: relative;
-      margin: 22px calc(50% - 50vw) 0;
-      height: clamp(560px, 76dvh, 940px);
+      /* -24px cancels .page's top padding: with the nav strip gone the band
+         reaches the viewport's top edge and takes the whole first screen. */
+      margin: -24px calc(50% - 50vw) 0;
+      height: clamp(560px, 100svh, 1200px);
       background: var(--sea-deep);
       overflow: hidden;
     }
@@ -496,6 +459,65 @@
        chrome anchors to the band instead and scrolls away with it. The band is
        already the containing block: it is position:relative above. */
     .map-experience.chart { --chart-anchor: absolute; }
+
+    /* ————— Site menu: the page links behind a hamburger —————
+       Chart-room glass, in the corner the rail used to hold; the rail sits
+       just below. Hidden on a phone, where the drawer toggle owns the corner
+       and the drawer already carries the same links. */
+    .site-menu {
+      position: absolute;
+      z-index: 8;
+      top: calc(20px + env(safe-area-inset-top));
+      right: 20px;
+    }
+    .site-menu__toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(231,220,195,.3);
+      border-radius: 50%;
+      background: rgba(14,34,41,.86);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      color: var(--land);
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .site-menu__toggle:hover,
+    .site-menu__toggle[aria-expanded="true"] { background: rgba(231,220,195,.16); }
+    .site-menu__panel {
+      position: absolute;
+      top: 54px;
+      right: 0;
+      display: grid;
+      gap: 4px;
+      min-width: 268px;
+      padding: 8px;
+      border: 1px solid rgba(231,220,195,.18);
+      border-radius: var(--r-card);
+      background: rgba(14,34,41,.92);
+      -webkit-backdrop-filter: blur(14px) saturate(1.3);
+      backdrop-filter: blur(14px) saturate(1.3);
+      box-shadow: var(--shadow);
+    }
+    .site-menu__panel[hidden] { display: none; }
+    .site-menu__panel a {
+      display: block;
+      padding: 11px 14px;
+      border-radius: 8px;
+      color: var(--land);
+      font-size: .84rem;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .site-menu__panel a:hover { background: rgba(231,220,195,.12); color: #F5EFDF; }
+    @supports not (backdrop-filter: blur(8px)) {
+      .site-menu__toggle, .site-menu__panel { background: rgba(14,34,41,.96); }
+    }
+    .map-experience.chart .view-control { top: calc(82px + env(safe-area-inset-top)); }
 
     .map-experience.chart .dossier__inner { overflow: auto; }
 
@@ -1195,15 +1217,14 @@
     }
 
     @media (max-width: 720px) {
-      :root { --nav-h: 0px; }
       body { overscroll-behavior-y: contain; }
       .page { width: 100%; padding: 0; }
       .masthead { display: none; }
       .map-experience {
         position: relative;
         width: 100%;
-        height: calc(100vh - var(--nav-h));
-        height: calc(100svh - var(--nav-h));
+        height: 100vh;
+        height: 100svh;
         margin: 0;
         overflow: hidden;
         overflow: clip;
@@ -1234,35 +1255,6 @@
       #map.is-zooming { cursor: grabbing; }
 
 
-      /* Compact, safe-area-aware header above the map band. */
-      .map-site-nav {
-        position: relative;
-        z-index: 6;
-        justify-content: space-between;
-        align-items: center;
-        gap: 12px;
-        min-height: var(--nav-h);
-        padding: calc(7px + env(safe-area-inset-top)) 12px 7px;
-        background: var(--sea-deep);
-      }
-      .map-site-nav a {
-        min-height: 40px;
-        padding: 7px 13px;
-        border-color: rgba(231,220,195,.28);
-        background: rgba(231,220,195,.08);
-        color: var(--land);
-        font-size: .76rem;
-      }
-      .map-site-nav a:hover { background: rgba(231,220,195,.16); color: var(--land); }
-      .site-nav-title {
-        display: block;
-        color: rgba(231,220,195,.9);
-        font-family: var(--font-display);
-        font-size: 1.1rem;
-        line-height: 1.05;
-        white-space: nowrap;
-      }
-
       /* Panes go full-screen on phones: finding and reading are modes here. */
       .pane {
         width: 100%;
@@ -1281,7 +1273,7 @@
          the layer chips. The wordmark row is gone — its back-link is the arrow. */
       .toolbar { top: 0; gap: 8px; padding: 10px 12px; flex-wrap: wrap; }
       .toolbar-label { display: none; }
-      .map-site-nav { display: none; }
+      .site-menu { display: none; }
       .map-actions {
         order: -1;
         width: 100%;
@@ -1434,7 +1426,7 @@
       }
       body, html { background: white; }
       .page { width: 100%; padding: 0; }
-      .map-site-nav,
+      .site-menu,
       .map-tools,
       .map-toast,
       .map-tooltip,
@@ -1494,7 +1486,7 @@
        See the matching block in ../shell.css: sized for a finger, keyed on the
        pointer so a wide tablet counts and a narrow desktop window does not. */
     @media (pointer: coarse) {
-      .map-site-nav a { min-height: 44px; }
+      .site-menu__panel a { min-height: 44px; }
       .zoom-controls button { min-height: 44px; }
     }
 
