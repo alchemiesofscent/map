@@ -235,7 +235,7 @@
       // way to enable zoom, checked or not, while the filter ignored it.
       if (exploreToggle) exploreToggle.checked = exploreMode;
       if (isTouchInput()) {
-        gestureHint.textContent = "Tap a point for guided focus; drag, pinch, double-tap, or use +/− to explore.";
+        gestureHint.textContent = "Tap a point for guided focus; drag, pinch, or double-tap — hold the second tap and drag down or up to zoom in or out.";
       } else if (exploreMode) {
         gestureHint.textContent = "Map active — scroll to zoom, drag to pan, Escape to release.";
       } else {
@@ -447,6 +447,14 @@
         // built-in dblclick.zoom stacks on the hand-rolled gesture below and a
         // double-tap lands at 2.9x instead of 2x. Mouse double-click keeps it.
         if (event.type === "dblclick" && isTouchInput()) return false;
+        // Browsers synthesize mouse events after a tap too; a synthesized
+        // mousedown starts a zero-length mouse pan that interrupts the
+        // double-tap's zoom transition mid-flight. Touch input has its own
+        // gestures; the mouse ones stay for fine pointers.
+        if (event.type === "mousedown" && isTouchInput()) return false;
+        // A touch that lands on a fresh tap belongs to the one-finger zoom
+        // below; d3 must not also start a pan with it.
+        if (dragZoom && event.type.indexOf("touch") === 0) return false;
         if (!isTouchInput()) return exploreMode;
         return true;
       })
@@ -473,8 +481,15 @@
     const TAP_MS = 300;      // a tap is a touch shorter than this
     const TAP_LINK_MS = 320; // two taps this close make a double
     const TAP_SLOP = 24;     // CSS px of drift allowed within and between taps
+    const DRAG_ZOOM_ENGAGE = 8;   // px of vertical drift that turns the held tap into a zoom
+    const DRAG_ZOOM_RANGE = 140;  // px of drag per doubling/halving of the scale
     let tapCandidate = null; // { time, x, y } of the last completed single tap
     let touchTracking = null;
+    // Google Maps' one-finger zoom: a second tap that stays down becomes a
+    // drag that scales the map around the tapped point — down zooms in, up
+    // zooms out, and sliding back toward the start undoes it continuously.
+    // A second tap released without moving keeps the plain step below.
+    let dragZoom = null; // { startY, anchor, t0, engaged }
 
     function zoomStep(factor, point) {
       const target = reducedMotion.matches
@@ -499,8 +514,20 @@
           ? (event.touches[0].clientY + event.touches[1].clientY) / 2
           : event.touches[0].clientY;
         touchTracking = { time: Date.now(), x: x, y: y, fingers: n, moved: n > 2 };
+        if (n === 1 && tapCandidate &&
+            Date.now() - tapCandidate.time < TAP_LINK_MS &&
+            Math.hypot(x - tapCandidate.x, y - tapCandidate.y) < TAP_SLOP * 2) {
+          dragZoom = {
+            startY: y,
+            anchor: d3.pointer({ clientX: x, clientY: y }, svg.node()),
+            t0: d3.zoomTransform(svg.node()),
+            engaged: false
+          };
+        }
       } else {
         touchTracking.fingers = Math.max(touchTracking.fingers, event.touches.length);
+        // A second finger makes it a pinch, never a one-finger zoom.
+        if (event.touches.length > 1) dragZoom = null;
         if (event.touches.length === 2) {
           // Midpoint, for centring a two-finger zoom-out.
           touchTracking.x = (event.touches[0].clientX + event.touches[1].clientX) / 2;
@@ -512,6 +539,21 @@
     svg.node().addEventListener("touchmove", function (event) {
       if (!touchTracking) return;
       const t = event.touches[0];
+      if (dragZoom && touchTracking.fingers === 1) {
+        const dy = t.clientY - dragZoom.startY;
+        if (!dragZoom.engaged && Math.abs(dy) > DRAG_ZOOM_ENGAGE) dragZoom.engaged = true;
+        if (dragZoom.engaged) {
+          event.preventDefault();
+          const k = Math.max(1, Math.min(8, dragZoom.t0.k * Math.pow(2, dy / DRAG_ZOOM_RANGE)));
+          const w = dragZoom.t0.invert(dragZoom.anchor);
+          svg.call(zoom.transform, constrainToFrame(
+            d3.zoomIdentity
+              .translate(dragZoom.anchor[0] - w[0] * k, dragZoom.anchor[1] - w[1] * k)
+              .scale(k)
+          ));
+          return;
+        }
+      }
       if (touchTracking.fingers === 1 &&
           Math.hypot(t.clientX - touchTracking.x, t.clientY - touchTracking.y) > TAP_SLOP) {
         touchTracking.moved = true;
@@ -520,12 +562,15 @@
         // Any real two-finger movement is a pinch; the zoom behaviour owns it.
         touchTracking.moved = true;
       }
-    }, { passive: true });
+    }, { passive: false });
 
     svg.node().addEventListener("touchend", function (event) {
       if (!touchTracking || event.touches.length > 0) return;
+      const drag = dragZoom;
+      dragZoom = null;
       const tap = touchTracking;
       touchTracking = null;
+      if (drag && drag.engaged) { tapCandidate = null; return; }
       const now = Date.now();
       if (tap.moved || now - tap.time > TAP_MS) { tapCandidate = null; return; }
       const point = d3.pointer({ clientX: tap.x, clientY: tap.y }, svg.node());
@@ -547,6 +592,7 @@
     svg.node().addEventListener("touchcancel", function () {
       touchTracking = null;
       tapCandidate = null;
+      dragZoom = null;
     }, { passive: true });
 
     svg.call(zoom);
