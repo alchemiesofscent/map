@@ -824,6 +824,31 @@
       }
     });
 
+    // ————— Site menu —————
+    // The page links behind the top-right hamburger. Click toggles, a click
+    // anywhere else closes, and Escape closes before the rest of the ladder.
+    const siteMenuToggle = document.getElementById("site-menu-toggle");
+    const siteMenuPanel = document.getElementById("site-menu-panel");
+    if (siteMenuToggle && siteMenuPanel) {
+      const setSiteMenu = function (open) {
+        siteMenuPanel.hidden = !open;
+        siteMenuToggle.setAttribute("aria-expanded",open ? "true" : "false");
+      };
+      siteMenuToggle.addEventListener("click",function () {
+        setSiteMenu(siteMenuPanel.hidden);
+      });
+      document.addEventListener("click",function (event) {
+        if (siteMenuPanel.hidden) return;
+        if (!event.target.closest(".site-menu")) setSiteMenu(false);
+      });
+      document.addEventListener("keydown",function (event) {
+        if (event.key !== "Escape" || siteMenuPanel.hidden) return;
+        event.preventDefault();
+        setSiteMenu(false);
+        siteMenuToggle.focus();
+      });
+    }
+
     // ————— Deep links —————
     // ../#claim-<id> selects that claim on load, so the dossier's search can
     // land a reader on the exact dot. Also on hashchange, so back and forward
