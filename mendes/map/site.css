@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260815-4";
+      --asset-version: "20260815-5";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -564,6 +564,17 @@
       overflow: hidden;
       background: var(--sea-deep);
     }
+    /* The journeys viewer's vignette, here on the band: it pushes the basemap
+       back behind the reading furniture. z-index 1 keeps it under the toast
+       and the tooltip (both z-index 6) and under every panel outside the wrap. */
+    .map-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% 45%, transparent 42%, rgba(6,16,20,.5) 100%);
+    }
     #map {
       display: block;
       width: 100%;
@@ -1041,32 +1052,36 @@
       letter-spacing: .03em;
     }
 
-    /* ————— The chart-room: map SVG on the dark sea ————— */
-    .graticule { fill: none; stroke: rgba(76,147,168,.16); stroke-width: .6; }
-    .land { fill: var(--land); stroke: var(--land-line); stroke-width: .5; vector-effect: non-scaling-stroke; }
+    /* ————— The chart-room: map SVG on the dark sea —————
+       The basemap is painted in the journeys viewer's dark register — dark
+       land under parchment labels — so the two full-map pages read as one
+       room. journey.css carries the same values for its own full-bleed body;
+       change them together. */
+    .graticule { fill: none; stroke: rgba(129,181,199,.13); stroke-width: .6; }
+    .land { fill: #17313A; stroke: rgba(231,220,195,.22); stroke-width: .5; vector-effect: non-scaling-stroke; }
     .frame { fill: none; stroke: rgba(231,220,195,.22); stroke-width: 1; }
     .region-label {
-      fill: #6E6450;
+      fill: rgba(231,220,195,.5);
       font-size: 11px;
       font-weight: 700;
       letter-spacing: .09em;
       text-transform: uppercase;
       paint-order: stroke;
-      stroke: rgba(231,220,195,.75);
+      stroke: rgba(9,24,29,.85);
       stroke-width: 3px;
     }
     .place-label {
-      fill: #4A4536;
+      fill: rgba(231,220,195,.78);
       font-size: 11px;
       font-weight: 600;
       paint-order: stroke;
-      stroke: rgba(231,220,195,.85);
+      stroke: rgba(9,24,29,.9);
       stroke-width: 3px;
     }
     .hub-ring { fill: var(--glyph-ancient-dark); stroke: var(--sea-deep); stroke-width: 2.5; }
     .hub-core { fill: var(--sea-deep); }
-    .hub-label { fill: #201D14; font-size: 12px; font-weight: 700; paint-order: stroke; stroke: rgba(231,220,195,.9); stroke-width: 4px; }
-    .hub-sub { fill: #55503F; font-size: 9px; font-weight: 700; paint-order: stroke; stroke: rgba(231,220,195,.85); stroke-width: 3px; }
+    .hub-label { fill: #F5EFDF; font-size: 12px; font-weight: 700; paint-order: stroke; stroke: rgba(9,24,29,.9); stroke-width: 4px; }
+    .hub-sub { fill: rgba(231,220,195,.65); font-size: 9px; font-weight: 700; paint-order: stroke; stroke: rgba(9,24,29,.85); stroke-width: 3px; }
     .route { fill: none; vector-effect: non-scaling-stroke; }
     .route.sea { stroke: var(--route-sea); stroke-width: 2; stroke-dasharray: 2 4; }
     .route.land { stroke: var(--route-land); stroke-width: 2; stroke-dasharray: 7 5; }
@@ -1076,29 +1091,18 @@
       font-weight: 700;
       letter-spacing: .04em;
       paint-order: stroke;
-      /* ————— Corridor labels read on land, so they use the land register —————
-         These were the last map text still painted for the sea: a light fill
-         over a halo of --sea-deep. Over water that is right, and every corridor
-         label was authored when the corridors were "drawn on the dark sea
-         only". Land corridors broke it — Syria, Petra to Gaza, Myos Hormos to
-         Coptos all cross cream land, where the dark halo resolves to #394748
-         and reads as a near-black ribbon at 7.11:1 against the land.
-
-         Two faults, not one. The colour was wrong for the ground, and the halo
-         was wrong for the type: 3px on 8px type is .375em, so the halo bridged
-         the counters and welded adjacent glyphs into a slab, leaving the fill
-         as hairlines. That is why it looked like a dark plate rather than
-         light text. .place-label carries 3px on 11px — .27em — and reads
-         cleanly, so the ratio is matched to it here.
-
-         The fills are not new: they are the light-register colours already in
-         this file's print block, which had the register right all along. */
-      stroke: rgba(231,220,195,.9);
+      /* One dark register everywhere now that the land is dark too, so the
+         corridor labels return to light fills over a dark halo. The halo
+         stays at 2.2px — .275em on 8px type, matched to .place-label's ratio
+         — so it outlines the glyphs without bridging their counters. The
+         fills stay in each corridor's colour family, lightened to read on
+         both the sea and the darker land. */
+      stroke: rgba(9,24,29,.85);
       stroke-width: 2.2px;
     }
-    .route-label.sea { fill: #33566B; }
-    .route-label.river { fill: #365667; }
-    .route-label.land { fill: #6B4A2A; }
+    .route-label.sea { fill: #8FC0D2; }
+    .route-label.river { fill: #9CC5D8; }
+    .route-label.land { fill: #D0A273; }
     .selected-route { fill: none; stroke: var(--focus); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; opacity: .9; filter: drop-shadow(0 1px 3px rgba(0,0,0,.45)); }
     .claim { cursor: pointer; }
     .claim-hit { fill: transparent; pointer-events: all; }
@@ -1440,6 +1444,7 @@
       .map-experience { position: static; height: auto; margin: 0; background: white; }
       .map-shell { position: static; box-shadow: none; }
       .map-wrap { position: static; height: auto; background: white; }
+      .map-wrap::after { display: none; }
       #map { height: auto; aspect-ratio: 900 / 710; }
       .graticule { stroke: #cccccc; }
       .land { fill: #ffffff; stroke: #444444; }
