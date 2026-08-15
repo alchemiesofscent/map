@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-19";
+      --asset-version: "20260814-20";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -549,6 +549,11 @@
     }
     .map-wrap.is-exploring #map { cursor: grab; touch-action: none; }
     .map-wrap.is-exploring #map.is-zooming { cursor: grabbing; }
+    /* On a desktop the action row is transparent to layout: the pill is
+       hidden and the zoom cluster positions itself absolutely against the
+       strip, which spans the band's foot — same offsets, same place. */
+    .strip__actions { display: contents; }
+
     .map-tools {
       position: absolute;
       z-index: 5;
@@ -1300,14 +1305,18 @@
         white-space: nowrap;
       }
 
+      /* The zoom cluster leaves its floating right-edge perch and joins the
+         pill on one centred row: transposed horizontal, thumb-height, and no
+         longer hovering over the map it zooms. */
+      .strip__actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-width: 0;
+      }
       .map-tools {
-        position: absolute;
-        z-index: 5;
-        right: 12px;
-        bottom: calc(118px + env(safe-area-inset-bottom));
-        transition: bottom var(--t-snap) ease, opacity var(--t-snap) ease;
-        top: auto;
-        left: auto;
+        position: static;
         display: block;
         padding: 0;
         border: 0;
@@ -1315,8 +1324,8 @@
         pointer-events: auto;
       }
       .zoom-controls {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 8px;
         padding: 0;
         border: 0;
         border-radius: 0;
@@ -1476,7 +1485,7 @@
     @media (max-width: 720px) {
       .strip { flex-direction: column; align-items: stretch; gap: 8px; }
       .strip .strip__rail { width: 100%; }
-      .ingredient-pill { align-self: center; }
+      .ingredient-pill { min-width: 0; flex: 0 1 auto; }
       /* The strip grew a second row for the dots, so the dossier's foot
          clearance grows with it: shell.css's 58px was measured against the
          pill alone. */
