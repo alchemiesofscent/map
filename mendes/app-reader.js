@@ -175,12 +175,165 @@
       });
     }());
 
+    /* The claims store joins the index when it arrives: search keeps working
+       over the dossier sections alone until then (and if the fetch fails). */
+    var claimEntries = [];
+    fetch("data/claims.json?v=" + encodeURIComponent(window.ASSET_VERSION || ""))
+      .then(function (response) { return response.ok ? response.json() : null; })
+      .then(function (data) {
+        if (!data) return;
+        var evidenceLabel = { ancient: "ancient", modern: "inference", theology: "theology" };
+        data.ingredients.concat(data.contextIngredients, [data.theology]).forEach(function (ingredient) {
+          ingredient.claims.forEach(function (claim) {
+            claimEntries.push({
+              group: "map",
+              title: claim.place,
+              sub: ingredient.gloss,
+              cite: claim.cite,
+              chip: evidenceLabel[claim.evidence] || claim.evidence,
+              chipClass: claim.evidence,
+              evidence: claim.evidence,
+              recipes: claim.recipes,
+              href: "map/#claim-" + encodeURIComponent(claim.id),
+              folded: fold([claim.place, ingredient.greek, ingredient.translit,
+                ingredient.gloss, claim.cite, claim.note].join(" "))
+            });
+          });
+        });
+        (data.court || []).forEach(function (record) {
+          claimEntries.push({
+            group: "court",
+            title: record.cite,
+            sub: record.subtype.replace(/-/g, " ").replace(/:/, " —") + " — " + record.queen.join(", "),
+            cite: record.places.map(function (p) { return p.name; }).join(", "),
+            chip: record.olfactoryRelevance,
+            chipClass: "olf-" + record.olfactoryRelevance,
+            queens: record.queen,
+            olfactory: record.olfactoryRelevance,
+            targetId: "claim-" + record.pqfId.toLowerCase(),
+            folded: fold([record.cite, record.subtype, record.queen.join(" "),
+              record.aromatics.map(function (a) { return a.name; }).join(" "),
+              record.commentary || ""].join(" "))
+          });
+        });
+        onClaimsLoaded();
+      })
+      .catch(function () { /* section search stands alone */ });
+
     var searchBox = document.getElementById("rail-search");
     var input = document.getElementById("dossier-search");
     var summary = document.getElementById("rail-search-summary");
     var results = document.getElementById("rail-search-results");
     if (!searchBox || !input) return;
     searchBox.hidden = false;
+
+    /* ————— Filter chips —————
+       A scope row (All · Text · Map claims · Queens), then per-scope
+       refinements: evidence class and recipe layer for the map corpus, queen
+       and olfactory relevance for the court records. With a scope chosen and
+       no query, the search browses that corpus instead of going quiet. */
+    var EVIDENCE_OPTIONS = [["ancient", "attested"], ["modern", "inference"], ["theology", "theological"]];
+    var RECIPE_OPTIONS = [["m", "Mendesian", "--mendesian"], ["t", "Metopion", "--metopion"], ["s", "Susinum", "--susinum"]];
+    var OLFACTORY_OPTIONS = [["direct", "direct"], ["indirect", "indirect"], ["contextual", "contextual"], ["none", "none"]];
+    var scope = "all";
+    var enabled = {
+      evidence: new Set(EVIDENCE_OPTIONS.map(function (o) { return o[0]; })),
+      recipes: new Set(RECIPE_OPTIONS.map(function (o) { return o[0]; })),
+      olfactory: new Set(OLFACTORY_OPTIONS.map(function (o) { return o[0]; })),
+      queens: new Set()
+    };
+    var queenOptions = [];
+    function onClaimsLoaded() {
+      var seen = [];
+      claimEntries.forEach(function (entry) {
+        (entry.queens || []).forEach(function (queen) {
+          if (seen.indexOf(queen) < 0) seen.push(queen);
+        });
+      });
+      queenOptions = seen.map(function (queen) { return [queen, queen]; });
+      enabled.queens = new Set(seen);
+      renderFilters();
+    }
+
+    var filtersHost = document.createElement("div");
+    filtersHost.className = "rail-search-filters";
+    filtersHost.hidden = true;
+    input.insertAdjacentElement("afterend", filtersHost);
+    input.addEventListener("focus", function () {
+      if (claimEntries.length) filtersHost.hidden = false;
+      measureStick();
+    });
+
+    function filterChip(label, pressed, dotVar, onToggle) {
+      var chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "filter-chip";
+      chip.setAttribute("aria-pressed", pressed ? "true" : "false");
+      if (dotVar) {
+        var dot = document.createElement("span");
+        dot.className = "layer-dot";
+        dot.style.background = "var(" + dotVar + ")";
+        chip.appendChild(dot);
+      }
+      chip.appendChild(document.createTextNode(label));
+      chip.addEventListener("click", onToggle);
+      return chip;
+    }
+    function multiRow(labelText, options, set) {
+      var row = document.createElement("div");
+      row.className = "filter-row";
+      var label = document.createElement("span");
+      label.className = "filter-row-label";
+      label.textContent = labelText;
+      row.appendChild(label);
+      options.forEach(function (option) {
+        row.appendChild(filterChip(option[1], set.has(option[0]), option[2] || null, function () {
+          if (set.has(option[0])) {
+            if (set.size > 1) set.delete(option[0]);
+          } else {
+            set.add(option[0]);
+          }
+          renderFilters();
+          runSearch();
+        }));
+      });
+      return row;
+    }
+    function renderFilters() {
+      filtersHost.textContent = "";
+      var scopeRow = document.createElement("div");
+      scopeRow.className = "filter-row";
+      [["all", "All"], ["sections", "Text"], ["map", "Map claims"], ["court", "Queens"]].forEach(function (option) {
+        var chip = filterChip(option[1], scope === option[0], null, function () {
+          scope = option[0];
+          renderFilters();
+          runSearch();
+        });
+        chip.classList.add("filter-chip--scope");
+        scopeRow.appendChild(chip);
+      });
+      filtersHost.appendChild(scopeRow);
+      if (scope === "map") {
+        filtersHost.appendChild(multiRow("Evidence", EVIDENCE_OPTIONS, enabled.evidence));
+        filtersHost.appendChild(multiRow("Layer", RECIPE_OPTIONS, enabled.recipes));
+      }
+      if (scope === "court" && queenOptions.length) {
+        filtersHost.appendChild(multiRow("Queen", queenOptions, enabled.queens));
+        filtersHost.appendChild(multiRow("Olfactory", OLFACTORY_OPTIONS, enabled.olfactory));
+      }
+      measureStick();
+    }
+
+    function mapEntryPasses(entry) {
+      if (scope !== "map") return true;
+      if (!enabled.evidence.has(entry.evidence)) return false;
+      return entry.recipes.length === 0 || entry.recipes.some(function (key) { return enabled.recipes.has(key); });
+    }
+    function courtEntryPasses(entry) {
+      if (scope !== "court") return true;
+      if (!enabled.olfactory.has(entry.olfactory)) return false;
+      return entry.queens.some(function (queen) { return enabled.queens.has(queen); });
+    }
 
     function snippet(section, foldedQuery, rawQuery) {
       var at = section.foldedBody.indexOf(foldedQuery);
@@ -205,49 +358,133 @@
       span.appendChild(document.createTextNode(text.slice(at + q.length)));
       return span;
     }
+    function flashTarget(el) {
+      el.scrollIntoView({ block: "start" });
+      el.classList.remove("search-target");
+      void el.offsetWidth;
+      el.classList.add("search-target");
+    }
     function jumpTo(section) {
-      section.el.scrollIntoView({ block: "start" });
-      section.el.classList.remove("search-target");
-      void section.el.offsetWidth;
-      section.el.classList.add("search-target");
+      flashTarget(section.el);
       if (history.replaceState) history.replaceState(null, "", "#" + section.id);
+    }
+    function appendGroupLabel(text) {
+      var li = document.createElement("li");
+      li.className = "rail-search-group";
+      li.textContent = text;
+      results.appendChild(li);
+    }
+    function appendRow(node) {
+      var li = document.createElement("li");
+      li.appendChild(node);
+      results.appendChild(li);
+    }
+    function claimRow(entry) {
+      var node = document.createElement(entry.href ? "a" : "button");
+      node.className = "rail-search-result";
+      if (entry.href) node.href = entry.href;
+      else {
+        node.type = "button";
+        node.addEventListener("click", function () {
+          var target = document.getElementById(entry.targetId);
+          if (target) flashTarget(target);
+        });
+      }
+      var title = document.createElement("span");
+      title.className = "result-title";
+      title.textContent = entry.title;
+      node.appendChild(title);
+      var snippetSpan = document.createElement("span");
+      snippetSpan.className = "result-snippet";
+      snippetSpan.textContent = entry.sub;
+      node.appendChild(snippetSpan);
+      var meta = document.createElement("span");
+      meta.className = "result-meta";
+      var chip = document.createElement("span");
+      chip.className = "result-chip " + entry.chipClass;
+      chip.textContent = entry.chip;
+      meta.appendChild(chip);
+      if (entry.cite) {
+        var cite = document.createElement("span");
+        cite.className = "result-cite";
+        cite.textContent = entry.cite;
+        meta.appendChild(cite);
+      }
+      node.appendChild(meta);
+      return node;
     }
     function runSearch() {
       var q = input.value.trim();
-      if (q.length < 2) {
+      var fq = fold(q);
+      var querying = q.length >= 2;
+      // With a claims scope chosen and no query, browse the corpus under the
+      // active refinements instead of going quiet.
+      var browsing = !querying && (scope === "map" || scope === "court");
+      if (!querying && !browsing) {
         summary.hidden = true;
         results.hidden = true;
         results.textContent = "";
+        measureStick();
         return;
       }
-      var fq = fold(q);
-      var hits = [];
-      sections.forEach(function (s) {
-        var inTitle = s.foldedTitle.indexOf(fq) >= 0;
-        var inBody = s.foldedBody.indexOf(fq) >= 0;
-        if (inTitle || inBody) hits.push({ s: s, weight: inTitle ? 0 : 1 });
-      });
-      hits.sort(function (a, b) { return a.weight - b.weight; });
+      var sectionHits = [];
+      if (querying && (scope === "all" || scope === "sections")) {
+        sections.forEach(function (s) {
+          var inTitle = s.foldedTitle.indexOf(fq) >= 0;
+          var inBody = s.foldedBody.indexOf(fq) >= 0;
+          if (inTitle || inBody) sectionHits.push({ s: s, weight: inTitle ? 0 : 1 });
+        });
+        sectionHits.sort(function (a, b) { return a.weight - b.weight; });
+      }
+      var mapHits = (scope === "all" || scope === "map")
+        ? claimEntries.filter(function (e) {
+            return e.group === "map" && mapEntryPasses(e)
+              && (!querying || e.folded.indexOf(fq) >= 0);
+          })
+        : [];
+      var courtHits = (scope === "all" || scope === "court")
+        ? claimEntries.filter(function (e) {
+            return e.group === "court" && courtEntryPasses(e)
+              && (!querying || e.folded.indexOf(fq) >= 0);
+          })
+        : [];
+      var total = sectionHits.length + mapHits.length + courtHits.length;
+      var mapCap = browsing ? 12 : 8;
+      var courtCap = browsing ? 16 : 6;
+      var shown = Math.min(sectionHits.length, 8)
+        + Math.min(mapHits.length, mapCap)
+        + Math.min(courtHits.length, courtCap);
       summary.hidden = false;
-      summary.textContent = hits.length
-        ? hits.length + (hits.length === 1 ? " section" : " sections")
-        : "No matches";
+      summary.textContent = !total ? "No matches"
+        : shown < total
+          ? total + " matches · showing " + shown + " — refine the search"
+          : total + (total === 1 ? " match" : " matches");
       results.textContent = "";
-      results.hidden = hits.length === 0;
-      hits.slice(0, 12).forEach(function (hit) {
-        var li = document.createElement("li");
-        var btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "rail-search-result";
-        var title = document.createElement("span");
-        title.className = "result-title";
-        title.textContent = hit.s.title;
-        btn.appendChild(title);
-        btn.appendChild(highlight(snippet(hit.s, fq, q), q));
-        btn.addEventListener("click", function () { jumpTo(hit.s); });
-        li.appendChild(btn);
-        results.appendChild(li);
-      });
+      results.hidden = total === 0;
+      if (sectionHits.length) {
+        appendGroupLabel("In the dossier");
+        sectionHits.slice(0, 8).forEach(function (hit) {
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "rail-search-result";
+          var title = document.createElement("span");
+          title.className = "result-title";
+          title.textContent = hit.s.title;
+          btn.appendChild(title);
+          btn.appendChild(highlight(snippet(hit.s, fq, q), q));
+          btn.addEventListener("click", function () { jumpTo(hit.s); });
+          appendRow(btn);
+        });
+      }
+      if (mapHits.length) {
+        appendGroupLabel("On the map — provenance claims");
+        mapHits.slice(0, mapCap).forEach(function (entry) { appendRow(claimRow(entry)); });
+      }
+      if (courtHits.length) {
+        appendGroupLabel("Queens’ fragments — court records");
+        courtHits.slice(0, courtCap).forEach(function (entry) { appendRow(claimRow(entry)); });
+      }
+      measureStick();
     }
     var debounce;
     input.addEventListener("input", function () {

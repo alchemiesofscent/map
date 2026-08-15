@@ -57,11 +57,23 @@ def check_claim(claim: dict, where: str, seen_ids: set[str]) -> None:
         err(f"{where} ({claim['id']}): empty cite")
 
 
-def check_ingredient(ingredient: dict, where: str, seen_claims: set[str]) -> None:
-    for field in ("id", "greek", "translit", "gloss", "recipes", "claims"):
+def dossier_anchor_ids() -> set[str]:
+    import re
+    ids: set[str] = set()
+    for part in sorted((ROOT / "mendes").glob("content-*.html")):
+        ids.update(re.findall(r'id="([^"]+)"', part.read_text(encoding="utf-8")))
+    return ids
+
+
+def check_ingredient(ingredient: dict, where: str, seen_claims: set[str],
+                     anchor_ids: set[str]) -> None:
+    for field in ("id", "greek", "translit", "gloss", "dossierAnchor", "recipes", "claims"):
         if field not in ingredient:
             err(f"{where}: missing field {field!r}")
             return
+    if ingredient["dossierAnchor"] not in anchor_ids:
+        err(f"{where} ({ingredient['id']}): dossierAnchor "
+            f"{ingredient['dossierAnchor']!r} not found in mendes/content-*.html")
     if not ingredient["claims"] and "unlocated" not in ingredient:
         err(f"{where} ({ingredient['id']}): no claims and no unlocated note")
     for claim in ingredient["claims"]:
@@ -79,10 +91,11 @@ def main() -> None:
         err(f"recipes keys {sorted(data['recipes'])} != {sorted(RECIPE_IDS)}")
 
     seen_claims: set[str] = set()
+    anchor_ids = dossier_anchor_ids()
     all_ingredients = data["ingredients"] + data["contextIngredients"] + [data["theology"]]
     seen_ing: set[str] = set()
     for ingredient in all_ingredients:
-        check_ingredient(ingredient, "ingredient", seen_claims)
+        check_ingredient(ingredient, "ingredient", seen_claims, anchor_ids)
         if ingredient["id"] in seen_ing:
             err(f"duplicate ingredient id {ingredient['id']!r}")
         seen_ing.add(ingredient["id"])

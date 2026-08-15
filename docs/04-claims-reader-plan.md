@@ -120,13 +120,36 @@ Mapping rules:
   (vocabularies, id uniqueness, coordinate sanity, group coverage, court ↔
   PQF sync).
 
-**Phase 2 — claims-aware search and filters**
-- Search v2 over claim records; filter chips (evidence, layer, queen,
-  aromatic); result rows carry citation + evidence chip.
-- Cross-navigation: map dossier panel links “read in dossier”; dossier claim
-  rows link “see on map” where a claim is plotted.
-- Optional “court” map layer for the placed PQF reports (Alexandria, Cyrene,
-  Jericho, Tarsus), dashed, clearly labelled report-evidence.
+**Phase 2a — claims-aware search and cross-navigation (shipped)**
+- The dossier search now searches three corpora and groups its results: “In
+  the dossier” (sections), “On the map — provenance claims” (all 57 records,
+  matched on place, Greek, transliteration, gloss, citation, and note), and
+  “Queens’ fragments — court records” (matched on citation, queen, aromatics,
+  commentary). Claim rows carry an evidence or olfactory chip and the
+  citation; court rows jump to their `#claim-pqf-…` index row.
+- Cross-navigation both ways: provenance results link to
+  `map/#claim-<id>`, and the map now honours that deep link (on load and on
+  hashchange) by selecting the claim; the map’s claim panel links back to
+  the ingredient’s catalogue entry via a new `dossierAnchor` field on every
+  ingredient in claims.json (validated against the content files by
+  `check_mendes_claims.py`).
+
+**Phase 2b — filters and the court layer (shipped)**
+- Filter chips under the dossier search: a scope row (All · Text · Map
+  claims · Queens), then per-scope refinements — evidence class and recipe
+  layer for the map corpus, queen and olfactory relevance for the court
+  records. With a scope chosen and no query, the search browses that corpus
+  under the active refinements instead of going quiet. (Aromatic filtering
+  stays free-text: searching an aromatic’s name is the filter.)
+- The “court” map layer: the placed queens’ reports (Alexandria ×4, Cyrene,
+  Tarsus, Jericho — same-city dots spread in a fixed-size ring) draw as a
+  dashed parchment triangle, a register deliberately unlike every evidence
+  glyph. Off by default; its rail row sits under the recipe layers and never
+  joins the claim counter, the recipe filters, or the stop strip. Selecting
+  a court dot fills the panel with queen, commentary, citation, aromatics,
+  and a link to the record’s dossier row; `#claim-court-…` deep links switch
+  the layer on and select the dot. The guide pane and the strip legend
+  explain the register: a report never becomes an ingredient-origin dot.
 
 **Phase 3 — the rest of the corpus**
 - Fold in `data/generated/simples/provenance_entry_claims.json` (already has

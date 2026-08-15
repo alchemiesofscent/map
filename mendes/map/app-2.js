@@ -4,6 +4,7 @@
     let currentZoom = d3.zoomIdentity;
     let selectedClaim = null;
     let selectedIngredientId = null;
+    let selectedCourtPlot = null;
     let navigationReady = false;
     let overlayScale = 1;
     let viewAtHome = true;
@@ -126,6 +127,66 @@
         .attr("x",-12).attr("y",-12).attr("width",24).attr("height",24);
     });
 
+    // ————— The court layer —————
+    // The placed reports from the Ptolemaic queens' dossier (claims.json's
+    // court array): patronage, spectacle, and revenue records that name a
+    // city. They are reports, never ingredient provenance, so they draw as
+    // their own dashed register, off by default, and stay out of the claim
+    // counter, the stop strip, and the recipe layers.
+    const courtPlots = [];
+    (claimsData.court || []).forEach(function (record) {
+      (record.places || []).forEach(function (place, index) {
+        courtPlots.push({
+          id: record.places.length > 1 ? record.id + "-" + index : record.id,
+          record: record,
+          place: place.name,
+          coord: place.coord,
+          dx: 0,
+          dy: 0
+        });
+      });
+    });
+    // Several records share Alexandria; spread same-coordinate dots in a small
+    // fixed-size ring so each stays hittable. Screen-space offsets, applied
+    // after projection, so the ring does not grow with zoom.
+    (function spreadSharedCoords() {
+      const byCoord = new Map();
+      courtPlots.forEach(function (plot) {
+        const key = plot.coord.join(",");
+        if (!byCoord.has(key)) byCoord.set(key,[]);
+        byCoord.get(key).push(plot);
+      });
+      byCoord.forEach(function (group) {
+        if (group.length < 2) return;
+        group.forEach(function (plot, i) {
+          const angle = (Math.PI * 2 * i) / group.length - Math.PI / 2;
+          plot.dx = Math.cos(angle) * 13;
+          plot.dy = Math.sin(angle) * 13;
+        });
+      });
+    }());
+
+    const courtLayer = viewport.append("g")
+      .attr("class","court-layer")
+      .attr("aria-label","Court records — reports, not provenance")
+      .style("display","none");
+    const courtMarker = courtLayer.selectAll(".court-claim")
+      .data(courtPlots)
+      .join("g")
+      .attr("class","court-claim")
+      .attr("data-id", function (d) { return d.id; })
+      .attr("role","button")
+      .attr("tabindex","-1")
+      .attr("aria-label", function (d) {
+        return d.record.queen.join(" and ") + ", " + d.place + ". " + d.record.cite;
+      });
+    courtMarker.append("circle").attr("class","claim-hit").attr("r",20);
+    courtMarker.append("circle").attr("class","focus-ring").attr("r",13);
+    courtMarker.append("use")
+      .attr("href","#glyph-court")
+      .attr("class","court-glyph")
+      .attr("x",-12).attr("y",-12).attr("width",24).attr("height",24);
+
     const selectedLabel = viewport.append("text").attr("class","selected-label").style("display","none");
     const detailContent = document.getElementById("detail-content");
 
@@ -134,8 +195,11 @@
     }
 
     function positionSelectedLabel() {
-      if (!selectedClaim) return;
-      const p = transformedPoint(selectedClaim.coord);
+      const target = selectedClaim || selectedCourtPlot;
+      if (!target) return;
+      const p = transformedPoint(target.coord);
+      p[0] += (target.dx || 0) * overlayScale;
+      p[1] += (target.dy || 0) * overlayScale;
       // The label always typed rightward, so a point near the right edge ran
       // its name off the screen — "Vessel-dressing gum — source unst". Points
       // in the window's right half name themselves leftward instead.
@@ -205,6 +269,25 @@
         });
         host.appendChild(button);
       });
+      // The court register rides in the same rail but is not a recipe layer:
+      // it has no data-recipe, so the visibility pass, the search, and the
+      // one-layer-stays-lit rule never see it. Off by default — the map stays
+      // a provenance map until the reader asks for the reports.
+      if (courtPlots.length) {
+        const courtButton = document.createElement("button");
+        courtButton.type = "button";
+        courtButton.id = "toggle-court";
+        courtButton.dataset.layer = "court";
+        courtButton.setAttribute("aria-pressed","false");
+        courtButton.innerHTML =
+          '<svg class="view-control__court-glyph" aria-hidden="true"><use href="#glyph-court"></use></svg>' +
+          '<span class="view-control__name">Court records</span>' +
+          '<span class="view-control__count">' + courtPlots.length + "</span>";
+        courtButton.addEventListener("click",function () {
+          setCourtLayer(courtButton.getAttribute("aria-pressed") !== "true");
+        });
+        host.appendChild(courtButton);
+      }
     }
 
     function layerInputs() {
@@ -268,6 +351,16 @@
       }).join("");
     }
 
+    // Each claim's ingredient carries its catalogue anchor in claims.json, so
+    // the panel can hand the reader to the dossier's full entry for the
+    // material — the reverse of the dossier search's links onto this map.
+    function readerLink(d) {
+      const ingredient = ingredientById.get(d.ingredient);
+      if (!ingredient || !ingredient.dossierAnchor) return "";
+      return '<p class="dossier__reader-link-row"><a class="dossier__reader-link" href="../#' +
+        encodeURIComponent(ingredient.dossierAnchor) + '">Read the catalogue entry in the dossier →</a></p>';
+    }
+
     function dossierMarkup(d, position) {
       return '<div class="dossier__top">' +
           '<p class="dossier__eyebrow">' +
@@ -283,6 +376,7 @@
           '<p class="dossier__translation">' + escapeHTML(d.note) + '</p>' +
           '<div class="dossier__citation"><span class="dossier__eyebrow dossier__eyebrow--inline">Citation</span><span>' + escapeHTML(d.cite) + '</span></div>' +
           '<div class="dossier__materia"><p class="dossier__eyebrow dossier__eyebrow--inline">Recipes</p><ul class="dossier__materia-list">' + recipeChips(d) + '</ul></div>' +
+          readerLink(d) +
         '</div>' +
         '<div class="dossier__foot"><span>' + escapeHTML(d.translit) + ' — ' + escapeHTML(d.gloss) + '</span></div>';
     }
@@ -363,6 +457,7 @@
     }
 
     function selectIngredient(ingredient, focusAllLocations) {
+      clearCourtSelection();
       selectedIngredientId = ingredient.id;
       if (typeof updateIngredientPill === "function") updateIngredientPill();
       const locations = visibleClaimsForIngredient(ingredient);
@@ -456,6 +551,7 @@
     }
 
     function selectClaim(d, shouldScroll, shouldFocus, shouldOpenDetails, shouldForceFocus) {
+      clearCourtSelection();
       selectedClaim = d;
       selectedIngredientId = d.ingredient;
       marker.classed("is-selected", function (x) { return x.id === d.id; });
@@ -729,4 +825,69 @@
 
     layerInputs().forEach(function (input) {
       input.addEventListener("change",updateVisibility);
+    });
+
+    // ————— Court record selection —————
+    function clearCourtSelection() {
+      if (!selectedCourtPlot) return;
+      selectedCourtPlot = null;
+      courtMarker.classed("is-selected",false);
+    }
+
+    function courtMarkup(d) {
+      const record = d.record;
+      const chips = record.aromatics.map(function (aromatic) {
+        return "<li>" + escapeHTML(aromatic.name) + "</li>";
+      }).join("");
+      return '<div class="dossier__top">' +
+          '<p class="dossier__eyebrow">Court record · report · olfactory: ' + escapeHTML(record.olfactoryRelevance) + '</p>' +
+          '<h2 class="dossier__title">' + escapeHTML(d.place) + '</h2>' +
+          '<p class="dossier__greek-name">' + escapeHTML(record.queen.join(" · ")) + '</p>' +
+        '</div>' +
+        '<div class="dossier__body">' +
+          '<p class="dossier__translation">' + escapeHTML(record.commentary || "") + '</p>' +
+          '<div class="dossier__citation"><span class="dossier__eyebrow dossier__eyebrow--inline">Citation</span><span>' + escapeHTML(record.cite) + '</span></div>' +
+          (chips ? '<div class="dossier__materia"><p class="dossier__eyebrow dossier__eyebrow--inline">Aromatics recorded</p><ul class="dossier__materia-list">' + chips + '</ul></div>' : "") +
+          '<p class="dossier__reader-link-row"><a class="dossier__reader-link" href="../#claim-' + encodeURIComponent(record.pqfId.toLowerCase()) + '">Read the record in the dossier →</a></p>' +
+        '</div>' +
+        '<div class="dossier__foot"><span>' + escapeHTML(record.subtype.replace(/-/g," ").replace(/:/," —")) + '</span></div>';
+    }
+
+    function selectCourtPlot(d, shouldFocus) {
+      selectedClaim = null;
+      selectedIngredientId = null;
+      if (typeof updateIngredientPill === "function") updateIngredientPill();
+      marker.classed("is-selected",false).classed("is-same-ingredient",false);
+      selectedRoute.attr("d",null);
+      lastDrawnRouteKey = null;
+      selectedCourtPlot = d;
+      courtMarker.classed("is-selected", function (x) { return x.id === d.id; });
+      selectedLabel.style("display",null).text(d.place);
+      positionSelectedLabel();
+      setDossierCollapsed(false);
+      detailContent.innerHTML = courtMarkup(d);
+      updateStepNav({ locations:[], index:-1 });
+      renderStripRail({ locations:[], index:-1 });
+      stampDetailPanel();
+      if (shouldFocus) focusClaim(d,true);
+    }
+
+    function setCourtLayer(on) {
+      const courtButton = document.getElementById("toggle-court");
+      if (courtButton) courtButton.setAttribute("aria-pressed",on ? "true" : "false");
+      courtLayer.style("display",on ? null : "none");
+      courtMarker.attr("tabindex",on ? "0" : "-1");
+      if (!on && selectedCourtPlot) {
+        clearCourtSelection();
+        selectedLabel.style("display","none");
+        updateVisibility();
+      }
+    }
+
+    courtMarker.on("click", function (event, d) { selectCourtPlot(d,true); });
+    courtMarker.on("keydown", function (event, d) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        selectCourtPlot(d,true);
+      }
     });

@@ -19,6 +19,7 @@
       "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
       "translit": "elaion balaninon / balanos myrepsikē",
       "gloss": "balanos oil / perfumers’ balanos nut",
+      "dossierAnchor": "balanos-myrepsike-the-perfumers-acornnut-oil",
       "recipes": [
         "m",
         "s"
@@ -127,6 +128,7 @@
       "greek": "σμύρνα",
       "translit": "smyrna",
       "gloss": "myrrh",
+      "dossierAnchor": "smyrna-myrrh",
       "recipes": [
         "m",
         "t",
@@ -174,6 +176,7 @@
       "greek": "κασσία / κασία / σύριγξ",
       "translit": "kassia / kasia / syrinx",
       "gloss": "cassia / cassia quill or tube",
+      "dossierAnchor": "kassia-kassia-syrinx-cassia-quill-cassia",
       "recipes": [
         "m",
         "s"
@@ -235,6 +238,7 @@
       "greek": "κινάμωμον",
       "translit": "kinamōmon",
       "gloss": "cinnamon",
+      "dossierAnchor": "kinamomon-cinnamon",
       "recipes": [
         "m",
         "s"
@@ -296,6 +300,7 @@
       "greek": "ῥητίνη / τερεβινθίνη",
       "translit": "rhētinē / terebinthinē",
       "gloss": "resin / terebinth resin",
+      "dossierAnchor": "rhetine-terebinthine-prepared-terebinth-product",
       "recipes": [
         "m",
         "t"
@@ -404,6 +409,7 @@
       "greek": "ἀμύγδαλα πικρά",
       "translit": "amygdala pikra",
       "gloss": "bitter almonds",
+      "dossierAnchor": "amygdala-pikra-bitter-almonds",
       "recipes": [
         "t"
       ],
@@ -430,6 +436,7 @@
       "greek": "ἔλαιον ὀμφάκινον",
       "translit": "elaion omphakinon",
       "gloss": "omphacine oil",
+      "dossierAnchor": "elaion-omphakinon-omphacine-oil-unripe-fruit-oil",
       "recipes": [
         "t"
       ],
@@ -457,6 +464,7 @@
       "greek": "καρδάμωμον",
       "translit": "kardamōmon",
       "gloss": "cardamom",
+      "dossierAnchor": "kardamomon-cardamom",
       "recipes": [
         "t",
         "s"
@@ -565,6 +573,7 @@
       "greek": "σχοῖνος / σχοίνου ἄνθος",
       "translit": "schoinos / schoinou anthos",
       "gloss": "aromatic rush / rush-flower",
+      "dossierAnchor": "schoinos-aromatic-rush",
       "recipes": [
         "t"
       ],
@@ -651,6 +660,7 @@
       "greek": "κάλαμος ἀρωματικός",
       "translit": "kalamos aromatikos",
       "gloss": "aromatic reed",
+      "dossierAnchor": "kalamos-aromatikos-aromatic-reed",
       "recipes": [
         "t",
         "s"
@@ -711,6 +721,7 @@
       "greek": "μέλι / μέλι Ἀττικόν",
       "translit": "meli / meli Attikon",
       "gloss": "honey / Attic honey",
+      "dossierAnchor": "meli-honey",
       "recipes": [
         "t",
         "s"
@@ -754,6 +765,7 @@
       "greek": "οἶνος / οἶνος εὐώδης",
       "translit": "oinos / oinos euōdēs",
       "gloss": "wine / fragrant wine",
+      "dossierAnchor": "oinos-wine",
       "recipes": [
         "t",
         "s"
@@ -783,6 +795,7 @@
       "greek": "καρπὸς βαλσάμου / καρποβάλσαμον",
       "translit": "karpos balsamou / karpobalsamon",
       "gloss": "balsam fruit / balsam seed",
+      "dossierAnchor": "karpobalsamon-balsam-seed",
       "recipes": [
         "t"
       ],
@@ -824,6 +837,7 @@
       "greek": "χαλβάνη",
       "translit": "chalbanē",
       "gloss": "galbanum",
+      "dossierAnchor": "chalbane-galbanum",
       "recipes": [
         "t"
       ],
@@ -850,6 +864,7 @@
       "greek": "κρόκος / κρόκος Κιλίκιος",
       "translit": "krokos / krokos Kilikios",
       "gloss": "saffron / Cilician saffron",
+      "dossierAnchor": "krokos-saffron",
       "recipes": [
         "s"
       ],
@@ -936,6 +951,7 @@
       "greek": "κρίνον / λείριον",
       "translit": "krinon / leirion",
       "gloss": "lily",
+      "dossierAnchor": "krinon-leirion-lily",
       "recipes": [
         "s"
       ],
@@ -993,6 +1009,7 @@
       "greek": "ἔλαιον / ἄλλο ἔλαιον",
       "translit": "elaion / allo elaion",
       "gloss": "oil / another oil",
+      "dossierAnchor": "elaion-olive-oil",
       "recipes": [
         "s"
       ],
@@ -1020,6 +1037,7 @@
       "greek": "ὕδωρ ὄμβριον / ὕδωρ",
       "translit": "hydōr ombrion / hydōr",
       "gloss": "rainwater / water",
+      "dossierAnchor": "hydor-ombrion-rainwater",
       "recipes": [
         "s"
       ],
@@ -1047,6 +1065,7 @@
       "greek": "ἅλες λεπτοί",
       "translit": "hales leptoi",
       "gloss": "fine salt",
+      "dossierAnchor": "hales-leptoi-fine-salt",
       "recipes": [
         "s"
       ],
@@ -1074,6 +1093,7 @@
       "greek": "κόμμι",
       "translit": "kommi",
       "gloss": "gum",
+      "dossierAnchor": "kommi-gum",
       "recipes": [
         "s"
       ],
@@ -1101,6 +1121,7 @@
       "greek": "καρπήσιον",
       "translit": "karpēsion",
       "gloss": "carpesium (conventional name; no taxon imposed)",
+      "dossierAnchor": "karpesion-karpesion",
       "recipes": [
         "s"
       ],
@@ -1127,6 +1148,7 @@
       "greek": "ἀρναβώ",
       "translit": "arnabō",
       "gloss": "unidentified aromatic substitute",
+      "dossierAnchor": "arnabo-an-unidentified-aromatic",
       "recipes": [
         "s"
       ],
@@ -1140,6 +1162,7 @@
       "greek": "ἀμμωνιακόν / μέτωπον",
       "translit": "ammōniakon / metōpon",
       "gloss": "hammoniacum / the tree called metopon",
+      "dossierAnchor": "metopion-metopion",
       "recipes": [
         "t"
       ],
@@ -1168,6 +1191,7 @@
     "greek": "Πουντ / tꜢ-nṯr",
     "translit": "Punt / ta-netjer",
     "gloss": "Punt / the Divine Land",
+    "dossierAnchor": "the-egyptian-shelf-the-same-materials-in-hieroglyphs",
     "recipes": [
       "m",
       "t",
