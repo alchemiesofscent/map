@@ -151,6 +151,33 @@
     measureStick();
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(measureStick);
 
+    /* ————— Arriving with an anchor —————
+       The dossier's content is fetched and inserted after the page loads, so
+       the browser's native fragment scroll fires against an empty page: a
+       reader following the map's "read in the dossier" links landed at the
+       top. Scroll once the content exists (this script runs after insertion),
+       flash the target for orientation, and correct once more after the fonts
+       land — heights shift — unless the reader has scrolled themselves. */
+    (function scrollToArrivalHash() {
+      var hash = location.hash || "";
+      try { hash = decodeURIComponent(hash); } catch (error) { /* leave undecoded */ }
+      if (hash.length < 2) return;
+      var target = document.getElementById(hash.slice(1));
+      if (!target) return;
+      var userScrolled = false;
+      ["wheel", "touchstart", "keydown"].forEach(function (type) {
+        window.addEventListener(type, function () { userScrolled = true; },
+          { passive: true, once: true });
+      });
+      target.scrollIntoView({ behavior: "instant", block: "start" });
+      target.classList.add("search-target");
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function () {
+          if (!userScrolled) target.scrollIntoView({ behavior: "instant", block: "start" });
+        });
+      }
+    }());
+
     /* ————— Search —————
        Sections are indexed once: each heading with an id owns the text until
        the next heading. Matching is case- and diacritic-insensitive (NFD with
