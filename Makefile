@@ -1,6 +1,11 @@
 check:
 	python3 scripts/check_data.py
 	python3 scripts/check_generated_tour.py
+	python3 scripts/check_mendes_claims.py
+
+mendes-court:
+	python3 scripts/build_mendes_court_claims.py
+	python3 scripts/check_mendes_claims.py
 
 ingest:
 	python3 scripts/ingest_tour_chunk.py --start 1 --count 66

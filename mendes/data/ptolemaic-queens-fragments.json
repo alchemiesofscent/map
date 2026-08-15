@@ -1,0 +1,706 @@
+{
+  "sourceRepository": "alchemiesofscent/perfume-tables",
+  "sourcePath": "research/ptolemaic-queens-fragments/fragments.json",
+  "sourceVersion": "0.1",
+  "syncedOn": "2026-08-15",
+  "syncNote": "Versioned copy for the House of Mendes site (dossier Part V and the planned claims reader). The perfume-tables repository is canonical; do not edit records here.",
+  "version": "0.1",
+  "date": "2026-08-15",
+  "status": "Draft",
+  "records": [
+    {
+      "id": "PQF-CLEO-GAL-ALOPECIA",
+      "queen": [
+        "Cleopatra"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra named as the authority of a Cosmetic; which Cleopatra is unresolved",
+        "confidence": "unresolved",
+        "basis": "Galen transmits the heading and says he quotes her wording, but gives no dynastic number or biography."
+      },
+      "recordKind": "recipe",
+      "subtype": "medical-cosmetic: alopecia plaster",
+      "olfactoryRelevance": "none",
+      "textScope": "selected-excerpt",
+      "source": {
+        "ancientAuthor": "Galen",
+        "ancientWork": "De compositione medicamentorum secundum locos",
+        "book": "1",
+        "chapter": null,
+        "section": "Remedies for alopecia",
+        "subsection": "From Cleopatra's Cosmetic",
+        "ancientLines": "Kühn 12.403.15–404.2",
+        "digitalLocator": "TLG 0057:076, book 1, lines corresponding to Kühn 12.403.15–404.2",
+        "quotedSource": "Cleopatra, Cosmetic (lost)",
+        "editor": "C. G. Kühn",
+        "editionTitle": "Claudii Galeni opera omnia",
+        "series": null,
+        "volume": "12",
+        "place": "Leipzig",
+        "publisher": "C. Cnobloch",
+        "year": 1826,
+        "page": "403–404",
+        "printedLines": "403.15–404.2"
+      },
+      "text": "Ἐν τῷ Κλεοπάτρας κοσμητικῷ πρὸς ἀλωπεκίας γέγραπται φάρμακα κατὰ τὴν αὐτῆς ἐκείνης λέξιν, ᾧδέ πως ἔχουσαν. πρὸς ἀλωπεκίας. σανδαράχην λειώσας ἀναλάμβανε ἰξῷ δρυΐνῳ, ὡς ὅτι πλείστῳ καὶ προεκνιτρώσας, ἔμπλασσε εἰς ὀθόνιον καὶ ἐπιτίθει. ἐγὼ δὲ καὶ νίτρου ἀφρῷ προσέμιξα τὰ προειρημένα καὶ ἐνήργησεν καλῶς.",
+      "translation": "In Cleopatra's Cosmetic, remedies for alopecia are written in her own wording, approximately as follows. For alopecia: grind sandarach and work it up with as much oak birdlime as possible. First rub the area with natron; spread the preparation on a linen cloth and apply it. I myself also mixed natron foam with the ingredients just mentioned, and it worked well.",
+      "commentary": "This selected formula is followed by Galen's own modification and efficacy report. The larger Cleopatra alopecia cluster continues through Kühn 12.405.17 with multiple variants. It is important evidence for recipe transmission under Cleopatra's name, but this selection has no olfactory content.",
+      "safety": "Do not reconstruct. Sandarach in this context may be an arsenic sulfide; natron and birdlime can also irritate skin.",
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\dev\\perfume-tables\\sources\\tlg0057.tlg076.1st1K-grc1.xml"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-GAL-HAIR-ODOR",
+      "queen": [
+        "Cleopatra"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra named as the authority of a Cosmetic; which Cleopatra is unresolved",
+        "confidence": "unresolved",
+        "basis": "The attribution is explicit, but the source supplies no dynastic identification."
+      },
+      "recordKind": "recipe",
+      "subtype": "medical-cosmetic: hair-growth salve with odor masking",
+      "olfactoryRelevance": "direct",
+      "textScope": "selected-excerpt",
+      "source": {
+        "ancientAuthor": "Galen",
+        "ancientWork": "De compositione medicamentorum secundum locos",
+        "book": "1",
+        "chapter": null,
+        "section": "To generate hair on the head",
+        "subsection": "From Cleopatra's Cosmetic",
+        "ancientLines": "Kühn 12.432.12–433.2",
+        "digitalLocator": "TLG 0057:076, book 1, lines corresponding to Kühn 12.432.12–433.2",
+        "quotedSource": "Cleopatra, Cosmetic (lost)",
+        "editor": "C. G. Kühn",
+        "editionTitle": "Claudii Galeni opera omnia",
+        "series": null,
+        "volume": "12",
+        "place": "Leipzig",
+        "publisher": "C. Cnobloch",
+        "year": 1826,
+        "page": "432–433",
+        "printedLines": "432.12–433.2"
+      },
+      "text": "Καὶ τὰ γεγραμμένα κατὰ τὸ Κλεοπάτρας κοσμητικὸν αὐτοῖς ὀνόμασιν οὕτως ἔχει· πρὸς τὸ τρίχας γεννῆσαι ἐν τῇ κεφαλῇ· καλάμων ἁπαλῶν τὰς ῥίζας κόψας χύλισον καὶ μυίας ἐν πολταρίῳ φρύξας μίξον, καὶ στέαρ ἄρκτειον καὶ ἔλαιον κέδρινον καθ' ἓν τρίψας καὶ ἐπὶ τὸ αὐτὸ μίξας δὸς καταχρίεσθαι. ἵνα δὲ τὴν ὀσμὴν ἀπαμβλύνῃς, μῖξον οἶνον ἢ γλυκύ.",
+      "translation": "The wording in Cleopatra's Cosmetic is as follows. To generate hair on the head: cut up the roots of tender reeds and extract their juice; roast flies in a little gruel and mix them in. Grind bear fat and cedar oil separately, combine everything, and have it smeared on. To blunt the smell, mix in wine or sweet wine.",
+      "commentary": "This is the strongest Galenic example for the olfactory question. Smell is treated as an undesirable property of a therapeutic cosmetic, and wine is added as an odor-management step rather than as a luxury perfume. The larger Cleopatra hair cluster continues through Kühn 12.434.2.",
+      "safety": "Do not reconstruct or apply; the preparation uses biologically unsafe animal material and potentially irritating cedar oil.",
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\dev\\perfume-tables\\sources\\tlg0057.tlg076.1st1K-grc1.xml"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-GAL-ACHORAI",
+      "queen": [
+        "Cleopatra"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra named as recipe authority; which Cleopatra is unresolved",
+        "confidence": "unresolved",
+        "basis": "The medical heading is explicit but unnumbered."
+      },
+      "recordKind": "recipe",
+      "subtype": "medical-cosmetic: scalp treatment",
+      "olfactoryRelevance": "indirect",
+      "textScope": "selected-excerpt",
+      "source": {
+        "ancientAuthor": "Galen",
+        "ancientWork": "De compositione medicamentorum secundum locos",
+        "book": "1",
+        "chapter": null,
+        "section": "Remedies for achōrai of the scalp",
+        "subsection": "Wording attributed to Cleopatra",
+        "ancientLines": "Kühn 12.492.6–13",
+        "digitalLocator": "TLG 0057:076, book 1, lines corresponding to Kühn 12.492.6–13",
+        "quotedSource": "Cleopatra, Cosmetic (lost)",
+        "editor": "C. G. Kühn",
+        "editionTitle": "Claudii Galeni opera omnia",
+        "series": null,
+        "volume": "12",
+        "place": "Leipzig",
+        "publisher": "C. Cnobloch",
+        "year": 1826,
+        "page": "492",
+        "printedLines": "6–13"
+      },
+      "text": "Καὶ τὰ τῇ Κλεοπάτρᾳ πρὸς ἀχῶρας γεγραμμένα ἐφεξῆς εἰρήσεται κατὰ τὴν ἐκείνης αὐτῆς λέξιν. πρὸς ἀχῶρας. τήλει λεπτῇ ἑφθῇ, μέλανος τεύτλου χυλῷ βεβρεγμένῃ, ἐκκλυζέσθω ἡ κεφαλὴ ἢ τεύτλου ἀφεψήματι ἢ γῇ κιμωλίᾳ βεβρεγμένῃ τούτοις ἐκκλυσαμένῃ, καταχριέσθω μυρσίνῃ λείᾳ μετ' οἰνελαίου, ἄνωθεν δὲ ἐπιτιθέσθω φύλλα τεύτλου.",
+      "translation": "Next will be stated, in her own wording, what is written under Cleopatra's name for scalp eruptions. For achōrai: let the head be washed with finely milled, boiled fenugreek soaked in black-beet juice, or with a beet decoction, or with Cimolian earth moistened with these liquids. After washing, smear on ground myrtle with wine-and-oil, then place beet leaves over it.",
+      "commentary": "A genuine sequence of washing, smearing, and covering. Myrtle and wine-oil are potentially aromatic, but the text makes no claim about fragrance; the olfactory relevance is therefore indirect. This is the first selection from a longer Cleopatra cluster at Kühn 12.492.6–493.12.",
+      "safety": "Historical evidence only; diagnosis and ingredient identities are not secure enough for use.",
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\dev\\perfume-tables\\sources\\tlg0057.tlg076.1st1K-grc1.xml"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-PAUL-CURLING",
+      "queen": [
+        "Cleopatra"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra named in the recipe heading; which Cleopatra is unresolved",
+        "confidence": "unresolved",
+        "basis": "Paul's heading transmits Cleopatra's name but supplies no dynastic identifier."
+      },
+      "recordKind": "recipe",
+      "subtype": "medical-cosmetic: hair curling, darkening, and softening",
+      "olfactoryRelevance": "indirect",
+      "textScope": "complete-passage",
+      "source": {
+        "ancientAuthor": "Paul of Aegina",
+        "ancientWork": "Epitomae medicae libri septem",
+        "book": "3",
+        "chapter": "2",
+        "section": "1",
+        "subsection": "From Cleopatra: curling agents",
+        "ancientLines": "3.2.1; Heiberg 132.1–15",
+        "digitalLocator": "TLG 0715:001, book 3, chapter 2, section 1, lines 1–14",
+        "quotedSource": "Cleopatra (lost cosmetic source)",
+        "editor": "J. L. Heiberg",
+        "editionTitle": "Paulus Aegineta",
+        "series": "Corpus Medicorum Graecorum IX.1",
+        "volume": "1",
+        "place": "Leipzig and Berlin",
+        "publisher": "B. G. Teubner",
+        "year": 1921,
+        "page": "132",
+        "printedLines": "1–15"
+      },
+      "text": "Ἐκ τῶν Κλεοπάτρας [οὐλοποιῶν]. Προαποσμηξάμενος τὴν κεφαλὴν σπονδυλίου ῥίζῃ χριέσθω τὰς τρίχας μετὰ ἀκράτου. Ἄλλο. ξυρήσας τὴν κεφαλὴν καὶ σμήξας λαβὼν στροβίλιον νέον κατάκαυσον, ἕως γένηται σποδός, καὶ ἐμβαλὼν εἰς θυῖαν λείου παρεπιχέων μύρον μύρσινον ἄχρι μέλιτος πάχους καὶ οὕτως ἄλειφε τὴν κεφαλήν. Ἄλλο. μύρτων καὶ σεύτλου τὸ ἴσον· χρῶ μετ' ἐλαίου σμώμενος. Ἄλλο. κηκῖδας κ, ἀδιάντου 𐅻 β· χρῖε θαλάσσῃ ἄχρι μέλιτος πάχους, προσμήξας δὲ τὴν τρίχα οὔρῳ ἢ κονίᾳ καὶ ἀποκλύσας θερμῷ ὕδατι χριέσθω τῷ φαρμάκῳ ἐπὶ ἡμέρας β, συσχόντα δὲ αὐτὸ τῇ τρίτῃ ἀποπλύνειν τε καὶ ξηράναντα ἀλείφειν μυρσίνῳ. τοῦτο ἁπαλὴν καὶ οὐλὴν καὶ μέλαιναν ποιεῖ τὴν τρίχα, οὐλοτέρα δὲ ἔσται, ἐὰν προξυρήσας χρήσῃ.",
+      "translation": "From Cleopatra's curling preparations. After first cleansing the head with spondylion root, smear the hair with it in unmixed wine. Another: shave and clean the head, burn a fresh pine cone to ash, grind it in a mortar while adding myrtle unguent to the thickness of honey, and anoint the head. Another: use equal amounts of myrtle berries and beet, rubbing them on with oil. Another: mix twenty galls and two half-units of maidenhair with seawater to honey thickness. First clean the hair with urine or lye and rinse with warm water; apply the drug for two days, wash it away on the third, dry the hair, and anoint with myrtle oil. This makes the hair soft, curly, and black; it will be curlier if the head was shaved first.",
+      "commentary": "Paul preserves a cluster of variants under Cleopatra's name. Myrtle unguent and myrtle oil make the dossier relevant to scented cosmetics, although the stated objectives are texture and color, not smell.",
+      "safety": "Do not reconstruct; the preparations include urine or lye and uncertain ancient plant identifications.",
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\dev\\perfume-tables\\sources\\tlg0715001.xml",
+        "https://cmg.bbaw.de/epubl/online/cmg_09_01.php?p=132"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-AET-HAIR",
+      "queen": [
+        "Cleopatra"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra named as speaker; which Cleopatra is unresolved",
+        "confidence": "unresolved",
+        "basis": "Aetius writes 'Cleopatra says' but supplies no royal epithet in this item."
+      },
+      "recordKind": "recipe",
+      "subtype": "medical-cosmetic: falling hair and skin lesions",
+      "olfactoryRelevance": "none",
+      "textScope": "complete-passage",
+      "source": {
+        "ancientAuthor": "Aetius of Amida",
+        "ancientWork": "Iatricorum libri V–VIII",
+        "book": "6",
+        "chapter": "56",
+        "section": null,
+        "subsection": "Cleopatra says: for falling hair",
+        "ancientLines": "6.56.27–34",
+        "digitalLocator": "TLG 0718:001, book 6, chapter 56, lines 27–34",
+        "quotedSource": "Cleopatra (lost cosmetic source)",
+        "editor": "A. Olivieri",
+        "editionTitle": "Aetii Amideni libri medicinales V–VIII",
+        "series": "Corpus Medicorum Graecorum VIII.2",
+        "volume": "2",
+        "place": "Berlin",
+        "publisher": "Academia Litterarum",
+        "year": 1950,
+        "page": "205",
+        "printedLines": "1–9"
+      },
+      "text": "Κλεοπάτρα δὲ φησὶ· πρὸς τὰς ῥεούσας τρίχας χρῶ τούτῳ· γῆν κιμωλίαν ἁδροτάτην βρέξον οἴνῳ αὐστηρῷ καὶ μόρων χυλῷ τοσοῦτον ὅσον συμπιεῖν μόνον καὶ πρόσβαλε ὑοσκυάμου σπέρματος λειοτάτου τὸ ἀρκοῦν καὶ συλλεάνας ἀνάπλασσε τροχίσκον καὶ ξηράνας ἐν σκιᾷ ἀπόθου εἰς ἀγγεῖον κεράμινον καινόν. ἐπὶ δὲ τῆς χρήσεως διεὶς ὕδατι σμᾶσθαι κέλευε, εἶτα ὅταν ξηρανθῇ ἐκκλυζέσθω. καὶ δι' ἡμερῶν ε τὸ αὐτὸ ποίει· χρῶ δὲ αὐτῷ ἐπὶ τῶν θερμοτέρων κεφαλῶν. ποιεῖ καὶ πρὸς τὰ ἐν προσώπῳ καὶ τραχήλῳ λειχηνώδη.",
+      "translation": "Cleopatra says: for hair that is falling out, use this. Moisten very coarse Cimolian earth with astringent wine and mulberry juice, only enough to compress it; add sufficient very finely ground henbane seed, knead it together, form a pastille, dry it in the shade, and store it in a new earthenware vessel. For use, dissolve it in water and rub it on; when it has dried, wash it off. Repeat every five days. Use it on hotter heads. It also works for lichen-like lesions on the face and neck.",
+      "commentary": "A fully procedural medical cosmetic, including preparation, storage, application, interval, humoral indication, and an additional dermatological use. It is a later witness to a recipe also transmitted in Galen's Cleopatra section. Wine is functional; fragrance is not mentioned.",
+      "safety": "Do not reconstruct. Henbane is toxic, and the ancient dose and plant identity are unsuitable for modern use.",
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\Databases\\TLG\\TLG0718.TXT"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-AET-CLEANSER",
+      "queen": [
+        "Cleopatra"
+      ],
+      "queenIdentification": {
+        "identification": "Queen Cleopatra; traditionally associated with Cleopatra VII but not securely identified by Aetius",
+        "confidence": "low",
+        "basis": "The heading uniquely says 'Queen Cleopatra,' but Aetius is a much later compiler and gives no number or historical setting."
+      },
+      "recordKind": "recipe",
+      "subtype": "fragrant-body-cleanser",
+      "olfactoryRelevance": "direct",
+      "textScope": "complete-passage",
+      "source": {
+        "ancientAuthor": "Aetius of Amida",
+        "ancientWork": "Iatricorum libri V–VIII",
+        "book": "8",
+        "chapter": "6",
+        "section": null,
+        "subsection": "Another costly fragrant cleanser of Queen Cleopatra",
+        "ancientLines": "8.6.31–34",
+        "digitalLocator": "TLG 0718:001, book 8, chapter 6, lines 31–34",
+        "quotedSource": "Queen Cleopatra (lost cosmetic source)",
+        "editor": "A. Olivieri",
+        "editionTitle": "Aetii Amideni libri medicinales V–VIII",
+        "series": "Corpus Medicorum Graecorum VIII.2",
+        "volume": "2",
+        "place": "Berlin",
+        "publisher": "Academia Litterarum",
+        "year": 1950,
+        "page": "408",
+        "printedLines": "18–21"
+      },
+      "text": "Ἄλλο σμῆγμα Κλεοπάτρας βασιλίσσης πολυτελὲς εὐῶδες. κόστου σμύρνης τρωγλίτιδος ἴρεως ναρδοστάχυος ἀμώμου φύλλου κασσίας σχοίνου ἄνθους ἀνὰ Γο αʹ μυροβαλάνου λίτρας δʹ νίτρου ἀφροῦ λίτρας βʹ κόψας σήσας χρῶ· ποιεῖ εἰς ὅλον τὸ σῶμα.",
+      "translation": "Another costly, fragrant cleanser of Queen Cleopatra. Of costus, Troglodytic myrrh, iris, spikenard, amomum leaf, cassia, and rush flower, one ounce each; of myrobalan, four litrai; of natron foam, two litrai. Pound, sift, and use. It is suitable for the whole body.",
+      "commentary": "The clearest queen-attributed perfume recipe in the medical corpus: its heading calls the preparation both costly and fragrant, and the ingredient list is dominated by aromatics. It is a powdered cleanser rather than an oil perfume.",
+      "safety": "Historical evidence only; do not apply an ancient natron-rich cleanser to the body.",
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\Databases\\TLG\\TLG0718.TXT"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-GAL-CRITON",
+      "queen": [
+        "Cleopatra"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra named as an earlier drug authority; which Cleopatra is unresolved",
+        "confidence": "unresolved",
+        "basis": "Galen lists Cleopatra beside Heracleides in a history of compilation, without biography."
+      },
+      "recordKind": "report",
+      "subtype": "bibliographical-testimonium",
+      "olfactoryRelevance": "none",
+      "textScope": "selected-excerpt",
+      "source": {
+        "ancientAuthor": "Galen",
+        "ancientWork": "De compositione medicamentorum secundum locos",
+        "book": "1",
+        "chapter": null,
+        "section": "Criton's compilation of drugs",
+        "subsection": null,
+        "ancientLines": "Kühn 12.446.1–4",
+        "digitalLocator": "TLG 0057:076, book 1, lines corresponding to Kühn 12.446.1–4",
+        "quotedSource": null,
+        "editor": "C. G. Kühn",
+        "editionTitle": "Claudii Galeni opera omnia",
+        "series": null,
+        "volume": "12",
+        "place": "Leipzig",
+        "publisher": "C. Cnobloch",
+        "year": 1826,
+        "page": "446",
+        "printedLines": "1–4"
+      },
+      "text": "Κρίτων δὲ πάντα τὰ Ἡρακλείδου καὶ Κλεοπάτρας καὶ τῶν μετ' αὐτοὺς ἰατρῶν φάρμακα συναγαγὼν ...",
+      "translation": "Criton, having collected all the drugs of Heracleides and Cleopatra and of the physicians after them ...",
+      "commentary": "This is a report about textual or pharmaceutical transmission, not a recipe. It supports Cleopatra's place in a later medical genealogy but says nothing about perfume or smell.",
+      "safety": null,
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\dev\\perfume-tables\\sources\\tlg0057.tlg076.1st1K-grc1.xml"
+      ]
+    },
+    {
+      "id": "PQF-ARS-BER-ATH-PERFUME",
+      "queen": [
+        "Arsinoe",
+        "Berenice"
+      ],
+      "queenIdentification": {
+        "identification": "Probably Arsinoe II and Berenice I; 'Berenice the Great' in the Cyrene clause is conventionally Berenice II",
+        "confidence": "medium",
+        "basis": "The passage names no dynastic numbers. Chronology and court context support, but do not compel, these identifications."
+      },
+      "recordKind": "report",
+      "subtype": "perfume-patronage and production geography",
+      "olfactoryRelevance": "direct",
+      "textScope": "complete-passage",
+      "source": {
+        "ancientAuthor": "Athenaeus, quoting Apollonius of Tyre",
+        "ancientWork": "Deipnosophistae",
+        "book": "15",
+        "chapter": "38",
+        "section": "Casaubon 688e–689b",
+        "subsection": "Alexandria and Cyrene",
+        "ancientLines": "Kaibel 523.20–23",
+        "digitalLocator": "TLG 0008:001, book 15, chapter 38, lines 19–20; Casaubon 689a",
+        "quotedSource": "Apollonius of Tyre, On Perfumes",
+        "editor": "G. Kaibel",
+        "editionTitle": "Athenaei Naucratitae Dipnosophistarum libri XV",
+        "series": "Bibliotheca Teubneriana",
+        "volume": "3",
+        "place": "Leipzig",
+        "publisher": "B. G. Teubner",
+        "year": 1890,
+        "page": "523",
+        "printedLines": "20–23"
+      },
+      "text": "ἤκμαζε δὲ καὶ τὰ ἐν Ἀλεξανδρείᾳ διὰ πλοῦτον καὶ διὰ τὴν Ἀρσινόης καὶ Βερενίκης σπουδήν. ἐγίνετο δὲ καὶ ἐν Κυρήνῃ ῥόδινον χρηστότατον καθ' ὃν χρόνον ἔζη Βερενίκη ἡ μεγάλη.",
+      "translation": "The perfumes made at Alexandria also flourished, because of wealth and because of the enthusiastic patronage of Arsinoe and Berenice. At Cyrene too the very best rose perfume was produced during the lifetime of Berenice the Great.",
+      "commentary": "This is a report, not a formulation. It is the dossier's most direct evidence that royal women were remembered as patrons of perfume production and that Berenice's reign was used to periodize Cyrenaic rose perfume.",
+      "safety": null,
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\dev\\perfume-tables\\sources\\tlg0008001.xml",
+        "C:\\dev\\perfume-tables\\research\\athenaeus_apollonius_peri_myron_15.38.md",
+        "https://books.google.com/books?id=dtyCF7bMI1UC&pg=PA523"
+      ]
+    },
+    {
+      "id": "PQF-BER-CALL-GRACES",
+      "queen": [
+        "Berenice"
+      ],
+      "queenIdentification": {
+        "identification": "Probably Berenice II",
+        "confidence": "medium",
+        "basis": "Berenice II is the usual and contextually strongest identification, but the four-line epigram gives no dynastic number and other Berenices have been proposed."
+      },
+      "recordKind": "report",
+      "subtype": "court poetry and perfumed royal body",
+      "olfactoryRelevance": "direct",
+      "textScope": "complete-passage",
+      "source": {
+        "ancientAuthor": "Callimachus",
+        "ancientWork": "Epigrammata; also Anthologia Palatina 5.146",
+        "book": null,
+        "chapter": null,
+        "section": "Epigram 51 (printed heading LI [52])",
+        "subsection": "AP 5.146",
+        "ancientLines": "1–4",
+        "digitalLocator": "TLG 0533:003, epigram 51, lines 1–4; TLG 0533:004, book 5, epigram 146",
+        "quotedSource": null,
+        "editor": "R. Pfeiffer",
+        "editionTitle": "Callimachus",
+        "series": null,
+        "volume": "2: Hymni et epigrammata",
+        "place": "Oxford",
+        "publisher": "Clarendon Press",
+        "year": 1953,
+        "page": "95",
+        "printedLines": "1–4"
+      },
+      "text": "Τέσσαρες αἱ Χάριτες· ποτὶ γὰρ μία ταῖς τρισὶ τήναις / ἄρτι ποτεπλάσθη κἦτι μύροισι νοτεῖ. / εὐαίων ἐν πᾶσιν ἀρίζηλος Βερενίκα, / ἇς ἄτερ οὐδ' αὐταὶ ταὶ Χάριτες Χάριτες.",
+      "translation": "There are four Graces: for one has just been fashioned in addition to those three, and she is still wet with perfumes—Berenice, fortunate and conspicuous in all things, without whom not even the Graces themselves are Graces.",
+      "commentary": "The perfume is poetic, not a recipe or documentary court record. It makes the newly fashioned queen a living fourth Grace whose scented body signals divine beauty and Ptolemaic abundance.",
+      "safety": null,
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\Databases\\TLG (TLG 0533:003 and 0533:004)"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-PLUT-BARGE",
+      "queen": [
+        "Cleopatra VII"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra VII",
+        "confidence": "certain",
+        "basis": "The Life of Antony narrates her meeting with Mark Antony at Tarsus."
+      },
+      "recordKind": "report",
+      "subtype": "royal spectacle and olfactory staging",
+      "olfactoryRelevance": "direct",
+      "textScope": "complete-passage",
+      "source": {
+        "ancientAuthor": "Plutarch",
+        "ancientWork": "Life of Antony",
+        "book": null,
+        "chapter": "26",
+        "section": "3",
+        "subsection": null,
+        "ancientLines": "26.3",
+        "digitalLocator": "TLG 0007:058, Antony 26.3; local XML lines 1271–1272",
+        "quotedSource": null,
+        "editor": "B. Perrin",
+        "editionTitle": "Plutarch's Lives",
+        "series": "Loeb Classical Library",
+        "volume": "9",
+        "place": "Cambridge, MA; London",
+        "publisher": "Harvard University Press; William Heinemann",
+        "year": 1920,
+        "page": "194",
+        "printedLines": "3–4 (Greek text; visual line count)"
+      },
+      "text": "ὀδμαὶ δὲ θαυμασταὶ τὰς ὄχθας ἀπὸ θυμιαμάτων πολλῶν κατεῖχον.",
+      "translation": "Extraordinary scents from the great quantity of incense filled the riverbanks.",
+      "commentary": "A report of deliberately engineered smell in Cleopatra's Aphrodite-like river spectacle. The incense extends the royal performance beyond the barge into the surrounding landscape.",
+      "safety": null,
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\Databases\\XML\\Diogenes-Resources\\xml\\tlg\\tlg0007058.xml"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-PLUT-TOXICOLOGY",
+      "queen": [
+        "Cleopatra VII"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra VII",
+        "confidence": "certain",
+        "basis": "The episode belongs to the final phase of Plutarch's Life of Antony."
+      },
+      "recordKind": "report",
+      "subtype": "toxicological experimentation",
+      "olfactoryRelevance": "none",
+      "textScope": "complete-passage",
+      "source": {
+        "ancientAuthor": "Plutarch",
+        "ancientWork": "Life of Antony",
+        "book": null,
+        "chapter": "71",
+        "section": "6–8",
+        "subsection": null,
+        "ancientLines": "71.6–8",
+        "digitalLocator": "TLG 0007:058, Antony 71.6–8; local XML lines 3654–3667",
+        "quotedSource": null,
+        "editor": "B. Perrin",
+        "editionTitle": "Plutarch's Lives",
+        "series": "Loeb Classical Library",
+        "volume": "9",
+        "place": "Cambridge, MA; London",
+        "publisher": "Harvard University Press; William Heinemann",
+        "year": 1920,
+        "page": "300–302",
+        "printedLines": "300.29–302.10 (Greek text; visual line count)"
+      },
+      "text": "Κλεοπάτρα δὲ φαρμάκων θανασίμων συνῆγε παντοδαπὰς δυνάμεις, ὧν ἑκάστης τὸ ἀνώδυνον ἐλέγχουσα, προὔβαλλε τοῖς ἐπὶ θανάτῳ φρουρουμένοις. ἐπεὶ δ' ἑώρα τὰς μὲν ὠκυμόρους τὴν ὀξύτητα τοῦ θανάτου δι' ὀδύνης ἐπιφερούσας, τὰς δὲ πραοτέρας τάχος οὐκ ἐχούσας, τῶν θηρίων ἀπεπειρᾶτο, θεωμένης αὐτῆς ἕτερον ἑτέρῳ προσφερόντων. ἐποίει δὲ τοῦτο καθ' ἡμέραν· καὶ σχεδὸν ἐν πᾶσι μόνον εὕρισκε τὸ δῆγμα τῆς ἀσπίδος ἄνευ σπασμοῦ καὶ στεναγμοῦ κάρον ὑπνώδη καὶ καταφορὰν ἐφελκόμενον, ἱδρῶτι μαλακῷ τοῦ προσώπου καὶ τῶν αἰσθητηρίων ἀμαυρώσει παραλυομένων ῥᾳδίως, καὶ δυσχεραινόντων πρὸς τὰς ἐξεγέρσεις καὶ ἀνακλήσεις ὥσπερ οἱ βαθέως καθεύδοντες.",
+      "translation": "Cleopatra collected the varied powers of lethal drugs and, testing which effect was painless, administered them to prisoners condemned to death. When she saw that swift-acting drugs brought the sharpness of death with pain, while gentler ones lacked speed, she experimented with animals, watching as one was applied to another. She did this daily, and in nearly every case found that only the asp's bite induced a drowsy stupor and sinking without convulsion or groan: the face relaxed in a gentle sweat, the senses grew dim, and they resisted attempts to awaken and recall them, like people deeply asleep.",
+      "commentary": "This is experimental toxicology in narrative form, not a recipe and not olfactory evidence. It is retained because later discussions often blur Cleopatra's drug lore with perfume lore.",
+      "safety": "This passage reports lethal experimentation and must not be treated as practical instruction.",
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\Databases\\XML\\Diogenes-Resources\\xml\\tlg\\tlg0007058.xml"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-PLINY-CROWN",
+      "queen": [
+        "Cleopatra VII"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra VII",
+        "confidence": "certain",
+        "basis": "The anecdote explicitly pairs Cleopatra with Antony."
+      },
+      "recordKind": "report",
+      "subtype": "poisoned scented object",
+      "olfactoryRelevance": "contextual",
+      "textScope": "selected-excerpt",
+      "source": {
+        "ancientAuthor": "Pliny the Elder",
+        "ancientWork": "Naturalis historia",
+        "book": "21",
+        "chapter": "9",
+        "section": "12",
+        "subsection": "Cleopatra's poisoned flower crown",
+        "ancientLines": "21.9.12; Mayhoff 384.3–11 for the selected excerpt",
+        "digitalLocator": "PHI Latin LAT0978, book 21, paragraph 12",
+        "quotedSource": null,
+        "editor": "C. Mayhoff",
+        "editionTitle": "C. Plini Secundi Naturalis historiae libri XXXVII",
+        "series": "Bibliotheca Teubneriana",
+        "volume": "3",
+        "place": "Leipzig",
+        "publisher": "B. G. Teubner",
+        "year": 1892,
+        "page": "384",
+        "printedLines": "3–11"
+      },
+      "text": "Et apud Graecos ... in potu atque hilaritate praecipue odorum vi subrepente fallaciter. scelerata Cleopatrae sollertia ... extremis coronae floribus veneno inlitis ...",
+      "translation": "Among the Greeks ... especially during drinking and merriment, when the force of scents steals in deceptively. Cleopatra's criminal ingenuity ... had smeared poison on the outermost flowers of the crown ...",
+      "commentary": "The crown is a scented social object, but Pliny does not give a poison formula. The anecdote depends on the sensory and convivial plausibility of flower garlands while presenting Cleopatra as a demonstrator of hidden toxicity.",
+      "safety": "Report of poisoning; no reconstruction or procedural inference is warranted.",
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\dev\\perfume-tables\\sources\\phi0978001.xml",
+        "C:\\Databases\\XML\\Diogenes-Resources\\xml\\phi\\phi0978001.xml, lines 44243–44257",
+        "https://books.google.com/books?id=1I5z91mWTEIC&pg=PA384"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-LUCAN-BANQUET",
+      "queen": [
+        "Cleopatra VII"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra VII",
+        "confidence": "certain",
+        "basis": "Lucan's tenth book places Caesar at Cleopatra's Alexandrian banquet."
+      },
+      "recordKind": "report",
+      "subtype": "epic representation of a perfumed banquet",
+      "olfactoryRelevance": "direct",
+      "textScope": "complete-passage",
+      "source": {
+        "ancientAuthor": "Lucan",
+        "ancientWork": "Bellum civile",
+        "book": "10",
+        "chapter": null,
+        "section": null,
+        "subsection": "Cleopatra's banquet",
+        "ancientLines": "10.164–168",
+        "digitalLocator": "PHI Latin LAT0917, book 10, verses 164–168",
+        "quotedSource": null,
+        "editor": "A. E. Housman",
+        "editionTitle": "M. Annaei Lucani Belli civilis libri decem",
+        "series": null,
+        "volume": null,
+        "place": "Oxford",
+        "publisher": "Basil Blackwell",
+        "year": 1926,
+        "page": "308",
+        "printedLines": "verses 164–168"
+      },
+      "text": "accipiunt sertas nardo florente coronas / et numquam fugiente rosa, multumque madenti / infudere comae quod nondum euanuit aura / cinnamon externa nec perdidit aera terrae, / aduectumque recens uicinae messis amomon.",
+      "translation": "They receive garlands woven with flowering nard and with a rose that never fades. Over their drenched hair they pour much cinnamon that has not yet lost the breath of its foreign land, and amomum newly brought from the neighboring harvest.",
+      "commentary": "Epic narrative, not a court inventory or recipe. Lucan makes aroma a marker of immediacy, import, excess, and Alexandria's access to luxury supply chains.",
+      "safety": null,
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\Databases\\PHI5 (LAT0917)"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-FLORUS-DEATH",
+      "queen": [
+        "Cleopatra VII"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra VII",
+        "confidence": "certain",
+        "basis": "The death scene follows Antony's defeat."
+      },
+      "recordKind": "report",
+      "subtype": "fragrant death-scene narrative",
+      "olfactoryRelevance": "direct",
+      "textScope": "selected-excerpt",
+      "source": {
+        "ancientAuthor": "Florus",
+        "ancientWork": "Epitome de Tito Livio bellorum omnium annorum DCC libri duo",
+        "book": "2",
+        "chapter": "21",
+        "section": "11",
+        "subsection": "four-book numbering 4.11.11",
+        "ancientLines": "2.21.11 (= 4.11.11)",
+        "digitalLocator": "PHI Latin LAT1242, book 2, chapter 21, section 11",
+        "quotedSource": null,
+        "editor": "H. Malcovati",
+        "editionTitle": "L. Annaei Flori quae exstant",
+        "series": null,
+        "volume": null,
+        "place": "Rome",
+        "publisher": "Typis Officinae Polygraphicae",
+        "year": 1972,
+        "page": "203",
+        "printedLines": "1–4"
+      },
+      "text": "ibi maximos, ut solebat, induta cultus in differto odoribus solio iuxta suum se conlocavit Antonium ...",
+      "translation": "There, dressed in her grandest finery as was her custom, she placed herself beside her Antony on a couch steeped in perfumes ...",
+      "commentary": "This compressed historiographical tableau makes fragrance part of Cleopatra's royal self-presentation in death. It is a literary report, not evidence for a particular aromatic formula.",
+      "safety": null,
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\Databases\\PHI5 (LAT1242)"
+      ]
+    },
+    {
+      "id": "PQF-CLEO-JOSEPHUS-BALSAM",
+      "queen": [
+        "Cleopatra VII"
+      ],
+      "queenIdentification": {
+        "identification": "Cleopatra VII",
+        "confidence": "certain",
+        "basis": "Josephus narrates Antony's territorial grants to Cleopatra and Herod's lease."
+      },
+      "recordKind": "report",
+      "subtype": "aromatic economy and royal revenue",
+      "olfactoryRelevance": "indirect",
+      "textScope": "complete-passage",
+      "source": {
+        "ancientAuthor": "Josephus",
+        "ancientWork": "Antiquitates Judaicae",
+        "book": "15",
+        "chapter": "4",
+        "section": "2 (Niese §96)",
+        "subsection": "Jericho balsam revenues",
+        "ancientLines": "15.96; TLG chapter 96, line 6",
+        "digitalLocator": "TLG 0526:001, book 15, section 96, line 6",
+        "quotedSource": null,
+        "editor": "B. Niese",
+        "editionTitle": "Flavii Iosephi opera",
+        "series": null,
+        "volume": "3",
+        "place": "Berlin",
+        "publisher": "Weidmann",
+        "year": 1892,
+        "page": "349",
+        "printedLines": "9–15"
+      },
+      "text": "Τούτων ἡ Κλεοπάτρα τυχοῦσα καὶ παραπέμψασα μέχρις Εὐφράτου τὸν Ἀντώνιον ἐπ' Ἀρμενίαν στρατευόμενον ἀνέστρεψεν καὶ γίνεται μὲν ἐν Ἀπαμείᾳ καὶ Δαμασκῷ, παρέλθεν δὲ καὶ εἰς τὴν Ἰουδαίαν Ἡρώδου συντυχόντος αὐτῇ καὶ τῆς τε Ἀραβίας τὰ δοθέντα καὶ τὰς περὶ τὸν Ἱεριχοῦντα προσόδους Ἡρώδου μισθωσαμένου· φέρει δ' ἡ χώρα τὸ βάλσαμον, ὃ τιμιώτατον τῶν ἐκεῖ καὶ παρὰ μόνοις φύεται, τόν τε φοίνικα πολὺν καὶ καλόν.",
+      "translation": "After Cleopatra had obtained these possessions, she escorted Antony as far as the Euphrates when he was campaigning against Armenia, then turned back. She came to Apamea and Damascus and also passed into Judaea. Herod met her and leased from her both the territory granted in Arabia and the revenues around Jericho. The country produces balsam, the most valuable product there and one that grows only among them, as well as many fine date palms.",
+      "commentary": "Not a perfume recipe but economic evidence: Herod leased from Cleopatra revenues attached to a uniquely prized aromatic crop. Josephus, Jewish War 1.361 supplies a close parallel, saying Antony gave her the Jericho palm grove where balsam grows.",
+      "safety": null,
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\Databases\\TLG (TLG 0526:001; parallel TLG 0526:004)"
+      ]
+    },
+    {
+      "id": "PQF-BER-ATH-PROCESSION",
+      "queen": [
+        "Berenice"
+      ],
+      "queenIdentification": {
+        "identification": "Probably Berenice I in the Bereniceion cult setting",
+        "confidence": "high",
+        "basis": "The Bereniceion belongs to Ptolemy II's dynastic procession as described by Callixenus; the aromatic wagons occur in the same procession, not as a direct action by the queen."
+      },
+      "recordKind": "report",
+      "subtype": "royal procession, incense, and aromatic display",
+      "olfactoryRelevance": "direct",
+      "textScope": "composite-excerpt",
+      "source": {
+        "ancientAuthor": "Athenaeus, quoting Callixenus of Rhodes",
+        "ancientWork": "Deipnosophistae",
+        "book": "5",
+        "chapter": "34",
+        "section": "Casaubon 203a–b",
+        "subsection": "Ptolemy II's procession",
+        "ancientLines": "Kaibel 448.16–17; 449.7–9; 449.24–25",
+        "digitalLocator": "TLG 0008:001, book 5, chapter 34, lines 30 and 46",
+        "quotedSource": "Callixenus of Rhodes, On Alexandria, book 1",
+        "editor": "G. Kaibel",
+        "editionTitle": "Athenaei Naucratitae Dipnosophistarum libri XV",
+        "series": "Bibliotheca Teubneriana",
+        "volume": "1",
+        "place": "Leipzig",
+        "publisher": "B. G. Teubner",
+        "year": 1887,
+        "page": "448–449",
+        "printedLines": "448.16–17; 449.7–9; 449.24–25"
+      },
+      "text": "ἐπόμπευσε δὲ καὶ θυμιατήρια χρυσᾶ τριακόσια καὶ πεντήκοντα ... οὗτος δὲ περιετίθετο τῷ τοῦ Βερενικείου θυρώματι ... ἀρωμάτων δὲ ὀκτακόσιαι [ἅμαξαι].",
+      "translation": "There were also paraded three hundred and fifty gold incense burners ... This was set around the doorway of the Bereniceion ... and eight hundred wagons of aromatics.",
+      "commentary": "These details belong to one Ptolemaic procession but should not be collapsed into a claim that Berenice personally supplied the aromatics. The evidence is for a queen's cult monument embedded in a spectacle saturated with incense and aromatic wealth.",
+      "safety": null,
+      "citationStatus": "complete",
+      "localEvidence": [
+        "C:\\dev\\perfume-tables\\sources\\tlg0008001.xml"
+      ]
+    }
+  ]
+}
