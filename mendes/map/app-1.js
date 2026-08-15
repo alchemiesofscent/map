@@ -110,7 +110,7 @@
         claims: [
           { id:"card-commagene", place:"Commagene", coord:[38.2,37.4], evidence:"ancient", route:"syria", recipes:["t","s"], cite:"Dioscorides, De materia medica 1.6", note:"Dioscorides ranks the Commagene product among the best." },
           { id:"card-armenia", place:"Armenia", coord:[44.5,40.2], evidence:"ancient", route:"syria", recipes:["t","s"], cite:"Dioscorides, De materia medica 1.6", note:"Dioscorides ranks the Armenian product among the best." },
-          { id:"card-bosporus", place:"Bosporus — textual referent unresolved", coord:[36.5,45.1], evidence:"ancient", route:"syria", recipes:["t","s"], cite:"Dioscorides, De materia medica 1.6", note:"The source says Bosporus. The point is placed approximately at the Cimmerian Bosporus; the passage itself does not disambiguate the toponym." },
+          { id:"card-bosporus", place:"Bosporus — textual referent unresolved", coord:[29.1,41.0], evidence:"ancient", route:"med-sea", recipes:["t","s"], cite:"Dioscorides, De materia medica 1.6", note:"The source says Bosporus. The point is placed approximately at the Thracian Bosporus, where the strait meets the Sea of Marmara; the passage itself does not disambiguate the toponym." },
           { id:"card-india", place:"India", coord:[73.3,22.2], evidence:"ancient", route:"india", recipes:["t","s"], cite:"Dioscorides, De materia medica 1.6; Theophrastus, Historia plantarum 9.7.2", note:"Dioscorides says it also grows in India; Theophrastus reports India as one of two competing origins." },
           { id:"card-media", place:"Media", coord:[49.3,34.2], evidence:"ancient", route:"syria", recipes:["t","s"], cite:"Theophrastus, Historia plantarum 9.7.2; Pliny, Naturalis historia 12.50", note:"Media is one side of Theophrastus’ reported disagreement and also appears in Pliny." },
           { id:"card-arabia", place:"Arabia", coord:[47.3,24.5], evidence:"ancient", route:"incense", recipes:["t","s"], cite:"Dioscorides, De materia medica 1.6; Pliny, Naturalis historia 12.50", note:"Dioscorides says it also grows in Arabia; Pliny says it is harvested there." }
@@ -370,7 +370,7 @@
     const placeLabels = [
       { text:"Corycus", coord:[34.0,36.45], dx:6, dy:-6 },
       { text:"Side", coord:[31.39,36.77], dx:6, dy:13 },
-      { text:"Athens", coord:[23.7,37.9], dx:6, dy:-6 },
+      { text:"Athens", coord:[23.7,37.9], dx:9, dy:-12 },
       { text:"Jericho", coord:[35.44,31.87], dx:6, dy:-5 },
       { text:"Petra", coord:[35.44,30.33], dx:6, dy:13 },
       { text:"Gaza", coord:[34.47,31.5], dx:-26, dy:-6 },
@@ -380,14 +380,14 @@
     ];
 
     const routes = [
-      { id:"india-sea", type:"sea", coords:[[72.5,19.0],[61.0,15.5],[49.2,12.7],[43.3,12.6],[39.5,17.0],[35.5,23.9]], label:"INDIA → RED SEA · SEA / CONVENTIONAL", labelAt:[55.0,11.6] },
-      { id:"red-sea", type:"sea", coords:[[43.3,12.6],[40.0,16.0],[37.7,20.0],[35.5,23.9],[33.6,27.2]], label:"RED SEA PORTS · SEA / CONVENTIONAL", labelAt:[41.0,18.6] },
+      { id:"india-sea", type:"sea", coords:[[72.5,19.0],[61.0,15.5],[49.2,12.7],[43.3,12.6],[39.5,17.0],[35.5,23.9]], label:"INDIA → RED SEA · SEA", labelAt:[55.0,11.6] },
+      { id:"red-sea", type:"sea", coords:[[43.3,12.6],[40.0,16.0],[37.7,20.0],[35.5,23.9],[33.6,27.2]], label:"RED SEA PORTS · SEA", labelAt:[41.0,18.6] },
       { id:"berenice-coptos", type:"land", coords:[[35.5,23.9],[34.2,25.0],[32.8,26.0]], label:"BERENICE → COPTOS · LAND", labelAt:[35.0,24.6] },
       { id:"myos-coptos", type:"land", coords:[[33.6,27.2],[32.8,26.0]], label:"MYOS HORMOS → COPTOS · LAND", labelAt:[33.8,27.0] },
       { id:"nile", type:"river", coords:[[32.8,26.0],[31.7,28.4],[31.2,30.1],[31.5,30.95]], label:"NILE · CONVENTIONAL", labelAt:[29.4,28.7] },
-      { id:"incense-road", type:"land", coords:[[44.2,15.4],[39.7,21.4],[37.4,26.6],[35.44,30.33],[34.47,31.5],[31.5,30.95]], label:"PETRA → GAZA · LAND / CONVENTIONAL", labelAt:[42.0,27.2] },
-      { id:"med-sea", type:"sea", coords:[[14.0,37.5],[23.7,37.9],[30.0,36.2],[33.3,35.0],[29.9,31.2],[31.5,30.95]], label:"MEDITERRANEAN · SEA / CONVENTIONAL", labelAt:[17.5,35.0] },
-      { id:"syria-land", type:"land", coords:[[36.3,36.6],[36.3,33.5],[34.47,31.5],[31.5,30.95]], label:"SYRIA · LAND / CONVENTIONAL", labelAt:[38.0,33.6] }
+      { id:"incense-road", type:"land", coords:[[44.2,15.4],[39.7,21.4],[37.4,26.6],[35.44,30.33],[34.47,31.5],[31.5,30.95]], label:"PETRA → GAZA · LAND", labelAt:[42.0,27.2] },
+      { id:"med-sea", type:"sea", coords:[[14.0,37.5],[23.7,37.9],[30.0,36.2],[33.3,35.0],[29.9,31.2],[31.5,30.95]], label:"MEDITERRANEAN · SEA", labelAt:[17.5,35.0] },
+      { id:"syria-land", type:"land", coords:[[36.3,36.6],[36.3,33.5],[34.47,31.5],[31.5,30.95]], label:"SYRIA · LAND", labelAt:[38.0,33.6] }
     ];
 
     const convergence = {

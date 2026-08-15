@@ -136,9 +136,17 @@
     function positionSelectedLabel() {
       if (!selectedClaim) return;
       const p = transformedPoint(selectedClaim.coord);
-      const x = p[0] + 13 * overlayScale;
+      // The label always typed rightward, so a point near the right edge ran
+      // its name off the screen — "Vessel-dressing gum — source unst". Points
+      // in the window's right half name themselves leftward instead.
+      let w = 0;
+      try { w = selectedLabel.node().getComputedTextLength() * overlayScale; } catch (e) { w = 0; }
+      const ext = visibleViewportExtent();
+      const flip = p[0] + 13 * overlayScale + w > ext[1][0] - 8;
+      const x = flip ? p[0] - 13 * overlayScale : p[0] + 13 * overlayScale;
       const y = p[1] - 13 * overlayScale;
       selectedLabel
+        .attr("text-anchor",flip ? "end" : null)
         .attr("x",x)
         .attr("y",y)
         .attr("transform","translate(" + x + "," + y + ") scale(" + overlayScale + ") translate(" + (-x) + "," + (-y) + ")");
