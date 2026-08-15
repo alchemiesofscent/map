@@ -17,6 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CLAIMS_PATH = ROOT / "mendes" / "data" / "claims.json"
 PQF_PATH = ROOT / "mendes" / "data" / "ptolemaic-queens-fragments.json"
+CORPUS_PATH = ROOT / "mendes" / "data" / "corpus-claims.json"
 
 EVIDENCE = {"ancient", "modern", "theology"}
 RECIPE_IDS = {"m", "t", "s"}
@@ -137,14 +138,38 @@ def main() -> None:
     if unmapped := pqf_ids - court_pqf_ids:
         err(f"queens records missing from court (rerun scripts/build_mendes_court_claims.py): {sorted(unmapped)}")
 
+    # The generated wider corpus, when present.
+    corpus_counts = ""
+    if CORPUS_PATH.is_file():
+        corpus = json.loads(CORPUS_PATH.read_text(encoding="utf-8"))
+        seen_corpus: set[str] = set()
+        for kind in ("simples", "galen"):
+            for record in corpus.get(kind, []):
+                where = f"corpus {kind} {record.get('id', '?')}"
+                for field in ("id", "ingredientRef", "relation", "place", "cite"):
+                    if field not in record:
+                        err(f"{where}: missing field {field!r}")
+                if record["id"] in seen_corpus:
+                    err(f"{where}: duplicate id")
+                seen_corpus.add(record["id"])
+                if record.get("ingredientRef") is not None and record["ingredientRef"] not in seen_ing:
+                    err(f"{where}: ingredientRef {record['ingredientRef']!r} is not an ingredient id")
+                place = record.get("place") or {}
+                check_coord(place.get("coord"), f"{where} place {place.get('name')!r}")
+                if not place.get("pleiades"):
+                    err(f"{where}: place has no Pleiades id")
+        corpus_counts = (f", {len(corpus.get('simples', []))} simples + "
+                         f"{len(corpus.get('galen', []))} Galen corpus records")
+
     claim_count = sum(len(i["claims"]) for i in all_ingredients)
     if errors:
-        print(f"claims.json: {len(errors)} problem(s)", file=sys.stderr)
+        print(f"claims data: {len(errors)} problem(s)", file=sys.stderr)
         for e in errors:
             print(" -", e, file=sys.stderr)
         sys.exit(1)
-    print(f"claims.json OK: {len(data['ingredients'])} ingredients, "
-          f"{claim_count} provenance claims, {len(data['court'])} court records")
+    print(f"claims data OK: {len(data['ingredients'])} ingredients, "
+          f"{claim_count} provenance claims, {len(data['court'])} court records"
+          + corpus_counts)
 
 
 if __name__ == "__main__":

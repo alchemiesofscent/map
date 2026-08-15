@@ -175,14 +175,28 @@
       });
     }());
 
-    /* The claims store joins the index when it arrives: search keeps working
-       over the dossier sections alone until then (and if the fetch fails). */
+    /* The claims stores join the index when they arrive: search keeps working
+       over the dossier sections alone until then (and if a fetch fails).
+       claims.json holds the hand-maintained records; corpus-claims.json is
+       the generated wider corpus (TEI simples, Galen's materia). They load
+       together because the corpus rows borrow recipe-layer membership from
+       the ingredient they share with the recipes. */
     var claimEntries = [];
-    fetch("data/claims.json?v=" + encodeURIComponent(window.ASSET_VERSION || ""))
-      .then(function (response) { return response.ok ? response.json() : null; })
-      .then(function (data) {
+    function fetchJSON(url) {
+      return fetch(url + "?v=" + encodeURIComponent(window.ASSET_VERSION || ""))
+        .then(function (response) { return response.ok ? response.json() : null; })
+        .catch(function () { return null; });
+    }
+    Promise.all([fetchJSON("data/claims.json"), fetchJSON("data/corpus-claims.json")])
+      .then(function (loaded) {
+        var data = loaded[0];
+        var corpus = loaded[1];
         if (!data) return;
         var evidenceLabel = { ancient: "ancient", modern: "inference", theology: "theology" };
+        var recipesByIngredient = {};
+        data.ingredients.concat(data.contextIngredients, [data.theology]).forEach(function (ingredient) {
+          recipesByIngredient[ingredient.id] = ingredient.recipes;
+        });
         data.ingredients.concat(data.contextIngredients, [data.theology]).forEach(function (ingredient) {
           ingredient.claims.forEach(function (claim) {
             claimEntries.push({
@@ -216,6 +230,41 @@
               record.commentary || ""].join(" "))
           });
         });
+        if (corpus) {
+          // TEI-verified simples claims join the provenance group; their rows
+          // link out to the accepted Pleiades place.
+          (corpus.simples || []).forEach(function (record) {
+            claimEntries.push({
+              group: "map",
+              title: record.place.name,
+              sub: record.lemmaEn + " — " + record.relation.replace(/_/g, " ")
+                + (record.qualifier ? " (" + record.qualifier + ")" : "") + " · TEI-verified",
+              cite: record.cite,
+              chip: "attested",
+              chipClass: "ancient",
+              evidence: "ancient",
+              recipes: record.ingredientRef ? (recipesByIngredient[record.ingredientRef] || []) : [],
+              href: record.place.pleiadesUri,
+              folded: fold([record.place.name, record.place.surface, record.lemma,
+                record.lemmaEn, record.cite, record.relation, record.qualifier || ""].join(" "))
+            });
+          });
+          // Galen's autopsy and supply testimony is its own register: the
+          // Greek evidence phrase is indexed, so unaccented Greek finds it.
+          (corpus.galen || []).forEach(function (record) {
+            claimEntries.push({
+              group: "galen",
+              title: record.place.name,
+              sub: record.name + " (" + record.greekName + ") — " + record.relation.replace(/_/g, " "),
+              cite: record.cite,
+              chip: record.relation.replace(/_/g, " "),
+              chipClass: "galen",
+              href: record.place.pleiadesUri,
+              folded: fold([record.place.name, record.name, record.greekName,
+                record.cite, record.relation, record.evidencePhrase || ""].join(" "))
+            });
+          });
+        }
         onClaimsLoaded();
       })
       .catch(function () { /* section search stands alone */ });
@@ -303,7 +352,7 @@
       filtersHost.textContent = "";
       var scopeRow = document.createElement("div");
       scopeRow.className = "filter-row";
-      [["all", "All"], ["sections", "Text"], ["map", "Map claims"], ["court", "Queens"]].forEach(function (option) {
+      [["all", "All"], ["sections", "Text"], ["map", "Claims"], ["court", "Queens"], ["galen", "Galen"]].forEach(function (option) {
         var chip = filterChip(option[1], scope === option[0], null, function () {
           scope = option[0];
           renderFilters();
@@ -419,7 +468,7 @@
       var querying = q.length >= 2;
       // With a claims scope chosen and no query, browse the corpus under the
       // active refinements instead of going quiet.
-      var browsing = !querying && (scope === "map" || scope === "court");
+      var browsing = !querying && (scope === "map" || scope === "court" || scope === "galen");
       if (!querying && !browsing) {
         summary.hidden = true;
         results.hidden = true;
@@ -448,12 +497,19 @@
               && (!querying || e.folded.indexOf(fq) >= 0);
           })
         : [];
-      var total = sectionHits.length + mapHits.length + courtHits.length;
+      var galenHits = (scope === "all" || scope === "galen")
+        ? claimEntries.filter(function (e) {
+            return e.group === "galen" && (!querying || e.folded.indexOf(fq) >= 0);
+          })
+        : [];
+      var total = sectionHits.length + mapHits.length + courtHits.length + galenHits.length;
       var mapCap = browsing ? 12 : 8;
       var courtCap = browsing ? 16 : 6;
+      var galenCap = browsing ? 14 : 6;
       var shown = Math.min(sectionHits.length, 8)
         + Math.min(mapHits.length, mapCap)
-        + Math.min(courtHits.length, courtCap);
+        + Math.min(courtHits.length, courtCap)
+        + Math.min(galenHits.length, galenCap);
       summary.hidden = false;
       summary.textContent = !total ? "No matches"
         : shown < total
@@ -477,12 +533,16 @@
         });
       }
       if (mapHits.length) {
-        appendGroupLabel("On the map — provenance claims");
+        appendGroupLabel("Provenance claims");
         mapHits.slice(0, mapCap).forEach(function (entry) { appendRow(claimRow(entry)); });
       }
       if (courtHits.length) {
         appendGroupLabel("Queens’ fragments — court records");
         courtHits.slice(0, courtCap).forEach(function (entry) { appendRow(claimRow(entry)); });
+      }
+      if (galenHits.length) {
+        appendGroupLabel("Galen — observed, acquired, sourced");
+        galenHits.slice(0, galenCap).forEach(function (entry) { appendRow(claimRow(entry)); });
       }
       measureStick();
     }

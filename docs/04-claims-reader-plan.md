@@ -1,6 +1,6 @@
 # 04 — A modern, searchable claims set for the House of Mendes
 
-**Status:** in progress · Phases 0 and 1 shipped
+**Status:** Phases 0–3 shipped
 **Date:** 2026-08-15
 **Scope:** `mendes/` (dossier, map, journeys) + the Ptolemaic queens fragments from `perfume-tables`
 
@@ -151,14 +151,32 @@ Mapping rules:
   the layer on and select the dot. The guide pane and the strip legend
   explain the register: a report never becomes an ingredient-origin dot.
 
-**Phase 3 — the rest of the corpus**
-- Fold in `data/generated/simples/provenance_entry_claims.json` (already has
-  Pleiades ids) and the Galen/periplus datasets behind the same schema.
-- Sync script for `perfume-tables` datasets (copy + stamp, as done by hand in
-  Phase 0) so future PQF releases (v0.2+) land with one command.
-- Housekeeping: retire the orphaned `mendes/app-1.js`, `app-2.js`, `app-3.js`
-  and `mendes/content-4.html`’s former duplicate content (done), and the
-  root-level orphans once nothing references them.
+**Phase 3 — the rest of the corpus (shipped)**
+- `scripts/build_mendes_corpus_claims.py` (`make mendes-corpus`) generates
+  `mendes/data/corpus-claims.json` from two verified sources: the simples
+  pipeline’s 14 TEI-verified Dioscorides claims (with accepted Pleiades ids)
+  and Galen’s 45 materia place-links (observed / acquired / sourced, with
+  Kühn citations and the Greek evidence phrases). Materials shared with the
+  recipes carry `ingredientRef` into claims.json (balsamum → balsam,
+  calamus → kalamos, opobalsam/xylobalsam → balsam, …); everything else
+  stays unforced at `null`.
+- The dossier search covers the new corpus: TEI simples rows join the
+  “Provenance claims” group (evidence and layer filters apply; rows link to
+  the accepted Pleiades place), and a new “Galen” scope/group indexes the
+  Greek evidence phrases, so unaccented Greek (ασφαλτ) finds Galen’s own
+  words. `check_mendes_claims.py` validates the generated corpus too.
+- `scripts/sync_perfume_tables.py` (`make mendes-sync`, `SRC=` to point at a
+  checkout): copies + stamps the queens dataset, rebuilds the court array,
+  and validates — one command for future PQF releases; new unmapped records
+  still fail loudly in the court builder by design.
+- Housekeeping: the orphaned root-level `mendes/app-1.js`, `app-2.js`, and
+  `app-3.js` are removed (nothing referenced them since the combined-page
+  era; the viewers load `mendes/map/app-1.js` and their own files).
+
+**Still open (future work)**
+- The periplus dataset behind the same schema, if its journey records ever
+  need to be searchable from the dossier.
+- A prebuilt search index if the corpus outgrows client-side folding.
 
 ## Non-goals
 
