@@ -1,6 +1,6 @@
 # 04 — A modern, searchable claims set for the House of Mendes
 
-**Status:** proposed · first phase shipped (see “Phase 0”)
+**Status:** in progress · Phases 0 and 1 shipped
 **Date:** 2026-08-15
 **Scope:** `mendes/` (dossier, map, journeys) + the Ptolemaic queens fragments from `perfume-tables`
 
@@ -104,15 +104,21 @@ Mapping rules:
   patronage, spectacle, economy reports; full 16-record claim index) and the
   versioned dataset copy `mendes/data/ptolemaic-queens-fragments.json`.
 
-**Phase 1 — one claims store**
-- Extract the inline claims from `mendes/map/app-1.js` to
-  `mendes/data/claims.json`; `app-1.js` becomes a loader. One correction then
-  reaches map, journeys, and reader.
-- Convert PQF records into the same file under `provenanceOfRecord: "pqf-v0.1"`
-  with the aromatic extraction above (a small script; the versioned copy stays
-  the audit trail).
-- Add claim ids/permalinks to the dossier markup; validator (JSON schema in
-  `schemas/`) run via `make check`.
+**Phase 1 — one claims store (shipped)**
+- The inline claims moved from `mendes/map/app-1.js` to
+  `mendes/data/claims.json`; `app-1.js` is now a loader (the derived indexes
+  and map geometry stay in it). One correction reaches map, journeys, and
+  reader. The extraction was verified byte-identical to the old literals.
+- PQF records are derived into the same file’s `court` array by
+  `scripts/build_mendes_court_claims.py` (run via `make mendes-court`), with
+  the aromatic extraction above — refs link nard/cassia/rush-flower/myrobalan
+  records to the map’s ingredient ids — and conservative place mappings
+  (Alexandria, Cyrene, Tarsus, Jericho); the script fails loudly when an
+  upstream release adds unmapped records.
+- The Part V claim-index rows carry `#claim-pqf-…` permalinks;
+  `scripts/check_mendes_claims.py` validates the whole store via `make check`
+  (vocabularies, id uniqueness, coordinate sanity, group coverage, court ↔
+  PQF sync).
 
 **Phase 2 — claims-aware search and filters**
 - Search v2 over claim records; filter chips (evidence, layer, queen,
