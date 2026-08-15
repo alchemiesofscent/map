@@ -15,7 +15,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260815-10";
+      --asset-version: "20260815-11";
 
       /* Grounds — the study register shared with map/site.css */
       --sea-deep: #0E2229;
@@ -688,4 +688,44 @@
       .map-launch { display: none; }
       .ingredient-card { break-inside: avoid; box-shadow: none; }
       .dossier table { break-inside: avoid; }
+    }
+
+    /* ————— Object reliefs —————
+       Museum photographs of wide, shallow objects: a lintel 119 cm long
+       cannot be cover-cropped to a fixed height without destroying the
+       scene, so these contain rather than cover and keep their own aspect
+       ratio at every width. */
+    .relief-gallery {
+      display: grid;
+      gap: 18px;
+      margin: 1.5rem 0 2.2rem;
+    }
+    .relief-figure {
+      margin: 0;
+      border: 1px solid var(--rule-study);
+      border-radius: var(--r-card);
+      background: var(--panel);
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(20,30,34,.08);
+    }
+    .relief-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background: #ece5d2;
+    }
+    .relief-figure figcaption {
+      padding: 12px 16px 14px;
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.5;
+    }
+    .relief-figure figcaption strong { color: var(--ink); }
+    .relief-figure figcaption .relief-credit {
+      display: block;
+      margin-top: 6px;
+      font-family: var(--font-mono);
+      font-size: .66rem;
+      letter-spacing: .01em;
     }
