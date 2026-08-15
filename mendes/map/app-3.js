@@ -220,9 +220,15 @@
       return coarsePointerQuery.matches;
     }
 
+    const exploreToggle = document.getElementById("toggle-explore");
+
     function updateExploreMode() {
       const gesturesEnabled = isTouchInput() || exploreMode;
       mapWrap.classList.toggle("is-exploring",gesturesEnabled);
+      // The rail's checkbox arrived with the journeys viewer's markup in the
+      // shell rebuild and was never wired here — a control that read as the
+      // way to enable zoom, checked or not, while the filter ignored it.
+      if (exploreToggle) exploreToggle.checked = exploreMode;
       if (isTouchInput()) {
         gestureHint.textContent = "Tap a point for guided focus; drag, pinch, double-tap, or use +/− to explore.";
       } else if (exploreMode) {
@@ -261,6 +267,13 @@
       exploreMode = false;
       updateExploreMode();
       hideMapToast();
+    }
+
+    if (exploreToggle) {
+      exploreToggle.addEventListener("change", function () {
+        if (exploreToggle.checked) activateMap();
+        else releaseMap();
+      });
     }
 
     // Click once to activate wheel-zoom and drag (desktop only). Marker taps
@@ -414,6 +427,10 @@
       .filter(function (event) {
         const ordinaryPointer = (!event.ctrlKey || event.type === "wheel") && !event.button;
         if (!ordinaryPointer) return false;
+        // A trackpad pinch arrives as ctrl+wheel. Unlike a plain scroll it
+        // cannot be an attempt to move down the page, so it zooms without
+        // asking for explore mode first.
+        if (event.type === "wheel" && event.ctrlKey) return true;
         // Browsers synthesize dblclick from a double-tap, so without this the
         // built-in dblclick.zoom stacks on the hand-rolled gesture below and a
         // double-tap lands at 2.9x instead of 2x. Mouse double-click keeps it.
