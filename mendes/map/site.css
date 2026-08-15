@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260814-21";
+      --asset-version: "20260814-22";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -525,10 +525,14 @@
       .map-experience.chart .map-tools {
         left: auto;
         right: 16px;
-        bottom: 68px;
+        /* Into the strip's right corner, which holds nothing: the legend sits
+           at the left edge and the dots' case ends at 72% of the band. 68px
+           cleared a strip the cluster no longer needs to clear, and on a wide
+           squat window it pushed the cluster's head under the rail. */
+        bottom: 14px;
         align-items: flex-end;
       }
-      .map-experience.chart .view-control { max-height: calc(100% - 200px); }
+      .map-experience.chart .view-control { max-height: calc(100% - 240px); }
 
       /* Six dots across the band's whole width read as unrelated specks; the
          rail keeps the journeys viewer's elastic dots but inside a measured
