@@ -5,16 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
   <title>Ingredients of the House of Mendes — dossier and interactive map</title>
   <meta name="description" content="A research dossier and ingredient catalogue for Mendesian, Metopion, and Susinum perfumes, with a separate interactive provenance map.">
-  <link rel="stylesheet" href="site.css">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Gentium+Plus:wght@400&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap">
+  <!-- Bump ASSET_VERSION and the stylesheet query below together on every
+       asset change, as map/ and journey/ do. If they drift, the guard after
+       the link repairs a stale stylesheet rather than rendering new markup
+       against old rules. -->
+  <script>window.ASSET_VERSION = "20260815-1";</script>
+  <link rel="stylesheet" href="site.css?v=20260815-1">
+  <script>
+  (function () {
+    var stamped = getComputedStyle(document.documentElement)
+      .getPropertyValue("--asset-version").trim().replace(/^["']|["']$/g, "");
+    if (stamped === window.ASSET_VERSION) return;
+    var bust = "&r=" + Date.now();
+    document.querySelectorAll('link[rel="stylesheet"][href*="site.css"]')
+      .forEach(function (link) {
+        var base = link.getAttribute("href").split("?")[0];
+        link.href = base + "?v=" + encodeURIComponent(window.ASSET_VERSION) + bust;
+      });
+  }());
+  </script>
 </head>
 <body>
   <div id="site-root" role="status" aria-live="polite">Loading the House of Mendes dossier…</div>
   <script>
   (async function () {
-    const contentFiles = ["content-1.html","content-2.html","content-3.html"];
-    const scriptFiles = [];
-    const assetVersion = "20260814-4";
+    const contentFiles = ["content-1.html","content-2.html","content-3.html","content-4.html"];
+    const scriptFiles = ["app-reader.js"];
+    const assetVersion = window.ASSET_VERSION;
     async function readParts(files) {
       return Promise.all(files.map(async function (file) {
         const response = await fetch(file + "?v=" + encodeURIComponent(assetVersion));
