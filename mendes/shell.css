@@ -23,9 +23,10 @@
     .chart {
       --dossier-bg: rgba(14,34,41,.78);
       --rule: rgba(231,220,195,.18);
-      /* The control rail's footprint on the right edge. The dossier reads it so
-         the two never overlap on a narrow desktop or a landscape tablet. */
-      --rail-w: 236px;
+      /* The controls live in the drawer at every width now, so nothing
+         reserves a footprint on the right edge and the dossier keeps only
+         its own margins. */
+      --rail-w: 0px;
       --rail-gap: 24px;
     }
 
@@ -105,7 +106,7 @@
       right: 20px;
       width: 46px;
       height: 46px;
-      display: none;
+      display: flex;
       align-items: center;
       justify-content: center;
       border: 1px solid var(--rule);
@@ -117,27 +118,57 @@
       font-size: 1.2rem;
       cursor: pointer;
     }
-    .mobile-menu { display: contents; }
-    .mobile-menu__close { display: none; }
-    .drawer-backdrop { display: none; }
+    .mobile-menu {
+      position: fixed;
+      z-index: 9;
+      top: 0;
+      right: 0;
+      display: block;
+      width: min(380px, 86vw);
+      height: 100svh;
+      padding: calc(18px + env(safe-area-inset-top)) 16px calc(18px + env(safe-area-inset-bottom));
+      border-left: 1px solid var(--rule);
+      background: rgba(14,34,41,.96);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+      overflow: auto;
+      overscroll-behavior: contain;
+      transform: translateX(110%);
+      transition: transform var(--t-snap) ease;
+    }
+    body.menu-open .mobile-menu { transform: translateX(0); }
+    .mobile-menu__close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-left: auto;
+      border: 1px solid var(--rule);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--land);
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .drawer-backdrop {
+      position: fixed;
+      z-index: 8;
+      inset: 0;
+      display: none;
+      width: 100%;
+      border: 0;
+      background: rgba(8,18,22,.5);
+    }
+    body.menu-open .drawer-backdrop { display: block; }
 
     .view-control {
-      position: var(--chart-anchor, fixed);
-      z-index: 5;
-      top: calc(24px + env(safe-area-inset-top));
-      right: 24px;
       display: flex;
       flex-direction: column;
       align-items: stretch;
       gap: 10px;
-      width: var(--rail-w);
-      padding: 14px;
-      border: 1px solid var(--rule);
-      border-radius: var(--r-card);
-      background: rgba(14,34,41,.74);
-      -webkit-backdrop-filter: blur(8px);
-      backdrop-filter: blur(8px);
-      box-shadow: var(--shadow);
+      margin-top: 14px;
+      padding: 0;
     }
     @supports not (backdrop-filter: blur(8px)) {
       .view-control, .drawer-toggle, .dossier { background: rgba(14,34,41,.95); }
@@ -471,63 +502,7 @@
       .masthead__counter { margin-top: 0; font-size: .62rem; letter-spacing: .13em; }
       #counter-roman { font-size: .7rem; }
 
-      .drawer-toggle { display: flex; }
-      .mobile-menu {
-        position: fixed;
-        z-index: 9;
-        top: 0;
-        right: 0;
-        display: block;
-        width: 78vw;
-        max-width: 320px;
-        height: 100svh;
-        padding: calc(18px + env(safe-area-inset-top)) 16px calc(18px + env(safe-area-inset-bottom));
-        border-left: 1px solid var(--rule);
-        background: rgba(14,34,41,.96);
-        -webkit-backdrop-filter: blur(18px);
-        backdrop-filter: blur(18px);
-        overflow: auto;
-        transform: translateX(110%);
-        transition: transform var(--t-snap) ease;
-      }
-      body.menu-open .mobile-menu { transform: translateX(0); }
-      .mobile-menu__close {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 42px;
-        height: 42px;
-        margin-left: auto;
-        border: 1px solid var(--rule);
-        border-radius: 50%;
-        background: transparent;
-        color: var(--land);
-        font-size: 1.2rem;
-        cursor: pointer;
-      }
-      .drawer-backdrop {
-        position: fixed;
-        z-index: 8;
-        inset: 0;
-        display: none;
-        width: 100%;
-        border: 0;
-        background: rgba(8,18,22,.5);
-      }
-      body.menu-open .drawer-backdrop { display: block; }
-
-      .view-control {
-        position: static;
-        width: auto;
-        margin-top: 14px;
-        border: 0;
-        border-radius: 0;
-        background: transparent;
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
-        box-shadow: none;
-        padding: 0;
-      }
+      .mobile-menu { width: 78vw; max-width: 320px; }
 
       .dossier {
         left: 12px;
