@@ -175,6 +175,46 @@
       });
     }());
 
+    /* The claims store joins the index when it arrives: search keeps working
+       over the dossier sections alone until then (and if the fetch fails). */
+    var claimEntries = [];
+    fetch("data/claims.json?v=" + encodeURIComponent(window.ASSET_VERSION || ""))
+      .then(function (response) { return response.ok ? response.json() : null; })
+      .then(function (data) {
+        if (!data) return;
+        var evidenceLabel = { ancient: "ancient", modern: "inference", theology: "theology" };
+        data.ingredients.concat(data.contextIngredients, [data.theology]).forEach(function (ingredient) {
+          ingredient.claims.forEach(function (claim) {
+            claimEntries.push({
+              group: "map",
+              title: claim.place,
+              sub: ingredient.gloss,
+              cite: claim.cite,
+              chip: evidenceLabel[claim.evidence] || claim.evidence,
+              chipClass: claim.evidence,
+              href: "map/#claim-" + encodeURIComponent(claim.id),
+              folded: fold([claim.place, ingredient.greek, ingredient.translit,
+                ingredient.gloss, claim.cite, claim.note].join(" "))
+            });
+          });
+        });
+        (data.court || []).forEach(function (record) {
+          claimEntries.push({
+            group: "court",
+            title: record.cite,
+            sub: record.subtype.replace(/-/g, " ").replace(/:/, " —") + " — " + record.queen.join(", "),
+            cite: record.places.map(function (p) { return p.name; }).join(", "),
+            chip: record.olfactoryRelevance,
+            chipClass: "olf-" + record.olfactoryRelevance,
+            targetId: "claim-" + record.pqfId.toLowerCase(),
+            folded: fold([record.cite, record.subtype, record.queen.join(" "),
+              record.aromatics.map(function (a) { return a.name; }).join(" "),
+              record.commentary || ""].join(" "))
+          });
+        });
+      })
+      .catch(function () { /* section search stands alone */ });
+
     var searchBox = document.getElementById("rail-search");
     var input = document.getElementById("dossier-search");
     var summary = document.getElementById("rail-search-summary");
@@ -205,12 +245,60 @@
       span.appendChild(document.createTextNode(text.slice(at + q.length)));
       return span;
     }
+    function flashTarget(el) {
+      el.scrollIntoView({ block: "start" });
+      el.classList.remove("search-target");
+      void el.offsetWidth;
+      el.classList.add("search-target");
+    }
     function jumpTo(section) {
-      section.el.scrollIntoView({ block: "start" });
-      section.el.classList.remove("search-target");
-      void section.el.offsetWidth;
-      section.el.classList.add("search-target");
+      flashTarget(section.el);
       if (history.replaceState) history.replaceState(null, "", "#" + section.id);
+    }
+    function appendGroupLabel(text) {
+      var li = document.createElement("li");
+      li.className = "rail-search-group";
+      li.textContent = text;
+      results.appendChild(li);
+    }
+    function appendRow(node) {
+      var li = document.createElement("li");
+      li.appendChild(node);
+      results.appendChild(li);
+    }
+    function claimRow(entry) {
+      var node = document.createElement(entry.href ? "a" : "button");
+      node.className = "rail-search-result";
+      if (entry.href) node.href = entry.href;
+      else {
+        node.type = "button";
+        node.addEventListener("click", function () {
+          var target = document.getElementById(entry.targetId);
+          if (target) flashTarget(target);
+        });
+      }
+      var title = document.createElement("span");
+      title.className = "result-title";
+      title.textContent = entry.title;
+      node.appendChild(title);
+      var snippetSpan = document.createElement("span");
+      snippetSpan.className = "result-snippet";
+      snippetSpan.textContent = entry.sub;
+      node.appendChild(snippetSpan);
+      var meta = document.createElement("span");
+      meta.className = "result-meta";
+      var chip = document.createElement("span");
+      chip.className = "result-chip " + entry.chipClass;
+      chip.textContent = entry.chip;
+      meta.appendChild(chip);
+      if (entry.cite) {
+        var cite = document.createElement("span");
+        cite.className = "result-cite";
+        cite.textContent = entry.cite;
+        meta.appendChild(cite);
+      }
+      node.appendChild(meta);
+      return node;
     }
     function runSearch() {
       var q = input.value.trim();
@@ -221,33 +309,49 @@
         return;
       }
       var fq = fold(q);
-      var hits = [];
+      var sectionHits = [];
       sections.forEach(function (s) {
         var inTitle = s.foldedTitle.indexOf(fq) >= 0;
         var inBody = s.foldedBody.indexOf(fq) >= 0;
-        if (inTitle || inBody) hits.push({ s: s, weight: inTitle ? 0 : 1 });
+        if (inTitle || inBody) sectionHits.push({ s: s, weight: inTitle ? 0 : 1 });
       });
-      hits.sort(function (a, b) { return a.weight - b.weight; });
+      sectionHits.sort(function (a, b) { return a.weight - b.weight; });
+      var mapHits = claimEntries.filter(function (e) {
+        return e.group === "map" && e.folded.indexOf(fq) >= 0;
+      });
+      var courtHits = claimEntries.filter(function (e) {
+        return e.group === "court" && e.folded.indexOf(fq) >= 0;
+      });
+      var total = sectionHits.length + mapHits.length + courtHits.length;
       summary.hidden = false;
-      summary.textContent = hits.length
-        ? hits.length + (hits.length === 1 ? " section" : " sections")
+      summary.textContent = total
+        ? total + (total === 1 ? " match" : " matches")
         : "No matches";
       results.textContent = "";
-      results.hidden = hits.length === 0;
-      hits.slice(0, 12).forEach(function (hit) {
-        var li = document.createElement("li");
-        var btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "rail-search-result";
-        var title = document.createElement("span");
-        title.className = "result-title";
-        title.textContent = hit.s.title;
-        btn.appendChild(title);
-        btn.appendChild(highlight(snippet(hit.s, fq, q), q));
-        btn.addEventListener("click", function () { jumpTo(hit.s); });
-        li.appendChild(btn);
-        results.appendChild(li);
-      });
+      results.hidden = total === 0;
+      if (sectionHits.length) {
+        appendGroupLabel("In the dossier");
+        sectionHits.slice(0, 8).forEach(function (hit) {
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "rail-search-result";
+          var title = document.createElement("span");
+          title.className = "result-title";
+          title.textContent = hit.s.title;
+          btn.appendChild(title);
+          btn.appendChild(highlight(snippet(hit.s, fq, q), q));
+          btn.addEventListener("click", function () { jumpTo(hit.s); });
+          appendRow(btn);
+        });
+      }
+      if (mapHits.length) {
+        appendGroupLabel("On the map — provenance claims");
+        mapHits.slice(0, 8).forEach(function (entry) { appendRow(claimRow(entry)); });
+      }
+      if (courtHits.length) {
+        appendGroupLabel("Queens’ fragments — court records");
+        courtHits.slice(0, 6).forEach(function (entry) { appendRow(claimRow(entry)); });
+      }
     }
     var debounce;
     input.addEventListener("input", function () {

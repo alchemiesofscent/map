@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260815-2";
+      --asset-version: "20260815-3";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -1551,3 +1551,16 @@
          primary label with the gloss beneath it. */
       .browse-item { min-height: 48px; }
     }
+
+    /* ————— Dossier panel → reader cross-link —————
+       Sits on the dark glass panel, so the page's teal link color would sink;
+       it takes the land tone the panel's own text uses. */
+    .dossier__reader-link-row { margin: 12px 0 0; }
+    .dossier__reader-link {
+      color: var(--land);
+      font-size: .8rem;
+      font-weight: 600;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(231,220,195,.4);
+    }
+    .dossier__reader-link:hover { color: #F5EFDF; }

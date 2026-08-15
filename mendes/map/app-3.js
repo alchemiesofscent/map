@@ -816,4 +816,19 @@
         setDrawer(false);
       }
     });
+
+    // ————— Deep links —————
+    // ../#claim-<id> selects that claim on load, so the dossier's search can
+    // land a reader on the exact dot. Also on hashchange, so back and forward
+    // walk between linked claims.
+    function selectClaimFromHash() {
+      let hash = location.hash || "";
+      try { hash = decodeURIComponent(hash); } catch (error) { /* leave undecoded */ }
+      const match = /^#claim-(.+)$/.exec(hash);
+      if (!match) return;
+      const claim = claims.find(function (c) { return c.id === match[1]; });
+      if (claim) selectClaim(claim, false, true, false, true);
+    }
+    window.addEventListener("hashchange", selectClaimFromHash);
+    selectClaimFromHash();
   }());

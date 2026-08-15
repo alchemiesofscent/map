@@ -15,7 +15,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260815-1";
+      --asset-version: "20260815-2";
 
       /* Grounds — the study register shared with map/site.css */
       --sea-deep: #0E2229;
@@ -191,6 +191,33 @@
     .result-title { display: block; font-family: var(--font-display); font-size: .98rem; font-weight: 600; line-height: 1.2; }
     .result-snippet { display: block; margin-top: 2px; color: var(--muted); font-size: .74rem; line-height: 1.4; }
     .result-snippet mark { background: rgba(201,162,39,.32); color: inherit; padding: 0 1px; }
+    .rail-search-results li.rail-search-group {
+      padding: 12px 2px 4px;
+      border-top: 0;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    a.rail-search-result { text-decoration: none; }
+    .result-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 4px; }
+    .result-chip {
+      padding: 1px 8px;
+      border: 1px solid var(--rule-study);
+      border-radius: var(--r-chip);
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: .6rem;
+      letter-spacing: .03em;
+    }
+    .result-chip.ancient { border-color: #4c5754; color: var(--ink); }
+    .result-chip.modern { border-style: dashed; border-color: var(--inference); color: var(--inference); }
+    .result-chip.theology { border-style: double; border-color: var(--gold-ink); color: var(--gold-ink); }
+    .result-chip.olf-direct { border-color: var(--gold-ink); color: var(--gold-ink); }
+    .result-chip.olf-indirect, .result-chip.olf-contextual { border-style: dashed; }
+    .result-cite { color: var(--muted); font-family: var(--font-mono); font-size: .64rem; }
 
     .rail-toc { display: flex; flex-direction: column; }
     .rail-toc-label {

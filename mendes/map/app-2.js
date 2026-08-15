@@ -268,6 +268,16 @@
       }).join("");
     }
 
+    // Each claim's ingredient carries its catalogue anchor in claims.json, so
+    // the panel can hand the reader to the dossier's full entry for the
+    // material — the reverse of the dossier search's links onto this map.
+    function readerLink(d) {
+      const ingredient = ingredientById.get(d.ingredient);
+      if (!ingredient || !ingredient.dossierAnchor) return "";
+      return '<p class="dossier__reader-link-row"><a class="dossier__reader-link" href="../#' +
+        encodeURIComponent(ingredient.dossierAnchor) + '">Read the catalogue entry in the dossier →</a></p>';
+    }
+
     function dossierMarkup(d, position) {
       return '<div class="dossier__top">' +
           '<p class="dossier__eyebrow">' +
@@ -283,6 +293,7 @@
           '<p class="dossier__translation">' + escapeHTML(d.note) + '</p>' +
           '<div class="dossier__citation"><span class="dossier__eyebrow dossier__eyebrow--inline">Citation</span><span>' + escapeHTML(d.cite) + '</span></div>' +
           '<div class="dossier__materia"><p class="dossier__eyebrow dossier__eyebrow--inline">Recipes</p><ul class="dossier__materia-list">' + recipeChips(d) + '</ul></div>' +
+          readerLink(d) +
         '</div>' +
         '<div class="dossier__foot"><span>' + escapeHTML(d.translit) + ' — ' + escapeHTML(d.gloss) + '</span></div>';
     }
