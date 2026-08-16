@@ -15,7 +15,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260815-12";
+      --asset-version: "20260816-1";
 
       /* Grounds — the study register shared with map/site.css */
       --sea-deep: #0E2229;
@@ -728,4 +728,178 @@
       font-family: var(--font-mono);
       font-size: .66rem;
       letter-spacing: .01em;
+    }
+
+    /* ————— Figure lightbox —————
+       Photographs open full size in an overlay carousel scoped to their own
+       group. The trigger is a real button wrapped around the image by
+       app-reader.js, so it must be stripped back to behaving like the image
+       it contains — the sizing rules above target `.ingredient-images img`
+       and `.relief-figure img` as descendants, so they still apply. */
+    .figure-zoom {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: zoom-in;
+      font: inherit;
+      color: inherit;
+      text-align: inherit;
+    }
+    .figure-zoom img { transition: opacity var(--t-hover) ease; }
+    .figure-zoom:hover img { opacity: .88; }
+    .figure-zoom:focus-visible {
+      outline: 2px solid var(--focus-study);
+      outline-offset: -2px;
+    }
+
+    html.lightbox-open, html.lightbox-open body { overflow: hidden; }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      display: grid;
+      place-items: center;
+      padding: clamp(10px, 2.4vw, 28px);
+    }
+    .lightbox[hidden] { display: none; }
+    .lightbox-backdrop {
+      position: absolute;
+      inset: 0;
+      /* The dossier ground is bright paper, so a .9-ish scrim still leaves
+         the text underneath legible and competing with the photograph.
+         Near-opaque plus a blur puts the page properly behind glass. */
+      background: rgba(14, 34, 41, .97);
+      backdrop-filter: blur(3px);
+      cursor: zoom-out;
+    }
+    .lightbox-stage {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: min(1180px, 100%);
+      max-height: 100%;
+    }
+    .lightbox-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex: 0 0 auto;
+      /* Clears the side arrows below, so the counter and the close button
+         line up with the edges of the figure rather than the stage. */
+      padding: 0 52px;
+    }
+    .lightbox-count {
+      margin: 0;
+      color: var(--land);
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      letter-spacing: .06em;
+    }
+    .lightbox-frame {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 0;
+    }
+    .lightbox-figure {
+      flex: 1 1 auto;
+      min-width: 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      border-radius: var(--r-card);
+      background: var(--panel);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .lightbox-img {
+      display: block;
+      width: 100%;
+      min-height: 0;
+      max-height: 74vh;
+      object-fit: contain;
+      background: #ece5d2;
+    }
+    .lightbox-caption {
+      flex: 0 1 auto;
+      overflow-y: auto;
+      padding: 12px 16px 14px;
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.5;
+    }
+    .lightbox-caption[hidden] { display: none; }
+    .lightbox-caption strong { color: var(--ink); }
+    .lightbox-caption a { color: #3f6963; }
+    .lightbox-caption .relief-credit {
+      display: block;
+      margin-top: 6px;
+      font-family: var(--font-mono);
+      font-size: .66rem;
+      letter-spacing: .01em;
+    }
+
+    .lightbox-btn {
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(242, 235, 219, .34);
+      border-radius: var(--r-chip);
+      background: rgba(14, 34, 41, .72);
+      color: var(--paper);
+      font-family: var(--font-body);
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: background var(--t-hover) ease, border-color var(--t-hover) ease;
+    }
+    .lightbox-btn:hover { background: rgba(147, 117, 14, .7); border-color: var(--gold); }
+    .lightbox-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .lightbox-btn[hidden] { display: none; }
+    .lightbox-close { font-size: 1.35rem; }
+
+    .lightbox-thumbs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex: 0 0 auto;
+    }
+    .lightbox-thumbs[hidden] { display: none; }
+    .lightbox-thumb {
+      width: 68px;
+      height: 46px;
+      padding: 0;
+      border: 1px solid rgba(242, 235, 219, .3);
+      border-radius: 8px;
+      background: none;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: .55;
+      transition: opacity var(--t-hover) ease, border-color var(--t-hover) ease;
+    }
+    .lightbox-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .lightbox-thumb:hover { opacity: .85; }
+    .lightbox-thumb[aria-selected="true"] { opacity: 1; border-color: var(--gold); }
+    .lightbox-thumb:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+    @media (max-width: 720px) {
+      .lightbox-img { max-height: 58vh; }
+      /* The side arrows would crowd a phone frame; the thumb strip, swipe,
+         and arrow keys all still step the carousel. */
+      .lightbox-step { display: none; }
+      .lightbox-bar { padding: 0; }
+      .lightbox-thumb { width: 56px; height: 40px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .figure-zoom img, .lightbox-btn, .lightbox-thumb { transition: none; }
     }

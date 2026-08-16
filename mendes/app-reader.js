@@ -605,3 +605,210 @@
       }
     });
   }());
+
+  /* ————— Figure lightbox —————
+     Every dossier photograph opens full size in an overlay carousel. The
+     carousel is scoped to the figure's own group — the two Louvre reliefs
+     travel together, an ingredient's two or three views travel together —
+     because arrowing from a myrrh photograph into a lily one would be a
+     non-sequitur, not a carousel.
+
+     Progressive enhancement throughout: the markup ships as plain figures,
+     and this pass wraps each image in a real <button> so it is focusable,
+     announced, and driven by Enter/Space for free rather than by a click
+     handler bolted onto an <img>. */
+  (function () {
+    "use strict";
+
+    var groups = [].slice.call(
+      document.querySelectorAll(".relief-gallery, .ingredient-images"));
+    if (!groups.length) return;
+
+    var slides = [];   // one entry per group: { items: [...] }
+    groups.forEach(function (group) {
+      var items = [].slice.call(group.querySelectorAll("figure")).map(function (figure) {
+        var img = figure.querySelector("img");
+        if (!img) return null;
+        return { img: img, caption: figure.querySelector("figcaption") };
+      }).filter(Boolean);
+      if (items.length) slides.push({ items: items });
+    });
+    if (!slides.length) return;
+
+    /* ————— The overlay ————— */
+    var box = document.createElement("div");
+    box.className = "lightbox";
+    box.hidden = true;
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-label", "Image viewer");
+    box.innerHTML =
+      '<div class="lightbox-backdrop" data-lightbox-close></div>' +
+      '<div class="lightbox-stage">' +
+        '<div class="lightbox-bar">' +
+          '<p class="lightbox-count" aria-live="polite"></p>' +
+          '<button type="button" class="lightbox-btn lightbox-close" ' +
+            'data-lightbox-close aria-label="Close image viewer">&times;</button>' +
+        '</div>' +
+        '<div class="lightbox-frame">' +
+          '<button type="button" class="lightbox-btn lightbox-step lightbox-prev" ' +
+            'aria-label="Previous image">&lsaquo;</button>' +
+          '<figure class="lightbox-figure">' +
+            '<img class="lightbox-img" alt="">' +
+            '<figcaption class="lightbox-caption"></figcaption>' +
+          '</figure>' +
+          '<button type="button" class="lightbox-btn lightbox-step lightbox-next" ' +
+            'aria-label="Next image">&rsaquo;</button>' +
+        '</div>' +
+        '<div class="lightbox-thumbs" role="tablist" aria-label="Images in this group"></div>' +
+      '</div>';
+    document.body.appendChild(box);
+
+    var elImg = box.querySelector(".lightbox-img");
+    var elCaption = box.querySelector(".lightbox-caption");
+    var elCount = box.querySelector(".lightbox-count");
+    var elThumbs = box.querySelector(".lightbox-thumbs");
+    var elPrev = box.querySelector(".lightbox-prev");
+    var elNext = box.querySelector(".lightbox-next");
+
+    var openGroup = null;
+    var openIndex = 0;
+    var lastFocus = null;
+
+    function preload(src) { if (src) { var p = new Image(); p.src = src; } }
+
+    function show(index) {
+      if (!openGroup) return;
+      var items = openGroup.items;
+      openIndex = (index + items.length) % items.length;
+      var item = items[openIndex];
+
+      elImg.src = item.img.currentSrc || item.img.src;
+      elImg.alt = item.img.alt || "";
+
+      elCaption.textContent = "";
+      if (item.caption) {
+        [].slice.call(item.caption.cloneNode(true).childNodes)
+          .forEach(function (node) { elCaption.appendChild(node); });
+      }
+      elCaption.hidden = !item.caption;
+
+      var many = items.length > 1;
+      elCount.textContent = many ? (openIndex + 1) + " / " + items.length : "";
+      elPrev.hidden = !many;
+      elNext.hidden = !many;
+
+      [].slice.call(elThumbs.children).forEach(function (thumb, i) {
+        thumb.setAttribute("aria-selected", i === openIndex ? "true" : "false");
+      });
+
+      // Neighbours, so a step never waits on the network.
+      if (many) {
+        preload(items[(openIndex + 1) % items.length].img.src);
+        preload(items[(openIndex - 1 + items.length) % items.length].img.src);
+      }
+    }
+
+    function buildThumbs(group) {
+      elThumbs.textContent = "";
+      var many = group.items.length > 1;
+      elThumbs.hidden = !many;
+      if (!many) return;
+      group.items.forEach(function (item, i) {
+        var thumb = document.createElement("button");
+        thumb.type = "button";
+        thumb.className = "lightbox-thumb";
+        thumb.setAttribute("role", "tab");
+        thumb.setAttribute("aria-label", item.img.alt || ("Image " + (i + 1)));
+        var thumbImg = document.createElement("img");
+        thumbImg.src = item.img.src;
+        thumbImg.alt = "";
+        thumb.appendChild(thumbImg);
+        thumb.addEventListener("click", function () { show(i); });
+        elThumbs.appendChild(thumb);
+      });
+    }
+
+    function open(group, index, trigger) {
+      openGroup = group;
+      lastFocus = trigger || null;
+      buildThumbs(group);
+      box.hidden = false;
+      document.documentElement.classList.add("lightbox-open");
+      show(index);
+      box.querySelector(".lightbox-close").focus();
+    }
+
+    function close() {
+      if (box.hidden) return;
+      box.hidden = true;
+      document.documentElement.classList.remove("lightbox-open");
+      elImg.removeAttribute("src");
+      openGroup = null;
+      if (lastFocus) lastFocus.focus();
+      lastFocus = null;
+    }
+
+    function step(delta) { if (openGroup && openGroup.items.length > 1) show(openIndex + delta); }
+
+    elPrev.addEventListener("click", function () { step(-1); });
+    elNext.addEventListener("click", function () { step(1); });
+    box.addEventListener("click", function (event) {
+      if (event.target.closest("[data-lightbox-close]")) close();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (box.hidden) return;
+      if (event.key === "Escape") { event.preventDefault(); close(); return; }
+      if (event.key === "ArrowRight") { event.preventDefault(); step(1); return; }
+      if (event.key === "ArrowLeft") { event.preventDefault(); step(-1); return; }
+      if (event.key === "Home") { event.preventDefault(); show(0); return; }
+      if (event.key === "End" && openGroup) {
+        event.preventDefault(); show(openGroup.items.length - 1); return;
+      }
+      if (event.key !== "Tab") return;
+      // Focus stays inside the dialog while it is modal.
+      var focusable = [].slice.call(box.querySelectorAll(
+        "button:not([hidden]), a[href]")).filter(function (node) {
+          return node.offsetParent !== null;
+        });
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault(); last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault(); first.focus();
+      }
+    });
+
+    /* Horizontal swipe steps the carousel; a mostly-vertical drag is left
+       alone so the caption can still be scrolled on a phone. */
+    var touch = null;
+    box.addEventListener("touchstart", function (event) {
+      if (event.touches.length !== 1) { touch = null; return; }
+      touch = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+    }, { passive: true });
+    box.addEventListener("touchend", function (event) {
+      if (!touch || !event.changedTouches.length) return;
+      var dx = event.changedTouches[0].clientX - touch.x;
+      var dy = event.changedTouches[0].clientY - touch.y;
+      touch = null;
+      if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
+    }, { passive: true });
+
+    /* ————— Make every figure image a button ————— */
+    slides.forEach(function (group) {
+      group.items.forEach(function (item, index) {
+        var img = item.img;
+        var trigger = document.createElement("button");
+        trigger.type = "button";
+        trigger.className = "figure-zoom";
+        trigger.setAttribute("aria-label",
+          "View full size: " + (img.alt || "image " + (index + 1)));
+        img.parentNode.insertBefore(trigger, img);
+        trigger.appendChild(img);
+        trigger.addEventListener("click", function () { open(group, index, trigger); });
+      });
+    });
+  }());
