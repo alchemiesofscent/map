@@ -15,7 +15,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260816-7";
+      --asset-version: "20260816-8";
 
       /* Grounds — the study register shared with map/site.css */
       --sea-deep: #0E2229;
@@ -770,13 +770,17 @@
          so what the reader tabs through is what they see, with no `order`
          juggling to put the two out of step. */
       :root.nav-ready .rail-brand { display: none; }
-      :root.nav-ready .rail-settings { margin-top: auto; padding-top: 8px; }
+      /* First thing in the menu, above find-and-browse, and set off from
+         them by a hairline: these are settings, not destinations. */
+      :root.nav-ready .rail-settings {
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--rule-study);
+      }
       :root.nav-ready .rail-toc { gap: 2px; }
       :root.nav-ready .rail-toc a { padding: 11px 12px; font-size: .95rem; }
       :root.nav-ready .rail-toc a.toc-sub { padding-left: 26px; font-size: .86rem; }
       :root.nav-ready .rail-links { margin-top: 4px; }
       :root.nav-ready .rail-links a { justify-content: center; }
-      :root.nav-ready .rail-settings { justify-content: center; }
 
       /* ————— The bar ————— */
       .mobile-bar {
