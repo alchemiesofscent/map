@@ -15,7 +15,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260816-1";
+      --asset-version: "20260816-2";
 
       /* Grounds — the study register shared with map/site.css */
       --sea-deep: #0E2229;
@@ -762,6 +762,13 @@
       inset: 0;
       z-index: 90;
       display: grid;
+      /* An explicit minmax(0, 1fr) track, not the implicit auto one: an auto
+         track sizes to its content, and the twenty-one-thumbnail strip is
+         about 1570px of max-content, so the stage's `100%` resolved against
+         that instead of the viewport and laid out far wider than the phone
+         it was on. The track now measures the frame, and the strip scrolls
+         inside it. */
+      grid-template-columns: minmax(0, 1fr);
       place-items: center;
       padding: clamp(10px, 2.4vw, 28px);
     }
@@ -782,6 +789,7 @@
       flex-direction: column;
       gap: 10px;
       width: min(1180px, 100%);
+      min-width: 0;
       max-height: 100%;
     }
     .lightbox-bar {
@@ -795,11 +803,37 @@
       padding: 0 52px;
     }
     .lightbox-count {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      min-width: 0;
       margin: 0;
       color: var(--land);
       font-family: var(--font-mono);
       font-size: .72rem;
       letter-spacing: .06em;
+    }
+    .lightbox-index { flex: 0 0 auto; opacity: .78; }
+    /* What the picture belongs to — an ingredient name, or the section for
+       the reliefs. At twenty-one images a bare count says nothing. */
+    .lightbox-label {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-family: var(--font-body);
+      font-size: .82rem;
+      letter-spacing: 0;
+      color: var(--paper);
+    }
+    .lightbox-label:not(:empty)::before {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: .82em;
+      margin-right: 10px;
+      vertical-align: -.06em;
+      background: rgba(242, 235, 219, .34);
     }
     .lightbox-frame {
       position: relative;
@@ -868,14 +902,32 @@
     .lightbox-btn[hidden] { display: none; }
     .lightbox-close { font-size: 1.35rem; }
 
+    /* Every image in the dossier, so the whole set is one scroll. `safe`
+       centres the strip while it fits and falls back to flex-start once it
+       overflows — plain `center` would put the first thumbnails past the
+       scroll origin, out of reach. */
     .lightbox-thumbs {
       display: flex;
-      justify-content: center;
+      justify-content: safe center;
       gap: 8px;
       flex: 0 0 auto;
+      min-width: 0;
+      max-width: 100%;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(242, 235, 219, .34) transparent;
+      padding-bottom: 4px;
+    }
+    .lightbox-thumbs::-webkit-scrollbar { height: 6px; }
+    .lightbox-thumbs::-webkit-scrollbar-track { background: transparent; }
+    .lightbox-thumbs::-webkit-scrollbar-thumb {
+      background: rgba(242, 235, 219, .3);
+      border-radius: 999px;
     }
     .lightbox-thumbs[hidden] { display: none; }
     .lightbox-thumb {
+      flex: 0 0 auto;
       width: 68px;
       height: 46px;
       padding: 0;
@@ -884,12 +936,12 @@
       background: none;
       overflow: hidden;
       cursor: pointer;
-      opacity: .55;
+      opacity: .5;
       transition: opacity var(--t-hover) ease, border-color var(--t-hover) ease;
     }
     .lightbox-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
     .lightbox-thumb:hover { opacity: .85; }
-    .lightbox-thumb[aria-selected="true"] { opacity: 1; border-color: var(--gold); }
+    .lightbox-thumb[aria-current="true"] { opacity: 1; border-color: var(--gold); }
     .lightbox-thumb:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
     @media (max-width: 720px) {

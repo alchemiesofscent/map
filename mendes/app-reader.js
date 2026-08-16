@@ -606,12 +606,17 @@
     });
   }());
 
+
   /* ————— Figure lightbox —————
-     Every dossier photograph opens full size in an overlay carousel. The
-     carousel is scoped to the figure's own group — the two Louvre reliefs
-     travel together, an ingredient's two or three views travel together —
-     because arrowing from a myrrh photograph into a lily one would be a
-     non-sequitur, not a carousel.
+     Every photograph in the dossier opens full size in one overlay
+     carousel, in document order: the nineteen ingredient views first, then
+     the two Louvre reliefs. One list rather than one per figure group, so a
+     reader who opens a picture can simply keep going through all of them
+     without closing and hunting for the next gallery.
+
+     Each slide carries the name of what it belongs to — the ingredient
+     heading, or the section heading for the reliefs — because at twenty-one
+     images deep a bare "14 / 21" tells you nothing about where you are.
 
      Progressive enhancement throughout: the markup ships as plain figures,
      and this pass wraps each image in a real <button> so it is focusable,
@@ -620,20 +625,44 @@
   (function () {
     "use strict";
 
-    var groups = [].slice.call(
-      document.querySelectorAll(".relief-gallery, .ingredient-images"));
-    if (!groups.length) return;
+    var figures = [].slice.call(document.querySelectorAll(
+      ".relief-gallery figure, .ingredient-images figure"));
+    if (!figures.length) return;
 
-    var slides = [];   // one entry per group: { items: [...] }
-    groups.forEach(function (group) {
-      var items = [].slice.call(group.querySelectorAll("figure")).map(function (figure) {
-        var img = figure.querySelector("img");
-        if (!img) return null;
-        return { img: img, caption: figure.querySelector("figcaption") };
-      }).filter(Boolean);
-      if (items.length) slides.push({ items: items });
-    });
-    if (!slides.length) return;
+    /* The label for a slide: an ingredient card names itself in its copy
+       heading; anything else takes the nearest heading above its gallery. */
+    function labelFor(figure) {
+      var card = figure.closest(".ingredient-card");
+      var own = card && card.querySelector(".ingredient-copy h4");
+      if (own) return own.textContent.trim();
+      var gallery = figure.closest(".relief-gallery, .ingredient-images") || figure;
+      var node = gallery;
+      while (node) {
+        while (node.previousElementSibling) {
+          node = node.previousElementSibling;
+          if (/^H[1-6]$/.test(node.tagName)) {
+            // Section headings carry a numeral and the Greek; the English
+            // name before the first bracket or dash is enough of a label.
+            return node.textContent.trim().split(/[(—]/)[0]
+              .replace(/^\s*\d+\.\s*/, "").trim();
+          }
+        }
+        node = node.parentElement;
+        if (node === document.body) break;
+      }
+      return "";
+    }
+
+    var items = figures.map(function (figure) {
+      var img = figure.querySelector("img");
+      if (!img) return null;
+      return {
+        img: img,
+        caption: figure.querySelector("figcaption"),
+        label: labelFor(figure)
+      };
+    }).filter(Boolean);
+    if (!items.length) return;
 
     /* ————— The overlay ————— */
     var box = document.createElement("div");
@@ -646,7 +675,10 @@
       '<div class="lightbox-backdrop" data-lightbox-close></div>' +
       '<div class="lightbox-stage">' +
         '<div class="lightbox-bar">' +
-          '<p class="lightbox-count" aria-live="polite"></p>' +
+          '<p class="lightbox-count" aria-live="polite">' +
+            '<span class="lightbox-index"></span>' +
+            '<span class="lightbox-label"></span>' +
+          '</p>' +
           '<button type="button" class="lightbox-btn lightbox-close" ' +
             'data-lightbox-close aria-label="Close image viewer">&times;</button>' +
         '</div>' +
@@ -660,26 +692,58 @@
           '<button type="button" class="lightbox-btn lightbox-step lightbox-next" ' +
             'aria-label="Next image">&rsaquo;</button>' +
         '</div>' +
-        '<div class="lightbox-thumbs" role="tablist" aria-label="Images in this group"></div>' +
+        '<div class="lightbox-thumbs" aria-label="All images in the dossier"></div>' +
       '</div>';
     document.body.appendChild(box);
 
     var elImg = box.querySelector(".lightbox-img");
     var elCaption = box.querySelector(".lightbox-caption");
-    var elCount = box.querySelector(".lightbox-count");
+    var elIndex = box.querySelector(".lightbox-index");
+    var elLabel = box.querySelector(".lightbox-label");
     var elThumbs = box.querySelector(".lightbox-thumbs");
     var elPrev = box.querySelector(".lightbox-prev");
     var elNext = box.querySelector(".lightbox-next");
 
-    var openGroup = null;
     var openIndex = 0;
     var lastFocus = null;
+    var thumbs = [];
 
-    function preload(src) { if (src) { var p = new Image(); p.src = src; } }
+    /* One strip of every image, built once. The thumbnails borrow the
+       page's own <img> sources, so they are already in cache. */
+    items.forEach(function (item, i) {
+      var thumb = document.createElement("button");
+      thumb.type = "button";
+      thumb.className = "lightbox-thumb";
+      thumb.setAttribute("aria-label",
+        (i + 1) + ". " + (item.label || item.img.alt || "Image"));
+      var thumbImg = document.createElement("img");
+      thumbImg.src = item.img.src;
+      thumbImg.alt = "";
+      thumbImg.loading = "lazy";
+      thumb.appendChild(thumbImg);
+      thumb.addEventListener("click", function () { show(i); });
+      elThumbs.appendChild(thumb);
+      thumbs.push(thumb);
+    });
+
+    function preload(index) {
+      var item = items[(index + items.length) % items.length];
+      if (item) { var p = new Image(); p.src = item.img.src; }
+    }
+
+    /* Keep the live thumbnail in view without ever scrolling the page:
+       the strip's own scrollLeft, never scrollIntoView. */
+    function revealThumb(thumb) {
+      var strip = elThumbs.getBoundingClientRect();
+      var t = thumb.getBoundingClientRect();
+      if (t.left < strip.left) {
+        elThumbs.scrollLeft -= (strip.left - t.left) + 12;
+      } else if (t.right > strip.right) {
+        elThumbs.scrollLeft += (t.right - strip.right) + 12;
+      }
+    }
 
     function show(index) {
-      if (!openGroup) return;
-      var items = openGroup.items;
       openIndex = (index + items.length) % items.length;
       var item = items[openIndex];
 
@@ -693,46 +757,22 @@
       }
       elCaption.hidden = !item.caption;
 
-      var many = items.length > 1;
-      elCount.textContent = many ? (openIndex + 1) + " / " + items.length : "";
-      elPrev.hidden = !many;
-      elNext.hidden = !many;
+      elIndex.textContent = (openIndex + 1) + " / " + items.length;
+      elLabel.textContent = item.label || "";
 
-      [].slice.call(elThumbs.children).forEach(function (thumb, i) {
-        thumb.setAttribute("aria-selected", i === openIndex ? "true" : "false");
+      thumbs.forEach(function (thumb, i) {
+        var live = i === openIndex;
+        thumb.setAttribute("aria-current", live ? "true" : "false");
+        if (live) revealThumb(thumb);
       });
 
       // Neighbours, so a step never waits on the network.
-      if (many) {
-        preload(items[(openIndex + 1) % items.length].img.src);
-        preload(items[(openIndex - 1 + items.length) % items.length].img.src);
-      }
+      preload(openIndex + 1);
+      preload(openIndex - 1);
     }
 
-    function buildThumbs(group) {
-      elThumbs.textContent = "";
-      var many = group.items.length > 1;
-      elThumbs.hidden = !many;
-      if (!many) return;
-      group.items.forEach(function (item, i) {
-        var thumb = document.createElement("button");
-        thumb.type = "button";
-        thumb.className = "lightbox-thumb";
-        thumb.setAttribute("role", "tab");
-        thumb.setAttribute("aria-label", item.img.alt || ("Image " + (i + 1)));
-        var thumbImg = document.createElement("img");
-        thumbImg.src = item.img.src;
-        thumbImg.alt = "";
-        thumb.appendChild(thumbImg);
-        thumb.addEventListener("click", function () { show(i); });
-        elThumbs.appendChild(thumb);
-      });
-    }
-
-    function open(group, index, trigger) {
-      openGroup = group;
+    function open(index, trigger) {
       lastFocus = trigger || null;
-      buildThumbs(group);
       box.hidden = false;
       document.documentElement.classList.add("lightbox-open");
       show(index);
@@ -744,12 +784,11 @@
       box.hidden = true;
       document.documentElement.classList.remove("lightbox-open");
       elImg.removeAttribute("src");
-      openGroup = null;
       if (lastFocus) lastFocus.focus();
       lastFocus = null;
     }
 
-    function step(delta) { if (openGroup && openGroup.items.length > 1) show(openIndex + delta); }
+    function step(delta) { show(openIndex + delta); }
 
     elPrev.addEventListener("click", function () { step(-1); });
     elNext.addEventListener("click", function () { step(1); });
@@ -763,15 +802,15 @@
       if (event.key === "ArrowRight") { event.preventDefault(); step(1); return; }
       if (event.key === "ArrowLeft") { event.preventDefault(); step(-1); return; }
       if (event.key === "Home") { event.preventDefault(); show(0); return; }
-      if (event.key === "End" && openGroup) {
-        event.preventDefault(); show(openGroup.items.length - 1); return;
-      }
+      if (event.key === "End") { event.preventDefault(); show(items.length - 1); return; }
       if (event.key !== "Tab") return;
-      // Focus stays inside the dialog while it is modal.
+      /* Focus stays inside the dialog while it is modal. The thumb strip is
+         twenty-one buttons long, so it is skipped on Tab — the arrow keys
+         and the strip's own click are the ways through it — and the cycle
+         runs between the close button and the two step arrows. */
       var focusable = [].slice.call(box.querySelectorAll(
-        "button:not([hidden]), a[href]")).filter(function (node) {
-          return node.offsetParent !== null;
-        });
+        ".lightbox-bar button, .lightbox-frame button, .lightbox-caption a"))
+        .filter(function (node) { return node.offsetParent !== null; });
       if (!focusable.length) return;
       var first = focusable[0];
       var last = focusable[focusable.length - 1];
@@ -783,10 +822,13 @@
     });
 
     /* Horizontal swipe steps the carousel; a mostly-vertical drag is left
-       alone so the caption can still be scrolled on a phone. */
+       alone so the caption can still be scrolled on a phone. Swipes that
+       start on the thumb strip belong to the strip's own scrolling. */
     var touch = null;
     box.addEventListener("touchstart", function (event) {
-      if (event.touches.length !== 1) { touch = null; return; }
+      if (event.touches.length !== 1 || event.target.closest(".lightbox-thumbs")) {
+        touch = null; return;
+      }
       touch = { x: event.touches[0].clientX, y: event.touches[0].clientY };
     }, { passive: true });
     box.addEventListener("touchend", function (event) {
@@ -798,17 +840,15 @@
     }, { passive: true });
 
     /* ————— Make every figure image a button ————— */
-    slides.forEach(function (group) {
-      group.items.forEach(function (item, index) {
-        var img = item.img;
-        var trigger = document.createElement("button");
-        trigger.type = "button";
-        trigger.className = "figure-zoom";
-        trigger.setAttribute("aria-label",
-          "View full size: " + (img.alt || "image " + (index + 1)));
-        img.parentNode.insertBefore(trigger, img);
-        trigger.appendChild(img);
-        trigger.addEventListener("click", function () { open(group, index, trigger); });
-      });
+    items.forEach(function (item, index) {
+      var img = item.img;
+      var trigger = document.createElement("button");
+      trigger.type = "button";
+      trigger.className = "figure-zoom";
+      trigger.setAttribute("aria-label",
+        "View full size: " + (img.alt || item.label || "image " + (index + 1)));
+      img.parentNode.insertBefore(trigger, img);
+      trigger.appendChild(img);
+      trigger.addEventListener("click", function () { open(index, trigger); });
     });
   }());
