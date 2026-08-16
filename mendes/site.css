@@ -15,7 +15,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260816-2";
+      --asset-version: "20260816-3";
 
       /* Grounds — the study register shared with map/site.css */
       --sea-deep: #0E2229;
@@ -771,6 +771,8 @@
       grid-template-columns: minmax(0, 1fr);
       place-items: center;
       padding: clamp(10px, 2.4vw, 28px);
+      /* Height of the media box every photograph is shown in. */
+      --media-h: min(70vh, 620px);
     }
     .lightbox[hidden] { display: none; }
     .lightbox-backdrop {
@@ -854,13 +856,45 @@
       overflow: hidden;
       box-shadow: var(--shadow);
     }
-    .lightbox-img {
-      display: block;
+    /* The media area is a fixed box the photographs contain inside, not a
+       box the photograph sizes. Twenty-one images of very different shapes
+       — a 119 cm lintel next to a handful of saffron — would otherwise
+       resize the whole dialog on every step, and a rail whose neighbours
+       are different heights cannot be dragged across cleanly. */
+    .lightbox-viewport {
+      flex: 0 0 auto;
       width: 100%;
-      min-height: 0;
-      max-height: 74vh;
-      object-fit: contain;
+      height: var(--media-h);
+      overflow: hidden;
       background: #ece5d2;
+      /* The browser keeps the vertical axis; the horizontal one is the
+         carousel's, which is what lets every drag listener stay passive. */
+      touch-action: pan-y;
+      cursor: grab;
+    }
+    .lightbox-viewport:active { cursor: grabbing; }
+    .lightbox-rail {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      /* Centred on the current slide. app-reader.js overrides `transform`
+         itself while dragging rather than feeding a custom property into
+         this calc(): a transition over a calc() that reads an unregistered
+         custom property does not reliably report transitionend, which left
+         every step waiting on its fallback timer. */
+      transform: translate3d(-100%, 0, 0);
+      will-change: transform;
+    }
+    .lightbox-rail.is-sliding {
+      transition: transform var(--t-snap) cubic-bezier(.22, .61, .36, 1);
+    }
+    .lightbox-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      user-select: none;
+      -webkit-user-drag: none;
     }
     .lightbox-caption {
       flex: 0 1 auto;
@@ -945,13 +979,15 @@
     .lightbox-thumb:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
     @media (max-width: 720px) {
-      .lightbox-img { max-height: 58vh; }
-      /* The side arrows would crowd a phone frame; the thumb strip, swipe,
-         and arrow keys all still step the carousel. */
+      .lightbox { --media-h: 46vh; }
+      /* The side arrows would crowd a phone frame, where the swipe is the
+         gesture anyway; the thumb strip and arrow keys also still step. */
       .lightbox-step { display: none; }
       .lightbox-bar { padding: 0; }
       .lightbox-thumb { width: 56px; height: 40px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .figure-zoom img, .lightbox-btn, .lightbox-thumb { transition: none; }
+      /* Steps land instead of travelling; the drag itself still tracks. */
+      .lightbox-rail.is-sliding { transition: none; }
     }

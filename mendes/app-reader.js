@@ -611,12 +611,18 @@
      Every photograph in the dossier opens full size in one overlay
      carousel, in document order: the nineteen ingredient views first, then
      the two Louvre reliefs. One list rather than one per figure group, so a
-     reader who opens a picture can simply keep going through all of them
-     without closing and hunting for the next gallery.
+     reader who opens a picture can keep going through all of them without
+     closing and hunting for the next gallery.
 
      Each slide carries the name of what it belongs to — the ingredient
      heading, or the section heading for the reliefs — because at twenty-one
      images deep a bare "14 / 21" tells you nothing about where you are.
+
+     The media area is a three-slide rail (previous, current, next) that
+     follows the finger and settles, so a swipe is the gesture itself rather
+     than a jump after the fact. The rail is a fixed box and the photographs
+     contain inside it: twenty-one images of very different shapes would
+     otherwise resize the whole dialog on every step.
 
      Progressive enhancement throughout: the markup ships as plain figures,
      and this pass wraps each image in a real <button> so it is focusable,
@@ -664,6 +670,9 @@
     }).filter(Boolean);
     if (!items.length) return;
 
+    var reduceMotion = window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     /* ————— The overlay ————— */
     var box = document.createElement("div");
     box.className = "lightbox";
@@ -686,7 +695,13 @@
           '<button type="button" class="lightbox-btn lightbox-step lightbox-prev" ' +
             'aria-label="Previous image">&lsaquo;</button>' +
           '<figure class="lightbox-figure">' +
-            '<img class="lightbox-img" alt="">' +
+            '<div class="lightbox-viewport">' +
+              '<div class="lightbox-rail">' +
+                '<img class="lightbox-slide" alt="" aria-hidden="true">' +
+                '<img class="lightbox-slide lightbox-img" alt="">' +
+                '<img class="lightbox-slide" alt="" aria-hidden="true">' +
+              '</div>' +
+            '</div>' +
             '<figcaption class="lightbox-caption"></figcaption>' +
           '</figure>' +
           '<button type="button" class="lightbox-btn lightbox-step lightbox-next" ' +
@@ -696,17 +711,20 @@
       '</div>';
     document.body.appendChild(box);
 
-    var elImg = box.querySelector(".lightbox-img");
+    var elViewport = box.querySelector(".lightbox-viewport");
+    var elRail = box.querySelector(".lightbox-rail");
+    var slides = [].slice.call(box.querySelectorAll(".lightbox-slide"));
     var elCaption = box.querySelector(".lightbox-caption");
     var elIndex = box.querySelector(".lightbox-index");
     var elLabel = box.querySelector(".lightbox-label");
     var elThumbs = box.querySelector(".lightbox-thumbs");
-    var elPrev = box.querySelector(".lightbox-prev");
-    var elNext = box.querySelector(".lightbox-next");
 
     var openIndex = 0;
     var lastFocus = null;
+    var pendingLand = null;
     var thumbs = [];
+
+    function at(index) { return items[(index % items.length + items.length) % items.length]; }
 
     /* One strip of every image, built once. The thumbnails borrow the
        page's own <img> sources, so they are already in cache. */
@@ -721,15 +739,10 @@
       thumbImg.alt = "";
       thumbImg.loading = "lazy";
       thumb.appendChild(thumbImg);
-      thumb.addEventListener("click", function () { show(i); });
+      thumb.addEventListener("click", function () { jump(i); });
       elThumbs.appendChild(thumb);
       thumbs.push(thumb);
     });
-
-    function preload(index) {
-      var item = items[(index + items.length) % items.length];
-      if (item) { var p = new Image(); p.src = item.img.src; }
-    }
 
     /* Keep the live thumbnail in view without ever scrolling the page:
        the strip's own scrollLeft, never scrollIntoView. */
@@ -743,12 +756,24 @@
       }
     }
 
-    function show(index) {
-      openIndex = (index + items.length) % items.length;
-      var item = items[openIndex];
+    /* Offset from the centred position: "34px" mid-drag, "-100%" for a
+       completed step, "" to sit back on the stylesheet's own centring. */
+    function setDrag(value) {
+      elRail.style.transform = value
+        ? "translate3d(calc(-100% + " + value + "), 0, 0)"
+        : "";
+    }
 
-      elImg.src = item.img.currentSrc || item.img.src;
-      elImg.alt = item.img.alt || "";
+    /* Paint the rail for a position: the slide either side is loaded too,
+       so a drag reveals a real neighbour rather than an empty gutter. */
+    function paint(index) {
+      openIndex = (index % items.length + items.length) % items.length;
+      var item = at(openIndex);
+
+      slides[0].src = at(openIndex - 1).img.src;
+      slides[1].src = item.img.currentSrc || item.img.src;
+      slides[2].src = at(openIndex + 1).img.src;
+      slides[1].alt = item.img.alt || "";
 
       elCaption.textContent = "";
       if (item.caption) {
@@ -766,16 +791,55 @@
         if (live) revealThumb(thumb);
       });
 
-      // Neighbours, so a step never waits on the network.
-      preload(openIndex + 1);
-      preload(openIndex - 1);
+      elRail.classList.remove("is-sliding");
+      setDrag("");
+    }
+
+    /* Animate one place along, then repaint centred on the new image.
+
+       A step in flight is never a reason to drop the next one: a reader
+       holding the arrow key, or swiping twice quickly, lands the current
+       slide immediately and starts the next. The timer is a backstop for a
+       transitionend that never arrives — some engines drop it for a
+       compositor-driven transform — set just past the 240ms glide so the
+       worst case is a beat late, not half a second. */
+    function step(delta) {
+      if (pendingLand) pendingLand();
+      if (!delta) { settle(); return; }
+      if (reduceMotion) { paint(openIndex + delta); return; }
+      var from = openIndex;
+      elRail.classList.add("is-sliding");
+      setDrag(delta > 0 ? "-100%" : "100%");
+      function land() {
+        if (pendingLand !== land) return;
+        pendingLand = null;
+        elRail.removeEventListener("transitionend", land);
+        paint(from + delta);
+      }
+      pendingLand = land;
+      elRail.addEventListener("transitionend", land);
+      setTimeout(land, 360);
+    }
+
+    /* Release below the threshold: slide back to centre. */
+    function settle() {
+      if (reduceMotion) { setDrag(""); return; }
+      elRail.classList.add("is-sliding");
+      setDrag("");
+      setTimeout(function () { elRail.classList.remove("is-sliding"); }, 300);
+    }
+
+    function jump(index) {
+      if (pendingLand) pendingLand();
+      if (index === openIndex) return;
+      paint(index);
     }
 
     function open(index, trigger) {
       lastFocus = trigger || null;
       box.hidden = false;
       document.documentElement.classList.add("lightbox-open");
-      show(index);
+      paint(index);
       box.querySelector(".lightbox-close").focus();
     }
 
@@ -783,15 +847,13 @@
       if (box.hidden) return;
       box.hidden = true;
       document.documentElement.classList.remove("lightbox-open");
-      elImg.removeAttribute("src");
+      slides.forEach(function (slide) { slide.removeAttribute("src"); });
       if (lastFocus) lastFocus.focus();
       lastFocus = null;
     }
 
-    function step(delta) { show(openIndex + delta); }
-
-    elPrev.addEventListener("click", function () { step(-1); });
-    elNext.addEventListener("click", function () { step(1); });
+    box.querySelector(".lightbox-prev").addEventListener("click", function () { step(-1); });
+    box.querySelector(".lightbox-next").addEventListener("click", function () { step(1); });
     box.addEventListener("click", function (event) {
       if (event.target.closest("[data-lightbox-close]")) close();
     });
@@ -801,8 +863,8 @@
       if (event.key === "Escape") { event.preventDefault(); close(); return; }
       if (event.key === "ArrowRight") { event.preventDefault(); step(1); return; }
       if (event.key === "ArrowLeft") { event.preventDefault(); step(-1); return; }
-      if (event.key === "Home") { event.preventDefault(); show(0); return; }
-      if (event.key === "End") { event.preventDefault(); show(items.length - 1); return; }
+      if (event.key === "Home") { event.preventDefault(); jump(0); return; }
+      if (event.key === "End") { event.preventDefault(); jump(items.length - 1); return; }
       if (event.key !== "Tab") return;
       /* Focus stays inside the dialog while it is modal. The thumb strip is
          twenty-one buttons long, so it is skipped on Tab — the arrow keys
@@ -821,23 +883,83 @@
       }
     });
 
-    /* Horizontal swipe steps the carousel; a mostly-vertical drag is left
-       alone so the caption can still be scrolled on a phone. Swipes that
-       start on the thumb strip belong to the strip's own scrolling. */
-    var touch = null;
-    box.addEventListener("touchstart", function (event) {
-      if (event.touches.length !== 1 || event.target.closest(".lightbox-thumbs")) {
-        touch = null; return;
+    /* ————— Drag —————
+       The rail tracks the finger and settles on release: past the threshold
+       it carries on to the neighbour, short of it it springs back. The
+       viewport declares `touch-action: pan-y`, so the browser keeps
+       vertical scrolling and hands us the horizontal axis — no
+       preventDefault, and every listener stays passive.
+
+       Axis is locked once per gesture on the first few pixels of movement,
+       so a vertical drag started on the photograph scrolls the caption
+       instead of dithering between the two. */
+    var drag = null;
+
+    function dragStart(x, y) {
+      // A step still gliding lands now, so the finger takes over from where
+      // the rail actually is rather than being ignored.
+      if (pendingLand) pendingLand();
+      elRail.classList.remove("is-sliding");
+      drag = { x: x, y: y, dx: 0, axis: null };
+    }
+
+    function dragMove(x, y) {
+      if (!drag) return;
+      var dx = x - drag.x;
+      var dy = y - drag.y;
+      if (drag.axis === null) {
+        if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return;
+        drag.axis = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
       }
-      touch = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+      if (drag.axis !== "x") return;
+      drag.dx = dx;
+      setDrag(dx + "px");
+    }
+
+    function dragEnd() {
+      if (!drag) return;
+      var dx = drag.axis === "x" ? drag.dx : 0;
+      drag = null;
+      if (!dx) return;
+      var width = elViewport.clientWidth || 1;
+      var threshold = Math.max(44, width * 0.16);
+      if (dx <= -threshold) step(1);
+      else if (dx >= threshold) step(-1);
+      else settle();
+    }
+
+    elViewport.addEventListener("touchstart", function (event) {
+      if (event.touches.length !== 1) { drag = null; return; }
+      dragStart(event.touches[0].clientX, event.touches[0].clientY);
     }, { passive: true });
-    box.addEventListener("touchend", function (event) {
-      if (!touch || !event.changedTouches.length) return;
-      var dx = event.changedTouches[0].clientX - touch.x;
-      var dy = event.changedTouches[0].clientY - touch.y;
-      touch = null;
-      if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
+    elViewport.addEventListener("touchmove", function (event) {
+      if (event.touches.length !== 1) return;
+      dragMove(event.touches[0].clientX, event.touches[0].clientY);
     }, { passive: true });
+    elViewport.addEventListener("touchend", dragEnd, { passive: true });
+    elViewport.addEventListener("touchcancel", function () {
+      if (drag) { drag = null; settle(); }
+    }, { passive: true });
+
+    /* The same gesture with a mouse or a trackpad-driven pointer, for a
+       desktop reader who expects to be able to throw the picture aside. */
+    elViewport.addEventListener("pointerdown", function (event) {
+      if (event.pointerType === "touch" || event.button !== 0) return;
+      dragStart(event.clientX, event.clientY);
+      elViewport.setPointerCapture(event.pointerId);
+    });
+    elViewport.addEventListener("pointermove", function (event) {
+      if (event.pointerType === "touch" || !drag) return;
+      dragMove(event.clientX, event.clientY);
+    });
+    ["pointerup", "pointercancel"].forEach(function (type) {
+      elViewport.addEventListener(type, function (event) {
+        if (event.pointerType === "touch") return;
+        dragEnd();
+      });
+    });
+    // A drag that ends on the image must not also read as a click-through.
+    elViewport.addEventListener("dragstart", function (event) { event.preventDefault(); });
 
     /* ————— Make every figure image a button ————— */
     items.forEach(function (item, index) {
