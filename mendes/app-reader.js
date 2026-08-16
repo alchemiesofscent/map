@@ -106,12 +106,12 @@
         while (p && p.classList.contains("toc-sub")) p = p.previousElementSibling;
         if (p) { p.setAttribute("aria-current", "true"); part = p; }
       }
-      // In the phone chip row, bring the active part chip into view. Only on
-      // a change of part, so the reader's own horizontal scrolling is not
-      // fought mid-gesture.
-      if (part !== lastRevealed && toc.scrollWidth > toc.clientWidth + 4) {
-        var lead = part.offsetLeft - 16;
-        toc.scrollLeft = Math.max(0, Math.min(lead, toc.scrollWidth - toc.clientWidth));
+      // The phone bar says where the reader is — the one thing the old
+      // contents chip row was really for, now that the contents live behind
+      // the hamburger.
+      if (part !== lastRevealed) {
+        var where = document.getElementById("mobile-bar-where");
+        if (where) where.textContent = part.textContent.replace(/\s+/g, " ").trim();
       }
       lastRevealed = part;
     }
@@ -131,25 +131,102 @@
     }, { passive: true });
     spy();
 
-    /* ————— Compact sticky bar on a phone —————
-       The rail is sticky with a negative top so the brand and the search
-       scroll away and the contents row stays pinned. Measured, not hardcoded,
-       so a changed brand block or a late font load cannot strand the offset. */
+    /* ————— The phone bar and its fullscreen contents menu —————
+       Below 1080px the rail stops being a column beside the text and becomes
+       a menu behind a hamburger, with a fixed bar holding the wordmark and
+       the reader's current section. The rail is the same element in both
+       layouts — the contents, search, page links and theme control are one
+       set of nodes, so there is nothing to keep in sync — and the CSS is
+       gated on the nav-ready class this sets, so a reader without JavaScript
+       gets the rail inline above the dossier rather than a dead hamburger.
+
+       Bar height is measured rather than assumed: the wordmark's face loads
+       late, and anchor jumps have to clear whatever the bar actually is. */
     var mq = window.matchMedia("(max-width: 1080px)");
-    function measureStick() {
-      if (!mq.matches) {
-        rail.style.removeProperty("--rail-stick-top");
+    var bar = document.getElementById("mobile-bar");
+    var navToggle = document.getElementById("nav-toggle");
+
+    function measureBar() {
+      if (!mq.matches || !bar) {
         document.documentElement.style.setProperty("--stuck-h", "0px");
         return;
       }
-      var tocTop = toc.offsetTop;
-      rail.style.setProperty("--rail-stick-top", -tocTop + "px");
-      document.documentElement.style.setProperty("--stuck-h", (rail.offsetHeight - tocTop) + "px");
+      var h = bar.offsetHeight;
+      document.documentElement.style.setProperty("--bar-h", h + "px");
+      document.documentElement.style.setProperty("--stuck-h", h + "px");
     }
-    if (mq.addEventListener) mq.addEventListener("change", measureStick);
-    window.addEventListener("resize", measureStick);
-    measureStick();
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measureStick);
+
+    if (bar && navToggle) {
+      bar.hidden = false;
+      document.documentElement.classList.add("nav-ready");
+      // The closed state lands with nav-ready; the transition is armed a
+      // frame later so the menu is never seen fading away on load.
+      requestAnimationFrame(function () {
+        document.documentElement.classList.add("nav-live");
+      });
+
+      var navReturn = null;
+      function navOpen() { return navToggle.getAttribute("aria-expanded") === "true"; }
+
+      function setNav(open) {
+        navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        rail.classList.toggle("is-open", open);
+        document.documentElement.classList.toggle("nav-open", open);
+        if (open) {
+          navReturn = document.activeElement;
+          // The contents are what the menu is for, and a contents link does
+          // not raise the phone keyboard the way the search field would.
+          var first = rail.querySelector(".rail-toc a") ||
+            rail.querySelector("input, a[href], button");
+          if (first) first.focus();
+        } else if (navReturn) {
+          navReturn.focus();
+          navReturn = null;
+        }
+      }
+
+      navToggle.addEventListener("click", function () { setNav(!navOpen()); });
+
+      // Choosing a destination is the end of the menu's job.
+      rail.addEventListener("click", function (event) {
+        if (!navOpen()) return;
+        if (event.target.closest(".rail-toc a, .rail-links a, .rail-search-result")) {
+          setNav(false);
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (!navOpen()) return;
+        if (event.key === "Escape") { event.preventDefault(); setNav(false); return; }
+        if (event.key !== "Tab") return;
+        var focusable = [].slice.call(rail.querySelectorAll(
+          "input, a[href], button")).filter(function (node) {
+            return node.offsetParent !== null && !node.disabled;
+          });
+        focusable.unshift(navToggle);   // the hamburger is the way back out
+        if (focusable.length < 2) return;
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault(); last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault(); first.focus();
+        }
+      });
+
+      // Growing past the breakpoint puts the rail back beside the text; a
+      // menu left open would otherwise strand the page scroll-locked.
+      if (mq.addEventListener) {
+        mq.addEventListener("change", function () {
+          if (!mq.matches && navOpen()) setNav(false);
+        });
+      }
+    }
+
+    if (mq.addEventListener) mq.addEventListener("change", measureBar);
+    window.addEventListener("resize", measureBar);
+    measureBar();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measureBar);
 
     /* ————— Arriving with an anchor —————
        The dossier's content is fetched and inserted after the page loads, so
@@ -351,7 +428,7 @@
     input.insertAdjacentElement("afterend", filtersHost);
     input.addEventListener("focus", function () {
       if (claimEntries.length) filtersHost.hidden = false;
-      measureStick();
+      measureBar();
     });
 
     function filterChip(label, pressed, dotVar, onToggle) {
@@ -411,7 +488,7 @@
         filtersHost.appendChild(multiRow("Queen", queenOptions, enabled.queens));
         filtersHost.appendChild(multiRow("Olfactory", OLFACTORY_OPTIONS, enabled.olfactory));
       }
-      measureStick();
+      measureBar();
     }
 
     function mapEntryPasses(entry) {
@@ -514,7 +591,7 @@
         summary.hidden = true;
         results.hidden = true;
         results.textContent = "";
-        measureStick();
+        measureBar();
         return;
       }
       var sectionHits = [];
@@ -585,7 +662,7 @@
         appendGroupLabel("Galen — observed, acquired, sourced");
         galenHits.slice(0, galenCap).forEach(function (entry) { appendRow(claimRow(entry)); });
       }
-      measureStick();
+      measureBar();
     }
     var debounce;
     input.addEventListener("input", function () {

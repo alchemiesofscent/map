@@ -15,7 +15,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260816-4";
+      --asset-version: "20260816-5";
 
       /* Grounds — the study register shared with map/site.css */
       --sea-deep: #0E2229;
@@ -78,6 +78,8 @@
       /* The compact contents bar's height on a phone; app-reader.js measures
          the real thing and keeps this in step so anchor jumps clear it. */
       --stuck-h: 0px;
+      /* Height of the fixed bar that carries the hamburger on a phone. */
+      --bar-h: 58px;
     }
 
     /* ————— Night —————
@@ -683,63 +685,168 @@
       letter-spacing: .03em;
     }
 
+    /* The bar and its menu are the compact layout's own furniture. */
+    .mobile-bar { display: none; }
+
     /* ————— Compact shell: the rail becomes the page head ————— */
     @media (max-width: 1080px) {
       .reader-shell { display: block; padding: 0; }
       .reader-main { padding: 0 12px; }
 
+      /* Without JavaScript the rail is simply the page head: it renders
+         inline above the dossier and scrolls away. Everything below is the
+         enhanced form, gated on :root.nav-ready, which app-reader.js sets
+         once it has put the bar and its hamburger in place. */
       .reader-rail {
-        position: sticky;
-        /* app-reader.js measures everything above the contents row and sets a
-           negative top so only that row stays pinned once the reader scrolls.
-           Without JS the rail simply scrolls away with the page. */
-        top: var(--rail-stick-top, auto);
-        z-index: 30;
         display: flex;
         flex-direction: column;
-        gap: 0;
+        gap: 16px;
         max-height: none;
         margin: 0 0 18px;
-        padding: 14px 12px 0;
+        padding: 16px 14px 4px;
         overflow: visible;
         background: var(--paper);
-        box-shadow: 0 8px 24px rgba(20,30,34,.08);
       }
-      /* The contents row pins, so it must be the rail's last block: brand,
-         search, and the page links scroll away above it. */
-      .rail-brand { order: 1; }
-      .rail-search { order: 2; }
-      .rail-links { order: 3; }
-      .rail-toc { order: 4; }
-      .rail-brand { padding-top: 10px; }
-      .rail-title { font-size: 1.4rem; }
       .rail-sub { display: none; }
-      .rail-search { margin-top: 12px; }
-      .rail-toc-label { display: none; }
-      .rail-toc {
-        flex-direction: row;
-        gap: 6px;
-        align-items: center;
-        margin: 12px -12px 0;
-        padding: 8px 12px;
-        overflow-x: auto;
-        border-top: 1px solid var(--rule-study);
-        border-bottom: 1px solid var(--rule-study);
-        background: var(--paper);
-        scrollbar-width: thin;
+      .rail-foot { display: none; }
+
+      /* ————— The fullscreen contents menu —————
+         The rail itself becomes the menu: one element, so the contents,
+         search, page links and theme control are the same nodes in both
+         layouts and nothing has to be kept in sync. On a phone the deep
+         (h2) entries earn their place — there is room for the whole tree,
+         which the old chip row could never show. */
+      :root.nav-ready body { padding-top: var(--bar-h); }
+      :root.nav-ready .reader-rail {
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        gap: 20px;
+        height: 100dvh;
+        margin: 0;
+        padding: calc(var(--bar-h) + 18px) 20px calc(28px + env(safe-area-inset-bottom));
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        /* No transition until nav-live, one frame later. The closed state
+           arrives with the nav-ready class, and a transition on that first
+           application would fade the rail out in front of the reader on
+           every load instead of it simply not being there. */
+        transition: none;
       }
-      .rail-toc a {
-        flex: 0 0 auto;
-        padding: 7px 12px;
-        border-left: 0;
-        border-radius: var(--r-chip);
+      :root.nav-live .reader-rail {
+        transition: opacity var(--t-snap) ease, transform var(--t-snap) ease,
+                    visibility 0s linear var(--t-snap);
+      }
+      :root.nav-ready .reader-rail.is-open {
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+      }
+      :root.nav-live .reader-rail.is-open {
+        transition: opacity var(--t-snap) ease, transform var(--t-snap) ease,
+                    visibility 0s;
+      }
+      /* The bar carries the wordmark, so the menu does not repeat it. The
+         rest follows document order — search, contents, page links, theme —
+         so what the reader tabs through is what they see, with no `order`
+         juggling to put the two out of step. */
+      :root.nav-ready .rail-brand { display: none; }
+      :root.nav-ready .rail-theme { margin-top: auto; padding-top: 8px; }
+      :root.nav-ready .rail-toc { gap: 2px; }
+      :root.nav-ready .rail-toc a { padding: 11px 12px; font-size: .95rem; }
+      :root.nav-ready .rail-toc a.toc-sub { padding-left: 26px; font-size: .86rem; }
+      :root.nav-ready .rail-links { margin-top: 4px; }
+      :root.nav-ready .rail-links a { justify-content: center; }
+      :root.nav-ready .rail-theme { justify-content: center; }
+
+      /* ————— The bar ————— */
+      .mobile-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 70;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        height: var(--bar-h);
+        padding: 0 12px 0 16px;
+        background: var(--paper);
+        border-bottom: 1px solid var(--rule-study);
+      }
+      .mobile-bar[hidden] { display: none; }
+      .mobile-bar-text { min-width: 0; }
+      .mobile-bar-title {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 1.12rem;
+        font-weight: 600;
+        font-variant: small-caps;
+        letter-spacing: .04em;
+        line-height: 1.1;
+      }
+      /* Where the reader is, which is what the old chip row was really for. */
+      .mobile-bar-where {
+        display: block;
+        margin: 1px 0 0;
+        overflow: hidden;
+        color: var(--muted);
+        font-family: var(--font-mono);
+        font-size: .6rem;
+        letter-spacing: .08em;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
         white-space: nowrap;
       }
-      .rail-toc a[aria-current="true"] { border-left: 0; }
-      /* Deep entries stay a desktop affordance; the chip row keeps to parts. */
-      .rail-toc a.toc-sub { display: none; }
-      .rail-links { grid-auto-flow: column; justify-content: start; margin: 12px 0; }
-      .rail-foot { display: none; }
+      .nav-toggle {
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 1px solid var(--rule-strong);
+        border-radius: var(--r-chip);
+        background: var(--card-wash);
+        cursor: pointer;
+      }
+      .nav-toggle:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 2px; }
+      .nav-toggle-box {
+        position: relative;
+        display: block;
+        width: 18px;
+        height: 12px;
+      }
+      .nav-toggle-box span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1.8px;
+        border-radius: 2px;
+        background: var(--ink);
+        transition: transform var(--t-snap) ease, opacity var(--t-hover) ease;
+      }
+      .nav-toggle-box span:nth-child(1) { top: 0; }
+      .nav-toggle-box span:nth-child(2) { top: 5.1px; }
+      .nav-toggle-box span:nth-child(3) { top: 10.2px; }
+      /* Three lines fold into a cross while the menu is open. */
+      .nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(1) {
+        transform: translateY(5.1px) rotate(45deg);
+      }
+      .nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(2) { opacity: 0; }
+      .nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(3) {
+        transform: translateY(-5.1px) rotate(-45deg);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        :root.nav-live .reader-rail,
+        :root.nav-live .reader-rail.is-open,
+        .nav-toggle-box span { transition: none; }
+      }
+      html.nav-open, html.nav-open body { overflow: hidden; }
 
       .dossier { margin-bottom: 26px; }
       .map-launch { margin-bottom: 26px; }
