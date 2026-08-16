@@ -1065,7 +1065,7 @@
      never flashes the other palette first. */
   (function () {
     var toggle = document.getElementById("theme-toggle");
-    var wrap = document.getElementById("rail-theme");
+    var wrap = document.getElementById("rail-settings");
     if (!toggle || !wrap) return;
 
     var STORE = "mendes-theme";
@@ -1132,4 +1132,60 @@
         if (stored() === "system") paintChrome("system");
       });
     }
+  }());
+
+  /* ————— Reading size —————
+     The dossier is long and was set a notch small, so the baseline is a
+     tenth larger than it was; this control moves it from there. It drives
+     the root font size, so everything measured in rem — body copy, the
+     headings, the rail, the captions — grows together rather than the body
+     text drifting away from the furniture around it.
+
+     Stamped in the page head before first paint, like the theme, so a
+     stored size never reflows the page in front of the reader. */
+  (function () {
+    var toggle = document.getElementById("type-toggle");
+    if (!toggle) return;
+
+    var STORE = "mendes-type";
+    var ORDER = ["standard", "large", "largest"];
+    var SCALE = { standard: "1.1", large: "1.25", largest: "1.4" };
+    var LABEL = { standard: "Standard", large: "Large", largest: "Largest" };
+    var NEXT_SAYS = {
+      standard: "Set larger text",
+      large: "Set the largest text",
+      largest: "Back to the standard text size"
+    };
+
+    var label = toggle.querySelector(".type-toggle-label");
+
+    function stored() {
+      try {
+        var value = localStorage.getItem(STORE);
+        return ORDER.indexOf(value) > 0 ? value : "standard";
+      } catch (error) { return "standard"; }
+    }
+
+    function apply(size) {
+      document.documentElement.setAttribute("data-type", size);
+      document.documentElement.style.setProperty("--type-scale", SCALE[size]);
+      try {
+        if (size === "standard") localStorage.removeItem(STORE);
+        else localStorage.setItem(STORE, size);
+      } catch (error) { /* a private window still resizes for this visit */ }
+      label.textContent = LABEL[size];
+      toggle.setAttribute("aria-label",
+        "Reading size: " + LABEL[size].toLowerCase() + ". " + NEXT_SAYS[size] + ".");
+      toggle.title = NEXT_SAYS[size];
+      // The phone bar's height is part of the type that just changed, and
+      // anchor jumps have to clear whatever it now is.
+      window.dispatchEvent(new Event("resize"));
+    }
+
+    apply(stored());
+
+    toggle.addEventListener("click", function () {
+      var size = stored();
+      apply(ORDER[(ORDER.indexOf(size) + 1) % ORDER.length]);
+    });
   }());

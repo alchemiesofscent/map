@@ -15,7 +15,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260816-5";
+      --asset-version: "20260816-6";
 
       /* Grounds — the study register shared with map/site.css */
       --sea-deep: #0E2229;
@@ -80,6 +80,11 @@
       --stuck-h: 0px;
       /* Height of the fixed bar that carries the hamburger on a phone. */
       --bar-h: 58px;
+
+      /* Reading size. 1.1 is the baseline — the dossier is long and was
+         set a notch small — and the control in the rail moves it from
+         here, so everything measured in rem follows together. */
+      --type-scale: 1.1;
     }
 
     /* ————— Night —————
@@ -160,7 +165,12 @@
     :lang(grc), .greek { font-family: var(--font-greek) !important; }
 
     * { box-sizing: border-box; }
-    html { background: var(--paper); color: var(--ink); scroll-behavior: smooth; }
+    html {
+      background: var(--paper);
+      color: var(--ink);
+      font-size: calc(100% * var(--type-scale, 1.1));
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: var(--font-body);
@@ -255,7 +265,7 @@
       border-radius: 10px;
       background: var(--field);
       color: var(--ink);
-      font-size: 16px; /* keeps iOS from zooming the page on focus */
+      font-size: max(16px, 1rem); /* 16px min keeps iOS from zooming on focus */
     }
     .rail-search input::placeholder { color: var(--field-ph); }
     .rail-search-summary {
@@ -415,7 +425,7 @@
       max-width: none;
       margin: 2.1em 0 .55em;
       font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3.4vw, 2.9rem);
+      font-size: clamp(1.8rem, calc(3.4vw * var(--type-scale)), 2.9rem);
       font-weight: 500;
       line-height: 1.06;
       letter-spacing: -.01em;
@@ -423,13 +433,13 @@
     /* The document title */
     .dossier h1:first-child {
       margin-top: 0;
-      font-size: clamp(2.5rem, 5.6vw, 4.4rem);
+      font-size: clamp(2.5rem, calc(5.6vw * var(--type-scale)), 4.4rem);
       line-height: .98;
     }
     .dossier h2 {
       margin: 2em 0 .6em;
       font-family: var(--font-display);
-      font-size: clamp(1.4rem, 2.6vw, 2.05rem);
+      font-size: clamp(1.4rem, calc(2.6vw * var(--type-scale)), 2.05rem);
       font-weight: 500;
       line-height: 1.12;
     }
@@ -439,7 +449,7 @@
       margin: .9rem 0 1.6rem;
       color: var(--muted);
       font-family: var(--font-body);
-      font-size: clamp(1rem, 1.9vw, 1.22rem);
+      font-size: clamp(1rem, calc(1.9vw * var(--type-scale)), 1.22rem);
       font-weight: 400;
       line-height: 1.5;
     }
@@ -448,7 +458,7 @@
       padding-top: .75em;
       border-top: 1px solid var(--rule-study);
       font-family: var(--font-display);
-      font-size: clamp(1.14rem, 1.9vw, 1.42rem);
+      font-size: clamp(1.14rem, calc(1.9vw * var(--type-scale)), 1.42rem);
       font-weight: 600;
       line-height: 1.25;
     }
@@ -603,7 +613,7 @@
       margin: 0 0 10px;
       max-width: 26ch;
       font-family: var(--font-display);
-      font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+      font-size: clamp(1.5rem, calc(2.8vw * var(--type-scale)), 2.2rem);
       font-weight: 500;
       line-height: 1.1;
     }
@@ -754,13 +764,13 @@
          so what the reader tabs through is what they see, with no `order`
          juggling to put the two out of step. */
       :root.nav-ready .rail-brand { display: none; }
-      :root.nav-ready .rail-theme { margin-top: auto; padding-top: 8px; }
+      :root.nav-ready .rail-settings { margin-top: auto; padding-top: 8px; }
       :root.nav-ready .rail-toc { gap: 2px; }
       :root.nav-ready .rail-toc a { padding: 11px 12px; font-size: .95rem; }
       :root.nav-ready .rail-toc a.toc-sub { padding-left: 26px; font-size: .86rem; }
       :root.nav-ready .rail-links { margin-top: 4px; }
       :root.nav-ready .rail-links a { justify-content: center; }
-      :root.nav-ready .rail-theme { justify-content: center; }
+      :root.nav-ready .rail-settings { justify-content: center; }
 
       /* ————— The bar ————— */
       .mobile-bar {
@@ -773,8 +783,8 @@
         align-items: center;
         justify-content: space-between;
         gap: 12px;
-        height: var(--bar-h);
-        padding: 0 12px 0 16px;
+        min-height: var(--bar-h);
+        padding: 6px 12px 6px 16px;
         background: var(--paper);
         border-bottom: 1px solid var(--rule-study);
       }
@@ -855,7 +865,7 @@
     @media (max-width: 720px) {
       .reader-main { padding: 0 8px; }
       .dossier { padding: 22px 16px; }
-      .dossier h1:first-child { font-size: clamp(2.1rem, 9.5vw, 3rem); }
+      .dossier h1:first-child { font-size: clamp(2.1rem, calc(9.5vw * var(--type-scale)), 3rem); }
       .dossier th, .dossier td { min-width: 140px; }
       .ingredient-gallery { grid-template-columns: 1fr; }
       .ingredient-images-pair, .ingredient-images-trio { grid-template-columns: 1fr; }
@@ -1194,13 +1204,15 @@
        the rail under the wordmark, and is revealed by app-reader.js the way
        the search box is — with no script there is nothing to click, and the
        @media block above still gives a dark system its night reading. */
-    .rail-theme[hidden] { display: none; }
-    .rail-theme {
+    .rail-settings[hidden] { display: none; }
+    .rail-settings {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       gap: 8px;
     }
-    .theme-toggle {
+    .theme-toggle,
+    .type-toggle {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -1219,9 +1231,11 @@
       transition: background var(--t-hover) ease, border-color var(--t-hover) ease,
                   color var(--t-hover) ease;
     }
-    .theme-toggle:hover { background: var(--hover-study); color: var(--ink); }
-    .theme-toggle:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 2px; }
-    .theme-toggle svg {
+    .theme-toggle:hover, .type-toggle:hover { background: var(--hover-study); color: var(--ink); }
+    .theme-toggle:focus-visible,
+    .type-toggle:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 2px; }
+    .theme-toggle svg,
+    .type-toggle svg {
       width: 15px;
       height: 15px;
       flex: 0 0 auto;
@@ -1238,5 +1252,15 @@
     :root[data-theme="dark"] .theme-toggle .theme-icon-dark { display: block; }
 
     @media (prefers-reduced-motion: reduce) {
-      .theme-toggle { transition: none; }
+      .theme-toggle, .type-toggle { transition: none; }
     }
+
+    /* The reading-size control. Two glyph As of different size, so the
+       button says what it does without reading the label. */
+    .type-toggle svg { stroke: none; fill: var(--gold-ink); }
+    .type-icon { display: none; }
+    :root[data-type="standard"] .type-toggle .type-icon-standard,
+    :root[data-type="large"] .type-toggle .type-icon-large,
+    :root[data-type="largest"] .type-toggle .type-icon-largest { display: block; }
+    /* Before the script stamps a value, show the baseline glyph. */
+    :root:not([data-type]) .type-toggle .type-icon-standard { display: block; }

@@ -5,17 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
   <title>Ingredients of the House of Mendes — dossier and interactive map</title>
   <meta name="description" content="A research dossier and ingredient catalogue for Mendesian, Metopion, and Susinum perfumes, with a separate interactive provenance map.">
-  <!-- The stylesheet follows the system on its own. This runs before first
-       paint so a reader who has overridden that never sees the other palette
-       flash first; app-reader.js owns everything else about the theme. -->
+  <!-- The stylesheet follows the system palette on its own, and carries the
+       baseline reading size. This runs before first paint so a reader who has
+       overridden either never sees the other one first — a stored theme would
+       otherwise flash, and a stored size would reflow the whole page.
+       app-reader.js owns everything else about both. -->
   <script>
   (function () {
+    var root = document.documentElement;
     try {
-      var stored = localStorage.getItem("mendes-theme");
-      if (stored === "light" || stored === "dark") {
-        document.documentElement.setAttribute("data-theme", stored);
+      var theme = localStorage.getItem("mendes-theme");
+      if (theme === "light" || theme === "dark") root.setAttribute("data-theme", theme);
+
+      var scale = { large: "1.25", largest: "1.4" };
+      var size = localStorage.getItem("mendes-type");
+      if (scale[size]) {
+        root.setAttribute("data-type", size);
+        root.style.setProperty("--type-scale", scale[size]);
       }
-    } catch (error) { /* no storage, follow the system */ }
+    } catch (error) { /* no storage: the stylesheet's defaults stand */ }
   }());
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +33,8 @@
        asset change, as map/ does. If they drift, the guard after the link
        repairs a stale stylesheet rather than rendering new markup against
        old rules. -->
-  <script>window.ASSET_VERSION = "20260816-5";</script>
-  <link rel="stylesheet" href="site.css?v=20260816-5">
+  <script>window.ASSET_VERSION = "20260816-6";</script>
+  <link rel="stylesheet" href="site.css?v=20260816-6">
   <script>
   (function () {
     var stamped = getComputedStyle(document.documentElement)
