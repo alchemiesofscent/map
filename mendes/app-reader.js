@@ -974,3 +974,85 @@
       trigger.addEventListener("click", function () { open(index, trigger); });
     });
   }());
+
+  /* ————— Theme —————
+     Night follows the system by default; the toggle is an override the
+     reader can set and unset, cycling system → light → dark → system.
+
+     The stylesheet does the automatic half on its own, so a reader with no
+     stored choice — and a reader with no JavaScript — still gets night on a
+     dark system. This script exists for the override: it stamps data-theme,
+     remembers it, keeps the browser-chrome colour in step, and returns to
+     following the system when the cycle comes back round. The stamping
+     itself happens in the page head, before first paint, so a stored choice
+     never flashes the other palette first. */
+  (function () {
+    var toggle = document.getElementById("theme-toggle");
+    var wrap = document.getElementById("rail-theme");
+    if (!toggle || !wrap) return;
+
+    var STORE = "mendes-theme";
+    var ORDER = ["system", "light", "dark"];
+    var LABEL = { system: "System", light: "Light", dark: "Dark" };
+    var NEXT_SAYS = {
+      system: "Switch to the light reading",
+      light: "Switch to the night reading",
+      dark: "Follow the system setting"
+    };
+    var GROUND = { light: "#F2EBDB", dark: "#0E2229" };
+
+    var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+    var label = toggle.querySelector(".theme-toggle-label");
+
+    function stored() {
+      try {
+        var value = localStorage.getItem(STORE);
+        return ORDER.indexOf(value) > 0 ? value : "system";
+      } catch (error) { return "system"; }
+    }
+
+    /* The colour behind the phone's own browser chrome, so the bar over the
+       page matches the page rather than staying paper above a night read. */
+    function paintChrome(mode) {
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute("name", "theme-color");
+        document.head.appendChild(meta);
+      }
+      var effective = mode === "system"
+        ? (dark && dark.matches ? "dark" : "light")
+        : mode;
+      meta.setAttribute("content", GROUND[effective]);
+    }
+
+    function apply(mode) {
+      if (mode === "system") document.documentElement.removeAttribute("data-theme");
+      else document.documentElement.setAttribute("data-theme", mode);
+      try {
+        if (mode === "system") localStorage.removeItem(STORE);
+        else localStorage.setItem(STORE, mode);
+      } catch (error) { /* a private window still themes for this visit */ }
+      label.textContent = LABEL[mode];
+      toggle.setAttribute("aria-label",
+        "Theme: " + LABEL[mode].toLowerCase() + ". " + NEXT_SAYS[mode] + ".");
+      toggle.title = NEXT_SAYS[mode];
+      paintChrome(mode);
+    }
+
+    apply(stored());
+    wrap.hidden = false;
+
+    toggle.addEventListener("click", function () {
+      var mode = stored();
+      apply(ORDER[(ORDER.indexOf(mode) + 1) % ORDER.length]);
+    });
+
+    // While following the system, a change of system setting moves the
+    // chrome colour with it; the palette itself is the stylesheet's job.
+    if (dark && dark.addEventListener) {
+      dark.addEventListener("change", function () {
+        if (stored() === "system") paintChrome("system");
+      });
+    }
+  }());

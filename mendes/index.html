@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
   <title>Ingredients of the House of Mendes — dossier and interactive map</title>
   <meta name="description" content="A research dossier and ingredient catalogue for Mendesian, Metopion, and Susinum perfumes, with a separate interactive provenance map.">
+  <!-- The stylesheet follows the system on its own. This runs before first
+       paint so a reader who has overridden that never sees the other palette
+       flash first; app-reader.js owns everything else about the theme. -->
+  <script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("mendes-theme");
+      if (stored === "light" || stored === "dark") {
+        document.documentElement.setAttribute("data-theme", stored);
+      }
+    } catch (error) { /* no storage, follow the system */ }
+  }());
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Gentium+Plus:wght@400&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap">
@@ -12,8 +25,8 @@
        asset change, as map/ does. If they drift, the guard after the link
        repairs a stale stylesheet rather than rendering new markup against
        old rules. -->
-  <script>window.ASSET_VERSION = "20260816-3";</script>
-  <link rel="stylesheet" href="site.css?v=20260816-3">
+  <script>window.ASSET_VERSION = "20260816-4";</script>
+  <link rel="stylesheet" href="site.css?v=20260816-4">
   <script>
   (function () {
     var stamped = getComputedStyle(document.documentElement)

@@ -15,7 +15,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260816-3";
+      --asset-version: "20260816-4";
 
       /* Grounds — the study register shared with map/site.css */
       --sea-deep: #0E2229;
@@ -43,6 +43,23 @@
       --rule-strong: #d8cfba;
       --hover-study: #f2ebdb;
 
+      /* Surfaces and inks that the night palette remaps. Every literal
+         colour outside the token block would otherwise stay daylit. */
+      --ink-soft: #3c4744;
+      --ink-softer: #4c5754;
+      --link: #275f6b;
+      --link-soft: #3f6963;
+      --field: #ffffff;
+      --field-line: #cdc2a9;
+      --field-ph: #9a927e;
+      --card-white: #ffffff;
+      --card-wash: rgba(255,255,255,.58);
+      --mat: #ece5d2;
+      /* Ink on the lightbox scrim, which is dark in both themes and so
+         must not flip with them. Never remapped below. */
+      --on-scrim: #F2EBDB;
+      --shadow-card: 0 10px 28px rgba(20,30,34,.08);
+
       /* Type */
       --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
       --font-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -63,6 +80,79 @@
       --stuck-h: 0px;
     }
 
+    /* ————— Night —————
+       The study after dark, on the map's own chart-room ground: the reader
+       and the map now meet in the same room instead of one being paper and
+       the other sea. Only tokens change — every component above is written
+       against them, which is why the literals were promoted to tokens first.
+
+       Three states, and all three must work. The system asks for dark and
+       the reader has expressed no preference; the reader chooses dark
+       explicitly; the reader chooses light on a dark system, which must win.
+       Hence the two blocks: the media one steps aside for data-theme="light",
+       and the attribute one carries no media condition at all. They are one
+       palette written twice — keep them in step. */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+
+        --paper: #0E2229;
+        --panel: #142C34;
+        --ink: #ECE3D0;
+        --muted: #94A6A2;
+        --ink-soft: #C3D0CC;
+        --ink-softer: #A6B7B3;
+
+        --gold-ink: #D9B441;
+        --inference: #8EA1BB;
+        --focus-study: #F2B847;
+
+        --rule-study: #24424B;
+        --rule-strong: #2D525C;
+        --hover-study: #18353D;
+
+        --link: #7FCAC1;
+        --link-soft: #92D4CB;
+        --field: #0A1A20;
+        --field-line: #2D525C;
+        --field-ph: #7D8E8B;
+        --card-white: #12262C;
+        --card-wash: rgba(236,227,208,.06);
+        --mat: #16292F;
+        --shadow: 0 18px 50px rgba(0, 0, 0, .5);
+        --shadow-card: 0 10px 28px rgba(0, 0, 0, .38);
+      }
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+
+      --paper: #0E2229;
+      --panel: #142C34;
+      --ink: #ECE3D0;
+      --muted: #94A6A2;
+      --ink-soft: #C3D0CC;
+      --ink-softer: #A6B7B3;
+
+      --gold-ink: #D9B441;
+      --inference: #8EA1BB;
+      --focus-study: #F2B847;
+
+      --rule-study: #24424B;
+      --rule-strong: #2D525C;
+      --hover-study: #18353D;
+
+      --link: #7FCAC1;
+      --link-soft: #92D4CB;
+      --field: #0A1A20;
+      --field-line: #2D525C;
+      --field-ph: #7D8E8B;
+      --card-white: #12262C;
+      --card-wash: rgba(236,227,208,.06);
+      --mat: #16292F;
+      --shadow: 0 18px 50px rgba(0, 0, 0, .5);
+      --shadow-card: 0 10px 28px rgba(0, 0, 0, .38);
+    }
+
     /* Gentium Plus is the project's established Greek face. It wins over every
        component rule that sets a family, including the display headings. */
     :lang(grc), .greek { font-family: var(--font-greek) !important; }
@@ -78,7 +168,7 @@
     }
     button, input { font: inherit; }
     button, summary, .rail-toc a, .rail-links a { touch-action: manipulation; }
-    a { color: #275f6b; text-underline-offset: 2px; }
+    a { color: var(--link); text-underline-offset: 2px; }
     :focus-visible { outline: 3px solid var(--focus-study); outline-offset: 2px; }
     [id] { scroll-margin-top: calc(var(--stuck-h) + 16px); }
 
@@ -159,13 +249,13 @@
       width: 100%;
       min-height: 42px;
       padding: 9px 12px;
-      border: 1px solid #cdc2a9;
+      border: 1px solid var(--field-line);
       border-radius: 10px;
-      background: #fff;
+      background: var(--field);
       color: var(--ink);
       font-size: 16px; /* keeps iOS from zooming the page on focus */
     }
-    .rail-search input::placeholder { color: #9a927e; }
+    .rail-search input::placeholder { color: var(--field-ph); }
     .rail-search-summary {
       margin: 8px 2px 0;
       color: var(--muted);
@@ -212,7 +302,7 @@
       font-size: .6rem;
       letter-spacing: .03em;
     }
-    .result-chip.ancient { border-color: #4c5754; color: var(--ink); }
+    .result-chip.ancient { border-color: var(--ink-softer); color: var(--ink); }
     .result-chip.modern { border-style: dashed; border-color: var(--inference); color: var(--inference); }
     .result-chip.theology { border-style: double; border-color: var(--gold-ink); color: var(--gold-ink); }
     .result-chip.olf-direct { border-color: var(--gold-ink); color: var(--gold-ink); }
@@ -239,7 +329,7 @@
       border: 1px solid var(--rule-study);
       border-radius: var(--r-chip);
       background: transparent;
-      color: #4c5754;
+      color: var(--ink-softer);
       font-size: .72rem;
       font-weight: 600;
       cursor: pointer;
@@ -264,7 +354,7 @@
       display: block;
       padding: 7px 10px;
       border-left: 2px solid var(--rule-study);
-      color: #3c4744;
+      color: var(--ink-soft);
       font-size: .84rem;
       font-weight: 600;
       line-height: 1.3;
@@ -277,7 +367,7 @@
       color: var(--ink);
     }
     /* Subsection entries appended by app-reader.js */
-    .rail-toc a.toc-sub { padding-left: 22px; font-weight: 400; font-size: .8rem; color: #4c5754; }
+    .rail-toc a.toc-sub { padding-left: 22px; font-weight: 400; font-size: .8rem; color: var(--ink-softer); }
     .rail-toc a.toc-sub[aria-current="true"] { color: var(--ink); }
 
     .rail-links { display: grid; gap: 8px; }
@@ -288,13 +378,13 @@
       padding: 8px 14px;
       border: 1px solid rgba(34,86,80,.25);
       border-radius: var(--r-chip);
-      color: #275f6b;
+      color: var(--link);
       font-size: .82rem;
       font-weight: 600;
       text-decoration: none;
-      background: rgba(255,255,255,.58);
+      background: var(--card-wash);
     }
-    .rail-links a:hover { background: #fff; color: var(--ink); }
+    .rail-links a:hover { background: var(--card-white); color: var(--ink); }
 
     .rail-foot {
       margin-top: auto;
@@ -399,7 +489,7 @@
     .dossier code {
       padding: .08em .32em;
       border-radius: 4px;
-      background: #ece5d2;
+      background: var(--mat);
       font-family: var(--font-mono);
       font-size: .82em;
     }
@@ -455,7 +545,7 @@
       border: 1px solid var(--rule-study);
       border-radius: var(--r-card);
       background: var(--panel);
-      box-shadow: 0 10px 28px rgba(20,30,34,.08);
+      box-shadow: var(--shadow-card);
     }
     .ingredient-images {
       display: grid;
@@ -465,14 +555,14 @@
     }
     .ingredient-images-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .ingredient-images-trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .ingredient-images figure { min-width: 0; margin: 0; background: #fff; }
+    .ingredient-images figure { min-width: 0; margin: 0; background: var(--card-white); }
     .ingredient-images img {
       display: block;
       width: 100%;
       max-width: 100%;
       height: 220px;
       object-fit: cover;
-      background: #ece5d2;
+      background: var(--mat);
     }
     .ingredient-images-pair img, .ingredient-images-trio img { height: 178px; }
     .ingredient-images figcaption {
@@ -482,7 +572,7 @@
       font-size: .72rem;
       line-height: 1.4;
     }
-    .ingredient-images figcaption a { color: #3f6963; }
+    .ingredient-images figcaption a { color: var(--link-soft); }
     .ingredient-copy { padding: 16px 18px 18px; }
     .ingredient-copy p { margin: .45em 0; font-size: .9rem; }
     .ingredient-used { color: var(--muted); }
@@ -528,7 +618,7 @@
       font-weight: 600;
       text-decoration: none;
     }
-    .map-launch-button:hover { background: #275f6b; color: #fff; }
+    .map-launch-button:hover { background: var(--link); color: var(--field); }
     .map-launch-button:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 3px; }
 
     /* ————— The queens' fragments (Part V) ————— */
@@ -568,7 +658,7 @@
       padding: 10px 14px;
       border: 1px dashed var(--inference);
       border-radius: 8px;
-      color: #545f5d;
+      color: var(--muted);
       font-size: .84rem;
     }
 
@@ -706,14 +796,14 @@
       border-radius: var(--r-card);
       background: var(--panel);
       overflow: hidden;
-      box-shadow: 0 10px 28px rgba(20,30,34,.08);
+      box-shadow: var(--shadow-card);
     }
     .relief-figure img {
       display: block;
       width: 100%;
       height: auto;
       object-fit: contain;
-      background: #ece5d2;
+      background: var(--mat);
     }
     .relief-figure figcaption {
       padding: 12px 16px 14px;
@@ -810,7 +900,7 @@
       gap: 10px;
       min-width: 0;
       margin: 0;
-      color: var(--land);
+      color: var(--on-scrim);
       font-family: var(--font-mono);
       font-size: .72rem;
       letter-spacing: .06em;
@@ -826,7 +916,7 @@
       font-family: var(--font-body);
       font-size: .82rem;
       letter-spacing: 0;
-      color: var(--paper);
+      color: var(--on-scrim);
     }
     .lightbox-label:not(:empty)::before {
       content: "";
@@ -866,7 +956,7 @@
       width: 100%;
       height: var(--media-h);
       overflow: hidden;
-      background: #ece5d2;
+      background: var(--mat);
       /* The browser keeps the vertical axis; the horizontal one is the
          carousel's, which is what lets every drag listener stay passive. */
       touch-action: pan-y;
@@ -906,7 +996,7 @@
     }
     .lightbox-caption[hidden] { display: none; }
     .lightbox-caption strong { color: var(--ink); }
-    .lightbox-caption a { color: #3f6963; }
+    .lightbox-caption a { color: var(--link-soft); }
     .lightbox-caption .relief-credit {
       display: block;
       margin-top: 6px;
@@ -924,7 +1014,7 @@
       border: 1px solid rgba(242, 235, 219, .34);
       border-radius: var(--r-chip);
       background: rgba(14, 34, 41, .72);
-      color: var(--paper);
+      color: var(--on-scrim);
       font-family: var(--font-body);
       font-size: 1.5rem;
       line-height: 1;
@@ -990,4 +1080,56 @@
       .figure-zoom img, .lightbox-btn, .lightbox-thumb { transition: none; }
       /* Steps land instead of travelling; the drag itself still tracks. */
       .lightbox-rail.is-sliding { transition: none; }
+    }
+
+    /* ————— Theme control —————
+       A single cycling button: system → light → dark → system. It sits in
+       the rail under the wordmark, and is revealed by app-reader.js the way
+       the search box is — with no script there is nothing to click, and the
+       @media block above still gives a dark system its night reading. */
+    .rail-theme[hidden] { display: none; }
+    .rail-theme {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 5px 12px 5px 9px;
+      border: 1px solid var(--rule-strong);
+      border-radius: var(--r-chip);
+      background: var(--card-wash);
+      color: var(--ink-softer);
+      font-family: var(--font-mono);
+      font-size: .66rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background var(--t-hover) ease, border-color var(--t-hover) ease,
+                  color var(--t-hover) ease;
+    }
+    .theme-toggle:hover { background: var(--hover-study); color: var(--ink); }
+    .theme-toggle:focus-visible { outline: 3px solid var(--focus-study); outline-offset: 2px; }
+    .theme-toggle svg {
+      width: 15px;
+      height: 15px;
+      flex: 0 0 auto;
+      fill: none;
+      stroke: var(--gold-ink);
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    /* One icon per state; the button shows the state it is in. */
+    .theme-toggle .theme-icon { display: none; }
+    :root:not([data-theme]) .theme-toggle .theme-icon-auto,
+    :root[data-theme="light"] .theme-toggle .theme-icon-light,
+    :root[data-theme="dark"] .theme-toggle .theme-icon-dark { display: block; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .theme-toggle { transition: none; }
     }
