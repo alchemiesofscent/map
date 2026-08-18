@@ -124,7 +124,11 @@
             </div>
           </div>
         </div>
-        <div class="dossier__nav" aria-label="Location navigation">
+        <!-- The rail carries both axes the arrow keys drive: ‹ › for the
+             selected ingredient's places, and the same chevrons turned
+             upright for ↑/↓'s walk through the ingredient list. Each button's
+             aria-label names its destination; app-2.js keeps them current. -->
+        <div class="dossier__nav" aria-label="Map navigation">
           <button type="button" id="dossier-collapse" aria-expanded="true" aria-label="Collapse the details panel">
             <span class="dossier__collapse-glyph" aria-hidden="true">«</span>
           </button>
@@ -133,6 +137,12 @@
           </button>
           <button type="button" id="next-step" aria-label="Next location" disabled>
             <span aria-hidden="true">›</span>
+          </button>
+          <button type="button" id="prev-ingredient" class="dossier__nav-axis-start" aria-label="Previous ingredient">
+            <span class="dossier__nav-upright" aria-hidden="true">‹</span>
+          </button>
+          <button type="button" id="next-ingredient" aria-label="Next ingredient">
+            <span class="dossier__nav-upright" aria-hidden="true">›</span>
           </button>
         </div>
       </aside>

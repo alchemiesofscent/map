@@ -1207,6 +1207,12 @@
     }
     .map-experience.chart .dossier .dossier__inner { transition: visibility 0s; }
     .dossier.is-collapsed .dossier__collapse-glyph { display: inline-block; transform: scaleX(-1); }
+    /* The ingredient pair rides the same rail: the location chevrons turned
+       upright, because ↑/↓ are the keys that drive this axis. A double rule
+       marks where the axis changes. The pair wraps as the keys do, so it
+       never disables. */
+    .dossier__nav .dossier__nav-axis-start { border-top: 3px double var(--rule); }
+    .dossier__nav-upright { display: inline-block; transform: rotate(90deg); }
     @media (prefers-reduced-motion: reduce) {
       .map-experience.chart .dossier { transition: none; }
     }

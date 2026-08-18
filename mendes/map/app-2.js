@@ -408,6 +408,8 @@
 
     const prevStep = document.getElementById("prev-step");
     const nextStep = document.getElementById("next-step");
+    const prevIngredientStep = document.getElementById("prev-ingredient");
+    const nextIngredientStep = document.getElementById("next-ingredient");
     const stripRail = document.getElementById("strip-rail");
     const stripDotKinds = { modern:"modern", theology:"theology" };
 
@@ -424,6 +426,30 @@
       const nextPlace = haveNext ? state.locations[state.index + 1].place : null;
       prevStep.setAttribute("aria-label", prevPlace ? "Previous location: " + prevPlace : "No previous location");
       nextStep.setAttribute("aria-label", nextPlace ? "Next location: " + nextPlace : "No next location");
+      updateIngredientRail();
+    }
+
+    // The rail's ingredient pair wraps as ↑/↓ do, so it never disables; with
+    // nothing selected it names the ends, which is how the keyboard enters
+    // the list too. Every path that changes what the pair would step to runs
+    // through updateStepNav, so refreshing here keeps the labels current.
+    function updateIngredientRail() {
+      if (!prevIngredientStep || !nextIngredientStep) return;
+      const list = visibleOrderedIngredients();
+      if (!list.length) {
+        prevIngredientStep.disabled = true;
+        nextIngredientStep.disabled = true;
+        prevIngredientStep.setAttribute("aria-label","No previous ingredient");
+        nextIngredientStep.setAttribute("aria-label","No next ingredient");
+        return;
+      }
+      prevIngredientStep.disabled = false;
+      nextIngredientStep.disabled = false;
+      const index = list.findIndex(function (ingredient) { return ingredient.id === selectedIngredientId; });
+      const prev = index < 0 ? list[list.length - 1] : list[(index - 1 + list.length) % list.length];
+      const next = index < 0 ? list[0] : list[(index + 1) % list.length];
+      prevIngredientStep.setAttribute("aria-label","Previous ingredient: " + prev.gloss);
+      nextIngredientStep.setAttribute("aria-label","Next ingredient: " + next.gloss);
     }
 
     function renderStripRail(state) {
@@ -498,6 +524,8 @@
 
     if (prevStep) prevStep.addEventListener("click", function () { stepLocation(-1); });
     if (nextStep) nextStep.addEventListener("click", function () { stepLocation(1); });
+    if (prevIngredientStep) prevIngredientStep.addEventListener("click", function () { stepIngredient(-1); });
+    if (nextIngredientStep) nextIngredientStep.addEventListener("click", function () { stepIngredient(1); });
 
     function renderNoVisibleIngredients() {
       detailContent.innerHTML =
