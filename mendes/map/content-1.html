@@ -123,38 +123,6 @@
               <p class="dossier__translation">Every point carries its Greek label, its source citation, and its evidence class—here and in its map tooltip. Keyboard: tab to a point and press Enter.</p>
             </div>
           </div>
-          <!-- Visual stepping for both axes, with the destination named under
-               each arrow. The 52px rail on the right keeps its own bare
-               location arrows: those are what stays reachable once the panel
-               is collapsed off-screen, where there is no room for a term. -->
-          <div class="dossier__steps" id="dossier-steps">
-            <div class="stepper">
-              <span class="stepper__axis">Ingredient</span>
-              <div class="stepper__pair">
-                <button type="button" class="stepper__btn" id="prev-ingredient">
-                  <span class="stepper__glyph" aria-hidden="true">&lsaquo;</span>
-                  <span class="stepper__term" id="prev-ingredient-term"></span>
-                </button>
-                <button type="button" class="stepper__btn stepper__btn--next" id="next-ingredient">
-                  <span class="stepper__glyph" aria-hidden="true">&rsaquo;</span>
-                  <span class="stepper__term" id="next-ingredient-term"></span>
-                </button>
-              </div>
-            </div>
-            <div class="stepper">
-              <span class="stepper__axis">Location</span>
-              <div class="stepper__pair">
-                <button type="button" class="stepper__btn" id="prev-location" disabled>
-                  <span class="stepper__glyph" aria-hidden="true">&lsaquo;</span>
-                  <span class="stepper__term" id="prev-location-term"></span>
-                </button>
-                <button type="button" class="stepper__btn stepper__btn--next" id="next-location" disabled>
-                  <span class="stepper__glyph" aria-hidden="true">&rsaquo;</span>
-                  <span class="stepper__term" id="next-location-term"></span>
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="dossier__nav" aria-label="Location navigation">
           <button type="button" id="dossier-collapse" aria-expanded="true" aria-label="Collapse the details panel">

@@ -2,7 +2,7 @@
     :root {
       /* Stamped so the shell can detect a stale cached stylesheet. Keep in
          step with ASSET_VERSION in index.html. */
-      --asset-version: "20260816-1";
+      --asset-version: "20260815-10";
 
       /* Grounds — the two registers: dark chart-room, light study */
       --sea-deep: #0E2229;
@@ -1580,79 +1580,4 @@
       border-color: var(--gold);
       background: rgba(201,162,39,.14);
       color: #F5EFDF;
-    }
-
-    /* ————— Dossier steppers —————
-       Back and forward for both axes the keyboard already drives: ←/→ through
-       an ingredient's places, ↑/↓ between ingredients. The arrows were only
-       ever on the panel edge, unlabelled, and only for places; these name the
-       destination under each arrow, so a reader can see where a step lands
-       before taking it. */
-    .dossier__steps {
-      display: grid;
-      gap: 10px;
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px solid var(--rule);
-    }
-    .stepper { display: grid; gap: 5px; }
-    .stepper__axis {
-      color: rgba(231, 220, 195, .6);
-      font-family: var(--font-mono);
-      font-size: .6rem;
-      font-weight: 600;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-    .stepper__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .stepper__btn {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr);
-      align-items: center;
-      gap: 8px;
-      min-height: 44px;
-      padding: 7px 12px;
-      border: 1px solid var(--rule);
-      border-radius: 10px;
-      background: rgba(231, 220, 195, .04);
-      color: var(--land);
-      font-family: var(--font-body);
-      font-size: .8rem;
-      text-align: left;
-      cursor: pointer;
-      transition: background var(--t-hover) ease, border-color var(--t-hover) ease;
-    }
-    /* Next reads right-to-left: term, then the arrow it travels towards. */
-    .stepper__btn--next {
-      grid-template-columns: minmax(0, 1fr) auto;
-      text-align: right;
-    }
-    .stepper__btn--next .stepper__glyph { order: 2; }
-    .stepper__glyph { font-size: 1.25rem; line-height: 1; opacity: .75; }
-    .stepper__term {
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .stepper__term:empty::after { content: "—"; opacity: .5; }
-    .stepper__btn:hover:not(:disabled) {
-      background: rgba(231, 220, 195, .1);
-      border-color: rgba(231, 220, 195, .3);
-    }
-    .stepper__btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
-    .stepper__btn:disabled { opacity: .34; cursor: default; }
-
-    /* A one-stop ingredient keeps its location row, dimmed with an em dash
-       either side: the axis is still there, and saying so is better than a
-       row that appears and vanishes as the reader moves between ingredients.
-       (The map never sets .dossier--single, which is the other viewer's.) */
-
-    @media (max-width: 720px) {
-      .dossier__steps { margin-top: 14px; }
-      .stepper__pair { gap: 6px; }
-      .stepper__btn { font-size: .76rem; padding: 6px 10px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .stepper__btn { transition: none; }
     }

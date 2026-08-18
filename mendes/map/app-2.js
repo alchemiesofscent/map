@@ -411,82 +411,20 @@
     const stripRail = document.getElementById("strip-rail");
     const stripDotKinds = { modern:"modern", theology:"theology" };
 
-    // ————— The labelled steppers —————
-    // The edge rail carries bare arrows, because it is what remains on screen
-    // once the panel collapses. These carry the destination's name under the
-    // arrow, and cover the ingredient axis the keyboard's ↑/↓ already drive
-    // but which had no visual control at all.
-    const stepButtons = {
-      prevIngredient: document.getElementById("prev-ingredient"),
-      nextIngredient: document.getElementById("next-ingredient"),
-      prevLocation: document.getElementById("prev-location"),
-      nextLocation: document.getElementById("next-location")
-    };
-    const stepTerms = {
-      prevIngredient: document.getElementById("prev-ingredient-term"),
-      nextIngredient: document.getElementById("next-ingredient-term"),
-      prevLocation: document.getElementById("prev-location-term"),
-      nextLocation: document.getElementById("next-location-term")
-    };
-
-    function setStep(key, term, label) {
-      const button = stepButtons[key];
-      if (!button) return;
-      const live = Boolean(term);
-      // Disabling the button under the pointer would strand focus on it.
-      if (!live && document.activeElement === button) {
-        const partner = stepButtons[key.indexOf("prev") === 0
-          ? key.replace("prev","next") : key.replace("next","prev")];
-        if (partner && !partner.disabled) partner.focus();
-      }
-      button.disabled = !live;
-      stepTerms[key].textContent = term || "";
-      button.setAttribute("aria-label", live ? label + ": " + term : "No " + label.toLowerCase());
-    }
-
     function updateStepNav(state) {
+      if (!prevStep || !nextStep) return;
       const havePrev = state.index > 0;
       const haveNext = state.index >= 0 && state.index < state.locations.length - 1;
+      // A button that disables under the finger strands focus; hand it across.
+      if (!havePrev && document.activeElement === prevStep && haveNext) nextStep.focus();
+      if (!haveNext && document.activeElement === nextStep && havePrev) prevStep.focus();
+      prevStep.disabled = !havePrev;
+      nextStep.disabled = !haveNext;
       const prevPlace = havePrev ? state.locations[state.index - 1].place : null;
       const nextPlace = haveNext ? state.locations[state.index + 1].place : null;
-
-      if (prevStep && nextStep) {
-        // A button that disables under the finger strands focus; hand it across.
-        if (!havePrev && document.activeElement === prevStep && haveNext) nextStep.focus();
-        if (!haveNext && document.activeElement === nextStep && havePrev) prevStep.focus();
-        prevStep.disabled = !havePrev;
-        nextStep.disabled = !haveNext;
-        prevStep.setAttribute("aria-label", prevPlace ? "Previous location: " + prevPlace : "No previous location");
-        nextStep.setAttribute("aria-label", nextPlace ? "Next location: " + nextPlace : "No next location");
-      }
-
-      setStep("prevLocation", prevPlace, "Previous location");
-      setStep("nextLocation", nextPlace, "Next location");
-      updateIngredientStep();
+      prevStep.setAttribute("aria-label", prevPlace ? "Previous location: " + prevPlace : "No previous location");
+      nextStep.setAttribute("aria-label", nextPlace ? "Next location: " + nextPlace : "No next location");
     }
-
-    // The ingredient list wraps, as ↑/↓ do, so both sides always name a
-    // destination — and with nothing selected they name the ends, which is
-    // how the keyboard enters the list too.
-    function updateIngredientStep() {
-      if (!stepButtons.prevIngredient) return;
-      const list = typeof visibleOrderedIngredients === "function" ? visibleOrderedIngredients() : [];
-      if (!list.length) {
-        setStep("prevIngredient", null, "Previous ingredient");
-        setStep("nextIngredient", null, "Next ingredient");
-        return;
-      }
-      const index = list.findIndex(function (ingredient) { return ingredient.id === selectedIngredientId; });
-      const prev = index < 0 ? list[list.length - 1] : list[(index - 1 + list.length) % list.length];
-      const next = index < 0 ? list[0] : list[(index + 1) % list.length];
-      setStep("prevIngredient", prev.gloss, "Previous ingredient");
-      setStep("nextIngredient", next.gloss, "Next ingredient");
-    }
-
-    if (stepButtons.prevLocation) stepButtons.prevLocation.addEventListener("click", function () { stepLocation(-1); });
-    if (stepButtons.nextLocation) stepButtons.nextLocation.addEventListener("click", function () { stepLocation(1); });
-    if (stepButtons.prevIngredient) stepButtons.prevIngredient.addEventListener("click", function () { stepIngredient(-1); });
-    if (stepButtons.nextIngredient) stepButtons.nextIngredient.addEventListener("click", function () { stepIngredient(1); });
 
     function renderStripRail(state) {
       if (!stripRail) return;
