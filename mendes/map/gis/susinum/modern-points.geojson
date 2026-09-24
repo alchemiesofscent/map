@@ -1,0 +1,278 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.0,
+     27.0
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "taxon": "Moringa peregrina",
+    "range_summary": "Red Sea basin and adjacent deserts: Eastern Desert and Sinai, Sudan, Eritrea, Horn of Africa, W and S Arabia, Dead Sea/Wadi Araba, east to S Iran.",
+    "label": "Sinai / Hijaz Red Sea coasts",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Moringa+peregrina",
+    "gbif": "https://www.gbif.org/species/search?q=Moringa+peregrina"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     45.5,
+     9.5
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "taxon": "Commiphora myrrha",
+    "range_summary": "Horn of Africa (Somalia/Somaliland, E Ethiopia, Djibouti, N Kenya) and S Arabia (Yemen, SW Saudi Arabia, Dhofar).",
+    "label": "Somaliland",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Commiphora+myrrha",
+    "gbif": "https://www.gbif.org/species/search?q=Commiphora+myrrha"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.8,
+     13.8
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "taxon": "Commiphora myrrha",
+    "range_summary": "Horn of Africa (Somalia/Somaliland, E Ethiopia, Djibouti, N Kenya) and S Arabia (Yemen, SW Saudi Arabia, Dhofar).",
+    "label": "Yemen highland margin",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Commiphora+myrrha",
+    "gbif": "https://www.gbif.org/species/search?q=Commiphora+myrrha"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     108.3,
+     22.8
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cassia",
+    "ingredient": "cassia / cassia quill or tube",
+    "taxon": "Cinnamomum cassia",
+    "range_summary": "Native to S China (Guangxi, Guangdong, Yunnan) and N Vietnam; cultivated across S China and mainland SE Asia.",
+    "label": "Guangxi, China",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Cinnamomum+cassia",
+    "gbif": "https://www.gbif.org/species/search?q=Cinnamomum+cassia"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     80.0,
+     6.9
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cinnamon",
+    "ingredient": "cinnamon",
+    "taxon": "Cinnamomum verum",
+    "range_summary": "Native to Sri Lanka (with SW Indian Western Ghats populations); cultivated pantropically.",
+    "label": "SW Sri Lanka",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Cinnamomum+verum",
+    "gbif": "https://www.gbif.org/species/search?q=Cinnamomum+verum"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     77.1,
+     9.8
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cardamom",
+    "ingredient": "cardamom",
+    "taxon": "Elettaria cardamomum",
+    "range_summary": "Western Ghats of SW India (the 'Cardamom Hills'); major modern cultivation also in Guatemala.",
+    "label": "Cardamom Hills, Kerala",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Elettaria+cardamomum",
+    "gbif": "https://www.gbif.org/species/search?q=Elettaria+cardamomum"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     76.0,
+     20.0
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "kalamos",
+    "ingredient": "aromatic reed",
+    "taxon": "Cymbopogon martinii or Acorus calamus",
+    "range_summary": "C. martinii: Indian subcontinent. A. calamus: S and E Asian wetlands, anciently spread west. Identification disputed.",
+    "label": "C. martinii — Deccan, India",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Cymbopogon+martinii+or+Acorus+calamus",
+    "gbif": "https://www.gbif.org/species/search?q=Cymbopogon+martinii+or+Acorus+calamus"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.0,
+     25.5
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "kalamos",
+    "ingredient": "aromatic reed",
+    "taxon": "Cymbopogon martinii or Acorus calamus",
+    "range_summary": "C. martinii: Indian subcontinent. A. calamus: S and E Asian wetlands, anciently spread west. Identification disputed.",
+    "label": "A. calamus — Gangetic plain",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Cymbopogon+martinii+or+Acorus+calamus",
+    "gbif": "https://www.gbif.org/species/search?q=Cymbopogon+martinii+or+Acorus+calamus"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.8,
+     37.95
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "honey",
+    "ingredient": "honey / Attic honey",
+    "taxon": "Attic honey — place-defined product (not a taxon)",
+    "range_summary": "Mount Hymettus and Attica, Greece; modern Greek thyme-honey production continues in the same landscape.",
+    "label": "Mount Hymettus, Attica",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Attic+honey+—+place-defined+product",
+    "gbif": "https://www.gbif.org/species/search?q=Attic+honey+—+place-defined+product"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.8,
+     40.3
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "saffron",
+    "ingredient": "saffron / Cilician saffron",
+    "taxon": "Crocus sativus",
+    "range_summary": "Sterile cultigen with no wild range; all occurrences are cultivation. Wild progenitor C. cartwrightianus is native to Attica and the Cyclades/Crete.",
+    "label": "Kozani, Greece (cultivation)",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Crocus+sativus",
+    "gbif": "https://www.gbif.org/species/search?q=Crocus+sativus"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.5,
+     35.5
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "saffron",
+    "ingredient": "saffron / Cilician saffron",
+    "taxon": "Crocus sativus",
+    "range_summary": "Sterile cultigen with no wild range; all occurrences are cultivation. Wild progenitor C. cartwrightianus is native to Attica and the Cyclades/Crete.",
+    "label": "Khorasan, Iran (cultivation)",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Crocus+sativus",
+    "gbif": "https://www.gbif.org/species/search?q=Crocus+sativus"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.8,
+     37.9
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "saffron",
+    "ingredient": "saffron / Cilician saffron",
+    "taxon": "Crocus sativus",
+    "range_summary": "Sterile cultigen with no wild range; all occurrences are cultivation. Wild progenitor C. cartwrightianus is native to Attica and the Cyclades/Crete.",
+    "label": "C. cartwrightianus — Attica",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Crocus+sativus",
+    "gbif": "https://www.gbif.org/species/search?q=Crocus+sativus"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.8,
+     34.0
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "lily",
+    "ingredient": "lily",
+    "taxon": "Lilium candidum",
+    "range_summary": "East Mediterranean native: Lebanon, Israel/Palestine, W Syria, S Turkey, with Balkan outliers; long naturalized more widely.",
+    "label": "Mount Lebanon",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Lilium+candidum",
+    "gbif": "https://www.gbif.org/species/search?q=Lilium+candidum"
+   }
+  }
+ ]
+}

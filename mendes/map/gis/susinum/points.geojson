@@ -1,0 +1,1069 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.5,
+     17.5
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-trog",
+    "place": "Troglodytic coast",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.100–102",
+    "note": "Common to the Troglodytes; the Troglodytic grade is described as the cheapest. This maps the ancient grade claim, not a modern species range.",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39435",
+    "pleiades_title": "Trogodytice",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39435"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.7,
+     25.7
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-thebaid",
+    "place": "Thebaid",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.100–101",
+    "note": "The Thebaid grade is black and abundant.",
+    "route": "nile",
+    "point_source": "project-plot",
+    "pleiades_id": "786131",
+    "pleiades_title": "Thebais",
+    "pleiades_uri": "https://pleiades.stoa.org/places/786131"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.3,
+     29
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-arabia",
+    "place": "Arabia between Judaea and Egypt",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.100–101",
+    "note": "Pliny locates an Arabian grade in the tract separating Judaea from Egypt and says the Arabian kind is called ‘Syrian’. [Pleiades match: Pliny's phrase; the Nabataean zone is the referent]",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "29677",
+    "pleiades_title": "Nabataea (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29677"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39,
+     10.3
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-ethiopia",
+    "place": "Ethiopia",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.101",
+    "note": "Some authorities preferred an Ethiopian black grade.",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39274",
+    "pleiades_title": "Aethiopia",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39274"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.7,
+     27.4
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-egypt",
+    "place": "Egypt",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.102",
+    "note": "The Egyptian grade is red, thick-shelled, and associated with swampy ground.",
+    "route": "nile",
+    "point_source": "project-plot",
+    "pleiades_id": "981503",
+    "pleiades_title": "Ancient Egypt (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/981503"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.44,
+     30.33
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-petra",
+    "place": "Petra",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.102",
+    "note": "The Petraean grade, black-shelled with a white kernel, is ranked far above the others.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "697725",
+    "pleiades_title": "Petra",
+    "pleiades_uri": "https://pleiades.stoa.org/places/697725"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.1,
+     16.2
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "greek": "σμύρνα",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "myrrh-trog",
+    "place": "Troglodytic coast",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.64; Pliny, Naturalis historia 12.69–70",
+    "note": "Both traditions rank a Troglodytic grade highly; Pliny makes it the first grade.",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39435",
+    "pleiades_title": "Trogodytice",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39435"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.2,
+     15.4
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "greek": "σμύρνα",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "myrrh-arabia",
+    "place": "South Arabia",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.64; Pliny, Naturalis historia 12.66, 12.69–70",
+    "note": "Arabian claim. Pliny’s grade names include Minaean, Atramitic, Gebbanitic, Ausaritis, Dianitis, Sambracena, Dusaritis, and Mesalum; their precise point locations are not invented here. [Pleiades match: generic 'South Arabia'; Saba is the nearest Pleiades region (cf. Minaei, 39386)]",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "39417",
+    "pleiades_title": "Saba",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39417"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     45,
+     22.6
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cassia",
+    "ingredient": "cassia / cassia quill or tube",
+    "greek": "κασσία / κασία / σύριγξ",
+    "membership": "substitution-register",
+    "membership_note": "No witness lists cassia in susinum; it enters only through Paul of Aegina's substitution rule (7.20.8, with Galen): cassia at double weight stands in for cinnamon.",
+    "claim_id": "cassia-arabia",
+    "place": "Arabia — ancient claim",
+    "evidence": "attested-ancient",
+    "cite": "Herodotus, Histories 3.110; Theophrastus, Historia plantarum 9.7.2; Dioscorides, De materia medica 1.13",
+    "note": "Herodotus, Theophrastus, and Dioscorides place cassia in Arabia or ‘aromatic-bearing Arabia’.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "29475",
+    "pleiades_title": "Arabia (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29475"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     40,
+     14.6
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cassia",
+    "ingredient": "cassia / cassia quill or tube",
+    "greek": "κασσία / κασία / σύριγξ",
+    "membership": "substitution-register",
+    "membership_note": "No witness lists cassia in susinum; it enters only through Paul of Aegina's substitution rule (7.20.8, with Galen): cassia at double weight stands in for cinnamon.",
+    "claim_id": "cassia-trog",
+    "place": "Ethiopia / Troglodytic cinnamon fields",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.86, 12.95",
+    "note": "Pliny rejects Arabia for cinnamon, places its fields among Ethiopian Troglodytes, and says cassia grows beside them. [Pleiades match: project point is a conventional Red Sea anchor; the Pleiades region sits at the Horn of Africa]",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39361",
+    "pleiades_title": "Kinnamomophoros Chora",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39361"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     79.6,
+     10.4
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cassia",
+    "ingredient": "cassia / cassia quill or tube",
+    "greek": "κασσία / κασία / σύριγξ",
+    "membership": "substitution-register",
+    "membership_note": "No witness lists cassia in susinum; it enters only through Paul of Aegina's substitution rule (7.20.8, with Galen): cassia at double weight stands in for cinnamon.",
+    "claim_id": "cassia-modern",
+    "place": "South / Southeast Asia — modern correction zone",
+    "evidence": "inference-modern",
+    "cite": "Gilboa & Namdar, Radiocarbon 57.2 (2015), 265–283; Kew, Plants of the World Online",
+    "note": "Modern scholarship moves the plausible source-zone much farther east. This is a correction register, not a forced identification of Greek κασσία with one modern species. [Pleiades match: modern botanical correction zone; no ancient place referent]",
+    "route": "",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     46,
+     21.5
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cinnamon",
+    "ingredient": "cinnamon",
+    "greek": "κινάμωμον",
+    "membership": "conjectural",
+    "membership_note": "In Dioscorides 1.52 the finishing-triad cinnamon is an editorial conjecture (the paradosis carries cardamom throughout); cinnamon is canonical only in Paul of Aegina's susinum, at 3 oz.",
+    "claim_id": "cinn-arabia",
+    "place": "Arabia — ancient claim",
+    "evidence": "attested-ancient",
+    "cite": "Herodotus, Histories 3.111; Theophrastus, Historia plantarum 9.7.2",
+    "note": "The Arabian claim is plotted as the ancient authors frame it, despite their own fabulous collection stories.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "29475",
+    "pleiades_title": "Arabia (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29475"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     40.7,
+     13.3
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cinnamon",
+    "ingredient": "cinnamon",
+    "greek": "κινάμωμον",
+    "membership": "conjectural",
+    "membership_note": "In Dioscorides 1.52 the finishing-triad cinnamon is an editorial conjecture (the paradosis carries cardamom throughout); cinnamon is canonical only in Paul of Aegina's susinum, at 3 oz.",
+    "claim_id": "cinn-trog",
+    "place": "Ethiopia among the Troglodytes",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.82–86",
+    "note": "Pliny explicitly says cinnamon is not Arabian and instead grows in Ethiopia among the Troglodytes.",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39435",
+    "pleiades_title": "Trogodytice",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39435"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     81,
+     8.2
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cinnamon",
+    "ingredient": "cinnamon",
+    "greek": "κινάμωμον",
+    "membership": "conjectural",
+    "membership_note": "In Dioscorides 1.52 the finishing-triad cinnamon is an editorial conjecture (the paradosis carries cardamom throughout); cinnamon is canonical only in Paul of Aegina's susinum, at 3 oz.",
+    "claim_id": "cinn-modern",
+    "place": "South / Southeast Asia — modern correction zone",
+    "evidence": "inference-modern",
+    "cite": "Gilboa & Namdar, Radiocarbon 57.2 (2015), 265–283; Kew, Plants of the World Online",
+    "note": "Archaeological review places ancient cinnamon’s source-zone in South/Southeast Asia; Kew gives Sri Lanka as the native range for true cinnamon. No Greek-to-species equation is imposed. [Pleiades match: modern botanical correction zone; no ancient place referent]",
+    "route": "",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.2,
+     37.4
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cardamom",
+    "ingredient": "cardamom",
+    "greek": "καρδάμωμον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "card-commagene",
+    "place": "Commagene",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.6",
+    "note": "Dioscorides ranks the Commagene product among the best.",
+    "route": "syria",
+    "point_source": "project-plot",
+    "pleiades_id": "658443",
+    "pleiades_title": "Commagene",
+    "pleiades_uri": "https://pleiades.stoa.org/places/658443"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.5,
+     40.2
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cardamom",
+    "ingredient": "cardamom",
+    "greek": "καρδάμωμον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "card-armenia",
+    "place": "Armenia",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.6",
+    "note": "Dioscorides ranks the Armenian product among the best.",
+    "route": "syria",
+    "point_source": "project-plot",
+    "pleiades_id": "874350",
+    "pleiades_title": "Armenia (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/874350"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     29.1,
+     41
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cardamom",
+    "ingredient": "cardamom",
+    "greek": "καρδάμωμον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "card-bosporus",
+    "place": "Bosporus — textual referent unresolved",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.6",
+    "note": "The source says Bosporus. The point is placed approximately at the Thracian Bosporus, where the strait meets the Sea of Marmara; the passage itself does not disambiguate the toponym. [Pleiades match: textual referent unresolved]",
+    "route": "med-sea",
+    "point_source": "project-plot",
+    "pleiades_id": "520977",
+    "pleiades_title": "Bosphorus",
+    "pleiades_uri": "https://pleiades.stoa.org/places/520977"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     73.3,
+     22.2
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cardamom",
+    "ingredient": "cardamom",
+    "greek": "καρδάμωμον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "card-india",
+    "place": "India",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.6; Theophrastus, Historia plantarum 9.7.2",
+    "note": "Dioscorides says it also grows in India; Theophrastus reports India as one of two competing origins.",
+    "route": "india",
+    "point_source": "project-plot",
+    "pleiades_id": "50004",
+    "pleiades_title": "India",
+    "pleiades_uri": "https://pleiades.stoa.org/places/50004"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     49.3,
+     34.2
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cardamom",
+    "ingredient": "cardamom",
+    "greek": "καρδάμωμον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "card-media",
+    "place": "Media",
+    "evidence": "attested-ancient",
+    "cite": "Theophrastus, Historia plantarum 9.7.2; Pliny, Naturalis historia 12.50",
+    "note": "Media is one side of Theophrastus’ reported disagreement and also appears in Pliny.",
+    "route": "syria",
+    "point_source": "project-plot",
+    "pleiades_id": "903080",
+    "pleiades_title": "Media (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/903080"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     47.3,
+     24.5
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "cardamom",
+    "ingredient": "cardamom",
+    "greek": "καρδάμωμον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "card-arabia",
+    "place": "Arabia",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.6; Pliny, Naturalis historia 12.50",
+    "note": "Dioscorides says it also grows in Arabia; Pliny says it is harvested there.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "29475",
+    "pleiades_title": "Arabia (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29475"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     75,
+     20.2
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "kalamos",
+    "ingredient": "aromatic reed",
+    "greek": "κάλαμος ἀρωματικός",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "reed-india",
+    "place": "India",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.18; Pliny, Naturalis historia 12.104",
+    "note": "Dioscorides places it in India; Pliny says it is common to India, Arabia, and Syria.",
+    "route": "india",
+    "point_source": "project-plot",
+    "pleiades_id": "50004",
+    "pleiades_title": "India",
+    "pleiades_uri": "https://pleiades.stoa.org/places/50004"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     49,
+     22.2
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "kalamos",
+    "ingredient": "aromatic reed",
+    "greek": "κάλαμος ἀρωματικός",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "reed-arabia",
+    "place": "Arabia",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.104",
+    "note": "Pliny names Arabia among the regions of aromatic calamus.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "29475",
+    "pleiades_title": "Arabia (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29475"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.1,
+     34
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "kalamos",
+    "ingredient": "aromatic reed",
+    "greek": "κάλαμος ἀρωματικός",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "reed-syria",
+    "place": "Syria / Lebanon valley",
+    "evidence": "attested-ancient",
+    "cite": "Theophrastus, Historia plantarum 9.7.1; Pliny, Naturalis historia 12.104–106",
+    "note": "The Lebanon-valley claim is explicit; Pliny says Syrian calamus surpasses all.",
+    "route": "syria",
+    "point_source": "project-plot",
+    "pleiades_id": "668288",
+    "pleiades_title": "Koile Syria/Massyas",
+    "pleiades_uri": "https://pleiades.stoa.org/places/668288"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.8,
+     30.45
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "honey",
+    "ingredient": "honey / Attic honey",
+    "greek": "μέλι / μέλι Ἀττικόν",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "honey-local",
+    "place": "Susinum workshop context — source unstated",
+    "evidence": "inference-modern",
+    "cite": "Dioscorides, De materia medica 1.52.1–4",
+    "note": "Honey coats hands and vessels in the Susinum procedure, but no geographic origin is stated. The point marks local handling only. [Pleiades match: workshop context; conventional plotting point]",
+    "route": "",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27,
+     36.6
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "wine",
+    "ingredient": "wine / fragrant wine",
+    "greek": "οἶνος / οἶνος εὐώδης",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "wine-aegean",
+    "place": "Aegean supply — working inference",
+    "evidence": "inference-modern",
+    "cite": "Dioscorides, De materia medica 1.52, 1.59; Paul of Aegina, Epitome 7.20.16",
+    "note": "The recipes specify wine or fragrant wine but no origin. An Aegean supply is a working reconstruction only, routed on the conventional Mediterranean lane. [Pleiades match: working inference; conventional plotting point]",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     34,
+     36.45
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "saffron",
+    "ingredient": "saffron / Cilician saffron",
+    "greek": "κρόκος / κρόκος Κιλίκιος",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "saff-corycus",
+    "place": "Corycus in Cilicia",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.26; Paul of Aegina, Epitome 7.20.8",
+    "note": "The Corycian grade is ranked best; Paul explicitly specifies Cilician saffron.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "648612",
+    "pleiades_title": "Corycus",
+    "pleiades_uri": "https://pleiades.stoa.org/places/648612"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.2,
+     36.2
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "saffron",
+    "ingredient": "saffron / Cilician saffron",
+    "greek": "κρόκος / κρόκος Κιλίκιος",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "saff-lycia",
+    "place": "Corycus near Lycia and Olympus",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.26",
+    "note": "A second Corycian grade associated with Lycia and Olympus in the transmitted regional ranking.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "638939",
+    "pleiades_title": "Korykos",
+    "pleiades_uri": "https://pleiades.stoa.org/places/638939"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     26.9,
+     38.8
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "saffron",
+    "ingredient": "saffron / Cilician saffron",
+    "greek": "κρόκος / κρόκος Κιλίκιος",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "saff-aegae",
+    "place": "Aegae in Aeolis",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.26",
+    "note": "A named regional grade in Dioscorides’ ranking.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "550404",
+    "pleiades_title": "Aegae",
+    "pleiades_uri": "https://pleiades.stoa.org/places/550404"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.86,
+     32.82
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "saffron",
+    "ingredient": "saffron / Cilician saffron",
+    "greek": "κρόκος / κρόκος Κιλίκιος",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "saff-cyrene",
+    "place": "Cyrene",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.26",
+    "note": "The Cyrenaic grade is named but ranked weaker.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "373778",
+    "pleiades_title": "Cyrene",
+    "pleiades_uri": "https://pleiades.stoa.org/places/373778"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14,
+     37.5
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "saffron",
+    "ingredient": "saffron / Cilician saffron",
+    "greek": "κρόκος / κρόκος Κιλίκιος",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "saff-sicily",
+    "place": "Sicily",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.26",
+    "note": "The Sicilian grade is named but ranked weaker.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "462492",
+    "pleiades_title": "Sicilia (island)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/462492"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.2,
+     33.25
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "lily",
+    "ingredient": "lily",
+    "greek": "κρίνον / λείριον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "lily-phoenicia",
+    "place": "Phoenicia — finished Susinum",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.52.5",
+    "note": "Dioscorides says Susinum made in Phoenicia is regarded as best. This is product provenance, not a claim about where lilies grew.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "678334",
+    "pleiades_title": "Phoenice (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/678334"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30,
+     28.1
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "lily",
+    "ingredient": "lily",
+    "greek": "κρίνον / λείριον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "lily-egypt",
+    "place": "Egypt — finished Susinum",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.52.5",
+    "note": "Dioscorides says Susinum made in Egypt is regarded as best. This is product provenance, not a flower-growth claim.",
+    "route": "nile",
+    "point_source": "project-plot",
+    "pleiades_id": "981503",
+    "pleiades_title": "Ancient Egypt (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/981503"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.2,
+     30.9
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "lily",
+    "ingredient": "lily",
+    "greek": "κρίνον / λείριον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "lily-local",
+    "place": "Local flower supply — working inference",
+    "evidence": "inference-modern",
+    "cite": "Dioscorides, De materia medica 1.52.1–5",
+    "note": "Fresh lilies are repeatedly charged into the oil, but the recipe gives no origin. A local workshop supply is plausible and deliberately dashed. [Pleiades match: working inference; conventional plotting point]",
+    "route": "",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.35,
+     30.25
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "oil",
+    "ingredient": "oil / another oil",
+    "greek": "ἔλαιον / ἄλλο ἔλαιον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "oil-local",
+    "place": "Workshop oil — source unstated",
+    "evidence": "inference-modern",
+    "cite": "Dioscorides, De materia medica 1.52.1–5; Paul of Aegina, Epitome 7.20.8",
+    "note": "The compound recipe says oil; the simple recipe allows balanos oil or another oil. No geographic origin is stated for the generic oil. [Pleiades match: workshop context; conventional plotting point]",
+    "route": "",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.65,
+     30.1
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "water",
+    "ingredient": "rainwater / water",
+    "greek": "ὕδωρ ὄμβριον / ὕδωρ",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "water-local",
+    "place": "Workshop water — source unstated",
+    "evidence": "inference-modern",
+    "cite": "Dioscorides, De materia medica 1.52.1, 1.52.4",
+    "note": "Rainwater is specified for soaking cardamom; geography is not. No route is drawn. [Pleiades match: workshop context; conventional plotting point]",
+    "route": "",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.95,
+     30
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "salt",
+    "ingredient": "fine salt",
+    "greek": "ἅλες λεπτοί",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "salt-local",
+    "place": "Workshop salt — source unstated",
+    "evidence": "inference-modern",
+    "cite": "Dioscorides, De materia medica 1.52.2–3",
+    "note": "Fine salt is sprinkled during handling; the recipe gives no origin. No route is drawn. [Pleiades match: workshop context; conventional plotting point]",
+    "route": "",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.25,
+     30.15
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "gum",
+    "ingredient": "gum",
+    "greek": "κόμμι",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "gum-local",
+    "place": "Vessel-dressing gum — source unstated",
+    "evidence": "inference-modern",
+    "cite": "Dioscorides, De materia medica 1.52.4",
+    "note": "Gum appears in the dressing of dry vessels, not as a separately provenanced botanical ingredient. No route is drawn. [Pleiades match: workshop context; conventional plotting point]",
+    "route": "",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.39,
+     36.77
+    ]
+   },
+   "properties": {
+    "perfume": "susinum",
+    "ingredient_id": "karpesion",
+    "ingredient": "carpesium (conventional name; no taxon imposed)",
+    "greek": "καρπήσιον",
+    "membership": "substitution-register",
+    "membership_note": "Third permitted substitute for cinnamon in Paul's susinum (7.20.8); no witness lists it as an ingredient.",
+    "claim_id": "karp-side",
+    "place": "Side in Pamphylia",
+    "evidence": "attested-ancient",
+    "cite": "Galen, De antidotis 1.14 (Kühn XIV 71–72)",
+    "note": "Galen says καρπήσιον is most abundant and cheapest at Side in Pamphylia; Paul transmits it as a Susinum substitute.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "639105",
+    "pleiades_title": "Side",
+    "pleiades_uri": "https://pleiades.stoa.org/places/639105"
+   }
+  }
+ ]
+}

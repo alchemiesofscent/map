@@ -1,0 +1,215 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.0,
+     27.0
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "taxon": "Moringa peregrina",
+    "range_summary": "Red Sea basin and adjacent deserts: Eastern Desert and Sinai, Sudan, Eritrea, Horn of Africa, W and S Arabia, Dead Sea/Wadi Araba, east to S Iran.",
+    "label": "Sinai / Hijaz Red Sea coasts",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Moringa+peregrina",
+    "gbif": "https://www.gbif.org/species/search?q=Moringa+peregrina"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     22.0,
+     37.0
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "omphacine",
+    "ingredient": "omphacine oil",
+    "taxon": "Olea europaea",
+    "range_summary": "Native and anciently cultivated across the Mediterranean basin; Ptolemaic-period pressing attested in the Fayum.",
+    "label": "Mediterranean basin (representative)",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Olea+europaea",
+    "gbif": "https://www.gbif.org/species/search?q=Olea+europaea"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     40.0,
+     22.0
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "schoinos",
+    "ingredient": "aromatic rush / rush-flower",
+    "taxon": "Cymbopogon schoenanthus",
+    "range_summary": "Saharo-Arabian dry belt: North Africa and the Sahara through Arabia to NW India.",
+    "label": "Hijaz, W Arabia",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Cymbopogon+schoenanthus",
+    "gbif": "https://www.gbif.org/species/search?q=Cymbopogon+schoenanthus"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     45.5,
+     9.5
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "taxon": "Commiphora myrrha",
+    "range_summary": "Horn of Africa (Somalia/Somaliland, E Ethiopia, Djibouti, N Kenya) and S Arabia (Yemen, SW Saudi Arabia, Dhofar).",
+    "label": "Somaliland",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Commiphora+myrrha",
+    "gbif": "https://www.gbif.org/species/search?q=Commiphora+myrrha"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.8,
+     13.8
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "taxon": "Commiphora myrrha",
+    "range_summary": "Horn of Africa (Somalia/Somaliland, E Ethiopia, Djibouti, N Kenya) and S Arabia (Yemen, SW Saudi Arabia, Dhofar).",
+    "label": "Yemen highland margin",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Commiphora+myrrha",
+    "gbif": "https://www.gbif.org/species/search?q=Commiphora+myrrha"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.5,
+     13.5
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "balsam",
+    "ingredient": "balsam fruit / balsam seed",
+    "taxon": "unknown — Commiphora gileadensis?",
+    "range_summary": "If the identification holds: S Arabian Peninsula and parts of the Horn; anciently estate-grown at Jericho and En Gedi. Identification open.",
+    "label": "SW Arabia",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=unknown+—+Commiphora+gileadensis?",
+    "gbif": "https://www.gbif.org/species/search?q=unknown+—+Commiphora+gileadensis?"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.0,
+     28.5
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "nardos",
+    "ingredient": "spikenard",
+    "taxon": "Nardostachys jatamansi",
+    "range_summary": "Alpine Himalaya c. 3000–5000 m: Uttarakhand–Sikkim (India), Nepal, Bhutan, SE Xizang and NW Yunnan (China). CITES App. II.",
+    "label": "Central Nepal Himalaya",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Nardostachys+jatamansi",
+    "gbif": "https://www.gbif.org/species/search?q=Nardostachys+jatamansi"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     88.5,
+     27.5
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "malabathron",
+    "ingredient": "malabathron",
+    "taxon": "Cinnamomum tamala",
+    "range_summary": "Himalayan foothills and NE India: N India, Nepal, Bhutan, Myanmar, SW China (tejpat leaf).",
+    "label": "Eastern Himalayan foothills",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Cinnamomum+tamala",
+    "gbif": "https://www.gbif.org/species/search?q=Cinnamomum+tamala"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     76.0,
+     33.5
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "kostos",
+    "ingredient": "kostos",
+    "taxon": "Saussurea costus (accepted: Dolomiaea costus)",
+    "range_summary": "Western Himalaya: Kashmir, Himachal Pradesh, Uttarakhand; cultivated in India and China. CITES App. I.",
+    "label": "Kashmir Himalaya",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Saussurea+costus",
+    "gbif": "https://www.gbif.org/species/search?q=Saussurea+costus"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     88.4,
+     27.3
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "amomon",
+    "ingredient": "amomon",
+    "taxon": "Amomum subulatum",
+    "range_summary": "Eastern Himalaya: Nepal, Sikkim/Darjeeling, Bhutan (large/black cardamom).",
+    "label": "Sikkim",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Amomum+subulatum",
+    "gbif": "https://www.gbif.org/species/search?q=Amomum+subulatum"
+   }
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.0,
+     27.0
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "taxon": "Moringa peregrina",
+    "range_summary": "Red Sea basin and adjacent deserts: Eastern Desert and Sinai, Sudan, Eritrea, Horn of Africa, W and S Arabia, Dead Sea/Wadi Araba, east to S Iran.",
+    "label": "Sinai / Hijaz Red Sea coasts",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Moringa+peregrina",
+    "gbif": "https://www.gbif.org/species/search?q=Moringa+peregrina"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     45.5,
+     9.5
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "taxon": "Commiphora myrrha",
+    "range_summary": "Horn of Africa (Somalia/Somaliland, E Ethiopia, Djibouti, N Kenya) and S Arabia (Yemen, SW Saudi Arabia, Dhofar).",
+    "label": "Somaliland",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Commiphora+myrrha",
+    "gbif": "https://www.gbif.org/species/search?q=Commiphora+myrrha"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.8,
+     13.8
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "taxon": "Commiphora myrrha",
+    "range_summary": "Horn of Africa (Somalia/Somaliland, E Ethiopia, Djibouti, N Kenya) and S Arabia (Yemen, SW Saudi Arabia, Dhofar).",
+    "label": "Yemen highland margin",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Commiphora+myrrha",
+    "gbif": "https://www.gbif.org/species/search?q=Commiphora+myrrha"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     108.3,
+     22.8
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "cassia",
+    "ingredient": "cassia / cassia quill or tube",
+    "taxon": "Cinnamomum cassia",
+    "range_summary": "Native to S China (Guangxi, Guangdong, Yunnan) and N Vietnam; cultivated across S China and mainland SE Asia.",
+    "label": "Guangxi, China",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Cinnamomum+cassia",
+    "gbif": "https://www.gbif.org/species/search?q=Cinnamomum+cassia"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     80.0,
+     6.9
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "cinnamon",
+    "ingredient": "cinnamon",
+    "taxon": "Cinnamomum verum",
+    "range_summary": "Native to Sri Lanka (with SW Indian Western Ghats populations); cultivated pantropically.",
+    "label": "SW Sri Lanka",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Cinnamomum+verum",
+    "gbif": "https://www.gbif.org/species/search?q=Cinnamomum+verum"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.0,
+     38.0
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "resin",
+    "ingredient": "resin / terebinth resin",
+    "taxon": "Pistacia terebinthus",
+    "range_summary": "Mediterranean basin, Iberia to the Aegean and Anatolia; Levantine terebinth resin also from P. atlantica / P. palaestina.",
+    "label": "Aegean / W Anatolia",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Pistacia+terebinthus",
+    "gbif": "https://www.gbif.org/species/search?q=Pistacia+terebinthus"
+   }
+  }
+ ]
+}

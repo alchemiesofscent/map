@@ -24,6 +24,9 @@ ingest:
 geojson:
 	python3 scripts/export_geojson.py
 
+perfume-gis:
+	python3 scripts/export_perfume_gis.py
+
 pleiades:
 	python3 scripts/refresh_pleiades.py
 
@@ -36,4 +39,4 @@ serve:
 serve-scrolly:
 	python3 -m http.server 8000
 
-.PHONY: check ingest geojson pleiades mymaps serve serve-scrolly
+.PHONY: check ingest geojson perfume-gis pleiades mymaps serve serve-scrolly

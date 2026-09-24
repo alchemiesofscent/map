@@ -1,0 +1,677 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.5,
+     17.5
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "Role in nardinon: base oil (Dsc 1.62: mixed for the most part with balanos oil). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "bal-trog",
+    "place": "Troglodytic coast",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.100–102",
+    "note": "Common to the Troglodytes; the Troglodytic grade is described as the cheapest. This maps the ancient grade claim, not a modern species range.",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39435",
+    "pleiades_title": "Trogodytice",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39435"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.7,
+     25.7
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "Role in nardinon: base oil (Dsc 1.62: mixed for the most part with balanos oil). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "bal-thebaid",
+    "place": "Thebaid",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.100–101",
+    "note": "The Thebaid grade is black and abundant.",
+    "route": "nile",
+    "point_source": "project-plot",
+    "pleiades_id": "786131",
+    "pleiades_title": "Thebais",
+    "pleiades_uri": "https://pleiades.stoa.org/places/786131"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.3,
+     29
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "Role in nardinon: base oil (Dsc 1.62: mixed for the most part with balanos oil). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "bal-arabia",
+    "place": "Arabia between Judaea and Egypt",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.100–101",
+    "note": "Pliny locates an Arabian grade in the tract separating Judaea from Egypt and says the Arabian kind is called ‘Syrian’. [Pleiades match: Pliny's phrase; the Nabataean zone is the referent]",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "29677",
+    "pleiades_title": "Nabataea (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29677"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39,
+     10.3
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "Role in nardinon: base oil (Dsc 1.62: mixed for the most part with balanos oil). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "bal-ethiopia",
+    "place": "Ethiopia",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.101",
+    "note": "Some authorities preferred an Ethiopian black grade.",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39274",
+    "pleiades_title": "Aethiopia",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39274"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.7,
+     27.4
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "Role in nardinon: base oil (Dsc 1.62: mixed for the most part with balanos oil). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "bal-egypt",
+    "place": "Egypt",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.102",
+    "note": "The Egyptian grade is red, thick-shelled, and associated with swampy ground.",
+    "route": "nile",
+    "point_source": "project-plot",
+    "pleiades_id": "981503",
+    "pleiades_title": "Ancient Egypt (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/981503"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.44,
+     30.33
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "Role in nardinon: base oil (Dsc 1.62: mixed for the most part with balanos oil). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "bal-petra",
+    "place": "Petra",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.102",
+    "note": "The Petraean grade, black-shelled with a white kernel, is ranked far above the others.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "697725",
+    "pleiades_title": "Petra",
+    "pleiades_uri": "https://pleiades.stoa.org/places/697725"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31,
+     29.9
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "omphacine",
+    "ingredient": "omphacine oil",
+    "greek": "ἔλαιον ὀμφάκινον",
+    "membership": "member",
+    "membership_note": "Role in nardinon: alternative base oil (Dsc 1.62). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "omph-local",
+    "place": "Egyptian workshop context — source unstated",
+    "evidence": "inference-modern",
+    "cite": "Dioscorides, De materia medica 1.59; Paul of Aegina, Epitome 7.20.16",
+    "note": "The recipe is Egyptian; neither checked passage states that the omphacine oil itself was pressed in or originated from Egypt. [Pleiades match: workshop context; conventional plotting point]",
+    "route": "",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.1,
+     30.7
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "schoinos",
+    "ingredient": "aromatic rush / rush-flower",
+    "greek": "σχοῖνος / σχοίνου ἄνθος",
+    "membership": "member",
+    "membership_note": "Role in nardinon: styptic thickening of the oil (Dsc 1.62). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "rush-nabataea",
+    "place": "Nabataea",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.17",
+    "note": "The Nabataean rush is ranked best.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "29677",
+    "pleiades_title": "Nabataea (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29677"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     42.3,
+     25.2
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "schoinos",
+    "ingredient": "aromatic rush / rush-flower",
+    "greek": "σχοῖνος / σχοίνου ἄνθος",
+    "membership": "member",
+    "membership_note": "Role in nardinon: styptic thickening of the oil (Dsc 1.62). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "rush-arabia",
+    "place": "Arabia",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.17",
+    "note": "The Arabian rush is ranked second.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "29475",
+    "pleiades_title": "Arabia (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29475"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.7,
+     31.2
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "schoinos",
+    "ingredient": "aromatic rush / rush-flower",
+    "greek": "σχοῖνος / σχοίνου ἄνθος",
+    "membership": "member",
+    "membership_note": "Role in nardinon: styptic thickening of the oil (Dsc 1.62). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "rush-libya",
+    "place": "Libya",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.17",
+    "note": "The Libyan rush is named but dismissed as useless.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "716588",
+    "pleiades_title": "Libya",
+    "pleiades_uri": "https://pleiades.stoa.org/places/716588"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.8,
+     33.7
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "schoinos",
+    "ingredient": "aromatic rush / rush-flower",
+    "greek": "σχοῖνος / σχοίνου ἄνθος",
+    "membership": "member",
+    "membership_note": "Role in nardinon: styptic thickening of the oil (Dsc 1.62). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "rush-lebanon",
+    "place": "Valley beyond Lebanon",
+    "evidence": "attested-ancient",
+    "cite": "Theophrastus, Historia plantarum 9.7.1; Pliny, Naturalis historia 12.104–106",
+    "note": "Aromatic rush and reed are said to grow in a valley beyond Lebanon beside a seasonal lake.",
+    "route": "syria",
+    "point_source": "project-plot",
+    "pleiades_id": "668288",
+    "pleiades_title": "Koile Syria/Massyas",
+    "pleiades_uri": "https://pleiades.stoa.org/places/668288"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.7,
+     40.8
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "schoinos",
+    "ingredient": "aromatic rush / rush-flower",
+    "greek": "σχοῖνος / σχοίνου ἄνθος",
+    "membership": "member",
+    "membership_note": "Role in nardinon: styptic thickening of the oil (Dsc 1.62). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "rush-campania",
+    "place": "Campania — reported",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.106",
+    "note": "Pliny reports that the fragrant rush is also found in Campania.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "432742",
+    "pleiades_title": "Campania",
+    "pleiades_uri": "https://pleiades.stoa.org/places/432742"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.1,
+     16.2
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "greek": "σμύρνα",
+    "membership": "member",
+    "membership_note": "Role in nardinon: fragrance (Dsc 1.62). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "myrrh-trog",
+    "place": "Troglodytic coast",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.64; Pliny, Naturalis historia 12.69–70",
+    "note": "Both traditions rank a Troglodytic grade highly; Pliny makes it the first grade.",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39435",
+    "pleiades_title": "Trogodytice",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39435"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.2,
+     15.4
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "greek": "σμύρνα",
+    "membership": "member",
+    "membership_note": "Role in nardinon: fragrance (Dsc 1.62). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "myrrh-arabia",
+    "place": "South Arabia",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.64; Pliny, Naturalis historia 12.66, 12.69–70",
+    "note": "Arabian claim. Pliny’s grade names include Minaean, Atramitic, Gebbanitic, Ausaritis, Dianitis, Sambracena, Dusaritis, and Mesalum; their precise point locations are not invented here. [Pleiades match: generic 'South Arabia'; Saba is the nearest Pleiades region (cf. Minaei, 39386)]",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "39417",
+    "pleiades_title": "Saba",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39417"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35,
+     31.3
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "balsam",
+    "ingredient": "balsam fruit / balsam seed",
+    "greek": "καρπὸς βαλσάμου / καρποβάλσαμον",
+    "membership": "member",
+    "membership_note": "Role in nardinon: fragrance (Dsc 1.62). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "balsam-judaea",
+    "place": "Judaea",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.111–123",
+    "note": "Pliny says balsam was granted to Judaea alone and describes two royal gardens. He does not name En Gedi in this passage.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "687934",
+    "pleiades_title": "Iudaea (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/687934"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.44,
+     31.87
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "balsam",
+    "ingredient": "balsam fruit / balsam seed",
+    "greek": "καρπὸς βαλσάμου / καρποβάλσαμον",
+    "membership": "member",
+    "membership_note": "Role in nardinon: fragrance (Dsc 1.62). Ingredient-level claim reused from the project dataset.",
+    "claim_id": "balsam-jericho",
+    "place": "Jericho",
+    "evidence": "attested-ancient",
+    "cite": "Josephus, Bellum Judaicum 4.469",
+    "note": "Josephus names Jericho as a producer of opobalsam, alongside henna and myrobalanos.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "687917",
+    "pleiades_title": "Jericho",
+    "pleiades_uri": "https://pleiades.stoa.org/places/687917"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     79.5333,
+     20.6367
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "nardos",
+    "ingredient": "spikenard",
+    "greek": "νάρδος",
+    "membership": "member",
+    "membership_note": "Composition per Dioscorides 1.62; simple not yet in the project dataset — compiled for this export.",
+    "claim_id": "nardinon-nardos-50004",
+    "place": "India",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.7 (Indian nard; the 'Syrian' kind is named for the Syria-facing slope of the same mountain); Pliny, Naturalis historia 12.42–46",
+    "note": "",
+    "route": "india",
+    "point_source": "pleiades-representative",
+    "pleiades_id": "50004",
+    "pleiades_title": "India",
+    "pleiades_uri": "https://pleiades.stoa.org/places/50004"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     83.7799,
+     25.9323
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "nardos",
+    "ingredient": "spikenard",
+    "greek": "νάρδος",
+    "membership": "member",
+    "membership_note": "Composition per Dioscorides 1.62; simple not yet in the project dataset — compiled for this export.",
+    "claim_id": "nardinon-nardos-59822",
+    "place": "Ganges",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.7.2 (Gangitis nard, from the river Ganges flowing past the mountain)",
+    "note": "",
+    "route": "india",
+    "point_source": "pleiades-representative",
+    "pleiades_id": "59822",
+    "pleiades_title": "Ganges (river)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/59822"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     79.5333,
+     20.6367
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "malabathron",
+    "ingredient": "malabathron",
+    "greek": "μαλάβαθρον",
+    "membership": "member",
+    "membership_note": "Composition per Dioscorides 1.62; simple not yet in the project dataset — compiled for this export.",
+    "claim_id": "nardinon-malabathron-50004",
+    "place": "India",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.12 (grows in the Indian marshes, a leaf floating on the water); cf. Pliny, Naturalis historia 12.129",
+    "note": "",
+    "route": "india",
+    "point_source": "pleiades-representative",
+    "pleiades_id": "50004",
+    "pleiades_title": "India",
+    "pleiades_uri": "https://pleiades.stoa.org/places/50004"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     46.5515,
+     24.149
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "kostos",
+    "ingredient": "kostos",
+    "greek": "κόστος",
+    "membership": "member",
+    "membership_note": "Composition per Dioscorides 1.62; simple not yet in the project dataset — compiled for this export.",
+    "claim_id": "nardinon-kostos-29475",
+    "place": "Arabia",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.16 (the Arabian, white and light, is best)",
+    "note": "",
+    "route": "",
+    "point_source": "pleiades-representative",
+    "pleiades_id": "29475",
+    "pleiades_title": "Arabia (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29475"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.5448,
+     25.0056
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "kostos",
+    "ingredient": "kostos",
+    "greek": "κόστος",
+    "membership": "member",
+    "membership_note": "Composition per Dioscorides 1.62; simple not yet in the project dataset — compiled for this export.",
+    "claim_id": "nardinon-kostos-59988",
+    "place": "Patalene (Indus delta)",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.41 (the island of Patale at the mouth of the Indus)",
+    "note": "",
+    "route": "india",
+    "point_source": "pleiades-representative",
+    "pleiades_id": "59988",
+    "pleiades_title": "Patalene",
+    "pleiades_uri": "https://pleiades.stoa.org/places/59988"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     42.167,
+     38.7401
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "amomon",
+    "ingredient": "amomon",
+    "greek": "ἄμωμον",
+    "membership": "member",
+    "membership_note": "Composition per Dioscorides 1.62; simple not yet in the project dataset — compiled for this export.",
+    "claim_id": "nardinon-amomon-874350",
+    "place": "Armenia",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.15 (the Armenian, golden in colour, is best)",
+    "note": "",
+    "route": "",
+    "point_source": "pleiades-representative",
+    "pleiades_id": "874350",
+    "pleiades_title": "Armenia (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/874350"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     48.9193,
+     35.0482
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "amomon",
+    "ingredient": "amomon",
+    "greek": "ἄμωμον",
+    "membership": "member",
+    "membership_note": "Composition per Dioscorides 1.62; simple not yet in the project dataset — compiled for this export.",
+    "claim_id": "nardinon-amomon-903080",
+    "place": "Media",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.15 (the Median, from plains and watery ground, is weaker)",
+    "note": "",
+    "route": "",
+    "point_source": "pleiades-representative",
+    "pleiades_id": "903080",
+    "pleiades_title": "Media (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/903080"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     37.9234,
+     40.2214
+    ]
+   },
+   "properties": {
+    "perfume": "nardinon",
+    "ingredient_id": "amomon",
+    "ingredient": "amomon",
+    "greek": "ἄμωμον",
+    "membership": "member",
+    "membership_note": "Composition per Dioscorides 1.62; simple not yet in the project dataset — compiled for this export.",
+    "claim_id": "nardinon-amomon-857287",
+    "place": "Pontus",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.15 (the Pontic, yellowish and grape-cluster-like)",
+    "note": "",
+    "route": "",
+    "point_source": "pleiades-representative",
+    "pleiades_id": "857287",
+    "pleiades_title": "Pontus",
+    "pleiades_uri": "https://pleiades.stoa.org/places/857287"
+   }
+  }
+ ]
+}

@@ -1,0 +1,261 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.5,
+      19.0
+     ],
+     [
+      61.0,
+      15.5
+     ],
+     [
+      49.2,
+      12.7
+     ],
+     [
+      43.3,
+      12.6
+     ],
+     [
+      39.5,
+      17.0
+     ],
+     [
+      35.5,
+      23.9
+     ]
+    ]
+   },
+   "properties": {
+    "id": "india-sea",
+    "mode": "sea",
+    "label": "India → Red Sea",
+    "geometry_status": "conventional corridor drawn for map legibility; not a researched route geometry"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      43.3,
+      12.6
+     ],
+     [
+      40.0,
+      16.0
+     ],
+     [
+      37.7,
+      20.0
+     ],
+     [
+      35.5,
+      23.9
+     ],
+     [
+      33.6,
+      27.2
+     ]
+    ]
+   },
+   "properties": {
+    "id": "red-sea",
+    "mode": "sea",
+    "label": "Red Sea ports",
+    "geometry_status": "conventional corridor drawn for map legibility; not a researched route geometry"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      35.5,
+      23.9
+     ],
+     [
+      34.2,
+      25.0
+     ],
+     [
+      32.8,
+      26.0
+     ]
+    ]
+   },
+   "properties": {
+    "id": "berenice-coptos",
+    "mode": "land",
+    "label": "Berenice → Coptos",
+    "geometry_status": "conventional corridor drawn for map legibility; not a researched route geometry"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      33.6,
+      27.2
+     ],
+     [
+      32.8,
+      26.0
+     ]
+    ]
+   },
+   "properties": {
+    "id": "myos-coptos",
+    "mode": "land",
+    "label": "Myos Hormos → Coptos",
+    "geometry_status": "conventional corridor drawn for map legibility; not a researched route geometry"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      32.8,
+      26.0
+     ],
+     [
+      31.7,
+      28.4
+     ],
+     [
+      31.2,
+      30.1
+     ],
+     [
+      31.5,
+      30.95
+     ]
+    ]
+   },
+   "properties": {
+    "id": "nile",
+    "mode": "river",
+    "label": "Nile (conventional)",
+    "geometry_status": "conventional corridor drawn for map legibility; not a researched route geometry"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      44.2,
+      15.4
+     ],
+     [
+      39.7,
+      21.4
+     ],
+     [
+      37.4,
+      26.6
+     ],
+     [
+      35.44,
+      30.33
+     ],
+     [
+      34.47,
+      31.5
+     ],
+     [
+      31.5,
+      30.95
+     ]
+    ]
+   },
+   "properties": {
+    "id": "incense-road",
+    "mode": "land",
+    "label": "Incense road: South Arabia → Petra → Gaza → Egypt",
+    "geometry_status": "conventional corridor drawn for map legibility; not a researched route geometry"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      14.0,
+      37.5
+     ],
+     [
+      23.7,
+      37.9
+     ],
+     [
+      30.0,
+      36.2
+     ],
+     [
+      33.3,
+      35.0
+     ],
+     [
+      29.9,
+      31.2
+     ],
+     [
+      31.5,
+      30.95
+     ]
+    ]
+   },
+   "properties": {
+    "id": "med-sea",
+    "mode": "sea",
+    "label": "Mediterranean",
+    "geometry_status": "conventional corridor drawn for map legibility; not a researched route geometry"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      36.3,
+      36.6
+     ],
+     [
+      36.3,
+      33.5
+     ],
+     [
+      34.47,
+      31.5
+     ],
+     [
+      31.5,
+      30.95
+     ]
+    ]
+   },
+   "properties": {
+    "id": "syria-land",
+    "mode": "land",
+    "label": "Syria → Egypt",
+    "geometry_status": "conventional corridor drawn for map legibility; not a researched route geometry"
+   }
+  }
+ ]
+}

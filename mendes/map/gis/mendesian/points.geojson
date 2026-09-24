@@ -1,0 +1,565 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     38.5,
+     17.5
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-trog",
+    "place": "Troglodytic coast",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.100–102",
+    "note": "Common to the Troglodytes; the Troglodytic grade is described as the cheapest. This maps the ancient grade claim, not a modern species range.",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39435",
+    "pleiades_title": "Trogodytice",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39435"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.7,
+     25.7
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-thebaid",
+    "place": "Thebaid",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.100–101",
+    "note": "The Thebaid grade is black and abundant.",
+    "route": "nile",
+    "point_source": "project-plot",
+    "pleiades_id": "786131",
+    "pleiades_title": "Thebais",
+    "pleiades_uri": "https://pleiades.stoa.org/places/786131"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.3,
+     29
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-arabia",
+    "place": "Arabia between Judaea and Egypt",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.100–101",
+    "note": "Pliny locates an Arabian grade in the tract separating Judaea from Egypt and says the Arabian kind is called ‘Syrian’. [Pleiades match: Pliny's phrase; the Nabataean zone is the referent]",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "29677",
+    "pleiades_title": "Nabataea (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29677"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39,
+     10.3
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-ethiopia",
+    "place": "Ethiopia",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.101",
+    "note": "Some authorities preferred an Ethiopian black grade.",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39274",
+    "pleiades_title": "Aethiopia",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39274"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.7,
+     27.4
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-egypt",
+    "place": "Egypt",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.102",
+    "note": "The Egyptian grade is red, thick-shelled, and associated with swampy ground.",
+    "route": "nile",
+    "point_source": "project-plot",
+    "pleiades_id": "981503",
+    "pleiades_title": "Ancient Egypt (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/981503"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.44,
+     30.33
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "balanos",
+    "ingredient": "balanos oil / perfumers’ balanos nut",
+    "greek": "ἔλαιον βαλάνινον / βάλανος μυρεψική",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "bal-petra",
+    "place": "Petra",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.102",
+    "note": "The Petraean grade, black-shelled with a white kernel, is ranked far above the others.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "697725",
+    "pleiades_title": "Petra",
+    "pleiades_uri": "https://pleiades.stoa.org/places/697725"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     39.1,
+     16.2
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "greek": "σμύρνα",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "myrrh-trog",
+    "place": "Troglodytic coast",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.64; Pliny, Naturalis historia 12.69–70",
+    "note": "Both traditions rank a Troglodytic grade highly; Pliny makes it the first grade.",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39435",
+    "pleiades_title": "Trogodytice",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39435"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.2,
+     15.4
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "myrrh",
+    "ingredient": "myrrh",
+    "greek": "σμύρνα",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "myrrh-arabia",
+    "place": "South Arabia",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.64; Pliny, Naturalis historia 12.66, 12.69–70",
+    "note": "Arabian claim. Pliny’s grade names include Minaean, Atramitic, Gebbanitic, Ausaritis, Dianitis, Sambracena, Dusaritis, and Mesalum; their precise point locations are not invented here. [Pleiades match: generic 'South Arabia'; Saba is the nearest Pleiades region (cf. Minaei, 39386)]",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "39417",
+    "pleiades_title": "Saba",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39417"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     45,
+     22.6
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "cassia",
+    "ingredient": "cassia / cassia quill or tube",
+    "greek": "κασσία / κασία / σύριγξ",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "cassia-arabia",
+    "place": "Arabia — ancient claim",
+    "evidence": "attested-ancient",
+    "cite": "Herodotus, Histories 3.110; Theophrastus, Historia plantarum 9.7.2; Dioscorides, De materia medica 1.13",
+    "note": "Herodotus, Theophrastus, and Dioscorides place cassia in Arabia or ‘aromatic-bearing Arabia’.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "29475",
+    "pleiades_title": "Arabia (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29475"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     40,
+     14.6
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "cassia",
+    "ingredient": "cassia / cassia quill or tube",
+    "greek": "κασσία / κασία / σύριγξ",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "cassia-trog",
+    "place": "Ethiopia / Troglodytic cinnamon fields",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.86, 12.95",
+    "note": "Pliny rejects Arabia for cinnamon, places its fields among Ethiopian Troglodytes, and says cassia grows beside them. [Pleiades match: project point is a conventional Red Sea anchor; the Pleiades region sits at the Horn of Africa]",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39361",
+    "pleiades_title": "Kinnamomophoros Chora",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39361"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     79.6,
+     10.4
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "cassia",
+    "ingredient": "cassia / cassia quill or tube",
+    "greek": "κασσία / κασία / σύριγξ",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "cassia-modern",
+    "place": "South / Southeast Asia — modern correction zone",
+    "evidence": "inference-modern",
+    "cite": "Gilboa & Namdar, Radiocarbon 57.2 (2015), 265–283; Kew, Plants of the World Online",
+    "note": "Modern scholarship moves the plausible source-zone much farther east. This is a correction register, not a forced identification of Greek κασσία with one modern species. [Pleiades match: modern botanical correction zone; no ancient place referent]",
+    "route": "",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     46,
+     21.5
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "cinnamon",
+    "ingredient": "cinnamon",
+    "greek": "κινάμωμον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "cinn-arabia",
+    "place": "Arabia — ancient claim",
+    "evidence": "attested-ancient",
+    "cite": "Herodotus, Histories 3.111; Theophrastus, Historia plantarum 9.7.2",
+    "note": "The Arabian claim is plotted as the ancient authors frame it, despite their own fabulous collection stories.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "29475",
+    "pleiades_title": "Arabia (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/29475"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     40.7,
+     13.3
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "cinnamon",
+    "ingredient": "cinnamon",
+    "greek": "κινάμωμον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "cinn-trog",
+    "place": "Ethiopia among the Troglodytes",
+    "evidence": "attested-ancient",
+    "cite": "Pliny, Naturalis historia 12.82–86",
+    "note": "Pliny explicitly says cinnamon is not Arabian and instead grows in Ethiopia among the Troglodytes.",
+    "route": "redsea",
+    "point_source": "project-plot",
+    "pleiades_id": "39435",
+    "pleiades_title": "Trogodytice",
+    "pleiades_uri": "https://pleiades.stoa.org/places/39435"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     81,
+     8.2
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "cinnamon",
+    "ingredient": "cinnamon",
+    "greek": "κινάμωμον",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "cinn-modern",
+    "place": "South / Southeast Asia — modern correction zone",
+    "evidence": "inference-modern",
+    "cite": "Gilboa & Namdar, Radiocarbon 57.2 (2015), 265–283; Kew, Plants of the World Online",
+    "note": "Archaeological review places ancient cinnamon’s source-zone in South/Southeast Asia; Kew gives Sri Lanka as the native range for true cinnamon. No Greek-to-species equation is imposed. [Pleiades match: modern botanical correction zone; no ancient place referent]",
+    "route": "",
+    "point_source": "project-plot",
+    "pleiades_id": "",
+    "pleiades_title": "",
+    "pleiades_uri": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.7,
+     30.1
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "resin",
+    "ingredient": "resin / terebinth resin",
+    "greek": "ῥητίνη / τερεβινθίνη",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "resin-petra",
+    "place": "Petra in Arabia",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.71",
+    "note": "Terebinth resin is brought from Arabia at Petra.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "697725",
+    "pleiades_title": "Petra",
+    "pleiades_uri": "https://pleiades.stoa.org/places/697725"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.1,
+     31.6
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "resin",
+    "ingredient": "resin / terebinth resin",
+    "greek": "ῥητίνη / τερεβινθίνη",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "resin-judaea",
+    "place": "Judaea",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.71",
+    "note": "One of the named producing regions for terebinth resin.",
+    "route": "incense",
+    "point_source": "project-plot",
+    "pleiades_id": "687934",
+    "pleiades_title": "Iudaea (region)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/687934"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.7,
+     34.8
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "resin",
+    "ingredient": "resin / terebinth resin",
+    "greek": "ῥητίνη / τερεβινθίνη",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "resin-syria",
+    "place": "Syria",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.71",
+    "note": "One of the named producing regions for terebinth resin.",
+    "route": "syria",
+    "point_source": "project-plot",
+    "pleiades_id": "981550",
+    "pleiades_title": "Syria (Roman imperial province)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/981550"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.3,
+     35
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "resin",
+    "ingredient": "resin / terebinth resin",
+    "greek": "ῥητίνη / τερεβινθίνη",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "resin-cyprus",
+    "place": "Cyprus",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.71",
+    "note": "One of the named producing regions for terebinth resin.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "707498",
+    "pleiades_title": "Cyprus (island)",
+    "pleiades_uri": "https://pleiades.stoa.org/places/707498"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.8,
+     29.1
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "resin",
+    "ingredient": "resin / terebinth resin",
+    "greek": "ῥητίνη / τερεβινθίνη",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "resin-libya",
+    "place": "Libya",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.71",
+    "note": "One of the named producing regions for terebinth resin.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "716588",
+    "pleiades_title": "Libya",
+    "pleiades_uri": "https://pleiades.stoa.org/places/716588"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     25.3,
+     37
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "resin",
+    "ingredient": "resin / terebinth resin",
+    "greek": "ῥητίνη / τερεβινθίνη",
+    "membership": "member",
+    "membership_note": "",
+    "claim_id": "resin-cyclades",
+    "place": "Cyclades",
+    "evidence": "attested-ancient",
+    "cite": "Dioscorides, De materia medica 1.71",
+    "note": "The Cycladic product is ranked by its clarity, whiteness, glassy appearance, and fragrance.",
+    "route": "med",
+    "point_source": "project-plot",
+    "pleiades_id": "560353",
+    "pleiades_title": "Cyclades Islands",
+    "pleiades_uri": "https://pleiades.stoa.org/places/560353"
+   }
+  }
+ ]
+}
