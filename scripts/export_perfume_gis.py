@@ -247,6 +247,84 @@ def claim_point(perfume, ing, c, membership="member", membership_note=""):
     }
 
 
+PERFUME_TITLES = {
+    "mendesian": ("The Mendesian (the Dark Mendesian)",
+        "Ingredient provenance from the House of Mendes evidence records (`mendes/data/claims.json`)."),
+    "susinum": ("Susinum",
+        "Ingredient provenance from the House of Mendes evidence records (`mendes/data/claims.json`). "
+        "Entries marked *substitution register* or *conjectural* are not recipe members in any witness — see each note."),
+    "nardinon": ("The nard perfume (νάρδινον μύρον)",
+        "Composition per Dioscorides, *De materia medica* 1.62 (Wellmann): made variously with or without malabathron "
+        "leaf; the base is balanos oil or omphacine oil, styptically thickened with schoinos; for fragrance kostos, "
+        "amōmon, nard, myrrh, and balsam are added. Shared simples reuse the project's ingredient-level claims; "
+        "the four simples not yet in the dataset are compiled from Dioscorides 1.7, 1.12, 1.15 and 1.16 "
+        "(verified against `data/tei/tlg0656.tlg001.1st1K-grc1.xml`) with Pleiades representative coordinates (†)."),
+}
+
+
+def write_readme(folder, name, points, modern_rows):
+    title, intro = PERFUME_TITLES[name]
+    L = [f"# {title}", "", intro, "",
+         "Human-readable companion to `points.geojson`/`points.csv` (ancient claims), "
+         "`modern-points.geojson`/`.csv` (modern identifications) and `routes.geojson` in this folder. "
+         "Coordinates are decimal degrees, WGS 84, given `lat, lon`. See `../README.md` for field "
+         "definitions and the caveats on route geometry.", ""]
+
+    modern_by_ing = {}
+    for m in modern_rows:
+        modern_by_ing.setdefault(m["ingredient_id"], []).append(m)
+
+    order, by_ing = [], {}
+    for p in points:
+        if p["ingredient_id"] not in by_ing:
+            order.append(p["ingredient_id"])
+            by_ing[p["ingredient_id"]] = []
+        by_ing[p["ingredient_id"]].append(p)
+
+    for iid in order:
+        rows = by_ing[iid]
+        first = rows[0]
+        L.append(f"### {first['ingredient'].capitalize()} ({first['greek']})")
+        L.append("")
+        if first["membership"] != "member":
+            label = "Substitution register, not recipe membership" \
+                if first["membership"] == "substitution-register" else "Membership is text-critical"
+            L.append(f"**{label}.** {first['membership_note']}")
+            L.append("")
+        elif first["membership_note"]:
+            L.append(f"*{first['membership_note']}*")
+            L.append("")
+        L.append("| Place | Evidence | GIS (lat, lon) | Pleiades |")
+        L.append("|---|---|---|---|")
+        for p in rows:
+            ev = ("Attested (ancient)" if p["evidence"] == "attested-ancient"
+                  else "Inference (modern)") + " — " + p["cite"]
+            gis = f"{p['lat']}, {p['lon']}" + (" †" if p["point_source"] == "pleiades-representative" else "")
+            pl = (f"[{p['pleiades_title']} ({p['pleiades_id']})]({p['pleiades_uri']})"
+                  if p["pleiades_id"] else "—")
+            note = p["note"]
+            place = p["place"] + (f" *({note})*" if note and p["evidence"] != "attested-ancient" else "")
+            L.append(f"| {place} | {ev} | {gis} | {pl} |")
+        L.append("")
+        mods = modern_by_ing.get(iid)
+        if mods:
+            m0 = mods[0]
+            L.append(f"**Modern — assumed identification:** *{m0['taxon']}* "
+                     f"([POWO]({m0['powo']}) · [GBIF]({m0['gbif']})). {m0['range_summary']}")
+            L.append("")
+            L.append("| Modern representative point | GIS (lat, lon) |")
+            L.append("|---|---|")
+            for m in mods:
+                L.append(f"| {m['label']} | {m['lat']}, {m['lon']} ‡ |")
+            L.append("")
+
+    L += ["---", "",
+          "† Pleiades representative point (no hand-set project point for this claim yet).", "",
+          "‡ Range-representative point for the assumed modern taxon (native range, or production zone "
+          "for cultigens); not an occurrence record — see the POWO/GBIF links above.", ""]
+    (folder / "README.md").write_text("\n".join(L))
+
+
 def write_package(name, points, modern_rows, route_keys):
     folder = OUT / name
     folder.mkdir(parents=True, exist_ok=True)
@@ -285,6 +363,8 @@ def write_package(name, points, modern_rows, route_keys):
                         "geometry_status": "conventional corridor drawn for map legibility; not a researched route geometry"}}
         for rid, mode, label, coords in ROUTES if rid in corridor_ids]}
     (folder / "routes.geojson").write_text(json.dumps(rfc, ensure_ascii=False, indent=1) + "\n")
+
+    write_readme(folder, name, points, modern_rows)
 
     return len(points), len(modern_rows), len(rfc["features"])
 
