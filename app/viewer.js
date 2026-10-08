@@ -123,8 +123,10 @@ function initMap() {
     map.zoomControl.setPosition("bottomleft");
   }
 
+  // CARTO basemaps need a key since 2026; this browser key is restricted to alchemiesofscent.github.io.
+  const CARTO_KEY = "cb1_4esy_2_2ae4ad7a7aa7b7a136f5e4d3";
   L.tileLayer(
-    "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
+    "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png?key=" + CARTO_KEY,
     {
       subdomains: "abcd",
       maxZoom: 18,
