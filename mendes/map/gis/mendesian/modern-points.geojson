@@ -111,17 +111,38 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     27.0,
-     38.0
+     35.1,
+     31.6
     ]
    },
    "properties": {
     "perfume": "mendesian",
     "ingredient_id": "resin",
     "ingredient": "resin / terebinth resin",
-    "taxon": "Pistacia terebinthus",
-    "range_summary": "Mediterranean basin, Iberia to the Aegean and Anatolia; Levantine terebinth resin also from P. atlantica / P. palaestina.",
-    "label": "Aegean / W Anatolia",
+    "taxon": "Pistacia terebinthus (Levantine terebinths: P. palaestina, P. atlantica)",
+    "range_summary": "Anchored to the Levantine producing regions Dioscorides names (MM 1.71: resin brought from Arabia at Petra, produced in Judaea and Syria). The native terebinths there are P. palaestina and P. atlantica.",
+    "label": "Judaea — Dsc 1.71 producing region",
+    "point_kind": "range-representative (not an occurrence record)",
+    "powo": "https://powo.science.kew.org/results?q=Pistacia+terebinthus",
+    "gbif": "https://www.gbif.org/species/search?q=Pistacia+terebinthus"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.7,
+     34.8
+    ]
+   },
+   "properties": {
+    "perfume": "mendesian",
+    "ingredient_id": "resin",
+    "ingredient": "resin / terebinth resin",
+    "taxon": "Pistacia terebinthus (Levantine terebinths: P. palaestina, P. atlantica)",
+    "range_summary": "Anchored to the Levantine producing regions Dioscorides names (MM 1.71: resin brought from Arabia at Petra, produced in Judaea and Syria). The native terebinths there are P. palaestina and P. atlantica.",
+    "label": "Syria — Dsc 1.71 producing region",
     "point_kind": "range-representative (not an occurrence record)",
     "powo": "https://powo.science.kew.org/results?q=Pistacia+terebinthus",
     "gbif": "https://www.gbif.org/species/search?q=Pistacia+terebinthus"

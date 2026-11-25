@@ -74,11 +74,12 @@ Human-readable companion to `points.geojson`/`points.csv` (ancient claims), `mod
 | Libya | Attested (ancient) — Dioscorides, De materia medica 1.71 | 29.1, 17.8 | [Libya (716588)](https://pleiades.stoa.org/places/716588) |
 | Cyclades | Attested (ancient) — Dioscorides, De materia medica 1.71 | 37, 25.3 | [Cyclades Islands (560353)](https://pleiades.stoa.org/places/560353) |
 
-**Modern — assumed identification:** *Pistacia terebinthus* ([POWO](https://powo.science.kew.org/results?q=Pistacia+terebinthus) · [GBIF](https://www.gbif.org/species/search?q=Pistacia+terebinthus)). Mediterranean basin, Iberia to the Aegean and Anatolia; Levantine terebinth resin also from P. atlantica / P. palaestina.
+**Modern — assumed identification:** *Pistacia terebinthus (Levantine terebinths: P. palaestina, P. atlantica)* ([POWO](https://powo.science.kew.org/results?q=Pistacia+terebinthus) · [GBIF](https://www.gbif.org/species/search?q=Pistacia+terebinthus)). Anchored to the Levantine producing regions Dioscorides names (MM 1.71: resin brought from Arabia at Petra, produced in Judaea and Syria). The native terebinths there are P. palaestina and P. atlantica.
 
 | Modern representative point | GIS (lat, lon) |
 |---|---|
-| Aegean / W Anatolia | 38.0, 27.0 ‡ |
+| Judaea — Dsc 1.71 producing region | 31.6, 35.1 ‡ |
+| Syria — Dsc 1.71 producing region | 34.8, 36.7 ‡ |
 
 ---
 
